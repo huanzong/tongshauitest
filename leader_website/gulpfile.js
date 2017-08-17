@@ -53,23 +53,23 @@
     // ----- js -----
     gulp.task('jstask', function() {
         if (!options.file) {
-            console.log('检查全部js文件')
-            console.log('运行gulp jstask --file 文件名，查看对应文件错误信息')
+            console.log('检查全部js文件');
+            console.log('运行gulp jstask --file 文件名，查看对应文件错误信息');
             return gulp.src('./images/*.js')
                 // .pipe(watch('./src/images/*.js')) // 只重新编译被更改过的文件
                 // js检查
                 .pipe(jshint())
-                .pipe(jshint.reporter('fail'))
+                .pipe(jshint.reporter('fail'));
         } else {
-            console.log('检查js文件: ./images/' + options.file)
+            console.log('检查js文件: ./images/' + options.file);
             return gulp.src('./images/' + options.file)
                 // .pipe(watch('./src/images/*.js')) // 只重新编译被更改过的文件
                 // js检查
                 .pipe(jshint())
-                .pipe(jshint.reporter('default'))
+                .pipe(jshint.reporter('default'));
         }
 
-    })
+    });
 
 
 
@@ -80,28 +80,28 @@
             .pipe(concat('main.min.js'))
             // 压缩js
             .pipe(uglify())
-            .pipe(gulp.dest('./build'))
+            .pipe(gulp.dest('./build'));
     });
 
 
     // ----- css -----
     gulp.task('csstask', function() {
         if (!options.file) {
-            console.log('检查全部css')
-            console.log('运行gulp csstask --file 文件名，查看对应文件错误信息')
+            console.log('检查全部css');
+            console.log('运行gulp csstask --file 文件名，查看对应文件错误信息');
 
             return gulp.src('./images/*.css')
                 // css检查
                 .pipe(csslint())
-                .pipe(csslint.reporter('fail'))
+                .pipe(csslint.reporter('fail'));
 
         } else {
-            console.log('检查css文件: ./images/' + options.file)
+            console.log('检查css文件: ./images/' + options.file);
             return gulp.src('./images/' + options.file)
                 // .pipe(watch('./src/images/*.css')) // 只重新编译被更改过的文件
                 // css检查
                 .pipe(csslint())
-                .pipe(csslint.reporter())
+                .pipe(csslint.reporter());
 
             // css私有变量补全
             // .pipe(prefixer())
@@ -111,7 +111,7 @@
             // .pipe(gulp.dest('./build'))
         }
 
-    })
+    });
 
 
     // css压缩发布
@@ -119,7 +119,7 @@
         return gulp.src('./build/*.css')
             //压缩css 
             .pipe(csso())
-            .pipe(gulp.dest('./build/'))
+            .pipe(gulp.dest('./build/'));
     });
 
 
@@ -128,11 +128,11 @@
     // html预览监测
     gulp.task('public', function() {
         return gulp.src('./static/public/*')
-            .pipe(gulp.dest('./preview/public'))
-    })
+            .pipe(gulp.dest('./preview/public'));
+    });
 
     gulp.task('contenttask', ['public'], function() {
-        console.log('打包环境: '+options.env)
+        console.log('打包环境: '+options.env);
         return gulp.src('./template/**/*.{html,shtml}')
             // .pipe(watch('./src/*.{html,shtml}')) // 只重新编译被更改过的文件
             // 替换内容
@@ -247,14 +247,11 @@
         .pipe(cssmin())
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest("./images"));
-<<<<<<< HEAD
     });
     gulp.task('less', function() {
         return gulp.src('./images/less/*.less')
             .pipe(less.sync().on('error', less.logError))
             .pipe(gulp.dest('./images/'));
-=======
->>>>>>> ea1d5813c5bc4f320b9c8f26a5aa9265418ea35d
     });
     
     // gulp.task('less', function() {
