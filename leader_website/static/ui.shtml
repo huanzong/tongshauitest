@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ui</title>
+    <%=base%>
+    <!--#include virtual="public/common.shtml"-->
+    <style>
+
+    .ui_tit {
+        font-size: 20px;
+        line-height: 65px;
+        color: black;
+        border-bottom: 1px solid #eee;
+        clear: both;
+    }
+
+    .row {
+        padding: 5px;
+        font: 0;
+        vertical-align: top;
+    }
+
+    .c_flooter {
+        position: relative;
+    }
+
+     ::-webkit-select {
+        width: 50px;
+        height: 50px;
+        background: red;
+    }
+    </style>
+</head>
+
+<body style="background:white">
+    <h1 class="ui_tit">button 按钮</h1>
+    <div class="row">
+        <a href="javascript:;" class="l-btn-sm l-btn-red">btn尺寸sm</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-red"></a>
+        <a href="javascript:;" class="l-btn-lg l-btn-red">jojoo</a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_linebtn1 o_btn_df-sm">jojoo</a>
+        <a href="javascript:;" class="o_linebtn1 o_btn_df-df">jojoo</a>
+        <a href="javascript:;" class="o_linebtn1 o_btn_df-xl">jojoo</a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_bgbtn1 o_btn_df-sm">jojoo</a>
+        <a href="javascript:;" class="o_bgbtn1 o_btn_df-df">jojoo</a>
+        <a href="javascript:;" class="o_bgbtn1 o_btn_df-xl">jojoo</a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_bgbtn2 o_btn_df-sm">jojoo</a>
+        <a href="javascript:;" class="o_bgbtn2 o_btn_df-df">jojoo</a>
+        <a href="javascript:;" class="o_bgbtn2 o_btn_df-xl">jojoo</a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_linebtnbase o_btn_df-df o_btn_lg-xl"><span>主颜色线形(xl下图标隐藏)</span><i class="o-cog o_lg-hide"></i></a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_bgbtn1 o_btn_xs-sm o_btn_lg-xl o_btn_df-df"><span>主颜色</span><i class="o-star"></i></a>
+        <a href="javascript:;" class="o_linebtn1 o_btn_df-df o_btn_lg-xl"><span>主颜色线形(xl下图标隐藏)</span><i class="o-cog o_lg-hide"></i></a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_bgbtn2 o_btn_xs-sm o_btn_lg-xl o_btn_df-df"><span>辅助色</span><i class="o-star"></i></a>
+        <a href="javascript:;" class="o_linebtn2 o_btn_df-df o_btn_lg-xl"><span>辅助色线形(xl下图标隐藏)</span><i class="o-cog o_lg-hide"></i></a>
+    </div>
+    <div class="row">
+        <a href="javascript:;" class="o_bgbtn2 o_btn_df-df o_lose"><span>块按钮(失效)</span><i class="o-cog "></i></a>
+        <a href="javascript:;" class="o_linebtn1 o_btn_df-df o_lose"><span>线按钮(失效)</span><i class="o-cog"></i></a>
+    </div>
+</body>
+
+</html>

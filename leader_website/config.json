@@ -1,0 +1,19 @@
+{
+  "serverPort":"3002",
+  "dev_template":{
+    "env": "测试",
+  	"base":""
+  },
+  "pro_template":{
+    "env": "生产",
+  	"base":""
+  },
+  "preview_template":{
+    "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/casarte/workspace/pc_site/'>"
+  },
+  "debug_template":{
+  	"base":"<base href='../'>"
+  },
+  "testSiteId":"101",
+  "proSiteId":"122"
+}
