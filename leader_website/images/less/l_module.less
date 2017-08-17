@@ -6,34 +6,39 @@
 .l-btn{
 	display: inline-block;
 	border-radius: 80px;
+	padding: 0 20px;
 }
 // 常规按钮
 .l-btn-normal{
 	line-height: 40px;
 	height: 40px;
+	.l-btn
 }
 // 小号按钮
 .l-btn-sm{
 	line-height: 32px;
 	height: 32px;
+	.l-btn
 }
 // 大号按钮
 .l-btn-lg{
 	line-height: 50px;
 	height: 50px;
+	font-size: 16px;
+	.l-btn
 }
 // 红色按钮
 .l-btn-red{
 	color: #fff;
 	background: @l-red;
-	.hover{
+	&.hover{
 		background: @l-hover;
 	}
 }
 .l-btn-orange{
 	color: #fff;
 	background: @l-orange;
-	.hover{
+	&.hover{
 		background: @l-hover;
 	}
 }

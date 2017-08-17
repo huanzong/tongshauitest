@@ -39,9 +39,9 @@
 <body style="background:white">
     <h1 class="ui_tit">button 按钮</h1>
     <div class="row">
-        <a href="javascript:;" class="l-btn-sm l-btn-red">btn尺寸sm</a>
-        <a href="javascript:;" class="l-btn-normal l-btn-red"></a>
-        <a href="javascript:;" class="l-btn-lg l-btn-red">jojoo</a>
+        <a href="javascript:;" class="l-btn-sm l-btn-red">小号btn</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-red">常规btn</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-red">大号btn</a>
     </div>
     <div class="row">
         <a href="javascript:;" class="o_linebtn1 o_btn_df-sm">jojoo</a>
