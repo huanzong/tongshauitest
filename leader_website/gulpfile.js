@@ -27,9 +27,8 @@
         //确保本地已安装gulp-sourcemaps [cnpm install gulp-sourcemaps --save-dev]
         sourcemaps = require('gulp-sourcemaps'),
         //确保本地已安装gulp-minify-css [cnpm install gulp-minify-css --save-dev]
-        cssmin = require('gulp-minify-css'),
+        cssmin = require('gulp-minify-css');
         //确保本地已安装gulp-less [cnpm install gulp-less --save-dev]
-        less = require('gulp-less');
 
     var knownOptions = {
         string: 'env',
@@ -240,20 +239,21 @@
     });
 
     //编译less
-    // gulp.task("testLess",function(){
-    //     gulp.src("./images/less/*.less")
-    //     .pipe(watch("./images/less/*.less"))
-    //     .pipe(sourcemaps.init())
-    //     .pipe(less())
-    //     .pipe(cssmin())
-    //     .pipe(sourcemaps.write('./maps'))
-    //     .pipe(gulp.dest("./images"));
-    // });
-    gulp.task('less', function() {
-        return gulp.src('./images/less/*.less')
-            .pipe(less.sync().on('error', less.logError))
-            .pipe(gulp.dest('./images/'));
+    gulp.task("testLess",function(){
+        gulp.src("./images/less/*.less")
+        .pipe(watch("./images/less/*.less"))
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(cssmin())
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest("./images"));
     });
+    
+    // gulp.task('less', function() {
+    //     return gulp.src('./images/less/*.less')
+    //         .pipe(less())   
+    //         .pipe(gulp.dest('./images/'));
+    // });
 
     gulp.task('lesstask', function() {
         return gulp.watch('./images/less/*.scss', ['less']);
@@ -286,13 +286,10 @@
             }
         });
 
-//        gulp.watch('./**/*').on("change", browserSync.reload);
-		// gulp.watch('./**/*').on("change", function(){setTimeout(browserSync.reload, 3000 )});
-        gulp.watch('./images/less/*.less', ['less']);
+        gulp.watch('./images/less/*.less', ['testLess']);
         gulp.watch('./**/*').on("change", browserSync.reload);
 
     });
-
 
 
     // ----- 任务 ----- 
@@ -328,7 +325,6 @@
     gulp.task('debug', ['clean-preview'], function(a) {
         gulp.run('contenttask-watch');
         gulp.run('webserver-static');
-
     });
 
     //项目完成提交任务
