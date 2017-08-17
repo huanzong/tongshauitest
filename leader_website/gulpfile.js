@@ -240,15 +240,15 @@
     });
 
     //编译less
-    // gulp.task("testLess",function(){
-    //     gulp.src("./images/less/*.less")
-    //     .pipe(watch("./images/less/*.less"))
-    //     .pipe(sourcemaps.init())
-    //     .pipe(less())
-    //     .pipe(cssmin())
-    //     .pipe(sourcemaps.write('./maps'))
-    //     .pipe(gulp.dest("./images"));
-    // });
+    gulp.task("testLess",function(){
+        gulp.src("./images/less/*.less")
+        .pipe(watch("./images/less/*.less"))
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(cssmin())
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest("./images"));
+    });
     gulp.task('less', function() {
         return gulp.src('./images/less/*.less')
             .pipe(less.sync().on('error', less.logError))
