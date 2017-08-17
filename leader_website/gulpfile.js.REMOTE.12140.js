@@ -247,21 +247,15 @@
         .pipe(cssmin())
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest("./images"));
-<<<<<<< HEAD
-    });
-    gulp.task('less', function() {
-        return gulp.src('./images/less/*.less')
-            .pipe(less.sync().on('error', less.logError))
-            .pipe(gulp.dest('./images/'));
-=======
->>>>>>> ea1d5813c5bc4f320b9c8f26a5aa9265418ea35d
     });
     
     // gulp.task('less', function() {
     //     return gulp.src('./images/less/*.less')
-    //         .pipe(less())   
-    //         .pipe(gulp.dest('./images/'));
-    // });
+        .pipe(less())
+    //     .pipe(cssmin())
+    //     .pipe(sourcemaps.write('./maps'))
+    //     .pipe(gulp.dest("./images"));
+    });
 
     gulp.task('lesstask', function() {
         return gulp.watch('./images/less/*.scss', ['less']);
