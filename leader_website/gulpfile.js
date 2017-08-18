@@ -239,31 +239,22 @@
     });
 
     //编译less
-    gulp.task("testLess",function(){
-        gulp.src("./images/less/*.less")
-        .pipe(watch("./images/less/*.less"))
-        .pipe(sourcemaps.init())
-        .pipe(less())
-        .pipe(cssmin())
-        .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest("./images"));
-    });
-    gulp.task('less', function() {
-        return gulp.src('./images/less/*.less')
-            .pipe(less.sync().on('error', less.logError))
-            .pipe(gulp.dest('./images/'));
-    });
     
-    // gulp.task('less', function() {
-    //     return gulp.src('./images/less/*.less')
-    //         .pipe(less())   
-    //         .pipe(gulp.dest('./images/'));
-    // });
+    
+    gulp.task("testLess",function(){
+         gulp.src("./images/less/*.less")
+         .pipe(watch("./images/less/*.less"))
+         .pipe(sourcemaps.init())
+         .pipe(less())
+         .pipe(cssmin())
+         .pipe(sourcemaps.write('./maps'))
+         .pipe(gulp.dest("./images"));
+     });
 
     gulp.task('lesstask', function() {
-        return gulp.watch('./images/less/*.scss', ['less']);
+         return gulp.watch('./images/less/*.less', ['less']);
     });
-
+ 
 
     // 开启本地 Web 服务器功能
     gulp.task('webserver-static', function() {

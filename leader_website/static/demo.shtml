@@ -12,10 +12,14 @@
 </head>
 
 <body>
-    <!--#include virtual="public/header.shtml"-->
-    <div>
-        内容
-    </div>
-    <!--#include virtual="public/footer.shtml"-->
+	<div class="o_body">
+        <div class="o_main">
+		    <!--#include virtual="public/header.shtml"-->
+		    <div>
+		        内容
+		    </div>
+		    <!--#include virtual="public/footer.shtml"-->
+		</div>
+	</div>
 </body>
 </html>
