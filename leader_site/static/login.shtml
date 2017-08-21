@@ -18,15 +18,43 @@
             <div class="o_g">
                 <div class="login">
                     <div class="o_u o_df_2-3 o_sm_2-2 o_xs_2-2">
-                        jopkpokpkp[k]
+                        <div class="login-box js_center">
+                            <div class="o_g">
+                                <div class="o_u o_df_1-2"></div>
+                                <div class="o_u o_df_1-2 login-con">
+                                    <div class="login-logo"></div>
+                                    <div class="login-tit">登录统帅</div>
+                                    <div class="login-form">
+                                        <div class="login-input">
+                                            <input type="text" name="username" placeholder="手机号 / 邮箱 / 用户名">
+                                            <i class="iconfont icon-member"></i>
+                                        </div>
+                                        <div class="login-input">
+                                            <input type="text" name="password" placeholder="密码">
+                                            <i class="iconfont icon-lock-solid"></i>
+                                        </div>
+                                        <div class="login-role">
+                                            <input type="checkbox" name="noLogin">
+                                            <span>2周内免登录</span>
+                                            <span class="l-fr">忘记密码</span>
+                                            <i class="iconfont icon-problem-solid l-fr"></i>
+                                        </div>
+                                        <!-- <a class="">登录</a> -->
+                                        <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable login-btn">登录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--#include virtual="public/footer.shtml"-->
+                    <div class="o_u o_df_2-2 login_footer">
+                        <!--#include virtual="public/footer.shtml"-->
+                    </div>
                 </div>
             </div>
             
         </div>
     </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/login.js"></script>
 </body>
-<!--#include virtual="public/foot.shtml"-->
-<script type="text/javascript" src="images/login.js"></script>
 </html>

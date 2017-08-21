@@ -33,6 +33,14 @@
 	命名驼峰式，
 		eg：var loginNum = 1
 
+3.图片命名
+
+	公共图片：l_开头，
+		eg: l_bg
+	普通图片：文件名_图片名
+		eg:login_bg.jpg
+		
+
 ## 操作流程
 
 一切内容的调整都需要先更新git才能更新wcm 一切以git为准

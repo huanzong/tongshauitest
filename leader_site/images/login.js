@@ -8,10 +8,8 @@ $(function() {
 
     function init() {
         var screenWidth = document.body.offsetWidth;
-
-        // $('.js-o-scale').each(function() {
-        //     $(this).oScale().init();
-        // });
+        var screenHeight = document.body.offsetHeight;
+        var loginHeight = $('.js_center').height();
 
         if (screenWidth <= 767) {
             
@@ -23,10 +21,9 @@ $(function() {
             
         }
 
-        
         setTimeout(function() {
-            $(".js_center").oBoxCenter().init();
-        }, 300);
+            $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
+        }, 10);
     }
 
 });

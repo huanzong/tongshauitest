@@ -21,6 +21,6 @@
 		    <!--#include virtual="public/footer.shtml"-->
 		</div>
 	</div>
+	<!--#include virtual="public/foot.shtml"-->
 </body>
-<!--#include virtual="public/foot.shtml"-->
 </html>
