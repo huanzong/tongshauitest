@@ -9,7 +9,7 @@
   	"base":""
   },
   "preview_template":{
-    "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/casarte/workspace/pc_site/'>"
+    "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/'>"
   },
   "debug_template":{
   	"base":"<base href='../'>"
