@@ -1,36 +1,37 @@
 # 统帅前端项目开发规范
 
 ## 命名规则
+	
+	所有命名尽量不要简写，保证见名知意
+	所有命名确保符合相应的命名规则
+	所有命名尽量简洁，无特殊情况，不要使用特殊符号	
 
-静态页面使用对应页面功能的英文全称命名 全部小写 多个单词中划线连接 请确保文件命名总是以字母开头
+### 文件夹命名
 
-各处命名力求语义化，不得使用意义不明的缩写
+	文件夹命名若含有多个单词组，需用下划线间隔，
+		eg：leader_website
 
-每个静态页对应的css和js文件与html同名
+### 文件命名
 
-当前页面js scss 命名使用page-xxxx.scss/.js
+	文件命名若含有多个单词组，需用下划线间隔，
+		eg: reset_password.shtml
+	shtml文件和对应的js/css文件，除后缀名外，尽量保持一致，方便查找
+		eg:index.shtml index.js/index.css
+		
+### 变量命名
+1.css
 
-当前模块js scss 命名使用module-xxxx.scss/.js
+	单词组以中划线分割，
+		eg：class = "login-header",
+	带有逻辑功能的css样式，不得以任何形式任何情况添加样式信息，只能在js中使用。且以“js_”开头，	eg：class=“js_login”
+2.less
+	
+	变量单词组以中划线分割，
+		eg：@l-yellow: #fff100; 
+3.js
 
-全局通用js scss 命名使用common-xxxx.scss/.js
-
-图片放在images文件夹下 以l_xxx命名
-样式文件全部使用sass 对应目录在images/sass
-
-class和id 一律小写英文单词 多个单词中划线连接 不得为id指定样式
-
-避免为 0 值指定单位，例如，用 margin: 0; 代替 margin: 0px;
-
-通用样式放在base.scss中 命名为c-xxx
-
-当前页面相关样式放在当前页scss中 命名为当前页英文标记-xxx 例如首页样式index-xxxx
-
-js变量使用驼峰命名,且务必以"js_"开头，js变量不得添加任何css样式属性
-
-所有声明语句都应当以分号结尾，不可省略
-
-
-
+	命名驼峰式，
+		eg：var loginNum = 1
 
 ## 操作流程
 

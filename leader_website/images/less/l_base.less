@@ -1,47 +1,27 @@
 @import "l_obox";
 
-@font-face {
-    font-family: 'GillSans-Light';
-    src: url('GillSans-Light.woff') format('woff'),
-    url('GillSans-Light.ttf') format('truetype'),
-    url('GillSans-Light.svg#GillSans-Light') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gillsans-light_0';
-    src: url('gillsans-light_0.eot');
-    src: url('gillsans-light_0.woff2') format('woff2'),
-    url('gillsans-light_0.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    backgroung: transparent;
+    font-family: "Helvetica Neue", Helvetica, Arial,"Microsoft YaHei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", "Open Sans",Arial, sans-serif;
 }
 
 a * {
     cursor: pointer
 }
 
-a,span,h1,h2,h3,p,i,b,div,dl,li,a,span,h1,h2,h3,p,i,b,div,dl,li {
-    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif;
-}
-
-input:-webkit-autofill {
-    background-color: rgba(0, 0, 0, 0)!important;
-    background-image: none!important;
-    color: #666!important;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-    box-shadow: 0 0 0 60px #fff inset;
-    -webkit-text-fill-color: #333;
+a {
+    text-decoration: none;
+    color: #e60012;
 }
 
 ::-ms-clear,
@@ -49,18 +29,23 @@ input:-webkit-autofill:focus {
     display: none;
 }
 
-html,
-body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 62.5%;
-    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+h1{
+    font-size: 32px;
 }
-
-.font_sub {
-    font-family: "GillSans-Light", "gillsans-light_0", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei"!important
+h2{
+    font-size: 28px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    font-size: 16px;
+}
+h6{
+    font-size: 14px;
 }
 
 @font-face {
@@ -89,14 +74,11 @@ ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,inp
     outline: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-style: normal;
+    list-style: none;
 }
 
 input::-ms-clear {
     display: none;
-}
-
-ul {
-    list-style: none;
 }
 
 h1,h2,h3,h4,h5,h6,em,del {
@@ -111,50 +93,19 @@ table {
     border-spacing: 0
 }
 
-body {
-    backgroung: transparent;
-}
-
-a {
-    text-decoration: none;
-    color: #a88747;
-}
 
 img {
     border: 0
 }
-
+/* 公共自定义样式 */
 .clear {
     display: block;
     height: 0.01px;
     font-size: 0;
     clear: both;
 }
-
-.ie8 {
-    line-height: 40px;
-    background: #a88747;
-    color: white;
-    font-size: 12px;
-}
-
-.ie8 .box {
-    width: 93%;
-    margin: 0 auto;
-}
-
-.ie8 .box .iconfont {
-    float: right;
-    display: block;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-@media (min-width:1px) {
-    .ie8 {
-        display: none;
-    }
+.center{
+    text-align: center;
 }
 
 
@@ -169,3 +120,51 @@ img {
 @l-orange: #f39800; //警告 橘色
 @l-green: #9dc93a; //成功 绿色
 @l-blue: #00afec; //信息 蓝色
+
+/* 公共部分：头尾 */
+.header{
+    text-align: left;
+    @media (max-width: 992px){
+        text-align: center;
+    }
+    .footer-link{
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: #666;
+    }
+    .footer-line{
+        display: inline-block;
+        margin: 17px 16px 0;
+        background: #c7c7c6;
+        width: 1px;
+        height: 14px;
+        font-size: 12px;
+        border-right: 1px solid #e2dfde;
+        // @media (min-width: 992px) and (max-width: 1199px) 
+    }
+}
+.footer{
+    text-align: left;
+    @media (max-width: 992px){
+        text-align: center;
+    }
+    .footer-link{
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: #666;
+    }
+    .footer-line{
+        display: inline-block;
+        margin: 17px 16px 0;
+        background: #c7c7c6;
+        width: 1px;
+        height: 14px;
+        font-size: 12px;
+        border-right: 1px solid #e2dfde;
+        // @media (min-width: 992px) and (max-width: 1199px) 
+    }
+}

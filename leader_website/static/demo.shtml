@@ -16,7 +16,7 @@
         <div class="o_main">
 		    <!--#include virtual="public/header.shtml"-->
 		    <div>
-		        内容
+		        这里是页面主内容区
 		    </div>
 		    <!--#include virtual="public/footer.shtml"-->
 		</div>

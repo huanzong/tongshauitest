@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DEMO</title>
+
+<%=base%>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/common.shtml"-->
+<link rel="stylesheet" type="text/css" href="images/login.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <div class="o_g">
+                <div class="login">
+                    <div class="o_u o_df_2-3 o_sm_2-2 o_xs_2-2">
+                        我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的
+                    </div>
+                    <!--#include virtual="public/footer.shtml"-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
