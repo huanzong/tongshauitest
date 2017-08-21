@@ -39,8 +39,10 @@
                                             <span class="l-fr">忘记密码</span>
                                             <i class="iconfont icon-problem-solid l-fr"></i>
                                         </div>
-                                        <!-- <a class="">登录</a> -->
                                         <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable login-btn">登录</a>
+                                        <div class="login-reg">
+                                            <a href="javascript:;">立即注册</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
