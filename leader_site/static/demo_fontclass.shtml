@@ -35,6 +35,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-close"></i>
+                    <div class="name">close</div>
+                    <div class="fontclass">.icon-close</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-computer"></i>
                     <div class="name">computer</div>
                     <div class="fontclass">.icon-computer</div>
@@ -50,12 +56,6 @@
                 <i class="icon iconfont icon-phone"></i>
                     <div class="name">phone</div>
                     <div class="fontclass">.icon-phone</div>
-                </li>
-            
-                <li>
-                <i class="icon iconfont icon-close"></i>
-                    <div class="name">close</div>
-                    <div class="fontclass">.icon-close</div>
                 </li>
             
                 <li>
@@ -80,12 +80,6 @@
                 <i class="icon iconfont icon-check-mark-solid"></i>
                     <div class="name">check-mark-solid</div>
                     <div class="fontclass">.icon-check-mark-solid</div>
-                </li>
-            
-                <li>
-                <i class="icon iconfont icon-close-solid"></i>
-                    <div class="name">close-solid</div>
-                    <div class="fontclass">.icon-close-solid</div>
                 </li>
             
                 <li>
@@ -164,6 +158,30 @@
                 <i class="icon iconfont icon-Order-solid"></i>
                     <div class="name">Order-solid</div>
                     <div class="fontclass">.icon-Order-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-information-solid"></i>
+                    <div class="name">information-solid</div>
+                    <div class="fontclass">.icon-information-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-information-mark-sol"></i>
+                    <div class="name">information-mark-sol</div>
+                    <div class="fontclass">.icon-information-mark-sol</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-information-wrong-so"></i>
+                    <div class="name">information-wrong-so</div>
+                    <div class="fontclass">.icon-information-wrong-so</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-problem-solid"></i>
+                    <div class="name">problem-solid</div>
+                    <div class="fontclass">.icon-problem-solid</div>
                 </li>
             
         </ul>
