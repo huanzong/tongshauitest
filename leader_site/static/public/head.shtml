@@ -1,0 +1,21 @@
+
+<link rel="stylesheet" type="text/css" href="images/l_obox.css">
+<link rel="stylesheet" type="text/css" href="images/iconfont.css">
+<link rel="stylesheet" type="text/css" href="images/l_base.css">
+<link rel="stylesheet" type="text/css" href="images/l_module.css">
+
+<script type="text/javascript">
+    // 站点服务配置
+    var siteConfig = {
+    	/**
+    	 * 生产环境地址
+    	 */
+        domain:"http://jf.haier.com",
+        
+        /**
+         * 测试环境地址
+         */
+        // domain: "http://jftest.haier.com",
+
+    };
+</script>

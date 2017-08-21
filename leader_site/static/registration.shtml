@@ -1,81 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ui</title>
-    <%=base%>
-    <!--#include virtual="public/common.shtml"-->
-    <style>
+<meta charset="UTF-8">
+<title>DEMO</title>
 
-    .ui_tit {
-        font-size: 20px;
-        line-height: 65px;
-        color: black;
-        border-bottom: 1px solid #eee;
-        clear: both;
-    }
+<%=base%>
 
-    .row {
-        padding: 5px;
-        font: 0;
-        vertical-align: top;
-    }
-
-    .c_flooter {
-        position: relative;
-    }
-
-     ::-webkit-select {
-        width: 50px;
-        height: 50px;
-        background: red;
-    }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/head.shtml"-->
+<link rel="stylesheet" type="text/css" href="images/login.css">
 </head>
 
 <body>
-    <h2 class="ui_tit">button 按钮</h2>
-    <div class="row">
-        <a href="javascript:;" class="l-btn-sm l-btn-red">小号按钮</a>
-        <a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
-        <a href="javascript:;" class="l-btn-lg l-btn-red">大号按钮</a>
+    <div class="o_body">
+        <div class="o_main">
+            <div class="o_g">
+                <div class="login">
+                    <div class="o_u o_df_2-3 o_sm_2-2 o_xs_2-2">
+                        我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的
+                    </div>
+                    
+                    <!--#include virtual="public/footer.shtml"-->
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-        <a href="javascript:;" class="l-btn-sm l-btn-orange">橘色按钮</a>
-        <a href="javascript:;" class="l-btn-normal l-btn-orange">橘色按钮</a>
-        <a href="javascript:;" class="l-btn-lg l-btn-orange">橘色按钮</a>
-    </div>
-    <div class="row">
-        <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
-        <a href="javascript:;" class="l-btn-normal l-btn-line1">品牌按钮</a>
-        <a href="javascript:;" class="l-btn-lg l-btn-line1">品牌按钮</a>
-    </div>
-    <div class="row">
-        <a href="javascript:;" class="l-btn-sm l-btn-line2">次级按钮</a>
-        <a href="javascript:;" class="l-btn-normal l-btn-line2">次级按钮</a>
-        <a href="javascript:;" class="l-btn-lg l-btn-line2">次级按钮</a>
-    </div>
-    <div class="row">
-        <a href="javascript:;" class="l-btn-sm l-btn-disable">disabled</a>
-        <a href="javascript:;" class="l-btn-normal l-btn-disable">disabled</a>
-        <a href="javascript:;" class="l-btn-lg l-btn-disable">disabled</a>
-    </div>
-    <h2 class="ui_tit">图片标签</h2>
-    <div class="row">
-        地址：
-        <a href="http://www.iconfont.cn/plus/manage/index?manage_type=myprojects&projectId=382167&keyword=" target="_blank">http://www.iconfont.cn/plus/manage/index?manage_type=myprojects&projectId=382167&keyword=</a>
-    </div>
-    <div class="row">
-        <i class="iconfont icon-close"></i>
-        <i class="iconfont icon-phone"></i>
-        <i class="iconfont icon-events"></i>
-        <i class="iconfont icon-check-mark-solid"></i>
-        <i class="iconfont icon-Order-solid"></i>
-    </div>
-    <h2 class="ui_tit">颜色对照表</h2>
 </body>
-
+<!--#include virtual="public/foot.shtml"-->
 </html>

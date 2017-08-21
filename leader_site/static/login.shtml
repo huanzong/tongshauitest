@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DEMO</title>
+<title>登陆</title>
 
 <%=base%>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 <meta name="format-detection" content="telephone=no, email=no" />
-<!--#include virtual="public/common.shtml"-->
+<!--#include virtual="public/head.shtml"-->
 <link rel="stylesheet" type="text/css" href="images/login.css">
 </head>
 
@@ -18,13 +18,15 @@
             <div class="o_g">
                 <div class="login">
                     <div class="o_u o_df_2-3 o_sm_2-2 o_xs_2-2">
-                        我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的
+                        jopkpokpkp[k]
                     </div>
-                    
                     <!--#include virtual="public/footer.shtml"-->
                 </div>
             </div>
+            
         </div>
     </div>
 </body>
+<!--#include virtual="public/foot.shtml"-->
+<script type="text/javascript" src="images/login.js"></script>
 </html>
