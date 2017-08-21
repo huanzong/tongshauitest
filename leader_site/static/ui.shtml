@@ -8,74 +8,70 @@
     <title>ui</title>
     <%=base%>
     <!--#include virtual="public/common.shtml"-->
-    <style>
-
-    .ui_tit {
-        font-size: 20px;
-        line-height: 65px;
-        color: black;
-        border-bottom: 1px solid #eee;
-        clear: both;
-    }
-
-    .row {
-        padding: 5px;
-        font: 0;
-        vertical-align: top;
-    }
-
-    .c_flooter {
-        position: relative;
-    }
-
-     ::-webkit-select {
-        width: 50px;
-        height: 50px;
-        background: red;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="images/ui.css">
+    <link rel="stylesheet" type="text/css" href="images/ui.css">
 </head>
 
 <body>
-    <h2 class="ui_tit">button 按钮</h2>
-    <div class="row">
+    <div class="main markdown">
+        <h1>button 按钮</h1>
+    </div>
+    <div class="main markdown small-padding">
         <a href="javascript:;" class="l-btn-sm l-btn-red">小号按钮</a>
         <a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
         <a href="javascript:;" class="l-btn-lg l-btn-red">大号按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-red">小号按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-red">大号按钮</a>
+        </textarea>
     </div>
-    <div class="row">
+    <div class="main markdown small-padding">
         <a href="javascript:;" class="l-btn-sm l-btn-orange">橘色按钮</a>
         <a href="javascript:;" class="l-btn-normal l-btn-orange">橘色按钮</a>
         <a href="javascript:;" class="l-btn-lg l-btn-orange">橘色按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-orange">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-orange">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-orange">橘色按钮</a>
+        </textarea>
     </div>
-    <div class="row">
+    <div class="main markdown small-padding">
         <a href="javascript:;" class="l-btn-sm l-btn-orange l-btn-disable">橘色按钮</a>
         <a href="javascript:;" class="l-btn-normal l-btn-orange l-btn-disable">橘色按钮</a>
         <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable">橘色按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-orange l-btn-disable">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-orange l-btn-disable">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable">橘色按钮</a>
+            只要在class里加上“l-btn-disable”即可
+        </textarea>
     </div>
-    <div class="row">
+    <div class="main markdown small-padding">
         <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
         <a href="javascript:;" class="l-btn-normal l-btn-line1">品牌按钮</a>
         <a href="javascript:;" class="l-btn-lg l-btn-line1">品牌按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-line1">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-line1">品牌按钮</a>
+        </textarea>
     </div>
-    <div class="row">
+    <div class="main markdown small-padding">
         <a href="javascript:;" class="l-btn-sm l-btn-line1 l-btn-disable">次级按钮</a>
         <a href="javascript:;" class="l-btn-normal l-btn-line1 l-btn-disable">次级按钮</a>
         <a href="javascript:;" class="l-btn-lg l-btn-line1 l-btn-disable">次级按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-line1 l-btn-disable">次级按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-line1 l-btn-disable">次级按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-line1 l-btn-disable">次级按钮</a>
+            只要在class里加上“l-btn-disable”即可
+        </textarea>
     </div>
-    <h2 class="ui_tit">图片标签</h2>
-    <div class="row">
-        地址：
-        <a href="http://www.iconfont.cn/plus/manage/index?manage_type=myprojects&projectId=382167&keyword=" target="_blank">http://www.iconfont.cn/plus/manage/index?manage_type=myprojects&projectId=382167&keyword=</a>
+    <!--#include virtual="demo_fontclass.shtml"-->
+    <div class="main markdown">
+        <h1>颜色对照表</h1>
     </div>
-    <div class="row">
-        <i class="iconfont icon-close"></i>
-        <i class="iconfont icon-phone"></i>
-        <i class="iconfont icon-events"></i>
-        <i class="iconfont icon-check-mark-solid"></i>
-        <i class="iconfont icon-Order-solid"></i>
-    </div>
-    <h2 class="ui_tit">颜色对照表</h2>
 </body>
 
 </html>
