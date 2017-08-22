@@ -72,15 +72,58 @@
     </div>
     <div class="main markdown small-padding">
         <div class="login-input">
-            <input type="text" name="password" placeholder="密码">
+            <input type="text" name="" ph="用户名" value="">
             <i class="iconfont icon-lock-solid"></i>
         </div>
         <div class="login-input">
-            <input type="text" name="password" placeholder="动态密码">
+            <input type="text" name="" ph="动态密码">
             <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
         </div>
+        <textarea style="height: 260px;">
+            <div class="login-input">
+                <input type="text" name="" ph="用户名" value="">
+                <i class="iconfont icon-lock-solid"></i>
+            </div>
+            <div class="login-input">
+                <input type="text" name="" ph="动态密码">
+                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+            </div>
+            js代码
+            //输入框placeholder支持ie8
+            $('input').each(function(){
+                var $this =$(this);
+                var text = $this.attr("ph");
+                if (text) {
+                    if ($this.val() == "") {
+                        $this.val(text);
+                        $this.css('color','#ccc');
+                    }
+                }
+                if($this.attr("type") == "text"){
+                    if (!$this.attr('ph')){
+                        return;
+                    }
+                    $this.blur(function () {
+                        if($this.val() == ''){
+                            $this.val($this.attr("ph"));
+                            $this.css('color','#ccc');
+                        }else{
+                            $this.css('color','#666');
+                        }
+                    }).focus(function () {
+                        if($this.val() == $this.attr("ph")){
+                            $this.val("");
+                            $this.css('color','#666');
+                        }
+                    });
+                }
+            });
+        </textarea>
     </div>
     <!--#include virtual="demo_fontclass.shtml"-->
+    <!--#include virtual="public/foot.shtml"--> 
+
+    <script type="text/javascript" src="images/ui.js"></script>  
 </body>
 
 </html>
