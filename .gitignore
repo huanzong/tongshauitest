@@ -9,7 +9,7 @@
 *.zip
 *.sh
 */**/*.psd
-
+*/**/maps/
 
 /.idea
 *.class
