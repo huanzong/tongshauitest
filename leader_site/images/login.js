@@ -16,7 +16,9 @@ $(function() {
         var loginHeight = $('.js_center').height();
 
         if (screenWidth <= 700) {
-            
+            setTimeout(function() {
+                $('.js_center').css('margin-top',0);
+            }, 10);
         } else {
             setTimeout(function() {
                 $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
