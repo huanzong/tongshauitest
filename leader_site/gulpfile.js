@@ -282,7 +282,6 @@
             }
         });
 
-        gulp.watch('./images/less/*.less', ['testLess']);
         gulp.watch('./**/*').on("change", browserSync.reload);
 
     });
@@ -321,6 +320,7 @@
     gulp.task('debug', ['clean-preview'], function(a) {
         gulp.run('contenttask-watch');
         gulp.run('webserver-static');
+        gulp.run('testLess');
     });
 
     //项目完成提交任务
