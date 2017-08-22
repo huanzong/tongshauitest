@@ -39,6 +39,7 @@
 		eg: l_bg
 	普通图片：文件名_图片名
 		eg:login_bg.jpg
+
 		
 
 ## 操作流程

@@ -25,12 +25,10 @@ $(function() {
             }, 10);
         }
 
-        
-
     }
 
     // 登录方式转换
-    $('.js_center').on('click','.js_loginType',function(){
+    $('.js_loginType').on('click',function(){
         var phoneType = $(this);
         if(phoneType.prop('data-login')){
             $('.js_loginType_tab').removeClass('icon-phone').addClass('icon-computer');
