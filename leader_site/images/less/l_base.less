@@ -1,4 +1,5 @@
 @import "l_obox";
+@import "l_variable";
 
 * {
     margin: 0;
@@ -20,6 +21,7 @@ a * {
 }
 
 a {
+    cursor: pointer;
     text-decoration: none;
     color: #e60012;
     &:hover{
@@ -116,20 +118,9 @@ img {
 .l-fr{
     float: right;
 }
-
-
-
-/* 变量 */
-
-@charset "UTF-8";
-
-@l-yellow: #fff100; //黄色
-@l-purple: #c70067; //紫色
-@l-red: #e60012; //红色
-@l-hover: #b43d07; //红色-hover
-@l-orange: #f39800; //警告 橘色
-@l-green: #9dc93a; //成功 绿色
-@l-blue: #00afec; //信息 蓝色
+.ie8-css3{//css3阴影/圆角等样式
+    behavior: url('PIE.htc');
+}
 
 /* 公共部分：头尾 */
 .header{

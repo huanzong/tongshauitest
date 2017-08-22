@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>登陆</title>
+<title>登录统帅</title>
 
 <%=base%>
 
@@ -17,14 +17,19 @@
         <div class="o_main">
             <div class="o_g">
                 <div class="login">
-                    <div class="o_u o_df_2-3 o_sm_2-2 o_xs_2-2">
+                    <div class="o_u o_df_2-3 o_lg_5-6 o_md_5-6 o_sm_2-2 o_xs_2-2">
                         <div class="login-box js_center">
                             <div class="o_g">
-                                <div class="o_u o_df_1-2"></div>
-                                <div class="o_u o_df_1-2 login-con">
+                                <div class="o_u o_df_1-2 o_md-hide o_sm-hide o_xs-hide"></div>
+                                <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 login-con">
+                                    <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
+                                        <a class="login-shade js_loginType" data-login=1></a>
+                                        <i class="iconfont icon-phone js_loginType_tab"></i>
+                                        <!-- <i class="iconfont icon-computer"></i> -->
+                                    </div>
                                     <div class="login-logo"></div>
-                                    <div class="login-tit">登录统帅</div>
-                                    <div class="login-form">
+                                    <div class="login-tit js_loginType_tit">登录统帅</div>
+                                    <div class="login-form js_loginType_pc">
                                         <div class="login-input">
                                             <input type="text" name="username" placeholder="手机号 / 邮箱 / 用户名">
                                             <i class="iconfont icon-member"></i>
@@ -34,12 +39,29 @@
                                             <i class="iconfont icon-lock-solid"></i>
                                         </div>
                                         <div class="login-role">
-                                            <input type="checkbox" name="noLogin">
-                                            <span>2周内免登录</span>
+                                            <input type="checkbox" name="noLogin" id="noLogin">
+                                            <label for="noLogin">2周内免登录</label>
                                             <span class="l-fr">忘记密码</span>
                                             <i class="iconfont icon-problem-solid l-fr"></i>
                                         </div>
-                                        <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable login-btn">登录</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">登录</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用动态密码登录</a>
+                                        <div class="login-reg">
+                                            <a href="javascript:;">立即注册</a>
+                                        </div>
+                                    </div>
+                                    <div class="login-form js_loginType_phone">
+                                        <div class="login-input">
+                                            <input type="text" name="username" placeholder="手机号">
+                                            <i class="iconfont icon-phone-solid"></i>
+                                        </div>
+                                        <div class="login-input">
+                                            <input type="text" name="password" placeholder="动态密码">
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                        </div>
+                                        <div class="login-role">&nbsp;</div>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">登录</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用账号密码登录</a>
                                         <div class="login-reg">
                                             <a href="javascript:;">立即注册</a>
                                         </div>
