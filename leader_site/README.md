@@ -48,3 +48,13 @@
 ## 注意事项
 
 服务的地址以及各需要配置的变量统一放在html中定义
+
+## js和插件css按序加载
+
+loadSrc("images/l_obox.js",function(){
+	loadSrc("images/login.css");
+})
+
+## 默认加载一个图片，当内容加载完后，更换图片或者是不同尺寸下更换图片（加 o_picture 这个class就可以了，后面的表示各个尺寸下展示的图片，df默认是兼容ie8的）
+
+<img src="默认加载图片" class="o_picture" df="" lg="" md="" sm="" xs="" />
