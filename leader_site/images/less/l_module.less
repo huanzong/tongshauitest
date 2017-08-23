@@ -62,6 +62,8 @@
 	}
 }
 
+
+
 // 表单样式：登录/注册/找回密码
 .l-input{
 	position: relative;
@@ -81,13 +83,28 @@
 	}
 	a{
 		position: absolute;
-		right: 5px;
+		right: 3px;
 		top: 3px;
 		border-radius: 40px;
 		color: #fff;
 		&.l-btn-disable{
 			color: #ccc;
 		}
+	}
+	.code{
+		padding: 0px;
+		top: 3px;
+		right: 3px;
+		width: 106px;
+		height: 32px;
+	}
+	.exchange {
+		color: #e60012;
+		top: 0px;
+		right: 124px;
+		font-size: 12px;
+		line-height: 38px;
+		display: inline-block;
 	}
 	span{
 		position: absolute;
@@ -146,3 +163,11 @@
 		background: url(l_float_bg.png) no-repeat;
 	}
 }
+//单选多选样式
+.c_ipt_cr{height: 20px;line-height:20px;padding-left:30px; background-image: url(l_sprites_bg.png); background-repeat: no-repeat; cursor: pointer;  display: inline-block;vertical-align:middle;}
+.c_ipt_cr_cs{background-position: 0 -49px;}
+.c_ipt_cr_cus{background-position: 0 -29px;}
+.c_ipt_cr.lose {cursor: default;background-position: 0 -69px;}
+.c_ipt_cr_crus{background-position: 0px -89px;}
+.c_ipt_cr_crus.lose{cursor: default;background-position: 0 -129px;}
+.c_ipt_cr_rs{background-position: 0 -109px;}
