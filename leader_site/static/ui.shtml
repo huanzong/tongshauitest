@@ -71,53 +71,53 @@
         <h1>表单样式：登陆/注册/找回密码</h1>
     </div>
     <div class="main markdown small-padding">
-        <div class="login-input">
-            <input type="text" name="" ph="用户名" value="">
+        <div class="l-input">
+            <input type="text" name="" ph="初始表单" value="">
+        </div>
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="初始表单" value="">
+            </div>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input">
+            <input type="text" name="" ph="右边有图标" value="">
             <i class="iconfont icon-lock-solid"></i>
         </div>
-        <div class="login-input">
-            <input type="text" name="" ph="动态密码">
-            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
-        </div>
-        <textarea style="height: 260px;">
-            <div class="login-input">
-                <input type="text" name="" ph="用户名" value="">
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="右边有图标" value="">
                 <i class="iconfont icon-lock-solid"></i>
             </div>
-            <div class="login-input">
-                <input type="text" name="" ph="动态密码">
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input-iconleft">
+            <input type="text" name="" ph="左侧有图标">
+            <i class="iconfont icon-lock-solid"></i>
+        </div>
+        <div class="l-input-iconleft">
+            <input type="text" name="" ph="左侧有图标">
+            <i class="iconfont icon-lock-solid"></i>
+        </div>
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="带按钮">
                 <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
             </div>
-            js代码
-            //输入框placeholder支持ie8
-            $('input').each(function(){
-                var $this =$(this);
-                var text = $this.attr("ph");
-                if (text) {
-                    if ($this.val() == "") {
-                        $this.val(text);
-                        $this.css('color','#ccc');
-                    }
-                }
-                if($this.attr("type") == "text"){
-                    if (!$this.attr('ph')){
-                        return;
-                    }
-                    $this.blur(function () {
-                        if($this.val() == ''){
-                            $this.val($this.attr("ph"));
-                            $this.css('color','#ccc');
-                        }else{
-                            $this.css('color','#666');
-                        }
-                    }).focus(function () {
-                        if($this.val() == $this.attr("ph")){
-                            $this.val("");
-                            $this.css('color','#666');
-                        }
-                    });
-                }
-            });
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input">
+            <input type="text" name="" ph="带按钮">
+            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+        </div>
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="带按钮">
+                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+            </div>
         </textarea>
     </div>
     <!--#include virtual="demo_fontclass.shtml"-->
