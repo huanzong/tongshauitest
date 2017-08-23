@@ -12,15 +12,14 @@ $(function() {
             setTimeout(function() {
                 $('.js_center').css('margin-top',0);
             }, 10);
-        } else  if (screenWidth <= 991 && screenWidth > 700) {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-50)+'px');
-            }, 10);
         } else {
             setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-60)+'px');
+
             }, 10);
         }
         $(".js_result_box").css({"height":screenHeight});
+        $(".js_pic").css({"height":screenHeight,"margin-top":-screenHeight/2});
+        var picWidth= $(".js_pic").width();
+        $(".js_pic").css({"margin-left":-picWidth/2});
     }
 });
