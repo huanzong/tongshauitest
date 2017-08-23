@@ -19,6 +19,9 @@
                 <div class="reg">
                     <div class="o_u o_df_1-3 o_lg_1-2 o_md_2-3 o_sm_5-6 o_xs_2-2">
                         <div class="reg-box js_center">
+                            <div class="reg-login o_md-hide o_sm-hide o_xs-hide">
+                                已经注册，<a href="javascript:;">立即登录</a>
+                            </div>
                             <div class="o_g">
                                 <div class="o_u o_df_2-2 reg-con">
                                     <div class="reg-tab o_md-hide o_sm-hide o_xs-hide">

@@ -15,7 +15,7 @@ $(function() {
         var screenHeight = document.body.offsetHeight;
         var regHeight = $('.js_center').height();
 
-        if (screenWidth <= 700) {
+        if (screenWidth <= 575) {
             setTimeout(function() {
                 $('.js_center').css('margin-top',0);
             }, 10);
