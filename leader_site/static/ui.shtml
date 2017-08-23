@@ -128,28 +128,6 @@
             </div>
         </textarea>
     </div>
-    <div class="main markdown">
-        <h1>浮层样式/角标</h1>
-    </div>
-    <div class="main markdown small-padding">
-        <div class="l-float">
-            <span>
-                我是浮层<br>
-                说明：<br>
-                浮层宽度需要自定义<br>
-                右侧小箭头会随着宽度自行居中<br>
-            </span>
-            <i></i>
-        </div>
-        <textarea>
-            <div class="l-float">
-                <span>
-                    其实"<span></span>"也是可以不用的，为了方便加上了而已
-                </span>
-                <i></i>
-            </div>
-        </textarea>
-    </div>
     <div class="main markdown small-padding">
         <div class="l-input o_borderbox" >
             <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4" style="width: 300px;">
@@ -196,6 +174,29 @@
             <script>
                  $(".js_checkbox,.js_radio").jq_qvote();
             </script>
+        </textarea>
+    </div>
+    
+    <div class="main markdown">
+        <h1>浮层样式/角标</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <span>
+                我是浮层<br>
+                说明：<br>
+                浮层宽度需要自定义<br>
+                右侧小箭头会随着宽度自行居中<br>
+            </span>
+            <i></i>
+        </div>
+        <textarea>
+            <div class="l-float">
+                <span>
+                    其实"<span></span>"也是可以不用的，为了方便加上了而已
+                </span>
+                <i></i>
+            </div>
         </textarea>
     </div>
     <!--#include virtual="demo_fontclass.shtml"-->
