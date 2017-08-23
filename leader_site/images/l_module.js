@@ -32,11 +32,13 @@ $(function() {
                 }else{
                     $this.css('color','#666');
                 }
+                $this.css('border','1px solid #ccc');
             }).focus(function () {
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
                     $this.css('color','#666');
                 }
+                $this.css('border','1px solid #e60012');
             });
         }
     });

@@ -23,7 +23,7 @@
                                 <div class="o_u o_df_2-2 login-con">
                                     <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
                                         <a class="login-shade js_loginType" data-login=1></a>
-                                        <i class="iconfont icon-phone js_loginType_tab"></i>
+                                        <i class="iconfont icon-mail js_loginType_tab"></i>
                                     </div>
                                     <div class="login-logo"></div>
                                     <div class="login-tit js_loginType_tit">手机注册</div>
