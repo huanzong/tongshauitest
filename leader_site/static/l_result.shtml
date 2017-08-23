@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>注册统帅-成功页面</title>
+
+<%=base%>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/head.shtml"-->
+<link rel="stylesheet" type="text/css" href="images/l_result.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <div class="o_g"> 
+                <div class="result_box js_result_box">
+                    <img class="pic" src="images/l_result_bg.jpg"/>
+                    <div class="txtbox js_center">
+                        <i></i>
+                    </div>
+                    <div class="o_u o_df_2-2 result_footer">
+                        <!--#include virtual="public/footer.shtml"-->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/l_result.js"></script>
+</body>
+</html>
