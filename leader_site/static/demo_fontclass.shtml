@@ -53,6 +53,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-mail"></i>
+                    <div class="name">mail</div>
+                    <div class="fontclass">.icon-mail</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-phone"></i>
                     <div class="name">phone</div>
                     <div class="fontclass">.icon-phone</div>
