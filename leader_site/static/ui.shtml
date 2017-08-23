@@ -85,21 +85,29 @@
             <input type="text" name="" ph="右边有图标" value="">
             <i class="iconfont icon-lock-solid"></i>
         </div>
+        <div class="l-input-iconleft">
+            <input type="text" name="" ph="左侧有图标">
+            <i class="iconfont icon-lock-solid"></i>
+        </div>
         <textarea>
             <div class="l-input">
                 <input type="text" name="" ph="右边有图标" value="">
                 <i class="iconfont icon-lock-solid"></i>
             </div>
+            <div class="l-input-iconleft">
+                <input type="text" name="" ph="左侧有图标">
+                <i class="iconfont icon-lock-solid"></i>
+            </div>
         </textarea>
     </div>
     <div class="main markdown small-padding">
-        <div class="l-input-iconleft">
-            <input type="text" name="" ph="左侧有图标">
-            <i class="iconfont icon-lock-solid"></i>
+        <div class="l-input">
+            <input type="text" name="" ph="带按钮">
+            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">带按钮</a>
         </div>
-        <div class="l-input-iconleft">
-            <input type="text" name="" ph="左侧有图标">
-            <i class="iconfont icon-lock-solid"></i>
+        <div class="l-input">
+            <input type="text" name="" ph="带按钮">
+            <a href="javascript:;" class="l-btn-sm l-btn-red">带按钮</a>
         </div>
         <textarea>
             <div class="l-input">
@@ -110,8 +118,8 @@
     </div>
     <div class="main markdown small-padding">
         <div class="l-input">
-            <input type="text" name="" ph="带按钮">
-            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+            <input type="text" name="" ph="带信息">
+            <span>我是信息</span>
         </div>
         <textarea>
             <div class="l-input">
