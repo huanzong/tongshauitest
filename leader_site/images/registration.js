@@ -8,12 +8,12 @@ $(function() {
 
     function init() {
         //默认电脑登陆
-        $('.js_loginType_pc').show();
-        $('.js_loginType_phone').hide();
+        $('.js_regType_phone').show();
+        $('.js_regType_email').hide();
 
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
-        var loginHeight = $('.js_center').height();
+        var regHeight = $('.js_center').height();
 
         if (screenWidth <= 700) {
             setTimeout(function() {
@@ -21,27 +21,27 @@ $(function() {
             }, 10);
         } else {
             setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
+                $('.js_center').css('margin-top',((screenHeight-regHeight)/2-20)+'px');
             }, 10);
         }
 
     }
 
     // 登录方式转换
-    $('.js_loginType').on('click',function(){
+    $('.js_regType').on('click',function(){
         var phoneType = $(this);
-        if(phoneType.prop('data-login')){
-            $('.js_loginType_tab').removeClass('icon-phone').addClass('icon-computer');
-            $('.js_loginType_pc').show();
-            $('.js_loginType_phone').hide();
-            $('.js_loginType_tit').text('登录统帅');
-            $('.js_loginType').prop('data-login',0);
+        if(phoneType.prop('data-reg')){//当前手机注册，转为邮箱注册
+            $('.js_regType_tab').removeClass('icon-phone').addClass('icon-computer');
+            $('.js_regType_phone').show();
+            $('.js_regType_email').hide();
+            $('.js_regType_tit').text('手机注册');
+            $('.js_regType').prop('data-reg',0);
         }else{
-            $('.js_loginType_tab').removeClass('icon-computer').addClass('icon-phone');
-            $('.js_loginType_phone').show();
-            $('.js_loginType_pc').hide();
-            $('.js_loginType_tit').text('动态密码登录');
-            $('.js_loginType').prop('data-login',1);
+            $('.js_regType_tab').removeClass('icon-computer').addClass('icon-phone');
+            $('.js_regType_email').show();
+            $('.js_regType_phone').hide();
+            $('.js_regType_tit').text('邮箱注册');
+            $('.js_regType').prop('data-reg',1);
         }
     });
 

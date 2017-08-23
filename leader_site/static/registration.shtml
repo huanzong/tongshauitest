@@ -9,64 +9,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 <meta name="format-detection" content="telephone=no, email=no" />
 <!--#include virtual="public/head.shtml"-->
-<link rel="stylesheet" type="text/css" href="images/login.css">
+<link rel="stylesheet" type="text/css" href="images/registration.css">
 </head>
 
 <body>
     <div class="o_body">
         <div class="o_main">
             <div class="o_g"> 
-                <div class="login">
-                    <div class="o_u o_df_1-3 o_lg_5-6 o_md_5-6 o_sm_2-2 o_xs_2-2">
-                        <div class="login-box js_center">
+                <div class="reg">
+                    <div class="o_u o_df_1-3 o_lg_1-2 o_md_2-3 o_sm_5-6 o_xs_2-2">
+                        <div class="reg-box js_center">
                             <div class="o_g">
-                                <div class="o_u o_df_2-2 login-con">
+                                <div class="o_u o_df_2-2 reg-con">
                                     <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
-                                        <a class="login-shade js_loginType" data-login=1></a>
-                                        <i class="iconfont icon-mail js_loginType_tab"></i>
+                                        <a class="reg-shade js_regType" data-reg=1></a>
+                                        <i class="iconfont icon-mail js_regType_tab"></i>
                                     </div>
-                                    <div class="login-logo"></div>
-                                    <div class="login-tit js_loginType_tit">手机注册</div>
-                                    <div class="login-form js_loginType_pc">
-                                        <div class="login-input">
+                                    <div class="reg-logo"></div>
+                                    <div class="reg-tit js_regType_tit">手机注册</div>
+                                    <div class="reg-form js_regType_phone">
+                                        <div class="reg-input">
                                             <input type="text" name="username" ph="请输入常用手机号">
                                             <i class="iconfont icon-member"></i>
                                         </div>
-                                        <div class="login-input">
+                                        <div class="reg-input">
                                             <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
                                             <i class="iconfont icon-lock-solid"></i>
                                         </div>
-                                        <div class="login-input">
+                                        <div class="reg-input">
                                             <input type="text" name="password" ph="短信验证码">
                                             <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
                                         </div>
-                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">注册</a>
-                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用动态密码登录</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable reg-btn">注册</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show reg-btn-line js_regType"  data-reg=1>使用邮箱注册</a>
                                         <div class="reg-info">
                                             点击"注册"，即表示您同意并愿意遵守<br><a href="javascript:;">《统帅用户注册协议》</a>和<a href="javascript:;">《隐私政策》</a>
                                         </div>
                                     </div>
-                                    <div class="login-form js_loginType_phone">
-                                        <div class="login-input">
-                                            <input type="text" name="username" ph="手机号">
-                                            <i class="iconfont icon-phone-solid"></i>
+                                    <div class="reg-form js_regType_email">
+                                        <div class="reg-input">
+                                            <input type="text" name="username" ph="请输入常用邮箱">
+                                            <i class="iconfont icon-member"></i>
                                         </div>
-                                        <div class="login-input">
-                                            <input type="text" name="password" ph="动态密码">
-                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                        <div class="reg-input">
+                                            <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
+                                            <i class="iconfont icon-lock-solid"></i>
                                         </div>
-                                        <div class="login-role">&nbsp;</div>
-                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">登录</a>
-                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用账号密码登录</a>
-                                        <div class="login-reg">
-                                            <a href="javascript:;">立即注册</a>
+                                        <div class="reg-input">
+                                            <input type="text" name="password" ph="邮箱验证码">
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送验证邮件</a>
+                                        </div>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable reg-btn">注册</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show reg-btn-line js_regType"  data-reg=0>使用手机注册</a>
+                                        <div class="reg-info">
+                                            点击"注册"，即表示您同意并愿意遵守<br><a href="javascript:;">《统帅用户注册协议》</a>和<a href="javascript:;">《隐私政策》</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="o_u o_df_2-2 login_footer">
+                    <div class="o_u o_df_2-2 reg_footer">
                         <!--#include virtual="public/footer.shtml"-->
                     </div>
                 </div>
