@@ -121,9 +121,7 @@
         </textarea>
     </div>
     <!--#include virtual="demo_fontclass.shtml"-->
-    <!--#include virtual="public/foot.shtml"--> 
-
-    <script type="text/javascript" src="images/ui.js"></script>  
+    <!--#include virtual="public/foot.shtml"-->
 </body>
 
 </html>

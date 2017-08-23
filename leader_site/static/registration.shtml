@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DEMO</title>
+<title>注册统帅</title>
 
 <%=base%>
 
@@ -15,17 +15,66 @@
 <body>
     <div class="o_body">
         <div class="o_main">
-            <div class="o_g">
+            <div class="o_g"> 
                 <div class="login">
-                    <div class="o_u o_df_2-3 o_sm_2-2 o_xs_2-2">
-                        我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的
+                    <div class="o_u o_df_1-3 o_lg_5-6 o_md_5-6 o_sm_2-2 o_xs_2-2">
+                        <div class="login-box js_center">
+                            <div class="o_g">
+                                <div class="o_u o_df_2-2 login-con">
+                                    <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
+                                        <a class="login-shade js_loginType" data-login=1></a>
+                                        <i class="iconfont icon-phone js_loginType_tab"></i>
+                                    </div>
+                                    <div class="login-logo"></div>
+                                    <div class="login-tit js_loginType_tit">手机注册</div>
+                                    <div class="login-form js_loginType_pc">
+                                        <div class="login-input">
+                                            <input type="text" name="username" ph="请输入常用手机号">
+                                            <i class="iconfont icon-member"></i>
+                                        </div>
+                                        <div class="login-input">
+                                            <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
+                                            <i class="iconfont icon-lock-solid"></i>
+                                        </div>
+                                        <div class="login-input">
+                                            <input type="text" name="password" ph="短信验证码">
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                        </div>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">注册</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用动态密码登录</a>
+                                        <div class="reg-info">
+                                            点击"注册"，即表示您同意并愿意遵守<br><a href="javascript:;">《统帅用户注册协议》</a>和<a href="javascript:;">《隐私政策》</a>
+                                        </div>
+                                    </div>
+                                    <div class="login-form js_loginType_phone">
+                                        <div class="login-input">
+                                            <input type="text" name="username" ph="手机号">
+                                            <i class="iconfont icon-phone-solid"></i>
+                                        </div>
+                                        <div class="login-input">
+                                            <input type="text" name="password" ph="动态密码">
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                        </div>
+                                        <div class="login-role">&nbsp;</div>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">登录</a>
+                                        <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用账号密码登录</a>
+                                        <div class="login-reg">
+                                            <a href="javascript:;">立即注册</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!--#include virtual="public/footer.shtml"-->
+                    <div class="o_u o_df_2-2 login_footer">
+                        <!--#include virtual="public/footer.shtml"-->
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/registration.js"></script>
 </body>
-<!--#include virtual="public/foot.shtml"-->
 </html>
