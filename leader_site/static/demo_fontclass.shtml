@@ -41,6 +41,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-check-mark"></i>
+                    <div class="name">check-mark</div>
+                    <div class="fontclass">.icon-check-mark</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-computer"></i>
                     <div class="name">computer</div>
                     <div class="fontclass">.icon-computer</div>
@@ -59,9 +65,27 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-minus"></i>
+                    <div class="name">minus</div>
+                    <div class="fontclass">.icon-minus</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-menu"></i>
+                    <div class="name">menu</div>
+                    <div class="fontclass">.icon-menu</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-phone"></i>
                     <div class="name">phone</div>
                     <div class="fontclass">.icon-phone</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-plus"></i>
+                    <div class="name">plus</div>
+                    <div class="fontclass">.icon-plus</div>
                 </li>
             
                 <li>
@@ -95,6 +119,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-comment-solid"></i>
+                    <div class="name">comment-solid</div>
+                    <div class="fontclass">.icon-comment-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-eye-open-solid"></i>
                     <div class="name">eye-open-solid</div>
                     <div class="fontclass">.icon-eye-open-solid</div>
@@ -104,6 +134,12 @@
                 <i class="icon iconfont icon-eye-close-solid"></i>
                     <div class="name">eye-close-solid</div>
                     <div class="fontclass">.icon-eye-close-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-input_delete-solid"></i>
+                    <div class="name">input_delete-solid</div>
+                    <div class="fontclass">.icon-input_delete-solid</div>
                 </li>
             
                 <li>
@@ -134,6 +170,12 @@
                 <i class="icon iconfont icon-phone-solid"></i>
                     <div class="name">phone-solid</div>
                     <div class="fontclass">.icon-phone-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-price-tag-solid"></i>
+                    <div class="name">price-tag-solid</div>
+                    <div class="fontclass">.icon-price-tag-solid</div>
                 </li>
             
                 <li>
@@ -188,6 +230,30 @@
                 <i class="icon iconfont icon-problem-solid"></i>
                     <div class="name">problem-solid</div>
                     <div class="fontclass">.icon-problem-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-box-solid"></i>
+                    <div class="name">box-solid</div>
+                    <div class="fontclass">.icon-box-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-wallet-solid"></i>
+                    <div class="name">wallet-solid</div>
+                    <div class="fontclass">.icon-wallet-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fail-solid"></i>
+                    <div class="name">fail-solid</div>
+                    <div class="fontclass">.icon-fail-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-success-solid"></i>
+                    <div class="name">success-solid</div>
+                    <div class="fontclass">.icon-success-solid</div>
                 </li>
             
         </ul>

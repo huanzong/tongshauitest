@@ -12,7 +12,7 @@
     background: #f6f5f5;
     font-size: 14px;
     text-align: center;
-    @media (max-width: 700px){
+    @media (max-width: 575px){
 		background: #fff;
 		position: relative;
 	}
@@ -30,15 +30,14 @@
 		}
     }
     .reg-box{
+    	position: relative;
     	border-radius: 7px;
     	background-color: #fff;
-    	@media (min-width: 992px){
-	    	background: url(login_bg.jpg) no-repeat;
-	    	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-			-moz-background-size:50% 100%;  
-			background-size:50% 100%;
-		}
-    	
+    	.reg-login{
+    		position: absolute;
+    		top: -25px;
+    		right: 5px;
+    	}
     }
 }
 .reg-con{
@@ -199,4 +198,5 @@
 	padding-top: 20px;
 	font-size: 12px;
 	line-height: 20px;
+	color: #666;
 }
