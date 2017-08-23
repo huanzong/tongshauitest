@@ -142,8 +142,44 @@
             </div>
         </textarea>
     </div>
+    <div class="main markdown small-padding">
+        <span>
+          <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+        </span>
+        <span>
+          <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+        </span>
+        <span>
+            <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
+        </span>
+        <br/>
+        <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
+        <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
+        <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
+        <textarea>
+            <span>
+              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+            </span>
+            <span>
+              <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+            </span>
+            <span>
+                <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
+            </span>
+            <br/>
+            <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
+            <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
+            <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();
+            </script>
+        </textarea>
+    </div>
     <!--#include virtual="demo_fontclass.shtml"-->
+
     <!--#include virtual="public/foot.shtml"-->
+
 </body>
 
 </html>
