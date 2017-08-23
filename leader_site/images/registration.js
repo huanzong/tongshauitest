@@ -35,12 +35,14 @@ $(function() {
             $('.js_regType_phone').show();
             $('.js_regType_email').hide();
             $('.js_regType_tit').text('手机注册');
+            $('.js_regType_float').text('使用邮箱注册');
             $('.js_regType').prop('data-reg',0);
         }else{
             $('.js_regType_tab').removeClass('icon-computer').addClass('icon-phone');
             $('.js_regType_email').show();
             $('.js_regType_phone').hide();
             $('.js_regType_tit').text('邮箱注册');
+            $('.js_regType_float').text('使用手机注册');
             $('.js_regType').prop('data-reg',1);
         }
     });

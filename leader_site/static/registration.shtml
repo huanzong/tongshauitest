@@ -21,7 +21,13 @@
                         <div class="reg-box js_center">
                             <div class="o_g">
                                 <div class="o_u o_df_2-2 reg-con">
-                                    <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
+                                    <div class="reg-tab o_md-hide o_sm-hide o_xs-hide">
+                                        <div class="reg-float">
+                                            <div class="l-float">
+                                                <span class="js_regType_float">使用邮箱注册</span>
+                                                <i></i>
+                                            </div>
+                                        </div>
                                         <a class="reg-shade js_regType" data-reg=1></a>
                                         <i class="iconfont icon-mail js_regType_tab"></i>
                                     </div>
