@@ -43,6 +43,7 @@ $(function() {
         }
     });
 
+    //checkbox/radio
     $.fn.extend({
         jq_qvote: function() { //checkbox  rodio 样式重置
             var opt = {
