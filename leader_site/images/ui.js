@@ -7,39 +7,14 @@ $(function() {
     });
 
     function init() {
-        
+
+        var screenWidth = document.body.offsetWidth;
+        var screenHeight = document.body.offsetHeight;
 
     }
 
-    //输入框placeholder支持ie8
-    $('input').each(function(){
-        var $this =$(this);
-        var text = $this.attr("ph");
-        if (text) {
-            if ($this.val() == "") {
-                $this.val(text);
-                $this.css('color','#ccc');
-            }
-        }
-        if($this.attr("type") == "text"){
-            if (!$this.attr('ph')){
-                return;
-            }
-            $this.blur(function () {
-                if($this.val() == ''){
-                    $this.val($this.attr("ph"));
-                    $this.css('color','#ccc');
-                }else{
-                    $this.css('color','#666');
-                }
-            }).focus(function () {
-                if($this.val() == $this.attr("ph")){
-                    $this.val("");
-                    $this.css('color','#666');
-                }
-            });
-        }
-    });
+    //checkbox，radio样式初始化
+    $(".js_checkbox,.js_radio").jq_qvote();//单选多选初始化
 
 });
 

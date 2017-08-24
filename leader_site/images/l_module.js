@@ -11,42 +11,9 @@ $(function() {
 
     }
 
-    /*
-    * 输入框placeholder支持ie8
-    */
-    $('input').each(function(){
-        var $this =$(this);
-        var text = $this.attr("ph");
-        if (text) {
-            if ($this.val() == "") {
-                $this.val(text);
-                $this.css('color','#ccc');
-            }
-        }
-        if($this.attr("type") == "text"){
-            if (!$this.attr('ph')){
-                return;
-            }
-            $this.blur(function () {
-                if($this.val() == ''){
-                    $this.val($this.attr("ph"));
-                    $this.css('color','#ccc');
-                }else{
-                    $this.css('color','#666');
-                }
-                $this.css('border','1px solid #ccc');
-            }).focus(function () {
-                if($this.val() == $this.attr("ph")){
-                    $this.val("");
-                    $this.css('color','#666');
-                }
-                $this.css('border','1px solid #e60012');
-            });
-        }
-    });
-    /*
-    * 自定义插件
-    */
+    /**
+     * 自定义插件
+     */
     $.fn.extend({
         //checkbox  rodio 样式重置
         jq_qvote: function() {
@@ -57,7 +24,7 @@ $(function() {
                 RSelectedClass: "c_ipt_cr_rs",
                 RUnSelectedClass: "c_ipt_cr_crus",
                 loseSelectedClass: "lose"
-            }
+            };
             $(this).hide();
             $(this).each(function(i) {
                 var that = $(this);
@@ -82,7 +49,7 @@ $(function() {
                     jqvote.innerHTML = $val;
                 }
 
-                this.parentNode.insertBefore(jqvote, this.parentNode.childNodes[that.index()])
+                this.parentNode.insertBefore(jqvote, this.parentNode.childNodes[that.index()]);
                 var new_input = that.prev();
                 new_input.addClass(opt.BaseClass);
                 if (that.prop("disabled")) {
@@ -98,25 +65,57 @@ $(function() {
                 new_input.bind("click", function() {
                     if (that.prop("disabled")) {
                         ///不可点击
-                        return
+                        return;
                     }
                     var n = $(this).next();
                     if (n.prop("type") == "radio") {
                         $(":radio[name='" + n.prop("name") + "']").prev().removeClass(SelectedClass).addClass(UnSelectedClass);
                     }
                     n.click();
-                    if (n.prop("checked") == true) {
+                    if (n.prop("checked") === true) {
                         new_input.removeClass(UnSelectedClass).addClass(SelectedClass);
                     } else {
                         new_input.removeClass(SelectedClass).addClass(UnSelectedClass);
                     }
-                    return false
+                    return false;
                 });
             });
-
         }
-    })
-    $(".js_checkbox,.js_radio").jq_qvote();//单选多选初始化
+    });
+
+    /**
+     * 输入框placeholder支持ie8
+     */
+    $('input').each(function(){
+        var $this =$(this);
+        var text = $this.attr("ph");
+        if (text) {
+            if ($this.val() === "") {
+                $this.val(text);
+                $this.css('color','#ccc');
+            }
+        }
+        if($this.attr("type") == "text"){
+            if (!$this.attr('ph')){
+                return;
+            }
+            $this.blur(function () {
+                if($this.val() === ''){
+                    $this.val($this.attr("ph"));
+                    $this.css('color','#ccc');
+                }else{
+                    $this.css('color','#666');
+                }
+                $this.css('border','1px solid #ccc');
+            }).focus(function () {
+                if($this.val() == $this.attr("ph")){
+                    $this.val("");
+                    $this.css('color','#666');
+                }
+                $this.css('border','1px solid #e60012');
+            });
+        }
+    });
 });
 
 

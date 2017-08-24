@@ -26,6 +26,8 @@ $(function() {
         }
 
     }
+    //初始化CheckBox，radio
+    $(".js_checkbox,.js_radio").jq_qvote();
 
     // 登录方式转换
     $('.js_loginType').on('click',function(){
