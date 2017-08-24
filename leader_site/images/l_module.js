@@ -11,7 +11,9 @@ $(function() {
 
     }
 
-    //输入框placeholder支持ie8
+    /*
+    * 输入框placeholder支持ie8
+    */
     $('input').each(function(){
         var $this =$(this);
         var text = $this.attr("ph");
@@ -42,9 +44,12 @@ $(function() {
             });
         }
     });
-
+    /*
+    * 自定义插件
+    */
     $.fn.extend({
-        jq_qvote: function() { //checkbox  rodio 样式重置
+        //checkbox  rodio 样式重置
+        jq_qvote: function() {
             var opt = {
                 BaseClass: "c_ipt_cr",
                 CSelectedClass: "c_ipt_cr_cs",
@@ -110,8 +115,9 @@ $(function() {
             });
 
         }
+
     })
-    $(".js_checkbox,.js_radio").jq_qvote();
+    $(".js_checkbox,.js_radio").jq_qvote();//单选多选初始化
 });
 
 
