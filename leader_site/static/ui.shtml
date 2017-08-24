@@ -12,7 +12,16 @@
 </head>
 
 <body>
-    <div class="main markdown">
+    <div class="ui_nav">
+        <ul>
+            <li><a href="ui.shtml#ui_button" class="js_navShow">简易导航栏</a></li>
+            <li><a href="ui.shtml#ui_button">button 按钮</a></li>
+            <li><a href="ui.shtml#form_login">表单样式：登陆/注册/找回密码</a></li>
+            <li><a href="ui.shtml#ui_float">浮层样式/角标</a></li>
+            <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
+        </ul>
+    </div>
+    <div class="main markdown" id="ui_button">
         <h1>button 按钮</h1>
     </div>
     <div class="main markdown small-padding">
@@ -67,7 +76,7 @@
             只要在class里加上“l-btn-disable”即可
         </textarea>
     </div>
-    <div class="main markdown">
+    <div class="main markdown" id="form_login">
         <h1>表单样式：登陆/注册/找回密码</h1>
     </div>
     <div class="main markdown small-padding">
@@ -182,7 +191,7 @@
         </textarea>
     </div>
     
-    <div class="main markdown">
+    <div class="main markdown" id="ui_float">
         <h1>浮层样式/角标</h1>
     </div>
     <div class="main markdown small-padding">

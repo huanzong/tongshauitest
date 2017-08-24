@@ -24,7 +24,6 @@ $(function() {
                 $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
             }, 10);
         }
-
     }
     //初始化CheckBox，radio
     $(".js_checkbox,.js_radio").jq_qvote();
