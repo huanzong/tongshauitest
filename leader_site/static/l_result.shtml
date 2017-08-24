@@ -16,10 +16,16 @@
     <div class="o_body">
         <div class="o_main">
             <div class="o_g"> 
-                <div class="result_box js_result_box">
-                    <img class="pic js_pic" src="images/l_result_bg.jpg"/>
-                    <div class="txtbox js_center">
-                        <i></i>
+                <div class="o_u o_df_2-2 result_box js_result_box o_g">
+                    <div class="picbox js_picbox">
+                        <img class="pic o_md-hide o_sm-hide o_xs-hide js_pic" src="images/l_result_bg.jpg"/>
+                        <img class="pic_md o_df-hide o_md-show o_sm-show o_xs-hide" src="images/reg_bg_top1.JPG"/>
+                        <img class="pic_xs o_df-hide o_xs-show" src="images/reg_bg_top2.JPG"/>
+                    </div>
+                    <div class="o_u o_df_2-2 o_md_8-12 o_sm_10-12 o_borderbox txtbox  js_center">
+                        <i class="iconfont icon-success-solid success"></i>
+                        <h1>注册成功！</h1>
+                        <div class="skip"><span id="js_time">5</span> 秒后返回首页</div>
                     </div>
                     <div class="o_u o_df_2-2 result_footer">
                         <!--#include virtual="public/footer.shtml"-->
