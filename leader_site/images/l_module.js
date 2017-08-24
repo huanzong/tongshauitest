@@ -115,7 +115,6 @@ $(function() {
             });
 
         }
-
     })
     $(".js_checkbox,.js_radio").jq_qvote();//单选多选初始化
 });

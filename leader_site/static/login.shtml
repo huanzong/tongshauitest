@@ -39,8 +39,9 @@
                                             <i class="iconfont icon-lock-solid"></i>
                                         </div>
                                         <div class="login-role">
-                                            <input type="checkbox" name="noLogin" id="noLogin">
-                                            <label for="noLogin">2周内免登录</label>
+                                            <span>
+                                              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="2周内免登录">
+                                            </span>
                                             <span class="l-fr">忘记密码</span>
                                             <i class="iconfont icon-problem-solid l-fr"></i>
                                         </div>
