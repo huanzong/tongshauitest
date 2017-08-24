@@ -21,6 +21,9 @@ $(function() {
     //checkbox，radio样式初始化
     $(".js_checkbox,.js_radio").jq_qvote();//单选多选初始化
 
+    //下拉菜单初始化
+    $("#js_select").oSelect().init();
+
 });
 
 

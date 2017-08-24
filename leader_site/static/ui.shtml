@@ -213,6 +213,32 @@
             </div>
         </textarea>
     </div>
+    <div class="main markdown small-padding">
+        <div class="selectbox" style="width: 50%;">
+            <div class="">
+                <select name="" id="js_select"  autotext="请选择验证方式">
+                    <option value="0">--请选择验证方式--</option>
+                    <option value="1">手机验证（157****3370）</option>
+                    <option value="2">邮箱验证（744****df@qq.com）</option>
+                </select>
+            </div>
+        </div>
+        <textarea>
+            <div class="selectbox" style="width: 50%;">
+                <div class="">
+                    <select name="" id="js_select1"  autotext="请选择验证方式">
+                        <option value="0">--请选择验证方式--</option>
+                        <option value="1">手机验证（157****3370）</option>
+                        <option value="2">邮箱验证（744****df@qq.com）</option>
+                    </select>
+                </div>
+            </div>
+            <script>
+                //下拉菜单初始化
+                $("#js_select1").oSelect().init();
+            </script>
+        </textarea>
+    </div>
     <!--#include virtual="demo_fontclass.shtml"-->
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/ui.js"></script>

@@ -251,28 +251,31 @@ ul.o_scrollH li{position:relative;left:-20px;box-sizing:border-box;width:100%}
 
 //下拉菜单
 select{opacity: 0;}
-.o_DropdownBox{border: 1px solid #eee;background: #fff;padding: 5px 5px 0px 5px;box-sizing: content-box;position: absolute!important;box-shadow:1px 9px 15px 3px rgba(0,0,0,0.2);border-radius: 10px;width: 100%;margin-left: -5px;margin-top: -5px;}
-.o_DropdownBox .o_Dropdown .name{color: #fff;}
+.selectbox{position: relative;z-index: 1;height: 50px;}
+.o_DropdownBox{border: 1px solid #eee;background: #fff;padding: 5px 5px 0px 5px;box-sizing: content-box;position: absolute!important;box-shadow:1px 9px 15px 3px rgba(0,0,0,0.2);border-radius: 25px;width: 100%;margin-left: -5px;margin-top: -5px;}
+.o_DropdownBox .o_Dropdown .name{color: #fff;padding-left: 20px;}
 .o_DropdownBox .o_Dropdown .i_down{color: #fff;}
+.selectbox .o_Dropdown{width: 100%;text-align: left;}
 
-.o_Dropdown{height:@select_height;display:inline-block;border:1px solid @select_bordercolor;position:relative;margin-bottom:10px;background:white;z-index:9;cursor:pointer;box-sizing:border-box;border-radius: 40px;}
+
+.o_Dropdown{height:@select_height;display:inline-block;border:1px solid @select_bordercolor;position:relative;margin-bottom:10px;background:white;z-index:9;cursor:pointer;box-sizing:border-box;border-radius: 20px;}
 /*.o_Dropdown *::-webkit-scrollbar {
 	display: none;
 }*/
 .o_Dropdown .name{height:@select_height;line-height:@select_height!important;font-size:14px;color:@select_color;display:block;padding-left:@select_p_left;margin-right:30px;overflow:hidden;position:relative;z-index:1;.leaveout}
 // .o_Dropdown .i_down{display:inline-block;width:0px;height:0;border:@select_arrowsize solid @select_arrowcolor;border-top-color:white;border-left-color:white;position:absolute;top:50%;margin-top:-(@select_arrowsize+3);right:16px;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);}
-.o_Dropdown .i_down{display:inline-block;width:@select_arrowsize;height:@select_arrowsize;right:@select_arrowsize/2;position:absolute;top:50%;margin-top:-@select_arrowsize/2;color:black;font-size:@select_arrowsize;line-height:1em;font-family:@select_arrowfont}
+.o_Dropdown .i_down{display:inline-block;width:@select_arrowsize;height:@select_arrowsize;right:12px;position:absolute;top:50%;margin-top:-@select_arrowsize/2;color:black;font-size:@select_arrowsize;line-height:1em;font-family:@select_arrowfont}
 .o_Dropdown .i_down:before { content:@select_arrowfont_code; }
 .o_Dropdown.selected span{color:#666;}
 .o_Dropdown select{cursor: default;width:100%;text-indent: 0;height: @select_height;line-height: @select_height;color: #a0a0a0;font-size: 16px;position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;z-index:2}
 .o_Dropdown select{line-height:30px}
 .o_Dropdown.lose{background:@select_losebgcolor}
 .o_Dropdown.lose .name{color:@select_losecolor}
-.o_Dropdown .list{display:none;position:absolute;min-width:90%;top:(@select_height);max-height:200px;margin:0 5%;padding-top:20px;}
+.o_Dropdown .list{display:none;position:absolute;top:(@select_height);max-height:200px;padding:20px 15px;}
 .o_Dropdown .list ul h2{font-weight:bold;color:@select_groupcolor;padding:0 @select_p_left/2;white-space:nowrap;line-height:@select_height;height:@select_height;}
 .o_Dropdown .list li{display:block;font-size:12px;line-height:@select_height;height:@select_height;color:@select_color;cursor:pointer;border-bottom: 1px solid #eee;}
-.o_Dropdown .list li span{padding:0 @select_p_left;display:block;font-size:12px;}
-.o_Dropdown .list li:hover{color:#e60012;}
+.o_Dropdown .list li span{padding:0 5px;display:block;font-size:12px;}
+.o_Dropdown .list li:hover{color:#b43d07;}
 .o_Dropdown .list li.lose{color:#ccc;cursor:default;}
 .o_Dropdown .list li.cur{color:#e60012;}
 //.o_Dropdown select{display:none;}
