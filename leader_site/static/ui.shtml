@@ -152,10 +152,6 @@
         <span>
             <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
         </span>
-        <br/>
-        <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
-        <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
-        <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
         <textarea>
             <span>
               <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
@@ -166,7 +162,16 @@
             <span>
                 <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
             </span>
-            <br/>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();
+            </script>
+        </textarea>
+
+        <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
+        <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
+        <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
+        <textarea>
             <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
             <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
             <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
