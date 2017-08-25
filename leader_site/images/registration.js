@@ -13,21 +13,22 @@ $(function() {
 
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
-        var regHeight = $('.js_center').height();
+        
+        // var regHeight = $('.js_center').height();
 
-        if (screenWidth <= 575) {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',0);
-            }, 10);
-        } else if(screenWidth <= 991 && screenWidth>575) {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-regHeight)/2+10)+'px');
-            }, 10);
-        } else {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-regHeight)/2-20)+'px');
-            }, 10);
-        }
+        // if (screenWidth <= 575) {
+        //     setTimeout(function() {
+        //         $('.js_center').css('margin-top',0);
+        //     }, 10);
+        // } else if(screenWidth <= 991 && screenWidth>575) {
+        //     setTimeout(function() {
+        //         $('.js_center').css('margin-top',((screenHeight-regHeight)/2+10)+'px');
+        //     }, 10);
+        // } else {
+        //     setTimeout(function() {
+        //         $('.js_center').css('margin-top',((screenHeight-regHeight)/2-20)+'px');
+        //     }, 10);
+        // }
 
     }
 
