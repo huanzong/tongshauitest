@@ -17,7 +17,9 @@
             <li class="js_navShow"><a>O(∩_∩)O~ 简易导航栏 </a></li>
             <li><a href="ui.shtml#ui_button">button 按钮</a></li>
             <li><a href="ui.shtml#form_login">表单样式：登陆/注册/找回密码</a></li>
+            <li><a href="ui.shtml#ui_checkbox">多选/单选按钮</a></li>
             <li><a href="ui.shtml#ui_float">浮层样式/角标</a></li>
+            <li><a href="ui.shtml#ui_select">下拉菜单</a></li>
             <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
         </ul>
     </div>
@@ -151,6 +153,9 @@
             </div>
         </textarea>
     </div>
+    <div class="main markdown" id="ui_checkbox">
+        <h1>多选/单选按钮</h1>
+    </div>
     <div class="main markdown small-padding">
         <span>
           <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
@@ -212,6 +217,9 @@
                 <i></i>
             </div>
         </textarea>
+    </div>
+    <div class="main markdown" id="ui_select">
+        <h1>下拉菜单</h1>
     </div>
     <div class="main markdown small-padding">
         <div class="selectbox" style="width: 50%;">
