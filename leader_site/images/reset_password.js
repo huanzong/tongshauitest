@@ -97,7 +97,19 @@ $(function() {
 
 
     }
-     $("#js_selectValidate").oSelect().init();//下拉菜单初始化
+    //密码明文和密文切换
+    $(".js_passwordSwitch").oToggle(function (self) {
+        self.removeClass("icon-eye-close-solid").addClass("icon-eye-open-solid");
+        var passwordVal = $("#js_loginPassword").val();
+        $("#js_loginPassword2").val(passwordVal).removeClass("o_df-hide").css({"color": "rgb(102, 102, 102)"});
+        $("#js_loginPassword").addClass("o_df-hide");
+    },function (self) {
+        self.addClass("icon-eye-close-solid").removeClass("icon-eye-open-solid");
+        $("#js_loginPassword").removeClass("o_df-hide");
+        $("#js_loginPassword2").addClass("o_df-hide");
+    })
+    //下拉菜单初始化
+    $("#js_selectValidate").oSelect().init();
 
     //倒计时
     var wait = 5;
