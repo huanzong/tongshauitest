@@ -26,6 +26,7 @@
         config = require('./config.json'),
         //确保本地已安装gulp-sourcemaps [cnpm install gulp-sourcemaps --save-dev]
         sourcemaps = require('gulp-sourcemaps'),
+        combiner = require('stream-combiner2'),
         //确保本地已安装gulp-minify-css [cnpm install gulp-minify-css --save-dev]
         cssmin = require('gulp-minify-css');
         //确保本地已安装gulp-less [cnpm install gulp-less --save-dev]
@@ -242,17 +243,24 @@
     
     
     gulp.task("testLess",function(){
-         gulp.src("./images/less/*.less")
-         .pipe(watch("./images/less/*.less"))
-         .pipe(sourcemaps.init())
-         .pipe(less())
-         .pipe(cssmin())
-         .pipe(sourcemaps.write('./maps'))
-         .pipe(gulp.dest("./images"));
+        var combined = combiner.obj([
+            gulp.src("./images/less/*.less"),
+            watch("./images/less/*.less"),
+            sourcemaps.init(),
+            less(),
+            cssmin(),
+            sourcemaps.write('./maps'),
+            gulp.dest("./images")
+        ]);
+
+        combined.on('error', function(){
+            console.error.bind(console)
+        });
+        return combined;
      });
 
     gulp.task('lesstask', function() {
-         return gulp.watch('./images/less/*.less', ['less']);
+        return gulp.watch('./images/less/*.less', ['testLess']);
     });
  
 
@@ -316,11 +324,10 @@
         gulp.run('contenttask-preview');
     });
 
-
     gulp.task('debug', ['clean-preview'], function(a) {
         gulp.run('contenttask-watch');
         gulp.run('webserver-static');
-        gulp.run('testLess');
+        gulp.run('lesstask');
     });
 
     //项目完成提交任务
