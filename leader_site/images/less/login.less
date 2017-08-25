@@ -6,12 +6,23 @@
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
 	-moz-background-size:100% 100%;  
 	background-size:100% 100%;
+	@media (max-width: 700px){
+		background: #fff;
+	}
 }
 .login-conbox{
     position: absolute;
     top: 50%;
     width: 100%;
-    margin-top: -251px;
+    margin-top: -276px;
+    @media (min-width: 701px) and (max-width: 991px){
+		margin-top: -375px;
+	}
+	@media (max-width: 700px){
+		position: relative;
+		top: 0;
+		margin-top: 0;
+	}
 }
 
 .login{
@@ -19,18 +30,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    height: 652px;
+    height: 732px;
     font-size: 14px;
     text-align: center;
-    @media (max-width: 700px){
-		
+	@media (min-width: 701px) and (max-width: 991px){
+		height: 900px;
 	}
 	@media (max-width: 700px){
-		// height: 700px;
-	}
-
-    @media (max-width: 575px){
-		// height: 600px;
+		height: auto;
 	}
 }
 
@@ -79,8 +86,8 @@
 	@media (max-width: 575px){
 		background: url(login_bg2.jpg) no-repeat;
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size: 100% 27%;  
-		background-size: 100% 27%;
+		-moz-background-size: 100% 23%;  
+		background-size: 100% 23%;
 	}
 	.logon-tab{
 		position: absolute;
@@ -121,7 +128,7 @@
 		margin-top: 200px;
 	}
 	@media  (max-width: 575px){
-		margin-top: 120px;
+		margin-top: 90px;
 	}
 }
 .login-tit{
@@ -129,6 +136,7 @@
 	height: 52px;
 	line-height: 52px;
 	@media  (max-width: 574px){
+		font-size: 24px;
 		height: 40px;
 		line-height: 40px;
 	}
