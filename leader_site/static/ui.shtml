@@ -81,7 +81,7 @@
         </textarea>
     </div>
     <!-- button 按钮  End-->
-    
+
     <!-- 表单样式：登陆/注册/找回密码 -->
     <div class="main markdown" id="form_login">
         <h1>表单样式：登陆/注册/找回密码</h1>
@@ -283,14 +283,16 @@
         <h3>2.示例</h3>
         <form class="ui_validForm js_ui_validForm">
             <div class="l-input">
-                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-arrow-line-down'></i>请在普通输入框填写信息"/>
+                <input type="text" name="" ph="5-16个字符" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                 <p class="Validform_checktip"></p>
             </div>
             <div class="l-input">
-                <input type="text" name="" ph="密码" value="">
+                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <p class="Validform_checktip"></p>
             </div>
             <div class="l-input">
-                <input type="text" name="" ph="再次输入密码" value="">
+                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <p class="Validform_checktip"></p>
             </div>
         </form>
     </div>
