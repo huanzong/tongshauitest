@@ -7,7 +7,7 @@
 .o_main{
 	background: url(reg_bg_left1.jpg) no-repeat;
 	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-	-moz-background-size: auto 100%;  
+	-moz-background-size: auto 100%;
 	background-size: auto 100%;
 	@media (min-width: 992px)and (max-width: 1199px){
 		background: url(reg_bg_left2.jpg) no-repeat;
@@ -19,14 +19,23 @@
 		background: #fff;
 	}
 }
+
+.form{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -300px;
+}
+
 .reg{
-	position: fixed;
+	// position: relative;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
+    height: 1000px;
     font-size: 14px;
     text-align: center;
 
@@ -39,14 +48,18 @@
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
 		-moz-background-size: 100% auto;  
 		background-size: 100% auto;
+		// position: relative;/
 	}
 
     @media (max-width: 575px){
 		background: #fff;
 		position: relative;
 	}
+
+}
+
     .reg_footer{
-    	position: fixed;
+    	position: absolute;
     	bottom: 0;
     	left: 0;
     	@media (min-width: 576px) and (max-width: 700px){
@@ -58,6 +71,7 @@
 			padding-top: 60px;
 		}
     }
+
     .reg-box{
     	position: relative;
     	border-radius: 10px;
@@ -68,7 +82,9 @@
     		right: 5px;
     	}
     }
-}
+	
+
+
 .reg-con{
 	position: relative;
 	background: #fff;
