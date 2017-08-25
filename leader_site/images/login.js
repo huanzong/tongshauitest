@@ -13,17 +13,17 @@ $(function() {
 
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
-        var loginHeight = $('.js_center').height();
+        // var loginHeight = $('.js_center').height();
 
-        if (screenWidth <= 700) {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',0);
-            }, 10);
-        } else {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
-            }, 10);
-        }
+        // if (screenWidth <= 700) {
+        //     setTimeout(function() {
+        //         $('.js_center').css('margin-top',0);
+        //     }, 10);
+        // } else {
+        //     setTimeout(function() {
+        //         $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
+        //     }, 10);
+        // }
     }
     //初始化CheckBox，radio
     $(".js_checkbox,.js_radio").jq_qvote();
