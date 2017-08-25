@@ -9,10 +9,12 @@
   	"base":""
   },
   "preview_template":{
-    "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/'>"
+    "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/'>",
+    "ui_base":"<ui_base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/preview/'>"
   },
   "debug_template":{
-  	"base":"<base href='../'>"
+    "base":"<base href='../'>",
+  	"ui_base":"<ui_base href='../'>"
   },
   "testSiteId":"101",
   "proSiteId":"122"
