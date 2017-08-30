@@ -3,24 +3,24 @@
 	<div class="o_u o_df_2-12 nav-logo">
 		<img src="images/logo.png">
 	</div>
-	<div class="o_u o_df_7-12 o_df-center">
-		<div class="nav-column js_column">
+	<ul class="o_u o_df_7-12 o_df-center">
+		<li class="nav-column js_column">
 			<div class="nav-column-Chinese">轻产品</div>
 			<div class="nav-column-English">PRODUCTS</div>
-		</div>
-		<div class="nav-column js_column">
+		</li>
+		<li class="nav-column js_column">
 			<div class="nav-column-Chinese">悠生活</div>
 			<div class="nav-column-English">LIFESTYLE</div>
-		</div>
-		<div class="nav-column js_column">
+		</li>
+		<li class="nav-column js_column">
 			<div class="nav-column-Chinese">服务</div>
 			<div class="nav-column-English">SERVICE</div>
-		</div>
-		<div class="nav-column js_column">
+		</li>
+		<li class="nav-column js_column">
 			<div class="nav-column-Chinese">会员</div>
 			<div class="nav-column-English">MEMBER</div>
-		</div>
-	</div>
+		</li>
+	</ul>
 	<div class="o_u o_df_3-12">
 		<div class="nav-search">
 			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1>
@@ -35,14 +35,23 @@
 	</div>
 	<!-- 一级导航 End -->
 	<!-- 二级导航 -->
-	<div class="o_u o_df-2-2 nav-second js_column_show">
-		<span>冰箱</span>
-		<span>洗衣机</span>
-		<span>冷柜</span>
-		<span>空调</span>
-		<span>热水器</span>
-		<span>厨电</span>
-		<span>电视</span>
-	</div>
+	<ul class="o_u o_df-2-2 nav-second o_df-center js_column_show">
+		<li class="second-column o_df-center">
+			<div class="iconfont icon-computer second-column-i"></div>
+			<div class="second-column-name">冰箱</div>
+		</li>
+		<li class="second-column o_df-center">
+			<div class="iconfont icon-computer second-column-i"></div>
+			<div class="second-column-name">冰箱</div>
+		</li>
+		<li class="second-column o_df-center">
+			<div class="iconfont icon-computer second-column-i"></div>
+			<div class="second-column-name">冰箱</div>
+		</li>
+		<li class="second-column o_df-center">
+			<div class="iconfont icon-computer second-column-i"></div>
+			<div class="second-column-name">冰箱</div>
+		</li>
+	</ul>
 	<!-- 二级导航 End -->
 </div>
