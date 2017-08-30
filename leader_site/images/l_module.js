@@ -106,14 +106,19 @@ $(function() {
                 }else{
                     $this.css('color','#666');
                 }
-                $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                // $this.css('border','1px solid #ccc');
+                if(!$this.attr('phtype')){
+                    $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                    // $this.css('border','1px solid #ccc');
+                }
+                
             }).focus(function () {
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
                     $this.css('color','#666');
                 }
-                $this.css('border','1px solid #e60012');
+                if(!$this.attr('phtype')){
+                   $this.css('border','1px solid #e60012');
+                }
             });
         }
     });

@@ -14,10 +14,17 @@
 <body>
 	<div class="o_body">
         <div class="o_main">
+
 		    <!--#include virtual="public/header.shtml"-->
+
+		    <!-- 导航 -->
+		    <!--#include virtual="public/nav.shtml"-->
+		    <!-- 导航 End-->
+
 		    <div>
-		        这里是页面主内容区
+		        这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区
 		    </div>
+
 		    <!--#include virtual="public/footer.shtml"-->
 		</div>
 	</div>
