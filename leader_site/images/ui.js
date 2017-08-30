@@ -14,13 +14,14 @@ $(function() {
     }
     //简易导航栏
     $('.js_navShow').siblings('li').fadeOut();
-    $('.js_navShow').on('click',function(){
-        if($(this).siblings('li').eq(0).css('display')=='none'){
-            $(this).siblings('li').fadeIn();
-        }else{
-            $(this).siblings('li').fadeOut();
-        }
-        
+    $('.js_navShow').on('mouseover',function(){
+        $(this).siblings('li').fadeIn();
+    });
+    $('.js_navShow').siblings('li').on('click',function(){
+        $('.js_navShow').siblings('li').fadeOut();
+    });
+    $('.js_navShow').parent('ul').on('mouseleave',function(){
+        $('.js_navShow').siblings('li').fadeOut();
     });
 
     //checkbox，radio样式初始化

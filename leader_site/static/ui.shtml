@@ -277,21 +277,18 @@
         <textarea style="min-height: 18px;">
             <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
         </textarea>
-        <pre>
-            <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-        </pre>
         <h3>2.示例</h3>
         <form class="ui_validForm js_ui_validForm">
             <div class="l-input">
-                <input type="text" name="" ph="5-16个字符" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <input type="text" name="" ph="5-16个字符" value="" datatype="zh2-4" errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                 <p class="Validform_checktip"></p>
             </div>
             <div class="l-input">
-                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <input type="password" name="" value="" datatype="*6-20" errormsg="密码6到20位任意字符" nullmsg="<i class='iconfont icon-information-solid'></i>请填写密码"/>
                 <p class="Validform_checktip"></p>
             </div>
             <div class="l-input">
-                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                 <p class="Validform_checktip"></p>
             </div>
         </form>

@@ -106,7 +106,8 @@ $(function() {
                 }else{
                     $this.css('color','#666');
                 }
-                $this.css('border','1px solid #ccc');
+                $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                // $this.css('border','1px solid #ccc');
             }).focus(function () {
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
