@@ -193,6 +193,12 @@ img {
     position: relative;
     height: 120px;
     border-bottom: 1px solid #eee;
+    .nav-zindex2{
+        z-index: 2;
+    }
+    .nav-zindex1{
+        z-index: 1;
+    }
     .nav-logo{
         padding-top: 20px;
         text-align: center;
@@ -215,15 +221,94 @@ img {
             right: 5px;
             top: 15px;
         }
+        .search-result{
+            display: none;
+            position: absolute;
+            width: 100%;
+            border: 1px solid #eee;
+            border-top: 1px solid @l-red;
+            background: #fff;
+        }
+        .search-quick{
+            text-indent: 20px;
+            line-height: 40px;
+            font-size: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .search-list{
+            text-indent: 20px;
+            padding-top: 5px;
+            li{
+                line-height: 40px;
+            }
+        }
     }
     .nav-user{
         padding-top: 20px;
         font-size: 0;
         color: #666;
         .login{
+            display: inline-block;
+            position: relative;
             color: #666;
             font-size: 12px;
-            line-height: 32px;
+            line-height: 36px;
+            i{
+                position: absolute;
+                bottom: -19px;
+                right: 35%;
+            }
+            span{
+                position: absolute;
+                top: 7px;
+                right: -9px;
+                background: @l-red;
+                border-radius: 10px;
+                width: 8px;
+                height: 8px;
+            }
+            .nav-user-column{
+                display: none;
+                position: absolute;
+                top: 49px;
+                left: -15px;
+                padding-top: 10px;
+                min-width: 120px;
+                border: 1px solid #eee;
+                border-top: none;
+                text-align: center;
+                background: #fff;
+                line-height: 30px;
+                li{
+                    a{
+                        color: #666;
+                    }
+                    &.nav-quip{
+                        width: 100%;
+                        margin-top: 10px;
+                        line-height: 40px;
+                        color: #999;
+                        border-top: 1px solid #eee;
+                    }
+                }
+            }
+            .nav-userdown{
+                display: block;
+            }
+            .nav-userup{
+                display: none;
+            }
+            &:hover{
+                .nav-userdown{
+                    display: none;
+                }
+                .nav-userup{
+                    display: block;
+                }
+                .nav-user-column{
+                    display: block;
+                }
+            }
         }
         .line{
             display: inline-block;
@@ -242,6 +327,16 @@ img {
             height: 30px;
             border: 1px solid #eee;
             border-radius: 40px;
+            span{
+                display: inline-block;
+                margin-left: 5px;
+                margin-top: 7px;
+                line-height: 18px;
+                min-width: 25px;
+                color: #fff;
+                background: @l-red;
+                border-radius: 30px;
+            }
         }
     }
     .nav-column{
@@ -276,7 +371,8 @@ img {
             text-align: center;
             margin-top: 40px;
             .second-column-i{
-                font-size: 30px;
+                background: url(nav_icon.png) no-repeat center top;
+                height: 35px;
             }
             .second-column-name{
                 line-height: 50px;

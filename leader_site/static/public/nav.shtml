@@ -3,7 +3,7 @@
 	<div class="o_u o_df_2-12 nav-logo">
 		<img src="images/logo.png">
 	</div>
-	<ul class="o_u o_df_7-12 o_df-center">
+	<ul class="o_u o_df_7-12 o_df-center o_md-hide o_sm-hide o_xs-hide">
 		<li class="nav-column js_column">
 			<div class="nav-column-Chinese">轻产品</div>
 			<div class="nav-column-English">PRODUCTS</div>
@@ -21,36 +21,65 @@
 			<div class="nav-column-English">MEMBER</div>
 		</li>
 	</ul>
-	<div class="o_u o_df_3-12">
+	<div class="o_u o_df_2-12 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
 		<div class="nav-search">
-			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1>
+			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory">
 			<i class="iconfont icon-search"></i>
+			<div class="search-result nav-zindex2 js_searchBox">
+				<div class="search-quick">快速链接</div>
+				<ul class="search-list">
+					<li>我是搜索结果</li>
+					<li>我是搜索结果</li>
+					<li>我是搜索结果</li>
+				</ul>
+			</div>
 		</div>
-		<div class="nav-user">
+		<!-- <div class="nav-user">
 			<a class="login">登录</a>
 			<span class="line"></span>
 			<a class="login">注册</a>
 			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车</a>
+		</div> -->
+		<div class="nav-user">
+			<div class="login nav-zindex1">
+				HHH_王大海
+				<span></span>
+				<i class="iconfont icon-arrow-sanjiao-down-s nav-userdown"></i>
+				<i class="iconfont icon-arrow-sanjiao-up-s nav-userup"></i>
+				<ul class="nav-user-column">
+					<li><a href="javascript:;">个人中心</a></li>
+					<li><a href="javascript:;">消息</a></li>
+					<li><a href="javascript:;">我的订单</a></li>
+					<li><a href="javascript:;">我的优惠券</a></li>
+					<li><a href="javascript:;">收藏与订阅</a></li>
+					<li><a href="javascript:;">我的产品</a></li>
+					<li class="nav-quip">
+						<a href="javascript:;">退出登录</a>
+					</li>
+				</ul>
+			</div>
+			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车<span>34</span></a>
 		</div>
 	</div>
+	<div class="o_u o_df_2-12 o_df-hide o_lg-show"></div>
 	<!-- 一级导航 End -->
 	<!-- 二级导航 -->
 	<ul class="o_u o_df-2-2 nav-second o_df-center js_column_show">
-		<li class="second-column o_df-center">
-			<div class="iconfont icon-computer second-column-i"></div>
+		<li class="second-column o_df-center"> 
+			<div class="second-column-i"></div>
 			<div class="second-column-name">冰箱</div>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="iconfont icon-computer second-column-i"></div>
-			<div class="second-column-name">冰箱</div>
+			<div class="second-column-i"></div>
+			<div class="second-column-name">洗衣机</div>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="iconfont icon-computer second-column-i"></div>
-			<div class="second-column-name">冰箱</div>
+			<div class="second-column-i"></div>
+			<div class="second-column-name">冷柜</div>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="iconfont icon-computer second-column-i"></div>
-			<div class="second-column-name">冰箱</div>
+			<div class="second-column-i"></div>
+			<div class="second-column-name">空调</div>
 		</li>
 	</ul>
 	<!-- 二级导航 End -->
