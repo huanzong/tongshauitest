@@ -42,7 +42,11 @@ $(function() {
         $('.js_searchBoxQuick_lg').show();
     }).on('focus',function(){
         if($(this).val()){
-            $('.js_searchBox').show();
+            if(screenWidth>1199){
+                $('.js_searchBox_xl').show();
+            }else{
+                $('.js_searchBox_lg').show();
+            }
             $('.js_searchBoxQuick_lg').hide();
         }
     });
