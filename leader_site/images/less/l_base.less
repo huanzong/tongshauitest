@@ -401,9 +401,21 @@ img {
         }
     }
     .nav-column{
+        position: relative;
         display: inline-block;
         text-align: center;
-        padding: 10px 20px 0;
+        padding: 30px 20px 0;
+        img{
+            display: inline-block;
+            position: absolute;
+            top: 24px;
+            left: 23px;
+        }
+        &:hover{
+            img{
+                display: none;
+            }
+        }
         .nav-column-box1{
             width: 60px;
             height: 45px;
@@ -418,7 +430,6 @@ img {
             height: 45px;
             background: url(nav_bg_lg.png) no-repeat;
             background-position: -65px 0 ;
-            margin-top: 25px;
             &:hover{
                 background-position: -65px -46px;
             }
@@ -428,7 +439,6 @@ img {
             height: 45px;
             background: url(nav_bg_lg.png) no-repeat;
             background-position: -130px 0 ;
-            margin-top: 25px;
             &:hover{
                 background-position: -130px -46px;
             }
@@ -438,7 +448,6 @@ img {
             height: 45px;
             background: url(nav_bg_lg.png) no-repeat;
             background-position: -192px 0 ;
-            margin-top: 25px;
             &:hover{
                 background-position: -192px -46px;
             }
@@ -496,15 +505,20 @@ img {
         border-top: 1px solid #eee;
         .nav-mdbox{
             padding-top: 45px;
+            @media (max-width: 575px){
+                padding-top: 35px;
+            }
             li{
                 font-size: 14px;
                 color: #666;
                 line-height: 60px;
                 border-bottom: 1px solid #eee;
+                @media (max-width: 575px){
+                    line-height: 50px;
+                }
                 i{
                     float: right;
                     font-size: 14px;
-                    // padding: 25px 10px 0;
                 }
             }
         }
@@ -513,6 +527,7 @@ img {
         display: none;
         height: 100px;
         line-height: 100px;
+        background: #fff;
         @media (max-width: 700px){
             height: 70px;
             line-height: 70px;
@@ -529,6 +544,13 @@ img {
         .icon-close{
             font-size: 30px;
         }
+        .nax-xs-close{
+            @media (max-width: 576px){
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
     }
     .nav-searchresult-lg{
         display: none;
@@ -540,8 +562,11 @@ img {
         width: 100%;
         min-height: 110px;
         font-size: 12px;
-        @media (max-width: 700px){
+        @media (min-width: 576px) and (max-width: 700px){
             top: 69px;
+        }
+        @media (max-width: 575px){
+            top: 133px;
         }
         .searchresult-quick{
             border-top: 1px solid #eee;
