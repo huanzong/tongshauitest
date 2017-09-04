@@ -66,7 +66,7 @@
 	</div>
 	<!-- 用户信息栏 sf/xl分辨率 END -->
 	<!-- 用户信息栏 lg分辨率 -->
-	<div class="o_u o_df_5-12 o_xs_1-12 o_df-hide o_md-show o_sm-show o_xs-show js_navSearchLgHide"></div>
+	<div class="o_u o_df_5-12 o_xs_1-12 o_df-hide o_md-show o_sm-show o_xs-show js_navSearchLgHide js_ignore"></div>
 	<div class="o_u o_df_3-12 o_md_5-12 o_sm_5-12 o_xs_8-12 o_df-hide o_lg-show o_md-show o_sm-show o_xs-show js_navSearchLgHide">
 		<ul class="nav-search-lg">
 			<li>

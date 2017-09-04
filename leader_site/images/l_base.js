@@ -69,18 +69,22 @@ $(function() {
 
     //关闭搜索
     $('.js_navSearchClose').on('click', function(){
+
         $('.js_navSearchLg')
             .removeClass('o_lg-show')
             .removeClass('o_md-show')
             .removeClass('o_sm-show')
             .removeClass('o_xs-show');
         $('.js_navSearchLg').hide();
+
         $('.js_navSearchLgHide')
             .addClass('o_lg-show')
             .addClass('o_md-show')
             .addClass('o_sm-show')
             .addClass('o_xs-show');
         $('.js_navSearchLgHide').show();
+        $('.js_navSearchLgHide.js_ignore').removeClass('o_lg-show').hide();
+
     });
 
     //展示导航菜单
