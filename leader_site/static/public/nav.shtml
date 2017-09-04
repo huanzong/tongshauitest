@@ -125,7 +125,7 @@
 				<a href="javascript:;">帮助中心</a>
 				<a href="javascript:;">联系我们</a>
 			</div>
-			<ul class="searchresult-result">
+			<ul class="searchresult-result js_searchBox js_searchBox_lg">
 				<li>搜索结果</li>
 				<li>搜索结果</li>
 				<li>搜索结果</li>

@@ -549,9 +549,22 @@ img {
             line-height: 60px;
             color: #ccc;
             background: #fff;
+            @media (max-width: 575px) {
+                line-height: 30px;
+                padding-top: 15px;
+                span{
+                    display: block;
+                }
+            }
             a{
                 color: #333;
                 padding-right: 20px;
+                @media (max-width: 575px) {
+                    display: inline-block;
+                    padding: 0;
+                    width: 22%;
+                    font-size: 12px;
+                }
             }
         }
         .searchresult-result{
