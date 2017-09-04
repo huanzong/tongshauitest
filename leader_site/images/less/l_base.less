@@ -193,6 +193,12 @@ img {
     position: relative;
     height: 120px;
     border-bottom: 1px solid #eee;
+    @media (min-width: 701px) and (max-width: 1199px){
+        height: 100px;
+    }
+    @media (max-width: 700px){
+        height: 70px;
+    }
     .nav-zindex2{
         z-index: 2;
     }
@@ -202,6 +208,16 @@ img {
     .nav-logo{
         padding-top: 20px;
         text-align: center;
+        @media (min-width: 701px) and (max-width: 1199px){
+            padding-top: 5px;
+        }
+        @media (max-width: 700px){
+            padding-top: 5px;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+        }
     }
     .nav-search{
         position: relative;
@@ -240,6 +256,51 @@ img {
             padding-top: 5px;
             li{
                 line-height: 40px;
+            }
+        }
+    }
+    .nav-search-lg{
+        text-align: center;
+        li{
+            display: inline-block;
+            width: 23%;
+            padding-top: 40px;
+            @media (max-width: 991px){
+                width: 19%;
+            }
+            @media (max-width: 700px){
+                padding-top: 25px;
+            }
+            i{
+                font-size: 20px;
+            }
+            a{
+                position: relative;
+                color: #333;
+                span{
+                    position: absolute;
+                    display: inline-block;
+                    right: -10px;
+                    top: -3px;
+                    background: @l-red;
+                    padding: 4px;
+                    border-radius: 20px;
+                    font-size: 10px;
+                    color: #fff;
+                }
+                sub{
+                    position: absolute;
+                    display: inline-block;
+                    right: -18px;
+                    top: -8px;
+                    background: @l-red;
+                    border-radius: 50px;
+                    font-size: 8px;
+                    color: #fff;
+                    padding: 2px;
+                    min-width: 14px;
+                    min-height: 8px;
+                }
             }
         }
     }
@@ -341,8 +402,47 @@ img {
     }
     .nav-column{
         display: inline-block;
-        padding: 40px 30px;
         text-align: center;
+        padding: 10px 20px 0;
+        .nav-column-box1{
+            width: 60px;
+            height: 45px;
+            background: url(nav_bg_lg.png) no-repeat;
+            background-position: 0 0 ;
+            &:hover{
+                background-position: 0 -46px;
+            }
+        }
+        .nav-column-box2{
+            width: 60px;
+            height: 45px;
+            background: url(nav_bg_lg.png) no-repeat;
+            background-position: -65px 0 ;
+            margin-top: 25px;
+            &:hover{
+                background-position: -65px -46px;
+            }
+        }
+        .nav-column-box3{
+            width: 60px;
+            height: 45px;
+            background: url(nav_bg_lg.png) no-repeat;
+            background-position: -130px 0 ;
+            margin-top: 25px;
+            &:hover{
+                background-position: -130px -46px;
+            }
+        }
+        .nav-column-box4{
+            width: 60px;
+            height: 45px;
+            background: url(nav_bg_lg.png) no-repeat;
+            background-position: -192px 0 ;
+            margin-top: 25px;
+            &:hover{
+                background-position: -192px -46px;
+            }
+        }
         .nav-column-Chinese{
             color: #333;
             line-height: 30px;
@@ -358,6 +458,7 @@ img {
     }
     .nav-second{
         position: absolute;
+        top: 119px;
         display: none;
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
@@ -365,6 +466,12 @@ img {
         width: 100%;
         height: 150px;
         font-size: 12px;
+        @media (min-width:701px) and (max-width: 1199px){
+            top: 99px;
+        }
+        @media (max-width: 700px){
+            top: 69px;
+        }
         .second-column{
             display: inline-block;
             width: 12%;
@@ -382,5 +489,83 @@ img {
     }
     li:hover{
         cursor: pointer;
+    }
+    .nav-md{
+        display: none;
+        background: #fff;
+        border-top: 1px solid #eee;
+        .nav-mdbox{
+            padding-top: 45px;
+            li{
+                font-size: 14px;
+                color: #666;
+                line-height: 60px;
+                border-bottom: 1px solid #eee;
+                i{
+                    float: right;
+                    font-size: 14px;
+                    // padding: 25px 10px 0;
+                }
+            }
+        }
+    }
+    .nav-searchbox-lg{
+        display: none;
+        height: 100px;
+        line-height: 100px;
+        @media (max-width: 700px){
+            height: 70px;
+            line-height: 70px;
+        }
+        input{
+            display: inline-block;
+            width: 100%;
+            height: 100px;
+            border: none;
+            @media (max-width: 700px){
+                height: 70px;
+            }
+        }
+        .icon-close{
+            font-size: 30px;
+        }
+    }
+    .nav-searchresult-lg{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 99px;
+        bottom: 0;
+        background: #fff;
+        width: 100%;
+        min-height: 110px;
+        font-size: 12px;
+        @media (max-width: 700px){
+            top: 69px;
+        }
+        .searchresult-quick{
+            border-top: 1px solid #eee;
+            height: 60px;
+            line-height: 60px;
+            color: #ccc;
+            background: #fff;
+            a{
+                color: #333;
+                padding-right: 20px;
+            }
+        }
+        .searchresult-result{
+            display: none;
+            padding: 10px 0 60px;
+            border-top: 1px solid #eee;
+            li{
+                background: #fff;
+                display: inline-block;
+                width: 100%;
+                line-height: 38px;
+                height: 38px;
+                color: #ccc;
+            }
+        }
     }
 }
