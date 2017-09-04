@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DEMO</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/product_detail.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+	    	<!-- 导航 -->
+	    	<!--#include virtual="public/nav.shtml"-->
+	    	<!-- 导航 End-->
+
+	   		<!-- 产品详情页 -->
+	   		<div class="detail-title">产品口碑</div>
+			<div class="o_g">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12">
+					<h1>99999</h1>
+				</div>
+				<div class="o_u o_df_1-12"></div>
+			</div>
+	    	<!-- 产品详情页 End -->
+
+	    	<!--#include virtual="public/footer.shtml"-->
+		</div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/product_detail.js"></script>
+</body>
+</html>
