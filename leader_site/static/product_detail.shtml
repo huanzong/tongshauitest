@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>产品详情</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/product_detail.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+	    	<!-- 导航 -->
+	    	<!--#include virtual="public/nav.shtml"-->
+	    	<!-- 导航 End-->
+
+	   		<!-- 产品详情页 -->
+	   		<div class="detail-title">产品口碑</div>
+			<div class="o_g">
+				<div class="o_u o_df_1-12"></div>
+					<div class="o_u o_df_10-12 detail-praise">
+						<div class="praise-box">
+							<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<div class="praise-con">
+									<div class="detail-praise-box">
+										打雷要下雨 嘞哦 (什么)
+										下雨要打伞 嘞哦 (这我也知道)
+										天冷穿棉袄 嘞哦 嘞哎哟
+										天热扇扇子 智慧就是 (说呀)
+										这么简单
+										为什么会打雷下雨 (为什么)
+										为什么有冬天夏天 (嗯 是个难题)
+										不知道的奥秘万万千千
+										智慧简单 又不简单
+										不知道的奥秘万万千千
+									</div>
+									<div class="detail-praise-img">
+										<img src="images/nav_bg_lg.PNG">
+										<img src="images/nav_bg_lg.PNG">
+										<img src="images/nav_bg_lg.PNG">
+									</div>
+									<div class="detail-praise-font">
+										<span class="name">海****尔</span>
+										<span class="time">2017/08/09</span>
+										<span class="from">来自&nbsp;统帅官网</span>
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<div class="praise-con">
+									<div class="detail-praise-box">
+										打雷要下雨 嘞哦 (什么)
+										下雨要打伞 嘞哦 (这我也知道)
+										天冷穿棉袄 嘞哦 嘞哎哟
+									</div>
+									<div class="detail-praise-img">
+										<img src="images/nav_bg_lg.PNG">
+										<img src="images/nav_bg_lg.PNG">
+										<img src="images/nav_bg_lg.PNG">
+									</div>
+									<div class="detail-praise-font">
+										<span class="name">海****尔</span>
+										<span class="time">2017/08/09</span>
+										<span class="from">来自&nbsp;统帅官网</span>
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<div class="praise-con">
+									<div class="detail-praise-box">
+										打雷要下雨 嘞哦 (什么)
+										下雨要打伞 嘞哦 (这我也知道)
+										天冷穿棉袄 嘞哦 嘞哎哟
+										天热扇扇子 智慧就是 (说呀)
+										这么简单
+										为什么会打雷下雨 (为什么)
+										为什么有冬天夏天 (嗯 是个难题)
+										不知道的奥秘万万千千
+										智慧简单 又不简单
+										不知道的奥秘万万千千
+										打雷要下雨 嘞哦 (什么)
+										下雨要打伞 嘞哦 (这我也知道)
+										天冷穿棉袄 嘞哦 嘞哎哟
+										天热扇扇子 智慧就是 (说呀)
+										这么简单
+										为什么会打雷下雨 (为什么)
+										为什么有冬天夏天 (嗯 是个难题)
+										不知道的奥秘万万千千
+										智慧简单 又不简单
+										不知道的奥秘万万千千
+									</div>
+									<div class="detail-praise-font">
+										<span class="name">海****尔</span>
+										<span class="time">2017/08/09</span>
+										<span class="from">来自&nbsp;统帅官网</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prise-btn">
+							<a href="javascript:;" class="l-btn-normal l-btn-red">查看更多</a>
+						</div>
+					</div>
+				<div class="o_u o_df_1-12"></div>
+			</div>
+	    	<!-- 产品详情页 End -->
+
+	    	<!--#include virtual="public/footer.shtml"-->
+		</div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/product_detail.js"></script>
+</body>
+</html>
