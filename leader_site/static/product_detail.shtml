@@ -23,8 +23,25 @@
 	   		<div class="detail-title">产品口碑</div>
 			<div class="o_g">
 				<div class="o_u o_df_1-12"></div>
-				<div class="o_u o_df_10-12">
-					<h1>99999</h1>
+				<div class="o_u o_df_10-12" style="outline: 1px solid #eee;font-size: 12px;background: #eee;">79799</div>
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12" style="margin-left: -15px;">
+					<div class="o_u o_df_1-3">
+						<div class="detail-praise">
+							lkjkl;k;k
+						</div>
+					</div>
+					<div class="o_u o_df_1-3">
+						<div class="detail-praise">
+							lkjkl;k;k
+						</div>
+					</div>
+					<div class="o_u o_df_1-3">
+						<div class="detail-praise">
+							lkjkl;k;k
+						</div>
+					</div>
 				</div>
 				<div class="o_u o_df_1-12"></div>
 			</div>
