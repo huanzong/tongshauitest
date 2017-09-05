@@ -57,13 +57,6 @@
 										打雷要下雨 嘞哦 (什么)
 										下雨要打伞 嘞哦 (这我也知道)
 										天冷穿棉袄 嘞哦 嘞哎哟
-										天热扇扇子 智慧就是 (说呀)
-										这么简单
-										为什么会打雷下雨 (为什么)
-										为什么有冬天夏天 (嗯 是个难题)
-										不知道的奥秘万万千千
-										智慧简单 又不简单
-										不知道的奥秘万万千千
 									</div>
 									<div class="detail-praise-img">
 										<img src="images/nav_bg_lg.PNG">
@@ -72,8 +65,8 @@
 									</div>
 									<div class="detail-praise-font">
 										<span class="name">海****尔</span>
-										<span>2017/08/09</span>
-										<span>来自&nbsp;统帅官网</span>
+										<span class="time">2017/08/09</span>
+										<span class="from">来自&nbsp;统帅官网</span>
 									</div>
 								</div>
 							</div>
@@ -90,22 +83,27 @@
 										不知道的奥秘万万千千
 										智慧简单 又不简单
 										不知道的奥秘万万千千
-									</div>
-									<div class="detail-praise-img">
-										<img src="images/nav_bg_lg.PNG">
-										<img src="images/nav_bg_lg.PNG">
-										<img src="images/nav_bg_lg.PNG">
+										打雷要下雨 嘞哦 (什么)
+										下雨要打伞 嘞哦 (这我也知道)
+										天冷穿棉袄 嘞哦 嘞哎哟
+										天热扇扇子 智慧就是 (说呀)
+										这么简单
+										为什么会打雷下雨 (为什么)
+										为什么有冬天夏天 (嗯 是个难题)
+										不知道的奥秘万万千千
+										智慧简单 又不简单
+										不知道的奥秘万万千千
 									</div>
 									<div class="detail-praise-font">
 										<span class="name">海****尔</span>
-										<span>2017/08/09</span>
-										<span>来自&nbsp;统帅官网</span>
+										<span class="time">2017/08/09</span>
+										<span class="from">来自&nbsp;统帅官网</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="prise-btn">
-							<a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
+							<a href="javascript:;" class="l-btn-normal l-btn-red">查看更多</a>
 						</div>
 					</div>
 				<div class="o_u o_df_1-12"></div>
