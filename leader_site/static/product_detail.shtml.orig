@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DEMO</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/product_detail.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+	    	<!-- 导航 -->
+	    	<!--#include virtual="public/nav.shtml"-->
+	    	<!-- 导航 End-->
+
+	   		<!-- 产品详情页 -->
+	   		<div class="detail-title">产品口碑</div>
+			<div class="o_g">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12" style="outline: 1px solid #eee;font-size: 12px;background: #eee;">79799</div>
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_1-12"></div>
+<<<<<<< HEAD
+				<div class="o_u o_df_10-12" style="margin-left: -15px;">
+					<div class="o_u o_df_1-3">
+						<div class="detail-praise">
+							海尔冰箱就是棒！么么哒！尔冰箱就是棒！么么哒！尔冰箱就是棒！么么哒！
+							海尔冰箱就是棒！么么哒！尔冰箱就是棒！么么哒！尔冰箱就是棒！么么哒！
+=======
+					<div class="o_u o_df_10-12" style="position: relative;">
+						<div style="position: absolute; left: -15px; right: -15px;">
+							<div class="o_u o_df_1-3">
+								<div class="detail-praise">
+									lkjkl;k;k
+								</div>
+							</div>
+							<div class="o_u o_df_1-3">
+								<div class="detail-praise">
+									lkjkl;k;k
+								</div>
+							</div>
+							<div class="o_u o_df_1-3">
+								<div class="detail-praise">
+									lkjkl;k;k
+								</div>
+							</div>
+>>>>>>> dc1bcfdb0f44f16a24ea540048f8ec27d440d55c
+						</div>
+					</div>
+				<div class="o_u o_df_1-12"></div>
+			</div>
+	    	<!-- 产品详情页 End -->
+
+	    	<!--#include virtual="public/footer.shtml"-->
+		</div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/product_detail.js"></script>
+</body>
+</html>

@@ -12,11 +12,97 @@
 	color: #333;
 }
 .detail-praise{
-	margin: 0 15px;
-	padding: 20px 20px 0;
-	border: 1px solid #000;
-	color: #666;
-	font-size: 16px;
-	line-height: 25px;
-	border-radius: 5px;
+	position: relative;
+	min-height: 355px;
+	@media (min-width: 992px) and (max-width: 1199px){
+        min-height: 450px;
+    }
+	.praise-box{
+		@media (min-width: 992px){
+			position: absolute; 
+			left: -15px; 
+			right: -15px;
+	    }
+		.praise-con{
+			@media (min-width: 992px){
+				margin: 0 15px;
+		    }
+			border: 1px solid #eee;
+			border-radius: 5px;
+		}
+		.detail-praise-box{
+			margin-bottom: 10px; 
+			padding: 20px 20px 0;
+			border-radius: 5px;
+			color: #666;
+			font-size: 16px;
+			line-height: 25px;
+			//4行省略 
+			@media (min-width: 992px){
+				min-height: 100px;
+				display: -webkit-box;
+				-webkit-line-clamp: 4; 
+				-webkit-box-orient: vertical; 
+				overflow: hidden;
+		    }
+			@media (min-width: 992px) and (max-width: 1199px){
+                margin-bottom: 90px; 
+            }
+		}
+		.detail-praise-img{
+			padding: 0 20px;
+			img{
+				width: 40px;
+				height: 40px;
+				background: #fff;
+				padding: 5px;
+				margin-right: 5px;
+				margin-bottom: 20px;
+				border: 1px solid #eee;
+				border-radius: 50px;
+			}
+		}
+		.detail-praise-font{
+			border-top: 1px solid #eee;
+			padding: 10px 20px;
+			span{
+				padding-right: 20px;
+				line-height: 24px;
+				font-size: 14px;
+				color: #999;
+			}
+			.name{
+				color: #333;
+			}
+			.time{
+				font-size: 12px;
+				@media (min-width: 992px) and (max-width: 1199px){
+	                float: right;
+	                padding: 0;
+	            }
+			}
+			.from{
+				font-size: 12px;
+				@media (min-width: 992px) and (max-width: 1199px){
+	                display: block;
+	                text-align: right;
+	                padding: 0;
+	            }
+			}
+		}
+	}
+	.prise-btn{
+		@media (min-width: 992px) and (max-width: 1199px){
+            position: absolute;
+			bottom: 0;
+        }
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		font-size: 14px;
+		a{
+			min-width: 200px;
+			margin-top: 30px;
+		}
+	}
 }
