@@ -22,7 +22,7 @@ $(function() {
         $('.js_column_show').eq(index).show();
     });
     $('.js_column_show').on('mouseleave',function(){
-        $(this).hide();
+        // $(this).hide();
     });
 
     //搜索历史

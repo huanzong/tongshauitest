@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
 	<link rel="stylesheet" type="text/css" href="images/product_detail.css">
 </head>
 
@@ -18,8 +19,89 @@
 	    	<!-- 导航 -->
 	    	<!--#include virtual="public/nav.shtml"-->
 	    	<!-- 导航 End-->
-
-	   		<!-- 产品详情页 -->
+			<!-- 首屏展示 -->
+			<div class="detail-first">
+				<img src="images/ignore_prodetail1.jpg" class="o_md-hide o_sm-hide o_xs-hide">
+				<img src="images/ignore_prodetail2.jpg" class="o_df-hide o_md-show o_sm-show o_xs-show">
+			</div>
+			<!-- 首屏展示 END -->
+	    	<!-- 文字卖点 -->
+	    	<div class="o_g">
+	    		<div class="o_u o_df_1-12"></div>
+	    		<div class="o_u o_df_10-12">
+		    		<div class="o_u o_df_2-2 detail-sellpoint">
+		    			<div class="o_u o_df_1-12"></div>
+		    			<div class="o_u o_df_10-12">
+		    				<div class="o_u o_df_1-5">
+		    					<div class="sellpoint-box">
+		    						<div class="sellpoint-bold">342L</div>
+		    						<div class="sellpoint-small">总容积</div>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="sellpoint-box">
+		    						<div class="sellpoint-bold">风冷</div>
+		    						<div class="sellpoint-small">制冷方式</div>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="sellpoint-box">
+		    						<div class="sellpoint-bold">一级</div>
+		    						<div class="sellpoint-small">能耗等级</div>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="sellpoint-box">
+		    						<div class="sellpoint-bold">变频</div>
+		    						<div class="sellpoint-small">变频定频</div>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="sellpoint-box border-none">
+		    						<div class="sellpoint-bold">多开门</div>
+		    						<div class="sellpoint-small">箱门结构</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="o_u o_df_1-12"></div>
+		    		</div>
+		    		<div class="o_u o_df_2-2 detail-sellpoint-bottom">
+		    			<span>海尔保险</span>
+		    			<span>海尔保险</span>
+		    			<span>海尔保险</span>
+		    			<span>海尔保险</span>
+		    			<span>海尔保险</span>
+		    		</div>
+	    		</div>
+	    		<div class="o_u o_df_1-12"></div>
+	    	</div>
+	    	<!-- 文字卖点 END -->
+	    	<!-- 场景展示 -->
+			<div class="o_g">
+				<div class="detail-scene">
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide">
+					        	<!-- <img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg" md="images/pc.jpg" lg="images/pc.jpg" xl="images/pc.jpg" alt=""> -->
+					        	<img src="images/nav_bg_lg.PNG">
+					        </div>
+					        <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
+					        <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
+					    </div>
+					    <!-- 如果需要分页器 -->
+					    <div class="swiper-pagination"></div>
+					    
+					    <!-- 如果需要导航按钮 -->
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+					    
+					    <!-- 如果需要滚动条 -->
+					    <div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			</div>
+	    	<!-- 场景展示 END -->
+	   		<!-- 产品口碑-->
 	   		<div class="detail-title">产品口碑</div>
 			<div class="o_g">
 				<div class="o_u o_df_1-12"></div>
@@ -108,12 +190,13 @@
 					</div>
 				<div class="o_u o_df_1-12"></div>
 			</div>
-	    	<!-- 产品详情页 End -->
+	    	<!-- 产品口碑 End -->
 
 	    	<!--#include virtual="public/footer.shtml"-->
 		</div>
 	</div>
 	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 	<script type="text/javascript" src="images/product_detail.js"></script>
 </body>
 </html>
