@@ -143,106 +143,70 @@
 	<!-- 二级导航 冰箱/洗衣机/电视 -->
 	<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
 		<li class="second-column o_df-center"> 
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">轻产品栏目</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">轻产品栏目</div>
+			</a>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">轻产品栏目</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">轻产品栏目</div>
+			</a>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">轻产品栏目</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">轻产品栏目</div>
+			</a>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">轻产品栏目</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">轻产品栏目</div>
+			</a>
 		</li>
 	</ul>
 	<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
 		<li class="second-column o_df-center"> 
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">悠生活</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">悠生活栏目</div>
+			</a>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">悠生活</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">悠生活栏目</div>
+			</a>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">悠生活</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">悠生活栏目</div>
+			</a>
 		</li>
 		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">悠生活</div>
-		</li>
-	</ul>
-	<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
-		<li class="second-column o_df-center"> 
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">会员</div>
-		</li>
-		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">会员</div>
-		</li>
-		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">会员</div>
-		</li>
-		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">会员</div>
-		</li>
-	</ul>
-	<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
-		<li class="second-column o_df-center"> 
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">服务</div>
-		</li>
-		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">服务</div>
-		</li>
-		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">服务</div>
-		</li>
-		<li class="second-column o_df-center">
-			<div class="second-column-i">
-				<img src="images/nav_icon1.png">
-			</div>
-			<div class="second-column-name">服务</div>
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">轻产品栏目</div>悠生活
+			</a>
 		</li>
 	</ul>
 	<!-- 二级导航 End -->
