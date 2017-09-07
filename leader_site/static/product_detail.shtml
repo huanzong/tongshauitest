@@ -20,52 +20,53 @@
 	    	<!--#include virtual="public/nav.shtml"-->
 	    	<!-- 导航 End-->
 			<!-- 首屏展示 -->
-			<div class="detail-first">
-				<img src="images/ignore_prodetail1.jpg" class="o_md-hide o_sm-hide o_xs-hide">
-				<img src="images/ignore_prodetail2.jpg" class="o_df-hide o_md-show o_sm-show o_xs-show">
+			<div class="o_g">
+				<div class="detail-first">
+					<img class="o_picture" src="" df="images/ignore_prodetail1.jpg" xs="images/ignore_prodetail2.jpg" sm="images/ignore_prodetail2.jpg" md="images/ignore_prodetail2.jpg" alt="">
+				</div>
 			</div>
 			<!-- 首屏展示 END -->
 	    	<!-- 文字卖点 -->
 	    	<div class="o_g">
 	    		<div class="o_u o_df_1-12"></div>
 	    		<div class="o_u o_df_10-12">
-		    		<div class="o_u o_df_2-2 detail-sellpoint">
+		    		<div class="o_u o_df_2-2 detail-fontpoint">
 		    			<div class="o_u o_df_1-12"></div>
 		    			<div class="o_u o_df_10-12">
 		    				<div class="o_u o_df_1-5">
-		    					<div class="sellpoint-box">
-		    						<div class="sellpoint-bold">342L</div>
-		    						<div class="sellpoint-small">总容积</div>
+		    					<div class="fontpoint-box">
+		    						<div class="fontpoint-bold">342L</div>
+		    						<div class="fontpoint-small">总容积</div>
 		    					</div>
 		    				</div>
 		    				<div class="o_u o_df_1-5">
-		    					<div class="sellpoint-box">
-		    						<div class="sellpoint-bold">风冷</div>
-		    						<div class="sellpoint-small">制冷方式</div>
+		    					<div class="fontpoint-box">
+		    						<div class="fontpoint-bold">风冷</div>
+		    						<div class="fontpoint-small">制冷方式</div>
 		    					</div>
 		    				</div>
 		    				<div class="o_u o_df_1-5">
-		    					<div class="sellpoint-box">
-		    						<div class="sellpoint-bold">一级</div>
-		    						<div class="sellpoint-small">能耗等级</div>
+		    					<div class="fontpoint-box">
+		    						<div class="fontpoint-bold">一级</div>
+		    						<div class="fontpoint-small">能耗等级</div>
 		    					</div>
 		    				</div>
 		    				<div class="o_u o_df_1-5">
-		    					<div class="sellpoint-box">
-		    						<div class="sellpoint-bold">变频</div>
-		    						<div class="sellpoint-small">变频定频</div>
+		    					<div class="fontpoint-box">
+		    						<div class="fontpoint-bold">变频</div>
+		    						<div class="fontpoint-small">变频定频</div>
 		    					</div>
 		    				</div>
 		    				<div class="o_u o_df_1-5">
-		    					<div class="sellpoint-box border-none">
-		    						<div class="sellpoint-bold">多开门</div>
-		    						<div class="sellpoint-small">箱门结构</div>
+		    					<div class="fontpoint-box border-none">
+		    						<div class="fontpoint-bold">多开门</div>
+		    						<div class="fontpoint-small">箱门结构</div>
 		    					</div>
 		    				</div>
 		    			</div>
 		    			<div class="o_u o_df_1-12"></div>
 		    		</div>
-		    		<div class="o_u o_df_2-2 detail-sellpoint-bottom">
+		    		<div class="o_u o_df_2-2 detail-fontpoint-bottom">
 		    			<span>海尔保险</span>
 		    			<span>海尔保险</span>
 		    			<span>海尔保险</span>
@@ -77,9 +78,66 @@
 	    	</div>
 	    	<!-- 文字卖点 END -->
 	    	<!-- 场景展示 -->
+	    	<div class="o_g">
+	    		<div class="detail-scene">
+					<img class="o_picture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+				</div>
+	    	</div>
+	    	<!-- 场景展示 -->
+	    	<!-- 核心卖点-->
+	    	<div></div>
+	    	<div class="o_g">
+		    	<div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
+		    	<div class="o_u o_df_4-12 bg-f8">
+		    		<div class="detail-sellpoint js_oHerlSize">
+						<div class="swiper-container js_swiperSellPoint">
+						    <div class="swiper-wrapper">
+						        <div class="swiper-slide">
+						        	<img src="images/ignore_prodetail7.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="images/ignore_prodetail7.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="images/ignore_prodetail7.jpg">
+						        </div>
+						    </div>
+						</div>
+					</div>
+		    	</div>
+		    	<div class="o_u o_df_5-12 js_oHerl">
+		    		<div class="o_u o_df_1-5"></div>
+		    		<div class="o_u o_df_4-5 sellpoint-bg js_oHerl">
+		    			<div class="sellpoint-describe js_center">
+		    				<div class="describe1">如初生</div>
+		    				<div class="describe2">风冷无霜更新鲜</div>
+		    				<div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="o_u o_df_1-12 js_oHerl">
+		    		<a class="js_swiper_nextSellPoint js_center">
+		    			<img src="images/detail_icon.PNG">
+		    		</a>
+		    	</div>
+	    	</div> 
+
+	    	<!-- 核心卖点 -->
+	    	<!-- 详情展示 -->
+	    	<div class="o_g">
+		    	<div class="o_u o_df_1-12"></div>
+		    	<div class="o_u o_df_10-12">
+		    		<div class="detail-display">
+						<img class="o_picture" src="" df="images/ignore_prodetail5.jpg" xs="images/ignore_prodetail6.jpg" sm="images/ignore_prodetail6.jpg" md="images/ignore_prodetail6.jpg" alt="">
+					</div>
+		    	</div>
+		    	<div class="o_u o_df_1-12"></div>
+	    	</div>
+	    	<!-- 详情展示 -->
+	    	<!-- 轮播 -->
 			<div class="o_g">
-				<div class="detail-scene">
-					<div class="swiper-container">
+				<div class="detail-scene1">
+					<div class="swiper-container js_swiper">
 					    <div class="swiper-wrapper">
 					        <div class="swiper-slide">
 					        	<!-- <img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg" md="images/pc.jpg" lg="images/pc.jpg" xl="images/pc.jpg" alt=""> -->
@@ -89,18 +147,18 @@
 					        <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
 					    </div>
 					    <!-- 如果需要分页器 -->
-					    <div class="swiper-pagination"></div>
+					    <div class="swiper-pagination js_swiper_pagination"></div>
 					    
 					    <!-- 如果需要导航按钮 -->
-					    <div class="swiper-button-prev"></div>
-					    <div class="swiper-button-next"></div>
+					    <div class="swiper-button-prev js_swiper_prev"></div>
+					    <div class="swiper-button-next js_swiper_next"></div>
 					    
 					    <!-- 如果需要滚动条 -->
-					    <div class="swiper-scrollbar"></div>
+					    <!-- <div class="swiper-scrollbar"></div> -->
 					</div>
 				</div>
 			</div>
-	    	<!-- 场景展示 END -->
+	    	<!-- 轮播 END -->
 	   		<!-- 产品口碑-->
 	   		<div class="detail-title">产品口碑</div>
 			<div class="o_g">
