@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8"/>
     <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
 </head>
 <body>
-    <div class="main markdown" id="ui_iconfont">
+    <div class="main markdown">
         <h1>IconFont 图标</h1>
         <ul class="icon_lists clear">
             
@@ -254,6 +256,12 @@
                 <i class="icon iconfont icon-success-solid"></i>
                     <div class="name">success-solid</div>
                     <div class="fontclass">.icon-success-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-bg-solid"></i>
+                    <div class="name">bg-solid</div>
+                    <div class="fontclass">.icon-bg-solid</div>
                 </li>
             
         </ul>

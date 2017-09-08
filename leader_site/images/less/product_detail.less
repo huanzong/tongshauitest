@@ -4,6 +4,9 @@
 .border-none{
 	border: none!important;
 }
+.border-right{
+	border-right: 1px solid #eee;
+}
 .bg-eee{
 	background: #eee;
 }
@@ -125,6 +128,52 @@
 	font-size: 0;
 	img{
 		width: 100%;
+	}
+}
+
+//电商拉页
+.detail-foldover{
+	.foldover-img{
+		img{
+			width: 100%;
+		}
+	}
+	.foldover-icon{
+		font-size: 12px;
+		.icon-bg-solid{
+			position: relative;
+			font-size: 48px;
+			color: @l-red;
+			i{
+				position: absolute;
+				left: 14px;
+				top: 14px;
+				font-size: 20px;
+				color: #fff;
+			}
+		}
+	}
+	.foldover-con{
+		a{
+			position: relative;
+			left: 50%;
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			color: #666;
+			background: #fff;
+			&:hover{
+				background: @l-red;
+				color: #fff;
+				border: 1px solid @l-red;
+			}
+		}
+		a.alive{
+			background: @l-red;
+			color: #fff;
+			border: 1px solid @l-red;
+		}
 	}
 }
 

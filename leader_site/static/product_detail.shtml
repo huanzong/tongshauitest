@@ -134,6 +134,29 @@
 		    	<div class="o_u o_df_1-12"></div>
 	    	</div>
 	    	<!-- 详情展示 -->
+	    	<!-- 电商拉页 -->
+	    	<div class="o_g detail-foldover">
+	    		<div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover">
+	    			<div class="o_u o_df_1-2 border-right js_oHerlFoldover">
+	    				<div class="foldover-con">
+	    					<a href="javascript:;" class="l-btn-normal alive">查看更多</a>
+	    					<a href="javascript:;" class="l-btn-normal">查看更多</a>
+	    					<a href="javascript:;" class="l-btn-normal">查看更多</a>
+	    				</div>
+	    			</div>
+	    			<a class="iconfont icon-bg-solid js_center">
+	    				<i class="iconfont icon-plus"></i>
+	    			</a>
+	    		</div>
+	    		<div class="o_u o_df_7-12">
+	    			<div class="foldover-img js_oHerlSizeFoldover">
+	    				<img src="images/login_bg.JPG">
+	    				<img data-src="images/reg_bg_top2.JPG">
+	    			</div>
+	    		</div>
+	    		<div class="o_u o_df_1-12"></div>
+	    	</div>
+	    	<!-- 电商拉页 END -->
 	    	<!-- 轮播 -->
 			<div class="o_g">
 				<div class="detail-scene1">
