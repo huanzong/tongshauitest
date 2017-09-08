@@ -55,6 +55,51 @@ $(function() {
 			$('.js_center').oBoxCenter().init();
 	    },1000);
 
+	    $('.js_foldPlus').on('click',function(){
+	    	if($(this).hasClass('icon-plus')){
+
+	    		//文字列表
+	    		$('.js_foldlist').slideDown(300);
+	    		$(this).removeClass('icon-plus').addClass('icon-close');
+	    		$(this).parent().css('color','#ccc');
+
+	    		//右侧图片
+	    		$('.js_foldimg img').each(function(i,n){
+	    			if(i){
+	    				var src = $(this).attr('data-src');
+	    				$(this).attr('src',src);
+	    			}
+	    		});
+	    		$('.js_oHerlFoldover').css('height',$('.js_oHerlSizeFoldover').outerHeight());
+				// $('.js_foldoverNav').css({
+				// 	'position':'fixed',
+				// 	'top':'0',
+				// 	'left':'0',
+				// });
+	    	}else{
+
+	    		//文字列表
+	    		$('.js_foldlist').slideUp(300);
+	    		$(this).removeClass('icon-close').addClass('icon-plus');
+	    		$(this).parent().css('color','#e60012');
+
+	    		//右侧图片
+	    		$('.js_foldimg img').each(function(i,n){
+	    			if(i){
+	    				$(this).attr('src','');
+	    			}
+	    		});
+	    		$('.js_oHerlFoldover').css('height',$('.js_oHerlSizeFoldover').outerHeight());
+				$('.js_center').oBoxCenter().init();
+	    	}
+	    	
+	    });
+	    $('.js_foldMinus').on('click',function(){
+	    	$('.js_foldlist').hide();
+	    	$(this).hide();
+	    	$('.js_foldPlus').show();
+	    });
+
 	    //延迟加载图片
 	    setTimeout(function(){
 	        $(".o_picture").each(function(){

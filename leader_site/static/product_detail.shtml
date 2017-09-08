@@ -136,22 +136,30 @@
 	    	<!-- 详情展示 -->
 	    	<!-- 电商拉页 -->
 	    	<div class="o_g detail-foldover">
-	    		<div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover">
+	    		<div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav">
 	    			<div class="o_u o_df_1-2 border-right js_oHerlFoldover">
-	    				<div class="foldover-con">
-	    					<a href="javascript:;" class="l-btn-normal alive">查看更多</a>
-	    					<a href="javascript:;" class="l-btn-normal">查看更多</a>
-	    					<a href="javascript:;" class="l-btn-normal">查看更多</a>
+	    				<div class="foldover-con js_foldlist">
+	    					<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive">一台挂在墙上的机柜</a>
+	    					<a href="product_detail.shtml#2F" name="2F" class="l-btn-normal">如此境界，怎忙不爱</a>
+	    					<a href="product_detail.shtml#3F" name="3F" class="l-btn-normal">三挂在墙上的机柜</a>
+	    					<a href="product_detail.shtml#4F" name="4F" class="l-btn-normal">四台挂在墙上的机柜</a>
+	    					<a href="product_detail.shtml#5F" name="5F" class="l-btn-normal">五台挂在墙上的机柜</a>
+	    					<a href="product_detail.shtml#6F" name="6F" class="l-btn-normal">六台挂在墙上的机柜</a>
 	    				</div>
 	    			</div>
 	    			<a class="iconfont icon-bg-solid js_center">
-	    				<i class="iconfont icon-plus"></i>
+	    				<i class="iconfont icon-plus js_foldPlus"></i>
+	    				<!-- <i class="iconfont icon-close"></i> -->
 	    			</a>
 	    		</div>
 	    		<div class="o_u o_df_7-12">
-	    			<div class="foldover-img js_oHerlSizeFoldover">
-	    				<img src="images/login_bg.JPG">
-	    				<img data-src="images/reg_bg_top2.JPG">
+	    			<div class="foldover-img js_oHerlSizeFoldover js_foldimg">
+	    				<img src="images/login_bg.JPG" id="1F">
+	    				<img data-src="images/login_bg.JPG" id="2F">
+	    				<img data-src="images/login_bg.JPG" id="3F">
+	    				<img data-src="images/login_bg.JPG" id="4F">
+	    				<img data-src="images/login_bg.JPG" id="5F">
+	    				<img data-src="images/login_bg.JPG" id="6F">
 	    			</div>
 	    		</div>
 	    		<div class="o_u o_df_1-12"></div>
