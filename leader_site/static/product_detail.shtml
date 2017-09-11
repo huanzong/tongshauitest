@@ -280,6 +280,12 @@
 				<div class="o_u o_df_1-12"></div>
 			</div>
 	    	<!-- 产品口碑 End -->
+	    	<!-- 更多选择 -->
+	    	<div class="detail-title">更多选择</div>
+	    	<div class="detail-more">
+	    		
+	    	</div>
+	    	<!-- 更多选择 END -->
 
 	    	<!--#include virtual="public/footer.shtml"-->
 		</div>
