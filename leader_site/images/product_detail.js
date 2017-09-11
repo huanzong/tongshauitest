@@ -1,14 +1,48 @@
 $(function() {
 
+
+     //优惠组合
+	   var preferentialSwiper = new Swiper ('.js_swiperPreferential', {
+		    direction: 'horizontal',
+		    grabCursor : true,
+		    loop: true,
+		    // autoplay: 1000,
+				slidesPerView : 4,
+		    // 如果需要分页器
+		    // pagination: '.js_swiperPreferential',
+		    paginationType : 'bullets',
+
+		    // 如果需要前进后退按钮
+		    nextButton: '.js_swiper_next',
+		    prevButton: '.js_swiper_prev',
+
+		    // 如果需要滚动条
+		    // scrollbar: '.swiper-scrollbar'
+		});
+
     init();
 
     $(window).resize(function() {
         init();
     });
 
+ 		$(".js_swiperPreferential .js_checkbox").jq_qvote();
+
     function init() {
-        var screenWidth = document.body.offsetWidth;
-        var screenHeight = document.body.offsetHeight;
+     	var screenWidth = document.body.offsetWidth;
+      var screenHeight = document.body.offsetHeight;
+
+      var slidesPerView = 4
+
+      if (screenWidth <= 575) {
+          slidesPerView = 1;
+      } else if (screenWidth > 1199) {
+          slidesPerView = 4;
+      } else {
+          slidesPerView = 2;
+      }
+
+      preferentialSwiper.params.slidesPerView = slidesPerView
 
         //轮播模板
 	    var mySwiper = new Swiper ('.js_swiper', {
@@ -29,26 +63,8 @@ $(function() {
 		    // scrollbar: '.swiper-scrollbar'
 		});
 
-    //优惠组合
-	   var mySwiper = new Swiper ('.js_swiperPreferential', {
-		    direction: 'horizontal',
-		    grabCursor : true,
-		    loop: true,
-		    // autoplay: 1000,
-				slidesPerView : 4,
-		    // 如果需要分页器
-		    // pagination: '.js_swiperPreferential',
-		    paginationType : 'bullets',
 
-		    // 如果需要前进后退按钮
-		    nextButton: '.js_swiper_next',
-		    prevButton: '.js_swiper_prev',
 
-		    // 如果需要滚动条
-		    // scrollbar: '.swiper-scrollbar'
-		});
-
- 		$(".js_swiperPreferential .js_checkbox").jq_qvote();
 
 		//核心卖点
 	    var mySwiper = new Swiper ('.js_swiperSellPoint', {
