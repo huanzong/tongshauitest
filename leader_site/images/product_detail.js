@@ -109,6 +109,130 @@ $(function() {
 	            }).init();
 	        });
 	    },300);
+
+
+
+
+	    // 更多选择
+	    logoChange();
+
+	    $(".main_header").hover(function(){
+	      $(this).addClass("hover");
+	      // $(".header_cont .logo img").attr("src",casarteUrl+"c_logo_black.png");
+	    },function(){
+	      $(this).removeClass("hover");
+	      logoChange();
+	    });
+
+
+
+		function logoChange(){
+		var winW=$(window).width();
+		if(winW>991){
+			// $(".header_cont .logo img").attr("src",casarteUrl+"c_logo_white.png");
+		if($(".js_vipactivityC_menu").hasClass("show")){
+			$(".main_header").addClass("hover");
+		}else{
+			$(".main_header").removeClass("hover");
+		}
+		}else{
+			// $(".header_cont .logo img").attr("src",casarteUrl+"c_logo_black.png");
+		}
+
+		}
+
+		function otherScript() {
+	        // loadSrc("images/c_member.js");
+
+	        $(".js_indexbannerbg").oBgCover().init();
+	        $(".js_clubEntrance_bg").oBgCover().init();
+	        $(".js_powerInfo_bg").oBgCover().init();
+
+	        var powerInfo_list = $(".js_powerInfo_list").oSlider({
+	            loop: true
+	        });
+	        powerInfo_list.init();
+
+	        // $.ajax({
+	        //     type: "post",
+	        //     dataType: "json",
+	        //     url: "http://testuser.casarte.com/CasarteFramework/shopRightsList/getShopRightsList?type=1",
+	        //     success: function(returnData) {
+	        //         if (returnData.isSuccess) {
+	        //             // var goodsList = '';
+	        //             // for (var i = 0; i < returnData.data.resultlist.length; i++) {
+
+	        //             //     var goodsItem = returnData.data.resultlist[i]
+	        //             //     goodsList += '<li class="o_u o_df_1-3 o_sm_2-2 o_xs_2-2">' +
+	        //             //         '<div class="box o_animate">' +
+	        //             //         '<img class="pro_img o_animate" src="' + goodsItem.image + '" alt="">' +
+	        //             //         '<h2 class="o_animate leaveout">' + goodsItem.productName + '</h2>' +
+	        //             //         '<div class="info _animate">' +
+	        //             //         '<p>积分: <span>' + goodsItem.credits + '</span> <i></i> 市场价: <span>￥' + goodsItem.marketPrice + '</span></p>' +
+	        //             //         '<div>' +
+	        //             //         '<a href="' + goodsItem.docpubUrl + '" class="o_bgbtn1 o_btn_df-df o_btn_xs-sm"><span>立即兑换</span></a>' +
+	        //             //         '</div>' +
+	        //             //         '</div>' +
+	        //             //         '</div>' +
+	        //             //         '</li>';
+	        //             // }
+
+	        //             // $(".js_powerInfo_banner ul").html(goodsList)
+
+	                    
+	        //         }
+	        //     }
+	        // });
+	        // 
+	        var powerInfo_banner = $(".js_powerInfo_banner").oSlider({
+	                        nextFn: function() {
+	                            powerInfo_banner_change()
+	                        },
+	                        prevFn: function() {
+	                            powerInfo_banner_change()
+	                        },
+	                        playFn: function() {
+	                            powerInfo_banner_change()
+	                        },
+	                        loop: true
+	                    });
+	                    powerInfo_banner.init();
+
+	                    $(".js_powerInfo_banner").on("click", "li", function() {
+	                        var winW = $(window).width();
+	                        if (winW >= 992) {
+	                            if (powerInfo_banner.clickI == powerInfo_banner.i + 2 || powerInfo_banner.clickI == powerInfo_banner.i + 2 - powerInfo_banner.amount_yuan) {
+	                                powerInfo_banner.nextBtn.click();
+	                            } else if (powerInfo_banner.clickI == powerInfo_banner.i) {
+	                                powerInfo_banner.prevBtn.click();
+	                            }
+	                        }
+	                    })
+
+	                    function powerInfo_banner_change() {
+	                        // if(isIe8){
+	                        //     $(".js_powerInfo_banner li .box").stop().animate({"marginTop":"139px","padding":"15px 15px 0","width":"180px","background":"url(member_zz_bg.png)"},400);
+	                        // }else{
+	                        var i = powerInfo_banner.i,
+	                            winW = $(window).width();
+	                        if (winW >= 992) {
+	                            i++;
+	                        }
+
+	                        $(".js_powerInfo_banner li").removeClass("big");
+	                        $(".js_powerInfo_banner li").eq(i).addClass("big")
+	                        $(".js_powerInfo_banner li").eq(i + powerInfo_banner.amount_yuan).addClass("big");
+	                        $(".js_powerInfo_banner li").eq(i + (powerInfo_banner.amount_yuan * 2)).addClass("big");
+	                        //}
+
+	                    }
+	                    $(window).resize(function() {
+	                        powerInfo_banner_change();
+	                    });
+	                    powerInfo_banner_change();
+
+	    }
+	    otherScript();
     }
 
 

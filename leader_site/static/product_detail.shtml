@@ -283,8 +283,78 @@
 	    	<!-- 更多选择 -->
 	    	<div class="detail-title">更多选择</div>
 	    	<div class="detail-more">
-	    		
+	    		<div class="banner o_g">
+		            <img class="o_picture js_powerInfo_bg" df="images/member_power_bg_df.jpg" xs="images/member_power_bg_xs.png" alt="">
+		            <h2 class="tit">尊享兑换权益</h2>
+		            <div class="cont o_u o_df_10-12 o_sm_2-2 o_xs_2-2 js_powerInfo_banner">
+		                <div class="showbox">
+		                    <ul class="o_g">
+		                        <li class="o_u o_df_1-3 o_sm_2-2 o_xs_2-2">
+		                            <div class="box o_animate">
+		                                <img class="pro_img o_animate" src="images/member_power_img.png" alt="">
+		                                <h2 class="o_animate leaveout">1WMF-Diadem Plus系列双耳炖锅（24cm）</h2>
+		                                <div class="info _animate">
+		                                    <p>积分: <span>877</span> <i></i> 市场价: <span>￥1690.00</span></p>
+		                                    <div>
+		                                        <a href="" class="o_bgbtn1 o_btn_df-df o_btn_xs-sm"><span>立即兑换</span></a>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </li>
+		                        <li class="big o_u o_df_1-3 o_sm_2-2 o_xs_2-2">
+		                            <div class="box o_animate">
+		                                <img class="pro_img o_animate" src="images/member_power_img.png" alt="">
+		                                <h2 class="o_animate leaveout">2WMF-Diadem Plus系列双耳炖锅（24cm）</h2>
+		                                <div class="info o_animate">
+		                                    <p>积分: <span>877</span> <i></i> 市场价: <span>￥1690.00</span></p>
+		                                    <div>
+		                                        <a href="" class="o_bgbtn1 o_btn_df-df o_btn_xs-sm"><span>立即兑换</span></a>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </li>
+		                        <li class="o_u o_df_1-3 o_sm_2-2 o_xs_2-2">
+		                            <div class="box o_animate">
+		                                <img class="pro_img o_animate" src="images/member_power_img.png" alt="">
+		                                <h2 class="o_animate leaveout">3WMF-Diadem Plus系列双耳炖锅（24cm）</h2>
+		                                <div class="info o_animate">
+		                                    <p>积分: <span>877</span> <i></i> 市场价: <span>￥1690.00</span></p>
+		                                    <div>
+		                                        <a href="" class="o_bgbtn1 o_btn_df-df o_btn_xs-sm"><span>立即兑换</span></a>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </li>
+		                        <li class="o_u o_df_1-3 o_sm_2-2 o_xs_2-2">
+		                            <div class="box o_animate">
+		                                <img class="pro_img o_animate" src="images/member_power_img.png" alt="">
+		                                <h2 class="o_animate leaveout">4WMF-Diadem Plus系列双耳炖锅（24cm）哈哈哈哈哈哈哈</h2>
+		                                <div class="info o_animate">
+		                                    <p>积分: <span>877</span> <i></i> 市场价: <span>￥1690.00</span></p>
+		                                    <div>
+		                                        <a href="" class="o_bgbtn1 o_btn_df-df o_btn_xs-sm"><span>立即兑换</span></a>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </li>
+		                        <li class="o_u o_df_1-3 o_sm_2-2 o_xs_2-2">
+		                            <div class="box o_animate">
+		                                <img class="pro_img o_animate" src="images/member_power_img.png" alt="">
+		                                <h2 class="o_animate leaveout">5WMF-Diadem Plus系列双耳炖锅（24cm）</h2>
+		                                <div class="info o_animate">
+		                                    <p>积分: <span>877</span> <i></i> 市场价: <span>￥1690.00</span></p>
+		                                    <div>
+		                                        <a href="" class="o_bgbtn1 o_btn_df-df o_btn_xs-sm"><span>立即兑换</span></a>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
 	    	</div>
+	    	
 	    	<!-- 更多选择 END -->
 
 	    	<!--#include virtual="public/footer.shtml"-->
