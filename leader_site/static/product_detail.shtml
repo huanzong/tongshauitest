@@ -120,7 +120,7 @@
 		    			<img src="images/detail_icon.PNG">
 		    		</a>
 		    	</div>
-	    	</div> 
+	    	</div>
 
 	    	<!-- 核心卖点 -->
 	    	<!-- 详情展示 -->
@@ -179,11 +179,11 @@
 					    </div>
 					    <!-- 如果需要分页器 -->
 					    <div class="swiper-pagination js_swiper_pagination"></div>
-					    
+
 					    <!-- 如果需要导航按钮 -->
 					    <div class="swiper-button-prev js_swiper_prev"></div>
 					    <div class="swiper-button-next js_swiper_next"></div>
-					    
+
 					    <!-- 如果需要滚动条 -->
 					    <!-- <div class="swiper-scrollbar"></div> -->
 					</div>
@@ -283,9 +283,198 @@
 	    	<!-- 更多选择 -->
 	    	<div class="detail-title">更多选择</div>
 	    	<div class="detail-more">
-	    		
+
 	    	</div>
 	    	<!-- 更多选择 END -->
+
+	    	<!-- 优惠组合 -->
+				<div class="o_g">
+					<div class="o_u o_df_1-12"></div>
+					<div class="o_u o_df_10-12">
+	    			<div class="detail-title">优惠组合</div>
+
+		    		<div class="detail-preferential">
+			    		<div class="o_u o_df_2-12 o_lg_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 main-prd prd-box">
+			    			<div class="o_g">
+									<div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+										<img src="images/detail_prd01.png">
+									</div>
+									<div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+										<div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+											<p class="prd-name">小型家用冰箱节能电冰箱</p>
+											<p class="prd-code">BC-93LTMPA</p>
+										</div>
+										<div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+											<p class="prd-prise">组合价：<span>¥1799</span></p>
+											<p class="prd-old-prise">¥1599</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_df_1-12 o_lg-hide o_md-hide o_sm-hide o_xs-hide"> </div>
+							<div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
+			    			<div class="o_g">
+									<div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+										<img src="images/detail_prd02.png">
+									</div>
+									<div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+										<div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+											<p class="prd-name">小型家用冰箱节能电冰箱</p>
+											<p class="prd-code">BC-93LTMPA</p>
+										</div>
+										<div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+											<p class="prd-prise">组合价：<span>¥1799</span></p>
+											<p class="prd-old-prise">¥1599</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
+			    			<div class="o_g">
+									<div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+										<img src="images/detail_prd02.png">
+									</div>
+									<div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+										<div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+											<p class="prd-name">小型家用冰箱节能电冰箱</p>
+											<p class="prd-code">BC-93LTMPA</p>
+										</div>
+										<div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+											<p class="prd-prise">组合价：<span>¥1799</span></p>
+											<p class="prd-old-prise">¥1599</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
+			    			<div class="o_g">
+									<div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+										<img src="images/detail_prd02.png">
+									</div>
+									<div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+										<div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+											<p class="prd-name">小型家用冰箱节能电冰箱</p>
+											<p class="prd-code">BC-93LTMPA</p>
+										</div>
+										<div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+											<p class="prd-prise">组合价：<span>¥1799</span></p>
+											<p class="prd-old-prise">¥1599</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="total-prise">
+	 							<a href="javascript:;" class="l-btn-normal l-btn-red o_df-right">加入购物车</a>
+								<p class="o_df-right">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
+								<div class="o_clear"></div>
+							</div>
+						</div>
+
+
+						<div class="detail-preferential">
+			    		<div class="o_u o_df_2-12 o_lg_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 main-prd prd-box">
+			    			<div class="o_g">
+									<div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+										<img src="images/detail_prd01.png">
+									</div>
+									<div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+										<div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+											<p class="prd-name">小型家用冰箱节能电冰箱</p>
+											<p class="prd-code">BC-93LTMPA</p>
+										</div>
+										<div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+											<p class="prd-prise">组合价：<span>¥1799</span></p>
+											<p class="prd-old-prise">¥1599</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_df_10-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box swiper-prd-box">
+								<div class="swiper-container js_swiperPreferential">
+							    <div class="swiper-wrapper">
+							        <div class="swiper-slide">
+							        	<div>
+													<img src="images/detail_prd02.png">
+												</div>
+												<div>
+													<p class="prd-name">小型家用冰箱节能电冰箱</p>
+													<p class="prd-code">BC-93LTMPA</p>
+												</div>
+												<div>
+													<p class="prd-prise">组合价：<span>¥1799</span></p>
+													<p class="prd-old-prise">¥1599</p>
+												</div>
+												<span class="prd-checkbox">
+						              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+						            </span>
+							        </div>
+							        <div class="swiper-slide">
+							        	<div>
+													<img src="images/detail_prd02.png">
+												</div>
+												<div>
+													<p class="prd-name">小型家用冰箱节能电冰箱</p>
+													<p class="prd-code">BC-93LTMPA</p>
+												</div>
+												<div>
+													<p class="prd-prise">组合价：<span>¥1799</span></p>
+													<p class="prd-old-prise">¥1599</p>
+												</div>
+												<span class="prd-checkbox">
+						              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+						            </span>
+							        </div>
+							        <div class="swiper-slide">
+							        	<div>
+													<img src="images/detail_prd02.png">
+												</div>
+												<div>
+													<p class="prd-name">小型家用冰箱节能电冰箱</p>
+													<p class="prd-code">BC-93LTMPA</p>
+												</div>
+												<div>
+													<p class="prd-prise">组合价：<span>¥1799</span></p>
+													<p class="prd-old-prise">¥1599</p>
+												</div>
+												<span class="prd-checkbox">
+						              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+						            </span>
+							        </div>
+							        <div class="swiper-slide">
+							        	<div>
+													<img src="images/detail_prd02.png">
+												</div>
+												<div>
+													<p class="prd-name">小型家用冰箱节能电冰箱</p>
+													<p class="prd-code">BC-93LTMPA</p>
+												</div>
+												<div>
+													<p class="prd-prise">组合价：<span>¥1799</span></p>
+													<p class="prd-old-prise">¥1599</p>
+												</div>
+												<span class="prd-checkbox">
+						              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+						            </span>
+							        </div>
+							    </div>
+								</div>
+							</div>
+
+
+							<div class="total-prise">
+								<p>已选择 <span class="prd-num">1</span> 个产品</p>
+	 							<a href="javascript:;" class="l-btn-normal l-btn-red o_df-right">加入购物车</a>
+								<p class="o_df-right">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
+								<div class="o_clear"></div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+	    	<!-- 优惠组合 END -->
+
 
 	    	<!--#include virtual="public/footer.shtml"-->
 		</div>

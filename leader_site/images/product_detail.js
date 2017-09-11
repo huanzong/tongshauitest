@@ -16,18 +16,39 @@ $(function() {
 		    grabCursor : true,
 		    loop: true,
 		    autoplay: 1000,
-		    
+
 		    // 如果需要分页器
 		    pagination: '.js_swiper_pagination',
 		    paginationType : 'bullets',
-		    
+
 		    // 如果需要前进后退按钮
 		    nextButton: '.js_swiper_next',
 		    prevButton: '.js_swiper_prev',
-		    
+
 		    // 如果需要滚动条
 		    // scrollbar: '.swiper-scrollbar'
 		});
+
+    //优惠组合
+	   var mySwiper = new Swiper ('.js_swiperPreferential', {
+		    direction: 'horizontal',
+		    grabCursor : true,
+		    loop: true,
+		    // autoplay: 1000,
+				slidesPerView : 4,
+		    // 如果需要分页器
+		    // pagination: '.js_swiperPreferential',
+		    paginationType : 'bullets',
+
+		    // 如果需要前进后退按钮
+		    nextButton: '.js_swiper_next',
+		    prevButton: '.js_swiper_prev',
+
+		    // 如果需要滚动条
+		    // scrollbar: '.swiper-scrollbar'
+		});
+
+ 		$(".js_swiperPreferential .js_checkbox").jq_qvote();
 
 		//核心卖点
 	    var mySwiper = new Swiper ('.js_swiperSellPoint', {
@@ -35,15 +56,16 @@ $(function() {
 		    grabCursor : true,
 		    loop: true,
 		    autoplay: 1000,
-		    
+
 		    // 如果需要分页器
 		    pagination: '.js_swiper_paginSellPoint',
 		    paginationType : 'bullets',
-		    
+
 		    // 如果需要前进后退按钮
 		    nextButton: '.js_swiper_nextSellPoint',
 		    // prevButton: '.js_swiper_prevSellPoint',
 		});
+
 		setTimeout(function(){
 			$('.js_oHerl').css('height',$('.js_oHerlSize').outerHeight());
 			$('.js_center').oBoxCenter().init();
@@ -92,7 +114,7 @@ $(function() {
 	    		$('.js_oHerlFoldover').css('height',$('.js_oHerlSizeFoldover').outerHeight());
 				$('.js_center').oBoxCenter().init();
 	    	}
-	    	
+
 	    });
 	    $('.js_foldMinus').on('click',function(){
 	    	$('.js_foldlist').hide();

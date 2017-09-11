@@ -99,8 +99,8 @@
 }
 .sellpoint-bg{
 	background: url(detail_sellpoint_bg.JPG);
-    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-	-moz-background-size:100% 100%;  
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+	-moz-background-size:100% 100%;
 	background-size:100% 100%;
 }
 .sellpoint-describe{
@@ -207,8 +207,8 @@
     }
 	.praise-box{
 		@media (min-width: 992px){
-			position: absolute; 
-			left: -15px; 
+			position: absolute;
+			left: -15px;
 			right: -15px;
 	    }
 		.praise-con{
@@ -225,25 +225,25 @@
 			border-radius: 5px;
 		}
 		.detail-praise-box{
-			margin-bottom: 10px; 
+			margin-bottom: 10px;
 			padding: 20px 20px 0;
 			border-radius: 5px;
 			color: #666;
 			font-size: 16px;
 			line-height: 25px;
-			//4行省略 
+			//4行省略
 			@media (min-width: 992px){
 				min-height: 100px;
 				display: -webkit-box;
-				-webkit-line-clamp: 4; 
-				-webkit-box-orient: vertical; 
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
 				overflow: hidden;
 		    }
 			@media (min-width: 992px) and (max-width: 1199px){
-                margin-bottom: 90px; 
+                margin-bottom: 90px;
             }
             @media (max-width: 991px){
-                margin-bottom: 20px; 
+                margin-bottom: 20px;
             }
 		}
 		.detail-praise-img{
@@ -318,3 +318,126 @@
 		}
 	}
 }
+
+// 优惠组合
+.detail-preferential {
+	border: 1px solid #e2e2e2;
+	border-radius: 5px;
+	margin-bottom: 30px;
+
+	.prd-box{
+		text-align: center;
+		padding: 35px 0 65px;
+
+		&.swiper-prd-box {
+			padding: 34px 0;
+		}
+
+		@media (max-width: 575px) {
+			padding: 22px 0;
+		}
+
+		@media (min-width: 576px) and (max-width: 991px){
+			padding: 24px 0;
+		}
+
+
+		&.main-prd{
+			background: #f8f8f8;
+		}
+
+		.prd-name{
+			color: #333333;
+			font-size: 12px;
+			margin-top: 12px;
+
+  		@media (max-width: 991px){
+				& {
+						margin-top: 0;
+				}
+			}
+		}
+
+		.prd-code{
+			color: #999999;
+			font-size: 12px;
+		}
+
+		.prd-prise{
+			color: #e60012;
+			font-size: 12px;
+
+			span {
+				font-size: 14px
+			}
+		}
+
+		.prd-old-prise{
+			font-size: 14px;
+			color: #999999;
+			text-decoration: line-through;
+		}
+	}
+
+	.total-prise {
+		border-top: 1px solid #e2e2e2;
+		margin-top: -2px;
+		padding: 0 20px;
+
+		p {
+			font-size: 12px;
+			color: #999999;
+			line-height: 60px;
+			display: inline-block;
+			height: 60px;
+		}
+
+		span {
+			line-height: 60px;
+			vertical-align: baseline;
+		}
+
+		.prise {
+			color: @l-red;
+			font-size: 24px;
+			vertical-align: baseline;
+			margin-right: 5px;
+		}
+
+		a {
+			font-size: 14px;
+			margin-top: 10px;
+			width: 120px;
+			margin-left: 30px;
+			text-align: center;
+		}
+
+		.prd-num {
+			color: @l-red;
+		}
+	}
+
+	@media (min-width: 576px) and (max-width: 991px){
+		p {
+			text-align: left;
+			margin-top: 0;
+		}
+
+		.o_md_7-12,
+		.o_md_5-12 {
+			margin-top: 15px;
+		}
+	}
+
+	.prd-checkbox{
+		margin-top: 12px;
+		display: inline-block;
+
+		span {
+			padding-left: 20px;
+		}
+	}
+
+}
+
+
