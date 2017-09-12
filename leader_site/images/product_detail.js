@@ -1,24 +1,24 @@
 $(function() {
 
 
-     //优惠组合
-	   var preferentialSwiper = new Swiper ('.js_swiperPreferential', {
-		    direction: 'horizontal',
-		    grabCursor : true,
-		    loop: true,
-		    // autoplay: 1000,
-				slidesPerView : 4,
-		    // 如果需要分页器
-		    // pagination: '.js_swiperPreferential',
-		    paginationType : 'bullets',
+   //优惠组合
+   var preferentialSwiper = new Swiper ('.js_swiperPreferential', {
+	    direction: 'horizontal',
+	    grabCursor : true,
+	    loop: true,
+	    // autoplay: 1000,
+			slidesPerView : 4,
+	    // 如果需要分页器
+	    // pagination: '.js_swiperPreferential',
+	    paginationType : 'bullets',
 
-		    // 如果需要前进后退按钮
-		    nextButton: '.js_swiper_next',
-		    prevButton: '.js_swiper_prev',
+	    // 如果需要前进后退按钮
+	    nextButton: '.js_swiper_next',
+	    prevButton: '.js_swiper_prev',
 
-		    // 如果需要滚动条
-		    // scrollbar: '.swiper-scrollbar'
-		});
+	    // 如果需要滚动条
+	    // scrollbar: '.swiper-scrollbar'
+	});
 
     init();
 
@@ -147,6 +147,92 @@ $(function() {
 	            }).init();
 	        });
 	    },300);
+
+
+
+
+	    // 更多选择
+	    logoChange();
+
+	    $(".main_header").hover(function(){
+	      $(this).addClass("hover");
+	      // $(".header_cont .logo img").attr("src",casarteUrl+"c_logo_black.png");
+	    },function(){
+	      $(this).removeClass("hover");
+	      logoChange();
+	    });
+
+
+
+		function logoChange(){
+		var winW=$(window).width();
+		if(winW>991){
+			// $(".header_cont .logo img").attr("src",casarteUrl+"c_logo_white.png");
+		if($(".js_vipactivityC_menu").hasClass("show")){
+			$(".main_header").addClass("hover");
+		}else{
+			$(".main_header").removeClass("hover");
+		}
+		}else{
+			// $(".header_cont .logo img").attr("src",casarteUrl+"c_logo_black.png");
+		}
+
+		}
+
+		function otherScript() {
+
+	        var powerInfo_banner = $(".js_powerInfo_banner").oSlider({
+                nextFn: function() {
+                    powerInfo_banner_change()
+                },
+                prevFn: function() {
+                    powerInfo_banner_change()
+                },
+                playFn: function() {
+                    powerInfo_banner_change()
+                },
+                loop: true
+            });
+            powerInfo_banner.init();
+
+            $(".js_powerInfo_banner").on("click", "li", function() {
+                var winW = $(window).width();
+                if (winW >= 992) {
+                    if (powerInfo_banner.clickI == powerInfo_banner.i + 2 || powerInfo_banner.clickI == powerInfo_banner.i + 2 - powerInfo_banner.amount_yuan) {
+                        powerInfo_banner.nextBtn.click();
+                    } else if (powerInfo_banner.clickI == powerInfo_banner.i) {
+                        powerInfo_banner.prevBtn.click();
+                    }
+                }
+            });
+            console.log(powerInfo_banner.i);
+            function powerInfo_banner_change() {
+            	console.log(000);
+                // if(isIe8){
+                //     $(".js_powerInfo_banner li .box").stop().animate({"marginTop":"139px","padding":"15px 15px 0","width":"180px","background":"url(member_zz_bg.png)"},400);
+                // }else{
+                var i = powerInfo_banner.i,
+                    winW = $(window).width();
+                if (winW >= 992) {
+                    i++;
+                }
+
+                $(".js_powerInfo_banner li").removeClass("big");
+                $(".js_powerInfo_banner li").eq(i).addClass("big")
+                $(".js_powerInfo_banner li").eq(i + powerInfo_banner.amount_yuan).addClass("big");
+                $(".js_powerInfo_banner li").eq(i + (powerInfo_banner.amount_yuan * 2)).addClass("big");
+                // powerInfo_banner.init();
+
+            }
+            $(window).resize(function() {
+                powerInfo_banner_change();
+            });
+            powerInfo_banner_change();
+
+	    }
+	    // setTimeout(function(){
+	        otherScript();
+	    // },2000);
     }
 
 
