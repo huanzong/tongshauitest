@@ -406,7 +406,7 @@
 
 						<div class="total-prise">
  							<a href="javascript:;" class="l-btn-normal l-btn-red o_df-right">加入购物车</a>
-							<p class="o_df-right">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
+								<p class="o_u o_df-right o_sm-left o_xs_12-12">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
 							<div class="o_clear"></div>
 						</div>
 					</div>
@@ -502,10 +502,10 @@
 						</div>
 
 
-						<div class="total-prise">
-							<p>已选择 <span class="prd-num">1</span> 个产品</p>
+							<div class="total-prise checked-total-prise">
+								<p class="o_u o_df-left o_sm_12-12 o_xs_12-12">已选择 <span class="prd-num">1</span> 个产品</p>
  							<a href="javascript:;" class="l-btn-normal l-btn-red o_df-right">加入购物车</a>
-							<p class="o_df-right">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
+								<p class="o_u o_df-right o_sm-left o_xs_12-12">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
 							<div class="o_clear"></div>
 						</div>
 					</div>

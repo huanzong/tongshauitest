@@ -405,13 +405,40 @@
         margin-top: -2px;
         padding: 0 20px;
 
+		@media (max-width: 575px){
+			& {
+				text-align: center;
+			}
+
+			.o_df-right {
+				float: none !important;
+			}
+		}
+
+
         p {
             font-size: 12px;
             color: #999999;
             line-height: 60px;
-            display: inline-block;
+			// display: inline-block;
             height: 60px;
         }
+
+		@media (max-width: 699px){
+			&.checked-total-prise {
+				padding: 0;
+			}
+
+			p.o_sm_12-12 {
+				text-align: center;
+				border-bottom: 1px solid #e2e2e2;
+			}
+
+			&.checked-total-prise p {
+				padding: 0 20px;
+			}
+		}
+
 
         span {
             line-height: 60px;
@@ -431,6 +458,12 @@
             width: 120px;
             margin-left: 30px;
             text-align: center;
+		}
+
+		@media (max-width: 699px){
+			&.checked-total-prise a{
+				margin-right: 20px;
+			}
         }
 
         .prd-num {
