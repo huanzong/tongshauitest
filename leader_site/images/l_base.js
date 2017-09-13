@@ -10,6 +10,46 @@ $(function() {
         var screenWidth = document.body.offsetWidth;
 
     }
+    /**
+     * 首页动画：线变化
+     */
+    function lineAnimate($ele,t){
+
+        $ele.css('z-index','0');
+        $ele.siblings().hide();
+
+        setTimeout(function(){
+            $ele.find('span').eq(0).animate({ 
+                height: "100%"
+            },t);
+        },200);
+        setTimeout(function(){
+            $ele.find('span').eq(1).animate({ 
+                height: "100%"
+            },t);
+        },400);
+        setTimeout(function(){
+            $ele.find('span').eq(2).animate({ 
+                height: "100%"
+            },t);
+        },600);
+        setTimeout(function(){
+            $ele.find('span').eq(3).animate({ 
+                height: "100%"
+            },t);
+        },800);
+        setTimeout(function(){
+            $ele.find('span').eq(4).animate({ 
+                height: "100%"
+            },t);
+        },1000);
+        var showTime = 200*($ele.find('span').size()+1);
+        setTimeout(function(){
+            $ele.siblings().fadeIn(1000);
+            $ele.siblings().css('z-index','1');
+        },showTime);
+    }
+    lineAnimate($('.js_animateLine'),1000);
 
     /**
      * 导航逻辑

@@ -1,5 +1,27 @@
 @import "l_variable";
 
+
+.index_animate{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	// background: red;
+	.index_animateBox{
+		display: inline-block;
+		font-size: 0;
+		width: 16.7%;
+		height: 100%;
+		span{
+			float: right;
+			width: 0;
+			// height: 100%;
+			border-right: 1px solid #eee;
+		}
+	}
+}
+
 // 详情页样式表
 .border-none{
 	border: none!important;
@@ -318,141 +340,6 @@
 		}
 	}
 }
-
-// 更多选择
-
-.powerInfo{background:#514d48;position:relative}
-.powerInfo .banner{height:780px;}
-.powerInfo .showlist{position:absolute;bottom:0;width:100%;text-align:center;background:url(member_line_bg.png) repeat-x top;}
-.powerInfo .showlist .cont{max-width:1500px;display:inline-block;position:relative;}
-.powerInfo .showlist .cont .btn_next{font-size:24px;color:#b7b7b7;text-align:center;line-height:32px;position:absolute;width:32px;height:32px;position:absolute;top:0;right:-45px;cursor:pointer;z-index:1;font-family: "iconfont";}
-.powerInfo .showlist .cont .btn_prev{font-size:24px;color:#b7b7b7;text-align:center;line-height:32px;position:absolute;width:32px;height:32px;position:absolute;top:0;left:-45px;cursor:pointer;z-index:1;font-family: "iconfont";}
-.powerInfo .showlist .cont .btn_next:after{content:"\e60c"}
-.powerInfo .showlist .cont .btn_prev:after{content:"\e60b"}
-.powerInfo .showlist .cont ul li:hover{z-index:1}
-.powerInfo .showlist .cont ul{white-space:nowrap}
-.powerInfo .showlist .cont ul li a{padding-top:60px;text-align:left;display:block;height:175px;box-sizing:border-box}
-.powerInfo .showlist .cont ul li:hover a{background:url(member_power_hoverbg.png) repeat-x;}
-.powerInfo .showlist .cont ul li .box{padding:0 10%;box-sizing:border-box;background:url(member_line_bg.png) repeat-y left top;position:relative;}
-.powerInfo .showlist .cont ul li.cur .box{background:none}
-.powerInfo .showlist .cont ul li .box img{width:50px;position:absolute;}
-.powerInfo .showlist .cont ul li .box .textbox{display:inline-block;color:white;margin-left:65px}
-.powerInfo .showlist .cont ul li .box .o_table{height:50px}
-.powerInfo .showlist .cont ul li .box .o_table .o_cell{text-align:left}
-.powerInfo .showlist .cont ul li .box .textbox h2{font-size:16px;line-height:1.3em;margin-bottom:5px;color:white}
-.powerInfo .showlist .cont ul li .box .textbox p{font-size:12px;line-height:1.3em;white-space:normal}
-
-.powerInfo .banner {position:relative;text-align:center;}
-.powerInfo .banner h2.tit{font-size:32px;line-height:1.3em;color:#333;padding-top:60px;margin-bottom:30px;}
-.powerInfo .banner .cont{max-width:1500px;display:inline-block;position:relative;z-index:1}
-.powerInfo .banner .cont ul{white-space:nowrap}
-.powerInfo .banner .cont ul li{text-align:center;height:400px}
-.powerInfo .banner .cont ul li .box{max-width:385px;margin-top:139px;display:inline-block;width:180px;background:url(member_zz_bg.png);background:rgba(0,0,0,0.5);box-sizing: border-box;padding:15px 15px 0;cursor:pointer}
-.powerInfo .banner .cont ul li .box .pic{width: 100%;height: 75px;background: #fff;margin:0 auto;}
-.powerInfo .banner .cont ul li .box .pro_img{display:block;width:auto;height:75px;margin:0 auto}
-.powerInfo .banner .cont ul li .box h2{font-size:12px;color:white;line-height:40px;height:40px;}
-.powerInfo .banner .cont ul li .box .info{height:0px;overflow:hidden;opacity:0}
-.powerInfo .banner .cont ul li .box .info p{font-size:12px;line-height:1.3em;margin-bottom:20px;color:#999}
-.powerInfo .banner .cont ul li .box .info p i{display:inline-block;height:12px;width:1px;background:#999;margin:0 5px}
-.powerInfo .banner .cont ul li .box .info p span{color:white} 
-.powerInfo .banner .cont ul li .box .info .o_bgbtn1 span{width:198px;padding:0;text-align:center}
-
-.powerInfo .banner .cont ul li.big .box{margin-top:60px;padding:0;width:100%;background:none;background:rgba(0,0,0,0)}
-.powerInfo .banner .cont ul li.big .box .info{height:100px;opacity:1}
-.powerInfo .banner .cont ul li.big .box .pic{width: 280px;height: 140px;margin-bottom:30px;background: #fff;}
-.powerInfo .banner .cont ul li.big .box .pro_img{width:auto;height:140px;}
-.powerInfo .banner .cont ul li.big .box h2{line-height:1.3em;height:1.3em;;margin-bottom:15px;font-size:18px}
-
-
-.powerInfo .banner .cont .btn_next{color:#333;text-align:center;position:absolute;width:50px;height:50px;position:absolute;top:0;right:10px;cursor:pointer;z-index:1;font-family: "iconfont";font-size:50px}
-.powerInfo .banner .cont .btn_prev{color:#333;text-align:center;position:absolute;width:50px;height:50px;position:absolute;top:0;left:10px;cursor:pointer;z-index:1;font-family: "iconfont";font-size:50px}
-.powerInfo .banner .cont .btn_next:after{content:"\e60c";color:#333;display:inline-block;vertical-align:middle;line-height:50px}
-.powerInfo .banner .cont .btn_prev:after{content:"\e60b";color:#333;display:inline-block;vertical-align:middle;line-height:50px}
-
-
-@media(min-width:1199px) and (max-width:1366px){
-    .powerInfo .banner .cont{width:90%;}
-    
-}
-
-@media (min-width:992px) and (max-width:1199px){/* md*/
-  .powerInfo .banner{height:640px;}
-  .powerInfo .showlist .cont ul li a{height:120px;padding-top:30px}
-  .powerInfo .showlist .cont ul li .box .textbox h2{font-size:14px}
-  .powerInfo .banner h2.tit{padding-top:50px;font-size:28px}
-  .powerInfo .banner .cont ul li{height:325px}
-  .powerInfo .banner .cont ul li .box{width:150px;padding:10px 10px 0;margin-top:105px}
-  .powerInfo .banner .cont ul li.big .box{margin-top:45px;max-width:352px}
-  .powerInfo .banner .cont ul li.big .box .pic{margin-bottom: 20px;max-width:210px;}
-  .powerInfo .banner .cont ul li.big .box .pro_img{height:105px}
-  .powerInfo .banner .cont ul li.big .box h2{font-size:16px;margin-bottom:10px}
-  .powerInfo .banner .cont .btn_next,.powerInfo .banner .cont .btn_prev{width:32px;height:32px;line-height:32px;font-size:32px}
-    .powerInfo .banner .cont ul li .box .pic{height: 65px;width: 100%;}
-    .powerInfo .banner .cont ul li .box .pro_img{height:65px}
-}
-@media(min-width:992px) and (max-width:1100px){
-    .powerInfo .banner .cont{width:92%;}
-    .powerInfo .banner .cont ul li.big .box .pic{height: 105px;width: 100%;}
-     .powerInfo .banner .cont ul li.big .box .pro_img{height:105px}
-}
-
-@media (min-width:768px) and (max-width:991px){/* sm*/
-   .powerInfo .banner{height:640px;}
-   .powerInfo .showlist .cont ul li a{height:120px;padding-top:30px}
-   .powerInfo .showlist .cont ul li .box .textbox h2{font-size:14px}
-   .powerInfo .banner h2.tit{padding-top:50px;font-size:28px}
-   .powerInfo .banner .cont ul li{height:325px}
-   .powerInfo .banner .cont ul li.big .box,.powerInfo .banner .cont ul li .box{max-width:352px;margin-top:45px;padding:0;width:100%;background:rgba(0,0,0,0)}
-   .powerInfo .banner .cont ul li.big .box .pro_img,
-   .powerInfo .banner .cont ul li .box .pro_img{max-width:210px;margin-bottom:20px;max-height:105px}
-    .powerInfo .banner .cont ul li .box .pic{height: 105px;max-width:210px;}
-    .powerInfo .banner .cont ul li.big .box .pic{height: 105px;max-width:210px;margin-bottom:20px;}
-   .powerInfo .banner .cont ul li.big .box h2,.powerInfo .banner .cont ul li .box h2{font-size:16px;margin-bottom:10px;line-height:1.3em}
-   .powerInfo .banner .cont .btn_next,.powerInfo .banner .cont .btn_prev{width:32px;height:32px;line-height:32px;font-size:32px}
-   .powerInfo .banner .cont ul li .box .info{height:100px}
-}
-@media (max-width:767px){/* xs*/
-   .powerInfo .banner{height:365px;}
-   .powerInfo .banner .o_picture{height:390px!important;width:auto!important;top:0!important;margin-top:0!important}
-   .powerInfo .showlist{position:relative;background-color:#666}
-   .powerInfo .showlist .cont ul {white-space:normal!important;position:relative;top:1px;display:block!important}
-   .powerInfo .showlist .cont ul li a{height:auto;padding:30px 0 31px;background:url(member_line_bg.png) repeat-x bottom;}
-   .powerInfo .showlist .cont ul li .box{background:none;padding:0}
-   .powerInfo .showlist .cont ul li:hover a{background:url(member_line_bg.png) repeat-x bottom}
-
-   .powerInfo .banner h2.tit{padding-top:30px;font-size:24px;margin-bottom:15px}
-   .powerInfo .banner .cont ul li{height:230px}
-   .powerInfo .banner .cont ul li.big .box,.powerInfo .banner .cont ul li .box{max-width:216px;margin-top:30px;padding:0;width:100%;background:rgba(0,0,0,0)}
-   .powerInfo .banner .cont ul li.big .box .pro_img,
-   .powerInfo .banner .cont ul li .box .pro_img{max-width:140px;margin-bottom:15px;max-height:70px}
-    .powerInfo .banner .cont ul li .box .pic,.powerInfo .banner .cont ul li.big .box .pic{
-        max-width:140px;
-        max-height:70px;
-        margin-bottom:15px;
-    }
-    .powerInfo .banner .cont ul li.big .box h2,.powerInfo .banner .cont ul li .box h2{font-size:12px;margin-bottom:10px;line-height:1.3em}
-   .powerInfo .banner .cont .btn_next,.powerInfo .banner .cont .btn_prev{width:32px;height:32px;line-height:32px;font-size:32px}
-   .powerInfo .banner .cont ul li .box .info{height:100px}
-   .powerInfo .banner .cont ul li .box .info .o_bgbtn1 span{width:130px}
-   .powerInfo .banner .cont ul li .box .info p{margin-bottom:10px}
-   /*.powerInfo .banner .cont .btn_prev:after,.powerInfo .banner .cont .btn_next:after{font-size:32px}*/
-}
-
-.o_animate{-webkit-transition-duration: .4s;
-	-moz-transition-duration: .4s;
-	transition-duration: .4s;
-	-webkit-transition-timing-function: ease-out;
-	-moz-transition-timing-function: ease-out;
-	transition-timing-function: ease-out;
-
-}
-
-.leaveout{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
-.margin_b{margin-bottom:60px}
-@media (max-width:991px){/*sm xs*/
-   .margin_b{margin-bottom:45px} 
-}
-
 // 优惠组合
 .detail-preferential {
     border: 1px solid #e2e2e2;
@@ -577,4 +464,3 @@
     }
 
 }
-
