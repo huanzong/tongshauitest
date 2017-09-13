@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>产品对比</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="images/product_compare.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+        	<!-- 首屏动画 -->
+        	<div class="o_g js_animateLine">
+	        	<div class="index_animate">
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox"></div>
+				</div>
+	        </div>
+	        <!-- 首屏动画 End -->
+	    	<!-- 导航 -->
+	    	<!--#include virtual="public/nav.shtml"-->
+	    	<!-- 导航 End-->
+	    	<div class="o_g">
+	    		<div class="compare_head">
+	    			<div class="o_u o_df_1-12"></div>
+	    			<div class="o_u o_df_10-12">
+	    				<div class="compare_tit">产品对比</div>
+	    				<div class="compare_choose">
+	    					<span class="compare_check">
+				            	<input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="高亮不同项">
+				            </span>
+				            <span class="compare_check">
+				            	<input class="js_checkbox" type="checkbox" data-notnull="true" value="隐藏相同项">
+				            </span>
+				            <span class="compare_clear">
+				            	<i class="iconfont icon-lock-solid"></i>
+				            	清空所有产品
+				            </span>
+	    				</div>
+	    			</div>
+	    			<div class="o_u o_df_1-12"></div>
+	    		</div>
+	    	</div>
+	    	<div class="o_g">
+	    		<div class="compare_pro">
+		    		<div class="o_u o_df_1-12"></div>
+		    		<div class="o_u o_df_10-12">
+		    			<div class="o_u o_df_1-5">
+		    				<div class="compare_info">
+		    					共有<span>2</span>个产品<br>
+		    					最多可添加<span>4</span>个产品
+		    				</div>
+		    			</div>
+		    			<div class="o_u o_df_1-5">
+		    				<div class="compare_info">
+		    					共有<span>2</span>个产品<br>
+		    					最多可添加<span>4</span>个产品
+		    				</div>
+		    			</div>
+		    			<div class="o_u o_df_1-5"></div>
+		    			<div class="o_u o_df_1-5"></div>
+		    			<div class="o_u o_df_1-5"></div>
+		    		</div>
+		    		<div class="o_u o_df_1-12"></div>
+		    	</div>
+	    	</div>
+        </div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="images/product_compare.js"></script>
+</body>
+</html>
