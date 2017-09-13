@@ -1,15 +1,5 @@
 $(function() {
 
-    init();
-
-    $(window).resize(function() {
-        init();
-    });
-
-    function init() {
-        var screenWidth = document.body.offsetWidth;
-
-    }
     /**
      * 首页动画：线变化
      */
@@ -48,8 +38,25 @@ $(function() {
             $ele.siblings().fadeIn(1000);
             $ele.siblings().css('z-index','1');
         },showTime);
+        setTimeout(function(){
+            
+        },showTime+1000);
     }
+
     lineAnimate($('.js_animateLine'),1000);
+
+    
+
+    $(window).resize(function() {
+        init();
+    });
+
+    init();
+
+    function init() {
+        var screenWidth = document.body.offsetWidth;
+        
+    }
 
     /**
      * 导航逻辑

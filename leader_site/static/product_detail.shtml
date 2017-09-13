@@ -303,26 +303,37 @@
 	    	<!-- 更多选择 -->
 	    	<div class="detail-title">更多选择</div>
 	    	<div class="o_g">
-	    		<div class="detail-more">
-					<div class="swiper-container js_swiperMore">
-					    <div class="swiper-wrapper">
-					        <div class="swiper-slide">
-					        	<!-- <img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg" md="images/pc.jpg" lg="images/pc.jpg" xl="images/pc.jpg" alt=""> -->
-					        	<img src="images/nav_bg_lg.PNG">
-					        </div>
-					        <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-					        <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-					    </div>
-					    <!-- 如果需要分页器 -->
-					    <div class="swiper-pagination js_swiper_paginationMore"></div>
+	    		<div class="o_u o_df_2-12 js_oHerlMore">
+		    		<a class="js_swiper_prevMore js_center">
+		    			<img src="images/detail_icon.PNG">
+		    		</a>
+	    		</div>
+	    		<div class="o_u o_df_8-12 js_oHerlSizeMore">
+	    			<div class="detail-more">
+						<div class="swiper-container js_swiperMore">
+						    <div class="swiper-wrapper">
+						        <div class="o_u o_df_1-4 swiper-slide">
+						        	<img src="images/nav_bg_lg.PNG">
+						        </div>
+						        <div class="o_u o_df_2-4 swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
+						        <div class="o_u o_df_1-4 swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
+						    </div>
+						    <!-- 如果需要分页器 -->
+						    <div class="swiper-pagination js_swiper_paginationMore"></div>
 
-					    <!-- 如果需要导航按钮 -->
-					    <div class="swiper-button-prev js_swiper_prevMore"></div>
-					    <div class="swiper-button-next js_swiper_nextMore"></div>
+						    <!-- 如果需要导航按钮 -->
+						    <!-- <div class="swiper-button-prev js_swiper_prevMore"></div>
+						    <div class="swiper-button-next js_swiper_nextMore"></div> -->
 
-					    <!-- 如果需要滚动条 -->
-					    <!-- <div class="swiper-scrollbar"></div> -->
-					</div>
+						    <!-- 如果需要滚动条 -->
+						    <!-- <div class="swiper-scrollbar"></div> -->
+						</div>
+		    		</div>
+	    		</div>
+	    		<div class="o_u o_df_2-12 js_oHerlMore">
+		    		<a class="js_swiper_nextMore js_center">
+		    			<img src="images/detail_icon.PNG">
+		    		</a>
 	    		</div>
 	    	</div>
 	    	<!-- 更多选择 END -->

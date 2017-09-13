@@ -7,7 +7,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	// background: red;
+	z-index: -10;
 	.index_animateBox{
 		display: inline-block;
 		font-size: 0;
@@ -17,11 +17,10 @@
 			float: right;
 			width: 0;
 			// height: 100%;
-			border-right: 1px solid #eee;
+			border-right: 1px solid #f3f3f3;
 		}
 	}
 }
-
 // 详情页样式表
 .border-none{
 	border: none!important;
@@ -61,6 +60,7 @@
 //文字卖点
 .detail-fontpoint{
 	border-bottom: 1px solid #eee;
+	background: #fff;
 	.o_df_1-5{
 		// min-width: 140px;
 	}
@@ -88,6 +88,7 @@
 	padding: 16px 0;
 	color: #333;
 	text-align: center;
+	background: #fff;
 	span{
 		padding: 0 14px;
 		line-height: 28px;
@@ -109,6 +110,10 @@
 	left: -24%;
     width: 148%;
     padding: 90px 0;
+    // min-height: 900px;
+    // @media (min-width: 992px) and (max-width:1199px) {
+    // 	min-height: 696px;
+    // }
 	img{
 		width: 100%;
 	}
@@ -228,6 +233,7 @@
         min-height: 450px;
     }
 	.praise-box{
+		background: #fff;
 		@media (min-width: 992px){
 			position: absolute;
 			left: -15px;
@@ -340,6 +346,20 @@
 		}
 	}
 }
+
+//更多选择
+.detail-more{
+	.swiper-slide{
+		img{
+			width: 100%;
+		}
+	}
+	.swiper-button-prev{
+		// position: relative;
+		// left: -30%;
+	}
+}
+
 // 优惠组合
 .detail-preferential {
     border: 1px solid #e2e2e2;

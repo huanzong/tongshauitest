@@ -1,84 +1,91 @@
 $(function() {
 
+	var swiper = {
+		// preferentialSwiper:'',
+		// mySwiper:'',
+		// preferentialSwiper:'',
+	};//用来存放所有轮播
 
-   //优惠组合
-   var preferentialSwiper = new Swiper ('.js_swiperPreferential', {
-	    direction: 'horizontal',
-	    grabCursor : true,
-	    loop: true,
-	    // autoplay: 1000,
+	setTimeout(function(){
+    	//优惠组合
+	    swiper.preferentialSwiper = new Swiper ('.js_swiperPreferential', {
+		    direction: 'horizontal',
+		    grabCursor : true,
+		    loop: true,
+		    // autoplay: 1000,
 			slidesPerView : 4,
-	    // 如果需要分页器
-	    // pagination: '.js_swiperPreferential',
-	    paginationType : 'bullets',
+		    // 如果需要分页器
+		    // pagination: '.js_swiperPreferential',
+		    paginationType : 'bullets',
 
-	    // 如果需要前进后退按钮
-	    nextButton: '.js_swiper_next',
-	    prevButton: '.js_swiper_prev',
+		    // 如果需要前进后退按钮
+		    nextButton: '.js_swiper_next',
+		    prevButton: '.js_swiper_prev',
 
-	    // 如果需要滚动条
-	    // scrollbar: '.swiper-scrollbar'
-	});
+		    // 如果需要滚动条
+		    // scrollbar: '.swiper-scrollbar'
+		});
 
-   //轮播模板
-    var mySwiper = new Swiper ('.js_swiper', {
-	    direction: 'horizontal',
-	    grabCursor : true,
-	    loop: true,
-	    autoplay: 1000,
+	    //轮播模板
+	    swiper.mySwiper = new Swiper ('.js_swiper', {
+		    direction: 'horizontal',
+		    grabCursor : true,
+		    loop: true,
+		    autoplay: 1000,
 
-	    // 如果需要分页器
-	    pagination: '.js_swiper_pagination',
-	    paginationType : 'bullets',
+		    // 如果需要分页器
+		    pagination: '.js_swiper_pagination',
+		    paginationType : 'bullets',
 
-	    // 如果需要前进后退按钮
-	    nextButton: '.js_swiper_next',
-	    prevButton: '.js_swiper_prev',
+		    // 如果需要前进后退按钮
+		    nextButton: '.js_swiper_next',
+		    prevButton: '.js_swiper_prev',
 
-	    // 如果需要滚动条
-	    // scrollbar: '.swiper-scrollbar'
-	});
+		    // 如果需要滚动条
+		    // scrollbar: '.swiper-scrollbar'
+		});
 
-	//核心卖点
-    var mySwiper = new Swiper ('.js_swiperSellPoint', {
-	    // direction: 'horizontal',
-	    grabCursor : true,
-	    loop: true,
-	    autoplay: 1000,
+		//核心卖点
+	    swiper.sellPointSwiper = new Swiper ('.js_swiperSellPoint', {
+		    // direction: 'horizontal',
+		    grabCursor : true,
+		    loop: true,
+		    autoplay: 1000,
 
-	    // 如果需要分页器
-	    pagination: '.js_swiper_paginSellPoint',
-	    paginationType : 'bullets',
+		    // 如果需要分页器
+		    pagination: '.js_swiper_paginSellPoint',
+		    paginationType : 'bullets',
 
-	    // 如果需要前进后退按钮
-	    nextButton: '.js_swiper_nextSellPoint',
-	    // prevButton: '.js_swiper_prevSellPoint',
-	});
+		    // 如果需要前进后退按钮
+		    nextButton: '.js_swiper_nextSellPoint',
+		    // prevButton: '.js_swiper_prevSellPoint',
+		});
 
-    //更多选择
-	var mySwiper = new Swiper ('.js_swiperMore', {
-	    direction: 'horizontal',
-	    grabCursor : true,
-	    loop: true,
-	    autoplay: 1000,
+	    //更多选择
+		swiper.moreSwiper = new Swiper ('.js_swiperMore', {
+		    direction: 'horizontal',
+		    grabCursor : true,
+		    loop: true,
+		    autoplay: 1000,
 
-	    //分组
-	    slidesPerView : 3,
-		slidesPerGroup : 1,
+		    //分组
+		    slidesPerView : 3,
+			slidesPerGroup : 1,
 
-	    // 如果需要分页器
-	    pagination: '.js_swiper_paginationMore',
-	    paginationType : 'bullets',
+		    // 如果需要分页器
+		    pagination: '.js_swiper_paginationMore',
+		    paginationType : 'bullets',
 
-	    // 如果需要前进后退按钮
-	    nextButton: '.js_swiper_nextMore',
-	    prevButton: '.js_swiper_prevMore',
+		    // 如果需要前进后退按钮
+		    nextButton: '.js_swiper_nextMore',
+		    prevButton: '.js_swiper_prevMore',
 
-	    // 如果需要滚动条
-	    // scrollbar: '.swiper-scrollbar'
-	});
+		    // 如果需要滚动条
+		    // scrollbar: '.swiper-scrollbar'
+		});
 
-    init();
+    	init();
+    },3000);
 
     $(window).resize(function() {
         init();
@@ -100,9 +107,7 @@ $(function() {
 		  slidesPerView = 2;
 		}
 
-		preferentialSwiper.params.slidesPerView = slidesPerView;
-
-        
+		swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
 
 		setTimeout(function(){
 			$('.js_oHerl').css('height',$('.js_oHerlSize').outerHeight());
@@ -169,12 +174,12 @@ $(function() {
 	            }).init();
 	        });
 	    },300);
-
-
-
-
-	    // 更多选择
 	    
+	    // 更多选择
+	    setTimeout(function(){
+			$('.js_oHerlMore').css('height',$('.js_oHerlSizeMore').outerHeight());
+			$('.js_center').oBoxCenter().init();
+	    },1000);
 
     }
 
