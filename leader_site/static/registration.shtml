@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="o_u o_df_2-2 reg_footer">
-                    <!--#include virtual="public/footer.shtml"-->
+                    <!--#include virtual="public/login_footer.shtml"-->
                 </div>
             </div>
             

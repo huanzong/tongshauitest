@@ -73,17 +73,238 @@
 		    				</div>
 		    			</div>
 		    			<div class="o_u o_df_1-5">
-		    				<div class="compare_info">
-		    					共有<span>2</span>个产品<br>
-		    					最多可添加<span>4</span>个产品
+		    				<div class="compare_goods">
+		    					<a class="iconfont icon-close"></a>
+		    					<img src="images/compare_goods.png">
+		    					<span class="goods_name">对开双门大容量交个哦几个洗衣机</span>
+		    					<span class="goods_type">UOPEJTPII-79986966</span>
+		    					<span class="goods_price">￥ 5637</span>
 		    				</div>
 		    			</div>
-		    			<div class="o_u o_df_1-5"></div>
-		    			<div class="o_u o_df_1-5"></div>
-		    			<div class="o_u o_df_1-5"></div>
+		    			<div class="o_u o_df_1-5">
+		    				<div class="compare_goods">
+		    					<a class="iconfont icon-close"></a>
+		    					<img src="images/compare_goods.png">
+		    					<span class="goods_name">对开双门大容量交个哦几个洗衣机</span>
+		    					<span class="goods_type">UOPEJTPII-79986966</span>
+		    					<span class="goods_price">￥ 5637</span>
+		    				</div>
+		    			</div>
+		    			<div class="o_u o_df_1-5">
+		    				<div class="compare_addgoods">
+		    					<a class="add_box">
+		    						添加<br>产品
+		    					</a>
+		    				</div>
+		    			</div>
+		    			<div class="o_u o_df_1-5">
+		    				<div class="compare_addgoods">
+		    					<a class="add_box">
+		    						添加<br>产品
+		    					</a>
+		    				</div>
+		    			</div>
 		    		</div>
 		    		<div class="o_u o_df_1-12"></div>
 		    	</div>
+		    	<div class="compare_title">
+		    		产品选购
+		    	</div>
+		    	<div class="o_u o_df_1-12"></div>
+		    	<div class="o_u o_df_10-12">
+		    		<ul class="compare_table">
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						活动
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						-
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-red">
+		    						唤醒初夏	
+		    					</div>
+		    				</div>
+		    			</li>
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						用户满意度
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-orange">
+		    						95%
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-orange">
+		    						95.9%	
+		    					</div>
+		    				</div>
+		    			</li>
+		    			<li class="border-none">
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						用户印象
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="column_td">
+		    						<span class="compare_column">
+		    							质量很好(999)
+		    						</span><br>
+		    						<span class="compare_column">
+		    							质量很好(999)
+		    						</span><br>
+		    						<span class="compare_column">
+		    							质量很好(999)
+		    						</span>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="column_td">
+		    						<span class="compare_column">
+		    							质量很好(999)
+		    						</span>
+		    					</div>
+		    				</div>
+		    			</li>
+		    		</ul>
+		    	</div>
+		    	<div class="o_u o_df_1-12"></div>
+
+		    	<div class="compare_title border-none">
+		    		基本参数
+		    	</div>
+		    	<div class="o_u o_df_1-12"></div>
+		    	<div class="o_u o_df_10-12">
+		    		<ul class="compare_table">
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						类别
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						多门冰箱
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						多门冰箱	
+		    					</div>
+		    				</div>
+		    			</li>
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						箱门结构
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-orange">
+		    						双门
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-orange">
+		    						单门
+		    					</div>
+		    				</div>
+		    			</li>
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						总容积（升）
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						520
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						520
+		    					</div>
+		    				</div>
+		    			</li>
+
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						类别
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						多门冰箱
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						多门冰箱	
+		    					</div>
+		    				</div>
+		    			</li>
+		    			<li>
+		    				<div class="white-left"></div>
+		    				<div class="white-right"></div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						箱门结构
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-orange">
+		    						双门
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td font-orange">
+		    						单门
+		    					</div>
+		    				</div>
+		    			</li>
+
+		    			<li class="border-none">
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_th">
+		    						总容积（升）
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						520
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-5">
+		    					<div class="compare_td">
+		    						520
+		    					</div>
+		    				</div>
+		    			</li>
+		    		</ul>
+		    	</div>
+		    	<div class="o_u o_df_1-12"></div>
 	    	</div>
         </div>
 	</div>

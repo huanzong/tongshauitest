@@ -122,7 +122,7 @@ img {
     behavior: url('PIE.htc');
 }
 
-/* 公共部分：头尾 */
+/* 公共部分：头 */
 .header{
     text-align: left;
     background: #eee;
@@ -147,7 +147,8 @@ img {
         // @media (min-width: 992px) and (max-width: 1199px) 
     }
 }
-.footer{
+/* 公共部分：尾（登录/注册/找回密码/） */
+.login_footer{
     border-top: 1px solid rgba(0,0,0,0.05);
     border-top: 1px solid #eee\9;
     text-align: left;
@@ -184,6 +185,37 @@ img {
         text-align: right;
         @media (max-width: 991px){
             text-align: center;
+        }
+    }
+}
+
+/* 公共部分：尾 */
+.footer{
+    .line-red{
+        display: inline-block;
+        width: 50%;
+        background: @l-red;
+        height: 1px;
+    }
+    .line{
+        display: inline-block;
+        width: 50%;
+        background: #eee;
+        height: 1px;
+    }
+    .footer_copy{
+        background: #fff;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        color: #999;
+        font-size: 12px;
+        border-top: 1px solid #eee;
+        .copy_service{
+            padding: 0 25px;
+            @media (min-width: 992px) and (max-width: 1199px){
+                padding: 0 20px;
+            }
         }
     }
 }
@@ -613,6 +645,29 @@ img {
                 height: 38px;
                 color: #ccc;
             }
+        }
+    }
+}
+
+
+// 首屏动画
+.index_animate{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -10;
+    .index_animateBox{
+        display: inline-block;
+        font-size: 0;
+        width: 16.7%;
+        height: 100%;
+        span{
+            float: right;
+            width: 0;
+            // height: 100%;
+            border-right: 1px solid #f3f3f3;
         }
     }
 }

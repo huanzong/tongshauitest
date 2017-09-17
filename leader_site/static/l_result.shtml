@@ -28,7 +28,7 @@
                         <div class="skip"><span id="js_time">5</span> 秒后返回首页</div>
                     </div>
                     <div class="o_u o_df_2-2 result_footer">
-                        <!--#include virtual="public/footer.shtml"-->
+                        <!--#include virtual="public/login_footer.shtml"-->
                     </div>
                 </div>
             </div>
