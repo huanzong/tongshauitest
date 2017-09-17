@@ -144,7 +144,7 @@ img {
         height: 14px;
         font-size: 12px;
         border-right: 1px solid #e2dfde;
-        // @media (min-width: 992px) and (max-width: 1199px) 
+        // @media (min-width: 992px) and (max-width: 1199px)
     }
 }
 /* 公共部分：尾（登录/注册/找回密码/） */
@@ -191,6 +191,7 @@ img {
 
 /* 公共部分：尾 */
 .footer{
+    background: #fff;
     .line-red{
         display: inline-block;
         width: 50%;
@@ -202,6 +203,93 @@ img {
         width: 50%;
         background: #eee;
         height: 1px;
+    }
+    .footer_box{
+        padding-top: 45px;
+        .foot_head{
+            font-size:16px;
+            color: #333;
+            padding-bottom: 9px;
+            line-height: 32px;
+            i{
+                font-size: 32px;
+            }
+            span{
+                padding-left: 10px;
+            }
+        }
+        .foot_link{
+            display: block;
+            line-height: 25px;
+            font-size: 12px;
+            color: #666;
+            text-indent: 42px;
+        }
+        .foot_shop{
+            position: relative;
+            border: 1px solid #eee;
+            margin: 10px 20px;
+            @media (min-width: 992px) and (max-width: 1199px){
+                margin: 10px 0;
+            }
+            @media (max-width: 991px){
+                margin: 40px 0 0;
+            }
+            .shop_head{
+                position: absolute;
+                top: -12px;
+                left: 50%;
+                margin-left: -60px;
+                text-align: center;
+                min-width: 120px;
+                background: #fff;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .shop_box{
+                padding-bottom: 15px;
+                li{
+                    position: relative;
+                    text-align: center;
+                    img{
+                        padding-top: 35px ;
+                        width: 24px;
+                        height: 24px;
+                    }
+                    span{
+                        display: block;
+                        font-size: 12px;
+                        line-height: 37px;
+
+                    }
+                    .line{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin-top: 42px;
+                        width: 1px;
+                        height: 40px;
+                        background: #eee;
+                    }
+                }
+            }
+        }
+        .shop_phone{
+            width: 100%;
+            min-height: 150px;
+            text-align: center;
+            .phone_tit{
+                font-size: 14px;
+                color: #333;
+                line-height: 85px;
+            }
+            .phone_num{
+                color: @l-red;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 78px;
+            }
+        }
     }
     .footer_copy{
         background: #fff;
@@ -215,6 +303,13 @@ img {
             padding: 0 25px;
             @media (min-width: 992px) and (max-width: 1199px){
                 padding: 0 20px;
+            }
+        }
+        .link{
+            float: right;
+            i{
+                padding-left: 10px;
+                font-size: 48px;
             }
         }
     }
