@@ -296,6 +296,7 @@
     <!-- 表单验证插件用法 END -->
 
     <!-- iconfont -->
+    <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
     <!-- iconfont END -->
 

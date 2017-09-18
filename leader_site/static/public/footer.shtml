@@ -17,6 +17,9 @@
                 <a class="foot_link">关于统帅</a>
                 <a class="foot_link">新闻资讯</a>
                 <a class="foot_link">联系我们</a>
+                <a class="foot_link">联系我们</a>
+                <a class="foot_link">联系我们</a>
+                <a class="foot_link">联系我们</a>
             </div>
             <div class="o_u o_df_1-6 o_md_1-4">
                 <div class="foot_head"><i class="iconfont icon-problem-solid"></i><span>了解统帅</span></div>
@@ -27,12 +30,10 @@
             </div>
             <div class="o_u o_df_1-6 o_md_1-4">
                 <div class="foot_head"><i class="iconfont icon-problem-solid"></i><span>了解统帅</span></div>
-                <div class="foot_link">悠生活</div>
-                <div class="foot_link">关于统帅</div>
-                <div class="foot_link">新闻资讯</div>
-                <div class="foot_link">联系我们</div>
-                <div class="foot_link">联系我们</div>
-                <div class="foot_link">联系我们</div>
+                <a class="foot_link">悠生活</a>
+                <a class="foot_link">关于统帅</a>
+                <a class="foot_link">新闻资讯</a>
+                <a class="foot_link">联系我们</a>
             </div>
             <div class="o_u o_df_2-6  o_md_2-2">
                 <div class="o_u o_df_2-2 o_md_8-12 foot_shop">

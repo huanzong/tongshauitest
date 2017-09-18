@@ -175,12 +175,6 @@
                 </li>
             
                 <li>
-                <i class="icon iconfont icon-price-tag-solid"></i>
-                    <div class="name">price-tag-solid</div>
-                    <div class="fontclass">.icon-price-tag-solid</div>
-                </li>
-            
-                <li>
                 <i class="icon iconfont icon-protect-solid"></i>
                     <div class="name">protect-solid</div>
                     <div class="fontclass">.icon-protect-solid</div>
@@ -262,6 +256,18 @@
                 <i class="icon iconfont icon-bg-solid"></i>
                     <div class="name">bg-solid</div>
                     <div class="fontclass">.icon-bg-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-menu1"></i>
+                    <div class="name">menu2</div>
+                    <div class="fontclass">.icon-menu1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-price-tag-solid1"></i>
+                    <div class="name">price-tag-solid</div>
+                    <div class="fontclass">.icon-price-tag-solid1</div>
                 </li>
             
         </ul>

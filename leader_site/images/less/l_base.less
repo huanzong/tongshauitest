@@ -233,7 +233,7 @@ img {
                 margin: 10px 0;
             }
             @media (max-width: 991px){
-                margin: 40px 0 0;
+                margin: 40px 0 45px;
             }
             .shop_head{
                 position: absolute;
@@ -278,16 +278,31 @@ img {
             width: 100%;
             min-height: 150px;
             text-align: center;
+            @media (max-width: 991px){
+                padding-top: 65px;
+            }
             .phone_tit{
                 font-size: 14px;
                 color: #333;
                 line-height: 85px;
+                @media (max-width: 991px){
+                    display: block;
+                    line-height: 26px;
+                    text-align: left;
+                    text-indent: 30px;
+                }
             }
             .phone_num{
                 color: @l-red;
                 font-size: 24px;
                 font-weight: bold;
                 line-height: 78px;
+                @media (max-width: 991px){
+                    display: block;
+                    line-height: 35px;
+                    text-align: left;
+                    text-indent: 30px;
+                }
             }
         }
     }
