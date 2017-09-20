@@ -70,6 +70,16 @@
         </textarea>
     </div>
     <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-line2">品牌按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-line2">品牌按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-line2">品牌按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-line2">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-line2">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-line2">品牌按钮</a>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
         <a href="javascript:;" class="l-btn-sm l-btn-line1 l-btn-disable">次级按钮</a>
         <a href="javascript:;" class="l-btn-normal l-btn-line1 l-btn-disable">次级按钮</a>
         <a href="javascript:;" class="l-btn-lg l-btn-line1 l-btn-disable">次级按钮</a>
