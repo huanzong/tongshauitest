@@ -54,7 +54,7 @@
 				            	<input class="js_checkbox" type="checkbox" data-notnull="true" value="隐藏相同项">
 				            </span>
 				            <span class="compare_clear">
-				            	<i class="iconfont icon-lock-solid"></i>
+				            	<i class="iconfont icon-delete-solid"></i>
 				            	清空所有产品
 				            </span>
 	    				</div>

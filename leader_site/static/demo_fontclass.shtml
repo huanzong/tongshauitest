@@ -103,6 +103,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-d-solid"></i>
+                    <div class="name">3d-solid</div>
+                    <div class="fontclass">.icon-d-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-arrow-sanjiao-right-"></i>
                     <div class="name">arrow-sanjiao-right-</div>
                     <div class="fontclass">.icon-arrow-sanjiao-right-</div>
@@ -127,6 +133,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-delete-solid"></i>
+                    <div class="name">delete-solid</div>
+                    <div class="fontclass">.icon-delete-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-eye-open-solid"></i>
                     <div class="name">eye-open-solid</div>
                     <div class="fontclass">.icon-eye-open-solid</div>
@@ -136,6 +148,12 @@
                 <i class="icon iconfont icon-eye-close-solid"></i>
                     <div class="name">eye-close-solid</div>
                     <div class="fontclass">.icon-eye-close-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-heart-solid"></i>
+                    <div class="name">heart-solid</div>
+                    <div class="fontclass">.icon-heart-solid</div>
                 </li>
             
                 <li>
@@ -250,6 +268,12 @@
                 <i class="icon iconfont icon-success-solid"></i>
                     <div class="name">success-solid</div>
                     <div class="fontclass">.icon-success-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-servicefile-solid"></i>
+                    <div class="name">servicefile-solid</div>
+                    <div class="fontclass">.icon-servicefile-solid</div>
                 </li>
             
                 <li>
