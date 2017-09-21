@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-增票资质</title>
+
+    <base href='../'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/member_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+                <div class="member-security-width js-securityheight">
+                    <div class="member-security-tit"><p>增票资质</p></div>
+                    <!-- 内容区域 START-->
+                    <div class="member-security-contbox">
+                        <div class="member-security-table member-ticket-pad">
+                            <!-- 增票资质 START-->
+                            <div class="member-security-ticketinfobox o_g">
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-security-ticketinfo">
+                                    <ul class="member-ticketinfo-xsmartop">
+                                        <li>
+                                            <div class="member-security-ticketinfotit">公司名称：</div>
+                                            <div class="member-security-ticketinfotext">海尔集团电子商务有限公司</div>
+                                        </li>
+                                        <li>
+                                            <div class="member-security-ticketinfotit">注册地址：</div>
+                                            <div class="member-security-ticketinfotext">青岛市崂山区海尔工业园内</div>
+                                        </li>
+                                        <li>
+                                            <div class="member-security-ticketinfotit">纳税人识别号：</div>
+                                            <div class="member-security-ticketinfotext">370212018016835</div>
+                                        </li>
+                                        <li>
+                                            <div class="member-security-ticketinfotit">状态：</div>
+                                            <div class="member-security-ticketinfotext member-textcolor02">待审核</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-security-ticketinfo">
+                                    <ul class="member-ticketinfo-xsmarbottom">
+                                        <li>
+                                            <div class="member-security-ticketinfotit">注册电话：</div>
+                                            <div class="member-security-ticketinfotext">4006-999-999</div>
+                                        </li>
+                                        <li>
+                                            <div class="member-security-ticketinfotit">开户银行：</div>
+                                            <div class="member-security-ticketinfotext">中国银行</div>
+                                        </li>
+                                        <li>
+                                            <div class="member-security-ticketinfotit">银行账户：</div>
+                                            <div class="member-security-ticketinfotext">621661280000666666</div>
+                                        </li>
+                                        <li>
+                                            <div class="member-security-ticketinfotit">备注：</div>
+                                            <div class="member-security-ticketinfotext"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-security-ticketcuebox">
+                                <div class="member-security-ticketcuetit">温馨提示：</div>
+                                <div class="member-security-ticketcuetext"><i>1. </i>首次开具增值税专用发票的客户需在填写申请后，提供加盖公章的营业执照副本、税务登记证副本、一般纳税人资格证书、银行开户许可证复印件，扫描并发送邮件至 <span>fapiao@ehaier.com</span>，并注明您的商城用户名及订单号</div>
+                                <div class="member-security-ticketcuetext"><i>2. </i>有效增值税专用发票开票资质一个账号仅为一个</div>
+                                <div class="member-security-ticketcuetext"><i>3. </i>如您要修改原已审核通过的增值税专用发票信息，则需要重新递交材料审核</div>
+                                <a href="javascript:;" class="member-security-ticketmore" >了解细则<i class="iconfont icon-arrow-line-right"></i></a>
+                            </div>
+                            <!-- 增票资质 End-->
+                        </div>
+                    </div>
+                    <!-- 内容区域 End-->
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/footer.shtml"-->
+    </div>
+</div>
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/member.js"></script>
+</body>
+</html>
