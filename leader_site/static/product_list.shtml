@@ -233,7 +233,9 @@
 				<div class="o_u o_df_10-12">
 					<div class="prolist-con">
 						<div class="o_u o_df_1-4">
-							<div class="prolist-box"></div>
+							<div class="prolist-box">
+								<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							</div>
 						</div>
 						<div class="o_u o_df_1-4">
 							<div class="prolist-box"></div>
