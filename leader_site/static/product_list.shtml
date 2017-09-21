@@ -102,7 +102,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="list-type">
+						<div class="list-type o_md-hide o_sm-hide o_xs-hide">
 							<a class="nav-link active">全部</a>
 							<a class="nav-link">冰箱</a>
 							<a class="nav-link">电视</a>
@@ -112,7 +112,12 @@
 							<span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
 						</a>
 					</div>
-					<div class=""></div>
+					<div class="list-categray o_df-hide o_md-show o_sm-show o_xs-show">
+						<a class="active">全部</a>
+						<a>冰箱</a>
+						<a>电视</a>
+						<a>洗衣机</a>
+					</div>
 					<!-- sku -->
 					<div class="list-filter">
 						<div class="filter-line">
@@ -187,6 +192,66 @@
 				<div class="o_u o_df_1-12"></div>
 			</div>
 			<!-- 导航 列表页 END -->
+
+			<!-- 产品列表-头部 -->
+			<div class="o_g prduct-title">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12">
+					<div class="prolist-top">
+						<a class="font">上市时间<i class="iconfont icon-arrow-refresh-up"></i></a>
+						<span class="line"></span>
+						<a class="font">人气<i class="iconfont icon-arrow-refresh-down"></i></a>
+						<span class="line"></span>
+						<a class="font">价格</a>
+						<span class="info">
+							共<span class="red">24</span>款冰箱产品
+						</span>
+						<div class="pro-group">
+							<div class="group-style">
+								<span>
+					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠">
+					            </span>
+							</div>
+							<div class="group-style">
+								<span class="yellow">
+					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="唤醒初夏">
+					            </span>
+					            <span class="group-info">套装满额送好礼</span>
+					            <span class="group-info"> | </span>
+					            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="o_u o_df_1-12"></div>
+			</div>
+			<!-- 产品列表-头部 END -->
+			<!-- 产品列表 -->
+			<div class="o_g">
+				<div class="product-list">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12">
+					<div class="prolist-con o_g">
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!-- 产品列表 END -->
 			
 	    	<!--#include virtual="public/footer.shtml"-->
 

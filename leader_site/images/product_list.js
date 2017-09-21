@@ -50,5 +50,8 @@ $(function() {
     	$('.js_listNavShowMore').attr('data-flag',Math.abs(parseInt(flag)-1));
     }); 
 
+    //checkbox初始化
+     $(".js_proGroup,.js_radio").jq_qvote();
+
 
 });

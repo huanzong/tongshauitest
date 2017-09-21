@@ -37,6 +37,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-arrow-refresh-down"></i>
+                    <div class="name">arrow-refresh-down</div>
+                    <div class="fontclass">.icon-arrow-refresh-down</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-close"></i>
                     <div class="name">close</div>
                     <div class="fontclass">.icon-close</div>
@@ -46,6 +52,12 @@
                 <i class="icon iconfont icon-check-mark"></i>
                     <div class="name">check-mark</div>
                     <div class="fontclass">.icon-check-mark</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-arrow-refresh-up"></i>
+                    <div class="name">arrow-refresh-up</div>
+                    <div class="fontclass">.icon-arrow-refresh-up</div>
                 </li>
             
                 <li>
@@ -292,6 +304,12 @@
                 <i class="icon iconfont icon-price-tag-solid1"></i>
                     <div class="name">price-tag-solid</div>
                     <div class="fontclass">.icon-price-tag-solid1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-plus-solid"></i>
+                    <div class="name">plus-solid</div>
+                    <div class="fontclass">.icon-plus-solid</div>
                 </li>
             
         </ul>

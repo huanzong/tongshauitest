@@ -163,6 +163,100 @@
 		font-size: 14px;
 	}
 }
+.list-categray{
+	padding: 14px 0;
+	border-top: 1px solid #eee;
+	width: 100%;
+	a{
+		font-size: 14px;
+		line-height: 30px;
+		margin-right: 20px;
+		color: #333;
+		&.active{
+			color: @l-red;
+		}
+	}
+}
+
+//列表-头
+.prduct-title{
+	width: 100%;
+	background: #f8f8f8;
+	.prolist-top{
+		border-bottom: 1px solid #ddd;
+		.font{
+			font-size: 12px;
+			color: #333;
+			line-height: 60px;
+			i{
+				padding-left: 5px;
+				font-size: 14px;
+			}
+		}
+		.line{
+			display: inline-block;
+			width: 1px;
+			height: 16px;
+			background: #ddd;
+			margin: 22px 20px;
+		}
+		.info{
+			padding-left: 30px;
+			font-size: 12px;
+			color: #999;
+			line-height: 60px;
+			.red{
+				color: @l-red;
+			}
+		}
+		.pro-group{
+			float: right;
+			font-size: 12px;
+			.group-style{
+				display: inline-block;
+				margin-top: 14px;
+				background: #fff;
+				border: 1px solid #eee;
+				border-radius: 5px;
+				padding: 5px 10px 5px 5px;
+				.group-info{
+					line-height: 20px;
+					color: #999;
+				}
+				a{
+					line-height: 20px;
+					i,span{
+						display: inline-block;
+						line-height: 20px;
+						font-size: 12px;
+					}
+				}
+				.yellow{
+					color: @l-orange;
+				}
+			}
+		}
+	}
+}
+
+//产品列表
+.product-list{
+	// position: relative;
+	// right: -15px;
+	// left: 0;
+	background: #f8f8f8;
+	.prolist-con{
+		position: relative;
+		left: -15px;
+		right: -15px;
+		padding-top: 45px;
+		.prolist-box{
+			background: #fff;
+			height: 100px;
+			margin: 0 15px 30px;
+		}
+	}
+}
 
 //弹层-筛选项
 .list-layer{
@@ -244,4 +338,4 @@
 			}
 		}
 	}
-}
+}	
