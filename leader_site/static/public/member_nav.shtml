@@ -1,0 +1,99 @@
+
+<!-- 左侧一级导航 START-->
+<div class="o_u o_df_1-6 o_lg_1-12 o_md_1-12 o_sm_1-6 o_xs_12-12 member-nav js-nav">
+    <!-- 个人中心 START-->
+    <div class="member-personal js-personal">
+        <div class="member-personal-logobox"><img src="../images/member_logo.png" alt=""/></div>
+        <div class="member-personal-xstit">个人中心</div>
+        <div class="member-personal-xsright">
+            <!-- 个人信息 START-->
+            <div class="member-personal-info">
+                <div class="member-personal-info-hd">
+                    <div class="member-personal-info-hd-img"><img src="../images/member_navhd_img.jpg" alt=""/></div>
+                    <i></i>
+                </div>
+                <div class="member-personal-info-name">15024865424@sina.com</div>
+                <div class="member-personal-info-tag">普通会员</div>
+            </div>
+            <!-- 个人信息  END-->
+            <!-- 功能 START-->
+            <ul class="member-personal-functionbox">
+                <li>
+                    <i class="iconfont icon-protect-solid member-personal-functionbox-ico">
+                        <div class="iconfont icon-bg-solid member-personal-functionbox-ico-new"></div>
+                        <!--有新信息就加new-->
+                    </i>
+                    <div class="member-personal-functionbox-text">账号安全</div>
+                    <div class="member-personal-functionbox-rightlevel fine">中等</div>
+                    <!--危险用 peril, 普通用 plain, 良好用fine, 优秀用excellent-->
+                </li>
+                <li class=" xs-show"><!-- xs尺寸下展示加 xs-show -->
+                    <i class="iconfont icon-shoppingcart member-personal-functionbox-ico ">
+                        <div class="iconfont icon-bg-solid member-personal-functionbox-ico-new new"></div>
+                    </i>
+                    <div class="member-personal-functionbox-text">购物车</div>
+                    <div class="member-personal-functionbox-rightnumber"><span>9</span></div>
+                </li>
+                <li>
+                    <i class="iconfont icon-price-tag-solid1 member-personal-functionbox-ico">
+                        <div class="iconfont icon-bg-solid member-personal-functionbox-ico-new new"></div>
+                    </i>
+                    <div class="member-personal-functionbox-text">优惠券</div>
+                    <div class="member-personal-functionbox-rightnumber"><span>9</span></div>
+                </li>
+            </ul>
+            <!-- 功能  END-->
+        </div>
+
+    </div>
+    <!-- 个人中心  END-->
+    <!-- 子菜单 START-->
+    <div class="member-submenu js-submenu">
+        <div class="member-menucont js-submenucount"><!-- 子菜单 START-->
+
+            <div class="member-menu-sublist">
+                <div class="member-menu-sublist-tit">个人信息</div>
+                <ul class="member-menu-sublist-ul">
+                    <li><a>个人中心</a></li>
+                    <li><a>我的优惠券</a></li>
+                    <li><a>我的礼品卡</a></li>
+                    <li><a>我的消息</a><i class="member-menu-sublist-new"><span>9</span></i></li>
+                </ul>
+            </div>
+
+            <div class="member-menu-sublist">
+                <div class="member-menu-sublist-tit">订单与产品</div>
+                <ul class="member-menu-sublist-ul">
+                    <li><a>我的订单</a></li>
+                    <li><a>收藏与订阅</a></li>
+                    <li><a>我的产品</a></li>
+                    <li><a>售后服务</a></li>
+                    <li><a>我的晒单</a></li>
+                </ul>
+            </div>
+
+            <div class="member-menu-sublist">
+                <div class="member-menu-sublist-tit">账户管理</div>
+                <ul class="member-menu-sublist-ul">
+                    <li><a>安全设置</a></li>
+                    <li><a>地址管理</a></li>
+                    <li><a>个人信息</a></li>
+                    <li><a>增票资质</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="member-menubtnbox js-submenubtn">
+            <div class="member-menubtnarea">
+                <i class="iconfont icon-menu1 member-openbtn js-openbtn"></i>
+                <i class="iconfont icon-menu member-xsopenbtn js-xsopenbtn"></i>
+                <i class="iconfont icon-close member-closebtn js-closebtn"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 子菜单  END-->
+</div>
+<div class="member-menushade js-menushade"></div>
+<!-- 左侧一级导航  END-->
