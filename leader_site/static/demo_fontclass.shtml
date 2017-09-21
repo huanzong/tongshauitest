@@ -37,6 +37,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-arrow-refresh-down"></i>
+                    <div class="name">arrow-refresh-down</div>
+                    <div class="fontclass">.icon-arrow-refresh-down</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-close"></i>
                     <div class="name">close</div>
                     <div class="fontclass">.icon-close</div>
@@ -46,6 +52,12 @@
                 <i class="icon iconfont icon-check-mark"></i>
                     <div class="name">check-mark</div>
                     <div class="fontclass">.icon-check-mark</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-arrow-refresh-up"></i>
+                    <div class="name">arrow-refresh-up</div>
+                    <div class="fontclass">.icon-arrow-refresh-up</div>
                 </li>
             
                 <li>
@@ -103,6 +115,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-d-solid"></i>
+                    <div class="name">3d-solid</div>
+                    <div class="fontclass">.icon-d-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-arrow-sanjiao-right-"></i>
                     <div class="name">arrow-sanjiao-right-</div>
                     <div class="fontclass">.icon-arrow-sanjiao-right-</div>
@@ -127,6 +145,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-delete-solid"></i>
+                    <div class="name">delete-solid</div>
+                    <div class="fontclass">.icon-delete-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-eye-open-solid"></i>
                     <div class="name">eye-open-solid</div>
                     <div class="fontclass">.icon-eye-open-solid</div>
@@ -136,6 +160,12 @@
                 <i class="icon iconfont icon-eye-close-solid"></i>
                     <div class="name">eye-close-solid</div>
                     <div class="fontclass">.icon-eye-close-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-heart-solid"></i>
+                    <div class="name">heart-solid</div>
+                    <div class="fontclass">.icon-heart-solid</div>
                 </li>
             
                 <li>
@@ -253,6 +283,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-servicefile-solid"></i>
+                    <div class="name">servicefile-solid</div>
+                    <div class="fontclass">.icon-servicefile-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-bg-solid"></i>
                     <div class="name">bg-solid</div>
                     <div class="fontclass">.icon-bg-solid</div>
@@ -268,6 +304,12 @@
                 <i class="icon iconfont icon-price-tag-solid1"></i>
                     <div class="name">price-tag-solid</div>
                     <div class="fontclass">.icon-price-tag-solid1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-plus-solid"></i>
+                    <div class="name">plus-solid</div>
+                    <div class="fontclass">.icon-plus-solid</div>
                 </li>
             
         </ul>

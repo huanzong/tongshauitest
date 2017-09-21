@@ -26,6 +26,7 @@ a {
     color: #e60012;
     &:hover{
         text-decoration: none;
+        color: #b43d07;
     }
 }
 
@@ -211,12 +212,29 @@ img {
             color: #333;
             padding-bottom: 9px;
             line-height: 32px;
+            @media (max-width: 700px){
+                border-bottom: 1px solid #eee;
+                line-height: 62px;
+                padding-bottom: 0;
+            }
             i{
                 font-size: 32px;
             }
             span{
                 padding-left: 10px;
             }
+            a{
+                float: right;
+                font-size: 18px;
+                color: #333;
+            }
+        }
+        .foot_linkbox{
+            background: #fff;
+        }
+        .link_border{
+            position: relative;
+            top: -10px;
         }
         .foot_link{
             display: block;
@@ -232,8 +250,11 @@ img {
             @media (min-width: 992px) and (max-width: 1199px){
                 margin: 10px 0;
             }
-            @media (max-width: 991px){
+            @media (min-width: 701px) and (max-width: 991px){
                 margin: 40px 0 45px;
+            }
+            @media (max-width: 700px){
+                margin: 40px 0 0;
             }
             .shop_head{
                 position: absolute;
@@ -278,14 +299,17 @@ img {
             width: 100%;
             min-height: 150px;
             text-align: center;
-            @media (max-width: 991px){
+            @media (min-width: 701px) and (max-width: 991px){
                 padding-top: 65px;
+            }
+            @media (max-width: 701px) {
+                min-height: 90px;
             }
             .phone_tit{
                 font-size: 14px;
                 color: #333;
                 line-height: 85px;
-                @media (max-width: 991px){
+                @media (min-width: 701px) and (max-width: 991px){
                     display: block;
                     line-height: 26px;
                     text-align: left;
@@ -297,7 +321,7 @@ img {
                 font-size: 24px;
                 font-weight: bold;
                 line-height: 78px;
-                @media (max-width: 991px){
+                @media (min-width: 701px) and (max-width: 991px){
                     display: block;
                     line-height: 35px;
                     text-align: left;
@@ -309,7 +333,7 @@ img {
     .footer_copy{
         background: #fff;
         width: 100%;
-        height: 80px;
+        // min-height 80px;
         line-height: 80px;
         color: #999;
         font-size: 12px;
@@ -317,14 +341,29 @@ img {
         .copy_service{
             padding: 0 25px;
             @media (min-width: 992px) and (max-width: 1199px){
-                padding: 0 20px;
+                padding: 0 15px;
             }
         }
         .link{
-            float: right;
+            display: block;
+            @media (min-width: 992px){
+                float: right;
+            }
+            @media (max-width: 991px){
+                text-align: center;
+                padding-top: 30px;
+                line-height: 65px;
+            }
             i{
                 padding-left: 10px;
                 font-size: 48px;
+            }
+        }
+        span{
+            @media (max-width: 991px){
+                display: block;
+                text-align: center;
+                line-height: 30px;
             }
         }
     }

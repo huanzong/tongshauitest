@@ -35,8 +35,8 @@ $(function() {
         },1000);
         var showTime = 200*($ele.find('span').size()+1);
         setTimeout(function(){
-            $ele.siblings().fadeIn(1000);
-            $ele.siblings().css('z-index','1');
+            $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
+            $ele.siblings(":not(.js_ignorAnimate)").css('z-index','1');
         },showTime);
         setTimeout(function(){
             
@@ -55,8 +55,22 @@ $(function() {
 
     function init() {
         var screenWidth = document.body.offsetWidth;
-        
+        if(screenWidth <= 700){
+            $('.js_footLink').hide();
+        }else{
+            $('.js_footLink').show();
+            $('.js_footLink').removeClass('link_border');
+        }
     }
+    /**
+     * 尾页 链接
+     */
+    $('.js_footLindBtn').on('click','a',function(){
+        var $ele = $(this).parent().siblings($('.js_footLink'));
+        $ele.toggle();
+        $ele.toggleClass('link_border');
+
+    });
 
     /**
      * 导航逻辑
