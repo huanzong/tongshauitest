@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>产品列表</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="images/product_list.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+	        <div class="o_g js_animateLine">
+	        	<div class="index_animate">
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div> 
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox"></div>
+				</div>
+	        </div>
+	    	<!-- 导航 -->
+	    	<!--#include virtual="public/nav.shtml"-->
+	    	<!-- 导航 End-->
+	    	<!-- 导航 列表页 -->
+			<div class="o_g list-nav">
+				<div class="o_u o_df_2-2">
+					<img src="images/prolist_navbg.JPG" class="o_u o_df_2-2">
+				</div>
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12">
+					<div class="list-kind-box">
+						<div class="list-kind">
+							<div class="list-kind-icon">
+								<img src="images/nav_icon1.png">
+							</div>
+							<div class="list-kind-font">
+								<span class="list-kind-china">冰箱<i class="iconfont icon-arrow-line-down"></i></span>
+								<span class="list-kind-english">HEOGJEOPK</span>
+							</div>
+							<div class="list-kind-line"></div>
+							<ul class="float-list">
+								<div class="triangle"></div>
+								<li>
+									<a>
+										<img src="images/icon_01.png">
+										<span>冰箱</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/icon_02.png">
+										<span>洗衣机</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/icon_03.png">
+										<span>冰柜</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/icon_04.png">
+										<span>空调</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/icon_05.png">
+										<span>热水器</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/icon_06.png">
+										<span>厨电</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/icon_07.png">
+										<span>电视</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="list-type o_md-hide o_sm-hide o_xs-hide">
+							<a class="nav-link active">全部</a>
+							<a class="nav-link">冰箱</a>
+							<a class="nav-link">电视</a>
+							<a class="nav-link">洗衣机</a>
+						</div>
+						<a class="more js_listNavShowMore" data-flag=0>
+							<span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
+						</a>
+					</div>
+					<div class="list-categray o_df-hide o_md-show o_sm-show o_xs-show">
+						<a class="active">全部</a>
+						<a>冰箱</a>
+						<a>电视</a>
+						<a>洗衣机</a>
+					</div>
+					<!-- sku -->
+					<div class="list-filter">
+						<div class="filter-line">
+							<div class="filter-sole mar-right">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<div class="filter-line">
+							<div class="filter-sole mar-left">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<div class="filter-line">
+							<div class="filter-sole mar-right">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<div class="filter-line">
+							<div class="filter-sole mar-left">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<div class="filter-line o_df-hide">
+							<div class="filter-sole mar-right">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<div class="filter-line o_df-hide">
+							<div class="filter-sole mar-left">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<div class="filter-line o_df-hide">
+							<div class="filter-sole mar-right">
+								<span class="sole-title">箱门结构：</span>
+								<span class="sole-type">单门</span>
+								<span class="sole-type">双门</span>
+								<span class="sole-type">三门</span>
+								<span class="sole-type">多门</span>
+							</div>
+						</div>
+						<a class="list-more js_listNavShowMore" data-flag=0>
+							<span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
+						</a>
+					</div>
+					<!-- sku END -->
+				</div>
+				<div class="o_u o_df_1-12"></div>
+			</div>
+			<!-- 导航 列表页 END -->
+
+			<!-- 产品列表-头部 -->
+			<div class="o_g prduct-title">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12">
+					<div class="prolist-top">
+						<a class="font">上市时间<i class="iconfont icon-arrow-refresh-up"></i></a>
+						<span class="line"></span>
+						<a class="font">人气<i class="iconfont icon-arrow-refresh-down"></i></a>
+						<span class="line"></span>
+						<a class="font">价格</a>
+						<span class="info">
+							共<span class="red">24</span>款冰箱产品
+						</span>
+						<div class="pro-group">
+							<div class="group-style">
+								<span>
+					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠">
+					            </span>
+							</div>
+							<div class="group-style">
+								<span class="yellow">
+					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="唤醒初夏">
+					            </span>
+					            <span class="group-info">套装满额送好礼</span>
+					            <span class="group-info"> | </span>
+					            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="o_u o_df_1-12"></div>
+			</div>
+			<!-- 产品列表-头部 END -->
+			<!-- 产品列表 -->
+			<div class="o_g">
+				<div class="product-list">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_10-12">
+					<div class="prolist-con o_g">
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+						<div class="o_u o_df_1-4">
+							<div class="prolist-box"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!-- 产品列表 END -->
+			
+	    	<!--#include virtual="public/footer.shtml"-->
+
+	    	<!-- 弹层-筛选项 -->
+	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
+	    		<div class="o_u o_df_5-12 layer-bg"></div>
+	    		<div class="o_u o_df_7-12 layer-box">
+	    			<div class="layer-tit">
+	    				筛选项
+	    				<a class="iconfont icon-close layer-close js_layerClose"></a>
+	    			</div>
+	    			<ul class="layer-list">
+	    				<li>
+	    					<span class="list-tit">箱门结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">箱门结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">箱门结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">箱门结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">箱门结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    				<li>
+	    					<span class="list-tit">箱门结构：</span>
+	    					<div class="list-line">
+	    						<a class="l-btn-sm list-btn active">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a>
+	    					</div>
+	    				</li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    	<!-- 弹层-筛选项 END -->
+		</div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="images/product_list.js"></script>
+</body>
+</html>
