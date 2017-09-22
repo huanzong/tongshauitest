@@ -111,6 +111,15 @@
                                 </div>
                             </div>
 
+                            <div class="o_g member-address-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">手机</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                    <div class="l-textarea member-address-allinput">
+                                        <textarea name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- 地址管理 End-->
                     </div>

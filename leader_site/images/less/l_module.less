@@ -228,6 +228,27 @@
 	}
 }
 
+// 表单样式：文本域
+
+.l-textarea {
+	position: relative;
+	display: inline-block;
+	color: #ccc;
+	textarea {
+		border: 1px solid #ccc;
+		border-radius: 20px;
+		height: 78px;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 20px;
+		resize: none;
+
+		&.Validform_error {
+			border: 1px solid @l-orange;
+		}
+	}
+}
+
 //单选多选样式
 .c_ipt_cr{height: 20px;line-height:20px;padding-left:30px; background-image: url(l_sprites_bg.png); background-repeat: no-repeat; cursor: pointer;  display: inline-block;vertical-align:middle;}
 .c_ipt_cr_cs{background-position: -1px -50px;}
