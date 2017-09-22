@@ -16,12 +16,13 @@
         <ul>
             <li class="js_navShow"><a>O(∩_∩)O~ 简易导航栏 </a></li>
             <li><a href="ui.shtml#ui_button">button 按钮</a></li>
+            <li><a href="ui.shtml#ui_tag">标签</a></li>
             <li><a href="ui.shtml#form_login">表单样式：登陆/注册/找回密码</a></li>
             <li><a href="ui.shtml#ui_checkbox">多选/单选按钮</a></li>
             <li><a href="ui.shtml#ui_float">浮层样式/角标</a></li>
             <li><a href="ui.shtml#ui_select">下拉菜单</a></li>
-            <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
             <li><a href="ui.shtml#ui_formValid">表单验证插件用法</a></li>
+            <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
         </ul>
     </div>
     <!-- button 按钮 -->
@@ -92,14 +93,79 @@
     </div>
     <!-- button 按钮  End-->
 
+    <!-- 标签 -->
+    <div class="main markdown" id="ui_tag">
+        <h1>标签</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <h3>普通标签:自定义宽度</h3>
+        <div>
+            <span class="l-tag-normal l-tag-blue">普通标签</span>
+            <span class="l-tag-normal l-tag-green">普通标签</span>
+            <span class="l-tag-normal l-tag-yellow">普通标签</span>
+            <span class="l-tag-normal l-tag-orange">普通标签</span>
+            <span class="l-tag-normal l-tag-red">普通标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-normal l-tag-blue">普通标签</span>
+            <span class="l-tag-normal l-tag-green">普通标签</span>
+            <span class="l-tag-normal l-tag-yellow">普通标签</span>
+            <span class="l-tag-normal l-tag-orange">普通标签</span>
+            <span class="l-tag-normal l-tag-red">普通标签</span>
+        </textarea>
+        <h3>自带padding的标签</h3>
+        <div>
+            <span class="l-tag-padding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-red">自带padding的标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-padding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-red">自带padding的标签</span>
+        </textarea>
+        <h3>只有下边角的标签：普通</h3>
+        <div>
+            <span class="l-tag-radius l-tag-blue">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-green">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-yellow">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-orange">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-red">只有下边角的标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-radius l-tag-blue">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-green">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-yellow">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-orange">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-red">只有下边角的标签</span>
+        </textarea>
+        <h3>只有下边角的标签：自带边距</h3>
+        <div>
+            <span class="l-tag-rapadding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-red">自带padding的标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-rapadding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-red">自带padding的标签</span>
+        </textarea>
+    </div>
+    <!-- 标签 END -->
+
     <!-- 表单样式：登陆/注册/找回密码 -->
     <div class="main markdown" id="form_login">
         <h1>表单样式：登陆/注册/找回密码</h1>
     </div>
     <div class="main markdown small-padding">
-        <div class="l-input">
-            <input type="text" name="" ph="初始表单" value="">
-        </div>
         <textarea>
             <div class="l-input">
                 <input type="text" name="" ph="初始表单" value="">

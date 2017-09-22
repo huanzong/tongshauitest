@@ -227,13 +227,15 @@
 			</div>
 			<!-- 产品列表-头部 END -->
 			<!-- 产品列表 -->
-			<div class="o_g">
-				<div class="product-list">
+			<div class="o_g product-list">
+				<!-- <div class=""> -->
 				<div class="o_u o_df_1-12"></div>
 				<div class="o_u o_df_10-12">
-					<div class="prolist-con o_g">
+					<div class="prolist-con">
 						<div class="o_u o_df_1-4">
-							<div class="prolist-box"></div>
+							<div class="prolist-box">
+								<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							</div>
 						</div>
 						<div class="o_u o_df_1-4">
 							<div class="prolist-box"></div>
@@ -249,7 +251,7 @@
 						</div>
 					</div>
 				</div>
-				</div>
+				<!-- </div> -->
 			</div>
 			<!-- 产品列表 END -->
 			
