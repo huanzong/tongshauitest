@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-地址管理</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/member_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+                <div class="member-security-width js-securityheight">
+                    <div class="member-security-tit">
+                        <p>地址管理</p>
+                        <a href="javascript:;" class="l-btn-normal l-btn-red">新增地址</a>
+                    </div>
+                    <!-- 内容区域 START-->
+                    <div class="member-security-contbox">
+                        <!-- 地址管理 START-->
+                        <div class="member-address">
+                            <div class="member-address-title">添加新地址</div>
+                            <div class="o_g member-address-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                    <div class="l-input member-address-allinput">
+                                        <input type="text" name="" ph="请输入联系人的姓名" value="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="o_g member-address-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">手机</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                    <div class="l-input member-address-allinput">
+                                        <input type="text" name="" ph="请输入手机号" value="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="o_g member-address-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">电话</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
+                                        <div class="l-input member-address-inputbox">
+                                            <input type="text" name="" ph="区号" value="">
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
+                                        <div class="l-input member-address-inputbox">
+                                            <input type="text" name="" ph="电话号" value="">
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                        <div class="l-input member-address-inputbox">
+                                            <input type="text" name="" ph="分机号" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="o_g member-address-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">详细地址</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
+                                        <div class="selectbox">
+                                            <div class="member-address-inputbox">
+                                                <select name="" id="js_save"  autotext="省">
+                                                    <option value="0">--山东--</option>
+                                                    <option value="1">北京</option>
+                                                    <option value="2">上海</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
+                                        <div class="selectbox">
+                                            <div class="member-address-inputbox">
+                                                <select name="" id="js_city"  autotext="市">
+                                                    <option value="0">--青岛--</option>
+                                                    <option value="1">北京</option>
+                                                    <option value="2">上海</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                        <div class="selectbox">
+                                            <div class="member-address-inputbox">
+                                            <select name="" id="js_area"  autotext="区">
+                                                <option value="0">--市南--</option>
+                                                <option value="1">市南</option>
+                                                <option value="2">市南</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- 地址管理 End-->
+                    </div>
+                    <!-- 内容区域 End-->
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/footer.shtml"-->
+    </div>
+</div>
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/member.js"></script>
+</body>
+</html>

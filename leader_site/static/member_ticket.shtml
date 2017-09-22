@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>个人中心-增票资质</title>
 
-    <base href='../'>
+    <%=base%>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -29,7 +29,7 @@
                         <div class="member-security-table member-ticket-pad">
                             <!-- 增票资质 START-->
                             <div class="member-security-ticketinfobox o_g">
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-security-ticketinfo">
+                                <div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-security-ticketinfo">
                                     <ul class="member-ticketinfo-xsmartop">
                                         <li>
                                             <div class="member-security-ticketinfotit">公司名称：</div>
@@ -49,7 +49,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-security-ticketinfo">
+                                <div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-security-ticketinfo">
                                     <ul class="member-ticketinfo-xsmarbottom">
                                         <li>
                                             <div class="member-security-ticketinfotit">注册电话：</div>

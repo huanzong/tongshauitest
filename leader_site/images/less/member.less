@@ -806,6 +806,37 @@
 					font-size: 16px;
 				}
 			}
+
+			a{
+				float: right;
+				margin-right: 45px;
+				width: 120px;
+				text-align: center;
+				font-size: 14px;
+				margin-top: 20px;
+				padding: 0;
+
+				@media (min-width:992px) and  (max-width:1199px){/* lg*/}
+				@media (min-width:701px) and  (max-width:991px){/* md*/
+					margin-right: 30px;
+				}
+				@media (min-width:576px) and  (max-width:700px){/* sm*/
+					margin-top: 24px;
+					width: 100px;
+					height: 32px;
+					line-height: 32px;
+					font-size: 12px;
+					margin-right: 30px;
+				}
+				@media (max-width:575px){/* xs*/
+					margin-top: 9px;
+					width: 80px;
+					height: 32px;
+					line-height: 32px;
+					font-size: 12px;
+					margin-right: 30px;
+				}
+			}
 		}
 
 		.member-security-contbox{
@@ -1627,6 +1658,9 @@
 						display: inline-block;
 						width: 100%;
 
+						@media (min-width:992px) and  (max-width:1199px){/* lg*/
+							margin: 0;
+						}
 						@media (min-width:701px) and  (max-width:991px){/* md*/
 							margin: 0;
 						}
@@ -1656,7 +1690,17 @@
 								color: #999;
 								word-wrap:break-word;
 
+								@media (min-width:992px) and  (max-width:1199px){/* lg*/
+									width:20%;
+								}
+								@media (min-width:701px) and  (max-width:991px){/* md*/
+									width:22%;
+								}
+								@media (min-width:576px) and  (max-width:700px){/* sm*/
+									width:100%;
+								}
 								@media (max-width:575px){/* xs*/
+									width:100%;
 									font-size: 12px;
 									line-height: 14px;
 								}
@@ -1671,6 +1715,15 @@
 								color: #333;
 								word-wrap:break-word;
 
+								@media (min-width:992px) and  (max-width:1199px){/* lg*/
+									width:80%;
+								}
+								@media (min-width:701px) and  (max-width:991px){/* md*/
+									width:78%;
+								}
+								@media (min-width:576px) and  (max-width:700px){/* sm*/
+									width:100%;
+								}
 								@media (max-width:575px){/* xs*/
 									font-size: 12px;
 									line-height: 14px;
@@ -1694,6 +1747,9 @@
 
 					.member-ticketinfo-xsmartop{
 
+						@media (min-width:992px) and  (max-width:1199px){/* lg*/
+							margin-top: 16px;
+						}
 						@media (min-width:701px) and  (max-width:991px){/* md*/
 							margin-top: 16px;
 						}
@@ -1707,6 +1763,9 @@
 
 					.member-ticketinfo-xsmarbottom{
 
+						@media (min-width:992px) and  (max-width:1199px){/* lg*/
+							margin-bottom: 15px;
+						}
 						@media (min-width:701px) and  (max-width:991px){/* md*/
 							margin-bottom: 15px;
 						}
@@ -1775,6 +1834,70 @@
 						margin-left: 5px;
 						vertical-align: -1px;
 					}
+				}
+			}
+
+
+			/*个人中心-地址管理*/
+			.member-address{
+				width: 100%;
+				margin-top: 44px;
+				display: inline-block;
+
+				.member-address-title{
+					width: 100%;
+					text-align: center;
+					font-size: 24px;
+					color: #333;
+					margin-bottom: 29px;
+				}
+
+				.member-address-list{
+					width: 100%;
+					display: inline-block;
+					margin-bottom:20px;
+				}
+
+				.member-address-listname{
+					height: 40px;
+					display: inline-block;
+					line-height: 40px;
+					text-align: right;
+					padding-right: 15px;
+					font-size: 14px;
+					color: #333;
+				}
+
+				.member-address-listiptbox{
+					height: 40px;
+					display: inline-block;
+					padding:0 15px;
+					box-sizing: border-box;
+
+					.member-address-allinput{
+						width: 100%;
+
+						input{
+							width: 100%;
+						}
+					}
+
+					.member-address-input3-1{
+						padding-right: 10px;
+					}
+
+					.member-address-inputbox{
+						width: 100%;
+
+						input{
+							width: 100%;
+						}
+
+						select{
+							width: 100%;
+						}
+					}
+
 				}
 			}
 
