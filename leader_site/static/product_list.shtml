@@ -235,6 +235,23 @@
 						<div class="o_u o_df_1-4">
 							<div class="prolist-box">
 								<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+								<div class="pro-opporate">
+									<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+										<span class="pro-read-font">订阅</span>
+									</a>
+									<a class="pro-read l-fr">
+										<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+									</a>
+								</div>
+								<a href="javascript:;" class="pro-info-box">
+									<img src="images/compare_goods.PNG">
+								</a>
 							</div>
 						</div>
 						<div class="o_u o_df_1-4">
