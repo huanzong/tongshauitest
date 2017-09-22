@@ -122,6 +122,42 @@ $(function() {
             });
         }
     });
+    $('textarea').each(function(){
+        var $this =$(this);
+        var text = $this.attr("ph");
+        if (text) {
+            if ($this.val() === "") {
+                $this.val(text);
+                $this.css('color','#ccc');
+            }
+        }
+        if($this.attr("type") == "text"){
+            if (!$this.attr('ph')){
+                return;
+            }
+            $this.blur(function () {
+                if($this.val() === ''){
+                    $this.val($this.attr("ph"));
+                    $this.css('color','#ccc');
+                }else{
+                    $this.css('color','#666');
+                }
+                if(!$this.attr('phtype')){
+                    $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                    // $this.css('border','1px solid #ccc');
+                }
+                
+            }).focus(function () {
+                if($this.val() == $this.attr("ph")){
+                    $this.val("");
+                    $this.css('color','#666');
+                }
+                if(!$this.attr('phtype')){
+                   $this.css('border','1px solid #e60012');
+                }
+            });
+        }
+    });
 });
 
 
