@@ -106,6 +106,7 @@ $(function() {
                 }else{
                     $this.css('color','#666');
                 }
+                //表单校验时触发
                 if(!$this.attr('phtype')){
                     $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
                     // $this.css('border','1px solid #ccc');
@@ -116,6 +117,7 @@ $(function() {
                     $this.val("");
                     $this.css('color','#666');
                 }
+                //表单校验时触发
                 if(!$this.attr('phtype')){
                    $this.css('border','1px solid #e60012');
                 }
@@ -131,7 +133,7 @@ $(function() {
                 $this.css('color','#ccc');
             }
         }
-        if($this.attr("type") == "text"){
+        // if($this.attr("type") == "text"){
             if (!$this.attr('ph')){
                 return;
             }
@@ -142,21 +144,24 @@ $(function() {
                 }else{
                     $this.css('color','#666');
                 }
+                //表单校验时触发
                 if(!$this.attr('phtype')){
                     $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
                     // $this.css('border','1px solid #ccc');
                 }
                 
             }).focus(function () {
+                console.log(text);
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
                     $this.css('color','#666');
                 }
+                //表单校验时触发
                 if(!$this.attr('phtype')){
                    $this.css('border','1px solid #e60012');
                 }
             });
-        }
+        // }
     });
 });
 
