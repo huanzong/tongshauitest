@@ -251,7 +251,21 @@
 								</div>
 								<a href="javascript:;" class="pro-info-box">
 									<img src="images/compare_goods.PNG">
+									<div class="pro-info-title">
+										双开门<br>海尔真诚到永远冰箱
+									</div>
+									<div class="pro-info-mark">
+										HJOGJJEJG-797908
+									</div>
+									<div class="pro-info-price">
+										￥19889
+									</div>
 								</a>
+								<div class="pro-activity">
+									<i class="iconfont icon-arrow-line-left l-fl"></i>
+									<span>唤醒初夏</span>
+									<i class="iconfont icon-arrow-line-right l-fr"></i>
+								</div>
 							</div>
 						</div>
 						<div class="o_u o_df_1-4">
