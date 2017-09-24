@@ -113,8 +113,8 @@
 
                             <div class="o_g member-address-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
-                                    <div class="l-textarea member-address-allinput">
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
+                                    <div class="l-textarea member-address-textareabox">
                                         <textarea name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" ></textarea>
                                     </div>
                                 </div>
@@ -122,17 +122,9 @@
 
                             <div class="o_g member-address-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
-                                    <div class="o_u o_df_2-3 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                        <div class="selectbox">
-                                            <div class="member-address-inputbox">
-                                                <select name="" id="js_area"  autotext="区">
-                                                    <option value="0">--市南--</option>
-                                                    <option value="1">市南</option>
-                                                    <option value="2">市南</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                    <div class="o_u o_df_2-3 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-newaddenterbtn">
+                                        <a href="javascript:;" class="l-btn-normal l-btn-red">保存</a>
                                     </div>
                                 </div>
                             </div>
