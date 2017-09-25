@@ -17,6 +17,29 @@
 
 		    <!--#include virtual="public/header.shtml"-->
 
+        	<!-- 首屏动画 -->
+        	<div class="o_g js_animateLine">
+	        	<div class="index_animate">
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox"></div>
+				</div>
+	        </div>
+	        <!-- 首屏动画 End -->
+
 		    <!-- 导航 -->
 		    <!--#include virtual="public/nav.shtml"-->
 		    <!-- 导航 End-->

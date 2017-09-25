@@ -1,15 +1,76 @@
 $(function() {
 
-    init();
+    /**
+     * 首页动画：线变化
+     */
+    function lineAnimate($ele,t){
+
+        $ele.css('z-index','0');
+        $ele.siblings().hide();
+
+        setTimeout(function(){
+            $ele.find('span').eq(0).animate({ 
+                height: "100%"
+            },t);
+        },200);
+        setTimeout(function(){
+            $ele.find('span').eq(1).animate({ 
+                height: "100%"
+            },t);
+        },400);
+        setTimeout(function(){
+            $ele.find('span').eq(2).animate({ 
+                height: "100%"
+            },t);
+        },600);
+        setTimeout(function(){
+            $ele.find('span').eq(3).animate({ 
+                height: "100%"
+            },t);
+        },800);
+        setTimeout(function(){
+            $ele.find('span').eq(4).animate({ 
+                height: "100%"
+            },t);
+        },1000);
+        var showTime = 200*($ele.find('span').size()+1);
+        setTimeout(function(){
+            $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
+            $ele.siblings(":not(.js_ignorAnimate)").css('z-index','1');
+        },showTime);
+        setTimeout(function(){
+            
+        },showTime+1000);
+    }
+
+    lineAnimate($('.js_animateLine'),1000);
+
+    
 
     $(window).resize(function() {
         init();
     });
 
+    init();
+
     function init() {
         var screenWidth = document.body.offsetWidth;
-
+        if(screenWidth <= 700){
+            $('.js_footLink').hide();
+        }else{
+            $('.js_footLink').show();
+            $('.js_footLink').removeClass('link_border');
+        }
     }
+    /**
+     * 尾页 链接
+     */
+    $('.js_footLindBtn').on('click','a',function(){
+        var $ele = $(this).parent().siblings($('.js_footLink'));
+        $ele.toggle();
+        $ele.toggleClass('link_border');
+
+    });
 
     /**
      * 导航逻辑
@@ -22,7 +83,7 @@ $(function() {
         $('.js_column_show').eq(index).show();
     });
     $('.js_column_show').on('mouseleave',function(){
-        // $(this).hide();
+        $(this).hide();
     });
 
     //搜索历史

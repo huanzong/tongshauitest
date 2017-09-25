@@ -32,6 +32,7 @@
 	color: #fff;
 	background: @l-red;
 	&:hover{
+		color: #fff;
 		background: @l-hover;
 	}
 	&.l-btn-disable{
@@ -44,6 +45,7 @@
 	color: #fff;
 	background: @l-orange;
 	&:hover{
+		color: #fff;
 		background: @l-hover;
 	}
 	&.l-btn-disable{
@@ -59,10 +61,71 @@
 		color: #ccc;
 		border: 1px solid #999;
 		cursor: default;
+		&:hover{
+			color: #ccc;
+		}
+	}
+	&:hover{
+		color: @l-red;
+	}
+}
+.l-btn-line2{
+	color: #666;
+	border: 1px solid #ccc;
+	&.l-btn-disable{
+		color: #ccc;
+		border: 1px solid #999;
+		cursor: default;
+		&:hover{
+			color: #ccc;
+		}
+	}
+	&:hover{
+		color: #666;
 	}
 }
 
-
+//标签
+.l-tag-normal{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 24px;
+	border-radius: 6px;
+	color: #fff;
+	text-align: center;
+}
+.l-tag-padding{
+	padding: 0 10px;
+	.l-tag-normal
+}
+.l-tag-radius{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 24px;
+	border-bottom-right-radius:6px;
+	border-bottom-left-radius:6px;
+	color: #fff;
+	text-align: center;
+}
+.l-tag-rapadding{
+	padding: 0 10px;
+	.l-tag-radius
+}
+.l-tag-blue{
+	background: @l-blue;
+}
+.l-tag-green{
+	background: @l-green;
+}
+.l-tag-orange{
+	background: @l-orange;
+}
+.l-tag-yellow{
+	background: @l-yellow;
+}
+.l-tag-red{
+	background: @l-red;
+}
 
 // 表单样式：登录/注册/找回密码
 .l-input{
@@ -176,6 +239,27 @@
 		height: 20px;
 		margin-top: -6px;
 		background: url(l_float_bg.png) no-repeat;
+	}
+}
+
+// 表单样式：文本域
+
+.l-textarea {
+	position: relative;
+	display: inline-block;
+	color: #ccc;
+	textarea {
+		border: 1px solid #ccc;
+		border-radius: 20px;
+		height: 78px;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 20px;
+		resize: none;
+
+		&.Validform_error {
+			border: 1px solid @l-orange;
+		}
 	}
 }
 

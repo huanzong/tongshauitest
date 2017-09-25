@@ -1,0 +1,16 @@
+<div class="o_g login_footer">
+    <div class="o_u o_df_1-12"></div>
+    <div class="o_u o_df_4-12 o_xs_2-2 o_sm_2-2 o_md_2-2">
+		<a class="footer-link">首页</a>
+		<span class="footer-line"></span>
+		<a class="footer-link">帮助中心</a>
+		<span class="footer-line"></span>
+		<a class="footer-link">联系我们</a>
+		<span class="footer-line"></span>
+		<a class="footer-link">法律声明</a>
+    </div>
+    <div class="o_u o_df_6-12 o_xs_2-2 o_sm_2-2 o_md_2-2 footer-info">
+    	<a class="footer-link footer-mar0">Copyright &copy; 2016 Haier Group Leader.<br class="o_df-hide o_xs-show"/> All rights reserved 鲁ICP备09096283</a>
+    </div>
+    <div class="o_u o_df_1-12"></div>
+</div>

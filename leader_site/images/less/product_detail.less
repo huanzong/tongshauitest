@@ -4,6 +4,21 @@
 .border-none{
 	border: none!important;
 }
+.border-right{
+	border-right: 1px solid #eee;
+}
+.bg-eee{
+	background: #eee;
+}
+.bg-f8{
+	background: #f8f8f8;
+}
+.z-index1{
+	z-index: 1;
+}
+.z-index2{
+	z-index: 2;
+}
 .detail-title{
 	width: 100%;
 	height: 120px;
@@ -21,8 +36,165 @@
 	}
 }
 
+//文字卖点
+.detail-fontpoint{
+	border-bottom: 1px solid #eee;
+	background: #fff;
+	.o_df_1-5{
+		// min-width: 140px;
+	}
+	.fontpoint-box{
+		margin: 30px 0;
+		min-width: 140px;
+		border-right: 1px solid #eee;
+		font-size: 0;
+		text-align: center;
+		.fontpoint-bold{
+			font-size: 24px;
+			line-height: 45px;
+			font-weight: bold;
+			color: #333;
+		}
+		.fontpoint-small{
+			font-size: 14px;
+			line-height: 20px;
+			padding-bottom: 5px;
+			color: #666;
+		}
+	}
+}
+.detail-fontpoint-bottom{
+	padding: 16px 0;
+	color: #333;
+	text-align: center;
+	background: #fff;
+	span{
+		padding: 0 14px;
+		line-height: 28px;
+		font-size: 14px;
+	}
+}
+
 //场景展示
 .detail-scene{
+	font-size: 0;
+	img{
+		width: 100%;
+	}
+}
+
+//核心卖点
+.detail-sellpoint{
+	position: relative;
+	left: -24%;
+    width: 148%;
+    padding: 90px 0;
+    // min-height: 900px;
+    // @media (min-width: 992px) and (max-width:1199px) {
+    // 	min-height: 696px;
+    // }
+	img{
+		width: 100%;
+	}
+	.swiper-button-prev{
+		display: none;
+	}
+	.swiper-button-next{
+		right: 0;
+	}
+}
+.sellpoint-bg{
+	background: url(detail_sellpoint_bg.JPG);
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+.sellpoint-describe{
+	text-align: center;
+	.describe1{
+		font-size: 20px;
+		line-height: 38px;
+		color: #333;
+	}
+	.describe2{
+		font-size: 32px;
+		line-height: 38px;
+		color: #e60012;
+	}
+	.describe3{
+		padding: 10px 12% 0;
+		font-size: 14px;
+		line-height: 20px;
+		color: #000;
+	}
+}
+
+//详情展示
+.detail-display{
+	font-size: 0;
+	img{
+		width: 100%;
+	}
+}
+
+//电商拉页
+.detail-foldover{
+	.foldover-img{
+		img{
+			width: 100%;
+		}
+	}
+	// .foldover-fixed{
+	// 	position: fixed;
+	// }
+	.foldover-icon{
+		position: relative;
+		font-size: 12px;
+		.icon-bg-solid{
+			position: relative;
+			font-size: 48px;
+			color: @l-red;
+			i{
+				position: absolute;
+				left: 14px;
+				top: 14px;
+				font-size: 20px;
+				color: #fff;
+			}
+		}
+	}
+	.foldover-con{
+		display: none;
+		position: absolute;
+		left: 25%;
+		bottom: 50%;
+		margin-bottom: 25px;
+		width: 50%;
+		a{
+			// position: relative;
+			// left: 50%;
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			color: #666;
+			background: #fff;
+			&:hover{
+				background: @l-red;
+				color: #fff;
+				border: 1px solid @l-red;
+			}
+		}
+		a.alive{
+			background: @l-red;
+			color: #fff;
+			border: 1px solid @l-red;
+		}
+	}
+}
+
+//轮播
+.detail-scene1{
 	font-size: 12px;
 	.swiper-container{
 		height: 500px;
@@ -32,44 +204,6 @@
 	}
 }
 
-//文字卖点
-.detail-sellpoint{
-	border-bottom: 1px solid #eee;
-	.o_df_1-5{
-		// min-width: 140px;
-	}
-	.sellpoint-box{
-		margin: 30px 0;
-		min-width: 140px;
-		border-right: 1px solid #eee;
-		font-size: 0;
-		text-align: center;
-		.sellpoint-bold{
-			font-size: 24px;
-			line-height: 45px;
-			font-weight: bold;
-			color: #333;
-		}
-		.sellpoint-small{
-			font-size: 14px;
-			line-height: 20px;
-			padding-bottom: 5px;
-			color: #666;
-		}
-	}
-}
-.detail-sellpoint-bottom{
-	padding: 16px 0;
-	color: #333;
-	text-align: center;
-	span{
-		padding: 0 14px;
-		line-height: 28px;
-		font-size: 14px;
-	}
-}
-
-
 //产品口碑
 .detail-praise{
 	position: relative;
@@ -78,9 +212,10 @@
         min-height: 450px;
     }
 	.praise-box{
+		background: #fff;
 		@media (min-width: 992px){
-			position: absolute; 
-			left: -15px; 
+			position: absolute;
+			left: -15px;
 			right: -15px;
 	    }
 		.praise-con{
@@ -97,25 +232,25 @@
 			border-radius: 5px;
 		}
 		.detail-praise-box{
-			margin-bottom: 10px; 
+			margin-bottom: 10px;
 			padding: 20px 20px 0;
 			border-radius: 5px;
 			color: #666;
 			font-size: 16px;
 			line-height: 25px;
-			//4行省略 
+			//4行省略
 			@media (min-width: 992px){
 				min-height: 100px;
 				display: -webkit-box;
-				-webkit-line-clamp: 4; 
-				-webkit-box-orient: vertical; 
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
 				overflow: hidden;
 		    }
 			@media (min-width: 992px) and (max-width: 1199px){
-                margin-bottom: 90px; 
+                margin-bottom: 90px;
             }
             @media (max-width: 991px){
-                margin-bottom: 20px; 
+                margin-bottom: 20px;
             }
 		}
 		.detail-praise-img{
@@ -189,4 +324,176 @@
 			margin-top: 30px;
 		}
 	}
+}
+
+//更多选择
+.detail-more{
+	.swiper-slide{
+		img{
+			width: 100%;
+		}
+	}
+	.swiper-button-prev{
+		// position: relative;
+		// left: -30%;
+	}
+}
+
+// 优惠组合
+.detail-preferential {
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background: #fff;
+
+    .prd-box{
+        text-align: center;
+        padding: 35px 0 65px;
+
+        &.swiper-prd-box {
+            padding: 34px 0;
+        }
+
+        @media (max-width: 575px) {
+            padding: 22px 0;
+        }
+
+        @media (min-width: 576px) and (max-width: 991px){
+            padding: 24px 0;
+        }
+
+
+        &.main-prd{
+            background: #f8f8f8;
+        }
+
+        .prd-name{
+            color: #333333;
+            font-size: 12px;
+            margin-top: 12px;
+
+        @media (max-width: 991px){
+                & {
+                        margin-top: 0;
+                }
+            }
+        }
+
+        .prd-code{
+            color: #999999;
+            font-size: 12px;
+        }
+
+        .prd-prise{
+            color: #e60012;
+            font-size: 12px;
+
+            span {
+                font-size: 14px
+            }
+        }
+
+        .prd-old-prise{
+            font-size: 14px;
+            color: #999999;
+            text-decoration: line-through;
+        }
+    }
+
+    .total-prise {
+        border-top: 1px solid #e2e2e2;
+        margin-top: -2px;
+        padding: 0 20px;
+
+		@media (max-width: 575px){
+			& {
+				text-align: center;
+			}
+
+			.o_df-right {
+				float: none !important;
+			}
+		}
+
+
+        p {
+            font-size: 12px;
+            color: #999999;
+            line-height: 60px;
+			// display: inline-block;
+            height: 60px;
+        }
+
+		@media (max-width: 699px){
+			&.checked-total-prise {
+				padding: 0;
+			}
+
+			p.o_sm_12-12 {
+				text-align: center;
+				border-bottom: 1px solid #e2e2e2;
+			}
+
+			&.checked-total-prise p {
+				padding: 0 20px;
+			}
+		}
+
+
+        span {
+            line-height: 60px;
+            vertical-align: baseline;
+        }
+
+        .prise {
+            color: @l-red;
+            font-size: 24px;
+            vertical-align: baseline;
+            margin-right: 5px;
+        }
+
+        a {
+            font-size: 14px;
+            margin-top: 10px;
+            width: 120px;
+            margin-left: 30px;
+            text-align: center;
+		}
+
+		@media (max-width: 699px){
+			&.checked-total-prise a{
+				margin-right: 20px;
+			}
+        }
+
+        .prd-num {
+            color: @l-red;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 991px){
+        p {
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .swiper-prd-box p {
+            text-align: center;
+        }
+
+        .o_md_7-12,
+        .o_md_5-12 {
+            margin-top: 15px;
+        }
+    }
+
+    .prd-checkbox{
+        margin-top: 12px;
+        display: inline-block;
+
+        span {
+            padding-left: 20px;
+        }
+    }
+
 }
