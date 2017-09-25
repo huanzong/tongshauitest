@@ -1867,6 +1867,17 @@
 					font-size: 14px;
 					color: #333;
 
+					@media (min-width:992px) and  (max-width:1199px){/* lg*/}
+					@media (min-width:701px) and  (max-width:991px){/* md*/}
+					@media (min-width:576px) and  (max-width:700px){/* sm*/
+						text-align: left;
+						height: auto;
+					}
+					@media (max-width:575px){/* xs*/
+						text-align: left;
+						height: auto;
+					}
+
 					span{
 						color: @l-red;
 						vertical-align: -3px;
@@ -1880,6 +1891,19 @@
 					padding:0 15px;
 					box-sizing: border-box;
 
+					@media (min-width:992px) and  (max-width:1199px){/* lg*/}
+					@media (min-width:701px) and  (max-width:991px){/* md*/
+						height: auto;
+					}
+					@media (min-width:576px) and  (max-width:700px){/* sm*/
+						height: auto;
+						padding:0;
+					}
+					@media (max-width:575px){/* xs*/
+						height: auto;
+						padding:0;
+					}
+
 					.member-address-allinput{
 						width: 100%;
 
@@ -1890,6 +1914,34 @@
 
 					.member-address-input3-1{
 						padding-right: 10px;
+
+						@media (min-width:992px) and  (max-width:1199px){/* lg*/}
+						@media (min-width:701px) and  (max-width:991px){/* md*/
+							padding-right: 0px;
+							margin-bottom: 10px;
+						}
+						@media (min-width:576px) and  (max-width:700px){/* sm*/
+							padding-right: 0px;
+							margin-bottom: 10px;
+						}
+						@media (max-width:575px){/* xs*/
+							padding-right: 0px;
+						}
+					}
+
+					.member-address-textarea3-1{
+						padding-right: 10px;
+
+						@media (min-width:992px) and  (max-width:1199px){/* lg*/}
+						@media (min-width:701px) and  (max-width:991px){/* md*/
+							padding-right: 0px;
+						}
+						@media (min-width:576px) and  (max-width:700px){/* sm*/
+							padding-right: 0px;
+						}
+						@media (max-width:575px){/* xs*/
+							padding-right: 0px;
+						}
 					}
 
 					.member-address-inputbox{
@@ -1903,14 +1955,57 @@
 					}
 
 					.member-address-newaddenterbtn{
-						width: 100%;
 						padding-right: 10px;
 						box-sizing: border-box;
 
+						@media (min-width:992px) and  (max-width:1199px){/* lg*/
+							padding-right: 0px;
+						}
+						@media (min-width:701px) and  (max-width:991px){/* md*/
+							padding-right: 0px;
+						}
+						@media (min-width:576px) and  (max-width:700px){/* sm*/
+							padding-right: 0px;
+						}
+						@media (max-width:575px){/* xs*/
+							padding-right: 0px;
+						}
+
+						.member-address-editaddenterbtn{
+							padding-right: 10px;
+
+							@media (min-width:992px) and  (max-width:1199px){/* lg*/
+								padding-right: 10px;
+							}
+							@media (min-width:701px) and  (max-width:991px){/* md*/
+								padding-right: 10px;
+							}
+							@media (min-width:576px) and  (max-width:700px){/* sm*/
+								padding-right: 10px;
+							}
+							@media (max-width:575px){/* xs*/
+								padding-right: 10px;
+							}
+						}
+
 						a{
+							margin-top: 10px;
 							font-size: 14px;
 							text-align: center;
 							width: 100%;
+							padding: 0;
+						}
+					}
+
+					.member-address-addcancelbtn{
+						box-sizing: border-box;
+
+						a{
+							margin-top: 10px;
+							font-size: 14px;
+							text-align: center;
+							width: 100%;
+							padding: 0;
 						}
 					}
 
@@ -1920,6 +2015,15 @@
 					display: inline-block;
 					padding: 0 15px;
 					box-sizing: border-box;
+
+					@media (min-width:992px) and  (max-width:1199px){/* lg*/}
+					@media (min-width:701px) and  (max-width:991px){/* md*/  }
+					@media (min-width:576px) and  (max-width:700px){/* sm*/
+						padding: 0;
+					}
+					@media (max-width:575px){/* xs*/
+						padding: 0;
+					}
 
 					.member-address-textareabox{
 						width: 100%;
