@@ -133,7 +133,7 @@
                             <div class="o_g member-address-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
-                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-address-newaddenterbtn member-address-editaddenterbtn">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-address-editaddenterbtn">
                                         <a href="javascript:;" class="l-btn-normal l-btn-red">保存</a>
                                     </div>
                                     <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-address-addcancelbtn">
@@ -142,6 +142,37 @@
                                 </div>
                             </div>
 
+                        </div>
+                        <div class="member-addressbox-cutrule"></div>
+                        <div class="member-addressbox o_g">
+                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox">
+                                <div class="member-addresslistbox">
+                                    <div class="member-address-name">王柯科</div>
+                                    <div class="member-address-mobnumber">157****3370</div>
+                                    <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
+                                    <div class="member-address-btnbox">
+                                        <i class="iconfont icon-pencil-solid"></i>
+                                        <a href="javascript:;" >修改</a>
+                                        <div class="member-address-line"></div>
+                                        <a href="javascript:;" >删除</a>
+                                    </div>
+                                    <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressrightbox">
+                                <div class="member-addresslistbox">
+                                    <div class="member-address-name">王柯科</div>
+                                    <div class="member-address-mobnumber">157****3370</div>
+                                    <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
+                                    <div class="member-address-btnbox">
+                                        <i class="iconfont icon-pencil-solid"></i>
+                                        <a href="javascript:;" >修改</a>
+                                        <div class="member-address-line"></div>
+                                        <a href="javascript:;" >删除</a>
+                                    </div>
+                                    <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn">设为默认</a>
+                                </div>
+                            </div>
                         </div>
                         <!-- 地址管理 End-->
                     </div>
