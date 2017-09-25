@@ -125,6 +125,7 @@ $(function() {
         },300);
 
     }
+
     if(screenWidth<= 991 && screenWidth>= 576){
         $('.js-submenubtn').toggle( function () {
                 $('.js-submenu').animate({'right':'-280px'},300);
@@ -158,6 +159,16 @@ $(function() {
     $("#js_save").oSelect().init();
     $("#js_city").oSelect().init();
     $("#js_area").oSelect().init();
+    $("#js_persave").oSelect().init();
+    $("#js_percity").oSelect().init();
+    $("#js_perarea").oSelect().init();
+
+    //个人信息
+    $('.js-personalinfotab').click( function () {
+        var tabNmu =$(this).index();
+        $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
+        $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
+    })
 
 });
 
