@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-个人信息</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/member_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+                <div class="member-security-width js-securityheight">
+                    <div class="member-security-tit">
+                        <p>个人信息</p>
+                    </div>
+                    <!-- 内容区域 START-->
+                    <div class="member-security-contbox">
+                        <!-- 个人信息 START-->
+                        <div class="member-personalinfo">
+                            <div class="member-personalinfo-tabbox">
+                                <div class="member-personalinfo-tab cur js-personalinfotab">基本资料</div>
+                                <div class="member-personalinfo-tab js-personalinfotab">个人头像</div>
+                            </div>
+                            <div class="member-personalinfo-contbox">
+                                <div class="member-personalinfo-listbox cur js-personalinfotabcont">
+                                    <div class="member-personalinfo-table">
+
+                                        <div class="o_g member-personalinfo-list">
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>用户名</div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox">
+                                                <div class="l-input member-personalinfo-allinput">
+                                                    <input type="text" name="" ph="TS23948475" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="o_g member-personalinfo-list">
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>生日</div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                    <div class="selectbox">
+                                                        <div class="member-personalinfo-inputbox">
+                                                            <select name="" id="js_persave"  autotext="年">
+                                                                <option value="0">--1900--</option>
+                                                                <option value="1">1901</option>
+                                                                <option value="2">1902</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                    <div class="selectbox">
+                                                        <div class="member-personalinfo-inputbox">
+                                                            <select name="" id="js_percity"  autotext="月">
+                                                                <option value="0">--1--</option>
+                                                                <option value="1">2</option>
+                                                                <option value="2">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                    <div class="selectbox">
+                                                        <div class="member-personalinfo-inputbox">
+                                                            <select name="" id="js_perarea"  autotext="日">
+                                                                <option value="0">--1--</option>
+                                                                <option value="1">2</option>
+                                                                <option value="2">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="o_g member-personalinfo-list">
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">居住地</div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                    <div class="selectbox">
+                                                        <div class="member-personalinfo-inputbox">
+                                                            <select name="" id="js_save"  autotext="省">
+                                                                <option value="0">--山东--</option>
+                                                                <option value="1">北京</option>
+                                                                <option value="2">上海</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                    <div class="selectbox">
+                                                        <div class="member-personalinfo-inputbox">
+                                                            <select name="" id="js_city"  autotext="市">
+                                                                <option value="0">--青岛--</option>
+                                                                <option value="1">北京</option>
+                                                                <option value="2">上海</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                    <div class="selectbox">
+                                                        <div class="member-personalinfo-inputbox">
+                                                            <select name="" id="js_area"  autotext="区">
+                                                                <option value="0">--市南--</option>
+                                                                <option value="1">市南</option>
+                                                                <option value="2">市南</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="o_g member-personalinfo-list">
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"></div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-personalinfo-savebtn">
+                                                    <a href="javascript:;" class="l-btn-normal l-btn-red">保存</a>
+                                                </div>
+                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-personalinfo-cancelbtn">
+                                                    <a href="javascript:;" class="l-btn-normal l-btn-line2">取消</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="member-personalinfo-listbox js-personalinfotabcont">2</div>
+                            </div>
+                        </div>
+                        <!-- 个人信息 End-->
+                    </div>
+                    <!-- 内容区域 End-->
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/footer.shtml"-->
+    </div>
+</div>
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/member.js"></script>
+</body>
+</html>
