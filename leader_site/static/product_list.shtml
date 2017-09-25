@@ -58,7 +58,7 @@
 								<span class="list-kind-china">冰箱<i class="iconfont icon-arrow-line-down"></i></span>
 								<span class="list-kind-english">HEOGJEOPK</span>
 							</div>
-							<div class="list-kind-line"></div>
+							<div class="list-kind-line o_md-hide o_sm-hide o_xs-hide"></div>
 							<ul class="float-list">
 								<div class="triangle"></div>
 								<li>
@@ -112,7 +112,7 @@
 							<a class="nav-link">洗衣机</a>
 						</div>
 						<a class="more js_listNavShowMore" data-flag=0>
-							<span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
+							<span class="o_df-hide o_xs-show">展开筛选项</span><span class="o_xs-hide">展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
 						</a>
 					</div>
 					<div class="list-categray o_df-hide o_md-show o_sm-show o_xs-show">
@@ -708,8 +708,8 @@
 							<i class="iconfont icon-plus-solid recommend-reload"></i>
 						</div>
 						<div class="recommend-pro">
-							<ul class="o_g">
-								<li class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+							<div class="o_g">
+								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
 									<img src="images/compare_goods.PNG">
 									<div class="recommend-pro-info">
 										<span class="pro-info-title">统帅就给个</span>
@@ -717,8 +717,8 @@
 										<span class="pro-info-type">JGEJJGEJ-988</span>
 										<span class="pro-info-price">￥633</span>
 									</div>
-								</li>
-								<li class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								</a>
+								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
 									<img src="images/compare_goods.PNG">
 									<div class="recommend-pro-info">
 										<span class="pro-info-title">统帅就给个</span>
@@ -726,8 +726,8 @@
 										<span class="pro-info-type">JGEJJGEJ-988</span>
 										<span class="pro-info-price">￥633</span>
 									</div>
-								</li>
-								<li class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								</a>
+								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
 									<img src="images/compare_goods.PNG">
 									<div class="recommend-pro-info">
 										<span class="pro-info-title">统帅就给个</span>
@@ -735,8 +735,8 @@
 										<span class="pro-info-type">JGEJJGEJ-988</span>
 										<span class="pro-info-price">￥633</span>
 									</div>
-								</li>
-								<li class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								</a>
+								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
 									<img src="images/compare_goods.PNG">
 									<div class="recommend-pro-info">
 										<span class="pro-info-title">统帅就给个</span>
@@ -744,8 +744,8 @@
 										<span class="pro-info-type">JGEJJGEJ-988</span>
 										<span class="pro-info-price">￥633</span>
 									</div>
-								</li>
-							</ul>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -760,8 +760,8 @@
 
 	    <!-- 弹层-筛选项 -->
 	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
-	    		<div class="o_u o_df_5-12 layer-bg"></div>
-	    		<div class="o_u o_df_7-12 layer-box">
+	    		<div class="o_u o_df_5-12 o_md_4-12 o_sm_3-12 o_xs_2-12 layer-bg"></div>
+	    		<div class="o_u o_df_7-12 o_md_8-12 o_sm_9-12 o_xs_10-12 layer-box">
 	    			<div class="layer-tit">
 	    				筛选项
 	    				<a class="iconfont icon-close layer-close js_layerClose"></a>
@@ -776,7 +776,7 @@
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
-	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn">按钮</a >
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    					</div>

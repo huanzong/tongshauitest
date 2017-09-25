@@ -264,6 +264,9 @@
 				}
 				.yellow{
 					color: @l-orange;
+					@media (max-width: 575px) {
+						line-height: 25px;
+					}
 				}
 			}
 		}
@@ -414,7 +417,7 @@
 			@media (max-width: 700px) {
 				padding-bottom: 30px;
 			}
-			li{
+			a{
 				@media (max-width: 700px) {
 					text-align: center;
 				}
@@ -537,7 +540,11 @@
 				.list-line{
 					display: block;
 					margin-left: 80px;
-					padding-top: 20px;					
+					padding-top: 20px;	
+					@media (max-width: 575px) {
+						margin-left: 0;
+    					padding-top: 65px;					
+					}				
 					.list-btn{
 						min-width: 45px;
 						margin-bottom: 10px;
