@@ -211,6 +211,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-refresh-solid"></i>
+                    <div class="name">refresh-solid</div>
+                    <div class="fontclass">.icon-refresh-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-search"></i>
                     <div class="name">search2</div>
                     <div class="fontclass">.icon-search</div>

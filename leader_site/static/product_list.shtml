@@ -705,7 +705,7 @@
 					<div class="recommend-box">
 						<div class="recommend-title">
 							精选推荐
-							<i class="iconfont icon-plus-solid recommend-reload"></i>
+							<i class="iconfont icon-refresh-solid recommend-reload"></i>
 						</div>
 						<div class="recommend-pro">
 							<div class="o_g">
