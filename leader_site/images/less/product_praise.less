@@ -10,20 +10,37 @@
 	border: none!important;
 }
 
-.product-prise{
+.product-prise-header{
+	border-bottom: 1px solid #edecec;
 	.prise-head{
-		padding-top: 30px;
+		position: relative;
+		padding: 30px 0 20px;
+		background: #fff;
+		min-height: 70px;
 		.prise-percent{
-			width: 175px;
 			margin-right: 60px;
-			border-right: 1px solid #f8f8f8;
+			@media (min-width: 701px) {
+				position: absolute;
+				left: 0;
+				top: 30px;
+				border-right: 1px solid #f8f8f8;
+				width: 175px;
+			}
 			@media (min-width: 701px) and (max-width: 991px){
 				width: 158px;
 				margin-right: 45px;
 			}
+			@media (max-width: 700px) {
+				padding-bottom: 25px;
+				margin-bottom: 20px;
+				border-bottom: 1px solid #f8f8f8;
+			}
 			.percent-key{
 				font-size: 16px;
 				line-height: 25px;
+				@media (max-width: 700px){
+					display: inline-block;
+				}
 			}
 			.percent-value{
 				position: relative;
@@ -31,16 +48,123 @@
 				font-size: 36px;
 				line-height: 50px;
 				color: @l-red;
+				@media (max-width: 700px){
+					font-size: 24px;
+					line-height: 26px;
+				}
 				sub{
 					position: absolute;
 					bottom: -4px;
 				    right: -19px;
 				    font-size: 18px;
+				    @media (max-width: 700px){
+				    	position: absolute;
+						bottom: 0;
+					    right: -22px;
+						font-size: 24px;
+					}
 				}
 			}
 		}
 		.prise-tips{
+			@media (min-width: 992px){
+				padding-left: 235px;
+			}
+			@media (min-width: 701px) and (max-width: 991px){
+				padding-left: 218px;
+			}
+			a{
+				font-size: 12px;
+				margin: 0 10px 10px 0;
+				&:hover,&.active{
+					border: 1px solid @l-red;
+					color: #fff;
+					background: @l-red;
+				}
+			}
+		}
+	}
+}
 
+.product-prise-body{
+	padding-top: 43px;
+	border-top: 1px solid #f8f8f8;
+	.prise-box{
+		border: #eee;
+		box-shadow: 0 0 5px #eee;
+		background: #fff;
+		margin-bottom: 30px;
+		padding: 40px 0;
+		.prise-user-name{
+			display: inline-block;
+			padding-left: 45px;
+			line-height: 25px;
+			font-size: 14px;
+			@media (max-width:991px) {
+				line-height: 30px;
+				width: 84%;
+				padding: 8px 8% 0 8%;
+			}
+		}
+		.prise-time,.prise-form{
+			display: inline-block;
+			line-height: 25px;
+			font-size: 14px;
+			color: #999;
+		}
+		.prise-time{
+			padding-right: 20px;
+			@media (max-width:991px) {
+				padding: 0 20px 0 8%;
+			}
+		}
+		.prise-form{
+			padding-right: 5px;
+		}
+		.prise-column{
+			width: 83%;
+			color: #333;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 8px 30px 0 0;
+			@media (max-width:991px) {
+				width: 84%;
+				padding: 8px 8% 0 8%;
+			}
+		}
+		.prise-img{
+			padding-top: 20px;
+			@media (max-width:991px) {
+				width: 84%;
+				padding: 8px 8% 0 8%;
+			}
+			.prise-img-box{
+				display: inline-block;
+				border: 1px solid #f5f5f5;
+				padding: 5px;
+				margin-right: 5px;
+				border-radius: 50px;
+				img{
+					width: 48px;
+					height: 48px;
+					border-radius: 50px;
+				}
+			}
+		}
+		.prise-reply{
+			@media (max-width:1199px) and (min-width: 992px) {
+				border-top: 1px solid #eee;
+				padding-top: 18px;
+				margin-top: 20px;
+			}
+			@media (max-width:991px) {
+				border-top: 1px solid #eee;
+				margin: 20px 0 0 8%;
+				padding-top: 18px;
+				.prise-column{
+					padding: 8px 0 0 0;
+				}
+			}
 		}
 	}
 }
