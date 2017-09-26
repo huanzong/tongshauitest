@@ -36,7 +36,8 @@
                             </div>
                             <div class="member-personalinfo-contbox">
                                 <div class="member-personalinfo-listbox cur js-personalinfotabcont">
-                                    <div class="member-personalinfo-table">
+                                    <!--基本资料 START-->
+                                    <div class="member-personalinfo-table  ">
 
                                         <div class="o_g member-personalinfo-list">
                                             <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>用户名</div>
@@ -46,9 +47,16 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="og member-personalinfo-list">
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">性别</div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
+                                                <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 " ><input  type="radio" class="js_sex "  checked name="cc" value="男"></span><span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 "><input  type="radio" class="js_sex" name="cc" value="女" ></span>
+                                            </div>
 
+
+                                        </div>
                                         <div class="o_g member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>生日</div>
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">生日</div>
                                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
                                                 <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
                                                     <div class="selectbox">
@@ -140,8 +148,24 @@
                                         </div>
 
                                     </div>
+                                    <!--基本资料 END-->
+
+
+
                                 </div>
-                                <div class="member-personalinfo-listbox js-personalinfotabcont">2</div>
+                                <!--个人头像 START-->
+                                <div class="member-personalinfo-listbox js-personalinfotabcont">
+
+                                        <ul class="member-personalinfo-table2">
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2 ">
+                                                <div class="membe-personalinfo-photo-left"></div>
+                                            </li>
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" ></li>
+                                        </ul>
+
+
+                                </div>
+                                <!--个人头像 END-->
                             </div>
                         </div>
                         <!-- 个人信息 End-->

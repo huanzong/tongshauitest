@@ -162,13 +162,13 @@ $(function() {
     $("#js_persave").oSelect().init();
     $("#js_percity").oSelect().init();
     $("#js_perarea").oSelect().init();
-
     //个人信息
     $('.js-personalinfotab').click( function () {
         var tabNmu =$(this).index();
         $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
         $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
     })
+    $(".js_sex").jq_qvote();
 
 });
 
