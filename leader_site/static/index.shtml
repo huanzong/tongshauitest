@@ -9,6 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 <meta name="format-detection" content="telephone=no, email=no" />
 <!--#include virtual="public/head.shtml"-->
+<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+<link rel="stylesheet" type="text/css" href="images/index.css">
 </head>
 
 <body>
@@ -48,9 +50,59 @@
 		    </div>
 		    <!-- 首页banner END -->
 
+		    <!-- 关于统帅 -->
+		    <div class="o_g index-about">
+		    	<div class="o_g index-about-bg">
+	       			<div class="o_u o_df_4-12">
+	       				<span></span>
+	       			</div>
+	       		</div>
+		       <div class="o_u o_df_1-12"></div>
+		       <div class="o_u o_df_10-12">
+		       		
+		       		<div class="o_g">
+		       			<div class="o_u o_df_4-10 index-about-data">
+		       				<div class="about-data-box">
+		       					<div class="data-title">国家研发机构</div>
+		       					<div class="data-num">38</div>
+		       				</div>
+		       				<div class="about-data-box">
+		       					<div class="data-title">国家研发机构</div>
+		       					<div class="data-num">38</div>
+		       				</div>
+		       				<div class="about-data-box">
+		       					<div class="data-title">国家研发机构</div>
+		       					<div class="data-num">38</div>
+		       				</div>
+		       				<div class="about-data-box">
+		       					<div class="data-title">国家研发机构</div>
+		       					<div class="data-num">38</div>
+		       				</div>
+		       				<div class="about-data-box">
+		       					<div class="data-title">国家研发机构</div>
+		       					<div class="data-num">38</div>
+		       				</div>
+		       				<div class="about-data-box">
+		       					<div class="data-title">国家研发机构</div>
+		       					<div class="data-num">38</div>
+		       				</div>
+			       		</div>
+			       		<div class="o_u o_df_6-10 index-about-select">
+			       			<div class="o_u o_df_1-6"></div>
+			       			<div class="o_u o_df_5-6 about-bg-gray">
+			       				<div class=""></div>
+			       			</div>
+			       		</div>
+		       		</div>
+		       </div>
+		    </div>
+		    <!-- 关于统帅 END -->
+
 		    <!--#include virtual="public/footer.shtml"-->
 		</div>
 	</div>
 	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="images/index.js"></script>
 </body>
 </html>

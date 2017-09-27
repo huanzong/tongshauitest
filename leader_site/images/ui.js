@@ -67,12 +67,14 @@ $(function() {
             //   proportion: proportion,
             //   slotId: minSizeSlotId
             // };
+            console.log(data);
         },
         // 上传完成事件
         onComplete: function(name, data) {
+            console.log(data.fileUrl);
             if (data.isSuccess) {
                 console.log('上传成功');
-                console.log(data);
+                
             } else {
                 console.log('上传失败'); 
             }
