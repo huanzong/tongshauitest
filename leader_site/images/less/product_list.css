@@ -193,6 +193,9 @@
   color: #333;
   cursor: pointer;
 }
+.list-nav .list-filter .filter-line .filter-sole .sole-type.active {
+  color: #e60012;
+}
 .list-nav .list-more {
   width: 100%;
   display: block;
