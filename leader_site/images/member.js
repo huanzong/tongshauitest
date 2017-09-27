@@ -162,13 +162,83 @@ $(function() {
     $("#js_persave").oSelect().init();
     $("#js_percity").oSelect().init();
     $("#js_perarea").oSelect().init();
-
     //个人信息
     $('.js-personalinfotab').click( function () {
         var tabNmu =$(this).index();
         $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
         $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
+        $('.js-uploadPhoto').show();
+        $('.js-modifyPhoto').hide();
+        $('.js-modifyPhotoBtn').hide();
     })
+    $(".js_sex").jq_qvote();
 
+//上传照片
+//    $('.meber-personalinfo-photo').
+
+
+    $.jUploader.setDefaults({
+        cancelable: true, // 可取消上传
+        allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+        messages: {
+            upload: '上传',
+            cancel: '取消',
+            emptyFile: "{file} 为空，请选择一个文件.",
+            //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
+            invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
+            onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
+        }
+    });
+    $.jUploader({
+        fileField: 'file',
+        button: "js_imgUpload", // 这里设置按钮id
+        action: '/comment/uploadcasartejfmallproductcommentimage/uploadImage',//这里写地址
+        // 开始上传事件
+
+        onUpload: function(data) {
+            if(data){
+                $('.js-uploadPhoto').hide();
+                $('.js-modifyPhoto').show();
+                $('.js-modifyPhotoBtn').show();
+            }
+
+
+            console.log(data,11111);
+            // $.jUploader.defaults.otherArgs = {
+            //   // activityId: activityId,
+            //   proportion: proportion,
+            //   slotId: minSizeSlotId
+            // };
+        },
+        // 上传完成事件
+        onComplete: function(name, data) {
+            if (data.isSuccess) {
+                console.log('上传成功');
+                console.log(data);
+
+
+            } else {
+                console.log('上传失败');
+            }
+
+        },
+        // 系统信息显示（例如后缀名不合法）
+        showMessage: function(message) {
+            alert(message);
+        },
+        // 取消上传事件
+        onCancel: function(fileName) {},
+        debug: true
+    });
+
+    //裁剪图片
+    //    var cxt = document.getElementById('js_imgCut');
+    //        cxt =
+    //$('.membe-personalinfo-photo-left').find('img').css({
+    //    //width:$('.jcrop-holder>div').width(),
+    //    //height:$('.jcrop-holder>div').height(),
+    //    'margin-top':-($('.jcrop-holder>div').css('top')),
+    //    'margin-left':-($('.jcrop-holder>div').css('left'))
+    //})
 });
 
