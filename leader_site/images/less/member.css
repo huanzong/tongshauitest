@@ -629,13 +629,13 @@
   /*个人中心-个人信息-功能区-分项-新消息*/
   height: 16px;
   line-height: 16px;
-  padding: 0 5px;
+  width: 16px;
   color: #fff;
   margin-top: 15px;
   float: right;
   display: inline-block;
   background: #e60012;
-  border-radius: 7px;
+  border-radius: 16px;
 }
 .member-nav .member-personal .member-personal-functionbox li .member-personal-functionbox-rightnumber span {
   font-size: 10px;
@@ -685,6 +685,7 @@
   position: absolute;
   top: 0;
   right: -240px;
+  z-index: 3;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .member-nav .member-submenu {
@@ -793,9 +794,10 @@
 .member-nav .member-submenu .member-menucont .member-menu-sublist .member-menu-sublist-ul li .member-menu-sublist-new {
   height: 16px;
   line-height: 16px;
-  padding: 0 5px;
+  width: 16px;
   margin-left: 10px;
   margin-top: -1px;
+  text-align: center;
   color: #fff;
   float: left;
   display: inline-block;
@@ -1998,6 +2000,7 @@
   font-size: 14px;
   color: #666;
   margin-top: 10px;
+  line-height: 10px;
 }
 @media (max-width: 575px) {
   .member-security .member-security-width .member-security-contbox .member-security-bingsuccess .member-security-bingsuccess-txtbox .member-security-bingsuccess-text {

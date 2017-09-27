@@ -80,7 +80,8 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/footer.shtml"-->
+        <!--#include virtual="public/personal_footer.shtml"-->
+
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->

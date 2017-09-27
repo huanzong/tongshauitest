@@ -460,14 +460,14 @@
 				.member-personal-functionbox-rightnumber{/*个人中心-个人信息-功能区-分项-新消息*/
 					height: 16px;
 					line-height: 16px;
-					padding: 0 5px;
-
+					//padding: 0 5px;
+					width: 16px;
 					color: #fff;
 					margin-top: 15px;
 					float: right;
 					display: inline-block;
 					background: @l-red;
-					border-radius: 7px;
+					border-radius: 16px;
 					span{
 						font-size: 10px;
 						transform:scale(0.83);
@@ -510,6 +510,7 @@
 		position: absolute;
 		top:0;
 		right:-240px;
+		z-index: 3;
 
 		@media (min-width:992px) and  (max-width:1199px){/* lg*/
 		}
@@ -602,9 +603,11 @@
 						.member-menu-sublist-new{
 							height: 16px;
 							line-height: 16px;
-							padding: 0 5px;
+							//padding: 0 5px;
+							width:16px;
 							margin-left: 10px;
 							margin-top: -1px;
+							text-align: center;
 							color: #fff;
 							float: left;
 							display: inline-block;
@@ -1629,7 +1632,7 @@
 						font-size: 14px;
 						color: #666;
 						margin-top: 10px;
-
+						line-height: 10px;
 						@media (max-width:575px){/* xs*/
 							margin-top: 5px;
 						}
