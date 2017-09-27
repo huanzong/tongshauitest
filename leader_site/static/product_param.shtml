@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>产品参数</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="images/product_param.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main product-param">
+	    	<div class="o_g param-bg">
+	    		<div class="o_u o_df_3-12 o_sm_1-2 o_xs_1-2 param-bg-deep"></div>
+	    		<div class="o_u o_df_9-12 o_sm_1-2 o_xs_1-2 param-bg-light"></div>
+	    	</div>
+	    	<div class="o_g param-con">
+	    		<div class="o_u o_df_1-12"></div>
+	    		<div class="o_u o_df_10-12">
+	    			<div class="param-struct">
+	    				<div class="param-struct-img">
+	    					<img src="images/param_struct.jpg" class="js_structbg">
+	    				</div>
+	    				<div class="param-attachment">
+		    				<span class="param-attachment-title">附件</span>
+		    				<span class="param-attachment-line o_xs-hide"></span>
+		    				<a class="param-attachment-other">外机支架</a>
+		    				<a class="param-attachment-other">安装管道</a>
+		    				<a class="param-attachment-other">说明书</a>
+		    				<a class="param-attachment-other">遥控器</a>
+		    				<a class="param-attachment-other">有可能换行的文字</a>
+		    			</div>
+	    			</div>
+		    		<div class="param-basic o_g">
+		    			<div class="o_u o_df_1-5 o_sm-hide o_xs-hide param-basic-bg"></div>
+		    			<div class="o_u o_df_4-5 o_sm_2-2 o_xs_2-2 param-basic-con">
+		    				<div class="param-basic-title">基本参数</div>
+		    				<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+		    					<div class="param-basic-box">
+		    						<div class="param-basic-list">
+										<span class="param-key">类别</span>
+										<span class="param-value">多门冰箱</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">箱门结构</span>
+										<span class="param-value">法式五门</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">参数</span>
+										<span class="param-value">HOJOJOJJ-998</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">FJEO</span>
+										<span class="param-value">GEGJOEJJOJ</span>
+		    						</div>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+		    					<div class="param-basic-box">
+		    						<div class="param-basic-list">
+		    							<span class="param-key">类别</span>
+										<span class="param-value">多门冰箱</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">参数</span>
+										<span class="param-value">多门冰箱</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">FJEO</span>
+										<span class="param-value">参数</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">类别</span>
+										<span class="param-value">多门冰箱</span>
+		    						</div>
+		    					</div>
+		    				</div>
+		    				<div class="param-basic-title pad-top48">配置</div>
+		    				<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+		    					<div class="param-basic-box">
+		    						<div class="param-basic-list">
+										<span class="param-key">搁物架（个）</span>
+										<span class="param-value">1</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">箱门结构</span>
+										<span class="param-value">2</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">参数</span>
+										<span class="param-value">有</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">FJEO</span>
+										<span class="param-value">无</span>
+		    						</div>
+		    					</div>
+		    				</div>
+		    				<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+		    					<div class="param-basic-box">
+		    						<div class="param-basic-list">
+		    							<span class="param-key">类别</span>
+										<span class="param-value">6</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">参数</span>
+										<span class="param-value">无</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">FJEO</span>
+										<span class="param-value">无</span>
+		    						</div>
+		    						<div class="param-basic-list">
+										<span class="param-key">类别</span>
+										<span class="param-value">有</span>
+		    						</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    		</div>
+	    		</div>
+	    	</div>
+        </div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="images/product_param.js"></script>
+</body>
+</html>

@@ -22,6 +22,7 @@
             <li><a href="ui.shtml#ui_float">浮层样式/角标</a></li>
             <li><a href="ui.shtml#ui_select">下拉菜单</a></li>
             <li><a href="ui.shtml#ui_formValid">表单验证插件用法</a></li>
+            <li><a href="ui.shtml#ui_imgUpload">上传图片</a></li>
             <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
         </ul>
     </div>
@@ -370,6 +371,69 @@
         </form>
     </div>
     <!-- 表单验证插件用法 END -->
+    <!-- 上传图片插件 -->
+    <div class="main markdown" id="ui_imgUpload">
+        <h1>上传图片插件</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-red" id="js_imgUpload">上传图片</a>
+
+        <h3>--- HTML ---</h3>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-red" id="js_imgUpload">上传图片</a>
+            <!-- 注意：是id -->
+        </textarea>
+        <h3>--- JS ---</h3>
+        <textarea>
+            //引用文件
+            <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+
+            //代码片段
+            $.jUploader.setDefaults({
+                cancelable: true, // 可取消上传
+                allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+                messages: {
+                    upload: '上传',
+                    cancel: '取消',
+                    emptyFile: "{file} 为空，请选择一个文件.",
+                    //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
+                    invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
+                    onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
+                }
+            });
+            $.jUploader({
+                fileField: 'file',
+                button: "js_imgUpload", // 这里设置按钮id
+                action: '/comment/uploadcasartejfmallproductcommentimage/uploadImage',//这里写地址
+                // 开始上传事件
+                onUpload: function(data) {
+                    // $.jUploader.defaults.otherArgs = {
+                    //   // activityId: activityId,
+                    //   proportion: proportion,
+                    //   slotId: minSizeSlotId
+                    // };
+                },
+                // 上传完成事件
+                onComplete: function(name, data) {
+                    if (data.isSuccess) {
+                        console.log('上传成功');
+                        console.log(data);
+                    } else {
+                        console.log('上传失败'); 
+                    }
+
+                },
+                // 系统信息显示（例如后缀名不合法）
+                showMessage: function(message) {
+                    alert(message);
+                },
+                // 取消上传事件
+                onCancel: function(fileName) {},
+                debug: true
+            });
+        </textarea>
+    </div>
+    <!-- 上传图片插件 END -->
 
     <!-- iconfont -->
     <div id="ui_iconfont"></div>
@@ -378,6 +442,7 @@
 
 <!--#include virtual="public/foot.shtml"-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/ui.js"></script>
 </body>
 </html>

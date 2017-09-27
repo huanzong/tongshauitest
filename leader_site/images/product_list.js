@@ -13,6 +13,10 @@ $(function() {
 		}
     }
 
+    // banner背景平铺
+    $(".js_bannerImg").oBgCover().init();
+    $(".js_bannerImg").css('margin-left','-1000px');
+
     //导航-展开全部筛选项 
     $('.js_listNavShowMore').on('click',function(){
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>产品参数</title>
+
+	<%=base%>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include virtual="public/head.shtml"-->
+	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="images/product_praise.css">
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+	    	<div class="o_g">
+	    		<div class="o_u o_df_1-12"></div>
+	    		<div class="o_u o_df_10-12 product-prise">
+	    			<div class="o_g prise-head">
+	    				<div class="o_u prise-percent">
+	    					<div class="percent-key">好评率：</div>
+	    					<div class="percent-value">98.8<sub>%</sub></div>
+	    				</div>
+	    				<div class="o_u prise-tips">
+	    					<a class=""></a>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+        </div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="images/product_praise.js"></script>
+</body>
+</html>
