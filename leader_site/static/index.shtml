@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+
+<%=base%>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/head.shtml"-->
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+
+        	<!-- 首屏动画 -->
+        	<div class="o_g js_animateLine">
+	        	<div class="index_animate">
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox"></div>
+				</div>
+	        </div>
+	        <!-- 首屏动画 End -->
+
+		    <!-- 导航 -->
+		    <!--#include virtual="public/nav.shtml"-->
+		    <!-- 导航 End-->
+
+			<!-- 首页banner -->
+		    <div class="o_g">
+		       <img src="images/ignor_index.png" class="o_u o_df_2-2">
+		    </div>
+		    <!-- 首页banner END -->
+
+		    <!--#include virtual="public/footer.shtml"-->
+		</div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+</body>
+</html>

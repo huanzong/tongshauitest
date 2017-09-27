@@ -300,6 +300,78 @@
 				<div class="o_u o_df_1-12"></div>
 			</div>
 	    	<!-- 产品口碑 End -->
+	    	<!-- 产品参数 -->
+	    	<div class="o_g product-param">
+		    	<div class="o_g param-bg">
+		    		<div class="o_u o_df_3-12 o_sm_1-2 o_xs_1-2 param-bg-deep"></div>
+		    		<div class="o_u o_df_9-12 o_sm_1-2 o_xs_1-2 param-bg-light"></div>
+		    	</div>
+		    	<div class="o_g param-con">
+		    		<div class="o_u o_df_1-12"></div>
+		    		<div class="o_u o_df_10-12">
+		    			<div class="param-struct">
+		    				<div class="param-struct-img">
+		    					<img src="images/param_struct.jpg" class="js_structbg">
+		    				</div>
+		    				<div class="param-attachment">
+			    				<span class="param-attachment-title">附件</span>
+			    				<span class="param-attachment-line o_xs-hide"></span>
+			    				<a class="param-attachment-other">外机支架</a>
+			    				<a class="param-attachment-other">安装管道</a>
+			    				<a class="param-attachment-other">说明书</a>
+			    				<a class="param-attachment-other">遥控器</a>
+			    				<a class="param-attachment-other">有可能换行的文字</a>
+			    			</div>
+		    			</div>
+			    		<div class="param-basic">
+			    			<div class="o_g">
+				    			<div class="o_u o_df_1-5 o_df-hide o_lg-show o_md-show param-basic-bg"></div>
+				    			<div class="o_u o_df_2-2 o_lg_4-5 o_md_4-5 param-basic-con">
+				    				<div class="param-basic-title">基本参数</div>
+				    				<div class="o_u o_df_2-2">
+				    					<div class="param-basic-box">
+				    						<div class="param-basic-list">
+												<span class="param-key">类别</span>
+												<span class="param-value">多门冰箱</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">箱门结构</span>
+												<span class="param-value">法式五门</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">参数</span>
+												<span class="param-value">HOJOJOJJ-998</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">FJEO</span>
+												<span class="param-value">GEGJOEJJOJ</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">FJEO</span>
+												<span class="param-value">GEGJOEJJOJ</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">FJEO</span>
+												<span class="param-value">GEGJOEJJOJ</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">FJEO</span>
+												<span class="param-value">GEGJOEJJOJ</span>
+				    						</div>
+				    						<div class="param-basic-list">
+												<span class="param-key">FJEO</span>
+												<span class="param-value">GEGJOEJJOJ</span>
+				    						</div>
+				    					</div>
+				    					 <a href="javascript:;" class="l-btn-normal l-btn-red param-more">查看更多</a>
+				    				</div>
+				    			</div>
+				    		</div>
+			    		</div>
+		    		</div>
+		    	</div>
+	    	</div>
+	    	<!-- 产品参数 END -->
 	    	<!-- 更多选择 -->
 	    	<div class="detail-title">更多选择</div>
 	    	<div class="o_g">
