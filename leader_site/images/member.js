@@ -254,7 +254,7 @@ $(function() {
             onSelect: updatePreview,
             aspectRatio: xsize / ysize,
             setSelect: [ 60, 60, 260, 260 ]
-         
+
         },function(){
             // Use the API to get the real image size
             var bounds = this.getBounds();

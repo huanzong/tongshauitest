@@ -2460,10 +2460,11 @@
 								.membe-personalinfo-photo-left{
 									height: 180px;
 									width: 180px;
-									display: inline-block;
+									display: block;
+									margin: 0 auto;
 									overflow: hidden;
 									border-radius: 100px;
-									border: 1px solid red;
+							 
 									@media (min-width:992px) and  (max-width:1199px){/* lg*/  }
 									@media (min-width:701px) and  (max-width:991px){/* md*/}
 									@media (min-width:576px) and  (max-width:700px){/* sm*/  }
@@ -2492,6 +2493,7 @@
 								@media (min-width:576px) and  (max-width:700px){
 									/* sm*/
 									display: none;
+
 								}
 								@media (max-width:575px){/* xs*/
 									display: none;
@@ -2506,7 +2508,9 @@
 								@media (min-width:701px) and  (max-width:991px){/* md*/
 									height: 250px;
 								}
-								@media (min-width:576px) and  (max-width:700px){/* sm*/  }
+								@media (min-width:576px) and  (max-width:700px){/* sm*/
+									height: 400px;
+								}
 								@media (max-width:575px){/* xs*/  }
 							};
 							//font-size: 0px;padding: 0px;
@@ -2576,8 +2580,27 @@
 						p{
 							font-size: 12px;color:#666;padding-top: 14px;
 						}
-					}
+						.membe-personalinfo-photo-left{
+							display: none;
+							@media (min-width:576px) and  (max-width:700px){/* sm*/
 
+						}
+					}
+						@media (min-width:576px) and  (max-width:700px){/* sm*/
+								padding-bottom: 30px;
+								height: 255px;
+							.membe-personalinfo-photo-left{
+								display: block;margin: 0 auto;
+
+							}
+							a{
+								margin-top: 30px;
+							}
+							p{
+								margin-bottom: 30px;
+							}
+						}
+						}
 				}
 
 			}

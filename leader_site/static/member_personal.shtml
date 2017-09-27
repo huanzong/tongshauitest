@@ -166,6 +166,9 @@
                                             <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >
                                                 <!--<canvas id="js_imgCut"></canvas>-->
                                                 <div class="member-personalinfo-modifyimg">
+                                                    <div class="membe-personalinfo-photo-left">
+                                                        <img src="../images/ignore_prodetail3.JPG" alt="">
+                                                    </div>
                                                     <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
                                                     <p>支持jpg、jpeg、png，大小不超过2M</p>
                                                 </div>
@@ -185,12 +188,7 @@
                                             </div>
                                         </li>
                                         <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >
-                                            <!--<canvas id="js_imgCut"></canvas>-->
-                                            <!--<div>-->
-                                            <!--<a href="">修改头像</a>-->
-                                            <!--</div>-->
                                             <img src="../images/ignore_prodetail3.JPG" id="target" width="320px" height="320px" alt="[Jcrop Example]" />
-
                                         </li>
                                     </ul>
 
@@ -204,12 +202,6 @@
                                          </div>
                                         </div>
                                     </div>
-                                    <!--<div class="o_g member-personalinfo-list">-->
-                                            <!--<div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-personalinfo-savebtn">-->
-                                            <!--</div>-->
-                                            <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-personalinfo-cancelbtn">-->
-                                             <!--</div>-->
-                                        <!--</div>-->
                                     </div>
                                 </div>
 
