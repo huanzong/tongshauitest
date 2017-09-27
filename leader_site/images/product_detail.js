@@ -91,6 +91,10 @@ $(function() {
         init();
     });
 
+    //产品参数-结构图居中
+    $(".js_structbg").oBgCover().init();//激活方法
+	$(".js_structbg").css('margin-left','-424px');
+
  	$(".js_swiperPreferential .js_checkbox").jq_qvote();
 
     function init() {

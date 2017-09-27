@@ -10,6 +10,7 @@
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="images/member.css">
 </head>
 
@@ -36,7 +37,8 @@
                             </div>
                             <div class="member-personalinfo-contbox">
                                 <div class="member-personalinfo-listbox cur js-personalinfotabcont">
-                                    <div class="member-personalinfo-table">
+                                    <!--基本资料 START-->
+                                    <div class="member-personalinfo-table  ">
 
                                         <div class="o_g member-personalinfo-list">
                                             <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>用户名</div>
@@ -46,9 +48,16 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="og member-personalinfo-list">
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">性别</div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
+                                                <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 " ><input  type="radio" class="js_sex "  checked name="cc" value="男"></span><span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 "><input  type="radio" class="js_sex" name="cc" value="女" ></span>
+                                            </div>
 
+
+                                        </div>
                                         <div class="o_g member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>生日</div>
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">生日</div>
                                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
                                                 <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
                                                     <div class="selectbox">
@@ -140,8 +149,74 @@
                                         </div>
 
                                     </div>
+                                    <!--基本资料 END-->
+
+
+
                                 </div>
-                                <div class="member-personalinfo-listbox js-personalinfotabcont">2</div>
+                                <!--个人头像 START-->
+                                <div class="member-personalinfo-listbox js-personalinfotabcont">
+
+                                        <!--<ul class="member-personalinfo-table2">-->
+                                            <!--<li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2 ">-->
+                                                <!--<div class="membe-personalinfo-photo-left">-->
+                                                    <!--<div id="preview-pane">-->
+                                                        <!--<div class="preview-container">-->
+                                                            <!--<img src="../images/ignore_prodetail3.JPG" class="jcrop-preview" alt="Preview" />-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</li>-->
+                                            <!--<li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >-->
+                                                <!--&lt;!&ndash;<canvas id="js_imgCut"></canvas>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;<div>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<a href="">修改头像</a>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                                <!--<img src="../images/ignore_prodetail3.JPG" id="target" width="80%" alt="[Jcrop Example]" />-->
+
+                                            <!--</li>-->
+                                        <!--</ul>-->
+
+                                    <ul class="member-personalinfo-table2">
+                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2 ">
+                                            <div class="membe-personalinfo-photo-left">
+                                                <div id="preview-pane">
+                                                    <div class="preview-container">
+                                                        <img src="../images/ignore_prodetail3.JPG" class="jcrop-preview" alt="Preview" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >
+                                            <!--<canvas id="js_imgCut"></canvas>-->
+                                            <!--<div>-->
+                                            <!--<a href="">修改头像</a>-->
+                                            <!--</div>-->
+                                            <img src="../images/ignore_prodetail3.JPG" id="target" width="80%" alt="[Jcrop Example]" />
+
+                                        </li>
+                                    </ul>
+
+                                    <div class="o_g member-personalinfo-list2">
+                                        <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2 member-personalinfo-upimg">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-red o_df_2-3" id="js_imgUpload">上传图片</a>
+                                            </div>
+                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2  member-personalinfo-over">
+                                            <a href="javascript:;" class="l-btn-normal l-btn-line2">取消</a>
+                                         </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="o_g member-personalinfo-list">-->
+                                            <!--<div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-personalinfo-savebtn">-->
+                                            <!--</div>-->
+                                            <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-personalinfo-cancelbtn">-->
+                                             <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+                                <!--个人头像 END-->
                             </div>
                         </div>
                         <!-- 个人信息 End-->
@@ -151,11 +226,67 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/footer.shtml"-->
+        <!--#include virtual="public/personal_footer.shtml"-->
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
+<script type="text/javascript" src="images/jquery.color.js"></script>
+
 <script type="text/javascript" src="images/member.js"></script>
+<script>
+    jQuery(function($){
+
+        // Create variables (in this scope) to hold the API and image size
+        var jcrop_api,
+                boundx,
+                boundy,
+
+        // Grab some information about the preview pane
+                $preview = $('#preview-pane'),
+                $pcnt = $('#preview-pane .preview-container'),
+                $pimg = $('#preview-pane .preview-container img'),
+
+                xsize = $pcnt.width(),
+                ysize = $pcnt.height();
+
+        console.log('init',[xsize,ysize]);
+        $('#target').Jcrop({
+            onChange: updatePreview,
+            onSelect: updatePreview,
+            aspectRatio: xsize / ysize
+        },function(){
+            // Use the API to get the real image size
+            var bounds = this.getBounds();
+            boundx = bounds[0];
+            boundy = bounds[1];
+            // Store the API in the jcrop_api variable
+            jcrop_api = this;
+
+            // Move the preview into the jcrop container for css positioning
+            $preview.appendTo(jcrop_api.ui.holder);
+        });
+
+        function updatePreview(c)
+        {
+            if (parseInt(c.w) > 0)
+            {
+                var rx = xsize / c.w;
+                var ry = ysize / c.h;
+
+                $pimg.css({
+                    width: Math.round(rx * boundx) + 'px',
+                    height: Math.round(ry * boundy) + 'px',
+                    marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                    marginTop: '-' + Math.round(ry * c.y) + 'px'
+                });
+            }
+        };
+
+    });
+
+</script>
 </body>
 </html>
