@@ -284,6 +284,23 @@ $(function() {
         };
 
     });
+    //window.onresize=photoInterceptPosition;
+    //
+    //
+    //function photoInterceptPosition(){
+    //    console.log(111);
+    //   var windowWidth =  $(window).width();
+    //    if(windowWidth<992){
+    //        $('.jcrop-holder').css({'top':'0px','left':'0px','right':'0px','bottom':'0px','margin':'auto','position':'absolute'});
+    //        $('#target').css({'width':'250px','height':'250px'});
+    //    }else{
+    //        $('#target').css({'width':'250px','height':'250px'});
+    //
+    //        $('.jcrop-holder').css({'width':'300px','height':'300px'});
+    //
+    //    }
+    //}
+
 
 });
 
