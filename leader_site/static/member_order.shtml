@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-我的订单</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="images/member.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/member_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+                <div class="member-security-width js-securityheight">
+                    <div class="member-security-tit">
+                        <p>我的订单</p>
+                    </div>
+                    <!-- 内容区域 START-->
+                    <div class="member-security-contbox">
+                        <!-- 个人信息 START-->
+                        <div class="member-personalinfo">
+                            <div class="member-personalinfo-tabbox">
+                                <div class="member-personalinfo-tab cur js-personalinfotab">全部订单</div>
+                                <div class="member-personalinfo-tab js-personalinfotab">待付款<i class="member-navlist-number"><span>9</span></i></div>
+                                <div class="member-personalinfo-tab js-personalinfotab">代收款<i class="member-navlist-number"><span>9</span></i></div>
+                                <div class="member-personalinfo-tab js-personalinfotab">待评价</div>
+                            </div>
+                            <div class="member-personalinfo-contbox">
+                                <div class="member-personalinfo-listbox cur js-personalinfotabcont">
+                                    <!--全部订单 START-->
+                                    <div class="member-personalinfo-table">
+
+                                    </div>
+                                    <!--全部订单 END-->
+                                </div>
+                                <div class="member-personalinfo-listbox  js-personalinfotabcont">
+                                    <!--待付款 START-->
+                                    <div class="member-personalinfo-table">
+
+                                    </div>
+                                    <!--待付款 END-->
+                                </div>
+                                <div class="member-personalinfo-listbox  js-personalinfotabcont">
+                                    <!--代收款 START-->
+                                    <div class="member-personalinfo-table">
+
+                                    </div>
+                                    <!--代收款 END-->
+                                </div>
+                                <div class="member-personalinfo-listbox  js-personalinfotabcont">
+                                    <!--待评价 START-->
+                                    <div class="member-personalinfo-table">
+
+                                    </div>
+                                    <!--待评价 END-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 个人信息 End-->
+                    </div>
+                    <!-- 内容区域 End-->
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/personal_footer.shtml"-->
+    </div>
+</div>
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
+<script type="text/javascript" src="images/jquery.color.js"></script>
+<script type="text/javascript" src="images/member.js"></script>
+</body>
+</html>
