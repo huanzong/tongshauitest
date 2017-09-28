@@ -11,6 +11,9 @@ $(function() {
 
     }
 
+
+    
+
     /**
      * 自定义插件
      */
@@ -80,7 +83,18 @@ $(function() {
                     return false;
                 });
             });
+        },
+
+        //表单校验展示错误信息--登陆注册页面
+        validShowError:function(errorMsg){
+            $(this).siblings('input').addClass('Validform_error');
+            $(this).html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+        },
+        validHideError:function(){
+            $(this).siblings('input').removeClass('Validform_error');
+            $(this).hide();
         }
+        
     });
 
     /**
