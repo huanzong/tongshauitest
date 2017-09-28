@@ -54,8 +54,39 @@
   }
   .index-about-select{
     .about-bg-gray{
+      position: relative;
       background: #f8f8f8;
       height: 424px;
+      margin-right: -20%;
+      .about-font{
+        position: absolute;
+        bottom: 50px;
+        left: -15%;
+      }
+      .about-china{
+        font-size: 24px;
+        line-height: 35px;
+      }
+      .about-en{
+        font-size: 48px;
+        line-height: 60px;
+        font-family: "Open Sans";
+        @media (max-width: 1199px){
+          font-size: 32px;
+          line-height: 35px;
+        }
+      }
+      .about-icon{
+        position: absolute;
+        right: 0;
+        padding-right: 60px;
+        bottom: 50px;
+        color: @l-red;
+        font-size: 48px;
+        @media (max-width: 1199px){
+          font-size: 32px;
+        }
+      }
     }
   }
 }

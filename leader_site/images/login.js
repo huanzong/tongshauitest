@@ -25,6 +25,28 @@ $(function() {
         //     }, 10);
         // }
     }
+
+    //表单校验
+    var loginPc = $(".js_loginType_pc").Validform({
+        tiptype:3,
+        label:".label",
+        showAllError:true,
+        datatype:{
+            "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+        },
+        ajaxPost:true
+    });
+
+    var loginPhone = $(".js_loginType_phone").Validform({
+        tiptype:3,
+        label:".label",
+        showAllError:true,
+        datatype:{
+            "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+        },
+        ajaxPost:true
+    });
+
     //初始化CheckBox，radio
     $(".js_checkbox,.js_radio").jq_qvote();
 
