@@ -157,13 +157,14 @@
                                 <!--个人头像 START-->
                                 <div class="member-personalinfo-listbox js-personalinfotabcont">
 
-                                        <ul class="member-personalinfo-table2 js-uploadPhoto">
-                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2 ">
+                                        <ul class="o_g member-personalinfo-table2 js-uploadPhoto">
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
                                                 <div class="membe-personalinfo-photo-left">
                                                     <img src="../images/ignore_prodetail3.JPG" alt="">
                                                 </div>
                                             </li>
-                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2" >
+
                                                 <!--<canvas id="js_imgCut"></canvas>-->
                                                 <div class="member-personalinfo-modifyimg">
                                                     <div class="membe-personalinfo-photo-right">
@@ -177,8 +178,8 @@
                                             </li>
                                         </ul>
 
-                                    <ul class="member-personalinfo-table2 meber-personalinfo-photo js-modifyPhoto">
-                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2 ">
+                                    <ul class=" o_g  member-personalinfo-table2 meber-personalinfo-photo js-modifyPhoto">
+                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
                                             <div class="membe-personalinfo-photo-left">
                                                 <div id="preview-pane">
                                                     <div class="preview-container" style="width: 180px;height: 180px;">
@@ -188,7 +189,7 @@
                                             </div>
                                         </li>
                                         <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >
-                                            <img src="../images/ignore_prodetail3.JPG" id="target" width="320px" height="320px" alt="[Jcrop Example]" />
+                                            <img src="../images/ignore_prodetail3.JPG" id="target" width="300px" height="300px" alt="[Jcrop Example]" />
                                         </li>
                                     </ul>
 
