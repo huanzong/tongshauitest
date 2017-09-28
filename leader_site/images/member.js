@@ -232,13 +232,75 @@ $(function() {
     });
 
     //裁剪图片
-    //    var cxt = document.getElementById('js_imgCut');
-    //        cxt =
-    //$('.membe-personalinfo-photo-left').find('img').css({
-    //    //width:$('.jcrop-holder>div').width(),
-    //    //height:$('.jcrop-holder>div').height(),
-    //    'margin-top':-($('.jcrop-holder>div').css('top')),
-    //    'margin-left':-($('.jcrop-holder>div').css('left'))
-    //})
+    jQuery(function($){
+
+        // Create variables (in this scope) to hold the API and image size
+        var jcrop_api,
+            boundx,
+            boundy,
+
+        // Grab some information about the preview pane
+            $preview = $('#preview-pane'),
+            $pcnt = $('#preview-pane .preview-container'),
+            $pimg = $('#preview-pane .preview-container img'),
+
+            xsize = $pcnt.width(),
+            ysize = $pcnt.height();
+        //console.log(xsize,ysize);
+
+        //console.log('init',[xsize,ysize]);
+        $('#target').Jcrop({
+            onChange: updatePreview,
+            onSelect: updatePreview,
+            aspectRatio: xsize / ysize,
+            setSelect: [ 60, 60, 260, 260 ]
+
+        },function(){
+            // Use the API to get the real image size
+            var bounds = this.getBounds();
+            boundx = bounds[0];
+            boundy = bounds[1];
+            // Store the API in the jcrop_api variable
+            //jcrop_api = this;
+
+            // Move the preview into the jcrop container for css positioning
+            //$preview.appendTo(jcrop_api.ui.holder);
+        });
+
+        function updatePreview(c)
+        {
+            if (parseInt(c.w) > 0)
+            {
+                var rx = xsize / c.w;
+                var ry = ysize / c.h;
+
+                $pimg.css({
+                    width: Math.round(rx * boundx) + 'px',
+                    height: Math.round(ry * boundy) + 'px',
+                    marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                    marginTop: '-' + Math.round(ry * c.y) + 'px'
+                });
+            }
+        };
+
+    });
+    //window.onresize=photoInterceptPosition;
+    //
+    //
+    //function photoInterceptPosition(){
+    //    console.log(111);
+    //   var windowWidth =  $(window).width();
+    //    if(windowWidth<992){
+    //        $('.jcrop-holder').css({'top':'0px','left':'0px','right':'0px','bottom':'0px','margin':'auto','position':'absolute'});
+    //        $('#target').css({'width':'250px','height':'250px'});
+    //    }else{
+    //        $('#target').css({'width':'250px','height':'250px'});
+    //
+    //        $('.jcrop-holder').css({'width':'300px','height':'300px'});
+    //
+    //    }
+    //}
+
+
 });
 

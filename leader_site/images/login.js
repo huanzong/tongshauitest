@@ -25,6 +25,12 @@ $(function() {
         //     }, 10);
         // }
     }
+
+    //表单校验
+    $('.js_demo').validShowError("我是错误提示");
+    // $('.js_demo').validHideError();
+    
+    
     //初始化CheckBox，radio
     $(".js_checkbox,.js_radio").jq_qvote();
 

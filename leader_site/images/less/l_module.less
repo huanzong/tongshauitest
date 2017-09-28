@@ -128,6 +128,9 @@
 }
 
 // 表单样式：登录/注册/找回密码
+#Validform_msg{
+	display: none;
+}
 .l-input{
 	position: relative;
 	display: inline-block;
@@ -139,7 +142,7 @@
 		line-height: 38px;
 		text-indent: 20px;
 		&.Validform_error{
-			border: 1px solid @l-orange;
+			border: 1px solid @l-orange!important;
 		}
 	}
 	i{
@@ -185,12 +188,19 @@
 		color: @l-orange;
 		font-size: 12px;
 		line-height: 35px;
+		border: none;
+		text-align: left;
 		i{
 		    position: relative;
 		    left: 0;
 		    top: 0;
 		    font-size: 16px;
 		    padding-right: 5px;
+		}
+		&>i.iconfont{
+			position: relative;
+			left: 0;
+			top: 0;
 		}
 	}
 }
