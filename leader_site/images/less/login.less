@@ -202,7 +202,10 @@
 		margin-top: 10px;
 		padding: 0;
 		width: 75%;
-		color: #666;
+		color: #fff;
+		&.l-btn-disable{
+			color: #666;
+		}
 		@media (min-width: 701px) and (max-width: 991px){
 			width: 60%;
 		}
@@ -216,7 +219,10 @@
 		}
 	}
 	.login-reg{
-		position: relative;
+		@media (min-width:701px) {
+			position: absolute;
+			bottom: 40px;
+		}
 		height: 1px;
 		width: 75%;
 		background: #eee;

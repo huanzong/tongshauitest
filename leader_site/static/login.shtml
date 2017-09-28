@@ -41,6 +41,11 @@
                                                 <i class="iconfont icon-lock-solid"></i>
                                                 <p class="Validform_checktip"></p>
                                             </div>
+                                            <div class="l-input login-input o_borderbox">
+                                                <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
+                                                <a href="javascript:;" class="exchange">换一换</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
+                                            </div>
                                             <div class="login-role">
                                                 <span>
                                                   <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="2周内免登录">
