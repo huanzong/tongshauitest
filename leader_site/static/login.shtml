@@ -34,7 +34,7 @@
                                             <div class="l-input login-input">
                                                 <input type="text" name="username" ph="手机号 / 邮箱 / 用户名" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写手机号 / 邮箱 / 用户名">
                                                 <i class="iconfont icon-member"></i>
-                                                <p class="Validform_checktip"></p>
+                                                <p class="Validform_checktip js_demo"></p>
                                             </div>
                                             <div class="l-input login-input">
                                                 <input type="text" name="password" ph="密码" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写密码">

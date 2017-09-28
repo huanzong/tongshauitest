@@ -11,6 +11,9 @@ $(function() {
 
     }
 
+
+    
+
     /**
      * 自定义插件
      */
@@ -80,7 +83,16 @@ $(function() {
                     return false;
                 });
             });
+        },
+
+        //表单校验展示错误信息--登陆注册页面
+        validShowError:function(errorMsg){
+            $(this).text(errorMsg);
+        },
+        validHideError:function(){
+            $(this).hide();
         }
+        
     });
 
     /**
