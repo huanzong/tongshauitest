@@ -166,7 +166,7 @@
                                             <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2" >
                                                 <!--<canvas id="js_imgCut"></canvas>-->
                                                 <div class="member-personalinfo-modifyimg">
-                                                    <div class="membe-personalinfo-photo-left">
+                                                    <div class="membe-personalinfo-photo-right">
                                                         <img src="../images/ignore_prodetail3.JPG" alt="">
                                                     </div>
                                                     <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
