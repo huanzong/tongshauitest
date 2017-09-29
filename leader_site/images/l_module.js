@@ -125,6 +125,7 @@ $(function() {
                 $(this).html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
             }
         },
+
         //表单校验隐藏错误信息--登陆注册页面
         validHideError:function(){
             if($(this).is('input')){
@@ -134,6 +135,58 @@ $(function() {
                 $(this).siblings('input').removeClass('Validform_error');
                 $(this).html("");
             }                
+        },
+
+        placeholderIe8:function(){
+            var $this =$(this);
+            var text = $this.attr("ph");
+            if (text) {
+                if ($this.val() === "") {
+                    $this.val(text);
+                    $this.css('color','#ccc');
+                }
+            }
+            if($this.attr("type") == "text"){
+                if (!$this.attr('ph')){
+                    return;
+                }
+                $this.blur(function () {
+                    if($this.val() === ''){
+                        $this.val($this.attr("ph"));
+                        $this.css('color','#ccc');
+                    }else{
+                        $this.css('color','#666');
+                    }
+                    //表单校验时触发
+                    if(!$this.attr('phtype')){
+                        $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                        // $this.css('border','1px solid #ccc');
+                    }
+                    
+                }).focus(function () {
+                    $this.validHideError();
+                    if($this.val() == $this.attr("ph")){
+                        $this.val("");
+                        $this.css('color','#666');
+                    }
+                    //表单校验时触发
+                    if(!$this.attr('phtype')){
+                       $this.css('border','1px solid #e60012');
+                    }
+                });
+            }else if($this.attr("type") == "password"){
+                $this.blur(function () {
+                    $this.css('color','#666');
+                    //表单校验时触发
+                    if(!$this.attr('phtype')){
+                        $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                        // $this.css('border','1px solid #ccc');
+                    }
+                    
+                }).focus(function () {
+                    $this.css('border','1px solid #e60012');
+                });
+            }
         }
         
     });
@@ -142,43 +195,7 @@ $(function() {
      * 输入框placeholder支持ie8
      */
     $('input').each(function(){
-        var $this =$(this);
-        var text = $this.attr("ph");
-        if (text) {
-            if ($this.val() === "") {
-                $this.val(text);
-                $this.css('color','#ccc');
-            }
-        }
-        if($this.attr("type") == "text"){
-            if (!$this.attr('ph')){
-                return;
-            }
-            $this.blur(function () {
-                if($this.val() === ''){
-                    $this.val($this.attr("ph"));
-                    $this.css('color','#ccc');
-                }else{
-                    $this.css('color','#666');
-                }
-                //表单校验时触发
-                if(!$this.attr('phtype')){
-                    $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                    // $this.css('border','1px solid #ccc');
-                }
-                
-            }).focus(function () {
-                $this.validHideError();
-                if($this.val() == $this.attr("ph")){
-                    $this.val("");
-                    $this.css('color','#666');
-                }
-                //表单校验时触发
-                if(!$this.attr('phtype')){
-                   $this.css('border','1px solid #e60012');
-                }
-            });
-        }
+        $(this).placeholderIe8();
     });
     $('textarea').each(function(){
         var $this =$(this);

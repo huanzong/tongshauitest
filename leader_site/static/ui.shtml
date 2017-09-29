@@ -441,6 +441,7 @@
     <!-- iconfont END -->
 
 <!--#include virtual="public/foot.shtml"-->
+<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/ui.js"></script>
 </body>
