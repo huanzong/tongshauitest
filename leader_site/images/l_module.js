@@ -87,12 +87,24 @@ $(function() {
 
         //表单校验展示错误信息--登陆注册页面
         validShowError:function(errorMsg){
-            $(this).siblings('input').addClass('Validform_error');
-            $(this).html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+            if($(this).is('input')){
+                $(this).addClass('Validform_error');
+                $(this).siblings('.Validform_checktip').html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+            }else{
+                $(this).siblings('input').addClass('Validform_error');
+                $(this).html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+            }
         },
+        //表单校验隐藏错误信息--登陆注册页面
         validHideError:function(){
-            $(this).siblings('input').removeClass('Validform_error');
-            $(this).hide();
+            if($(this).is('input')){
+                console.log('lalaal');
+                $(this).siblings('.Validform_checktip').html("");
+                $(this).removeClass('Validform_error');
+            }else{
+                $(this).siblings('input').removeClass('Validform_error');
+                $(this).html("");
+            }                
         }
         
     });
@@ -127,6 +139,7 @@ $(function() {
                 }
                 
             }).focus(function () {
+                $this.validHideError();
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
                     $this.css('color','#666');
