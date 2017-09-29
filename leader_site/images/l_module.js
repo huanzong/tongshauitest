@@ -85,6 +85,36 @@ $(function() {
             });
         },
 
+        //密码框：密文明文切换
+        validPassword:function(){
+            //创建明文输入框
+            var ele = $(this).find('input');
+            var el = {
+                ph : $(this).find('input').attr('ph'),
+                className : 'js_L_pwdClear '+ $(this).find('input').attr('class')
+            };
+            $(this).append('<input type="text" name="" value="'+el.ph+'" class="'+el.className+'">');
+
+            $('.js_L_pwdClear').css({
+                'position': 'absolute',
+                'top': 0,
+                'left': 0,
+                'color':'#ccc',
+                'z-index':1
+            });
+
+            var eleReplace = $(this).find('input.js_L_pwdClear');
+            eleReplace.on('focus',function(){
+                $(this).css('z-index','-1');
+                ele.val("");
+                ele.focus();
+            });
+            ele.on('blur',function(){
+                $(this).val() || eleReplace.css('z-index','1');
+            });
+            
+        },
+
         //表单校验展示错误信息--登陆注册页面
         validShowError:function(errorMsg){
             if($(this).is('input')){
@@ -98,7 +128,6 @@ $(function() {
         //表单校验隐藏错误信息--登陆注册页面
         validHideError:function(){
             if($(this).is('input')){
-                console.log('lalaal');
                 $(this).siblings('.Validform_checktip').html("");
                 $(this).removeClass('Validform_error');
             }else{
