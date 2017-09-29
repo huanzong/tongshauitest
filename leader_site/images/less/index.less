@@ -32,10 +32,45 @@
     }
   }
   .index-about-data{
+    @media (max-width: 400px) {
+      width: 100%!important;
+    }
+    .about-select-sm{
+      padding: 40px 0 60px 10px;
+      margin-right: -25%;
+      @media (min-width: 461px) and (max-width: 700px) {
+        margin-right: 0;
+        width: 100%;
+      }
+      @media (max-width: 400px) {
+        margin-right: 0;
+        width: 100%;
+      }
+      .about-china{
+        font-size: 24px;
+        line-height: 40px;
+      }
+      .about-en{
+        font-size: 32px;
+        line-height: 35px;
+        font-family: "Open Sans";
+      }
+    }
     .about-data-box{
       display: inline-block;
-      width: 170px;
-      height: 170px;
+      min-width: 170px;
+      height: 165px;
+      @media (min-width: 701px) and (max-width: 991px) {
+        min-width: 140px;
+      }
+      @media (max-width: 700px) {
+        min-width: 110px;
+        height: 150px;
+        padding-left: 10px;
+      }
+      @media (max-width: 575px) {
+        height: 160px;
+      }
       .data-title{
         display: inline-block;
         width: 12px;
@@ -49,31 +84,56 @@
         height: 100%;
         font-size: 48px;
         line-height: 80px;
+        font-family: "Open Sans"
       }
     }
   }
   .index-about-select{
+    @media (max-width:700px) {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      z-index: -1;
+    }
     .about-bg-gray{
       position: relative;
       background: #f8f8f8;
-      height: 424px;
+      height: 425px;
       margin-right: -20%;
+      @media (min-width: 701px) and (max-width: 1199px){
+        margin-right: -35%;
+      }
+      @media (max-width: 700px){
+        margin-right: 0;
+        height: 660px;
+      }
       .about-font{
         position: absolute;
         bottom: 50px;
-        left: -15%;
+        left: -120px;
+        @media (min-width: 701px) and (max-width: 991px){
+          left: -90px;
+        }
       }
       .about-china{
         font-size: 24px;
         line-height: 35px;
+        @media (min-width: 701px) and (max-width: 991px){
+          font-size: 20px;
+          line-height: 30px;
+        }
       }
       .about-en{
         font-size: 48px;
         line-height: 60px;
         font-family: "Open Sans";
-        @media (max-width: 1199px){
+        @media (min-width: 992px) and (max-width: 1199px){
           font-size: 32px;
           line-height: 35px;
+        }
+        @media (min-width: 701px) and (max-width: 991px){
+          font-size: 24px;
+          line-height: 30px;
         }
       }
       .about-icon{
@@ -85,6 +145,13 @@
         font-size: 48px;
         @media (max-width: 1199px){
           font-size: 32px;
+        }
+        @media (max-width: 991px) {
+          font-size: 24px;
+          right: -30px;
+        }
+        @media (max-width: 700px) {
+          bottom: 30px;
         }
       }
     }

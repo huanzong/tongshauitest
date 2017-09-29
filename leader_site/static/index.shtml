@@ -53,17 +53,21 @@
 		    <!-- 关于统帅 -->
 		    <div class="o_g index-about">
 		    	<div class="o_g index-about-bg o_sm-hide o_xs-hide">
-	       			<div class="o_u o_df_4-12 o_lg_6-12">
+	       			<div class="o_u o_df_4-12 o_lg_6-12 o_md_6-12">
 	       				<span></span>
 	       			</div>
 	       		</div>
 		       <div class="o_u o_df_1-12"></div>
 		       <div class="o_u o_df_10-12">
 		       		<div class="o_g">
-		       			<div class="o_u o_df_4-10 o_lg_5-10 index-about-data">
+		       			<div class="o_u o_df_4-10 o_lg_1-2 o_md_1-2 o_sm_3-5 o_xs_3-4 index-about-data">
+		       				<div class="o_u o_df-hide o_sm-show o_xs-show about-select-sm">
+	       						<div class="about-china">选择统帅</div>
+		       					<div class="about-en">WHY CHOOSE US</div>
+		       				</div>
 		       				<div class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
-		       					<div class="data-num">434</div>
+		       					<div class="data-num">43</div>
 		       				</div>
 		       				<div class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
@@ -86,11 +90,11 @@
 		       					<div class="data-num">38</div>
 		       				</div>
 			       		</div>
-			       		<div class="o_u o_df_6-10 o_lg_5-10 index-about-select">
-			       			<div class="o_u o_df_1-6 o_lg_2-5"></div>
-			       			<div class="o_u o_df_5-6 o_lg_3-5">
+			       		<div class="o_u o_df_6-10 o_lg_1-2 o_md_1-2 o_sm_1-3 o_xs_1-2 index-about-select">
+			       			<div class="o_u o_df_1-6 o_lg_2-5 o_md_2-5 o_sm_hide o_xs-hide"></div>
+			       			<div class="o_u o_df_5-6 o_lg_3-5 o_md_3-5 o_sm_2-2 o_xs_2-2">
 			       				<div class="about-bg-gray">
-			       					<div class="about-font">
+			       					<div class="about-font o_sm-hide o_xs-hide">
 			       						<div class="about-china">选择统帅</div>
 				       					<div class="about-en">WHY CHOOSE US</div>
 			       					</div>
