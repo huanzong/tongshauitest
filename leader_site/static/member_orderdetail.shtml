@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-订单详情</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="images/member.css">
+
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/member_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+                <div class="member-security-width js-securityheight">
+                    <div class="member-security-tit">
+                        <p>订单详情</p>
+                    </div>
+                    <!-- 内容区域 START-->
+                    <div class="member-security-contbox">
+                        <!-- 个人信息 START-->
+                        <div class="member-personalinfo">
+                            <div class="member-personalinfo-contbox">
+                                <div class="member-personalinfo-listbox cur js-personalinfotabcont">
+                                    <!--全部订单 START-->
+
+                                    <div class="member-order-table member-orderdetail-table">
+                                        <div class="member-order-title">
+                                            <span class="member-order-title-ordertext o_u o_sm_2-2 o_xs_2-2">订单号： <span class="member-order-title-ordernub">2017061428818</span></span>
+                                            <div class="member-order-title-btns">
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-line2">取消订单</a>
+                                            </div>
+                                        </div>
+                                        <div class="member-orderdetail-cont">
+                                            <div class="member-orderdetail-title">
+                                                <!--<span>预计送货：<i>08月07日（周一） 22:00</i></span><span>收货确认码：<i>169063</i></span>-->
+
+                                                <div class="member-orderdetail-status-box">
+                                                    <ul class="member-orderdetail-status o_g">
+                                                        <li class="member-orderdetail-status-now o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <div class="member-orderdetail-status-strip "></div>
+                                                            <p class="member-orderdetail-status-text">提交订单</p>
+                                                            <div  class="member-orderdetail-status-data">2017-06-14 08:23:42</div>
+                                                        </li>
+                                                        <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <div class="member-orderdetail-status-strip "></div>
+                                                            <p class="member-orderdetail-status-text">等待付款</p>
+                                                            <div  class="member-orderdetail-status-data"></div>
+                                                        </li>
+                                                        <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <div class="member-orderdetail-status-strip "></div>
+                                                            <p class="member-orderdetail-status-text">订单确认</p>
+                                                            <div  class="member-orderdetail-status-data"></div>
+                                                        </li>
+                                                        <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <div class="member-orderdetail-status-strip "></div>
+                                                            <p class="member-orderdetail-status-text">商品出库</p>
+                                                            <div  class="member-orderdetail-status-data"></div>
+                                                        </li>
+                                                        <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <div class="member-orderdetail-status-strip "></div>
+                                                            <p class="member-orderdetail-status-text">送货到家</p>
+                                                            <div  class="member-orderdetail-status-data"></div>
+                                                        </li>
+                                                        <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <div class="member-orderdetail-status-strip "></div>
+                                                            <p class="member-orderdetail-status-text">完成</p>
+                                                            <div  class="member-orderdetail-status-data"></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <div class="o_g member-orderdetail-infobox">
+                                                <div class="member-orderdetail-infocont o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2" >
+                                                    <h4>收货人信息</h4>
+                                                    <p><span>姓名：</span><i>某某某</i></p>
+                                                    <p><span>联系电话：</span><i>15454651123</i></p>
+                                                    <p><span>操作：</span><i>广东 广州 白云区小区街道112号</i></p>
+                                                </div>
+                                                <div class="member-orderdetail-infocont o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2" >
+                                                    <h4>支付信息</h4>
+                                                    <p><span>支付方式：</span><i>微信支付</i></p>
+                                                    <p><span>支付时间：</span><i>2017-08-22 13:13</i></p>
+                                                </div>
+                                                <div class="member-orderdetail-infocont o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2" >
+                                                    <h4>发票信息</h4>
+                                                    <p><span>发票类型：</span><i>电子发票（个人）</i></p>
+                                                    <p><span>发票抬头：</span><i>广州白云有限公司</i></p>
+                                                    <p><span>操作：</span><a href="javascript:;">下载发票</a></p>
+                                                </div>
+                                            </div>
+                                            <ul class="member-order-list-box">
+                                                <li class="member-order-list-conttitle">
+                                                    <h4>商品清单</h4>
+                                                </li>
+                                                <li class="o_g member-order-list-cont member-orderdetail-list-cont">
+                                                    <div class="member-order-list-img member-orderdetail-list-img">
+                                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                                    </div>
+                                                    <div class="member-order-list-text o_u  o_xs_2-3">
+                                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                                        <span>BCD-323WLDPN</span>
+                                                    </div>
+                                                    <div class="member-order-list-nub">
+                                                        <span>&yen;1799x1</span>
+                                                    </div>
+                                                </li>
+                                                <li class="o_g member-order-list-cont member-orderdetail-list-cont">
+                                                    <div class="member-order-list-img ">
+                                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                                    </div>
+                                                    <div class="member-order-list-text  o_u  o_xs_2-3">
+                                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                                        <span>BCD-323WLDPN</span>
+                                                    </div>
+                                                    <div class="member-order-list-nub ">
+                                                        <span>&yen;1799x1</span>
+                                                    </div>
+                                                </li>
+                                                <li class="o_g member-order-list-cont member-order-advert">
+                                                    <div class="member-order-list-img">
+                                                        <img src="../images/advert_img.PNG" alt="" >
+                                                    </div>
+                                                    <div class="member-order-list-text ">
+                                                        <h4>金岁月扫地机器人 <span>x1</span></h4>
+                                                        <span>赠品将在您确认收货，并上传相关资料后发出 <i>了解详细规则</i></span>
+                                                    </div>
+                                                    <div class="member-order-list-nub">
+                                                        <span>x1</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="o_g member-orderdetail-bottom">
+                                            <div class="member-orderdetail-bottomcont">
+                                                <span>商品总额：<i>￥3589</i></span>
+                                                <span>优惠组合：<i>￥199</i></span>
+                                                <span>优惠券优惠：<i>￥300</i></span>
+                                                <div class="member-orderdetail-bottomtotal"><span>应付款金额：</span><i>￥3099</i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--全部订单 END-->
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 个人信息 End-->
+                    </div>
+                    <!-- 内容区域 End-->
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/personal_footer.shtml"-->
+    </div>
+</div>
+
+
+
+<!-- Swiper -->
+
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
+<script type="text/javascript" src="images/jquery.color.js"></script>
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/member.js"></script>
+<!--<script>-->
+    <!--var mySwiper = new Swiper('.swiper-container', {-->
+        <!--slidesPerView: 4-->
+
+    <!--});-->
+<!--</script>-->
+</body>
+</html>

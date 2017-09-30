@@ -27,7 +27,7 @@ $(function() {
     }
 
     //表单校验
-    $('.js_demo').validShowError("我是错误提示");
+    $('.js_demo').validShowError('我是错误提示<a href="javascript:;" class="validLink">我是链接</a>');
     // $('.js_demo').validHideError();
     
     //密码密文明文转化
