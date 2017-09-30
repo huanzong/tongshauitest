@@ -45,7 +45,7 @@
                                         </div>
                                         <div class="member-orderdetail-cont">
                                             <div class="member-orderdetail-title">
-                                                <span>预计送货：<i>08月07日（周一） 22:00</i></span><span>收货确认码：<i>169063</i></span>
+                                                <!--<span>预计送货：<i>08月07日（周一） 22:00</i></span><span>收货确认码：<i>169063</i></span>-->
 
                                                 <div class="member-orderdetail-status-box">
                                                     <ul class="member-orderdetail-status o_g">
