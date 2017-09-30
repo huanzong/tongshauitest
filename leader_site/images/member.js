@@ -10,10 +10,26 @@ $(function() {
         init();
     });
 
+    var subMenuHeight = $('.member-menucont').height();
+    var sxMenuHeight = $('.o_body').height();
+    var contHeight = $('.js-securityheight').height();
+    window.onresize=function(){
+        screenWidth = document.body.offsetWidth;
 
+        if(contHeight > navMinHeight){
+            if(screenWidth>= 576){
+                $('.js-nav').css('height',contHeight);
+                $('.js-membercontbox').css('height',contHeight);
+                $('.js-submenu').css('height',contHeight);
+                $('.js-submenucount').css('height',contHeight);
+                $('.js-submenubtn').css('height',contHeight);
+            }else{
+                $('.js-nav').css('height','auto');
+            }
 
+        }
+    }
     function init() {
-
         // var screenHeight = document.body.offsetHeight;
 
         // var nvawidthXl = document.body.offsetWidth/6+240;
@@ -26,9 +42,7 @@ $(function() {
         // var contwidthMd = document.body.offsetWidth - nvawidthMd;
         // var contwidthSm = document.body.offsetWidth - nvawidthSm;
 
-        var subMenuHeight = $('.member-menucont').height();
-        var sxMenuHeight = $('.o_body').height();
-        var contHeight = $('.js-securityheight').height();
+
 
         if(contHeight > navMinHeight){
             if(screenWidth>= 576){
@@ -40,6 +54,7 @@ $(function() {
             }
 
         }
+
 
         if(screenWidth>= 1200){
             $('.js-nav').css('min-height',navMinHeight);
