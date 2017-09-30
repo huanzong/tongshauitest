@@ -105,12 +105,14 @@ $(function() {
 
             var eleReplace = $(this).find('input.js_L_pwdClear');
             eleReplace.on('focus',function(){
-                $(this).css('z-index','-1');
+                // $(this).css('z-index','-1');
+                $(this).hide();
                 ele.val("");
                 ele.focus();
             });
             ele.on('blur',function(){
-                $(this).val() || eleReplace.css('z-index','1');
+                // $(this).val() || eleReplace.css('z-index','1');
+                $(this).val() || eleReplace.show();
             });
             
         },
