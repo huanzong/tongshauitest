@@ -35,18 +35,18 @@ $(function() {
 
     }
     //倒计时
-    sendTime();
-    var wait = 5;
-    function sendTime() {
-        if (wait == 0) {
-            //window.location.href =""
-            wait = 5;
-        } else {
-            $("#js_time").html(wait);
-            wait--;
-            var activecodetime= setTimeout(function() {
-                sendTime()
-            },1000)
-        }
-    }
+    // sendTime();
+    // var wait = 5;
+    // function sendTime() {
+    //     if (wait == 0) {
+    //         //window.location.href =""
+    //         wait = 5;
+    //     } else {
+    //         $("#js_time").html(wait);
+    //         wait--;
+    //         var activecodetime= setTimeout(function() {
+    //             sendTime()
+    //         },1000)
+    //     }
+    // }
 });
