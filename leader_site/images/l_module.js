@@ -178,14 +178,17 @@ $(function() {
                 });
             }else if($this.attr("type") == "password"){
                 $this.blur(function () {
-                    $this.css('color','#666');
-                    //表单校验时触发
-                    if(!$this.attr('phtype')){
-                        $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                        // $this.css('border','1px solid #ccc');
-                    }
-                    
+                    setTimeout(function(){//为了牛牛--先校验是否符合规则，再添加样式
+                        $this.css('border','1px solid #ccc');
+                        $this.css('color','#666');
+                        //表单校验时触发
+                        if(!$this.attr('phtype')){
+                            $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                            // $this.css('border','1px solid #ccc');
+                        }
+                    },300);
                 }).focus(function () {
+                    $this.validHideError();
                     $this.css('border','1px solid #e60012');
                 });
             }
