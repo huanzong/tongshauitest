@@ -5,7 +5,6 @@ $(function() {
      */
     function lineAnimate($ele,t){
 
-        $ele.css('z-index','0');
         $ele.siblings().hide();
 
         setTimeout(function(){
@@ -35,12 +34,10 @@ $(function() {
         },1000);
         var showTime = 200*($ele.find('span').size()+1);
         setTimeout(function(){
+            $ele.find('.index_animate').css('z-index','-11');
             $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
             $ele.siblings(":not(.js_ignorAnimate)").css('z-index','1');
         },showTime);
-        setTimeout(function(){
-            
-        },showTime+1000);
     }
 
     lineAnimate($('.js_animateLine'),1000);
