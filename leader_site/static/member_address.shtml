@@ -16,7 +16,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g  ">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -28,7 +28,7 @@
                         <a href="javascript:;" class="l-btn-normal l-btn-red">新增地址</a>
                     </div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 地址管理 START-->
                         <div class="member-address">
                             <div class="member-address-title">添加新地址</div>

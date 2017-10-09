@@ -16,7 +16,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g ">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -25,7 +25,7 @@
                 <div class="member-security-width js-securityheight">
                     <div class="member-security-tit"><p>修改手机</p></div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 修改手机 START-->
                         <div class="member-revisemob o_g">
                             <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-three">
@@ -46,8 +46,8 @@
                         </div>
                         <div class="member-security-bingmob member-security-revisemob-martop">
                             <div class="o_g member-bingmob-list">
-                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_5-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证方式</div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_5-6 selectbox member-bingmob-listipt">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证方式</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 selectbox member-bingmob-listipt">
                                     <div>
                                         <select name="" id="js_unbindmob"  autotext="手机（157****3370）">
                                             <option value="0">--手机（166****3370）--</option>
@@ -59,16 +59,16 @@
                             </div>
 
                             <div class="o_g member-bingmob-list">
-                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_5-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">短信验证</div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_5-6 l-input member-bingmob-listipt">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">短信验证</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
                                     <input type="text" name="" ph="短信验证码">
                                     <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送验证短信</a>
                                 </div>
                             </div>
 
                             <div class="o_g member-bingmob-list">
-                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_5-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_5-6 member-bingmob-listipt-enterbtn">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
                                     <a href="javascript:;" class="l-btn-normal l-btn-red ">确定</a>
                                 </div>
                             </div>

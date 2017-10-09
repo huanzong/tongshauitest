@@ -83,7 +83,7 @@
             </div>
 
         </div>
-        <div class="member-menubtnbox js-submenubtn">
+        <div class="member-menubtnbox js-submenubtn" data-alt="1">
             <div class="member-menubtnarea">
                 <i class="iconfont icon-menu1 member-openbtn js-openbtn"></i>
                 <i class="iconfont icon-menu member-xsopenbtn js-xsopenbtn"></i>

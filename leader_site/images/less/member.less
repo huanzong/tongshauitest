@@ -26,7 +26,7 @@
 		height: 100%;
 		background: url("member_navbg.jpg") center center;
 		background-size: cover;
-		border-right: 1px solid #eee;
+		//border-right: 1px solid #eee;
 		box-sizing: border-box;
 		text-align: center;
 
@@ -594,6 +594,8 @@
 		top: 0;
 		right: -240px;
 		z-index: 4;
+		background: #f9f8f8;
+
 
 		@media (min-width: 992px) and (max-width: 1199px) {
 			/* lg*/
@@ -627,6 +629,7 @@
 			width: 240px;
 			float: left;
 			border-right: 1px solid #eee;
+			border-left: 1px solid #eee;
 			box-sizing: border-box;
 			background: #fff;
 			padding-top: 26px;
@@ -2459,7 +2462,8 @@
 					white-space: nowrap;
 					overflow-y: hidden;
 					overflow-x: scroll;
-					.member-personalinfo-tab {
+
+					.member-personalinfo-tab  {
 						width: auto;
 						padding: 0 30px;
 						display: inline-block;
@@ -2473,12 +2477,18 @@
 						cursor: pointer;
 					}
 
+
 					.member-personalinfo-tab.cur {
 						color: @l-red;
 						border-bottom: 1px solid @l-red;
 					}
 				}
-
+				.member-personalinfo-tabbox2{
+					overflow: inherit;
+					.member-personalinfo-tab{
+						height: 80px;
+					}
+				}
 				.member-personalinfo-contbox {
 					width: 100%;
 					display: inline-block;

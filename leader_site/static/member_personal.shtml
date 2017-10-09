@@ -17,7 +17,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -28,10 +28,10 @@
                         <p>个人信息</p>
                     </div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                        <div class="member-security-contbox js-contRightContBox">
                         <!-- 个人信息 START-->
                         <div class="member-personalinfo">
-                            <div class="member-personalinfo-tabbox">
+                            <div class="member-personalinfo-tabbox member-personalinfo-tabbox2">
                                 <div class="member-personalinfo-tab cur js-personalinfotab">基本资料</div>
                                 <div class="member-personalinfo-tab js-personalinfotab">个人头像</div>
                             </div>
