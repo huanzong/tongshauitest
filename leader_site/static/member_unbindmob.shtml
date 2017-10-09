@@ -16,7 +16,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -25,7 +25,7 @@
                 <div class="member-security-width js-securityheight">
                     <div class="member-security-tit"><p>解绑手机</p></div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 解绑手机 START-->
                         <div class="member-unbingmob o_g">
                             <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-unbingmob-text">解绑后，您将无法再使用 <span>157****3370</span> 进行登录，密码重置或其他安全验证</div>

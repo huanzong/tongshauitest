@@ -16,7 +16,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -25,7 +25,7 @@
                 <div class="member-security-width js-securityheight">
                     <div class="member-security-tit"><p>绑定手机</p></div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 绑定手机 START-->
                         <div class="member-security-bingmob" style="display: none">
                             <div class="o_g member-bingmob-list">

@@ -18,7 +18,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g " >
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -29,7 +29,7 @@
                         <p>我的订单</p>
                     </div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 个人信息 START-->
                         <div class="member-personalinfo">
                             <div class="member-personalinfo-tabshade">
