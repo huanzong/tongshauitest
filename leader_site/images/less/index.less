@@ -2,28 +2,29 @@
 
 //banner
 .index-banner{
+  background: #fff;
   .banner-info{
-    position: relative;
+    text-align: center;
     .banner-middle-box{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-    }
-    .banner-middle{
-      position: relative;
-      top: -50%;left: -50%;
+      text-align: center;
     }
     .info-main{
-      display: inline-block;
       font-size: 32px;
       color: #333;
       width: 45px;
     }
     .info-sub{
-      display: inline-block;
       font-size: 20px;
       color: #999;
-      width: 25px;
+      width: 23px;
+    }
+    .info-main,.info-sub{
+      display: inline-block;
+      text-indent: 0;
+      text-align: left;
+      span{
+        // float: left;
+      }
     }
   }
 }

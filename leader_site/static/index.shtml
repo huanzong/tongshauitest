@@ -48,17 +48,15 @@
 		    <div class="o_g index-banner">
 				<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide">
 					<div class="banner-middle-box">
-						<div class="banner-middle">
-							<div class="info-main">
-				       			在这个做作的时代
-				       		</div>
-				       		<div class="info-main">
-				       			海尔真诚到永远真诚到永远
-				       		</div>
-				       		<div class="info-sub">
-				       			我选择做真实的自己
-				       		</div>
-						</div>
+						<div class="info-main">
+			       			<span>在这个做作的时代</span>
+			       		</div>
+			       		<div class="info-main">
+			       			<span>海尔真诚到永远真诚到永远</span>
+			       		</div>
+			       		<div class="info-sub">
+			       			<span>我选择做真实的自己</span>
+			       		</div>
 					</div>			       		
 				</div>
 				<div class="o_u o_df_5-6">
