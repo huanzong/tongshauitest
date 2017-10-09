@@ -50,7 +50,7 @@
                                                 <span>
                                                   <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="2周内免登录">
                                                 </span>
-                                                <span class="l-fr">忘记密码</span>
+                                                <a class="forget-psw l-fr">忘记密码</a>
                                                 <i class="iconfont icon-problem-solid l-fr"></i>
                                                 <p class="Validform_checktip"></p>
                                             </div>

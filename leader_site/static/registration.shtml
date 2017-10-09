@@ -42,7 +42,7 @@
                                                 <div class="l-input">
                                                     <input type="text" name="username" ph="请输入常用手机号">
                                                     <i class="iconfont icon-member"></i>
-                                                    <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号</p>
+                                                    <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号<a href="javascript:;" class="validLink">请输入常用手机号</a></p>
                                                 </div>
                                             </div>
                                             <div class="reg-input">
