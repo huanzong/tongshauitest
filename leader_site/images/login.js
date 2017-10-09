@@ -7,25 +7,12 @@ $(function() {
     });
 
     function init() {
-        //默认电脑登陆
-        // $('.js_loginType_pc').show();
-        // $('.js_loginType_phone').hide();
-
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
-        // var loginHeight = $('.js_center').height();
-
-        // if (screenWidth <= 700) {
-        //     setTimeout(function() {
-        //         $('.js_center').css('margin-top',0);
-        //     }, 10);
-        // } else {
-        //     setTimeout(function() {
-        //         $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-20)+'px');
-        //     }, 10);
-        // }
     }
 
+    //默认电脑登陆
+    $('.js_loginType_phone').hide();
     //表单校验
     $('.js_demo').validShowError('我是错误提示<a href="javascript:;" class="validLink">我是链接</a>');
     // $('.js_demo').validHideError();
