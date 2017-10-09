@@ -19,7 +19,7 @@ $(function() {
 
 	    loop: true,
 	    autoplay: 3000,
-	    
+
 	    onSlideChangeEnd: function(swiper){
 	    	var index = swiper.activeIndex;
 	    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
@@ -34,6 +34,28 @@ $(function() {
 	    e.preventDefault();
 	    swiper.recommendSwiper.swipeNext();
 	  });
+
+
+    swiper.entrabceSwiper = new Swiper ('.js_swiperEntrabce', {
+
+      loop: true,
+      // autoplay: 3000,
+
+      onSlideChangeEnd: function(swiper){
+        var index = swiper.activeIndex;
+        var imgSrc = $('.js_swiperEntrabce .swiper-slide').eq(index).find('img').attr('src');
+        $('.js_recImgSmall').attr('src',imgSrc);
+      }
+    });
+    $('.js_swiperEntrabcePrev').on('click', function(e){
+      e.preventDefault();
+      swiper.entrabceSwiper.swipePrev();
+    });
+    $('.js_swiperEntrabceNext').on('click', function(e){
+      e.preventDefault();
+      swiper.entrabceSwiper.swipeNext();
+    });
+
 
 	  //推荐商品图片-响应式
 	  $(".js_recPic").each(function(){
