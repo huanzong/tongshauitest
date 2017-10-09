@@ -7,7 +7,7 @@ $(function() {
     init();
     $(window).resize(function() {
         screenWidth = document.body.offsetWidth;
-        console.log('www',screenWidth);
+        //console.log('www',screenWidth);
         init();
         var btnData = $('.js-submenubtn').attr('data-alt');
         if (screenWidth < 576) {
@@ -41,7 +41,7 @@ $(function() {
 
     var sxMenuHeight = $('.o_body').height();
         $('.js-submenubtn').click(function() {
-            console.log(screenWidth, 1111);
+            //console.log(screenWidth, 1111);
             var btnData = $(this).attr('data-alt');
             if (screenWidth <= 991 && screenWidth >= 576) {
                 if (btnData == 1) {
@@ -89,7 +89,7 @@ $(function() {
         $('.js-submenu').height(contHeight);
         $('.js-submenubtn').height(contHeight);
         $('.js-membercontbox').height(contHeight);
-        console.log(contHeight);
+        //console.log(contHeight);
         if(windowWidth<576){
             $('.js-personal').height('auto');
             $('.js-submenubtn').height('auto');
