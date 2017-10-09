@@ -1,17 +1,48 @@
 $(function() {
 
+  init();
+
+  $(window).resize(function() {
     init();
+  });
 
-    $(window).resize(function() {
-        init();
+  function init() {
+
+    var screenWidth = document.body.offsetWidth;
+    var screenHeight = document.body.offsetHeight;
+
+  }
+
+  var swiper = {};//用来存放所有轮播
+	setTimeout(function(){
+	  swiper.recommendSwiper = new Swiper ('.js_swiperRecMain', {
+
+	    loop: true,
+	    autoplay: 3000,
+	    
+	    onSlideChangeEnd: function(swiper){
+	    	var index = swiper.activeIndex;
+	    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+	      $('.js_recImgSmall').attr('src',imgSrc);
+	    }
+		});
+		$('.js_swiperRecMainPrev').on('click', function(e){
+    	e.preventDefault();
+	    swiper.recommendSwiper.swipePrev();
+	  });
+	  $('.js_swiperRecMainNext').on('click', function(e){
+	    e.preventDefault();
+	    swiper.recommendSwiper.swipeNext();
+	  });
+
+	  //推荐商品图片-响应式
+	  $(".js_recPic").each(function(){
+        $(this).oPicture({
+            //自定义节点宽度
+            //sm:544,md:700,lg:992,xl:1200,
+        }).init();
     });
-
-    function init() {
-
-        var screenWidth = document.body.offsetWidth;
-        var screenHeight = document.body.offsetHeight;
-
-    }
+	},2000);
 });
 
 

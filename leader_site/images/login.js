@@ -8,8 +8,8 @@ $(function() {
 
     function init() {
         //默认电脑登陆
-        $('.js_loginType_pc').show();
-        $('.js_loginType_phone').hide();
+        // $('.js_loginType_pc').show();
+        // $('.js_loginType_phone').hide();
 
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
