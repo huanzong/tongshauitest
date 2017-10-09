@@ -37,11 +37,19 @@ $(function() {
 
 	  //推荐商品图片-响应式
 	  $(".js_recPic").each(function(){
-        $(this).oPicture({
-            //自定义节点宽度
-            //sm:544,md:700,lg:992,xl:1200,
-        }).init();
+      $(this).oPicture({
+          //自定义节点宽度
+          //sm:544,md:700,lg:992,xl:1200,
+      }).init();
     });
+
+    //banner左侧高度跟随
+    $('.js_bannerInfo').oHrel({
+      obj:'$(this).next()'
+    }).init();
+    //banner左侧文字居中
+    $(".js_bannnerCenter").oBoxCenter().init();
+
 	},2000);
 });
 

@@ -4,28 +4,38 @@
 .index-banner{
   background: #fff;
   .banner-info{
+    height: 100%;
     text-align: center;
     .banner-middle-box{
       text-align: center;
+      height: 100%;
     }
     .info-main{
       font-size: 32px;
       color: #333;
       width: 45px;
+      height: 100%;
     }
     .info-sub{
       font-size: 20px;
       color: #999;
       width: 23px;
+      height: 100%;
     }
     .info-main,.info-sub{
+      position: relative;
       display: inline-block;
-      text-indent: 0;
       text-align: left;
-      span{
-        // float: left;
-      }
     }
+  }
+  .banner-img{
+    position: relative;
+    margin-right: -5.55%;
+  }
+  .banner-page{
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 //统帅入口
