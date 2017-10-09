@@ -46,21 +46,29 @@
 
 			<!-- 首页banner -->
 		    <div class="o_g index-banner">
-				<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide">
+				<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
 					<div class="banner-middle-box">
 						<div class="info-main">
-			       			<span>在这个做作的时代</span>
+							<div class="js_bannnerCenter">
+								<span>在这个做作的时代</span>
+							</div>
 			       		</div>
 			       		<div class="info-main">
-			       			<span>海尔真诚到永远真诚到永远</span>
+			       			<div class="js_bannnerCenter">
+								<span>海尔真诚到永远真诚到永远</span>
+							</div>
 			       		</div>
 			       		<div class="info-sub">
-			       			<span>我选择做真实的自己</span>
+			       			<div class="js_bannnerCenter">
+								<span>在这个做作的时代</span>
+							</div>
 			       		</div>
 					</div>			       		
 				</div>
-				<div class="o_u o_df_5-6">
-					<img src="images/nav_bg_lg.PNG" style="width: 100%;">
+				<div class="o_u o_df_3-4 js_bannerInfoOHerl">
+					<div class="banner-img">
+						<img src="images/index_banner.jpg" style="width: 100%;">
+					</div>
 				</div>
 		    </div>
 		    <!-- 首页banner END -->
