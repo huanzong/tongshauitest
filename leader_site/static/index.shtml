@@ -55,7 +55,7 @@
 			       		</div>
 			       		<div class="info-main">
 			       			<div class="js_bannnerCenter">
-								<span>海尔真诚到永远真诚到永远</span>
+								<span>海尔真诚到永远真诚到</span>
 							</div>
 			       		</div>
 			       		<div class="info-sub">
@@ -65,12 +65,44 @@
 			       		</div>
 					</div>
 					<div class="banner-page">
-						<div class="page-"></div>
+						<div class="page-num active">
+							<div class="line">
+								<div class="red-line"></div>
+							</div>
+							<div class="num">01</div>
+						</div>
+						<div class="page-num">
+							<div class="line">
+								<div class="red-line"></div>
+							</div>
+							<div class="num">02</div>
+						</div>
+						<div class="page-num">
+							<div class="line">
+								<div class="red-line"></div>
+							</div>
+							<div class="num">03</div>
+						</div>
 					</div>			       		
 				</div>
 				<div class="o_u o_df_3-4 js_bannerInfoOHerl">
 					<div class="banner-img">
-						<img src="images/index_banner.jpg" style="width: 100%;">
+						<div class="swiper-container js_bannerSwiper">
+						    <div class="swiper-wrapper">
+						        <div class="swiper-slide">
+							        <a href="javascript:;">
+							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
+							        	<img class="" src="images/index_banner.JPG">
+							        </a>
+						        </div>
+						        <div class="swiper-slide">
+									<a href="javascript:;">
+							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
+							        	<img class="" src="images/index_banner.JPG">
+							        </a>
+						        </div>
+						    </div>
+						</div>
 					</div>
 				</div>
 		    </div>

@@ -15,6 +15,32 @@ $(function() {
 
   var swiper = {};//用来存放所有轮播
 	setTimeout(function(){
+
+		//banner轮播
+		swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
+			loop: true,
+	    autoplay: 3000,
+	    
+	    onSlideChangeEnd: function(swiper){
+	    	var index = swiper.activeIndex;
+	    	// var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+	     	// $('.js_recImgSmall').attr('src',imgSrc);
+	    }
+		});
+
+		setTimeout(function(){
+
+			//banner左侧高度跟随
+	    $('.js_bannerInfo').oHrel({
+	      obj:'$(this).next()'
+	    }).init();
+	    //banner左侧文字居中
+	    $(".js_bannnerCenter").oBoxCenter().init();
+
+		},1000);
+	    
+
+		//产品推荐轮播
 	  swiper.recommendSwiper = new Swiper ('.js_swiperRecMain', {
 
 	    loop: true,
@@ -42,13 +68,6 @@ $(function() {
           //sm:544,md:700,lg:992,xl:1200,
       }).init();
     });
-
-    //banner左侧高度跟随
-    $('.js_bannerInfo').oHrel({
-      obj:'$(this).next()'
-    }).init();
-    //banner左侧文字居中
-    $(".js_bannnerCenter").oBoxCenter().init();
 
 	},2000);
 });
