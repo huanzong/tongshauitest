@@ -8,8 +8,8 @@ $(function() {
 
     function init() {
         //默认电脑登陆
-        $('.js_loginType_pc').show();
-        $('.js_loginType_phone').hide();
+        // $('.js_loginType_pc').show();
+        // $('.js_loginType_phone').hide();
 
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
@@ -31,7 +31,7 @@ $(function() {
     // $('.js_demo').validHideError();
     
     //密码密文明文转化
-    $('.js_password').validPassword();
+    //$('.js_password').validPassword();
     
     //初始化CheckBox，radio
     $(".js_checkbox,.js_radio").jq_qvote();

@@ -1,5 +1,415 @@
 @import "l_variable";
 
+//banner
+.index-banner{
+  .banner-info{
+    position: relative;
+    .banner-middle-box{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+    .banner-middle{
+      position: relative;
+      top: -50%;left: -50%;
+    }
+    .info-main{
+      display: inline-block;
+      font-size: 32px;
+      color: #333;
+      width: 45px;
+    }
+    .info-sub{
+      display: inline-block;
+      font-size: 20px;
+      color: #999;
+      width: 25px;
+    }
+  }
+}
+//统帅入口
+.index-enter{
+  background: #fff;
+  padding: 60px 0;
+  .enter-con{
+    padding: 30px 0;
+    width: 14.28%;
+    text-align: center;
+    .enter-con-icon{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      width: 32px;
+      height: 32px;
+      background: url(nav_icon.png) no-repeat;
+    }
+    .enter-con-en{
+      display: block;
+      line-height: 20px;
+      font-family: "Open Sans";
+      font-size: 12px;
+      color: #666;
+      @media (max-width: 575px) {
+        font-size: 10px;
+        -webkit-text-size-adjust:none;//小字体兼容
+      }
+    }
+    .enter-con-china{
+      display: block;
+      line-height: 20px;
+      font-family: "Myriad Pro";
+      font-size: 12px;
+      color: #000;
+      @media (max-width: 575px) {
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+      }
+    }
+    .enter-con-point{
+      margin: 23px auto 0;
+      width: 4px;
+      span{
+        display: block;
+        padding-top: 2px;
+        border-radius: 5px;
+        width: 4px;
+        height: 4px;
+        background: #ccc;
+      }
+    }
+  }
+}
+
+//推荐产品
+.index-recommend{
+  position: relative;
+  @media (min-width: 1770px) {
+    height: 1060px;
+  }
+  @media (max-width: 1769px) and (min-width:1200px){
+    height: 850px;
+  }
+  @media (min-width: 992px) and (max-width:1199px) {
+    height: 570px;
+  }
+  @media (min-width: 701px) and (max-width:991px) {
+    height: 540px;
+  }
+  @media (min-width: 576px) and (max-width:700px) {
+    min-height: 845px;
+  }
+  @media (max-width:575px) {
+    // min-height: 757px;
+  }
+  .recommend-img-small{
+    @media (max-width: 991px) {
+      position: relative;
+      margin-left: -100%;
+    }
+  }
+  .recommend-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid @l-red;
+    height: 370px;
+    width: 33.33%;
+    @media (min-width: 992px) and (max-width:1199px) {
+      height: 200px;
+    }
+    @media (max-width: 991px) {
+      height: 150px;
+    }
+  }
+  .recommend-img-next{
+    width: 100%;
+    max-width: 322px;
+    padding-top: 250px;
+    @media (min-width: 992px) and (max-width:1199px) {
+      padding-top: 120px;
+    }
+    @media (max-width: 991px) {
+      padding-top: 100px;
+    }
+  }
+  .recommend-info{
+    padding: 535px 60px 0 60px;
+    @media (min-width:992px) and (max-width:1199px) {
+      padding: 300px 30px 0 30px;
+    }
+    @media (min-width:701px) and (max-width:991px) {
+      padding: 270px 30px 0 30px;
+    }
+    .info-title{
+      line-height: 38px;
+      font-size: 32px;
+      color: #333;
+      @media (max-width:1199px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    .info-con{
+      padding-top: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #999;
+      @media (max-width:1199px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    .info-more{
+      display: inline-block;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      border-radius: 40px;
+      text-align: center;
+      width: 38px;
+      height: 38px;
+      @keyframes myfirst{
+          from {
+            background: #fff;
+            border: 1px solid #ccc;
+          }
+          to {
+            background: @l-red;
+            border: 1px solid @l-red;
+          }
+      }
+      @-webkit-keyframes myfirst{ /* Safari 与 Chrome */
+          from {
+            background: #fff;
+            border: 1px solid #ccc;
+          }
+          to {
+            background: @l-red;
+            border: 1px solid @l-red;
+          }
+      }
+      span{
+        display: inline-block;
+        margin: 17px 1px 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background: #ccc;
+      }
+      &:hover{
+        animation: myfirst 2s;
+        -webkit-animation: myfirst 2s; /* Safari 与 Chrome */
+        background: @l-red;
+        border: 1px solid @l-red;
+        span{
+          background: #fff;
+        }
+      }
+    }
+  }
+  .recommend-main{
+    position: relative;
+    @media (min-width: 1770px) {
+      height: 1060px;
+    }
+    @media (max-width: 1769px) and (min-width:1200px){
+      height: 850px;
+    }
+    @media (min-width: 992px) and (max-width:1199px) {
+      height: 570px;
+    }
+    @media (min-width: 701px) and (max-width:991px) {
+      height: 540px;
+    }
+    @media (min-width: 576px) and (max-width:700px) {
+      min-height: 845px;
+    }
+    @media (max-width:575px) {
+      // min-height: 757px;
+    }
+    .recommend-main-box{
+      z-index: 1;
+      width: 66.67%;
+      @media (min-width: 1200px) {
+        padding-top: 90px;
+      }
+      @media (min-width: 701px) and (max-width: 991px) {
+        width: 83.33%;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        width: 66.67%;
+        // max-height: 545px;
+        padding: 60px 16.67% 0;
+      }
+      @media (max-width: 575px) {
+        width: 83.33%;
+        // max-height: 540px;
+        padding: 60px 8.33% 0;
+      }
+    }
+    .rec-swiper-btn{
+      z-index: 2;
+      position: absolute;
+      top: 400px;
+      width: 10px;
+      height: 20px;
+      @media (min-width: 992px) and (max-width:1199px) {
+        top: 230px;
+      }
+      @media (min-width: 701px) and (max-width:991px) {
+        top: 215px;
+      }
+      @media (min-width: 576px) and (max-width:700px) {
+        top: 310px;
+      }
+      @media (max-width:575px) {
+        top: 250px;
+      }
+    }
+    .rec-swiper-prev{
+      left: -17%;
+      background: url(index_swiper_btn.png) no-repeat left;
+      filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+      -moz-background-size:auto 100%;
+      background-size:auto 100%;
+      @media (min-width: 701px) and (max-width:991px) {
+        left: -10%;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        left: 8%;
+      }
+      @media (max-width: 575px) {
+        left: 3%;
+      }
+    }
+    .rec-swiper-next{
+      right: 17%;
+      background: url(index_swiper_btn.png) no-repeat right;
+      filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+      -moz-background-size:auto 100%;
+      background-size:auto 100%;
+      @media (min-width: 701px) and (max-width:991px) {
+        right: 7%;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        right: 8%;
+      }
+      @media (max-width: 575px) {
+        right: 3%;
+      }
+    }
+    .recommend-main-bg{
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 66.67%;
+      height: 600px;
+      background: #f8f8f8;
+      @media (min-width: 992px) and (max-width:1199px) {
+        height: 480px;
+      }
+      @media (min-width: 701px) and (max-width:991px) {
+        height: 450px;
+      }
+      @media (min-width: 576px) and (max-width:700px) {
+        height: 725px;
+        width: 50%;
+      }
+      @media (max-width:575px) {
+        height: 605px;
+        width: 50%;
+      }
+    }
+    .swiper-container{
+      width: 100%;
+      .swiper-slide{
+        a{
+          display: inline-block;
+          width: 100%;
+        }
+        img{
+          width: 100%;
+          // @media (max-width: 991px) {
+          //   max-height: 540px;
+          // }
+        }
+      }
+    }
+    .recommend-main-info{
+      padding: 30px 16.67% 0 16.67%;
+      @media (max-width:575px) {
+        padding: 30px 8.33% 0 8.33%;
+      }
+      .info-title{
+        line-height: 38px;
+        font-size: 32px;
+        color: #333;
+        @media (max-width:1199px) {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+      .info-con{
+        padding-top: 10px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #999;
+        @media (max-width:1199px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+      .info-more{
+        display: inline-block;
+        margin: 30px 0 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        text-align: center;
+        width: 38px;
+        height: 38px;
+        @keyframes myfirst{
+            from {
+              background: #fff;
+              border: 1px solid #ccc;
+            }
+            to {
+              background: @l-red;
+              border: 1px solid @l-red;
+            }
+        }
+        @-webkit-keyframes myfirst{ /* Safari 与 Chrome */
+            from {
+              background: #fff;
+              border: 1px solid #ccc;
+            }
+            to {
+              background: @l-red;
+              border: 1px solid @l-red;
+            }
+        }
+        span{
+          display: inline-block;
+          margin: 17px 1px 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 4px;
+          background: #ccc;
+        }
+        &:hover{
+          animation: myfirst 2s;
+          -webkit-animation: myfirst 2s; /* Safari 与 Chrome */
+          background: @l-red;
+          border: 1px solid @l-red;
+          span{
+            background: #fff;
+          }
+        }
+      }
+    }
+
+  }
+}
+
 //关于统帅
 .index-about{
   position: relative;
