@@ -4,6 +4,7 @@
 .index-banner{
   background: #fff;
   .banner-info{
+    position: relative;
     height: 100%;
     text-align: center;
     .banner-middle-box{
@@ -15,12 +16,20 @@
       color: #333;
       width: 45px;
       height: 100%;
+      @media (min-width: 992px) and (max-width:1199px) {
+        font-size: 24px;
+        width: 32px;
+      }
     }
     .info-sub{
       font-size: 20px;
       color: #999;
       width: 23px;
       height: 100%;
+      @media (min-width: 992px) and (max-width:1199px) {
+        font-size: 14px;
+        width: 16px;
+      }
     }
     .info-main,.info-sub{
       position: relative;
@@ -31,11 +40,75 @@
   .banner-img{
     position: relative;
     margin-right: -5.55%;
+    .swiper-container{
+      width: 100%;
+      max-height: 626px;
+      @media (min-width: 1770px) {
+        max-height: 795px;
+      }
+      @media (max-width: 1199px) {
+        max-height: 500px;
+      }
+      .swiper-slide{
+        display: inline-block;
+        img{
+          text-align: center;
+        }
+      }
+    }
   }
   .banner-page{
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
+    .page-num{
+      position: relative;
+      min-height: 24px;
+      color: #333;
+      &.active{
+        .line{
+          display: block;
+        }
+        .num{
+          color: @l-red;
+        }
+      }
+      &:hover{
+        .line{
+          display: block;
+        }
+        .num{
+          color: @l-red;
+        }
+      }
+      .line{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        background: #ccc;
+        width: 72px;
+        @media (max-width: 1199px) {
+          width: 51px;
+        }
+        .red-line{
+          width: 50px;
+          height: 1px;
+          background: @l-red;
+          @media (max-width: 1199px) {
+            width: 20px;
+          }
+        }
+      }
+      .num{
+        // display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
   }
 }
 //统帅入口
