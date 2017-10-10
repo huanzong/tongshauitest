@@ -118,9 +118,6 @@ $(function() {
       loop: true,
       // autoplay: 3000,
       calculateHeight : true,
-      slidesPerView: 2,
-      watchActiveIndex: true,
-      updateOnImagesReady: true,
       onSlideChangeEnd: function(swiper){
         var index = swiper.activeIndex;
         var imgSrc = $('.js_swiperEntrabce .swiper-slide').eq(index).find('img').attr('src');
@@ -147,7 +144,19 @@ $(function() {
     init();
 
     var screenWidth = document.body.offsetWidth;
+    if (screenWidth <= 700) {
+      swiper.entrabceSwiper.params.slidesPerView = 2
+      swiper.entrabceSwiper.params.watchActiveIndex = true
+      swiper.entrabceSwiper.params.updateOnImagesReady = true
+    } else {
+      swiper.entrabceSwiper.params.slidesPerView = 1
+      swiper.entrabceSwiper.reInit()
+    }
+
+
     if (screenWidth <= 991) {
+
+
       swiper.bannerSwiper.params.slidesPerView = 3
       swiper.bannerSwiper.params.watchActiveIndex = true
       swiper.bannerSwiper.params.updateOnImagesReady = true
