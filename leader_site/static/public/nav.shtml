@@ -78,15 +78,30 @@
 	<div class="o_u o_df_3-12 o_md_5-12 o_sm_5-12 o_xs_8-12 o_df-hide o_lg-show o_md-show o_sm-show o_xs-show js_navSearchLgHide">
 		<ul class="nav-search-lg">
 			<li>
-				<a href="javascript:;">
-					<!-- 未登录展示 -->
-					<!-- <i class="iconfont icon-member"></i> -->
-					<!-- 未登录展示 END -->
-					<!-- 已登录展示 -->
-					<img src="images/user_img.jpg" class="user-img">
-					<!-- 已登录展示 END -->
+				<!-- 未登录展示 -->
+				<!-- <a href="javascript:;">
+					<i class="iconfont icon-member"></i>
 					<span></span>
-				</a>
+				</a> -->
+				<!-- 未登录展示 END -->
+
+				<!-- 已登录展示 -->
+				<div class="user-headimg">
+					<img src="images/user_img.jpg" class="user-img">
+					<span></span>
+					<ul class="nav-user-column">
+						<li><a href="javascript:;">个人中心</a></li>
+						<li><a href="javascript:;">消息</a></li>
+						<li><a href="javascript:;">我的订单</a></li>
+						<li><a href="javascript:;">我的优惠券</a></li>
+						<li><a href="javascript:;">收藏与订阅</a></li>
+						<li><a href="javascript:;">我的产品</a></li>
+						<li class="nav-quip">
+							<a href="javascript:;">退出登录</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 已登录展示 END -->
 			</li>
 			<li>
 				<a href="javascript:;">

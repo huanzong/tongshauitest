@@ -36,7 +36,7 @@ $(function () {
         setTimeout(function () {
             $ele.find('.index_animate').css('z-index', '-11');
             $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
-            $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
+            // $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
         }, showTime);
     }
 
