@@ -8,8 +8,8 @@ $(function() {
 
     function init() {
         //默认电脑登陆
-        $('.js_regType_phone').show();
-        $('.js_regType_email').hide();
+        // $('.js_regType_phone').show();
+        // $('.js_regType_email').hide();
 
         var screenWidth = document.body.offsetWidth;
         var screenHeight = document.body.offsetHeight;
@@ -31,6 +31,9 @@ $(function() {
         // }
 
     }
+    //默认电脑登陆
+    $('.js_regType_phone').show();
+    $('.js_regType_email').hide();
 
     // 登录方式转换
     $('.js_regType').on('click',function(){
