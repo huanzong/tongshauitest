@@ -15,7 +15,7 @@ $(function() {
 
 		//banner轮播
     var screenWidth = document.body.offsetWidth;
-    if (screenWidth < 991) {
+    if (screenWidth <= 991) {
       swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
         loop: true,
         // autoplay: 3000,
@@ -31,11 +31,13 @@ $(function() {
 
           $('.js_bannerSwiper .swiper-slide-active').find('img').css({
             'height': 500,
+            'margin-left': -455.5,
             'margin-top': -250
           })
 
           $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
             'height': 382,
+            'margin-left': -348.5,
             'margin-top': -191
           })
         }
@@ -44,11 +46,13 @@ $(function() {
 
       $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
         'height': 382,
+        'margin-left': -348.5,
         'margin-top': -191
       })
 
       $('.js_bannerSwiper .swiper-slide-active').find('img').css({
         'height': 500,
+        'margin-left': -455.5,
         'margin-top': -250
       })
 
@@ -138,7 +142,7 @@ $(function() {
     init();
 
     var screenWidth = document.body.offsetWidth;
-    if (screenWidth < 991) {
+    if (screenWidth <= 991) {
       swiper.bannerSwiper.params.slidesPerView = 3
       swiper.bannerSwiper.params.watchActiveIndex = true
       swiper.bannerSwiper.params.updateOnImagesReady = true
@@ -150,11 +154,13 @@ $(function() {
 
           $('.js_bannerSwiper .swiper-slide-active').find('img').css({
             'height': 500,
+            'margin-left': -455.5,
             'margin-top': -250
           })
 
           $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
             'height': 382,
+            'margin-left': -348.5,
             'margin-top': -191
           })
         }
@@ -165,11 +171,13 @@ $(function() {
       setTimeout(function(){
         $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
           'height': 382,
+          'margin-left': -348.5,
           'margin-top': -191
         })
 
         $('.js_bannerSwiper .swiper-slide-active').find('img').css({
           'height': 500,
+          'margin-left': -455.5,
           'margin-top': -250
         })
       },500)
