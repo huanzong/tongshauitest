@@ -25,9 +25,13 @@ $(function() {
 
         //密码进入事件,更改密码框类型为密码
         $("#js_loginPassword2").focus(function () {
+            if( "" == password || "6-16位，数字，字母或符合的组合" == password || null == password){
+                return;
+            }
             $(this).addClass("o_df-hide");
             $("#js_loginPassword").removeClass("o_df-hide").focus();
         });
+
         //密码离开事件,更改密码框类型为文本
         $("#js_loginPassword").blur(function () {
             var password = $.trim($(this).val());
