@@ -33,13 +33,13 @@ $(function() {
             'height': 500,
             'margin-left': -455.5,
             'margin-top': -250
-          })
+          });
 
           $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
             'height': 382,
             'margin-left': -348.5,
             'margin-top': -191
-          })
+          });
         }
       });
       $(".js_bg").oBgCover().init();
@@ -48,13 +48,13 @@ $(function() {
         'height': 382,
         'margin-left': -348.5,
         'margin-top': -191
-      })
+      });
 
       $('.js_bannerSwiper .swiper-slide-active').find('img').css({
         'height': 500,
         'margin-left': -455.5,
         'margin-top': -250
-      })
+      });
 
       // swiper.bannerSwiper.
     } else {
