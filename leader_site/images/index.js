@@ -27,14 +27,16 @@ $(function() {
           var index = swiper.activeIndex;
           // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
           // $('.js_recImgSmall').attr('src',imgSrc);
-          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-            'height': 382,
-            'margin-top': -191
-          })
+
 
           $('.js_bannerSwiper .swiper-slide-active').find('img').css({
             'height': 500,
             'margin-top': -250
+          })
+
+          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+            'height': 382,
+            'margin-top': -191
           })
         }
       });
@@ -103,7 +105,7 @@ $(function() {
 
       loop: true,
       // autoplay: 3000,
-
+      calculateHeight : true,
       onSlideChangeEnd: function(swiper){
         var index = swiper.activeIndex;
         var imgSrc = $('.js_swiperEntrabce .swiper-slide').eq(index).find('img').attr('src');
@@ -144,14 +146,16 @@ $(function() {
           var index = swiper.activeIndex;
           // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
           // $('.js_recImgSmall').attr('src',imgSrc);
-          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-            'height': 382,
-            'margin-top': -191
-          })
+
 
           $('.js_bannerSwiper .swiper-slide-active').find('img').css({
             'height': 500,
             'margin-top': -250
+          })
+
+          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+            'height': 382,
+            'margin-top': -191
           })
         }
 
