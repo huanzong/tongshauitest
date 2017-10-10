@@ -398,9 +398,60 @@ Pagination Styles
 }
 .swiper-active-switch {
     /* Specific active button style: */
-     
+
 }
 .swiper-visible-switch {
     /* Specific visible button style: */   
      
+}
+//分页
+// 上一页按钮
+.l-pagination-prew{
+	height: 38px;
+	width: 77px;
+	border-radius: 50px;
+	display:inline-block;
+	border: 1px solid lightgray;
+	text-align: center;
+	line-height: 38px;
+	color: gray;
+	background: white;
+	&:hover{
+		color: gray;
+	}
+}
+//下一页按钮
+.l-pagination-next{
+	height: 38px;
+	width: 77px;
+	border-radius: 50px;
+	display:inline-block;
+	border: 1px solid lightgray;
+	text-align: center;
+	line-height: 38px;
+	color: gray;
+	background: white;
+	&:hover{
+		color: gray;
+	}
+}
+
+//圆圈页码
+.l-pagination-pagenumber{
+	color: gray;
+	width: 39px;
+	height: 39px;
+	border: 0.5px solid lightgray;
+	display:inline-block;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 39px;
+	&:hover{
+		color: gray;
+	}
+	&.active{
+		border: 0px none ;
+		background: red;
+		color: white;
+	}
 }

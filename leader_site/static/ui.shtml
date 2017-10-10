@@ -24,6 +24,7 @@
             <li><a href="ui.shtml#ui_formValid">表单验证插件用法</a></li>
             <li><a href="ui.shtml#ui_imgUpload">上传图片</a></li>
             <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
+            <li><a href="ui.shtml#ui_paging">分页</a></li>
         </ul>
     </div>
     <!-- button 按钮 -->
@@ -448,6 +449,40 @@
     <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
     <!-- iconfont END -->
+    <!--分页-->
+    <div class="main markdown" id="ui_paging">
+        <h1>分页</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div>
+            <a  class="l-pagination-prew">上一页</a>
+            <a  class="l-pagination-pagenumber active">1</a>
+            <a  class="l-pagination-pagenumber">2</a>
+            <a  class="l-pagination-pagenumber">3</a>
+            <a  class="l-pagination-pagenumber">4</a>
+            <a  class="l-pagination-pagenumber">5</a>
+            <a  class="l-pagination-pagenumber">6</a>
+            <a  class="l-pagination-pagenumber">7</a>
+            <a  class="l-pagination-pagenumber">8</a>
+            <a  class="l-pagination-next ">下一页</a>
+        </div>
+        <textarea>
+           <div>
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
+                <a  class="l-pagination-pagenumber">4</a>
+                <a  class="l-pagination-pagenumber">5</a>
+                <a  class="l-pagination-pagenumber">6</a>
+                <a  class="l-pagination-pagenumber">7</a>
+                <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-next ">下一页</a>
+            </div>
+        </textarea>
+    </div>
+
+    <!--分页 END-->
 
 <!--#include virtual="public/foot.shtml"-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
