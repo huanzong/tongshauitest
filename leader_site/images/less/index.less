@@ -4,27 +4,160 @@
 .index-banner{
   background: #fff;
   .banner-info{
+    position: relative;
+    height: 100%;
     text-align: center;
     .banner-middle-box{
       text-align: center;
+      height: 100%;
     }
     .info-main{
       font-size: 32px;
       color: #333;
       width: 45px;
+      height: 100%;
+      @media (min-width: 992px) and (max-width:1199px) {
+        font-size: 24px;
+        width: 32px;
+      }
     }
     .info-sub{
       font-size: 20px;
       color: #999;
       width: 23px;
+      height: 100%;
+      @media (min-width: 992px) and (max-width:1199px) {
+        font-size: 14px;
+        width: 16px;
+      }
     }
     .info-main,.info-sub{
+      position: relative;
       display: inline-block;
-      text-indent: 0;
       text-align: left;
-      span{
-        // float: left;
+    }
+  }
+  .banner-img{
+    position: relative;
+    margin-right: -5.55%;
+    .swiper-container{
+      width: 100%;
+      height: 626px;
+
+      @media (min-width: 1770px) {
+        height: 795px;
       }
+      @media (max-width: 1199px) {
+        height: 500px;
+      }
+
+      @media (max-width: 991px) {
+        height: 500px;
+        width: auto;
+        margin-left: -69.5%;
+        margin-right: -65%;
+      }
+
+      .swiper-slide{
+        display: inline-block;
+
+        a{
+          display: block;
+          height: 100%;
+
+          @media (max-width: 991px) {
+            margin: 0 20px;
+          }
+        }
+
+        img{
+          text-align: center;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .banner-page{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .page-num{
+      position: relative;
+      min-height: 24px;
+      color: #333;
+      &.active{
+        .line{
+          display: block;
+        }
+        .num{
+          color: @l-red;
+        }
+      }
+      &:hover{
+        .line{
+          display: block;
+        }
+        .num{
+          color: @l-red;
+        }
+      }
+      .line{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        background: #ccc;
+        width: 72px;
+        @media (max-width: 1199px) {
+          width: 51px;
+        }
+        .red-line{
+          width: 50px;
+          height: 1px;
+          background: @l-red;
+          @media (max-width: 1199px) {
+            width: 20px;
+          }
+        }
+      }
+      .num{
+        // display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+  .banner-bot-info{
+    margin: 30px 0 0;
+  }
+  .banner-big{
+    font-size: 28px;
+    color: #333;
+    line-height: 32px;
+    text-align: center;
+    font-family: "Microsoft Yahei";
+    @media (min-width: 701px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @media (max-width: 575px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  .banner-small{
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    color: #999;
+    line-height: 24px;
+    text-align: center;
+    padding-top: 5px;
+    @media (max-width: 575px) {
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 }
@@ -94,7 +227,7 @@
     height: 570px;
   }
   @media (min-width: 701px) and (max-width:991px) {
-    height: 540px;
+    min-height: 540px;
   }
   @media (min-width: 576px) and (max-width:700px) {
     min-height: 845px;
@@ -219,7 +352,7 @@
       height: 570px;
     }
     @media (min-width: 701px) and (max-width:991px) {
-      height: 540px;
+      min-height: 540px;
     }
     @media (min-width: 576px) and (max-width:700px) {
       min-height: 845px;
@@ -568,3 +701,142 @@
     }
   }
 }
+
+// 首页入口
+.index-entrance-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.index-entrance-row img {
+  // width: 100%;
+}
+
+.l-padding{
+  margin: 0 15px;
+}
+
+.index-entrance-row .o_g {
+  position: relative;
+}
+
+.index-entrance-row .o_df_7-12 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.index-entrance-row .o_df_7-12 .l-padding {
+  height: 100%;
+  padding-left: 3.8%;
+}
+
+.index-entrance-bottom {
+  position: absolute;
+  bottom: 0;
+
+  h3{
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #999999;
+  }
+  .info-more{
+      display: inline-block;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      border-radius: 40px;
+      text-align: center;
+      width: 38px;
+      height: 38px;
+      @keyframes myfirst{
+          from {
+            background: #fff;
+            border: 1px solid #ccc;
+          }
+          to {
+            background: @l-red;
+            border: 1px solid @l-red;
+          }
+      }
+      @-webkit-keyframes myfirst{ /* Safari 与 Chrome */
+          from {
+            background: #fff;
+            border: 1px solid #ccc;
+          }
+          to {
+            background: @l-red;
+            border: 1px solid @l-red;
+          }
+      }
+      span{
+        display: inline-block;
+        margin: 17px 1px 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background: #ccc;
+      }
+      &:hover{
+        animation: myfirst 2s;
+        -webkit-animation: myfirst 2s; /* Safari 与 Chrome */
+        background: @l-red;
+        border: 1px solid @l-red;
+        span{
+          background: #fff;
+        }
+      }
+    }
+}
+
+.index-entrance{
+  position: relative;
+  margin-top: 100px;
+
+  .rec-swiper-prev,
+  .rec-swiper-next{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 20px;
+  }
+
+  .rec-swiper-prev{
+    left: 4%;
+    background: url(index_swiper_btn.png) no-repeat left;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:auto 100%;
+    background-size:auto 100%;
+    @media (min-width: 701px) and (max-width:991px) {
+      left: -10%;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      left: 8%;
+    }
+    @media (max-width: 575px) {
+      left: 3%;
+    }
+  }
+  .rec-swiper-next{
+    right: 4%;
+    background: url(index_swiper_btn.png) no-repeat right;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:auto 100%;
+    background-size:auto 100%;
+    @media (min-width: 701px) and (max-width:991px) {
+      right: 7%;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      right: 8%;
+    }
+    @media (max-width: 575px) {
+      right: 3%;
+    }
+  }
+}
+

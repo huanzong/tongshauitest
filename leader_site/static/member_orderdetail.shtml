@@ -28,7 +28,7 @@
                         <p>订单详情</p>
                     </div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 个人信息 START-->
                         <div class="member-personalinfo">
                             <div class="member-personalinfo-contbox">

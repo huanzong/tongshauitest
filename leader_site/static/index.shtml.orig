@@ -65,6 +65,10 @@
 			       		</div>
 					</div>
 					<div class="banner-page">
+<<<<<<< HEAD
+						<div class="page-"></div>
+					</div>
+=======
 						<div class="page-num active">
 							<div class="line">
 								<div class="red-line"></div>
@@ -83,39 +87,35 @@
 							</div>
 							<div class="num">03</div>
 						</div>
-					</div>
+					</div>			       		
+>>>>>>> 1e4ea4ca9f0f90572b315cde1552f4776cf8ddaa
 				</div>
-				<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
+				<div class="o_u o_df_3-4 js_bannerInfoOHerl">
 					<div class="banner-img">
 						<div class="swiper-container js_bannerSwiper">
 						    <div class="swiper-wrapper">
 						        <div class="swiper-slide">
 							        <a href="javascript:;">
 							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
-							        	<img class="js_bg" src="images/index_banner.JPG">
+							        	<img class="" src="images/index_banner.JPG">
 							        </a>
 						        </div>
 						        <div class="swiper-slide">
 									<a href="javascript:;">
 							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
-							        	<img class="js_bg" src="images/index_banner.JPG">
+							        	<img class="" src="images/index_banner.JPG">
 							        </a>
 						        </div>
 						    </div>
 						</div>
 					</div>
 				</div>
-				<div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
-					<div class="banner-big">在这个做作的时代</div>
-					<div class="banner-big">我选择做最真实的自己</div>
-					<div class="banner-small">我只选择统帅统帅</div>
-				</div>
 		    </div>
 		    <!-- 首页banner END -->
 
 		    <!-- 统帅入口 -->
 		    <div class="o_g index-enter">
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -124,8 +124,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</div>
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -134,8 +134,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</div>
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -144,8 +144,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</div>
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -154,8 +154,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</div>
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -164,8 +164,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</div>
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -174,8 +174,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</div>
+		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -184,7 +184,7 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</a>
+		    	</div>
 		    </div>
 		    <!-- 统帅入口 END -->
 
@@ -247,7 +247,7 @@
 		    </div>
 		    <!-- 推荐产品 END -->
 
-			<!-- 首页入口 -->
+				<!-- 首页入口 -->
 		    <div class="o_g index-entrance">
 		      <div class="o_u o_df_1-12 o_sm-hide o_xs-hide">
 		    		<div class="rec-swiper-btn rec-swiper-prev js_swiperEntrabcePrev"></div>
@@ -276,11 +276,6 @@
 															<div class="o_u" style="width: 48.6%;margin-left: 3.8%;">
 																<h3>你是我简单满足<br>的小确幸</h3>
 																<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
-																<a class="info-more">
-												    				<span></span>
-												    				<span></span>
-												    				<span></span>
-												    			</a>
 															</div>
 														</div>
 													</div>
