@@ -181,8 +181,8 @@ function userLoginStatus() {
             var logusername = subHZString(ck_loginUserName, 7, '...');
             //从cookie中读取当前登录用户
             $("#header_loginDiv .login span").before(logusername);
-            $("#header_logoutDiv,#header_loginDiv2").addClass("o_df-hide");
-            $("#header_loginDiv,#header_logoutA").removeClass("o_df-hide");
+            $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
+            $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
             $("#header_logout,#header_logout2").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
         } else {
             //同域cookie存在，但是 haieruser 没有取出值，去请求haier_ssosession.jsp获取当前登录用户
@@ -199,8 +199,8 @@ function userLoginStatus() {
                         var logusername = subHZString(loginUser, 7, '...');
                         //从cookie中读取当前登录用户
                         $("#header_loginDiv .login span").before(logusername);
-                        $("#header_logoutDiv,#header_loginDiv2").addClass("o_df-hide");
-                        $("#header_loginDiv,#header_logoutA").removeClass("o_df-hide");
+                        $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
+                        $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
                         $("#header_logout,#header_logout2").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
                     } else {
                         // if (window.innerWidth == undefined || window.innerWidth >= 768) {
