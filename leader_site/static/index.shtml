@@ -110,7 +110,7 @@
 
 		    <!-- 统帅入口 -->
 		    <div class="o_g index-enter">
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -119,8 +119,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</a>
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -129,8 +129,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</a>
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -139,8 +139,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</a>
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -149,8 +149,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</a>
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -159,8 +159,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</a>
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -169,8 +169,8 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
-		    	<div class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
+		    	</a>
+		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
 		    		<div class="enter-con-icon"></div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
 		    		<div class="enter-con-china">冰箱</div>
@@ -179,7 +179,7 @@
 		    			<span></span>
 		    			<span></span>
 		    		</div>
-		    	</div>
+		    	</a>
 		    </div>
 		    <!-- 统帅入口 END -->
 
