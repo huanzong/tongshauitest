@@ -65,6 +65,10 @@
 			       		</div>
 					</div>
 					<div class="banner-page">
+<<<<<<< HEAD
+						<div class="page-"></div>
+					</div>
+=======
 						<div class="page-num active">
 							<div class="line">
 								<div class="red-line"></div>
@@ -83,22 +87,23 @@
 							</div>
 							<div class="num">03</div>
 						</div>
-					</div>
+					</div>			       		
+>>>>>>> 1e4ea4ca9f0f90572b315cde1552f4776cf8ddaa
 				</div>
-				<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
+				<div class="o_u o_df_3-4 js_bannerInfoOHerl">
 					<div class="banner-img">
 						<div class="swiper-container js_bannerSwiper">
 						    <div class="swiper-wrapper">
 						        <div class="swiper-slide">
 							        <a href="javascript:;">
 							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
-							        	<img class="js_bg" src="images/index_banner.JPG">
+							        	<img class="" src="images/index_banner.JPG">
 							        </a>
 						        </div>
 						        <div class="swiper-slide">
 									<a href="javascript:;">
 							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
-							        	<img class="js_bg" src="images/index_banner.JPG">
+							        	<img class="" src="images/index_banner.JPG">
 							        </a>
 						        </div>
 						    </div>

@@ -2,9 +2,6 @@ $(function() {
 
   init();
 
-  $(window).resize(function() {
-    init();
-  });
 
   function init() {
 
@@ -15,10 +12,76 @@ $(function() {
 
   var swiper = {};//用来存放所有轮播
 	setTimeout(function(){
+
+		//banner轮播
+    var screenWidth = document.body.offsetWidth;
+    if (screenWidth < 991) {
+      swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
+        loop: true,
+        // autoplay: 3000,
+        slidesPerView: 3,
+        watchActiveIndex: true,
+        updateOnImagesReady: true,
+        centeredSlides: true,
+        onSlideChangeEnd: function(swiper){
+          var index = swiper.activeIndex;
+          // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+          // $('.js_recImgSmall').attr('src',imgSrc);
+          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+            'height': 382,
+            'margin-top': -191
+          })
+
+          $('.js_bannerSwiper .swiper-slide-active').find('img').css({
+            'height': 500,
+            'margin-top': -250
+          })
+        }
+      });
+      $(".js_bg").oBgCover().init();
+
+      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+        'height': 382,
+        'margin-top': -191
+      })
+
+      $('.js_bannerSwiper .swiper-slide-active').find('img').css({
+        'height': 500,
+        'margin-top': -250
+      })
+
+      // swiper.bannerSwiper.
+    } else {
+      swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
+        loop: true,
+        // autoplay: 3000,
+
+        onSlideChangeEnd: function(swiper){
+          var index = swiper.activeIndex;
+          // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+          // $('.js_recImgSmall').attr('src',imgSrc);
+        }
+    });
+    }
+
+
+		setTimeout(function(){
+
+			//banner左侧高度跟随
+	    $('.js_bannerInfo').oHrel({
+	      obj:'$(this).next()'
+	    }).init();
+	    //banner左侧文字居中
+	    $(".js_bannnerCenter").oBoxCenter().init();
+
+		},1000);
+
+
+		//产品推荐轮播
 	  swiper.recommendSwiper = new Swiper ('.js_swiperRecMain', {
 
 	    loop: true,
-	    autoplay: 3000,
+	    // autoplay: 3000,
 
 	    onSlideChangeEnd: function(swiper){
 	    	var index = swiper.activeIndex;
@@ -65,14 +128,60 @@ $(function() {
       }).init();
     });
 
-    //banner左侧高度跟随
-    $('.js_bannerInfo').oHrel({
-      obj:'$(this).next()'
-    }).init();
-    //banner左侧文字居中
-    $(".js_bannnerCenter").oBoxCenter().init();
-
 	},2000);
+
+
+
+  $(window).resize(function() {
+    init();
+
+    var screenWidth = document.body.offsetWidth;
+    if (screenWidth < 991) {
+      swiper.bannerSwiper.params.slidesPerView = 3
+      swiper.bannerSwiper.params.watchActiveIndex = true
+      swiper.bannerSwiper.params.updateOnImagesReady = true
+      swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
+          var index = swiper.activeIndex;
+          // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+          // $('.js_recImgSmall').attr('src',imgSrc);
+          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+            'height': 382,
+            'margin-top': -191
+          })
+
+          $('.js_bannerSwiper .swiper-slide-active').find('img').css({
+            'height': 500,
+            'margin-top': -250
+          })
+        }
+
+      swiper.bannerSwiper.reInit()
+      $(".js_bg").oBgCover().init();
+
+      setTimeout(function(){
+        $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+          'height': 382,
+          'margin-top': -191
+        })
+
+        $('.js_bannerSwiper .swiper-slide-active').find('img').css({
+          'height': 500,
+          'margin-top': -250
+        })
+      },500)
+    } else {
+      swiper.bannerSwiper.params.slidesPerView = 1
+      swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
+        var index = swiper.activeIndex;
+        // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+        // $('.js_recImgSmall').attr('src',imgSrc);
+      }
+      swiper.bannerSwiper.reInit()
+    }
+
+
+
+  });
 });
 
 

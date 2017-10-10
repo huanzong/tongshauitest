@@ -4,6 +4,7 @@
 .index-banner{
   background: #fff;
   .banner-info{
+    position: relative;
     height: 100%;
     text-align: center;
     .banner-middle-box{
@@ -15,12 +16,20 @@
       color: #333;
       width: 45px;
       height: 100%;
+      @media (min-width: 992px) and (max-width:1199px) {
+        font-size: 24px;
+        width: 32px;
+      }
     }
     .info-sub{
       font-size: 20px;
       color: #999;
       width: 23px;
       height: 100%;
+      @media (min-width: 992px) and (max-width:1199px) {
+        font-size: 14px;
+        width: 16px;
+      }
     }
     .info-main,.info-sub{
       position: relative;
@@ -31,11 +40,95 @@
   .banner-img{
     position: relative;
     margin-right: -5.55%;
+    .swiper-container{
+      width: 100%;
+      height: 626px;
+
+      @media (min-width: 1770px) {
+        height: 795px;
+      }
+      @media (max-width: 1199px) {
+        height: 500px;
+      }
+
+      @media (max-width: 991px) {
+        height: 500px;
+        width: auto;
+        margin-left: -65%;
+        margin-right: -65%;
+      }
+
+      .swiper-slide{
+        display: inline-block;
+
+        a{
+          display: block;
+          height: 100%;
+
+          @media (max-width: 991px) {
+            margin: 0 20px;
+          }
+        }
+
+        img{
+          text-align: center;
+          height: 100%;
+        }
+      }
+    }
   }
   .banner-page{
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
+    .page-num{
+      position: relative;
+      min-height: 24px;
+      color: #333;
+      &.active{
+        .line{
+          display: block;
+        }
+        .num{
+          color: @l-red;
+        }
+      }
+      &:hover{
+        .line{
+          display: block;
+        }
+        .num{
+          color: @l-red;
+        }
+      }
+      .line{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        background: #ccc;
+        width: 72px;
+        @media (max-width: 1199px) {
+          width: 51px;
+        }
+        .red-line{
+          width: 50px;
+          height: 1px;
+          background: @l-red;
+          @media (max-width: 1199px) {
+            width: 20px;
+          }
+        }
+      }
+      .num{
+        // display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
   }
 }
 //统帅入口
