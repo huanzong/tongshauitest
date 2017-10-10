@@ -254,59 +254,68 @@
 		      </div>
 					<div class="o_u o_df_10-12 o_sm_12-12 o_xs_12-12">
 						<div class="index-entrance-row">
-							<div class="swiper-container js_swiperEntrabce">
+							<div class="swiper-container js_swiperEntrabce" style="margin-right: -32%">
 						    <div class="swiper-wrapper">
-						        <div class="swiper-slide">
+						        <div class="swiper-slide" >
 						        	<div class="o_g">
-						        		<div class="o_u o_df_5-12">
+						        		<div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
 						        			<div class="l-padding">
-														<img src="images/index_entrance01.jpg" style="width: 100%">
+														<img src="images/index_entrance01.jpg">
+														<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_8-12 o_xs_8-12" style="height: 215px;margin-top: 100px;">
+															<h3>你是我简单满足<br>的小确幸</h3>
+															<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+															<a class="info-more">
+											    				<span></span>
+											    				<span></span>
+											    				<span></span>
+											    			</a>
+														</div>
 													</div>
 						        		</div>
-						        		<div class="o_u o_df_7-12">
+						        		<div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
+						        			<div class="entrance-page o_md-hide">
+														<div class="entrance-page-line">
+															<div class="entrance-line-red"></div>
+														</div>
+														<div class="entrance-page-num">
+															<div class="page-num">01</div>
+															<div class="page-num active">02</div>
+															<div class="page-num">03</div>
+														</div>
+						        			</div>
 						        			<div class="l-padding">
-						        				<div class="o_u" style="width: 47.91%">
+						        				<div class="o_u entrance-img2">
 															<img src="images/index_entrance02.jpg" style="width: 100%">
 														</div>
 														<br>
-														<div class="index-entrance-bottom">
-															<div class="o_u" style="width: 33.33%">
+														<div class="index-entrance-bottom o_sm-hide o_xs-hide">
+															<div class="o_df-hide o_md-show entrance-page">
+																<div class="entrance-page-line">
+																	<div class="entrance-line-red"></div>
+																</div>
+																<div class="entrance-page-num">
+																	<div class="page-num">01</div>
+																	<div class="page-num active">02</div>
+																	<div class="page-num">03</div>
+																</div>
+								        			</div>
+															<div class="o_u entrance-img3">
 																<img src="images/index_entrance03.jpg" style="width: 100%">
 															</div>
-															<div class="o_u" style="width: 48.6%;margin-left: 3.8%;">
+															<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
 																<h3>你是我简单满足<br>的小确幸</h3>
 																<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
 																<a class="info-more">
-												    				<span></span>
-												    				<span></span>
-												    				<span></span>
-												    			</a>
+											    				<span></span>
+											    				<span></span>
+											    				<span></span>
+											    			</a>
 															</div>
 														</div>
 													</div>
 						        		</div>
-						        		<!-- <div class="o_u o_df_4-12">
-						        			<div class="l-padding">
-														<img src="images/index_entrance02.jpg">
-													</div>
-						        		</div>
-						        		<div class="o_u o_df_3-12"></div>
-						        		<div class="o_u o_df_3-12">
-						        			<div class="l-padding">
-														<img src="images/index_entrance03.jpg">
-													</div>
-						        		</div>
-						        		<div class="o_u o_df_4-12">
-						        			<div class="l-padding">
-						        			</div>
-						        		</div> -->
 						        	</div>
 						        </div>
-						      <!--   <div class="swiper-slide">
-											<a href="javascript:;">
-							        	<img class="js_recPic" src="" df="images/index_rec_next2.JPG" md="images/index_rec_next4.JPG">
-							        </a>
-						        </div> -->
 						    </div>
 							</div>
 						</div>
