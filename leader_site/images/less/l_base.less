@@ -378,6 +378,7 @@ img {
     height: 120px;
     border-bottom: 1px solid #eee;
     background: #fff;
+    z-index: 2;
     @media (min-width: 701px) and (max-width: 1199px){
         height: 100px;
     }
@@ -466,7 +467,53 @@ img {
                 height: 30px;
                 border-radius: 30px;
             }
-            a{
+            .user-headimg{
+                &:hover{
+                   .nav-user-column{
+                        display: block;
+                   } 
+                }
+                .nav-user-column{
+                    display: none;
+                    position: absolute;
+                    top: 59px;
+                    left: -43px;
+                    padding-top: 10px;
+                    min-width: 120px;
+                    border: 1px solid #eee;
+                    border-top: none;
+                    text-align: center;
+                    background: #fff;
+                    line-height: 30px;
+                    @media (min-width: 701px) and (max-width: 991px) {
+                        top: 58px;
+                    }
+                    @media (max-width: 700px) {
+                        top: 44px;
+                    }
+                    li{
+                        display: block;
+                        width: 100%;
+                        font-size: 12px;
+                        padding-top: 0;
+                        a{
+                            color: #666;
+                            line-height: 30px;
+                        }
+                        &.nav-quip{
+                            width: 100%;
+                            margin-top: 10px;
+                            line-height: 40px;
+                            color: #999;
+                            border-top: 1px solid #eee;
+                            a{
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+            a,.user-headimg{
                 display: inline-block;
                 position: relative;
                 color: #333;
