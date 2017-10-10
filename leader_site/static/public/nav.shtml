@@ -79,7 +79,12 @@
 		<ul class="nav-search-lg">
 			<li>
 				<a href="javascript:;">
-					<i class="iconfont icon-member"></i>
+					<!-- 未登录展示 -->
+					<!-- <i class="iconfont icon-member"></i> -->
+					<!-- 未登录展示 END -->
+					<!-- 已登录展示 -->
+					<img src="images/user_img.jpg" class="user-img">
+					<!-- 已登录展示 END -->
 					<span></span>
 				</a>
 			</li>
