@@ -262,9 +262,9 @@ select{opacity: 0;}
 /*.o_Dropdown *::-webkit-scrollbar {
 	display: none;
 }*/
-.o_Dropdown .name{height:@select_height;line-height:@select_height!important;font-size:14px;color:@select_color;display:block;padding-left:@select_p_left;margin-right:30px;overflow:hidden;position:relative;z-index:1;.leaveout}
+.o_Dropdown .name{height:@select_height;line-height:@select_height!important;font-size:14px;color:@select_color;display:block;padding-left:@select_p_left;padding-right:30px;overflow:hidden;position:relative;z-index:1;.leaveout}
 // .o_Dropdown .i_down{display:inline-block;width:0px;height:0;border:@select_arrowsize solid @select_arrowcolor;border-top-color:white;border-left-color:white;position:absolute;top:50%;margin-top:-(@select_arrowsize+3);right:16px;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);}
-.o_Dropdown .i_down{display:inline-block;width:@select_arrowsize;height:@select_arrowsize;right:12px;position:absolute;top:50%;margin-top:-@select_arrowsize/2;color:black;font-size:@select_arrowsize;line-height:1em;font-family:@select_arrowfont}
+.o_Dropdown .i_down{display:inline-block;width:6px;height:6px;right:26px;position:absolute;top:50%;margin-top:-@select_arrowsize/2;color:black;font-size:@select_arrowsize;line-height:1em;font-family:@select_arrowfont}
 .o_Dropdown .i_down:before { content:@select_arrowfont_code; }
 .o_Dropdown.selected span{color:#666;}
 .o_Dropdown select{cursor: default;width:100%;text-indent: 0;height: @select_height;line-height: @select_height;color: #a0a0a0;font-size: 16px;position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;z-index:2}

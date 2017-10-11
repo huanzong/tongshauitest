@@ -25,7 +25,15 @@ $(function() {
 
         //密码进入事件,更改密码框类型为密码
         $("#js_loginPassword2").focus(function () {
+            var $parent = $(this).parent();
+            if($parent.hasClass("open")){
+                return;
+            }
+            var password = $.trim($(this).val());
             if( "" == password || "6-16位，数字，字母或符合的组合" == password || null == password){
+                $(this).addClass("o_df-hide");
+                $("#js_loginPassword").removeClass("o_df-hide");
+                $("#js_loginPassword").focus();
                 return;
             }
             $(this).addClass("o_df-hide");
@@ -34,6 +42,10 @@ $(function() {
 
         //密码离开事件,更改密码框类型为文本
         $("#js_loginPassword").blur(function () {
+            var $parent = $(this).parent();
+            if($parent.hasClass("open")){
+                return;
+            }
             var password = $.trim($(this).val());
             if( "" == password || "6-16位，数字，字母或符合的组合" == password || null == password){
                 $("#js_loginPassword").addClass("o_df-hide");
@@ -107,10 +119,14 @@ $(function() {
         var passwordVal = $("#js_loginPassword").val();
         $("#js_loginPassword2").val(passwordVal).removeClass("o_df-hide").css({"color": "rgb(102, 102, 102)"});
         $("#js_loginPassword").addClass("o_df-hide");
+        self.parent().addClass("open");
     },function (self) {
         self.addClass("icon-eye-close-solid").removeClass("icon-eye-open-solid");
         $("#js_loginPassword").removeClass("o_df-hide");
         $("#js_loginPassword2").addClass("o_df-hide");
+        self.parent().removeClass("open");
+        var passwordVal = $("#js_loginPassword2").val();
+        $("#js_loginPassword").val(passwordVal)
     });
     //下拉菜单初始化
     $("#js_selectValidate").oSelect().init();

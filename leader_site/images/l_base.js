@@ -1,50 +1,49 @@
-$(function() {
+$(function () {
 
     /**
      * 首页动画：线变化
      */
-    function lineAnimate($ele,t){
+    function lineAnimate($ele, t) {
 
         $ele.siblings().hide();
 
-        setTimeout(function(){
+        setTimeout(function () {
             $ele.find('span').eq(0).animate({
                 height: "100%"
-            },t);
-        },200);
-        setTimeout(function(){
+            }, t);
+        }, 200);
+        setTimeout(function () {
             $ele.find('span').eq(1).animate({
                 height: "100%"
-            },t);
-        },400);
-        setTimeout(function(){
+            }, t);
+        }, 400);
+        setTimeout(function () {
             $ele.find('span').eq(2).animate({
                 height: "100%"
-            },t);
-        },600);
-        setTimeout(function(){
+            }, t);
+        }, 600);
+        setTimeout(function () {
             $ele.find('span').eq(3).animate({
                 height: "100%"
-            },t);
-        },800);
-        setTimeout(function(){
+            }, t);
+        }, 800);
+        setTimeout(function () {
             $ele.find('span').eq(4).animate({
                 height: "100%"
-            },t);
-        },1000);
-        var showTime = 200*($ele.find('span').size()+1);
-        setTimeout(function(){
-            $ele.find('.index_animate').css('z-index','-11');
+            }, t);
+        }, 1000);
+        var showTime = 200 * ($ele.find('span').size() + 1);
+        setTimeout(function () {
+            $ele.find('.index_animate').css('z-index', '-11');
             $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
-            $ele.siblings(":not(.js_ignorAnimate)").css('z-index','1');
-        },showTime);
+            // $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
+        }, showTime);
     }
 
-    lineAnimate($('.js_animateLine'),1000);
+    lineAnimate($('.js_animateLine'), 1000);
 
 
-
-    $(window).resize(function() {
+    $(window).resize(function () {
         init();
     });
 
@@ -52,17 +51,18 @@ $(function() {
 
     function init() {
         var screenWidth = document.body.offsetWidth;
-        if(screenWidth <= 700){
+        if (screenWidth <= 700) {
             $('.js_footLink').hide();
-        }else{
+        } else {
             $('.js_footLink').show();
             $('.js_footLink').removeClass('link_border');
         }
     }
+
     /**
      * 尾页 链接
      */
-    $('.js_footLindBtn').on('click','a',function(){
+    $('.js_footLindBtn').on('click', 'a', function () {
         var $ele = $(this).parent().siblings($('.js_footLink'));
         $ele.toggle();
         $ele.toggleClass('link_border');
@@ -74,37 +74,37 @@ $(function() {
      */
 
     //导航栏目显示隐藏
-    $('.js_column').on('hover',function(){
+    $('.js_column').on('hover', function () {
         var index = parseInt($(this).attr('column'));
         $('.js_column_show').hide();
         $('.js_column_show').eq(index).show();
     });
-    $('.js_column_show').on('mouseleave',function(){
+    $('.js_column_show').on('mouseleave', function () {
         $(this).hide();
     });
 
     //搜索历史
-    $('.js_searchHistory').bind('input propertychange',function(){
+    $('.js_searchHistory').bind('input propertychange', function () {
         var screenWidth = document.body.offsetWidth;
-        if($(this).val()){
-            if(screenWidth>1199){
+        if ($(this).val()) {
+            if (screenWidth > 1199) {
                 $('.js_searchBox_xl').show();
-            }else{
+            } else {
                 $('.js_searchBox_lg').show();
             }
             $('.js_searchBoxQuick_lg').hide();
-        }else{
+        } else {
             $('.js_searchBox').hide();
             $('.js_searchBoxQuick_lg').show();
         }
-    }).on('blur',function(){
+    }).on('blur', function () {
         $('.js_searchBox').hide();
         $('.js_searchBoxQuick_lg').show();
-    }).on('focus',function(){
-        if($(this).val()){
-            if(screenWidth>1199){
+    }).on('focus', function () {
+        if ($(this).val()) {
+            if (screenWidth > 1199) {
                 $('.js_searchBox_xl').show();
-            }else{
+            } else {
                 $('.js_searchBox_lg').show();
             }
             $('.js_searchBoxQuick_lg').hide();
@@ -112,7 +112,7 @@ $(function() {
     });
 
     //搜索--lg
-    $('.js_search_lg').on('click',function(){
+    $('.js_search_lg').on('click', function () {
         $('.js_navSearchLgHide')
             .removeClass('o_lg-show')
             .removeClass('o_md-show')
@@ -128,7 +128,7 @@ $(function() {
     });
 
     //关闭搜索
-    $('.js_navSearchClose').on('click', function(){
+    $('.js_navSearchClose').on('click', function () {
 
         $('.js_navSearchLg')
             .removeClass('o_lg-show')
@@ -148,23 +148,28 @@ $(function() {
     });
 
     //展示导航菜单
-    $('.js_menuShow').on('click',function(){
-        if($(this).hasClass('icon-menu')){
+    $('.js_menuShow').on('click', function () {
+        if ($(this).hasClass('icon-menu')) {
             $(this).removeClass('icon-menu').addClass('icon-close');
             $('.js_navMdShow').show();
-        }else{
+        } else {
             $(this).removeClass('icon-close').addClass('icon-menu');
             $('.js_navMdShow').hide();
         }
     });
 
-    // userLoginStatus();
+    userLoginStatus();
 
 });
 /**
  * 加载导航头的登录状态
  */
 function userLoginStatus() {
+    var regFrom = "tongshuai";
+    var screenWidth = document.body.offsetWidth;
+    if (screenWidth < 1120) {
+        regFrom = "tsmobile";
+    }
     var returnUrl = window.location.href;
     //var ehaier=$.cookie("EHaierSSOToken");//商城的cookie
     var trsidssdssotoken = "ssotoken";//同域Cookie
@@ -176,9 +181,9 @@ function userLoginStatus() {
             var logusername = subHZString(ck_loginUserName, 7, '...');
             //从cookie中读取当前登录用户
             $("#header_loginDiv .login span").before(logusername);
-            $("#header_logoutDiv").addClass("o_df-hide");
-            $("#header_loginDiv").removeClass("o_df-hide");
-            $("#header_logout").attr("href","http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=tongshuai&returnUrl="+returnUrl)
+            $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
+            $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
+            $("#header_logout,#header_logout2").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
         } else {
             //同域cookie存在，但是 haieruser 没有取出值，去请求haier_ssosession.jsp获取当前登录用户
             var surl = "/ids/ts/ssosession.jsp";
@@ -194,8 +199,9 @@ function userLoginStatus() {
                         var logusername = subHZString(loginUser, 7, '...');
                         //从cookie中读取当前登录用户
                         $("#header_loginDiv .login span").before(logusername);
-                        $("#header_logoutDiv").addClass("o_df-hide");
-                        $("#header_loginDiv").removeClass("o_df-hide");
+                        $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
+                        $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
+                        $("#header_logout,#header_logout2").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
                     } else {
                         // if (window.innerWidth == undefined || window.innerWidth >= 768) {
                         //     if (returnUrl.indexOf("club.casarte.com") > -1) {
@@ -303,8 +309,8 @@ function userLoginStatus() {
         //         }
         //     });
         // }
-        $("#header_login").attr("href","http://tuser.tongshuai.com/ids/ts/login.jsp?regFrom=tongshuai&returnUrl="+returnUrl);
-        $("#header_reg").attr("href","http://tuser.tongshuai.com/ids/ts/reg.jsp?regFrom=tongshuai&returnUrl="+returnUrl)
+        $("#header_login,#header_logoutDiv .nav-chart,#header_logoutA").attr("href", "http://tuser.tongshuai.com/ids/ts/login.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl);
+        $("#header_reg").attr("href", "http://tuser.tongshuai.com/ids/ts/reg.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
     }
 }
 /**
