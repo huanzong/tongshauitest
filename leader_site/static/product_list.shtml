@@ -65,9 +65,6 @@
 								<span class="list-kind-china">冰箱<i class="iconfont icon-arrow-line-down"></i></span>
 								<span class="list-kind-english">HEOGJEOPK</span>
 							</div>
-							<div>
-
-							</div>
 							<div class="list-kind-line o_md-hide o_sm-hide o_xs-hide"></div>
 							<ul class="float-list">
 								<div class="triangle"></div>
@@ -132,6 +129,9 @@
 						<a>洗衣机</a>
 					</div>
 					<!-- sku -->
+					<div class="list-filter-select">
+						<!-- 盛恒小朋友 -->
+					</div>
 					<div class="list-filter">
 						<div class="filter-line">
 							<div class="filter-sole mar-right">
