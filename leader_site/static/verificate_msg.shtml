@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DEMO</title>
+    <title>密码修改通知</title>
 
     <%=base%>
 
