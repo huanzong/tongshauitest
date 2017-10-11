@@ -8,11 +8,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
     <link rel="stylesheet" type="text/css" href="images/verificate_email.css">
 </head>
 <body>
 <div class="verificate_msg_header">
-    <img src="../images/logo.png" />
+    <img src="../images/l_logo.png"  class="verificate_msg_img"/>
 </div>
 <div class="verificate_msg_middle">
     <p class="verificate_msg_name">亲爱的Alex</p>
