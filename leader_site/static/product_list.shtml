@@ -779,7 +779,11 @@
 		<!-- 背景间隔 -->
 			<div class="o_g prolist-bg"></div>
 		<!-- 背景间隔 END -->
-
+		<!-- 产品对比 -->
+			<div class="o_g prolist-compare">
+				<!-- <o -->
+			</div>
+		<!-- 产品对比 END -->
 
 	    	<!--#include virtual="public/footer.shtml"-->
 
