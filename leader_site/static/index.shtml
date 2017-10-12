@@ -45,7 +45,7 @@
 		    <!-- 导航 End-->
 
 			<!-- 首页banner -->
-		    <!-- <div class="o_g index-banner">
+		    <div class="o_g index-banner">
 				<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
 					<div class="banner-middle-box">
 						<div class="info-main">
@@ -91,11 +91,13 @@
 						    <div class="swiper-wrapper">
 						        <div class="swiper-slide">
 							        <a href="javascript:;">
+							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
 							        	<img class="js_bg" src="images/index_banner.JPG">
 							        </a>
 						        </div>
 						        <div class="swiper-slide">
 									<a href="javascript:;">
+							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
 							        	<img class="js_bg" src="images/index_banner.JPG">
 							        </a>
 						        </div>
@@ -107,71 +109,6 @@
 					<div class="banner-big">在这个做作的时代</div>
 					<div class="banner-big">我选择做最真实的自己</div>
 					<div class="banner-small">我只选择统帅统帅</div>
-				</div>
-		    </div> -->
-		    <div class="o_g index-banner">
-				<div class="swiper-container js_bannerSwiper js_bannerImg">
-				    <div class="swiper-wrapper">
-				        <div class="swiper-slide">
-				        	<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
-								<div class="banner-middle-box">
-									<div class="info-main">
-										<div class="js_bannnerCenter">
-											<span>在这个做作的时代</span>
-										</div>
-						       		</div>
-						       		<div class="info-main">
-						       			<div class="js_bannnerCenter">
-											<span>海尔真诚到永远真诚到</span>
-										</div>
-						       		</div>
-						       		<div class="info-sub">
-						       			<div class="js_bannnerCenter">
-											<span>在这个做作的时代</span>
-										</div>
-						       		</div>
-								</div>
-								<div class="banner-page">
-									<div class="page-num active">
-										<div class="line">
-											<div class="red-line"></div>
-										</div>
-										<div class="num">01</div>
-									</div>
-									<div class="page-num">
-										<div class="line">
-											<div class="red-line"></div>
-										</div>
-										<div class="num">02</div>
-									</div>
-									<div class="page-num">
-										<div class="line">
-											<div class="red-line"></div>
-										</div>
-										<div class="num">03</div>
-									</div>
-								</div>
-							</div>
-							<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2">
-								<div class="banner-img">
-									<!-- <div class="swiper-container">
-									    <div class="swiper-wrapper">
-									        <div class="swiper-slide"> -->
-										        <a href="javascript:;" class="js_bannerImg">
-										        	<img class="js_bg" src="images/index_banner.JPG">
-										        </a>
-									       <!--  </div>
-									    </div>
-									</div> -->
-								</div>
-							</div>
-							<div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
-								<div class="banner-big">在这个做作的时代</div>
-								<div class="banner-big">我选择做最真实的自己</div>
-								<div class="banner-small">我只选择统帅统帅</div>
-							</div>
-				        </div>
-				    </div>
 				</div>
 		    </div>
 		    <!-- 首页banner END -->

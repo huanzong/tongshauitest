@@ -47,10 +47,22 @@ $(function() {
     }
     
     $(".js_bg").oBgCover().init();
+
+    $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+      'height': 382,
+      'margin-left': -348.5,
+      'margin-top': -191
+    });
+
+    $('.js_bannerSwiper .swiper-slide-active').find('img').css({
+      'height': 500,
+      'margin-left': -455.5,
+      'margin-top': -250
+    });
+    
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
   }
-  swiper.bannerSwiper.reInit();
 
 	setTimeout(function(){
 
@@ -60,11 +72,6 @@ $(function() {
     }).init();
     //banner左侧文字居中
     $(".js_bannnerCenter").oBoxCenter().init();
-
-    //banner轮播高度固定
-    $('.js_bannerImg').oHrel({
-      obj:'$(".js_bannerInfo")'
-    }).init();
 
 	},1000);
 
@@ -171,27 +178,25 @@ $(function() {
     swiper.entrabceSwiper.reInit();
 
 
-
-    //banner
     if (screenWidth <= 991) {
       swiper.bannerSwiper.params.slidesPerView = 3;
       swiper.bannerSwiper.params.watchActiveIndex = true;
       swiper.bannerSwiper.params.updateOnImagesReady = true;
       swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
-        var index = swiper.activeIndex;
+          var index = swiper.activeIndex;
 
-        $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-          'height': 500,
-          'margin-left': -455.5,
-          'margin-top': -250
-        }, 500);
-        
-        $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-          'height': 382,
-          'margin-left': -348.5,
-          'margin-top': -191
-        });
-      };
+          $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+            'height': 500,
+            'margin-left': -455.5,
+            'margin-top': -250
+          }, 500);
+          
+          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+            'height': 382,
+            'margin-left': -348.5,
+            'margin-top': -191
+          });
+        };
 
       swiper.bannerSwiper.reInit();
       $(".js_bg").oBgCover().init();
