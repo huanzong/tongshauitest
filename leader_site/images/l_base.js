@@ -5,7 +5,8 @@ $(function () {
      */
     function lineAnimate($ele, t) {
 
-        $ele.siblings().hide();
+        // $ele.siblings().hide();
+        $ele.siblings().addClass('l-opacity0');
 
         setTimeout(function () {
             $ele.find('span').eq(0).animate({
@@ -35,7 +36,14 @@ $(function () {
         var showTime = 200 * ($ele.find('span').size() + 1);
         setTimeout(function () {
             $ele.find('.index_animate').css('z-index', '-11');
-            $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
+            // $ele.siblings(":not(.js_ignorAnimate)").removeClass('l-opacity0');
+            $ele.siblings(":not(.js_ignorAnimate)").animate({
+                'filter':'alpha(opacity=1)',  
+                '-moz-opacity':'1',   
+                '-khtml-opacity':'1',   
+                'opacity': '1'
+            }, t);
+            // $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
             // $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
         }, showTime);
     }
