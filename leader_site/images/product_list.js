@@ -57,5 +57,8 @@ $(function() {
     //checkbox初始化
      $(".js_proGroup,.js_radio").jq_qvote();
 
+     //删除筛选项
+
+
 
 });
