@@ -59,6 +59,7 @@ $(function() {
       'margin-left': -455.5,
       'margin-top': -250
     });
+    
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
   }

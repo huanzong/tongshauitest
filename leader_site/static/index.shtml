@@ -260,7 +260,10 @@
 						        	<div class="o_g">
 						        		<div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
 						        			<div class="l-padding">
-												<img src="images/index_entrance01.jpg">
+						        				<a href="javascript:;">
+						        					<img src="images/index_entrance01.jpg">
+						        				</a>
+												
 												<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
 													<h3>你是我简单满足<br>的小确幸1111</h3>
 													<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
@@ -339,32 +342,32 @@
 		       			<div class="o_u o_df_4-10 o_lg_1-2 o_md_1-2 o_sm_3-5 o_xs_3-4 index-about-data">
 		       				<div class="o_u o_df-hide o_sm-show o_xs-show about-select-sm">
 	       						<div class="about-china">选择统帅</div>
-		       					<div class="about-en">WHY CHOOSE US</div>
+		       					<a class="about-en">WHY CHOOSE US</a>
 		       				</div>
-		       				<div class="about-data-box">
+		       				<a class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
 		       					<div class="data-num">43</div>
-		       				</div>
-		       				<div class="about-data-box">
+		       				</a>
+		       				<a class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
 		       					<div class="data-num">38</div>
-		       				</div>
-		       				<div class="about-data-box">
+		       				</a>
+		       				<a class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
 		       					<div class="data-num">38</div>
-		       				</div>
-		       				<div class="about-data-box">
+		       				</a>
+		       				<a class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
 		       					<div class="data-num">38</div>
-		       				</div>
-		       				<div class="about-data-box">
+		       				</a>
+		       				<a class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
 		       					<div class="data-num">38</div>
-		       				</div>
-		       				<div class="about-data-box">
+		       				</a>
+		       				<a class="about-data-box">
 		       					<div class="data-title">国家研发机构</div>
 		       					<div class="data-num">38</div>
-		       				</div>
+		       				</a>
 			       		</div>
 			       		<div class="o_u o_df_6-10 o_lg_1-2 o_md_1-2 o_sm_1-3 o_xs_1-2 index-about-select">
 			       			<div class="o_u o_df_1-6 o_lg_2-5 o_md_2-5 o_sm_hide o_xs-hide"></div>
@@ -372,7 +375,7 @@
 			       				<div class="about-bg-gray">
 			       					<div class="about-font o_sm-hide o_xs-hide">
 			       						<div class="about-china">选择统帅</div>
-				       					<div class="about-en">WHY CHOOSE US</div>
+				       					<a class="about-en">WHY CHOOSE US</a>
 			       					</div>
 				       				<i class="iconfont icon-icon about-icon"></i>
 			       				</div>
