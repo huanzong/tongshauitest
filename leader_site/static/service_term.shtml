@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务条款</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" type="text/css" href="images/verificate_email.css">
+</head>
+<body>
+    <p>服务条款</p>
+</body>
+</html>

@@ -11,6 +11,7 @@
 	<!--#include virtual="public/head.shtml"-->
 	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
 	<link rel="stylesheet" type="text/css" href="images/product_list.css">
+	<link rel="stylesheet" type="text/css" href="./iconfont.css">
 </head>
 
 <body>
@@ -130,7 +131,21 @@
 					</div>
 					<!-- sku -->
 					<div class="list-filter-select">
-						<!-- 盛恒小朋友 -->
+						<div class="list-select-deletebox">
+							<a class="list-select-deleteall js_deleteAll">全部删除</a>
+						</div>
+						<div class="list-select-bgbox js_find">
+
+							<div class="list-select-bg">
+								<span class="list-select-test">单门</span>
+								<a class="list-select-a-deleteimg js_delete"><i class="iconfont icon-close list-select-deleteimg"></i></a>
+							</div>
+							<div class="list-select-bg">
+								<span class="list-select-test">银色</span>
+								<a class="list-select-a-deleteimg js_delete"><i class="iconfont icon-close list-select-deleteimg"></i></a>
+							</div>
+
+						</div>
 					</div>
 					<div class="list-filter">
 						<div class="filter-line">

@@ -57,5 +57,19 @@ $(function() {
     //checkbox初始化
      $(".js_proGroup,.js_radio").jq_qvote();
 
+     /*
+     * 删除筛选项
+     * */
+
+    //全部删除
+    $('.js_deleteAll').on('click',function () {
+        $('.js_find').empty()
+    });
+
+	//单个删除
+    $('.js_delete').on('click',function () {
+		$(this).parent().remove()
+	});
+
 
 });
