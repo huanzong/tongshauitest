@@ -280,10 +280,10 @@
 												<div class="entrance-page-line">
 													<div class="entrance-line-red"></div>
 												</div>
-												<div class="entrance-page-num">
-													<div class="page-num">01</div>
-													<div class="page-num active">02</div>
-													<div class="page-num">03</div>
+												<div class="entrance-page-num js_entrancePage">
+													<div class="page-num" data-index=1>01</div>
+													<div class="page-num active" data-index=2>02</div>
+													<div class="page-num" data-index=3>03</div>
 												</div>
 						        			</div>
 						        			<div class="l-padding">
@@ -296,7 +296,7 @@
 														<div class="entrance-page-line">
 															<div class="entrance-line-red"></div>
 														</div>
-														<div class="entrance-page-num">
+														<div class="entrance-page-num js_entrancePage">
 															<div class="page-num">01</div>
 															<div class="page-num active">02</div>
 															<div class="page-num">03</div>
