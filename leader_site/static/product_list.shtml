@@ -134,7 +134,7 @@
 						<div class="list-select-deletebox">
 							<a class="list-select-deleteall js_deleteAll">全部删除</a>
 						</div>
-						<div class="list-select-bgbox js_find">
+						<div class="list-select-bgbox js_filter">
 
 							<div class="list-select-bg">
 								<span class="list-select-test">单门</span>
