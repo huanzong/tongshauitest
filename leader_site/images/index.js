@@ -182,20 +182,20 @@ $(function() {
       swiper.bannerSwiper.params.watchActiveIndex = true;
       swiper.bannerSwiper.params.updateOnImagesReady = true;
       swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
-          var index = swiper.activeIndex;
+        var index = swiper.activeIndex;
 
-          $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-            'height': 500,
-            'margin-left': -455.5,
-            'margin-top': -250
-          }, 500);
-          
-          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-            'height': 382,
-            'margin-left': -348.5,
-            'margin-top': -191
-          });
-        };
+        $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+          'height': 500,
+          'margin-left': -455.5,
+          'margin-top': -250
+        }, 500);
+        
+        $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+          'height': 382,
+          'margin-left': -348.5,
+          'margin-top': -191
+        });
+      };
 
       swiper.bannerSwiper.reInit();
       $(".js_bg").oBgCover().init();
