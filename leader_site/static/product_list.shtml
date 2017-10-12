@@ -138,11 +138,11 @@
 
 							<div class="list-select-bg">
 								<span class="list-select-test">单门</span>
-								<a class="list-select-a-deleteimg js_"><i class="iconfont icon-close list-select-deleteimg"></i></a>
+								<a class="list-select-a-deleteimg js_delete"><i class="iconfont icon-close list-select-deleteimg"></i></a>
 							</div>
 							<div class="list-select-bg">
 								<span class="list-select-test">银色</span>
-								<a class="list-select-a-deleteimg"><i class="iconfont icon-close list-select-deleteimg"></i></a>
+								<a class="list-select-a-deleteimg js_delete"><i class="iconfont icon-close list-select-deleteimg"></i></a>
 							</div>
 
 						</div>
