@@ -59,7 +59,7 @@ $(function() {
       'margin-left': -455.5,
       'margin-top': -250
     });
-    
+
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
   }
@@ -152,6 +152,12 @@ $(function() {
   $('.js_swiperEntrabceNext').on('click', function(e){
     e.preventDefault();
     swiper.entrabceSwiper.swipeNext();
+  });
+  //分页
+  $('.js_entrancePage .page-num').on('click',function(){
+    var pageNum = $(this).attr('data-index');
+    // console.log(pageNum);
+    swiper.entrabceSwiper.swipeTo(pageNum, 500, false);
   });
 
   swiper.entrabceSwiper.reInit();
