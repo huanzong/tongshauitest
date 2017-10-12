@@ -156,7 +156,7 @@ $(function() {
   //分页
   $('.js_entrancePage .page-num').on('click',function(){
     var pageNum = $(this).attr('data-index');
-    console.log(pageNum);
+    // console.log(pageNum);
     swiper.entrabceSwiper.swipeTo(pageNum, 500, false);
   });
 
