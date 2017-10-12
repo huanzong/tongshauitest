@@ -24,6 +24,7 @@
             <li><a href="ui.shtml#ui_formValid">表单验证插件用法</a></li>
             <li><a href="ui.shtml#ui_imgUpload">上传图片</a></li>
             <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
+            <li><a href="ui.shtml#ui_paging">分页</a></li>
         </ul>
     </div>
     <!-- button 按钮 -->
@@ -106,6 +107,7 @@
             <span class="l-tag-normal l-tag-yellow">普通标签</span>
             <span class="l-tag-normal l-tag-orange">普通标签</span>
             <span class="l-tag-normal l-tag-red">普通标签</span>
+            <span class="l-tag-normal l-tag-gray">普通标签</span>
         </div>
         <textarea>
             <span class="l-tag-normal l-tag-blue">普通标签</span>
@@ -113,6 +115,7 @@
             <span class="l-tag-normal l-tag-yellow">普通标签</span>
             <span class="l-tag-normal l-tag-orange">普通标签</span>
             <span class="l-tag-normal l-tag-red">普通标签</span>
+            <span class="l-tag-normal l-tag-gray">普通标签</span>
         </textarea>
         <h3>自带padding的标签</h3>
         <div>
@@ -121,6 +124,8 @@
             <span class="l-tag-padding l-tag-yellow">自带padding的标签</span>
             <span class="l-tag-padding l-tag-orange">自带padding的标签</span>
             <span class="l-tag-padding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-gray">自带padding的标签</span>
+
         </div>
         <textarea>
             <span class="l-tag-padding l-tag-blue">自带padding的标签</span>
@@ -128,6 +133,7 @@
             <span class="l-tag-padding l-tag-yellow">自带padding的标签</span>
             <span class="l-tag-padding l-tag-orange">自带padding的标签</span>
             <span class="l-tag-padding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-gray">自带padding的标签</span>
         </textarea>
         <h3>只有下边角的标签：普通</h3>
         <div>
@@ -136,6 +142,7 @@
             <span class="l-tag-radius l-tag-yellow">只有下边角的标签</span>
             <span class="l-tag-radius l-tag-orange">只有下边角的标签</span>
             <span class="l-tag-radius l-tag-red">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-gray">只有下边角的标签</span>
         </div>
         <textarea>
             <span class="l-tag-radius l-tag-blue">只有下边角的标签</span>
@@ -143,6 +150,7 @@
             <span class="l-tag-radius l-tag-yellow">只有下边角的标签</span>
             <span class="l-tag-radius l-tag-orange">只有下边角的标签</span>
             <span class="l-tag-radius l-tag-red">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-gray">只有下边角的标签</span>
         </textarea>
         <h3>只有下边角的标签：自带边距</h3>
         <div>
@@ -151,6 +159,7 @@
             <span class="l-tag-rapadding l-tag-yellow">自带padding的标签</span>
             <span class="l-tag-rapadding l-tag-orange">自带padding的标签</span>
             <span class="l-tag-rapadding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-gray">自带padding的标签</span>
         </div>
         <textarea>
             <span class="l-tag-rapadding l-tag-blue">自带padding的标签</span>
@@ -158,6 +167,7 @@
             <span class="l-tag-rapadding l-tag-yellow">自带padding的标签</span>
             <span class="l-tag-rapadding l-tag-orange">自带padding的标签</span>
             <span class="l-tag-rapadding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-gray">自带padding的标签</span>
         </textarea>
     </div>
     <!-- 标签 END -->
@@ -439,8 +449,43 @@
     <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
     <!-- iconfont END -->
+    <!--分页-->
+    <div class="main markdown" id="ui_paging">
+        <h1>分页</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div>
+            <a  class="l-pagination-prew">上一页</a>
+            <a  class="l-pagination-pagenumber active">1</a>
+            <a  class="l-pagination-pagenumber">2</a>
+            <a  class="l-pagination-pagenumber">3</a>
+            <a  class="l-pagination-pagenumber">4</a>
+            <a  class="l-pagination-pagenumber">5</a>
+            <a  class="l-pagination-pagenumber">6</a>
+            <a  class="l-pagination-pagenumber">7</a>
+            <a  class="l-pagination-pagenumber">8</a>
+            <a  class="l-pagination-next ">下一页</a>
+        </div>
+        <textarea>
+           <div>
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
+                <a  class="l-pagination-pagenumber">4</a>
+                <a  class="l-pagination-pagenumber">5</a>
+                <a  class="l-pagination-pagenumber">6</a>
+                <a  class="l-pagination-pagenumber">7</a>
+                <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-next ">下一页</a>
+            </div>
+        </textarea>
+    </div>
+
+    <!--分页 END-->
 
 <!--#include virtual="public/foot.shtml"-->
+<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/ui.js"></script>
 </body>

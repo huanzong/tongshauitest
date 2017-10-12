@@ -85,14 +85,115 @@ $(function() {
             });
         },
 
+        //密码框：密文明文切换
+        validPassword:function(){
+            //创建明文输入框
+            var $ele = $(this).find('input');
+            var $el = {
+                ph : $(this).find('input').attr('ph'),
+                className : 'js_L_pwdClear '+ $(this).find('input').attr('class')
+            };
+            $(this).prepend('<input type="text" name="" value="'+$el.ph+'" class="'+$el.className+'">');
+
+            $('.js_L_pwdClear').css({
+                'position': 'absolute',
+                'top': 0,
+                'left': 0,
+                'color':'#ccc',
+                'z-index':1
+            });
+
+            var $eleReplace = $(this).find('input.js_L_pwdClear');
+            $eleReplace.on('focus',function(){
+                // $(this).css('z-index','-1');
+                $(this).hide();
+                $ele.val("");
+                $ele.focus();
+            });
+            $ele.on('blur',function(){
+                // $(this).val() || $eleReplace.css('z-index','1');
+                $(this).val() || $eleReplace.show();
+            });
+            
+        },
+
         //表单校验展示错误信息--登陆注册页面
         validShowError:function(errorMsg){
-            $(this).siblings('input').addClass('Validform_error');
-            $(this).html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+            if($(this).is('input')){
+                $(this).addClass('Validform_error');
+                $(this).siblings('.Validform_checktip').html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+            }else{
+                $(this).siblings('input').addClass('Validform_error');
+                $(this).html("<i class='iconfont icon-information-solid'></i>"+errorMsg);
+            }
         },
+
+        //表单校验隐藏错误信息--登陆注册页面
         validHideError:function(){
-            $(this).siblings('input').removeClass('Validform_error');
-            $(this).hide();
+            if($(this).is('input')){
+                $(this).siblings('.Validform_checktip').html("");
+                $(this).removeClass('Validform_error');
+            }else{
+                $(this).siblings('input').removeClass('Validform_error');
+                $(this).html("");
+            }                
+        },
+
+        placeholderIe8:function(){
+            var $this =$(this);
+            var text = $this.attr("ph");
+            if (text) {
+                if ($this.val() === "") {
+                    $this.val(text);
+                    $this.css('color','#ccc');
+                }
+            }
+            if($this.attr("type") == "text"){
+                if (!$this.attr('ph')){
+                    return;
+                }
+                $this.blur(function () {
+                    setTimeout(function(){//先校验是否符合规则，再添加样式
+                        if($this.val() === ''){
+                            $this.val($this.attr("ph"));
+                            $this.css('color','#ccc');
+                        }else{
+                            $this.css('color','#666');
+                        }
+                        //表单校验时触发
+                        if(!$this.attr('phtype')){
+                            $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                            // $this.css('border','1px solid #ccc');
+                        }
+                    },300);
+                    
+                }).focus(function () {
+                    $this.validHideError();
+                    if($this.val() == $this.attr("ph")){
+                        $this.val("");
+                        $this.css('color','#666');
+                    }
+                    //表单校验时触发
+                    if(!$this.attr('phtype')){
+                       $this.css('border','1px solid #e60012');
+                    }
+                });
+            }else if($this.attr("type") == "password"){
+                $this.blur(function () {
+                    setTimeout(function(){//先校验是否符合规则，再添加样式
+                        $this.css('border','1px solid #ccc');
+                        $this.css('color','#666');
+                        //表单校验时触发
+                        if(!$this.attr('phtype')){
+                            $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                            // $this.css('border','1px solid #ccc');
+                        }
+                    },300);
+                }).focus(function () {
+                    $this.validHideError();
+                    $this.css('border','1px solid #e60012');
+                });
+            }
         }
         
     });
@@ -101,42 +202,7 @@ $(function() {
      * 输入框placeholder支持ie8
      */
     $('input').each(function(){
-        var $this =$(this);
-        var text = $this.attr("ph");
-        if (text) {
-            if ($this.val() === "") {
-                $this.val(text);
-                $this.css('color','#ccc');
-            }
-        }
-        if($this.attr("type") == "text"){
-            if (!$this.attr('ph')){
-                return;
-            }
-            $this.blur(function () {
-                if($this.val() === ''){
-                    $this.val($this.attr("ph"));
-                    $this.css('color','#ccc');
-                }else{
-                    $this.css('color','#666');
-                }
-                //表单校验时触发
-                if(!$this.attr('phtype')){
-                    $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                    // $this.css('border','1px solid #ccc');
-                }
-                
-            }).focus(function () {
-                if($this.val() == $this.attr("ph")){
-                    $this.val("");
-                    $this.css('color','#666');
-                }
-                //表单校验时触发
-                if(!$this.attr('phtype')){
-                   $this.css('border','1px solid #e60012');
-                }
-            });
-        }
+        $(this).placeholderIe8();
     });
     $('textarea').each(function(){
         var $this =$(this);

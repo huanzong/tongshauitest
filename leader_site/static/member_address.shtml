@@ -16,7 +16,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g  ">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -28,7 +28,7 @@
                         <a href="javascript:;" class="l-btn-normal l-btn-red">新增地址</a>
                     </div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <!-- 地址管理 START-->
                         <div class="member-address">
                             <div class="member-address-title">添加新地址</div>
@@ -85,7 +85,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
                                         <div class="selectbox">
                                             <div class="member-address-inputbox">
                                                 <select name="" id="js_city"  autotext="市">

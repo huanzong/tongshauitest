@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>密码修改通知</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" type="text/css" href="images/verificate_email.css">
+</head>
+<body>
+<div class="verificate_msg_header">
+    <img src="../images/l_logo.png"  class="verificate_msg_img"/>
+</div>
+<div class="verificate_msg_middle">
+    <p class="verificate_msg_name">亲爱的Alex</p>
+    <p class="verificate_msg_content">您的账号alex@163.com的密码已修改，如果这是您的操作，请忽略。</p>
+    <p class="verificate_msg_hinttest">如果您并未更改自己的密码，则有可能是有人盗取您的账号，</p>
+    <p class="verificate_msg_resetpasswords">请至统帅官网重置密码：<a class="verificate_msg_website" href="http://www.tongshuai.com">http://www.tongshuai.com</a></p>
+
+</div>
+<div class="verificate_msg_footer">
+    <span class="verificate_msg_footertest">本系统邮件自动发出，请勿回复</span>
+    <span class="verificate_msg_copyright">鲁ICP备15038556号 Copyright &copy; 海尔集团版权所有</span>
+</div>
+
+</body>
+
+</html>

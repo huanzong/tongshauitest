@@ -1,0 +1,134 @@
+@import "l_variable";
+/*搜索页头部*/
+*{margin: 0;padding: 0; }
+.product-search-head{
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  //height: 100px;
+  //line-height: 100px;
+  text-align: center;
+  .product-search-head-cont{
+
+
+    text-align: left;
+    .l-input{
+
+      font-size: 14px;
+      color: #999;
+      width: 480px;
+      margin-top: 40px;
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        //width: 500px;
+        margin-top:25px;
+
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        margin-top:25px;
+      }
+      .iconfont{
+        top: 7px;
+        font-size: 22px;
+        color: #999;
+        right: 20px;
+      }
+    }
+    .product-search-head-text{
+      font-size: 14px;
+      padding-left: 30px;
+      display: inline-block;
+      line-height: 40px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        //width: 500px;
+        margin-top:10px;
+        padding-left: 0px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        margin-top:10px;
+        padding-left: 0px;
+        margin-bottom: 20px;
+      }
+      span{
+        color: #999;
+
+      }
+      i{
+        padding-right:20px;
+        color: #666;
+      }
+    }
+  }
+
+}
+
+/*搜索结果title*/
+.product-search-result{
+  text-align: center;
+  padding-top: 35px;
+  .product-search-result-title{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+
+    font-size: 16px;
+    text-align: left;
+    p{
+      display: inline-block;
+      color: #666;
+      @media (max-width: 575px) {
+        /* xs*/
+        padding-bottom: 15px;
+      }
+    }
+    a{
+      color: #666;
+      padding: 0 30px;
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+
+      }
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        //width: 240px;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        padding: 0 25px;
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+
+        padding: 0 15px;
+
+      }
+    }
+    .cur{
+      color:@l-red ;
+    }
+
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* lg*/
+
+}
+@media (min-width: 701px) and (max-width: 991px) {
+  /* md*/
+  //width: 240px;
+}
+@media (min-width: 576px) and (max-width: 700px) {
+  /* sm*/
+  //width: 500px;
+}
+@media (max-width: 575px) {
+  /* xs*/
+
+}

@@ -32,20 +32,25 @@
                                         <div class="login-tit js_loginType_tit">登录统帅</div>
                                         <div class="login-form js_loginType_pc">
                                             <div class="l-input login-input">
-                                                <input type="text" name="username" ph="手机号 / 邮箱 / 用户名" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写手机号 / 邮箱 / 用户名">
+                                                <input type="text" name="username" ph="手机号 / 邮箱 / 用户名">
                                                 <i class="iconfont icon-member"></i>
                                                 <p class="Validform_checktip js_demo"></p>
                                             </div>
-                                            <div class="l-input login-input">
-                                                <input type="text" name="password" ph="密码" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写密码">
+                                            <div class="l-input login-input js_password">
+                                                <input type="password" name="password" ph="密码">
                                                 <i class="iconfont icon-lock-solid"></i>
                                                 <p class="Validform_checktip"></p>
+                                            </div>
+                                            <div class="l-input login-input o_borderbox">
+                                                <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
+                                                <a href="javascript:;" class="exchange">换一换</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
                                             </div>
                                             <div class="login-role">
                                                 <span>
                                                   <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="2周内免登录">
                                                 </span>
-                                                <span class="l-fr">忘记密码</span>
+                                                <a class="forget-psw l-fr">忘记密码</a>
                                                 <i class="iconfont icon-problem-solid l-fr"></i>
                                                 <p class="Validform_checktip"></p>
                                             </div>

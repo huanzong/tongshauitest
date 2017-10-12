@@ -16,7 +16,7 @@
 <body>
 <div class="o_body">
     <div class="o_main">
-        <div class="o_g">
+        <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
             <!--#include virtual="public/member_nav.shtml"-->
             <!-- 左侧导航 End-->
@@ -25,7 +25,7 @@
                 <div class="member-security-width js-securityheight">
                     <div class="member-security-tit"><p>增票资质</p></div>
                     <!-- 内容区域 START-->
-                    <div class="member-security-contbox">
+                    <div class="member-security-contbox js-contRightContBox">
                         <div class="member-security-table member-ticket-pad">
                             <!-- 增票资质 START-->
                             <div class="member-security-ticketinfobox o_g">

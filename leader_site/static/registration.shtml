@@ -42,12 +42,21 @@
                                                 <div class="l-input">
                                                     <input type="text" name="username" ph="请输入常用手机号">
                                                     <i class="iconfont icon-member"></i>
+                                                    <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号<a href="javascript:;" class="validLink">请输入常用手机号</a></p>
                                                 </div>
                                             </div>
                                             <div class="reg-input">
                                                 <div class="l-input">
                                                     <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
                                                     <i class="iconfont icon-lock-solid"></i>
+                                                    <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号</p>
+                                                </div>
+                                            </div>
+                                            <div class="reg-input">
+                                                <div class="l-input o_borderbox">
+                                                    <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
+                                                    <a href="javascript:;" class="exchange">换一换</a>
+                                                    <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
                                                 </div>
                                             </div>
                                             <div class="reg-input">
