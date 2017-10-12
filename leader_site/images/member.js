@@ -254,5 +254,40 @@ $(function() {
 
 
 
+// 分享晒单页面
+    $('.js_shareScoreImg>li').click(function(){
+        var $shareArr=$('.js_shareScoreImg>li');
+        var shareImgIndex = $(this).index();
+        for(var i=0;i<$shareArr.length;i++){
+
+            if(i > shareImgIndex){
+                $shareArr.eq(i).removeClass('member-share-score-selected');
+            }else{
+                $shareArr.eq(i).addClass('member-share-score-selected');
+            }
+        }
+    })
+
+    var textLength =  $('.js_EvaluateVal').val().length;
+    $('.js_EvaluateValLength').html(textLength);
+
+    $('.js_EvaluateVal').bind('input propertychange', function() {
+        textLength = $(this).val().length;
+        if(textLength>500){
+            $('.js_EvaluateValLength').html(textLength);
+            alert('字数不能大于500！');
+        }else{
+            $('.js_EvaluateValLength').html(textLength);
+
+        }
+
+    });
+//        删除图片
+    $('.js_sharePhotoDelect').click(function(){
+        $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
+        $.ajax({
+
+        })
+    })
 
 });
