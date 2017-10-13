@@ -271,7 +271,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -309,7 +309,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -347,7 +347,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -385,7 +385,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -423,7 +423,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -461,7 +461,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -499,7 +499,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -537,7 +537,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -575,7 +575,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -613,7 +613,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -651,7 +651,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -689,7 +689,7 @@
 										</span>
 										<span class="pro-read-font">订阅</span>
 									</a>
-									<a class="pro-read l-fr">
+									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
 											<i class="iconfont icon-d-solid"></i>
@@ -797,11 +797,64 @@
 			<div class="prolist-compare">
 				<div class="compare-title">
 					产品对比
-					<div class="compare-spread">
-						展开
-						<i class="iconfont icon-arrow-line-up"></i>
+					<div class="compare-spread js_compareBoxShow" data-show=0>
+						展开<i class="iconfont icon-arrow-line-up"></i>
 					</div>
 				</div>
+				<ul class="compare-list js_compareBox">
+					<li>
+						<div class="compare-product-img">
+							<img src="images/compare_goods.PNG">
+						</div>
+						<div class="compare-product-info">
+							<p>双开门双</p>
+							<p class="leaveout">双开门双开门双开门双开门</p>
+							<span>GHEGEGJ-GHEIGO</span>
+						</div>
+						<i class="iconfont icon-close compare-close js_compareClose"></i>
+					</li>
+					<li>
+						<div class="compare-product-img">
+							<img src="images/compare_goods.PNG">
+						</div>
+						<div class="compare-product-info">
+							<p>双开门双</p>
+							<p class="leaveout">双开门双开门双开门双开门</p>
+							<span>GHEGEGJ-GHEIGO</span>
+						</div>
+						<i class="iconfont icon-close compare-close js_compareClose"></i>
+					</li>
+					<li>
+						<div class="compare-product-img">
+							<img src="images/compare_goods.PNG">
+						</div>
+						<div class="compare-product-info">
+							<p>双开门双</p>
+							<p class="leaveout">双开门双开门双开门双开门</p>
+							<span>GHEGEGJ-GHEIGO</span>
+						</div>
+						<i class="iconfont icon-close compare-close js_compareClose"></i>
+					</li>
+					<li>
+						<div class="compare-product-img">
+							<img src="images/compare_goods.PNG">
+						</div>
+						<div class="compare-product-info">
+							<p>双开门双</p>
+							<p class="leaveout">双开门双开门双开门双开门</p>
+							<span>GHEGEGJ-GHEIGO</span>
+						</div>
+						<i class="iconfont icon-close compare-close js_compareClose"></i>
+					</li>
+					<li>
+						<div class="compare-link">
+							<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
+						</div>
+						<div class="compare-link">
+							<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
+						</div>
+					</li>
+				</ul>
 			</div>
 		<!-- 产品对比 END -->
 
