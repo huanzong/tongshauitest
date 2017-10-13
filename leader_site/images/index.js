@@ -140,7 +140,7 @@ $(function() {
 
     onSlideChangeEnd: function(swiper){
     	var index = swiper.activeLoopIndex;
-    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(swiper.activeIndex).find('img').attr('src');
+    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(swiper.previousIndex).find('img').attr('src');
       $('.js_recImgSmall').attr('src',imgSrc);
 
       //文字
