@@ -796,7 +796,7 @@
 		<!-- 产品对比 -->
 			<div class="prolist-compare">
 				<div class="compare-title">
-					<div class="l-fl">产品对比</div>
+					产品对比
 					<div class="compare-spread">
 						展开
 						<i class="iconfont icon-arrow-line-up"></i>
