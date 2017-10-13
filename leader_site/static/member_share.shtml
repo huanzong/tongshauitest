@@ -37,7 +37,7 @@
                                 <div class="member-share-right-cont">
                                     <div class="member-share-score">
                                         <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
-                                        <ul class="js_shareScoreImg  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                        <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                             <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
                                             <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
                                             <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
@@ -53,12 +53,11 @@
                                                 <span class="js_EvaluateValLength">0</span><span>/500</span>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="member-share-photo ">
                                         <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
                                         <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                            <ul>
+                                            <ul class="member-share-right-photo">
                                                 <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
                                                 <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
                                                 <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
