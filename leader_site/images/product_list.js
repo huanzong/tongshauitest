@@ -116,5 +116,11 @@ $(function() {
         $('.js_compareBox').prepend(temp);
 
     });
+    //清空对比栏
+    $('.js_compareClose').on('click',function(){
+        $('.js_compareBox').find(li).each(function(i,n){
+
+        });
+    });
 
 });
