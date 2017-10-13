@@ -358,7 +358,7 @@
 														<div class="entrance-page-line">
 															<div class="entrance-line-red"></div>
 														</div>
-														<div class="entrance-page-num">
+														<div class="entrance-page-num js_entrancePage1">
 															<div class="page-num">01</div>
 															<div class="page-num active">02</div>
 															<div class="page-num">03</div>
@@ -421,7 +421,7 @@
 														<div class="entrance-page-line">
 															<div class="entrance-line-red"></div>
 														</div>
-														<div class="entrance-page-num">
+														<div class="entrance-page-num js_entrancePage1">
 															<div class="page-num">01</div>
 															<div class="page-num active">02</div>
 															<div class="page-num">03</div>
