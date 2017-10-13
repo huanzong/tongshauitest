@@ -25,13 +25,20 @@ $(function() {
     autoplay: 3000,
     updateOnImagesReady : true,
     centeredSlides : true,
+    // initialSlide :1,
+    onFirstInit: function(swiper){
+      var index = swiper.activeLoopIndex;
+      $('.js_bannerSwiperFont').eq(1).fadeIn(100);
+      $('.js_bannerSwiperFont1').fadeOut();
+      $('.js_bannerSwiperFont1').eq(1).fadeIn(100);
+    }
   });
 
   if (screenWidth <= 991) {
     swiper.bannerSwiper.params.slidesPerView = 3,
     swiper.bannerSwiper.params.watchActiveIndex = true,
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
-      var index = swiper.activeIndex;
+      var index = swiper.activeLoopIndex;
       
       $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
         'height': 500,
@@ -44,6 +51,14 @@ $(function() {
         'margin-left': -348.5,
         'margin-top': -191
       });
+
+      console.log(index);
+      //文字
+      $('.js_bannerSwiperFont1').hide();
+      $('.js_bannerSwiperFont1').eq(index).fadeIn(500);
+      //分页
+      $('.js_bannerSwiperPage .page-num').removeClass('active');
+      $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
     }
     
     $(".js_bg").oBgCover().init();
@@ -60,9 +75,31 @@ $(function() {
       'margin-top': -250
     });
 
+    
+
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
+    swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
+      var index = swiper.activeLoopIndex;
+      //文字
+      $('.js_bannerSwiperFont').hide();
+      $('.js_bannerSwiperFont').eq(index).fadeIn(500);
+      //分页
+      $('.js_bannerSwiperPage .page-num').removeClass('active');
+      $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
+    };
   }
+
+  $('.js_bannerSwiperPage .page-num').on('click',function(){
+    var pageNum = $(this).attr('data-index');
+    swiper.bannerSwiper.swipeTo(pageNum-1, 100, false);
+
+    $('.js_bannerSwiperPage .page-num').removeClass('active');
+    $(this).addClass('active');
+
+    $('.js_bannerSwiperFont').fadeOut();
+    $('.js_bannerSwiperFont').eq(pageNum-1).fadeIn(100);
+  });
 
 	setTimeout(function(){
 
@@ -92,11 +129,25 @@ $(function() {
 
     loop: true,
     autoplay: 3000,
+    
+    onFirstInit: function(swiper){
+      var index = swiper.activeLoopIndex;
+      $('.js_recommendFont').fadeOut(1);
+      $('.js_recommendFont').eq(index).fadeIn(500);
+      $('.js_recommendFont1').fadeOut(1);
+      $('.js_recommendFont1').eq(index).fadeIn(500);
+    },
 
     onSlideChangeEnd: function(swiper){
-    	var index = swiper.activeIndex;
-    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
+    	var index = swiper.activeLoopIndex;
+    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(swiper.activeIndex).find('img').attr('src');
       $('.js_recImgSmall').attr('src',imgSrc);
+
+      //文字
+      $('.js_recommendFont').fadeOut(1);
+      $('.js_recommendFont').eq(index).fadeIn(500);
+      $('.js_recommendFont1').fadeOut(1);
+      $('.js_recommendFont1').eq(index).fadeIn(500);
     }
 	});
 	$('.js_swiperRecMainPrev').on('click', function(e){
@@ -189,20 +240,28 @@ $(function() {
       swiper.bannerSwiper.params.watchActiveIndex = true;
       swiper.bannerSwiper.params.updateOnImagesReady = true;
       swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
-          var index = swiper.activeIndex;
+        var index = swiper.activeLoopIndex;
 
-          $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-            'height': 500,
-            'margin-left': -455.5,
-            'margin-top': -250
-          }, 500);
-          
-          $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-            'height': 382,
-            'margin-left': -348.5,
-            'margin-top': -191
-          });
-        };
+        $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+          'height': 500,
+          'margin-left': -455.5,
+          'margin-top': -250
+        }, 500);
+        
+        $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+          'height': 382,
+          'margin-left': -348.5,
+          'margin-top': -191
+        });
+
+        console.log(index);
+        //文字
+        $('.js_bannerSwiperFont1').hide();
+        $('.js_bannerSwiperFont1').eq(index).fadeIn(1);
+        //分页
+        $('.js_bannerSwiperPage .page-num').removeClass('active');
+        $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
+      };
 
       swiper.bannerSwiper.reInit();
       $(".js_bg").oBgCover().init();
@@ -223,11 +282,15 @@ $(function() {
     } else {
       swiper.bannerSwiper.params.slidesPerView = 1;
       swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
-        var index = swiper.activeIndex;
-        // var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(index).find('img').attr('src');
-        // $('.js_recImgSmall').attr('src',imgSrc);
-      };
-      swiper.bannerSwiper.reInit();
+        var index = swiper.activeLoopIndex;
+        //文字
+        $('.js_bannerSwiperFont').hide();
+        $('.js_bannerSwiperFont').eq(index).fadeIn(500);
+        //分页
+        $('.js_bannerSwiperPage .page-num').removeClass('active');
+        $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
+        };
+        swiper.bannerSwiper.reInit();
     }
 
   });
