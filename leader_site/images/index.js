@@ -184,6 +184,11 @@ $(function() {
 			  '-khtml-opacity': '1',  
 			  'opacity': '1'
       }, 1000);
+
+      //分页
+      console.log(swiper.activeLoopIndex);
+      $('.js_entrancePage .page-num').removeClass('active');
+      $('.js_entrancePage').find('.page-num').eq(swiper.activeLoopIndex).addClass('active');
     }
   });
 
@@ -207,8 +212,9 @@ $(function() {
   //分页
   $('.js_entrancePage .page-num').on('click',function(){
     var pageNum = $(this).attr('data-index');
-    // console.log(pageNum);
-    swiper.entrabceSwiper.swipeTo(pageNum, 500, false);
+    swiper.entrabceSwiper.swipeTo(pageNum-1, 500, false);
+    $('.js_entrancePage .page-num').removeClass('active');
+    $(this).addClass('active');
   });
 
   swiper.entrabceSwiper.reInit();
