@@ -494,6 +494,16 @@
 		}
 	}
 }
+//分页
+.product-listpage{
+	padding: 20px 0;
+	text-align: center;
+	background: #f8f8f8;
+	font-size: 12px;
+	a{
+		font-size: 14px;
+	}
+}
 
 //精选推荐
 .product-recommend{
@@ -585,11 +595,112 @@
 	height: 30px;
 }
 
+//产品对比
+.prolist-compare{
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	z-index: 2;
+	color: #333;
+	font-size: 12px;
+	
+	.compare-title{
+		display: block;
+		position: relative;
+		padding: 0 8.33%;
+		line-height: 40px;
+		height: 40px;
+		border-bottom: 1px solid #eee;
+		.compare-spread{
+			position: absolute;
+			top: 0;
+			right: 9.09%;
+			line-height: 40px;
+			font-size: 12px;
+			color: #333;
+		}
+	}
+
+	
+	.compare-list{
+		display: none;
+		border-left: 1px solid #eee;
+		margin-left: 8.33%;
+		li{
+			position: relative;
+			display: inline-block;
+			width: 17.9%;
+			min-height: 100px;
+			border-right: 1px solid #eee;
+			vertical-align: top;
+			.compare-close{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				cursor: pointer;
+			}
+			.compare-product-img{
+				display: inline-block;
+				padding: 20px 10px;
+				img{
+					width: 60px;
+					height: 60px;
+				}
+			}
+			.compare-link{
+				display: block;
+				.l-btn-red{
+					min-width: 96px;
+					margin-top: 20px;
+				}
+				.link-clear{
+					display: inline-block;
+					margin-top: 15px;
+					color: #666;
+				}
+				.link-clear:hover{
+					color: @l-red;
+				}
+			}
+			.compare-product-info{
+				display: inline-block;
+				width: 58%;
+				font-size: 12px;
+				padding-top: 23px;
+				p,span{
+					width: 100%;
+				}
+				p{
+					line-height: 18px;
+					color: #333;
+					font-family: "Microsoft yahei"
+				}
+				span{
+					color: #999;
+					line-height: 22px;
+				}
+			}
+			.compare-link{
+				display: block;
+				text-align: center;
+			}
+			.clear{
+				display: block;
+			}
+		}
+	}
+}
+
 //弹层-筛选项
 .list-layer{
 	display: none;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -669,4 +780,4 @@
 			}
 		}
 	}
-}	
+}

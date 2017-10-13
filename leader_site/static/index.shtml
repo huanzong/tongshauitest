@@ -47,10 +47,11 @@
 			<!-- 首页banner -->
 		    <div class="o_g index-banner">
 				<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
-					<div class="banner-middle-box">
+					<!-- banner文字循环体 -->
+					<div class="banner-middle-box js_bannerSwiperFont">
 						<div class="info-main">
 							<div class="js_bannnerCenter">
-								<span>在这个做作的时代</span>
+								<span>在这个做作的时代11</span>
 							</div>
 			       		</div>
 			       		<div class="info-main">
@@ -64,26 +65,46 @@
 							</div>
 			       		</div>
 					</div>
-					<div class="banner-page">
-						<div class="page-num active">
+					<div class="banner-middle-box js_bannerSwiperFont">
+						<div class="info-main">
+							<div class="js_bannnerCenter">
+								<span>在这个做作的时代22</span>
+							</div>
+			       		</div>
+			       		<div class="info-main">
+			       			<div class="js_bannnerCenter">
+								<span>海尔真诚到永远真诚到</span>
+							</div>
+			       		</div>
+			       		<div class="info-sub">
+			       			<div class="js_bannnerCenter">
+								<span>在这个做作的时代</span>
+							</div>
+			       		</div>
+					</div>
+					<!-- banner文字循环体 End-->
+					<!-- banner 分页 不需要循环-->
+					<div class="banner-page js_bannerSwiperPage">
+						<div class="page-num active" data-index=1>
 							<div class="line">
 								<div class="red-line"></div>
 							</div>
 							<div class="num">01</div>
 						</div>
-						<div class="page-num">
+						<div class="page-num" data-index=2>
 							<div class="line">
 								<div class="red-line"></div>
 							</div>
 							<div class="num">02</div>
 						</div>
-						<div class="page-num">
+						<div class="page-num" data-index=3>
 							<div class="line">
 								<div class="red-line"></div>
 							</div>
 							<div class="num">03</div>
 						</div>
 					</div>
+					<!-- banner 分页 不需要循环 END-->
 				</div>
 				<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
 					<div class="banner-img">
@@ -98,7 +119,7 @@
 						        <div class="swiper-slide">
 									<a href="javascript:;">
 							        	<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG"> -->
-							        	<img class="js_bg" src="images/index_banner.JPG">
+							        	<img class="js_bg" src="images/index_banner2.JPG">
 							        </a>
 						        </div>
 						    </div>
@@ -106,9 +127,18 @@
 					</div>
 				</div>
 				<div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
-					<div class="banner-big">在这个做作的时代</div>
-					<div class="banner-big">我选择做最真实的自己</div>
-					<div class="banner-small">我只选择统帅统帅</div>
+					<!-- 循环体 -->
+					<div class="o_u o_df_2-2 js_bannerSwiperFont1">
+						<div class="banner-big">在这个做作的时代11</div>
+						<div class="banner-big">我选择做最真实的自己</div>
+						<div class="banner-small">我只选择统帅统帅</div>
+					</div>
+					<div class="o_u o_df_2-2 js_bannerSwiperFont1">
+						<div class="banner-big">在这个做作的时代22</div>
+						<div class="banner-big">我选择做最真实的自己</div>
+						<div class="banner-small">我只选择统帅统帅</div>
+					</div>
+					<!-- 循环体 END -->
 				</div>
 		    </div>
 		    <!-- 首页banner END -->
@@ -198,8 +228,22 @@
 		    		</div>
 		    	</div>
 		    	<div class="o_u o_df_1-3 o_md_5-12 o_sm-hide o_xs-hide">
-		    		<div class="recommend-info">
-		    			<div class="info-title">对洗衣机也可以</div>
+		    		<!-- 循环体 -->
+		    		<div class="recommend-info js_recommendFont">
+		    			<div class="info-title">对洗衣机也可以11</div>
+		    			<div class="info-title">有小随意和小任性</div>
+		    			<div class="info-con">
+		    				我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+		    			</div>
+		    			<a class="info-more">
+		    				<span></span>
+		    				<span></span>
+		    				<span></span>
+		    			</a>
+		    		</div>
+		    		<!-- 循环体 End -->
+		    		<div class="recommend-info js_recommendFont">
+		    			<div class="info-title">对洗衣机也可以22</div>
 		    			<div class="info-title">有小随意和小任性</div>
 		    			<div class="info-con">
 		    				我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
@@ -229,20 +273,38 @@
 							        </a>
 						        </div>
 						    </div>
-							</div>
+						</div>
 		    		</div>
+		    		
 		    		<div class="recommend-main-info o_df-hide o_sm-show o_xs-show">
-		    			<div class="info-title">对洗衣机也可以</div>
-		    			<div class="info-title">有小随意和小任性</div>
-		    			<div class="info-con">
-		    				我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
-		    			</div>
-		    			<a class="info-more">
-		    				<span></span>
-		    				<span></span>
-		    				<span></span>
-		    			</a>
+		    			<!-- 循环体 -->
+			    		<div class="js_recommendFont1">
+			    			<div class="info-title">对洗衣机也可以11</div>
+			    			<div class="info-title">有小随意和小任性</div>
+			    			<div class="info-con">
+			    				我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+			    			</div>
+			    			<a class="info-more">
+			    				<span></span>
+			    				<span></span>
+			    				<span></span>
+			    			</a>
+			    		</div>
+			    		<!-- 循环体 End -->
+			    		<div class="js_recommendFont1">
+			    			<div class="info-title">对洗衣机也可以22</div>
+			    			<div class="info-title">有小随意和小任性</div>
+			    			<div class="info-con">
+			    				我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+			    			</div>
+			    			<a class="info-more">
+			    				<span></span>
+			    				<span></span>
+			    				<span></span>
+			    			</a>
+			    		</div>
 		    		</div>
+		    		
 		    	</div>
 		    </div>
 		    <!-- 推荐产品 END -->
@@ -282,7 +344,7 @@
 												</div>
 												<div class="entrance-page-num js_entrancePage">
 													<div class="page-num" data-index=1>01</div>
-													<div class="page-num active" data-index=2>02</div>
+													<div class="page-num" data-index=2>02</div>
 													<div class="page-num" data-index=3>03</div>
 												</div>
 						        			</div>
@@ -296,7 +358,7 @@
 														<div class="entrance-page-line">
 															<div class="entrance-line-red"></div>
 														</div>
-														<div class="entrance-page-num js_entrancePage">
+														<div class="entrance-page-num js_entrancePage1">
 															<div class="page-num">01</div>
 															<div class="page-num active">02</div>
 															<div class="page-num">03</div>
@@ -307,6 +369,69 @@
 													</div>
 													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
 														<h3>你是我简单满足<br>的小确幸</h3>
+														<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+														<a class="info-more">
+									    				<span></span>
+									    				<span></span>
+									    				<span></span>
+									    			</a>
+													</div>
+												</div>
+											</div>
+						        		</div>
+						        	</div>
+						        </div>
+						        <div class="swiper-slide">
+						        	<div class="o_g">
+						        		<div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
+						        			<div class="l-padding">
+						        				<a href="javascript:;">
+						        					<img src="images/index_entrance01.jpg">
+						        				</a>
+												
+												<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
+													<h3>你是我简单满足<br>的小确幸1111</h3>
+													<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+													<a class="info-more">
+									    				<span></span>
+									    				<span></span>
+									    				<span></span>
+									    			</a>
+												</div>
+											</div>
+						        		</div>
+						        		<div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
+						        			<div class="entrance-page o_md-hide">
+												<div class="entrance-page-line">
+													<div class="entrance-line-red"></div>
+												</div>
+												<div class="entrance-page-num js_entrancePage">
+													<div class="page-num" data-index=1>01</div>
+													<div class="page-num" data-index=2>02</div>
+													<div class="page-num" data-index=3>03</div>
+												</div>
+						        			</div>
+						        			<div class="l-padding">
+						        				<div class="o_u entrance-img2">
+													<img src="images/index_entrance02.jpg" style="width: 100%">
+												</div>
+												<br>
+												<div class="index-entrance-bottom o_sm-hide o_xs-hide">
+													<div class="o_df-hide o_md-show entrance-page">
+														<div class="entrance-page-line">
+															<div class="entrance-line-red"></div>
+														</div>
+														<div class="entrance-page-num js_entrancePage1">
+															<div class="page-num">01</div>
+															<div class="page-num active">02</div>
+															<div class="page-num">03</div>
+														</div>
+								        			</div>
+													<div class="o_u entrance-img3">
+														<img src="images/index_entrance03.jpg" style="width: 100%">
+													</div>
+													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
+														<h3>你是我简单满足22<br>的小确幸</h3>
 														<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
 														<a class="info-more">
 									    				<span></span>
