@@ -135,6 +135,6 @@ $.jUploader({
 //点击提交按钮
 $('.js-memberShareGetUp').click(function(){
     var scoreNub = $('.member-share-score-selected').length;  //这个是用户的评价分数
-
     $.ajax()
+
 })

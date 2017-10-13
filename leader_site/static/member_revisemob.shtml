@@ -41,7 +41,7 @@
                                     <span>　3. 完成</span>
                                     <div class="member-revisemob-line-finishpoint"></div>
                                 </i>
-                                <div class="member-revisemob-ratelinebg"></div>
+                                <div class="member-revisemob-ratelinebg js-memberRevRateLine"></div>
                             </div>
                         </div>
                         <div class="member-security-bingmob member-security-revisemob-martop">

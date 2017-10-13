@@ -2,37 +2,71 @@
  * Created by 15610 on 2017/10/13.
  */
 $(function(){
+
+    //页面加载时
+    //$.ajax({
+    //    type: "POST",
+    //    url: "",
+    //    data: "",
+    //    success: function(data){
+    //        if(data){
+    //        //
+                $('.js-bingfalse').show();
+                $('.js-bingsuccess').hide();
+    //        }else{
+    //            $('.js-contRightContBox').show();
+    //            $('.member-security-bingsuccess').hide();
+    //        }
+    //    }
+    //});
+
+
+
     $('.js-bindmobinput').blur(function(){
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if(yanzhengtrue){
             $('.js-getinfo').removeClass('l-btn-disable').click(function(){
                 yanzhengtrue = $('.js-bindmobinput').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){
-                    $.ajax({
-//                        发送验证码
-                    })
+//                    $.ajax({
+////                        发送验证码
+//                    })
                 }
             })
         }
 
     })
+    //验证码成功后可点击提交
+    $('.js-validateinput').blur(function(){
+        var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+        if(yanzhengtrue){
+            $('.js-submintData').click(function(){
+//                $.ajax({
+////                        发送验证码
+//                })
+            })
+        }else{
+        //    提示错误信息 验证码错误
+
+            //禁止点击
+            $('.js-submintData').click(function(){
+               return false;
+            })
+        }
+
+    })
+
+
+
     var mobile=$(".js-bindmobform").Validform({
         tiptype:3,
         label:".label",
         showAllError:true,
-        beforeCheck:function(curform){
-            alert(2);
-        },
-        beforeSubmit:function(curform){
-            alert(1);
-        },
         ajaxPost:true
 
     });
-    console.log(mobile);
-    if(mobile==true){
-        alert(5555);
-    }
+
+
 
     var yanzhengma=$(".js-bindmobyanzheng").Validform({
         tiptype:3,
