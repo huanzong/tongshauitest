@@ -59,7 +59,7 @@ $(function() {
       //分页
       $('.js_bannerSwiperPage .page-num').removeClass('active');
       $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
-    }
+    };
     
     $(".js_bg").oBgCover().init();
 
@@ -163,6 +163,22 @@ $(function() {
   /**
    * 首页入口
    */
+  //分页
+  // console.log(swiper.activeLoopIndex);
+  // $('.js_entrancePage .page-num').removeClass('active');
+  // $('.js_entrancePage .page-num').eq(swiper.activeLoopIndex).addClass('active');
+  $('.js_entrancePage').each(function(i,n){
+    var htmlStr = '';
+
+    for(var j=0;j<$('.js_entrancePage').length;j++){
+      if(i==j){
+        htmlStr += '<div class="page-num active" data-index='+(j+1)+'>0'+(j+1)+'</div>';
+      }else{
+        htmlStr += '<div class="page-num" data-index='+(j+1)+'>0'+(j+1)+'</div>';
+      }
+    }
+    $(this).html(htmlStr);
+  });
   swiper.entrabceSwiper = new Swiper ('.js_swiperEntrabce', {
 
     loop: true,
@@ -185,10 +201,7 @@ $(function() {
 			  'opacity': '1'
       }, 1000);
 
-      //分页
-      console.log(swiper.activeLoopIndex);
-      $('.js_entrancePage .page-num').removeClass('active');
-      $('.js_entrancePage').find('.page-num').eq(swiper.activeLoopIndex).addClass('active');
+      
     }
   });
 
@@ -213,8 +226,6 @@ $(function() {
   $('.js_entrancePage .page-num').on('click',function(){
     var pageNum = $(this).attr('data-index');
     swiper.entrabceSwiper.swipeTo(pageNum-1, 500, false);
-    $('.js_entrancePage .page-num').removeClass('active');
-    $(this).addClass('active');
   });
 
   swiper.entrabceSwiper.reInit();
