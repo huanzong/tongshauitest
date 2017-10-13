@@ -494,6 +494,16 @@
 		}
 	}
 }
+//分页
+.product-listpage{
+	padding: 20px 0;
+	text-align: center;
+	background: #f8f8f8;
+	font-size: 12px;
+	a{
+		font-size: 14px;
+	}
+}
 
 //精选推荐
 .product-recommend{
@@ -587,12 +597,31 @@
 
 //产品对比
 .prolist-compare{
+	display: block;
 	position: fixed;
-	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
 	background: #fff;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	z-index: 2;
+	color: #333;
+	font-size: 12px;
+	
+	.compare-title{
+		padding: 0 8.33%;
+		line-height: 40px;
+		width: 100%;
+		height: 40px;
+	}
+
+	.compare-spread{
+		float: right;
+		// position: absolute;
+		// right: 0;
+		line-height: 40px;
+	}
 }
 
 //弹层-筛选项

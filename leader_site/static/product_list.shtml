@@ -722,6 +722,20 @@
 				<!-- </div> -->
 			</div>
 		<!-- 产品列表 END -->
+		<!-- 分页 -->
+			<div class="o_g product-listpage">
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
+                <a  class="l-pagination-pagenumber">4</a>
+                <a  class="l-pagination-pagenumber">5</a>
+                <a  class="l-pagination-pagenumber">6</a>
+                <a  class="l-pagination-pagenumber">7</a>
+                <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-next ">下一页</a>
+            </div>
+		<!-- 分页 END -->
 
 		<!-- 精品推荐 -->
 			<div class="o_g product-recommend">
@@ -780,8 +794,14 @@
 			<div class="o_g prolist-bg"></div>
 		<!-- 背景间隔 END -->
 		<!-- 产品对比 -->
-			<div class="o_g prolist-compare">
-				<!-- <o -->
+			<div class="prolist-compare">
+				<div class="compare-title">
+					<div class="l-fl">产品对比</div>
+					<div class="compare-spread">
+						展开
+						<i class="iconfont icon-arrow-line-up"></i>
+					</div>
+				</div>
 			</div>
 		<!-- 产品对比 END -->
 
