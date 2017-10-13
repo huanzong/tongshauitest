@@ -72,4 +72,49 @@ $(function() {
     //checkbox初始化
      $(".js_proGroup,.js_radio").jq_qvote();
 
+    /**
+     * 产品对比
+     */
+    //对比栏显示隐藏
+    $('.js_compareBoxShow').on('click',function(){
+
+        if(parseInt($(this).attr('data-show'))){
+            $('.js_compareBox').hide();
+            $(this).attr('data-show',0);
+            $(this).html('展开<i class="iconfont icon-arrow-line-up"></i>');
+        }else{
+
+            $('.js_compareBox').show();
+            $(this).attr('data-show',1);
+            $(this).html('隐藏<i class="iconfont icon-arrow-line-down"></i>');
+        }
+    });
+    //删除单个对比产品
+    $('.js_compareClose').on('click',function(){
+        $(this).parent().remove();
+    });
+    //添加对比商品
+    $('.js_compareAddProduct').on('click',function(){
+
+        //显示对比栏
+        $('.js_compareBox').show();
+        $('.js_compareBoxShow').attr('data-show',1);
+        $('.js_compareBoxShow').html('隐藏<i class="iconfont icon-arrow-line-down"></i>');
+
+        //加入商品对比列表的模板,
+        var temp = '<li>'+
+                        '<div class="compare-product-img">'+
+                            '<img src="images/compare_goods.PNG">'+
+                        '</div>'+
+                        '<div class="compare-product-info">'+
+                           ' <p>双开门双</p>'+
+                            '<p class="leaveout">双开门双开门双开门双开门</p>'+
+                            '<span>GHEGEGJ-GHEIGO</span>'+
+                        '</div>'+
+                       ' <i class="iconfont icon-close compare-close js_compareClose"></i>'+
+                    '</li>';
+        $('.js_compareBox').prepend(temp);
+
+    });
+
 });
