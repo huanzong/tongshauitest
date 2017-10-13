@@ -35,8 +35,8 @@ $(function() {
   });
 
   if (screenWidth <= 991) {
-    swiper.bannerSwiper.params.slidesPerView = 3,
-    swiper.bannerSwiper.params.watchActiveIndex = true,
+    swiper.bannerSwiper.params.slidesPerView = 3;
+    swiper.bannerSwiper.params.watchActiveIndex = true;
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
       var index = swiper.activeLoopIndex;
       
@@ -59,7 +59,7 @@ $(function() {
       //分页
       $('.js_bannerSwiperPage .page-num').removeClass('active');
       $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
-    }
+    };
     
     $(".js_bg").oBgCover().init();
 
@@ -140,7 +140,7 @@ $(function() {
 
     onSlideChangeEnd: function(swiper){
     	var index = swiper.activeLoopIndex;
-    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(swiper.activeIndex).find('img').attr('src');
+    	var imgSrc = $('.js_swiperRecMain .swiper-slide').eq(swiper.previousIndex).find('img').attr('src');
       $('.js_recImgSmall').attr('src',imgSrc);
 
       //文字
@@ -163,6 +163,31 @@ $(function() {
   /**
    * 首页入口
    */
+  //分页
+  $('.js_entrancePage').each(function(i,n){
+    var htmlStr = '';
+
+    for(var j=0;j<$('.js_entrancePage').length;j++){
+      if(i==j){
+        htmlStr += '<div class="page-num active" data-index='+(j+1)+'>0'+(j+1)+'</div>';
+      }else{
+        htmlStr += '<div class="page-num" data-index='+(j+1)+'>0'+(j+1)+'</div>';
+      }
+    }
+    $(this).html(htmlStr);
+  });
+  $('.js_entrancePage1').each(function(i,n){
+    var htmlStr = '';
+
+    for(var j=0;j<$('.js_entrancePage1').length;j++){
+      if(i==j){
+        htmlStr += '<div class="page-num active" data-index='+(j+1)+'>0'+(j+1)+'</div>';
+      }else{
+        htmlStr += '<div class="page-num" data-index='+(j+1)+'>0'+(j+1)+'</div>';
+      }
+    }
+    $(this).html(htmlStr);
+  });
   swiper.entrabceSwiper = new Swiper ('.js_swiperEntrabce', {
 
     loop: true,
@@ -184,6 +209,8 @@ $(function() {
 			  '-khtml-opacity': '1',  
 			  'opacity': '1'
       }, 1000);
+
+      
     }
   });
 
@@ -207,8 +234,11 @@ $(function() {
   //分页
   $('.js_entrancePage .page-num').on('click',function(){
     var pageNum = $(this).attr('data-index');
-    // console.log(pageNum);
-    swiper.entrabceSwiper.swipeTo(pageNum, 500, false);
+    swiper.entrabceSwiper.swipeTo(pageNum-1, 500, false);
+  });
+  $('.js_entrancePage1 .page-num').on('click',function(){
+    var pageNum = $(this).attr('data-index');
+    swiper.entrabceSwiper.swipeTo(pageNum-1, 500, false);
   });
 
   swiper.entrabceSwiper.reInit();
