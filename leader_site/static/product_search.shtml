@@ -1,49 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>全局搜索</title>
+	<meta charset="UTF-8">
+	<title>全局搜索</title>
 
-	<%=base%>
+	<base href='../'>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<!--#include virtual="public/head.shtml"-->
 	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="images/product_list.css">
+
 	<link rel="stylesheet" type="text/css" href="images/product_search.css">
 </head>
 
 <body>
-	<div class="o_body">
-        <div class="o_main">
+<div class="o_body">
+	<div class="o_main">
 		<!--搜索框 START-->
-        	<div class="o_g product-search-head">
-				<div class="o_u o_df_10-12  product-search-head-cont">
-					<div class="l-input o_u o_lg_1-2 o_md_4-12 o_sm_12-12 o_xs_12-12">
-						<input class=" o_u o_df_12-12" type="text" name=""   value="冰箱">
-						<a href="javascript:;" class="iconfont icon-search"></a>
-					</div>
-					<p class="  o_u o_sm_12-12 o_xs_12-12 product-search-head-text">
-						<span>热门搜索：</span><i>壁挂空调</i><i>1.5P</i><i>BCD-629WDSTU1</i>
-					</p>
+		<div class="o_g product-search-head">
+			<div class="o_u o_df_10-12  product-search-head-cont">
+				<div class="l-input o_u o_lg_1-2 o_md_4-12 o_sm_12-12 o_xs_12-12">
+					<input class=" o_u o_df_12-12" type="text" name=""   value="冰箱">
+					<a href="javascript:;" class="iconfont icon-search"></a>
 				</div>
-	        </div>
-			<!--搜索框 END-->
+				<p class="  o_u o_sm_12-12 o_xs_12-12 product-search-head-text">
+					<span>热门搜索：</span><i>壁挂空调</i><i>1.5P</i><i>BCD-629WDSTU1</i>
+				</p>
+			</div>
+		</div>
+		<!--搜索框 END-->
 		<!--搜索结果 START-->
-			<div class="o_g product-search-result ">
-				<div class=" o_u o_df_10-12  product-search-result-title js-searchXuanXK">
-					<p class="o_u o_xs_12-12">搜索结果：</p>
-					<a href="javascript:;" class="cur">产品（<span>77</span>）</a>
-					<a href="javascript:;">服务（<span>22</span>）</a>
-					<a href="javascript:;">新闻（<span>11</span>）</a>
+		<div class="o_g product-search-result ">
+			<div class=" o_u o_df_10-12  product-search-result-title js-searchXuanXK">
+				<p class="o_u o_xs_12-12">搜索结果：</p>
+				<a href="javascript:;" class="cur">产品（<span>77</span>）</a>
+				<a href="javascript:;">服务（<span>22</span>）</a>
+				<a href="javascript:;">新闻（<span>11</span>）</a>
+			</div>
+
+		</div>
+
+		<!-- 产品列表 -->
+		<div class="o_g product-list">
+			<!-- <div class=""> -->
+			<div class="o_u o_df_1-12"></div>
+			<div class="o_u o_df_10-12">
+				<div class="prolist-con">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+						<div class="prolist-box">
+							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
+							<div class="pro-opporate">
+								<a class="pro-read">
+										<span class="pro-read-i">
+											<i class="iconfont icon-price-tag-solid1"></i>
+										</span>
+									<span class="pro-read-font">订阅</span>
+								</a>
+								<a class="pro-read l-fr js_compareAddProduct">
+									<span class="pro-read-font">对比</span>
+										<span class="pro-read-i">
+											<i class="iconfont icon-d-solid"></i>
+										</span>
+								</a>
+							</div>
+							<a href="javascript:;" class="pro-info-box">
+								<img src="images/compare_goods.PNG">
+								<div class="pro-info-title">
+									双开门<br>海尔真诚到永远冰箱
+								</div>
+								<div class="pro-info-mark">
+									HJOGJJEJG-797908
+								</div>
+								<div class="pro-info-price">
+									￥19889
+								</div>
+								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+							</a>
+							<div class="pro-activity">
+								<i class="iconfont icon-arrow-line-left l-fl"></i>
+								<span>唤醒初夏</span>
+								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+		<!-- 产品列表 END -->
+		<!-- 分页 -->
+		<div class="o_g product-listpage">
+			<a  class="l-pagination-prew">上一页</a>
+			<a  class="l-pagination-pagenumber active">1</a>
+			<a  class="l-pagination-pagenumber">2</a>
+			<a  class="l-pagination-pagenumber">3</a>
+			<a  class="l-pagination-pagenumber">4</a>
+			<a  class="l-pagination-pagenumber">5</a>
+			<a  class="l-pagination-pagenumber">6</a>
+			<a  class="l-pagination-pagenumber">7</a>
+			<a  class="l-pagination-pagenumber">8</a>
+			<a  class="l-pagination-next ">下一页</a>
+		</div>
+		<!-- 分页 END -->
+
+		<!-- 精品推荐 -->
+		<div class="o_g product-recommend">
+			<div class="o_u o_df_1-12"></div>
+			<div class="o_u o_df_10-12">
+				<div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 product-search-downleft-box ">
+					<div class="o_u product-search-downleft">
+						<div class="recommend-box">
+							<div class="recommend-title">
+								热门活动
+								<i class="iconfont icon-refresh-solid recommend-reload"></i>
+							</div>
+							<div class="recommend-pro">
+								<div class="o_g">
+									<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
+										<img src="images/compare_goods.PNG">
+										<div class="recommend-pro-info">
+											<span class="pro-info-title">统帅就给个</span>
+											<span class="pro-info-title">洗衣机</span>
+											<span class="pro-info-type">JGEJJGEJ-988</span>
+											<span class="pro-info-price">￥633</span>
+										</div>
+									</a>
+									<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
+										<img src="images/compare_goods.PNG">
+										<div class="recommend-pro-info">
+											<span class="pro-info-title">统帅就给个</span>
+											<span class="pro-info-title">洗衣机</span>
+											<span class="pro-info-type">JGEJJGEJ-988</span>
+											<span class="pro-info-price">￥633</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="o_u o_df_6-12 o_sm_2-2 o_xs_2-2 product-search-downright-box" >
+					<div class="o_u product-search-downright" >
+						<div class="recommend-box">
+							<div class="recommend-title">
+								精选推荐
+								<i class="iconfont icon-refresh-solid recommend-reload"></i>
+							</div>
+							<div class="recommend-activity">
+								<div class="o_g">
+									<a class="o_u o_df_2-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+										<img src="images/product_search_huodong.jpg" width="200px" height="100px">
+									</a>
+									<div class="o_u o_df_3-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 recommend-activity-text">
+										<h5>狂欢返场，倾情钜惠</h5>
+										<p>统帅商城注册赢惊喜，注册会员享超值惊爆价</p>
+										<span>活动时间：2017.09.06-2017.10.20</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
+
 			</div>
-		<!--搜索结果 END-->
+			<div class="o_u o_df_1-12"></div>
+
+
 		</div>
+		<!-- 精品推荐 END -->
+
+		<!--搜索结果 END-->
 	</div>
-	<!--#include virtual="public/foot.shtml"-->
-	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
-	<script type="text/javascript" src="images/product_search.js"></script>
+</div>
+<!--#include virtual="public/foot.shtml"-->
+<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="images/product_list.js"></script>
+
+<script type="text/javascript" src="images/product_search.js"></script>
 </body>
 </html>
