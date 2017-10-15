@@ -86,12 +86,25 @@
             </div>
         </div>
     	<div class="footer_copy">
+
             <span class="link">
                 <i class="iconfont icon-problem-solid"></i>
                 <i class="iconfont icon-problem-solid"></i>
             </span>
-    		<span>Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
-    		<span class="copy_service">服务条款33333</span>
+            <ul>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">服务条款</a></li>
+                <li><a href="">法律生命</a></li>
+            </ul>
+    		<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
+           <div class="footer_copy_img_box">
+               <a href="" class="footer_copy_img1"></a>
+               <a href="" class="footer_copy_img2"></a>
+               <a href="" class="footer_copy_img3"></a>
+           </div>
+
+    		<!--<span class="copy_service">服务条款33333</span>-->
     	</div>
     </div>
     <div class="o_u o_df_1-12"></div>
