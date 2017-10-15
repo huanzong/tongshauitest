@@ -509,6 +509,59 @@
 			<!-- </div> -->
 		</div>
 		<!-- 产品列表 END -->
+		<!--服务列表 -->
+		<div class="o_g prdouct-search-service-list" style="display: none">
+			<div class="o_u o_df_1-12"></div>
+			<div class="o_u o_df_10-12  prdouct-search-service-list-nub">
+				共 <span>39</span> 条搜索结果
+			</div>
+			<div class="o_u o_df_1-12"></div>
+
+			<ul class="o_u o_df_10-12 prdouct-search-service-list-cont">
+				<li class="o_u o_df_2-2">
+					<h4  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>的含义</h4>
+					<p class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>电器定位“轻时尚家电开创者”。</p>
+					<a  href="http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml"  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12">http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml</a>
+				</li>
+				<li class="o_u o_df_2-2">
+					<h4  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>复式高级滚筒主要特点</h4>
+					<p  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>客服为您服务，请您先检查下面4个问题：①检查洗衣机是否通电，指示灯是否亮；②检查是否选择洗涤程序并且已按下启动/暂停按键；③检查机器是否进水，水龙头是否打开，家中是否停水；④检查机门是否关严。</p>
+					<a href="http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml"  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12">http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml</a>
+				</li>
+				<li class="o_u o_df_2-2">
+					<h4  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>冰箱不制冷了，温度设置保存不了，怎么回事？</h4>
+					<p  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>统帅客服为您服务，请先把电源拔下20多分钟，等里面都融化了后，温控打到中间位置，再重新插上电源，听压缩机是否启动：1，启动，那么你等运转2分钟左右用手摸压缩机出来的2个管路，一个感觉热，一个感觉凉，那么就是正常的。如果没有热的管路就是无氟了，越热说明不缺氟。2，不运转，那么就是温控或启动，及电路的问题。，再重新插上电否</p>
+					<a href="http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml"  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12">http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml</a>
+				</li>
+				<li class="o_u o_df_2-2">
+					<h4  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>的含义</h4>
+					<p  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>电器定位“轻时尚家电开创者”。</p>
+					<a href="http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml"  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12">http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml</a>
+				</li>
+				<li class="o_u o_df_2-2">
+					<h4  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>的含义</h4>
+					<p  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12"><span>统帅</span>电器定位“轻时尚家电开创者”。</p>
+					<a href="http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml"  class="o_u o_lg_2-2 o_md_4-12 o_sm_12-12 o_xs_12-12">http://www.tongsuai.com/help/website_function/function/201701/t20170116_258339.shtml</a>
+				</li>
+			</ul>
+		</div >
+		<!--服务列表  END-->
+		<!--省缺 -->
+		<div class="o_g prdouct-search-zanwu" style="display: none">
+			<img src="images/share_nothing.png" width="288px" height="288px" alt="">
+			<p>抱歉，没有找到与”<span>冰箱</span>“相关的内容</p>
+			<div class="o_u o_df_10-12 "><i>你也可以尝试搜索</i></div>
+			<ul class="o_u o_df_8-10">
+				<li>hkt-1151</li>
+				<li>hkt-1151</li>
+				<li>hkt-1151</li>
+				<li>hkt-1151</li>
+				<li>hkt-1151</li>
+				<li>hkt-1151</li>
+			</ul>
+		</div>
+		<!--省缺 END-->
+
 		<!-- 分页 -->
 		<div class="o_g product-listpage">
 			<a  class="l-pagination-prew">上一页</a>
