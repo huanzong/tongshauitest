@@ -35,11 +35,22 @@
                                     </div>
 
                                     <ul>
-                                        <li><img src="images/share_cur.png" alt=""></li>
-                                        <li><img src="images/share_cur.png" alt=""></li>
-                                        <li><img src="images/share_cur.png" alt=""></li>
-                                        <li><img src="images/share_cur.png" alt=""></li>
-                                        <li><img src="images/share_nocur.png" alt=""></li>
+                                        <li class="member-share-score-selected">
+                                            <p class="selected_g"><i class="iconfont icon-star-solid"></i></p>
+                                        </li>
+                                        <li class="member-share-score-selected">
+                                            <p class="selected_g"><i class="iconfont icon-star-solid"></i></p>
+                                        </li>
+                                        <li class="member-share-score-selected">
+                                            <p class="selected_g"><i class="iconfont icon-star-solid"></i></p>
+                                        </li>
+                                        <li class="member-share-score-selected-false">
+
+                                            <p  class="selected_g"><i class="iconfont icon-star-solid"></i></p>
+                                        </li>
+                                        <li class="member-share-score-selected-false">
+                                            <p class="selected_g"><i class="iconfont icon-star-solid"></i></p>
+                                        </li>
                                     </ul>
                                 </div>
 

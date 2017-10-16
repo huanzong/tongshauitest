@@ -88,8 +88,8 @@
     	<div class="footer_copy">
 
             <span class="link">
-                <i class="iconfont icon-problem-solid"></i>
-                <i class="iconfont icon-problem-solid"></i>
+                <a href="javascript:;"  class="iconfont icon-share-weixin"></a>
+                <a href="javascript:;" class="iconfont icon-share-weibo"></a>
             </span>
             <ul>
                 <li><a href="">联系我们</a></li>
@@ -99,9 +99,9 @@
             </ul>
     		<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
            <div class="footer_copy_img_box">
-               <a href="" class="footer_copy_img1"></a>
+               <a href="http://cdn09.ehaier.com/v5/images/yingyezhizhao.png" class="footer_copy_img1"></a>
                <a href="" class="footer_copy_img2"></a>
-               <a href="" class="footer_copy_img3"></a>
+               <a href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></a>
            </div>
 
     		<!--<span class="copy_service">服务条款33333</span>-->

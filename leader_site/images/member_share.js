@@ -6,6 +6,7 @@ $('.js_shareScoreImg>li').click(function(){
 
         if(i > shareImgIndex){
             $shareArr.eq(i).removeClass('member-share-score-selected');
+
         }else{
             $shareArr.eq(i).addClass('member-share-score-selected');
         }
