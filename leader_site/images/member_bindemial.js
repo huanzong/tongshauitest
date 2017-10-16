@@ -41,7 +41,7 @@ $(function(){
                         dataType: "text",
                         url: "/ids/ts/userInfoManager.jsp",
                         data: {
-                            'editOperation':sendBindEmailCode,
+                            'editOperation':'sendBindEmailCode',
                             'newEmail':newEmail
                         },
                         error : function(XMLHttpRequest, textStatus, errorThrown){
@@ -111,7 +111,7 @@ $(function(){
                     dataType: "text",
                     url: "/ids/ts/userInfoManager.jsp",
                     data: {
-                        'editOperation':bindNewEmail,
+                        'editOperation':'bindNewEmail',
                         'newEmail':newEmail,
                         'emailCode':emailCode
                     },

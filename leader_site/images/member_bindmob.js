@@ -40,7 +40,7 @@ $(function(){
                        dataType: "text",
                        url: "/ids/ts/userInfoManager.jsp",
                        data: {
-                           'editOperation':sendBindMobileCode,
+                           'editOperation':'sendBindMobileCode',
                            'newMobile':newMobile
                        },
                        error : function(XMLHttpRequest, textStatus, errorThrown){
@@ -107,7 +107,7 @@ $(function(){
                    dataType: "text",
                    url: "/ids/ts/userInfoManager.jsp",
                    data: {
-                       'editOperation':changeMobile,
+                       'editOperation':'changeMobile',
                        'newMobile':newMobile,
                        'mobileCode':mobileCode
                    },
