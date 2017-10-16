@@ -23,9 +23,8 @@ $(function(){
 
 
 //验证手机号
-    $('.js-newMobile').blur(function(){
 
-    $('.js-bindmobinput').blur(function(){
+    $('.js-newMobile').blur(function(){
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if(yanzhengtrue){
             $('.js-getinfo').removeClass('l-btn-disable').click(function(){
@@ -171,9 +170,12 @@ $(function(){
 
             //禁止点击
             $('.js-submintData').unbind().bind('click',function(){
+
                 return false;
             })
         }
+
+    })
 
 
 
