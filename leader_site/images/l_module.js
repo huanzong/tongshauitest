@@ -247,14 +247,14 @@ $(function() {
     /**
     *登陆框弹窗
     * */
-    $('.js-landBtn').click(function(){
-        $('.js-landShade').show();
-        $('.js-landContBox').show();
+    $('.js_landBtn').click(function(){
+        $('.js_landShade').show();
+        $('.js_landContBox').show();
         $("body").css({overflow:"hidden"});
-        $('.js-landContBox').show();
-        $('.js-landClose').click(function(){
-            $('.js-landContBox').hide();
-            $('.js-landShade').hide();
+        $('.js_landContBox').show();
+        $('.js_landClose').click(function(){
+            $('.js_landContBox').hide();
+            $('.js_landShade').hide();
             $("body").css({overflow:"auto"});
             return false;
         })
@@ -262,7 +262,7 @@ $(function() {
     $('.js_landType >div').click(function(){
         var clickIndex = $(this).index();
         $(this).addClass('cur').siblings().removeClass('cur');
-        $('.js-landInputBox>div').eq(clickIndex).show().siblings().hide();
+        $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
     })
 });
 
