@@ -112,7 +112,7 @@ $(function() {
 
 
 //下拉菜单初始化
-    $("#js_unbindmob").oSelect().init();
+
     $("#js_save").oSelect().init();
     $("#js_city").oSelect().init();
     $("#js_area").oSelect().init();
