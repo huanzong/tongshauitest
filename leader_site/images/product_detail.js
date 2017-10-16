@@ -85,7 +85,7 @@ $(function() {
 		});
 
     	init();
-    },3000);
+    },1000);
 
     $(window).resize(function() {
         init();
