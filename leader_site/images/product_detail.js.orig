@@ -187,6 +187,7 @@ $(function() {
 
     }
 
+<<<<<<< HEAD
     //浏览产品细节图
     $('.js_specificsShow').on('click',function(){
     	$('.js_specificsBoxShow').fadeIn(1000);
@@ -229,7 +230,10 @@ $(function() {
 	    // });
     });
 
+	//登陆框验证
+=======
 	//手机验证
+>>>>>>> 8297315dc2696d983e995b8bbb6300cddd75abf6
 	$('.js-bindmobinput').blur(function(){
 		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
 		if(yanzhengtrue){
