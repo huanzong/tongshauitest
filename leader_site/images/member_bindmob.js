@@ -22,8 +22,8 @@ $(function(){
     //});
 
 
-//验证手机号
 
+    //验证手机号
     $('.js-newMobile').blur(function(){
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if(yanzhengtrue){
@@ -120,43 +120,43 @@ $(function(){
                                $('.js-bingsuccess').show();
                            }
                            else if (jQuery.trim(returnData).indexOf("newMobile_can_not_be_null")>-1){
-                               if($('.js-newMobileerror').hasClass('Validform_right')){
-                                   $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
+                               if($('.js-mobileCodeerror').hasClass('Validform_right')){
+                                   $('.js-mobileCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
                                }
                                else{
-                                   $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
+                                   $('.js-mobileCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
                                }
                            }
                            else if (jQuery.trim(returnData).indexOf("newMobile_type_is_illegal")>-1){
-                               if($('.js-newMobileerror').hasClass('Validform_right')){
-                                   $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法')
+                               if($('.js-mobileCodeerror').hasClass('Validform_right')){
+                                   $('.js-mobileCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法')
                                }
                                else{
-                                   $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法')
+                                   $('.js-mobileCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法')
                                }
                            }
                            else if (jQuery.trim(returnData).indexOf("mobileCode_can_not_be_null")>-1){
-                               if($('.js-newMobileerror').hasClass('Validform_right')){
-                                   $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空')
+                               if($('.js-mobileCodeerror').hasClass('Validform_right')){
+                                   $('.js-mobileCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空')
                                }
                                else{
-                                   $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空')
+                                   $('.js-mobileCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空')
                                }
                            }
                            else if (jQuery.trim(returnData).indexOf("can_not_query_this_code")>-1 || jQuery.trim(returnData).indexOf("code_is_illegal")>-1){
-                               if($('.js-newMobileerror').hasClass('Validform_right')){
-                                   $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误')
+                               if($('.js-mobileCodeerror').hasClass('Validform_right')){
+                                   $('.js-mobileCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误')
                                }
                                else{
-                                   $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误')
+                                   $('.js-mobileCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误')
                                }
                            }
                            else if (jQuery.trim(returnData).indexOf("绑定失败，错误码")>-1){
-                               if($('.js-newMobileerror').hasClass('Validform_right')){
-                                   $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败')
+                               if($('.js-mobileCodeerror').hasClass('Validform_right')){
+                                   $('.js-mobileCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败')
                                }
                                else{
-                                   $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败')
+                                   $('.js-mobileCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败')
                                }
                            }
 
