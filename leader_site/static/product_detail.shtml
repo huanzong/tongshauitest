@@ -51,54 +51,9 @@
 							<div class="banner-pro-sub">GHEOJGOJE-GHEOGJ</div>
 							<div class="banner-pro-info">米兰时尚灰棉被拿，啊感觉真的好厉害的样子，快来买吧！走过路过不要错过，来阿狸阿狸！不要给自己的人生留下遗憾！</div>
 						</div>
-						<!-- 左边 -->
-						<div class="banner-activity">
-							<div class="activity-icon-box">
-								<div class="activity-icon active">
-									<div class="icon-font">
-										<i class="iconfont icon-star-solid"></i>
-									</div>
-									<span class="icon-font-info">收藏</span>
-								</div>
-								<div class="activity-icon">
-									<div class="icon-font">
-										<i class="iconfont icon-price-tag-solid1"></i>
-									</div>
-									<span class="icon-font-info">订阅</span>
-								</div>
-								<div class="activity-icon">
-									<div class="icon-font">
-										<i class="iconfont icon-share-solid"></i>
-									</div>
-									<span class="icon-font-info">分享</span>
-								</div>
-								<div class="activity-icon activity-icon-compare">
-									<div class="icon-font">
-										<i class="iconfont icon-contrast-solid"></i>
-									</div>
-									<span class="icon-font-info">对比</span>
-								</div>
-							</div>
-							<div class="activity-box">
-								<div class="activity-con">
-									<div class="activity-con-tit">
-										清爽大作战，统帅小清新
-									</div>
-									<div class="activity-con-sub">
-										7月31日-8月20日
-									</div>
-									<div class="activity-con-info">
-										套购慢件最高3000，满减赠扫地机器人
-									</div>
-								</div>
-								<div class="activity-con-small">
-									【统帅天猫旗舰店】周年庆满减大奖有好礼
-								</div>
-							</div>
-						</div>
 						<!-- 右边 -->
 						<div class="banner-particulars">
-							<div class="particulars-browse">
+							<div class="particulars-browse o_md-hide o_sm-hide o_xs-hide">
 								<span>浏览产品细节图</span>
 								<div class="particulars-browse-icon">
 									<i class="iconfont icon-photo-solid"></i>
@@ -142,6 +97,59 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						<!-- 左边 -->
+						<div class="banner-activity">
+							<div class="activity-icon-box o_md-hide o_sm-hide o_xs-hide">
+								<div class="activity-icon active">
+									<div class="icon-font">
+										<i class="iconfont icon-star-solid"></i>
+									</div>
+									<span class="icon-font-info">收藏</span>
+								</div>
+								<div class="activity-icon">
+									<div class="icon-font">
+										<i class="iconfont icon-price-tag-solid1"></i>
+									</div>
+									<span class="icon-font-info">订阅</span>
+								</div>
+								<div class="activity-icon">
+									<div class="icon-font">
+										<i class="iconfont icon-share-solid"></i>
+									</div>
+									<span class="icon-font-info">分享</span>
+								</div>
+								<div class="activity-icon activity-icon-compare">
+									<div class="icon-font">
+										<i class="iconfont icon-contrast-solid"></i>
+									</div>
+									<span class="icon-font-info">对比</span>
+								</div>
+							</div>
+							<div class="activity-box">
+								<div class="activity-con">
+									<div class="activity-con-tit">
+										清爽大作战，统帅小清新
+									</div>
+									<div class="activity-con-sub">
+										7月31日-8月20日
+									</div>
+									<div class="activity-con-info">
+										套购慢件最高3000，满减赠扫地机器人
+									</div>
+								</div>
+								<div class="activity-con-small">
+									【统帅天猫旗舰店】周年庆满减大奖有好礼
+								</div>
+							</div>
+						</div>
+						<!-- 左边 md sm xs-->
+						<div class="banner-iconleft-md o_df-hide o_md-show o_sm-show o_xs-show">
+							
+						</div>
+						<!-- 右边 md sm xs-->
+						<div class="banner-browseright-md o_df-hide o_md-show o_sm-show o_xs-show">
+							
 						</div>
 					</div>
 				</div>
