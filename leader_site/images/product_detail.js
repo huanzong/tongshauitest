@@ -187,6 +187,48 @@ $(function() {
 
     }
 
+    //浏览产品细节图
+    $('.js_specificsShow').on('click',function(){
+    	$('.js_specificsBoxShow').fadeIn(1000);
+    	swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
+		    loop: true,
+		    autoplay: 3000,
+		    updateOnImagesReady : true,
+		    centeredSlides : true,
+		    slidesPerView: 3,
+		    watchActiveIndex:true,
+		    onFirstInit: function(swiper){
+		      var index = swiper.activeLoopIndex;
+		    },
+		    onSlideChangeEnd: function(swiper){
+		      var index = swiper.activeLoopIndex;
+		      
+		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+		        'width': '100%',
+		        'height': 500,
+		        'top': -105,
+		      }, 500);
+
+		      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+		        'width': '100%',
+		        'height': 382,
+		      });
+		    }
+		});
+
+	    // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+	    //   'height': 382,
+	    //   'margin-left': -348.5,
+	    //   'margin-top': -191
+	    // });
+
+	    // $('.js_bannerSwiper .swiper-slide-active').find('img').css({
+	    //   'height': 500,
+	    //   'margin-left': -455.5,
+	    //   'margin-top': -250
+	    // });
+    });
+
 	//登陆框验证
 	$('.js-bindmobinput').blur(function(){
 		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
@@ -200,12 +242,12 @@ $(function() {
 					//  手机号发送验证码接口
 
 				}
-			})
+			});
 		}
 		else{
 			$('.js-getinfo').addClass('l-btn-disable');
 		}
 
-	})
+	});
 
 });
