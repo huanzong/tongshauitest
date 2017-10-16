@@ -270,6 +270,7 @@
 	}
 }
 
+
 // 表单样式：文本域
 
 .l-textarea {
@@ -461,5 +462,98 @@ Pagination Styles
 		border: 0px none ;
 		background: #ff0000;
 		color: #ffffff;
+	}
+}
+//登陆框和遮罩层
+
+.land_shade{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	overflow: hidden;
+	display: none;
+	.land_box{
+
+		width: 480px;
+		background: #fff;
+		border-radius: 8px;
+		overflow: hidden;
+		font-size: 0;
+		color: #333;
+		margin:  0 auto;
+		margin-top: 5%;
+		display: none;
+		.land_cont_title{
+			font-size: 16px;
+			color: #333;
+			width: 100%;
+			padding: 20px 0;
+			border-bottom: 1px solid #eeeeee;
+			span{
+				padding-left: 20px;
+				float: left;
+			}
+			a{
+				color: #333;
+				float: right;
+				font-size: 22px;
+				padding-right: 20px;
+			}
+		}
+
+		.land_cont_type_normal,.land_cont_type_phone{
+			background: #f8f8f8;
+			color: #333333;
+			border-bottom:1px solid #eee;
+			font-size: 14px;
+			text-align: center;
+			padding: 10px 0	;
+		}
+
+		.cur{
+			background: #fff;
+			color: red;
+			border-bottom-color:#fff;
+
+		}
+
+
+		.land_cont_normal_input,.land_cont_phone_input{
+			text-align: center;
+			padding-top: 30px ;
+			.l-input{
+				padding-bottom: 10px;
+			}
+			.l-btn-disable{
+				right: 24px;
+				font-size: 14px;
+
+			}
+		}
+		.land_cont_phone_input{
+			display: none;
+		}
+		.land_cont_normal_btn{
+			padding-top: 10px;
+			text-align: center;
+			a{	font-size: 14px;
+				color: #fff;
+			}
+		}
+		.land_cont_down{
+			padding: 20px 0;
+			text-align: center;
+			a{
+				font-size: 14px;
+				color: #666;
+				padding: 0 20px;
+			}
+		}
+
+
 	}
 }

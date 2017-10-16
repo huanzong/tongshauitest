@@ -243,6 +243,27 @@ $(function() {
             });
         // }
     });
+
+    /**
+    *登陆框弹窗
+    * */
+    $('.js-landBtn').click(function(){
+        $('.js-landShade').show();
+        $('.js-landContBox').show();
+        $("body").css({overflow:"hidden"});
+        $('.js-landContBox').show();
+        $('.js-landClose').click(function(){
+            $('.js-landContBox').hide();
+            $('.js-landShade').hide();
+            $("body").css({overflow:"auto"});
+            return false;
+        })
+    })
+    $('.js_landType >div').click(function(){
+        var clickIndex = $(this).index();
+        $(this).addClass('cur').siblings().removeClass('cur');
+        $('.js-landInputBox>div').eq(clickIndex).show().siblings().hide();
+    })
 });
 
 
