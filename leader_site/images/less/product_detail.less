@@ -78,6 +78,9 @@
 				line-height: 20px;
 				color: #666;
 				font-family: "Microsoft YaHei";
+				@media (max-width: 991px) {
+					padding: 5px 0 20px;
+				}
 			}
 		}
 		.banner-particulars{
@@ -89,6 +92,11 @@
 			text-align: right;
 			@media (min-width: 992px) and (max-width: 1199px) {
 				right: 30px;
+			}
+			@media (max-width: 991px) {
+				position: relative;
+				right: 0;
+				text-align:center;
 			}
 			.particulars-browse{
 				padding-top: 60px;
@@ -126,11 +134,14 @@
 				right: 0;
 				// min-width: 300px;
 				background: #fff;
+				@media (max-width: 991px) {
+					position: relative;
+					bottom: 0;
+				}
 				.old-price{
 					display: block;
 					color: #999;
 					text-decoration: line-through;
-					text-align: right;
 					font-size: 14px;
 					line-height: 16px;
 				}
@@ -138,7 +149,6 @@
 					line-height: 36px;
 					font-size: 30px;
 					color: @l-red;
-					text-align: right;
 					padding-bottom: 10px;
 					sub{
 						position: relative;
@@ -147,16 +157,24 @@
 				}
 			}
 			.particulars-capacity{//容量
-				text-align: right;
 				border-top: 1px solid #eee;
 				border-bottom: 1px solid #eee;
 				padding: 10px 0;
+				@media (max-width: 991px) {
+					padding: 0 0 10px;
+					width: 83.33%;
+					margin: 0 auto;
+				}
 				.capacity-tit{
 					display: inline-block;
 					padding-right: 5px;
 					font-size: 12px;
 					color: #ccc;
 					line-height: 32px;
+					@media (max-width: 991px) {
+						display: block;
+						text-indent: 20px;
+					}
 				}
 				.capacity-box{
 					display: inline-block;
@@ -215,6 +233,9 @@
 				@media (min-width:1200px) {
 					min-width: 307px;
 				}
+				@media (max-width:991px) {
+					padding-bottom: 30px;
+				}
 			}
 			.particulars-buybox{
 				display: inline-block;
@@ -252,9 +273,18 @@
 			left: 60px;
 			top: 0;
 			bottom: 0;
-			@media (max-width:1199px) {
+			@media (min-width: 992px) and (max-width:1199px) {
 				left: 30px;
 			}
+			@media (max-width:991px) {
+				position: relative;
+				left: 0;
+				&.banner-activity-sm{
+					position: absolute;
+					left: 30px;
+				}
+			}
+			
 			.activity-icon-box{
 				padding-top: 60px;
 				@media (min-width: 992px) and (max-width:1199px) {
@@ -317,6 +347,10 @@
 				position: absolute;
 				bottom: 60px;
 				left: 0;
+				@media (max-width: 991px) {
+					position: relative;
+					bottom: 0;
+				}
 			}
 			.activity-con{
 				background: #fefaf2;
@@ -326,6 +360,10 @@
 				min-width: 250px;
 				@media (max-width:1199px) {
 					min-width: 210px;
+				}
+				@media (max-width:991px) {
+					width: 83.33%;
+					margin: 0 auto;
 				}
 			}
 			.activity-con-small{
@@ -341,6 +379,14 @@
 				padding: 6px 15px;
 				@media (max-width:1199px) {
 					min-width: 210px;
+				}
+				@media (max-width:991px) {
+					width: 83.33%;
+					margin: 5px auto 60px;
+				}
+				@media (max-width:575px) {
+					width: 83.33%;
+					margin: 5px auto 45px;
 				}
 			}
 			.activity-con-tit{
@@ -362,6 +408,7 @@
 				font-family: "Microsoft YaHei";
 			}
 		}
+		.banner-iconleft-md
 	}
 }
 

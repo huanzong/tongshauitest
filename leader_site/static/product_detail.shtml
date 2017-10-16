@@ -144,8 +144,33 @@
 							</div>
 						</div>
 						<!-- 左边 md sm xs-->
-						<div class="banner-iconleft-md o_df-hide o_md-show o_sm-show o_xs-show">
-							
+						<div class="banner-activity banner-activity-sm o_df-hide o_md-show o_sm-show o_xs-show">
+							<div class="activity-icon-box">
+								<div class="activity-icon active">
+									<div class="icon-font">
+										<i class="iconfont icon-star-solid"></i>
+									</div>
+									<span class="icon-font-info">收藏</span>
+								</div>
+								<div class="activity-icon">
+									<div class="icon-font">
+										<i class="iconfont icon-price-tag-solid1"></i>
+									</div>
+									<span class="icon-font-info">订阅</span>
+								</div>
+								<div class="activity-icon">
+									<div class="icon-font">
+										<i class="iconfont icon-share-solid"></i>
+									</div>
+									<span class="icon-font-info">分享</span>
+								</div>
+								<div class="activity-icon activity-icon-compare">
+									<div class="icon-font">
+										<i class="iconfont icon-contrast-solid"></i>
+									</div>
+									<span class="icon-font-info">对比</span>
+								</div>
+							</div>
 						</div>
 						<!-- 右边 md sm xs-->
 						<div class="banner-browseright-md o_df-hide o_md-show o_sm-show o_xs-show">
