@@ -188,6 +188,21 @@ $(function(){
     });
 
 
+    var email=$(".js-bindEmailform").Validform({
+        tiptype:3,
+        label:".label",
+        showAllError:true,
+        ajaxPost:true
+
+    });
+    var emailyanzheng=$(".js-bindEmailyanzheng").Validform({
+        tiptype:3,
+        label:".label",
+        showAllError:true,
+        ajaxPost:true
+
+    });
+
 
     var yanzhengma=$(".js-bindmobyanzheng").Validform({
         tiptype:3,
