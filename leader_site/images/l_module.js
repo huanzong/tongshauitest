@@ -263,6 +263,7 @@ $(function() {
         var clickIndex = $(this).index();
         $(this).addClass('cur').siblings().removeClass('cur');
         $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
+        $('.js-submintData').addClass('l-btn-disable');
     })
 });
 

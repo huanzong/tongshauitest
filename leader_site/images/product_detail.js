@@ -187,7 +187,7 @@ $(function() {
 
     }
 
-	//登陆框验证
+	//手机验证
 	$('.js-bindmobinput').blur(function(){
 		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
 		if(yanzhengtrue){
@@ -207,5 +207,145 @@ $(function() {
 		}
 
 	})
+
+
+
+
+	//验证码成功后可点击提交
+	$('.js-mobileCode').blur(function(){
+
+		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+
+		if(yanzhengtrue){//点击确定 个人中心绑定手机号接口
+			$('.js-submintData').removeClass('l-btn-disable');
+			$('.js-submintData').unbind().bind('click',function(){
+				var newMobile=$('.js-newMobile').val();
+				var mobileCode=$('.js-mobileCode').val();
+
+
+			})
+		}else{
+			//    提示错误信息 验证码错误
+
+			//禁止点击
+			$('.js-submintData').unbind().bind('click',function(){
+				$(this).addClass('l-btn-disable');
+				return false;
+			})
+		}
+
+	})
+	//密码验证
+	$('.js-landUserIdInput').blur(function(){
+		var yanzhengtrue = $(this).parents('.land-cont-normal-input').find('.Validform_right');
+		if(yanzhengtrue.length==2){//点击确定 个人中心绑定手机号接口
+
+			$('.js-submintData').removeClass('l-btn-disable');
+			$('.js-submintData').unbind().bind('click',function(){
+
+			})
+		}else{
+			//    提示错误信息 验证码错误
+			$('.js-submintData').addClass('l-btn-disable');
+			//禁止点击
+			$('.js-submintData').unbind().bind('click',function(){
+
+				return false;
+			})
+		}
+	})
+	//密码验证
+	$('.js-landPassWordInput').blur(function(){
+		var yanzhengtrue = $(this).parents('.land-cont-normal-input').find('.Validform_right');
+		if(yanzhengtrue.length==2){//点击确定 个人中心绑定手机号接口
+
+			$('.js-submintData').removeClass('l-btn-disable');
+			$('.js-submintData').unbind().bind('click',function(){
+
+			})
+		}else{
+			//    提示错误信息 验证码错误
+			$('.js-submintData').addClass('l-btn-disable');
+			//禁止点击
+			$('.js-submintData').unbind().bind('click',function(){
+
+				return false;
+			})
+		}
+
+	})
+
+
+	//账号验证
+	$('.js-landUserIdInput').blur(function(){
+		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+		if(yanzhengtrue){
+			$('.js-getinfo').removeClass('l-btn-disable').click(function(){
+
+				yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
+				if(yanzhengtrue){
+					var newMobile=$('.js-newMobile').val();
+
+					//  手机号发送验证码接口
+
+				}
+			})
+		}
+		else{
+			$('.js-getinfo').addClass('l-btn-disable');
+		}
+
+	})
+	//手机验证
+	$('.js-bindmobinput').blur(function(){
+		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+		if(yanzhengtrue){
+			$('.js-getinfo').removeClass('l-btn-disable').click(function(){
+
+				yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
+				if(yanzhengtrue){
+					var newMobile=$('.js-newMobile').val();
+
+					//  手机号发送验证码接口
+
+				}
+			})
+		}
+		else{
+			$('.js-getinfo').addClass('l-btn-disable');
+		}
+
+	})
+
+
+	var phone=$(".js-landPhone").Validform({
+		tiptype:3,
+		label:".label",
+		showAllError:true,
+		ajaxPost:true
+
+	});
+	var phoneyanzheng=$(".js-landPhoneYanzheng").Validform({
+		tiptype:3,
+		label:".label",
+		showAllError:true,
+		ajaxPost:true
+
+	});
+
+	var landUserId=$(".js-landUserId").Validform({
+		tiptype:3,
+		label:".label",
+		showAllError:true,
+		ajaxPost:true
+
+	});
+	var landPassWord=$(".js-landPassWord").Validform({
+		tiptype:3,
+		label:".label",
+		showAllError:true,
+		ajaxPost:true
+
+	});
 
 });

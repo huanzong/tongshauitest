@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-安全设置-解绑手机</title>
+    <title>个人中心-安全设置-解绑邮箱</title>
 
     <%=base%>
 
@@ -23,10 +23,10 @@
             <!-- 右侧内容 START-->
             <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
                 <div class="member-security-width js-securityheight">
-                    <div class="member-security-tit"><p>解绑手机</p></div>
+                    <div class="member-security-tit"><p>解绑邮箱</p></div>
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox">
-                        <!-- 解绑手机 START-->
+                        <!-- 解绑邮箱 START-->
                         <div class="member-unbingmob o_g">
                             <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-unbingmob-text">解绑后，您将无法再使用 <span>157****3370</span> 进行登录，密码重置或其他安全验证</div>
                         </div>
@@ -38,20 +38,20 @@
                                 </div>-->
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 selectbox member-bingmob-listipt">
                                     <div>
-                                        <select name="" id="js_unbindmob"  autotext="手机（157****3370）">
-                                            <option value="0">--手机（166****3370）--</option>
-                                            <option value="1">手机（177****3370）</option>
-                                            <option value="2">手机（188****3370）</option>
+                                        <select name="" id="js_unbindmail"  autotext="邮箱（166****@163.com）">
+                                            <option value="0">--邮箱（166****@163.com）--</option>
+                                            <option value="1">邮箱（177****@163.com）</option>
+                                            <option value="2">邮箱（188****@163.com）</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="o_g member-bingmob-list">
-                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">短信验证</div>
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮件验证</div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt">
-                                    <input type="text" class="js_mobileCodeYz" name="" ph="短信验证码">
-                                    <a href="javascript:;" class="l-btn-sm l-btn-red ">发送验证短信</a>
+                                    <input type="text" class="js_emailCodeYz" name="" ph="邮件验证码">
+                                    <a href="javascript:;" class="l-btn-sm l-btn-red ">发送验证邮件</a>
                                 </div>
                             </div>
 
@@ -64,7 +64,7 @@
 
 
                         </div>
-                        <!-- 解绑手机 End-->
+                        <!-- 解绑邮箱 End-->
                         <!-- 解绑成功 START-->
                         <div class="member-security-bingsuccess o_g" style="display: none">
                             <i class="iconfont icon-success-solid"></i>
