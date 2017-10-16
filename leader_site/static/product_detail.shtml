@@ -707,7 +707,8 @@
 			</div>
 	    	<!-- 优惠组合 END -->
 
-			<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>
+			<!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
+			<!--激活登陆弹窗按钮添加class js_landBtn -->
 	    	<!--#include virtual="public/footer.shtml"-->
 			<div class="o_g land-shade js_landShade" >
 				<div class="land-box js_landContBox">
@@ -721,12 +722,27 @@
 					</div>
 					<div class="js_landInputBox">
 						<div class="land-cont-normal-input o_g">
-							<div class="l-input o_u o_df_2-2">
-								<input type="text" class=" o_u o_df_11-12" name="" ph="手机/邮箱/用户名" value="">
+
+
+							<div class="o_g member-bingmob-list">
+								<div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landUserId">
+									<form class="ui_validForm js_ui_validForm">
+										<input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名"  value=""  datatype="s6-16"  errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+										<p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
+									</form>
+								</div>
 							</div>
-							<div class="l-input o_u o_df_2-2">
-								<input type="text" class=" o_u o_df_11-12" name="" ph="密码" value="">
+
+							<div class="o_g member-bingmob-list">
+								<div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPassWord">
+									<form class="ui_validForm js_ui_validForm">
+										<input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码"  value=""  datatype="s6-16"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+										<p class="Validform_checktip Validform_wrong"></p>
+									</form>
+								</div>
 							</div>
+
+
 						</div>
 						<div class="land-cont-phone-input o_g">
 							<div class="o_g member-bingmob-list">
@@ -750,7 +766,7 @@
 						</div>
 					</div>
 					<div class="land-cont-normal-btn o_g">
-						<a href="javascript:;" class="l-btn-sm l-btn-red o_u o_df_11-12  l-btn-disable">登录</a>
+						<a href="javascript:;" class="l-btn-sm l-btn-red o_u o_df_11-12  l-btn-disable js-submintData">登录</a>
 					</div>
 					<div class="land-cont-down">
 						<a class="o_u" href="javascript:;">立即注册</a>
@@ -765,20 +781,7 @@
 	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 	<script type="text/javascript" src="images/product_detail.js"></script>
 	<script>
-		var phone=$(".js-landPhone").Validform({
-			tiptype:3,
-			label:".label",
-			showAllError:true,
-			ajaxPost:true
 
-		});
-		var phoneyanzheng=$(".js-landPhoneYanzheng").Validform({
-			tiptype:3,
-			label:".label",
-			showAllError:true,
-			ajaxPost:true
-
-		});
 	</script>
 </body>
 </html>
