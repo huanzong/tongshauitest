@@ -44,7 +44,7 @@
                                     <form class="ui_validForm js_ui_validForm">
                                         <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码"  value=""  datatype="n6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                         <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
-                                        <p class="Validform_checktip Validform_wrong"></p>
+                                        <p class="Validform_checktip Validform_wrong js-mobileCodeerror"></p>
                                     </form>
                                 </div>
                             </div>
