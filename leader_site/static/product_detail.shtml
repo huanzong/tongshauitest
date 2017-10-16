@@ -732,12 +732,78 @@
 			</div>
 	    	<!-- 优惠组合 END -->
 
-
+			<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>
 	    	<!--#include virtual="public/footer.shtml"-->
+			<div class="o_g land-shade js_landShade" >
+				<div class="land-box js_landContBox">
+					<div class="land-cont-title o_u">
+						<span class="o_u ">登陆</span>
+						<a href="" class="o_u iconfont icon-close js_landClose"></a>
+					</div>
+					<div class="js_landType">
+						<div class="land-cont-type-normal o_u o_df_1-2 cur">普通登录</div>
+						<div class="land-cont-type-phone o_u o_df_1-2">手机动态密码登录</div>
+					</div>
+					<div class="js_landInputBox">
+						<div class="land-cont-normal-input o_g">
+							<div class="l-input o_u o_df_2-2">
+								<input type="text" class=" o_u o_df_11-12" name="" ph="手机/邮箱/用户名" value="">
+							</div>
+							<div class="l-input o_u o_df_2-2">
+								<input type="text" class=" o_u o_df_11-12" name="" ph="密码" value="">
+							</div>
+						</div>
+						<div class="land-cont-phone-input o_g">
+							<div class="o_g member-bingmob-list">
+								<div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landPhone">
+									<form class="ui_validForm js_ui_validForm">
+										<input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+										<p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
+									</form>
+								</div>
+							</div>
+
+							<div class="o_g member-bingmob-list">
+								<div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPhoneYanzheng">
+									<form class="ui_validForm js_ui_validForm">
+										<input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码"  value=""  datatype="n6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+										<a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
+										<p class="Validform_checktip Validform_wrong"></p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="land-cont-normal-btn o_g">
+						<a href="javascript:;" class="l-btn-sm l-btn-red o_u o_df_11-12  l-btn-disable">登录</a>
+					</div>
+					<div class="land-cont-down">
+						<a class="o_u" href="javascript:;">立即注册</a>
+						<a class="o_u" href="javascript:;">忘记密码</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 	<script type="text/javascript" src="images/product_detail.js"></script>
+	<script>
+		var phone=$(".js-landPhone").Validform({
+			tiptype:3,
+			label:".label",
+			showAllError:true,
+			ajaxPost:true
+
+		});
+		var phoneyanzheng=$(".js-landPhoneYanzheng").Validform({
+			tiptype:3,
+			label:".label",
+			showAllError:true,
+			ajaxPost:true
+
+		});
+	</script>
 </body>
 </html>

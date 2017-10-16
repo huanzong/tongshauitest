@@ -187,5 +187,25 @@ $(function() {
 
     }
 
+	//登陆框验证
+	$('.js-bindmobinput').blur(function(){
+		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+		if(yanzhengtrue){
+			$('.js-getinfo').removeClass('l-btn-disable').click(function(){
+
+				yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
+				if(yanzhengtrue){
+					var newMobile=$('.js-newMobile').val();
+
+					//  手机号发送验证码接口
+
+				}
+			})
+		}
+		else{
+			$('.js-getinfo').addClass('l-btn-disable');
+		}
+
+	})
 
 });
