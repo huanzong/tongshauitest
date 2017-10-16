@@ -594,7 +594,9 @@
 		top: 0;
 		right: -240px;
 		z-index: 4;
-		background: #f9f8f8;
+		background: #fff;
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
 
 
 		@media (min-width: 992px) and (max-width: 1199px) {
@@ -628,8 +630,7 @@
 			/*详细菜单-菜单内容区*/
 			width: 240px;
 			float: left;
-			border-right: 1px solid #eee;
-			border-left: 1px solid #eee;
+
 			box-sizing: border-box;
 			background: #fff;
 			padding-top: 26px;
@@ -1551,6 +1552,7 @@
 						float: left;
 						margin-left: 30px;
 						margin-top: 10px;
+
 
 						@media (min-width: 576px) and (max-width: 700px) {
 							/* sm*/
@@ -3620,13 +3622,57 @@
 			.selected_false{
 				display: block;
 			}
+			.selected_g{
+				display: block;
+				width: 30px;
+				height: 30px;
+				border-radius: 30px;
+				line-height: 29px;
+				text-align: center;
+			}
+			.selected_g{
+				background: #d8d8d8;
+				background: -webkit-linear-gradient(320deg, #c9c9c9,#efefef); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(320deg, #c9c9c9,#efefef); /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(320deg, #c9c9c9,#efefef); /* Firefox 3.6 - 15 */
+				background: linear-gradient(320deg, #c9c9c9,#efefef); /* 标准的语法（必须放在最后） */
+				background: linear-gradient(320deg,#d0d0d0,#efefef);
+				box-shadow: 0 0 5px 1px #e7e7e7;
+				border: 1px solid #e9e9e9;
+				i{
+					font-size: 22px;
+					color: #fff;
+				}
+			}
+			//.selected_true_g{
+			//	background: #e51727;
+			//	background: -webkit-linear-gradient(320deg, #e51727,#e78e96); /* Safari 5.1 - 6.0 */
+			//	background: -o-linear-gradient(320deg, #e51727,#e78e96); /* Opera 11.1 - 12.0 */
+			//	background: -moz-linear-gradient(320deg, #e51727,#e78e96); /* Firefox 3.6 - 15 */
+			//	background: linear-gradient(320deg, #e51727,#e78e96); /* 标准的语法（必须放在最后） */
+			//	background: linear-gradient(320deg,#e51727,#e78e96);
+			//	box-shadow: 0 0 5px 1px #e51727;
+			//	border: 1px solid #e5404d;
+			//	i{
+			//		font-size: 22px;
+			//		color: #ffe1e1;
+			//	}
+			//}
 		}
 		.member-share-score-selected{
-			.selected{
-				display: block;
-			}
-			.selected_false{
-				display: none;
+			.selected_g{
+				background: #e51727;
+				background: -webkit-linear-gradient(320deg, #e51727,#e78e96); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(320deg, #e51727,#e78e96); /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(320deg, #e51727,#e78e96); /* Firefox 3.6 - 15 */
+				background: linear-gradient(320deg, #e51727,#e78e96); /* 标准的语法（必须放在最后） */
+				background: linear-gradient(320deg,#e51727,#e78e96);
+				box-shadow: 0 0 5px 1px #e51727;
+				border: 1px solid #e5404d;
+				i{
+					font-size: 22px;
+					color: #ffe1e1;
+				}
 			}
 		}
 
@@ -3731,6 +3777,59 @@
 
 
 }
+
+
+.member-share-score-selected-false{
+	margin-right: 5px;
+	.selected_g{
+		height: 18px;
+		width: 18px;
+		line-height: 18px;
+		text-align: center;
+		display: block;
+		border-radius: 18px;
+		background: #d8d8d8;
+		background: -webkit-linear-gradient(320deg, #c9c9c9,#efefef); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(320deg, #c9c9c9,#efefef); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(320deg, #c9c9c9,#efefef); /* Firefox 3.6 - 15 */
+		background: linear-gradient(320deg, #c9c9c9,#efefef); /* 标准的语法（必须放在最后） */
+		background: linear-gradient(320deg,#d0d0d0,#efefef);
+		//box-shadow: 0 0 5px 1px #e7e7e7;
+		border: 1px solid #e9e9e9;
+		i{
+			font-size: 14px;
+			color: #fff;
+		}
+
+	}
+}
+
+
+.member-share-score-selected{
+	margin-right: 5px;
+	.selected_g{
+		height: 18px;
+		width: 18px;
+		line-height: 18px;
+		text-align: center;
+		display: block;
+		border-radius: 18px;
+		background: #e51727;
+		background: -webkit-linear-gradient(320deg, #e51727,#e78e96); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(320deg, #e51727,#e78e96); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(320deg, #e51727,#e78e96); /* Firefox 3.6 - 15 */
+		background: linear-gradient(320deg, #e51727,#e78e96); /* 标准的语法（必须放在最后） */
+		background: linear-gradient(320deg,#e51727,#e78e96);
+		//box-shadow: 0 0 5px 1px #e51727;
+		border: 1px solid #e5404d;
+		i{
+			font-size: 14px;
+			color: #ffe1e1;
+		}
+	}
+}
+
+
 .member-share-photo-cur{
 	position: relative;
 	height: 60px;

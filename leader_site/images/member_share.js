@@ -6,6 +6,7 @@ $('.js_shareScoreImg>li').click(function(){
 
         if(i > shareImgIndex){
             $shareArr.eq(i).removeClass('member-share-score-selected');
+
         }else{
             $shareArr.eq(i).addClass('member-share-score-selected');
         }
@@ -135,6 +136,6 @@ $.jUploader({
 //点击提交按钮
 $('.js-memberShareGetUp').click(function(){
     var scoreNub = $('.member-share-score-selected').length;  //这个是用户的评价分数
-
     $.ajax()
+
 })

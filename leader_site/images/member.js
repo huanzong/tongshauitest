@@ -108,139 +108,19 @@ $(function() {
         },300);
 
     }
-    //function init() {
-    //    var subMenuHeight = $('.js-contRightContBox').height();
-    //    var contHeight =  $('.js-contRightContBox').height();
-    //    if(contHeight > navMinHeight){
-    //
-    //        if(screenWidth>= 576){
-    //
-    //            $('.js-nav').css('height',contHeight+100);
-    //            //$('.js-membercontbox').css('height',contHeight+100);
-    //            $('.js-submenu').css('height',contHeight+100);
-    //
-    //            $('.js-submenucount').css('height',contHeight+100);
-    //            $('.js-submenubtn').css('height',contHeight+100);
-    //        }
-    //
-    //    }
-    //
-    //
-    //
-    //    if(screenWidth>= 1200){
-    //        //$('.js-nav').css('height',navMinHeight+100);
-    //        $('.js-nav').css('height',contHeight+100);
-    //        //$('.js-membercontbox').css('height',contHeight+100);
-    //        $('.js-submenu').css('height',contHeight+100);
-    //
-    //
-    //        if(subMenuHeight>navMinHeight){
-    //            $('.js-personal').css('height',subMenuHeight+100);
-    //
-    //
-    //        }else{
-    //            //$('.js-personal').css('height',navMinHeight+100);
-    //            //
-    //            ////alert(55)
-    //            //$('.js-nav').css('height',navMinHeight+100);
-    //            //
-    //            //$('.js-submenu').css('height',navMinHeight+100);
-    //            $('.js-nav').css('height',navMinHeight+100);
-    //            //$('.js-membercontbox').css('height',contHeight+100);
-    //            $('.js-submenu').css('height',navMinHeight+100);
-    //            $('.js-submenucount').css('height',navMinHeight+100);
-    //            $('.js-submenubtn').css('height',navMinHeight+100)
-    //        }
-    //
-    //
-    //    }else if(screenWidth>= 992 && screenWidth<= 1199){
-    //        if(subMenuHeight>navMinHeight){
-    //            $('.js-nav').css('height',subMenuHeight+100);
-    //            $('.js-personal').css('height',subMenuHeight+100);
-    //        }else{
-    //            $('.js-nav').css('height',navMinHeight+100);
-    //            $('.js-personal').css('height',navMinHeight+100);
-    //        }
-    //        $('.js-nav').css('height',contHeight+100);
-    //        //$('.js-membercontbox').css('height',contHeight+100);
-    //        $('.js-submenu').css('height',contHeight+100);
-    //
-    //        $('.js-submenucount').css('height',contHeight+100);
-    //        $('.js-submenubtn').css('height',contHeight+100);
-    //
-    //    }else if(screenWidth>= 701 && screenWidth<= 991){
-    //        if(subMenuHeight>navMinHeight){
-    //            $('.js-nav').css('height',subMenuHeight+100);
-    //            $('.js-personal').css('height',subMenuHeight+100);
-    //            $('.js-submenubtn').css('height',subMenuHeight+100);
-    //        }else{
-    //            $('.js-nav').css('height',navMinHeight+100);
-    //            $('.js-personal').css('height',navMinHeight+100);
-    //            $('.js-submenubtn').css('height',navMinHeight+100);
-    //        }
-    //        $('.js-nav').css('height',contHeight+100);
-    //        //$('.js-membercontbox').css('height',contHeight+100);
-    //        $('.js-submenu').css('height',contHeight+100);
-    //
-    //        $('.js-submenucount').css('height',contHeight+100);
-    //        $('.js-submenubtn').css('height',contHeight+100);
-    //
-    //    }else if(screenWidth>= 576 && screenWidth<= 700){
-    //        if(subMenuHeight>navMinHeight){
-    //            $('.js-nav').css('height',subMenuHeight+52);
-    //            $('.js-personal').css('height',subMenuHeight+52);
-    //            $('.js-submenubtn').css('height',subMenuHeight+52);
-    //        }else{
-    //            $('.js-nav').css('height',navMinHeight+100);
-    //            $('.js-personal').css('height',navMinHeight+100);
-    //            $('.js-submenubtn').css('height',navMinHeight+100);
-    //
-    //        }
-    //        $('.js-nav').css('height',contHeight+52);
-    //        //$('.js-membercontbox').css('height',contHeight+100);
-    //        $('.js-submenu').css('height',contHeight+52);
-    //
-    //        $('.js-submenucount').css('height',contHeight+52);
-    //        $('.js-submenubtn').css('height',contHeight+52);
-    //
-    //    }else if(screenWidth<= 575){
-    //        //$('.js-submenucount').css('height',sxMenuHeight-60);
-    //        $('.js-submenucount').css('height',contHeight+52);
-    //        $('.js-submenubtn').css('height',contHeight+52);
-    //    }
 
-
-
-        // var slidesPerView = 4;
-        //
-        // if (screenWidth <= 575) {
-        //   slidesPerView = 1;
-        // } else if (screenWidth > 1199) {
-        //   slidesPerView = 4;
-        // } else {
-        //   slidesPerView = 2;
-        // }
-
-        // swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
-        //
-        // setTimeout(function(){
-        // $('.js_oHerl').css('height',$('.js_oHerlSize').outerHeight());
-        // $('.js_center').oBoxCenter().init();
-        // },1000);
-
-
-
-    //}
 
 
 //下拉菜单初始化
-    $("#js_unbindmob").oSelect().init();
+
     $("#js_save").oSelect().init();
     $("#js_city").oSelect().init();
     $("#js_area").oSelect().init();
     $("#js_persave").oSelect().init();
     $("#js_percity").oSelect().init();
     $("#js_perarea").oSelect().init();
+
+
     //个人信息
     $('.js-personalinfotab').click( function () {
         var tabNmu =$(this).index();
@@ -250,9 +130,15 @@ $(function() {
         $('.js-modifyPhoto').hide();
         $('.js-modifyPhotoBtn').hide();
     })
+
+
+
     $(".js_sex").jq_qvote();
 
-
+    //修改手机页面三种状态
+    //$('.js-memberRevRateLine').css('width','0%');
+    //$('.js-memberRevRateLine').css('width','50%');
+    //$('.js-memberRevRateLine').css('width','100%');
 
 
 
