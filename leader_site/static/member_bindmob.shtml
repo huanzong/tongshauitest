@@ -52,7 +52,7 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 member-bingmob-listipt-enterbtn">
-                                    <a href="javascript:;" class="l-btn-normal l-btn-red ">确定</a>
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red js-submintData">确定</a>
                                 </div>
                             </div>
 

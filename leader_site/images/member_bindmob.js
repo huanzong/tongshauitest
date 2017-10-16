@@ -30,6 +30,7 @@ $(function(){
                 if(yanzhengtrue){
 //                    $.ajax({
 ////                        发送验证码
+                    console.log(11111)
 //                    })
                 }
             })
@@ -37,20 +38,26 @@ $(function(){
 
     })
     //验证码成功后可点击提交
-    $('.js-validateinput').blur(function(){
+    $('.js-bindmobinput').blur(function(){
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if(yanzhengtrue){
-            $('.js-submintData').click(function(){
+            //console.log(3333);
+            $('.js-submintData').unbind().bind('click',function(){
+                console.log('true');
+
 //                $.ajax({
 ////                        发送验证码
 //                })
             })
         }else{
         //    提示错误信息 验证码错误
+            console.log(2222)
 
             //禁止点击
-            $('.js-submintData').click(function(){
-               return false;
+            $('.js-submintData').unbind().bind('click',function(){
+                console.log('false');
+
+                return false;
             })
         }
 
