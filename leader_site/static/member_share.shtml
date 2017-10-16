@@ -38,11 +38,21 @@
                                     <div class="member-share-score">
                                         <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
                                         <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                            <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
-                                            <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
-                                            <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
-                                            <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
-                                            <li class=""><img class="selected" src="images/share_cur.png" alt=""><img class="selected_false" src="images/share_nocur.png" alt=""></li>
+                                            <li>
+                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="member-share-evaluate ">

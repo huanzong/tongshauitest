@@ -88,8 +88,8 @@
     	<div class="footer_copy">
 
             <span class="link">
-                <i class="iconfont icon-problem-solid"></i>
-                <i class="iconfont icon-problem-solid"></i>
+                <a href="javascript:;"  class="iconfont icon-share-weixin"></a>
+                <a href="javascript:;" class="iconfont icon-share-weibo"></a>
             </span>
             <ul>
                 <li><a href="">联系我们</a></li>
