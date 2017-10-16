@@ -23,8 +23,8 @@
             <li><a href="ui.shtml#ui_select">下拉菜单</a></li>
             <li><a href="ui.shtml#ui_formValid">表单验证插件用法</a></li>
             <li><a href="ui.shtml#ui_imgUpload">上传图片</a></li>
-            <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
             <li><a href="ui.shtml#ui_paging">分页</a></li>
+            <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
         </ul>
     </div>
     <!-- button 按钮 -->
@@ -379,6 +379,35 @@
                 <p class="Validform_checktip"></p>
             </div>
         </form>
+        <h3>--- HTML ---</h3>
+        <textarea>
+            <form class="ui_validForm js_ui_validForm">
+                <div class="l-input">
+                    <input type="text" name="" ph="5-16个字符" value="" datatype="zh2-4" errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                    <p class="Validform_checktip"></p>
+                </div>
+                <div class="l-input">
+                    <input type="password" name="" value="" datatype="*6-20" errormsg="密码6到20位任意字符" nullmsg="<i class='iconfont icon-information-solid'></i>请填写密码"/>
+                    <p class="Validform_checktip"></p>
+                </div>
+                <div class="l-input">
+                    <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                    <p class="Validform_checktip"></p>
+                </div>
+            </form>
+        </textarea>
+        <h3>--- JS ---</h3>
+        <textarea>
+            var demo=$(".js_ui_validForm").Validform({
+                tiptype:3,
+                label:".label",
+                showAllError:true,
+                datatype:{
+                    "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+                },
+                ajaxPost:true
+            });
+        </textarea>
     </div>
     <!-- 表单验证插件用法 END -->
     <!-- 上传图片插件 -->
@@ -444,11 +473,7 @@
         </textarea>
     </div>
     <!-- 上传图片插件 END -->
-
-    <!-- iconfont -->
-    <div id="ui_iconfont"></div>
-    <!--#include virtual="demo_fontclass.shtml"-->
-    <!-- iconfont END -->
+    
     <!--分页-->
     <div class="main markdown" id="ui_paging">
         <h1>分页</h1>
@@ -483,6 +508,10 @@
     </div>
 
     <!--分页 END-->
+    <!-- iconfont -->
+    <div id="ui_iconfont"></div>
+    <!--#include virtual="demo_fontclass.shtml"-->
+    <!-- iconfont END -->
 
 <!--#include virtual="public/foot.shtml"-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
