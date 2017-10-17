@@ -468,6 +468,24 @@
 					}
 				}
 		    }
+		    .swiper-pagination{
+		    	text-align: center;
+		    	.pagination-box{
+		    		display: inline-block;
+		    		border: 1px solid #eee;
+		    		background: #fff;
+		    		width: 58px;
+		    		height: 58px;
+		    		&.active{
+		    			border: 1px solid @l-red;
+		    		}
+		    		@media (min-width: 1200px) {
+		    			&:hover{
+			    			border: 1px solid @l-red;
+			    		}
+		    		}
+		    	}
+		    }
 		}
 	}
 }
