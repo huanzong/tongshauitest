@@ -211,12 +211,7 @@
                                     </div>
                                     <div class="swiper-slide">
 																			<a href="javascript:;">
-															        	<img src="images/compare_goods.PNG">
-															        </a>
-														        </div>
-														        <div class="swiper-slide">
-															        <a href="javascript:;">
-															        	<img src="images/compare_goods.PNG">
+															        	<img src="images/icon_03.PNG">
 															        </a>
 														        </div>
 														        <!-- <div class="swiper-slide">
@@ -230,8 +225,8 @@
                             	<div class="pagination-box active" data-index=0>
                             		<img src="images/compare_goods.PNG">
                             	</div>
-                            	<div class="pagination-box">
-                            		<img src="images/icon_03.PNG" data-index=1>
+                            	<div class="pagination-box" data-index=1>
+                            		<img src="images/icon_03.PNG">
                             	</div>
                             </div>
                         </div>
