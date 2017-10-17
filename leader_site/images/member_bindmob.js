@@ -3,23 +3,23 @@
  */
 $(function(){
 
-    //页面加载时
-    //$.ajax({
-    //    type: "POST",
-    //    dataType: "json",
-    //    url: "/user/front/user/userInfo",
-    //    data: "",
-    //    success: function(data){
-    //        if(data){
-    //        //
+    //页面加载时调个人信息 是否已经绑定过手机号
+    $.ajax({
+       type: "POST",
+       dataType: "json",
+       url: "/user/front/user/userInfo",
+       data: "",
+       success: function(returnData){
+           if(returnData.cellPhone==null || returnData.cellPhone==""){
+
                 $('.js-bingfalse').show();
                 $('.js-bingsuccess').hide();
-    //        }else{
-    //            $('.js-contRightContBox').show();
-    //            $('.member-security-bingsuccess').hide();
-    //        }
-    //    }
-    //});
+           }else{
+               $('.js-bingsuccess').show();
+               $('.js-bingfalse').hide();
+           }
+       }
+    });
 
 
 

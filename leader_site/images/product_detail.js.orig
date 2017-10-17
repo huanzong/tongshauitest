@@ -178,7 +178,7 @@ $(function() {
 	            }).init();
 	        });
 	    },300);
-
+	    
 	    // 更多选择
 	    setTimeout(function(){
 			$('.js_oHerlMore').css('height',$('.js_oHerlSizeMore').outerHeight());
@@ -187,12 +187,13 @@ $(function() {
 
     }
 
+<<<<<<< HEAD
     //浏览产品细节图
     $('.js_specificsShow').on('click',function(){
     	$('.js_specificsBoxShow').fadeIn(1000);
     	swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
 		    loop: true,
-		    // autoplay: 3000,
+		    autoplay: 3000,
 		    updateOnImagesReady : true,
 		    centeredSlides : true,
 		    slidesPerView: 3,
@@ -202,16 +203,17 @@ $(function() {
 		    },
 		    onSlideChangeEnd: function(swiper){
 		      var index = swiper.activeLoopIndex;
+		      
+		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+		        'width': '100%',
+		        'height': 500,
+		        'top': -105,
+		      }, 500);
 
-		      // $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-		      //   'width': '100%',
-		      //   'height': 500,
-		      // }, 500);
-
-		      // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-		      //   'width': '100%',
-		      //   'height': 382,
-		      // });
+		      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+		        'width': '100%',
+		        'height': 382,
+		      });
 		    }
 		});
 
@@ -228,7 +230,10 @@ $(function() {
 	    // });
     });
 
+	//登陆框验证
+=======
 	//手机验证
+>>>>>>> 8297315dc2696d983e995b8bbb6300cddd75abf6
 	$('.js-bindmobinput').blur(function(){
 		var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
 		if(yanzhengtrue){
