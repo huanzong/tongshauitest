@@ -324,7 +324,7 @@
 					left: 30px;
 				}
 			}
-			
+
 			.activity-icon-box{
 				padding-top: 60px;
 				@media (min-width: 992px) and (max-width:1199px) {
@@ -446,7 +446,7 @@
 				color: #333;
 				line-height: 20px;
 				font-family: "Microsoft YaHei";
-			} 
+			}
 		}
 		.detail-specifics{
 			display: none;
@@ -462,12 +462,24 @@
 				top: 105px;
 				width: 100%;
 				height: 626px;
+				.swiper-slide{
+					img{
+						position: absolute;
+					    top: 50%;
+					    max-width: 100%;
+					    margin-top: -143px;height: 286px;
+					}
+				} 
+
 				.swiper-slide-active{
 					img{
-						position: relative;
+						position: absolute;
+					    top: 50%;
+					    max-width: 100%;
+					    // margin-top: -200px;height: 400px;
 					}
 				}
-		    }
+		  }
 		    .swiper-pagination{
 		    	text-align: center;
 		    	width: 100%;
@@ -836,7 +848,7 @@
 				height: 200px;
 			}
 		}
-		
+
 		.param-attachment{
 			padding-top: 26px;
 			text-align: left;
@@ -857,7 +869,7 @@
 					display: block;
 					width: 83%;
 					margin-left: 8%;
-					margin-bottom: 8px; 
+					margin-bottom: 8px;
 					padding: 0;
 					padding-bottom: 10px;
 					text-align: center;

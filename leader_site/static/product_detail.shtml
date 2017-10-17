@@ -210,18 +210,28 @@
 																        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="javascript:;">
-																        	<img src="images/icon_03.png">
-																        </a>
-                                    </div>
+																			<a href="javascript:;">
+															        	<img src="images/compare_goods.PNG">
+															        </a>
+														        </div>
+														        <div class="swiper-slide">
+															        <a href="javascript:;">
+															        	<img src="images/compare_goods.PNG">
+															        </a>
+														        </div>
+														        <!-- <div class="swiper-slide">
+																			<a href="javascript:;">
+																							        	<img src="images/icon_03.png">
+																							        </a>
+														        </div> -->
                                 </div>
                             </div>
                             <div class="swiper-pagination js_bannerSwiperPage">
-                            	<div class="pagination-box active">
+                            	<div class="pagination-box active" data-index=0>
                             		<img src="images/compare_goods.PNG">
                             	</div>
                             	<div class="pagination-box">
-                            		<img src="images/icon_03.PNG">
+                            		<img src="images/icon_03.PNG" data-index=1>
                             	</div>
                             </div>
                         </div>
@@ -526,9 +536,9 @@
             <div class="detail-title">更多选择</div>
             <div class="o_g">
                 <div class="o_u o_df_2-12 js_oHerlMore">
-                    <a class="js_swiper_prevMore js_center">
-		    			<img src="images/detail_icon.PNG">
-		    		</a>
+                  <a class="js_swiper_prevMore js_center">
+					    			<img src="images/detail_icon.PNG">
+					    		</a>
                 </div>
                 <div class="o_u o_df_8-12 js_oHerlSizeMore">
                     <div class="detail-more">

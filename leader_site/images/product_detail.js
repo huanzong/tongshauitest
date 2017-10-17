@@ -170,7 +170,7 @@ $(function() {
 	            }).init();
 	        });
 	    },300);
-	    
+
 	    // 更多选择
 	    setTimeout(function(){
 			$('.js_oHerlMore').css('height',$('.js_oHerlSizeMore').outerHeight());
@@ -187,44 +187,38 @@ $(function() {
 		    autoplay: 3000,
 		    updateOnImagesReady : true,
 		    centeredSlides : true,
+		    // pagination : '.js_bannerSwiperPage',
 		    slidesPerView: 3,
 		    watchActiveIndex:true,
 		    onFirstInit: function(swiper){
 		      var index = swiper.activeLoopIndex;
+		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+		        'margin-top': '-200px',
+		        'height': '400px'
+		      }, 500);
 		    },
 		    onSlideChangeEnd: function(swiper){
 		      var index = swiper.activeLoopIndex;
-		      
+
 		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-		        'width': '100%',
-		        'height': 500,
+		        'margin-top': '-200px',
+		        'height': '400px'
 		      }, 500);
 
 		      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-		        'width': '100%',
-		        'height': 382,
+		        'margin-top': '-143px',
+		        'height': '286px'
 		      });
 		    }
 		});
 		//分页
 		$('.js_bannerSwiperPage .pagination-box').click(function(){
-			console.log(swiper.bannerSwiper);
-			swiper.bannerSwiper.swipeTo(0, 1000, false);
+			var index = $(this).attr('data-index');
+			console.log(index);
+			swiper.bannerSwiper.swipeTo(parseInt(index), 1000, false);
 			$(this).siblings('.pagination-box').removeClass('active');
 			$(this).addClass('active');
 		});
-
-	    // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-	    //   'height': 382,
-	    //   'margin-left': -348.5,
-	    //   'margin-top': -191
-	    // });
-
-	    // $('.js_bannerSwiper .swiper-slide-active').find('img').css({
-	    //   'height': 500,
-	    //   'margin-left': -455.5,
-	    //   'margin-top': -250
-	    // });
     });
 
 	//手机验证
