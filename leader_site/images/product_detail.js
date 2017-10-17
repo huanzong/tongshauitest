@@ -184,7 +184,7 @@ $(function() {
     	$('.js_specificsBoxShow').fadeIn(1000);
     	swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
 		    loop: true,
-		    autoplay: 3000,
+		    // autoplay: 3000,
 		    updateOnImagesReady : true,
 		    centeredSlides : true,
 		    // pagination : '.js_bannerSwiperPage',
