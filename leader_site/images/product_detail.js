@@ -178,7 +178,7 @@ $(function() {
 	            }).init();
 	        });
 	    },300);
-	    
+
 	    // 更多选择
 	    setTimeout(function(){
 			$('.js_oHerlMore').css('height',$('.js_oHerlSizeMore').outerHeight());
@@ -192,7 +192,7 @@ $(function() {
     	$('.js_specificsBoxShow').fadeIn(1000);
     	swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
 		    loop: true,
-		    autoplay: 3000,
+		    // autoplay: 3000,
 		    updateOnImagesReady : true,
 		    centeredSlides : true,
 		    slidesPerView: 3,
@@ -202,16 +202,16 @@ $(function() {
 		    },
 		    onSlideChangeEnd: function(swiper){
 		      var index = swiper.activeLoopIndex;
-		      
-		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-		        'width': '100%',
-		        'height': 500,
-		      }, 500);
 
-		      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-		        'width': '100%',
-		        'height': 382,
-		      });
+		      // $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+		      //   'width': '100%',
+		      //   'height': 500,
+		      // }, 500);
+
+		      // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+		      //   'width': '100%',
+		      //   'height': 382,
+		      // });
 		    }
 		});
 

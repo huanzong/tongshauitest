@@ -212,10 +212,20 @@
 								        </a>
 							        </div>
 							        <div class="swiper-slide">
-										<a href="javascript:;">
-								        	<img src="images/index_banner2.JPG">
+								        <a href="javascript:;">
+								        	<img src="images/compare_goods.PNG">
 								        </a>
 							        </div>
+							        <div class="swiper-slide">
+								        <a href="javascript:;">
+								        	<img src="images/compare_goods.PNG">
+								        </a>
+							        </div>
+							        <!-- <div class="swiper-slide">
+												<a href="javascript:;">
+								        	<img src="images/index_banner2.JPG">
+								        </a>
+							        </div> -->
 							    </div>
 							</div>
 						</div>
