@@ -51,14 +51,6 @@ $(function() {
 		    grabCursor : true,
 		    loop: true,
 		    autoplay: 1000,
-
-		    // 如果需要分页器
-		    pagination: '.js_swiper_paginSellPoint',
-		    paginationType : 'bullets',
-
-		    // 如果需要前进后退按钮
-		    nextButton: '.js_swiper_nextSellPoint',
-		    // prevButton: '.js_swiper_prevSellPoint',
 		});
 
 	    //更多选择
@@ -213,6 +205,13 @@ $(function() {
 		        'height': 382,
 		      });
 		    }
+		});
+		//分页
+		$('.js_bannerSwiperPage .pagination-box').click(function(){
+			console.log(swiper.bannerSwiper);
+			swiper.bannerSwiper.swipeTo(0, 1000, false);
+			$(this).siblings('.pagination-box').removeClass('active');
+			$(this).addClass('active');
 		});
 
 	    // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({

@@ -470,19 +470,29 @@
 		    }
 		    .swiper-pagination{
 		    	text-align: center;
+		    	width: 100%;
+		    	bottom: 80px;
 		    	.pagination-box{
 		    		display: inline-block;
-		    		border: 1px solid #eee;
+		    		border: 2px solid #eee;
 		    		background: #fff;
 		    		width: 58px;
 		    		height: 58px;
+		    		border-radius: 58px;
+		    		text-align: center;
+		    		margin: 0 5px;
 		    		&.active{
-		    			border: 1px solid @l-red;
+		    			border: 2px solid @l-red;
 		    		}
 		    		@media (min-width: 1200px) {
 		    			&:hover{
 			    			border: 1px solid @l-red;
 			    		}
+		    		}
+		    		img{
+		    			padding-top: 9px;
+		    			width: 40px;
+		    			height: 40px;
 		    		}
 		    	}
 		    }
