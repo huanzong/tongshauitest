@@ -723,6 +723,9 @@
 				}
 			}
 		}
+		.member-menucont-home-nav{
+			padding-top: 120px;
+		}
 		.member-menubtnbox {
 			/*详细菜单-伸缩按钮*/
 			width: 40px;
@@ -843,6 +846,94 @@
 		z-index: 3;
 	}
 }
+
+//首页导航样式
+.js_memberHomeTile{
+	background: url(member_home_title.JPG) no-repeat center;
+	height: 120px;
+	width: 1000px;
+	display: inline-block;
+	position: relative;
+	z-index: 9;
+	background-size: 100% auto;
+	.member-home-title-left{
+		text-align: left;
+		padding: 30px 0 30px 55px;
+		span{
+			color: #999;
+			font-size: 16px;
+		}
+		h3{
+			color: #333;
+			font-size: 26px;
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			/* lg*/
+
+		}
+		@media (min-width: 701px) and (max-width: 991px) {
+			/* md*/
+			//z-index: -2;
+			h3{
+				font-size: 24px;
+			}
+		}
+		@media (min-width: 576px) and (max-width: 700px) {
+			/* sm*/
+			//z-index: -2;
+			span{
+				font-size: 12px;
+			}
+			h3{
+				font-size: 20px;
+			}
+		}
+		@media (max-width: 575px) {
+			/* xs*/
+			//z-index: -2;
+			//span{
+			//	display: inline-block;
+			//}
+		}
+	}
+	.member-home-title-right{
+		text-align: right;
+		color: red;
+
+		position: relative;
+		height: 100%;
+		span{
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			font-size: 34px;
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			/* lg*/
+
+		}
+		@media (min-width: 701px) and (max-width: 991px) {
+			/* md*/
+			//z-index: -2;
+
+		}
+		@media (min-width: 576px) and (max-width: 700px) {
+			/* sm*/
+			//z-index: -2;
+			span{
+				font-size: 28px;
+			}
+		}
+		@media (max-width: 575px) {
+			/* xs*/
+			//z-index: -2;
+			span{
+				display: none;
+			}
+		}
+	}
+}
+
 
 /*安全设置*/
 .member-security {
@@ -1836,6 +1927,11 @@
 				}
 			}
 
+			/*个人中心-安全设置-修改绑定邮箱*/
+			.member-bind-newemail{
+				display: none;
+
+			}
 			/*个人中心-安全设置-增票资质*/
 			.member-security-ticketinfobox {
 				width: 100%;
@@ -2322,8 +2418,10 @@
 
 			.member-addressbox {
 				width: 100%;
-				margin-top: 30px;
+				padding-top: 30px;
 				display: inline-block;
+				border-top: 1px solid #eee;
+				margin-top: 50px;
 
 				.member-addressleftbox {
 					padding-right: 15px;
@@ -3780,7 +3878,6 @@
 
 
 .member-share-score-selected-false{
-	margin-right: 5px;
 	.selected_g{
 		height: 18px;
 		width: 18px;

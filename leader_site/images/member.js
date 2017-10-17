@@ -83,6 +83,9 @@ $(function() {
         var navListHeight = $('.js-submenucount').height();
         var contHeight = contRightHeight>navListHeight?contRightHeight+70:navListHeight+70;
         var windowWidth = $(window).width();
+        var contRightWidth = ($(window).width())-$('.js-personal').width();
+        $('.js_memberHomeTile').width(contRightWidth);
+
 
 
         $('.js-personal').height(contHeight);
@@ -119,6 +122,7 @@ $(function() {
     $("#js_persave").oSelect().init();
     $("#js_percity").oSelect().init();
     $("#js_perarea").oSelect().init();
+
 
 
     //个人信息

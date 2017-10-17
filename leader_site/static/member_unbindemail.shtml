@@ -23,12 +23,27 @@
             <!-- 右侧内容 START-->
             <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
                 <div class="member-security-width js-securityheight">
-                    <div class="member-security-tit"><p>解绑邮箱</p></div>
+                    <div class="member-security-tit"><p>修改邮箱</p></div>
+                    <!--邮箱只能修改不能解绑-->
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox">
-                        <!-- 解绑邮箱 START-->
+                        <!-- 修改邮箱 START-->
                         <div class="member-unbingmob o_g">
-                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-unbingmob-text">解绑后，您将无法再使用 <span>157****3370</span> 进行登录，密码重置或其他安全验证</div>
+                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-three">
+                                <i class="member-revisemob-line-point01">
+                                    <span>　1. 安全验证</span>
+                                    <div class="member-revisemob-line-finishpoint"></div>
+                                </i>
+                                <i class="member-revisemob-line-point02">
+                                    <span>　2. 绑定邮箱</span>
+                                    <div class="member-revisemob-line-finishpoint"></div>
+                                </i>
+                                <i class="member-revisemob-line-point03">
+                                    <span>　3. 完成</span>
+                                    <div class="member-revisemob-line-finishpoint"></div>
+                                </i>
+                                <div class="member-revisemob-ratelinebg js-memberRevRateLine"></div>
+                            </div>
                         </div>
                         <div class="member-security-bingmob member-security-unbingmob-martop">
                             <div class="o_g member-bingmob-list">
