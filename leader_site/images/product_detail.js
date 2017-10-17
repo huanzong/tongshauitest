@@ -206,7 +206,6 @@ $(function() {
 		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
 		        'width': '100%',
 		        'height': 500,
-		        'top': -105,
 		      }, 500);
 
 		      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
