@@ -35,8 +35,9 @@
                             <div class="o_g member-address-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
-                                    <div class="l-input member-address-allinput">
-                                        <input type="text" name="" ph="请输入联系人的姓名" value="">
+                                    <div class="l-input member-address-allinput js-addressUserName">
+                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入联系人的姓名"  value=""  datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>请输入您的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                        <p class="Validform_checktip Validform_wrong js-addressUserError"></p>
                                     </div>
                                 </div>
                             </div>
@@ -44,8 +45,11 @@
                             <div class="o_g member-address-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname">手机<span>*</span></div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
-                                    <div class="l-input member-address-allinput">
-                                        <input type="text" name="" ph="请输入手机号" value="">
+                                    <div class="l-input member-address-allinput js-addressMobile">
+                                        <form class="ui_validForm js_ui_validForm">
+                                            <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                            <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -82,6 +86,7 @@
                                                     <option value="1">北京</option>
                                                     <option value="2">上海</option>
                                                 </select>
+
                                             </div>
                                         </div>
                                     </div>
@@ -109,6 +114,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <p class="Validform_checktip Validform_wrong js-newMobileerror"><i class="iconfont icon-information-solid"></i>请在普通输入框填写信息</p>
+
                             </div>
 
                             <div class="o_g member-address-list">
@@ -187,6 +194,7 @@
 </div>
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/member.js"></script>
 </body>
 </html>
