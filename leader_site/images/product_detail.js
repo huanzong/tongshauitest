@@ -94,6 +94,9 @@ $(function() {
         init();
     }, 1000);
 
+
+
+
 	//电商拉页
     $('.js_foldPlus').on('click', function() {
     	//电商拉页-点击加号，展示锚点定位
@@ -112,14 +115,6 @@ $(function() {
                     $(this).attr('src', src);
                 }
             });
-
-            //小屏幕轮播
-   			//$('.js_foldoverSwiper').show();
-   			//swiper.foldoverSwiper = new Swiper('.js_foldoverSwiper',{
-			//     loop: true,
-			//     slidesPerView : 'auto',
-			// });
-
         } else {
 
             //文字列表
@@ -133,6 +128,7 @@ $(function() {
                     $(this).attr('src', '');
                 }
             });
+
             $('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
             $('.js_center').oBoxCenter().init();
 
@@ -146,10 +142,24 @@ $(function() {
         	for(var i=0 ; i<index ; i++){
         		top += $('.js_foldimg').find('img').eq(i).height();
         	}
-        	$('.js_foldPlus').css('top',top);
-        	$('.js_foldlist').css('top',top-310);
-        	$('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
+            if(document.body.offsetWidth>991){
+                $('.js_foldPlus').css('top',top);
+                $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
+                $('.js_foldlist').css('top',top-310);
+            }else{
+                $('.js_foldoverNav').css('height',0);
+            }
+
         });
+
+        //小屏幕轮播
+        if(document.body.offsetWidth <= 991){
+
+            swiper.foldoverSwiper = new Swiper('.js_foldoverSwiper',{
+                loop: true,
+                slidesPerView : 'auto',
+            });
+        }
 
     });
 
@@ -194,7 +204,7 @@ $(function() {
             });
         }, 300);
 
-        
+
         setTimeout(function() {
 
         	// 更多选择
@@ -204,7 +214,7 @@ $(function() {
             if(screenWidth>991){
             	$('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
             }
-	        
+
 
         }, 1000);
 

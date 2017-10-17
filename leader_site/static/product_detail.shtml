@@ -360,7 +360,7 @@
 	              </div>
 	            </div>
             </div>
-	            
+
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
             <div class="o_g">
@@ -444,36 +444,45 @@
                         <a href="product_detail.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
                     </div>
 
-                    <div class="swiper-container js_foldoverSwiper o_df-hide o_md-show o_sm-show o_xs-show">
-										  <div class="swiper-wrapper">
-										      <div class="swiper-slide">
-														<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>1台挂在墙上的机柜</a>
-										      </div>
-										      <div class="swiper-slide">
-														<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=2>2台挂在墙上的机柜</a>
-										      </div>
-										      <div class="swiper-slide">
-														<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=3>3台挂在墙上的机柜</a>
-										      </div>
-										      <div class="swiper-slide">
-														<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=4>4台挂在墙上的机柜</a>
-										      </div>
-										      <div class="swiper-slide">
-														<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=5>5台挂在墙上的机柜</a>
-										      </div>
-										      <div class="swiper-slide">
-														<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=6>6台挂在墙上的机柜</a>
-										      </div>
-										  </div>
-										</div>
 
-                    <a class="iconfont icon-bg-solid js_foldPlus">
-					    				<i class="iconfont icon-plus"></i>
-					    				<!-- <i class="iconfont icon-close"></i> -->
-					    			</a>
+                    <!-- <a class="iconfont icon-bg-solid js_foldPlus"> -->
+                        <!-- <i class="iconfont icon-plus"></i> -->
+                        <!-- <i class="iconfont icon-close"></i> -->
+                    <!-- </a> -->
+
+                    <div>
+                        <a class="iconfont icon-bg-solid js_foldPlus icon-md-solid">
+                            <i class="iconfont icon-plus"></i>
+                            <!-- <i class="iconfont icon-close"></i> -->
+                        </a>
+                    </div>
+
+                    <div class="swiper-container js_foldoverSwiper">
+					  <div class="swiper-wrapper">
+					      <div class="swiper-slide">
+									<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>1台挂在墙上的机柜</a>
+					      </div>
+					      <div class="swiper-slide">
+									<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=2>2台挂在墙上的机柜</a>
+					      </div>
+					      <div class="swiper-slide">
+									<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=3>3台挂在墙上的机柜</a>
+					      </div>
+					      <div class="swiper-slide">
+									<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=4>4台挂在墙上的机柜</a>
+					      </div>
+					      <div class="swiper-slide">
+									<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=5>5台挂在墙上的机柜</a>
+					      </div>
+					      <div class="swiper-slide">
+									<a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=6>6台挂在墙上的机柜</a>
+					      </div>
+					  </div>
+					</div>
+
                 </div>
                 <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
-                	
+
                 </div>
                 <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                     <div class="foldover-img js_oHerlSizeFoldover js_foldimg">
