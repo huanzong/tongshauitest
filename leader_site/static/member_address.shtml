@@ -25,7 +25,7 @@
                 <div class="member-security-width js-securityheight">
                     <div class="member-security-tit">
                         <p>地址管理</p>
-                        <a href="javascript:;" class="l-btn-normal l-btn-red">新增地址</a>
+                        <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn">新增地址</a>
                     </div>
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox">
@@ -143,8 +143,8 @@
                             </div>
 
                         </div>
-                        <div class="member-addressbox-cutrule"></div>
-                        <div class="member-addressbox o_g">
+                        <!--<div class="member-addressbox-cutrule"></div>-->
+                        <div class="member-addressbox o_g js_memberAddressList">
                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox">
                                 <div class="member-addresslistbox">
                                     <div class="member-address-name">王柯科</div>
