@@ -84,7 +84,12 @@ $(function() {
         var contHeight = contRightHeight>navListHeight?contRightHeight+70:navListHeight+70;
         var windowWidth = $(window).width();
         var contRightWidth = ($(window).width())-$('.js-personal').width();
-        $('.js_memberHomeTile').width(contRightWidth);
+        if(contRightWidth){
+            $('.js_memberHomeTile').width(contRightWidth);
+        }else{
+            $('.js_memberHomeTile').width('100%');
+        }
+
 
 
 

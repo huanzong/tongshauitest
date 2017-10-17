@@ -39,21 +39,21 @@
 
                                     <div class="member-order-table member-orderdetail-table">
                                         <div class="member-home-top o_u o_df_11-12">
-                                            <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_3-12">
+                                            <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">
                                                 <i class="iconfont icon-giftbox-solid"></i>
                                                 <div class="member-home-right-title"  >
                                                     <p>我的等级</p>
                                                     <span class="l-tag-padding l-tag-orange">普通会员</span>
                                                 </div>
                                             </div>
-                                            <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_3-12">
+                                            <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">
                                                 <i class="iconfont icon-giftbox-solid"></i>
                                                 <div class="member-home-right-title"  >
                                                     <p>我的等级</p>
                                                     <span class="member-home-right-title-nub">233358</span>
                                                 </div>
                                             </div>
-                                            <div class="o_u o_df_5-12 o_lg_5-12 o_md_5-12 o_sm_3-6 o_xs_3-12">
+                                            <div class="o_u o_df_5-12 o_lg_5-12 o_md_5-12 o_sm_3-6 o_xs_12-12">
                                                 <i class="iconfont icon-giftbox-solid"></i>
                                                 <div class="member-home-right-title"  >
                                                     <p>我的等级</p>
@@ -80,55 +80,90 @@
                                     <!-- 精品推荐 -->
                                     <div class="o_g member-home-downbox">
                                         <!--<div class="o_u o_df_1-12"></div>-->
-                                        <div class="o_u o_df_12-12">
-                                            <div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2  member-home-down-left">
-                                                <div class="o_u o_df_11-12 member-order-table">
-                                                    <div class="o_g member-home-down-table">
-                                                        <div class="o_u o_df_11-12">
-                                                            <span>收藏与订阅</span>
-                                                            <a href="javascript:;">•••</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="member-home-down-cont">
-                                                        <a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
-                                                            <img src="images/compare_goods.PNG">
-                                                            <div class="member-home-down-info">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                            </div>
-                                                        </a>
-                                                        <a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
-                                                            <img src="images/compare_goods.PNG">
-                                                            <div class="member-home-down-info">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                            </div>
-                                                        </a>
+                                        <!--<div class="o_u o_df_12-12">-->
+                                            <!--<div class="o_u o_df_6-12 o_lg_2-2 o_sm_2-2 o_xs_2-2  member-home-down-left">-->
+                                                <!--<div class="o_u o_df_11-12 o_lg_2-2 o_sm_2-2 o_xs_2-2 member-order-table">-->
+                                                    <!--<div class="o_g member-home-down-table">-->
+                                                        <!--<div class="o_u o_df_11-12">-->
+                                                            <!--<span>收藏与订阅</span>-->
+                                                            <!--<a href="javascript:;">•••</a>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="member-home-down-cont">-->
+                                                        <!--<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
+                                                            <!--<img src="images/compare_goods.PNG">-->
+                                                            <!--<div class="member-home-down-info">-->
+                                                                <!--<p class="pro-info-title">统帅就给个洗衣机</p>-->
+                                                                <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
+                                                            <!--</div>-->
+                                                        <!--</a>-->
+                                                        <!--<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
+                                                            <!--<img src="images/compare_goods.PNG">-->
+                                                            <!--<div class="member-home-down-info">-->
+                                                                <!--<p class="pro-info-title">统帅就给个洗衣机</p>-->
+                                                                <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
+                                                            <!--</div>-->
+                                                        <!--</a>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+
+                                            <!--</div>-->
+                                            <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df">
+                                                <div class="o_g member-home-down-table">
+                                                    <div class="o_u o_df_11-12">
+                                                        <span>精选收藏</span>
+                                                        <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
                                                     </div>
                                                 </div>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
 
-                                            </div>
-                                            <div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2  member-home-down-right">
-                                                <div class="o_u o_df_11-12 member-order-table">
-                                                    <div class="o_g member-home-down-table">
-                                                        <div class="o_u o_df_11-12">
-                                                            <span>精选收藏</span>
-                                                            <a href="javascript:;">•••</a>
+                                                    <div class="member-home-down-cont">
+                                                        <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <img src="images/compare_goods.PNG">
+                                                        </a>
+                                                        <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                            <p class="pro-info-title">统帅就给个洗衣机</p>
+                                                            <span class="pro-info-type">JGEJJGEJ-988</span>
+                                                            <strong>￥2999.00</strong>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+
                                                     <div class="member-home-down-cont">
-                                                        <a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
+                                                        <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
                                                             <img src="images/compare_goods.PNG">
-                                                            <div class="member-home-down-info">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                                <i>￥2999.00</i>
-                                                            </div>
                                                         </a>
+                                                        <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                            <p class="pro-info-title">统帅就给个洗衣机</p>
+                                                            <span class="pro-info-type">JGEJJGEJ-988</span>
+                                                            <strong>￥2999.00</strong>
+                                                        </div>
                                                     </div>
                                                 </div>
-
                                             </div>
+                                            <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right member-home-down-xs ">
+                                            <div class="o_g member-home-down-table">
+                                                <div class="o_u o_df_11-12">
+                                                    <span>精选收藏</span>
+                                                    <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_2-2  ">
+
+                                                <div class="member-home-down-cont">
+                                                    <a class="o_u o_df_1-3 ">
+                                                        <img src="images/compare_goods.PNG">
+                                                    </a>
+                                                    <div class="member-home-down-info o_u o_df_2-3 ">
+                                                        <p class="pro-info-title">统帅就给个洗衣机</p>
+                                                        <span class="pro-info-type">JGEJJGEJ-988</span>
+                                                        <strong>￥2999.00</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
 
 
                                         </div>
