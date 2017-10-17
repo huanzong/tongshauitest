@@ -51,14 +51,6 @@ $(function() {
 		    grabCursor : true,
 		    loop: true,
 		    autoplay: 1000,
-
-		    // 如果需要分页器
-		    pagination: '.js_swiper_paginSellPoint',
-		    paginationType : 'bullets',
-
-		    // 如果需要前进后退按钮
-		    nextButton: '.js_swiper_nextSellPoint',
-		    // prevButton: '.js_swiper_prevSellPoint',
 		});
 
 	    //更多选择
@@ -191,41 +183,44 @@ $(function() {
     $('.js_specificsShow').on('click',function(){
     	$('.js_specificsBoxShow').fadeIn(1000);
     	swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
-		    loop: true,
+		    // loop: true,
 		    // autoplay: 3000,
 		    updateOnImagesReady : true,
 		    centeredSlides : true,
 		    slidesPerView: 3,
 		    watchActiveIndex:true,
 		    onFirstInit: function(swiper){
+
 		      var index = swiper.activeLoopIndex;
+		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+		        'margin-top': '-200px',
+		        'height': '400px'
+		      }, 500);
+
 		    },
 		    onSlideChangeEnd: function(swiper){
 		      var index = swiper.activeLoopIndex;
 
-		      // $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-		      //   'width': '100%',
-		      //   'height': 500,
-		      // }, 500);
+		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+		        'margin-top': '-200px',
+		        'height': '400px'
+		      }, 500);
 
-		      // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-		      //   'width': '100%',
-		      //   'height': 382,
-		      // });
+		      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+		        'margin-top': '-143px',
+		        'height': '286px'
+		      });
+		      
 		    }
 		});
-
-	    // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-	    //   'height': 382,
-	    //   'margin-left': -348.5,
-	    //   'margin-top': -191
-	    // });
-
-	    // $('.js_bannerSwiper .swiper-slide-active').find('img').css({
-	    //   'height': 500,
-	    //   'margin-left': -455.5,
-	    //   'margin-top': -250
-	    // });
+		//分页
+		$('.js_bannerSwiperPage .pagination-box').click(function(){
+			var index = $(this).attr('data-index');
+			console.log(index);
+			swiper.bannerSwiper.swipeTo(parseInt(index), 1000, false);
+			$(this).siblings('.pagination-box').removeClass('active');
+			$(this).addClass('active');
+		});
     });
 
 	//手机验证
