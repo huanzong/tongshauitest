@@ -3,23 +3,24 @@
  */
 $(function(){
 
-    //页面加载时
-    //$.ajax({
-    //    type: "POST",
-    //    dataType: "json",
-    //    url: "/user/front/user/userInfo",
-    //    data: "",
-    //    success: function(data){
-    //        if(data){
-    //        //
-    $('.js-bingfalse').show();
-    $('.js-bingsuccess').hide();
-    //        }else{
-    //            $('.js-contRightContBox').show();
-    //            $('.member-security-bingsuccess').hide();
-    //        }
-    //    }
-    //});
+
+    //页面加载时调个人信息 是否已经绑定邮箱
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "/user/front/user/userInfo",
+        data: "",
+        success: function(returnData){
+            if(returnData.cellPhone==null || returnData.cellPhone==""){
+
+                $('.js-bingfalse').show();
+                $('.js-bingsuccess').hide();
+            }else{
+                $('.js-bingsuccess').show();
+                $('.js-bingfalse').hide();
+            }
+        }
+    });
 
 
 
