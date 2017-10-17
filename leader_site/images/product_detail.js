@@ -183,19 +183,20 @@ $(function() {
     $('.js_specificsShow').on('click',function(){
     	$('.js_specificsBoxShow').fadeIn(1000);
     	swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
-		    loop: true,
+		    // loop: true,
 		    // autoplay: 3000,
 		    updateOnImagesReady : true,
 		    centeredSlides : true,
-		    // pagination : '.js_bannerSwiperPage',
 		    slidesPerView: 3,
 		    watchActiveIndex:true,
 		    onFirstInit: function(swiper){
+
 		      var index = swiper.activeLoopIndex;
 		      $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
 		        'margin-top': '-200px',
 		        'height': '400px'
 		      }, 500);
+
 		    },
 		    onSlideChangeEnd: function(swiper){
 		      var index = swiper.activeLoopIndex;
@@ -209,6 +210,7 @@ $(function() {
 		        'margin-top': '-143px',
 		        'height': '286px'
 		      });
+		      
 		    }
 		});
 		//分页

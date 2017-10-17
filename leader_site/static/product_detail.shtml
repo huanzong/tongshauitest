@@ -214,11 +214,11 @@
 															        	<img src="images/icon_03.PNG">
 															        </a>
 														        </div>
-														        <!-- <div class="swiper-slide">
+														        <div class="swiper-slide">
 																			<a href="javascript:;">
-																							        	<img src="images/icon_03.png">
-																							        </a>
-														        </div> -->
+															        	<img src="images/icon_01.png">
+															        </a>
+														        </div>
                                 </div>
                             </div>
                             <div class="swiper-pagination js_bannerSwiperPage">
@@ -227,6 +227,9 @@
                             	</div>
                             	<div class="pagination-box" data-index=1>
                             		<img src="images/icon_03.PNG">
+                            	</div>
+                            	<div class="pagination-box" data-index=2>
+                            		<img src="images/icon_01.PNG">
                             	</div>
                             </div>
                         </div>
