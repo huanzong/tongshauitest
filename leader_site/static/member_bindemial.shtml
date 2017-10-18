@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>个人中心-安全设置-绑定邮箱</title>
 
-    <%=base%>
+    <base href='../'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -27,7 +27,7 @@
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox" >
                         <!-- 绑定邮箱 START-->
-                        <div class="member-security-bingmob js-bingfalse" style="display: none" >
+                        <div class="member-security-bingmob js-bingfalse" >
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮箱地址</div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailform">
@@ -43,7 +43,7 @@
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮件验证</div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailyanzheng">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-validateinput js-emailCode " name="" ph="邮件验证码"  value=""  datatype="s6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-validateinput js-emailCode " name="" ph="邮件验证码"  value=""  datatype="*6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                         <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证邮件</a>
                                         <p class="Validform_checktip Validform_wrong js-emailCodeerror"></p>
                                     </form>
@@ -62,7 +62,7 @@
                             <i class="iconfont icon-success-solid"></i>
                             <div class="member-security-bingsuccess-txtbox">
                                 <div class="member-security-bingsuccess-bigtext">绑定成功</div>
-                                <div class="member-security-bingsuccess-text"><span>5</span> 秒后返回 <a href="javascript:;" >安全设置</a></div>
+                                <div class="member-security-bingsuccess-text"><span id="js-countdown">5</span> 秒后返回 <a href="/security" >安全设置</a></div>
                             </div>
                         </div>
                         <!-- 绑定成功 End-->
