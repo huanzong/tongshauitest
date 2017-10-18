@@ -144,8 +144,8 @@ $(function(){
         {
 
             var param //下拉框的text
-            var code=$('.js_mobileCodeYz').val() //验证码
-            var pretermit=$('#js_unbindmob').val() //下拉的value
+            var code=$('.js_mobileCodeYz').val(); //验证码
+            var pretermit=$('#js_unbindmob').val(); //下拉的value
             if(pretermit==0){
 
                 param=$('#js_unbindmob option[value=1]').text();
