@@ -23,13 +23,27 @@ $('.js_EvaluateVal').keydown(function(e){
             $('.js_EvaluateValLength').html(textlength);
         }else{
             event.returnValue = false;
-            $('.js_EvaluateValLength').html(textlength);
+            $('.js_EvaluateValLength').html(500);
             $('.js_EvaluateVal').val($(this).val().substring(0,500));
         }
     }else{
         $('.js_EvaluateValLength').html(textlength);
     }
 })
+
+$('.js_EvaluateVal').blur(function(){
+    var textlength = $(this).val().length;
+    if( textlength>= 500){
+        $('.js_EvaluateVal').val($(this).val().substring(0,500));
+        $('.js_EvaluateValLength').html(500);
+
+    }else{
+        $('.js_EvaluateValLength').html(textlength);
+
+    }
+})
+
+
 
 //        删除图片
 $('.js_sharePhotoDelect').click(function(){
