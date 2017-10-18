@@ -36,7 +36,6 @@
                             <div class="member-personalinfo-contbox">
                                 <div class="member-personalinfo-listbox cur js-personalinfotabcont">
                                     <!--全部订单 START-->
-
                                     <div class="member-order-table member-orderdetail-table">
                                         <div class="member-home-top o_u o_df_11-12">
                                             <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">
@@ -49,35 +48,40 @@
                                             <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">
                                                 <i class="iconfont icon-giftbox-solid"></i>
                                                 <div class="member-home-right-title"  >
-                                                    <p>我的等级</p>
+                                                    <p>会员积分</p>
                                                     <span class="member-home-right-title-nub">233358</span>
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_5-12 o_lg_5-12 o_md_5-12 o_sm_3-6 o_xs_12-12">
                                                 <i class="iconfont icon-giftbox-solid"></i>
                                                 <div class="member-home-right-title"  >
-                                                    <p>我的等级</p>
+                                                    <p>下一级可享权益</p>
                                                     <span class="l-tag-padding l-tag-green">免费激活</span><span class="l-tag-padding l-tag-green">免费清洗</span><span class="l-tag-padding l-tag-green">生态权益</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="member-home-top-list o_u o_df_11-12">
                                             <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-wallet-solid o_u"></span>
+                                                <span class="iconfont icon-wallet-solid o_u">
+                                                    <div class="member-home-top-list-nub">2</div>
+                                                </span>
                                                 <p>待付款</p>
                                             </a>
                                             <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-box-solid o_u"></span>
+                                                <span class="iconfont icon-box-solid o_u">
+                                                    <div class="member-home-top-list-nub">2</div>
+                                                </span>
                                                 <p>待收货</p>
                                             </a>
                                             <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-comment--solid o_u"></span>
+                                                <span class="iconfont icon-comment--solid o_u">
+                                                    <div class="member-home-top-list-nub">2</div>
+                                                </span>
                                                 <p>待评价</p>
                                             </a>
                                         </div>
                                     </div>
-
-                                    <!-- 精品推荐 -->
+                                    <!-- 精品推荐 二期-->
                                     <div class="o_g member-home-downbox">
                                         <!--<div class="o_u o_df_1-12"></div>-->
                                         <!--<div class="o_u o_df_12-12">-->
@@ -106,7 +110,6 @@
                                                         <!--</a>-->
                                                     <!--</div>-->
                                                 <!--</div>-->
-
                                             <!--</div>-->
                                             <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df">
                                                 <div class="o_g member-home-down-table">
@@ -165,14 +168,10 @@
 
                                         </div>
 
-
                                         </div>
                                         <!--<div class="o_u o_df_1-12"></div>-->
 
-
                                     </div>
-
-
 
                                     <!-- 精品推荐 END -->
 
