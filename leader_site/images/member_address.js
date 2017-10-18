@@ -52,7 +52,18 @@ $('.js_addressCancel').click(function(){
         return false;
     })
 })
-
+function globalShade(alerttext){
+    $('.js_landShade').show();
+    $('.js_landContBox').show();
+    $("body").css({overflow:"hidden"});
+    $('.js-landText').html(alerttext);
+    $('.js_landClose').click(function(){
+        $('.js_landContBox').hide();
+        $('.js_landShade').hide();
+        $("body").css({overflow:"auto"});
+        return false;
+    })
+}
 
 function emptyInput(obj){
     obj.val('');
