@@ -2,13 +2,38 @@
  * Created by 15610 on 2017/10/13.
  */
 $(function(){
+    //前端判断是否登录
+
+    if(!istrsidssdssotoken()){
+        window.location.href ='/ids/ts/login.jsp'
+    }
+
+
+    //后端判断是否登录
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: "/user/front/user/userInfo",
+        data: "",
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+        },
+        success: function(returnData){
+
+            if(returnData.resultMsg=='用户未登录'){
+                window.location.href ='/ids/ts/login.jsp'
+            }
+        }
+
+    });
 
     //页面加载时调个人信息 是否已经绑定过手机号
     $.ajax({
-       type: "post",
+       type: "get",
        dataType: "json",
        url: "/user/front/user/userInfo",
        data: "",
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+        },
        success: function(returnData){
            if(returnDate.data.mobile==null || returnData.data.mobile==""){
 
@@ -120,6 +145,16 @@ $(function(){
                            if (jQuery.trim(returnData).indexOf("200")>-1) {
                                $('.js-bingfalse').hide();
                                $('.js-bingsuccess').show();
+
+                               var i = 4;
+                               var t = setInterval(function(){
+                                   if (i == 0) {
+                                       clearInterval(t);
+                                       return;
+                                   }
+                                   document.getElementById("js-countdown").innerHTML = i;
+                                   i--;
+                               }, 1000)
                            }
                            else if (jQuery.trim(returnData).indexOf("newMobile_can_not_be_null")>-1){
                                if($('.js-mobileCodeerror').hasClass('Validform_right')){
