@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+    <%=base%>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <!--#include virtual="public/head.shtml"-->
+        <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+        <link rel="stylesheet" type="text/css" href="images/product_trolley.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+
+            <div class="o_g js_animateLine">
+                <div class="index_animate">
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox"></div>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <!--#include virtual="public/nav.shtml"-->
+            <!-- 导航 End-->
+            
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="images/product_trolley.js"></script>
+
+</body>
+
+</html>
