@@ -367,7 +367,7 @@
         <h3>2.示例</h3>
         <form class="ui_validForm js_ui_validForm">
             <div class="l-input">
-                <input type="text" name="" ph="5-16个字符" value="" datatype="zh2-4" errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <input type="text" name="" ph="5-16个字符" value="" datatype="zh2-4" errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" data-normal='1'/>
                 <p class="Validform_checktip"></p>
             </div>
             <div class="l-input">

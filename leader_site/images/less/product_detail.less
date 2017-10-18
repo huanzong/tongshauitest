@@ -682,9 +682,9 @@
     width: 148%;
     padding: 90px 0;
     // min-height: 900px;
-    // @media (min-width: 992px) and (max-width:1199px) {
-    // 	min-height: 696px;
-    // }
+    @media (max-width:992px) {
+    	width: 248%;
+    }
 	img{
 		width: 100%;
 	}
@@ -765,9 +765,11 @@
 				color: #fff;
 			}
 		}
-		.swiper-container{
-			display: none;
-		}
+	}
+	.foldover-icon-fixed{
+		position: fixed;
+		bottom: 0;
+		background: #fff;
 	}
 	.foldover-con{
 		display: none;
@@ -806,10 +808,8 @@
 		width: 83.333%;
 		display: none;
 
-		@media (max-width: 991px){
-			& {
-				display: block !important;
-			}
+		@media (min-width: 992px){
+			display: none!important;
 		}
 
 		.swiper-slide {
