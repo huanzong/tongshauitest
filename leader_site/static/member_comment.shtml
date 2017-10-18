@@ -27,13 +27,13 @@
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox">
                         <div class="member-security-table o_g">
-                            <div class="member-share-leftbox o_u o_df_1-3 o_lg_3-3 o_md_3-3 o_sm_2-2 o_xs_2-2 ">
+                            <div class="member-share-leftbox member-comment-leftbox o_u o_df_1-3 o_lg_11-12 o_md_11-12 o_sm_11-12 o_xs_11-12 ">
                                 <div class="member-share-leftcont member-comment-leftcont ">
                                     <img src="images/compare_goods.PNG" alt="">
-                                    <p class="o_u o_sm_2-3 o_xs_2-3">统帅323L大容量无霜冰箱 <br><span>BCD-323WLDPN</span></p>
+                                    <p class="o_u o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3">统帅323L大容量无霜冰箱 <br><span>BCD-323WLDPN</span></p>
                                 </div>
                             </div>
-                            <div class="member-share-rightbox o_u o_df_2-3 o_lg_3-3 o_md_3-3 o_sm_2-2 o_xs_2-2">
+                            <div class="member-share-rightbox member-comment-rightbox o_u o_df_2-3 o_lg_11-12 o_md_11-12 o_sm_11-12 o_xs_11-12">
                                 <div class="member-share-right-cont">
                                     <div class="member-share-score">
                                         <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
