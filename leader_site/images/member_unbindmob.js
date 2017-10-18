@@ -4,6 +4,29 @@
 //option value:1--手机号 2——邮箱
 
 $(function(){
+
+    //前端判断是否登录
+
+    // if(!istrsidssdssotoken()){
+    //     window.location.href ='/ids/ts/login.jsp'
+    // }
+    //后端判断是否登录
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: "/user/front/user/userInfo",
+        data: "",
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+        },
+        success: function(returnData){
+
+            if(returnData.resultMsg=='用户未登录'){
+                window.location.href ='/ids/ts/login.jsp'
+            }
+        }
+
+    });
+
     $.ajax({
         type: "post",
         dataType: "json",
@@ -11,8 +34,7 @@ $(function(){
         data: "",
         success: function(returnData){
             if(returnData.cellPhone==null || returnData.cellPhone==""){
-                $('.js-unbingsuccess').show();
-                $('.js-unbingfalse').hide();
+
             }else{
                 var call=returnData.cellPhone
                 var callphone = call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
@@ -170,6 +192,17 @@ $(function(){
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
                             $('.js-unbingfalse').hide();
                             $('.js-unbingsuccess').show();
+
+                            var i = 4;
+                            var t = setInterval(function(){
+                                if (i == 0) {
+                                    clearInterval(t);
+                                    window.location.href ='/security'
+                                    return;
+                                }
+                                document.getElementById("js-countdown").innerHTML = i;
+                                i--;
+                            }, 1000)
                         }
                         else if (jQuery.trim(returnData).indexOf("code_can_not_be_null")>-1){
 

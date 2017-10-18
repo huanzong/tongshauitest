@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>个人中心-安全设置-绑定邮箱</title>
 
-    <%=base%>
+    <base href='../'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -62,7 +62,7 @@
                             <i class="iconfont icon-success-solid"></i>
                             <div class="member-security-bingsuccess-txtbox">
                                 <div class="member-security-bingsuccess-bigtext">绑定成功</div>
-                                <div class="member-security-bingsuccess-text"><span>5</span> 秒后返回 <a href="javascript:;" >安全设置</a></div>
+                                <div class="member-security-bingsuccess-text"><span id="js-countdown">5</span> 秒后返回 <a href="/security" >安全设置</a></div>
                             </div>
                         </div>
                         <!-- 绑定成功 End-->

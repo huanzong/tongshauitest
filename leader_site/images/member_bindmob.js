@@ -150,6 +150,7 @@ $(function(){
                                var t = setInterval(function(){
                                    if (i == 0) {
                                        clearInterval(t);
+                                       window.location.href ='/security'
                                        return;
                                    }
                                    document.getElementById("js-countdown").innerHTML = i;

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-安全设置-绑定手机</title>
+    <title>个人中心-安全设置-绑定邮箱</title>
 
-    <%=base%>
+    <base href='../'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -23,32 +23,32 @@
             <!-- 右侧内容 START-->
             <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
                 <div class="member-security-width js-securityheight">
-                    <div class="member-security-tit"><p>绑定手机</p></div>
+                    <div class="member-security-tit"><p>绑定邮箱</p></div>
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox" >
-                        <!-- 绑定手机 START-->
-                        <div class="member-security-bingmob js-bingfalse"  >
+                        <!-- 绑定邮箱 START-->
+                        <div class="member-security-bingmob js-bingfalse" >
                             <div class="o_g member-bingmob-list">
-                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">手机号</div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindmobform">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮箱地址</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailform">
                                     <form class="ui_validForm js_ui_validForm">
-                                            <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
-                                            <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
+                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newEmail" name="" ph="请输入需要绑定的邮箱"  value=""  datatype="e"  errormsg="<i class='iconfont icon-information-solid'></i>请输入您的邮箱地址" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                        <p class="Validform_checktip Validform_wrong js-newEmailerror"></p>
+
                                     </form>
                                 </div>
                             </div>
 
                             <div class="o_g member-bingmob-list">
-                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">短信验证</div>
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindmobyanzheng">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮件验证</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailyanzheng">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码"  value=""  datatype="n6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
-                                        <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
-                                        <p class="Validform_checktip Validform_wrong js-mobileCodeerror"></p>
+                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-validateinput js-emailCode " name="" ph="邮件验证码"  value=""  datatype="*6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证邮件</a>
+                                        <p class="Validform_checktip Validform_wrong js-emailCodeerror"></p>
                                     </form>
                                 </div>
                             </div>
-
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 member-bingmob-listipt-enterbtn">
@@ -56,13 +56,13 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 绑定手机 End-->
+                        <!-- 绑定邮箱 End-->
                         <!-- 绑定成功 START-->
-                        <div class="member-security-bingsuccess o_g js-bingsuccess" style="display: none">
+                        <div class="js-bingsuccess member-security-bingsuccess  o_g" style="display: none">
                             <i class="iconfont icon-success-solid"></i>
                             <div class="member-security-bingsuccess-txtbox">
                                 <div class="member-security-bingsuccess-bigtext">绑定成功</div>
-                                <div class="member-security-bingsuccess-text"><span>5</span> 秒后返回 <a href="javascript:;" >安全设置</a></div>
+                                <div class="member-security-bingsuccess-text"><span id="js-countdown">5</span> 秒后返回 <a href="/security" >安全设置</a></div>
                             </div>
                         </div>
                         <!-- 绑定成功 End-->
@@ -77,6 +77,6 @@
 </div>
 <!--#include virtual="public/foot.shtml"-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-<script type="text/javascript" src="images/member_bindmob.js"></script>
+<script type="text/javascript" src="images/member_bindemial.js"></script>
 </body>
 </html>
