@@ -2664,23 +2664,22 @@
 				display: inline-block;
 				border-top: 1px solid #eee;
 				margin-top: 50px;
-
-
-				.member-addressleftbox {
+				div:nth-child(1){
 					padding-right: 15px;
 					@media (max-width: 575px) {
 						/* xs*/
 						padding-right: 0px;
 					}
 				}
-
-				.member-addressrightbox {
+				div:nth-child(2){
 					padding-left: 15px;
 					@media (max-width: 575px) {
 						/* xs*/
 						padding-left: 0px;
 					}
 				}
+
+
 
 				.member-addresslistbox {
 					width: 100%;
@@ -4094,6 +4093,37 @@
 
 		}
 	}
+
+}
+.member-comment-leftbox{
+	padding-bottom: 45px;
+	border-bottom: 1px solid #eee;
+	.member-comment-leftcont{
+		p{
+			font-size: 16px;
+			color: #666;
+			margin: 0 auto;
+			line-height: 22px;
+			padding-top: 20px;
+		}
+		@media (min-width: 1200px){
+			/* lg*/
+			p{
+				width: 115px;
+				display: block;
+			}
+
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			/* lg*/
+			p{
+				display: inline-block;
+				text-align: left;
+			}
+
+		}
+
+	}
 }
 .member-share-rightbox{
 	display: inline-block;
@@ -4323,7 +4353,35 @@
 
 
 }
+.member-comment-rightbox{
+	@media (min-width: 992px) and (max-width: 1199px) {
+		/* lg*/
 
+			border-left: none;
+
+
+	}
+	@media (min-width: 701px) and (max-width: 991px) {
+		/* md*/
+		margin: 0 40px;
+		border-left: none;
+		padding-bottom: 30px;
+	}
+	@media (min-width: 576px) and (max-width: 700px) {
+		/* sm*/
+		margin: 0 30px ;
+		border-left: none;
+		padding-bottom: 30px;
+
+	}
+	@media (max-width: 575px) {
+		/* xs*/
+		margin: 0 30px;
+		border-left: none;
+		padding-bottom: 30px;
+
+	}
+}
 
 .member-share-score-selected-false{
 	.selected_g{
@@ -4561,6 +4619,40 @@
 	}
 	.member-myshare-more{
 		a{color: #666;}
+	}
+}
+
+//评价
+.member-comment-impress-box{
+	.member-comment-impress-cont{
+		text-align: left;
+		a{
+			font-size: 12px;
+			margin-right: 8px;
+			text-align: center;
+			margin-bottom: 10px;
+
+		}
+		i{
+			font-size: 12px;
+			margin-right: 8px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.select,.addselect{
+			color:#fff;
+			background: red;
+			border-color: red;
+		}
+	}
+	.member-comment-impress-add{
+		>div{
+			margin-right: 8px;
+		}
+	}
+	.member-comment-impress-addclose{
+		border: 1px dashed #32beff;
+		color: #666666;
 	}
 }
 
