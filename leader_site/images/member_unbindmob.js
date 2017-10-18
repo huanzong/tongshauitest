@@ -7,9 +7,9 @@ $(function(){
 
     //前端判断是否登录
 
-    // if(!istrsidssdssotoken()){
-    //     window.location.href ='/ids/ts/login.jsp'
-    // }
+    if(!istrsidssdssotoken()){
+        window.location.href ='/ids/ts/login.jsp'
+    }
     //后端判断是否登录
     $.ajax({
         type: "get",
@@ -32,30 +32,37 @@ $(function(){
         dataType: "json",
         url: "/user/front/user/userInfo",
         data: "",
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        },
         success: function(returnData){
-            if(returnData.cellPhone==null || returnData.cellPhone==""){
+            if (jQuery.trim(returnData).length > 0) {
 
-            }else{
-                var call=returnData.cellPhone
-                var callphone = call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
+                var call=jQuery.trim(returnData.data.mobile)
+                if(call==null || call==""){
 
-                $("#js-logincallphone").html(callphone)
-                $("#js_unbindmob").attr('autotext',callphone)
-                $("#js_unbindmob").append("<option value='1'>手机（"+callphone+"）</option>")
+                }else{
 
-                if(returnData.email==null || returnData.email==""){}
-                else{
-                    var email=returnData.email()
-                    var c=email.split("@");
-                    var ci=c[0].length/2
-                    var emailnote=c[0].substr(0,ci)+'..'+'@'+c[1]; //emai加.
-                    $("#js_unbindmob").append("<option value='2'>邮箱（"+callphone+"）</option>")
+                    var callphone = call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
+
+                    $("#js-logincallphone").html(callphone)
+                    $("#js_unbindmob").attr('autotext',callphone)
+                    $("#js_unbindmob").append("<option value='1'>手机（"+callphone+"）</option>")
+
+                    var email=jQuery.trim(returnData.data.email)
+                    if(email==null || email==""){}
+                    else{
+
+                        var c=email.split("@");
+                        var ci=c[0].length/2
+                        var emailnote=c[0].substr(0,ci)+'..'+'@'+c[1]; //emai加.
+                        $("#js_unbindmob").append("<option value='2'>邮箱（"+callphone+"）</option>")
+
+                    }
+                    $("#js_unbindmob").oSelect().init();
+                    $('.js-unbingfalse').show();
+                    $('.js-unbingsuccess').hide();
 
                 }
-                $("#js_unbindmob").oSelect().init();
-                $('.js-unbingfalse').show();
-                $('.js-unbingsuccess').hide();
-
             }
         }
     });
