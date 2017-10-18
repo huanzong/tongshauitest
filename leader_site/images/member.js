@@ -91,8 +91,6 @@ $(function() {
         }
 
 
-
-
         $('.js-personal').height(contHeight);
         $('.js-submenu').height(contHeight);
         $('.js-submenubtn').height(contHeight);
@@ -116,7 +114,6 @@ $(function() {
         },300);
 
     }
-
 
 
 //下拉菜单初始化

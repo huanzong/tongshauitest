@@ -35,11 +35,14 @@ $(function(){
         error : function(XMLHttpRequest, textStatus, errorThrown){
         },
        success: function(returnData){
-           if(returnDate.data.mobile==null || returnData.data.mobile==""){
+           if (jQuery.trim(returnData).length > 0) {
+               var mobile=jQuery.trim(returnDate.data.mobile)
+               if (mobile == null || mobile == "") {
 
 
-           }else{
-               self.location='/security';
+               } else {
+                   self.location = '/security';
+               }
            }
        }
     });
