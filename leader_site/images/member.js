@@ -84,7 +84,12 @@ $(function() {
         var contHeight = contRightHeight>navListHeight?contRightHeight+70:navListHeight+70;
         var windowWidth = $(window).width();
         var contRightWidth = ($(window).width())-$('.js-personal').width();
-        $('.js_memberHomeTile').width(contRightWidth);
+        if(contRightWidth){
+            $('.js_memberHomeTile').width(contRightWidth);
+        }else{
+            $('.js_memberHomeTile').width('100%');
+        }
+
 
 
 
@@ -143,21 +148,5 @@ $(function() {
     //$('.js-memberRevRateLine').css('width','0%');
     //$('.js-memberRevRateLine').css('width','50%');
     //$('.js-memberRevRateLine').css('width','100%');
-
-//地址管理初始化
-    var addressMobile=$(".js-addressMobile").Validform({
-        tiptype:3,
-        label:".label",
-        showAllError:true,
-        ajaxPost:true
-
-    });
-    var addressUserName=$(".js-addressUserName").Validform({
-        tiptype:3,
-        label:".label",
-        showAllError:true,
-        ajaxPost:true
-
-    });
 
 });

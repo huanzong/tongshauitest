@@ -457,11 +457,24 @@
 			right: 0;
 			bottom: 0;
 			background: #fff;
+			@media (min-width:576px) and (max-width: 991px) {
+				bottom: 515px;
+			}
+			@media (max-width: 575px) {
+				bottom: 660px;
+			}
 			.swiper-container{
 				position: relative;
-				top: 105px;
+				top: -90px;
 				width: 100%;
 				height: 626px;
+				@media (min-width: 992px) and (max-width: 1199px) {
+					top: 50px;
+				}
+				@media (max-width: 991px) {
+					width: 175%;
+					left: -30%;
+				}
 				.swiper-slide{
 					img{
 						position: absolute;
@@ -469,7 +482,7 @@
 					    max-width: 100%;
 					    margin-top: -143px;height: 286px;
 					}
-				} 
+				}
 
 				.swiper-slide-active{
 					img{
@@ -479,7 +492,7 @@
 					    // margin-top: -200px;height: 400px;
 					}
 				}
-		  }
+			}
 		    .swiper-pagination{
 		    	text-align: center;
 		    	width: 100%;
@@ -498,7 +511,7 @@
 		    		}
 		    		@media (min-width: 1200px) {
 		    			&:hover{
-			    			border: 1px solid @l-red;
+			    			border: 2px solid @l-red;
 			    		}
 		    		}
 		    		img{
@@ -508,23 +521,126 @@
 		    		}
 		    	}
 		    }
+		    .pagination-prev{
+		    	left: 0;
+		    }
+		    .pagination-next{
+		    	right: 0;
+		    }
+		    .pagination-next,.pagination-prev{
+		    	position: absolute;
+		    	z-index: 5;
+		    	cursor: pointer;
+		    	top: 200px;
+		    	@media (min-width: 992px) and (max-width: 1199px) {
+					top: 340px;
+				}
+		    	i{
+		    		font-size: 40px;
+		    	}
+		    }
+		    .specifics-close{
+		    	position: absolute;
+		    	right: 60px;
+		    	top: 60px;
+		    	z-index: 5;
+		    	color: @l-red;
+		    	i{
+		    		font-size: 50px;
+		    	}
+		    	@media (min-width:576px) and (max-width: 991px) {
+		    		right: 30px;
+		    		top: 30px;
+		    	}
+		    	@media (max-width: 575px) {
+		    		right: 15px;
+		    		top: 15px;
+		    	}
+		    }
 		}
 	}
 }
 
 //文字卖点
+.detail-fontpoint-index{
+	position: relative;
+	@media (min-width: 992px) {
+		height: 200px;
+	}
+}
+.detail-fontpoint-top{
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	background: #fff;
+}
+.detail-fontpoint-back{
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	background: #fff;
+	@media (min-width: 992px) {
+		height: 0;
+	}
+}
 .detail-fontpoint{
 	border-bottom: 1px solid #eee;
 	background: #fff;
-	.o_df_1-5{
-		// min-width: 140px;
+	@media (max-width: 991px) {
+		position: relative;
+		margin: 0 auto;
+		width: 88%;
 	}
+	.swiper-slide{
+		@media (max-width: 991px) {
+			max-width: 20%;
+			min-width: 140px;
+		}
+	}
+	.swiper-prev,.swiper-next{
+		@media (max-width: 991px) {
+			position: absolute;
+			z-index: 5;
+			top: 0;
+			width: 65px;
+			height: 100%;
+			background: #fff;
+			cursor: pointer;
+			i{
+				position: absolute;
+				font-size: 14px;
+				top: 50%;
+				left: 49%;
+			}
+		}
+		@media (max-width: 700px) {
+			width: 50px;
+		}
+		@media (max-width: 575px) {
+			width: 30px;
+		}
+	}
+	.swiper-prev{
+		@media (max-width: 991px) {
+			left: -6%;
+		}
+	}
+	.swiper-next{
+		@media (max-width: 991px) {
+			right: -6%;
+		}
+	}
+
+
 	.fontpoint-box{
 		margin: 30px 0;
 		min-width: 140px;
 		border-right: 1px solid #eee;
 		font-size: 0;
 		text-align: center;
+		@media (max-width: 991px) {
+			width: 140px;
+		}
 		.fontpoint-bold{
 			font-size: 24px;
 			line-height: 45px;
@@ -615,21 +731,32 @@
 
 //电商拉页
 .detail-foldover{
+	@media (max-width: 991px) {
+		position: relative;
+		padding-bottom: 200px;
+	}
 	.foldover-img{
 		img{
 			width: 100%;
 		}
 	}
-	// .foldover-fixed{
-	// 	position: fixed;
-	// }
 	.foldover-icon{
 		position: relative;
 		font-size: 12px;
+		text-align: center;
+		@media (max-width: 991px) {
+			position: absolute;
+			bottom: 80px;
+		}
 		.icon-bg-solid{
 			position: relative;
 			font-size: 48px;
 			color: @l-red;
+			margin-top: 370px;
+			top: 370px;
+			@media (max-width:991px) {
+				top: 0;
+			}
 			i{
 				position: absolute;
 				left: 14px;
@@ -638,12 +765,15 @@
 				color: #fff;
 			}
 		}
+		.swiper-container{
+			display: none;
+		}
 	}
 	.foldover-con{
 		display: none;
 		position: absolute;
 		left: 25%;
-		bottom: 50%;
+		top: 60px;
 		margin-bottom: 25px;
 		width: 50%;
 		a{
@@ -666,6 +796,27 @@
 			color: #fff;
 			border: 1px solid @l-red;
 		}
+	}
+
+	.icon-md-solid{
+
+	}
+
+	.swiper-container {
+		width: 83.333%;
+		display: none;
+
+		@media (max-width: 991px){
+			& {
+				display: block !important;
+			}
+		}
+
+		.swiper-slide {
+			width: 150px;
+			height: 40px;
+		}
+
 	}
 }
 
