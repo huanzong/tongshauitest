@@ -5,18 +5,16 @@ $(function(){
 
     //页面加载时调个人信息 是否已经绑定过手机号
     $.ajax({
-       type: "POST",
+       type: "post",
        dataType: "json",
        url: "/user/front/user/userInfo",
        data: "",
        success: function(returnData){
-           if(returnData.cellPhone==null || returnData.cellPhone==""){
+           if(returnDate.data.mobile==null || returnData.data.mobile==""){
 
-                $('.js-bingfalse').show();
-                $('.js-bingsuccess').hide();
+
            }else{
-               $('.js-bingsuccess').show();
-               $('.js-bingfalse').hide();
+               self.location='/security';
            }
        }
     });
@@ -25,9 +23,10 @@ $(function(){
 
     //验证手机号
     $('.js-newMobile').blur(function(){
+
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if(yanzhengtrue){
-            $('.js-getinfo').removeClass('l-btn-disable').click(function(){
+            $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
 
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){
@@ -47,7 +46,9 @@ $(function(){
                        },
                        success: function(returnData){
                            if (jQuery.trim(returnData).length > 0) {
-                               if (jQuery.trim(returnData).indexOf("200")>-1) {}
+                               if (jQuery.trim(returnData).indexOf("200")>-1) {
+
+                               }
                                else if (jQuery.trim(returnData).indexOf("newMobile_can_not_be_null")>-1){
                                    if($('.js-newMobileerror').hasClass('Validform_right')){
                                        $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
@@ -99,6 +100,7 @@ $(function(){
 
         if(yanzhengtrue){//点击确定 个人中心绑定手机号接口
             $('.js-submintData').unbind().bind('click',function(){
+
                 var newMobile=$('.js-newMobile').val();
                 var mobileCode=$('.js-mobileCode').val();
 
