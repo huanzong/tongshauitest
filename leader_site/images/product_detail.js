@@ -151,24 +151,16 @@ $(function() {
 
         //锚点定位后，左侧按钮定位
         $('.js_foldoverNav').find('a').on('click',function(){
-        	var index = parseInt($(this).attr('data-index'));
+        	var index = parseInt($(this).attr('data-index'))-1;
         	var top = 370;
-        	var topSm = 0;
         	for(var i=0 ; i<index ; i++){
-        		if(i==index-1){
-        			topSm = $('.js_foldimg').find('img').eq(i).height();
-        			return;
-        		}
         		top += $('.js_foldimg').find('img').eq(i).height();
-        		topSm += $('.js_foldimg').find('img').eq(i).height();
         	}
             if(document.body.offsetWidth>991){
                 $('.js_foldPlus').css('top',top);
                 $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
                 $('.js_foldlist').css('top',top-310);
             }else{
-                $('.js_foldPlus').css('top',topSm);
-                // $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
                 $('.js_foldoverNav').css('height',0);
             }
 
@@ -177,18 +169,9 @@ $(function() {
 
 
     });
-    //滚动条.position().top
-   	// $(window).scroll(function)
 
     $(window).resize(function() {
         init();
-
-        var screenWidth = document.body.offsetWidth;
-        //电商拉页展开按钮位置
-        if(screenWidth>991){
-
-        }
-
     });
 
     //产品参数-结构图居中
