@@ -379,6 +379,19 @@
                 <p class="Validform_checktip"></p>
             </div>
         </form>
+        <h3>--- 注意 ---</h3>
+        <p>data-normal="1"</p>
+        <textarea>
+            $('.js_myForm').Validform({
+                tiptype: 3,
+                btnSubmit: '.js_submitBtn',
+                callback:function(form){
+                    //这里是所有验证都通过以后，执行的回调函数
+                    return false;//最后加上这个，这个必须写
+                }
+            });
+
+        </textarea>
         <h3>--- HTML ---</h3>
         <textarea>
             <form class="ui_validForm js_ui_validForm">

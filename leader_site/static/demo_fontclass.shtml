@@ -211,6 +211,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-location-solid"></i>
+                    <div class="name">location-solid</div>
+                    <div class="fontclass">.icon-location-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-lock-solid"></i>
                     <div class="name">lock-solid</div>
                     <div class="fontclass">.icon-lock-solid</div>
