@@ -115,12 +115,26 @@ $(function() {
                     $(this).attr('src', src);
                 }
             });
+
+            //小屏幕文字列表-轮播
+	        if(document.body.offsetWidth <= 991){
+	        	$('.js_foldoverSwiper').show();
+	            swiper.foldoverSwiper = new Swiper('.js_foldoverSwiper',{
+	                loop: true,
+	                slidesPerView : 'auto',
+	            });
+	        }
         } else {
 
             //文字列表
             $('.js_foldlist').slideUp(300);
             eleI.removeClass('icon-close').addClass('icon-plus');
             eleI.parent().css('color', '#e60012');
+
+            //小屏幕文字列表-轮播
+	        if(document.body.offsetWidth <= 991){
+	        	$('.js_foldoverSwiper').hide();
+	        }
 
             //右侧图片
             $('.js_foldimg img').each(function(i, n) {
@@ -137,29 +151,30 @@ $(function() {
 
         //锚点定位后，左侧按钮定位
         $('.js_foldoverNav').find('a').on('click',function(){
-        	var index = parseInt($(this).attr('data-index'))-1;
+        	var index = parseInt($(this).attr('data-index'));
         	var top = 370;
+        	var topSm = 0;
         	for(var i=0 ; i<index ; i++){
+        		if(i==index-1){
+        			topSm = $('.js_foldimg').find('img').eq(i).height();
+        			return;
+        		}
         		top += $('.js_foldimg').find('img').eq(i).height();
+        		topSm += $('.js_foldimg').find('img').eq(i).height();
         	}
             if(document.body.offsetWidth>991){
                 $('.js_foldPlus').css('top',top);
                 $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
                 $('.js_foldlist').css('top',top-310);
             }else{
+                $('.js_foldPlus').css('top',topSm);
+                // $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
                 $('.js_foldoverNav').css('height',0);
             }
 
         });
 
-        //小屏幕轮播
-        if(document.body.offsetWidth <= 991){
 
-            swiper.foldoverSwiper = new Swiper('.js_foldoverSwiper',{
-                loop: true,
-                slidesPerView : 'auto',
-            });
-        }
 
     });
 

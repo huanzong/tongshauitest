@@ -765,9 +765,6 @@
 				color: #fff;
 			}
 		}
-		.swiper-container{
-			display: none;
-		}
 	}
 	.foldover-con{
 		display: none;
@@ -806,10 +803,8 @@
 		width: 83.333%;
 		display: none;
 
-		@media (max-width: 991px){
-			& {
-				display: block !important;
-			}
+		@media (min-width: 992px){
+			display: none!important;
 		}
 
 		.swiper-slide {
