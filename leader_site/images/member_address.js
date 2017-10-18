@@ -3,33 +3,34 @@
  */
 
 //地址管理初始化
-var addressMobile=$(".js-addressMobile ").Validform({
-    tiptype:3,
-    label:".label",
-    showAllError:true,
-    ajaxPost:true,
-    btnSubmit:'.js-alertTrue',
-    btnReset:'.js_memberAddressBtn',
-    callback:function(from){
-        console.log(1);
-        return false;
-
-    }
-
-
-});
+//var addressMobile=$(".js-addressMobile ").Validform({
+//    tiptype:3,
+//    label:".label",
+//    showAllError:true,
+//    ajaxPost:true,
+//    btnSubmit:'.js-alertTrue',
+//    btnReset:'.js_memberAddressBtn',
+//    callback:function(from){
+//        console.log(1);
+//        return false;
+//
+//    }
+//
+//
+//});
 
 //var addressMobile=$(".js-addressMobile").Validform();
 
 
 
 
-var asdsada=$(".js_memberNewAddress" ).Validform({
+var address=$(".js_memberNewAddress" ).Validform({
     tiptype:3,
     label:".label",
     showAllError:true,
     ajaxPost:true,
     btnSubmit:'.js_addressGetUpData',
+    //btnReset:'.js_memberAddressBtn',
     //btnReset:'.js_memberAddressBtn',
     callback:function(from){
         console.log(1);
@@ -65,10 +66,10 @@ $('.js-alertClose').click(function(){
 //点击新增地址按钮时 清空输入框内的值
 $('.js_memberAddressBtn').click(function(){
     $('.js_memberNewAddress').fadeIn();
-    //emptyInput( $('.js-bindmobinput'));
-    //emptyInput( $('.js_addressDetailedCont'));
-    //emptyInput( $('.js_addressTellNub'));
-    //emptyInput( $('.js_addressTellNub').find('input'));
+    emptyInput( $('.js-bindmobinput'));
+    emptyInput( $('.js_addressDetailedCont'));
+    emptyInput( $('.js_addressTellNub'));
+    emptyInput( $('.js_addressTellNub').find('input'));
 })
 
 
