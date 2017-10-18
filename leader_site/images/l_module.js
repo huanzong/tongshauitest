@@ -168,7 +168,11 @@ $(function() {
                     },300);
                     
                 }).focus(function () {
-                    $this.validHideError();
+                    // 通用校验-除登录注册
+                    if(!$this.attr('data-normal')){
+                        $this.validHideError();
+                    }
+                    
                     if($this.val() == $this.attr("ph")){
                         $this.val("");
                         $this.css('color','#666');
@@ -190,7 +194,11 @@ $(function() {
                         }
                     },300);
                 }).focus(function () {
-                    $this.validHideError();
+                    // 通用校验-除登录注册
+                    if(!$this.attr('data-normal')){
+                        $this.validHideError();
+                    }
+                    
                     $this.css('border','1px solid #e60012');
                 });
             }
@@ -257,14 +265,14 @@ $(function() {
             $('.js_landShade').hide();
             $("body").css({overflow:"auto"});
             return false;
-        })
-    })
+        });
+    });
     $('.js_landType >div').click(function(){
         var clickIndex = $(this).index();
         $(this).addClass('cur').siblings().removeClass('cur');
         $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
         $('.js-submintData').addClass('l-btn-disable');
-    })
+    });
 });
 
 

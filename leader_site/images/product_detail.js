@@ -177,9 +177,18 @@ $(function() {
 
 
     });
+    //滚动条.position().top
+   	// $(window).scroll(function)
 
     $(window).resize(function() {
         init();
+
+        var screenWidth = document.body.offsetWidth;
+        //电商拉页展开按钮位置
+        if(screenWidth>991){
+
+        }
+
     });
 
     //产品参数-结构图居中
