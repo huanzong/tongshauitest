@@ -856,7 +856,7 @@
 
 //首页导航样式
 .member-home-title{
-	background: url(member_home_title.JPG) no-repeat center;
+	background: url(member_home_title.png) no-repeat center;
 	height: 120px;
 	//width: 1000px;
 	display: inline-block;
@@ -871,6 +871,8 @@
 	@media (min-width: 701px) and (max-width: 991px) {
 		/* md*/
 		background-size: 1200px 120px;
+		z-index: 2;
+
 	}
 	@media (min-width: 576px) and (max-width: 700px) {
 		/* sm*/
@@ -919,10 +921,12 @@
 		}
 		@media (max-width: 575px) {
 			/* xs*/
-			//z-index: -2;
-			//span{
-			//	display: inline-block;
-			//}
+			span{
+				font-size: 12px;
+			}
+			h3{
+				font-size: 20px;
+			}
 		}
 	}
 	.member-home-title-right{
@@ -931,6 +935,7 @@
 
 		position: relative;
 		height: 100%;
+
 		span{
 			position: absolute;
 			right: 20px;
@@ -1046,6 +1051,7 @@
 			@media (max-width: 575px) {
 				/* xs*/
 				>div{
+
 					text-align: center;
 					.member-home-right-title{
 						text-align: center;
@@ -1054,8 +1060,9 @@
 						}
 					}
 				}
-				:nth-child(3){
+				div:nth-child(3){
 					border-left: none;
+					margin-top: 0px;
 				}
 			}
 
@@ -1074,7 +1081,7 @@
 				overflow: hidden;
 				text-align: center;
 				color: #fff;
-				background-size: 100% auto;
+
 				span{
 
 					font-size: 20px;
@@ -1085,23 +1092,39 @@
 					text-align: center;
 					border: 2px solid #fff;
 					margin-top: 18px;
+					position: relative;
+					.member-home-top-list-nub{
+						height: 16px;
+						width: 16px;
+						text-align: center;
+						line-height: 16px;
+						font-size: 12px;
+						color: #fff;
+						background: red;
+						border: 2px solid #fff;
+						position: absolute;
+						top: -8px;
+						right: -2px;
+						border-radius: 16px;
+					}
 				}
 				p{
 					font-size: 14px;
 					line-height: 30px;
 				}
 			};
-			:nth-child(1){
+			a:nth-child(1){
 				background: url("member-home-top-list3.png") no-repeat center;
+				background-size: 100% 100%;
 			}
-			:nth-child(2){
+			a:nth-child(2){
 				background: url("member-home-top-list2.png") no-repeat center;
-
+				background-size: 100% 100%;
 				margin: 0 5%;
 			}
-			:nth-child(3){
+			a:nth-child(3){
 				background: url("member-home-top-list1.png") no-repeat center;
-
+				background-size: 100% 100%;
 			}
 			a:hover{
 				box-shadow: 0px 0px 3px 2px #eee;
@@ -3931,7 +3954,7 @@
 		}
 	}
 	.member-home-down-xs{
-		display: inline-block;
+		display: none;
 
 	}
 	@media (max-width: 575px) {

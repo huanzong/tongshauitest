@@ -149,20 +149,4 @@ $(function() {
     //$('.js-memberRevRateLine').css('width','50%');
     //$('.js-memberRevRateLine').css('width','100%');
 
-//地址管理初始化
-    var addressMobile=$(".js-addressMobile").Validform({
-        tiptype:3,
-        label:".label",
-        showAllError:true,
-        ajaxPost:true
-
-    });
-    var addressUserName=$(".js-addressUserName").Validform({
-        tiptype:3,
-        label:".label",
-        showAllError:true,
-        ajaxPost:true
-
-    });
-
 });
