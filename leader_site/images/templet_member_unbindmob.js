@@ -24,28 +24,26 @@ $(function(){
                     window.location.href ='/ids/ts/login.jsp';
                 }
 
-                var call=jQuery.trim(returnData.data.mobile);
-                if(call==null || call==""){
+                var templet_call=jQuery.trim(returnData.data.mobile);
+                if(templet_call==null || templet_call==""){
                     self.location = '/security';
                 }else{
 
-                    var callphone = call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
+                    var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
 
-                    $("#js-logincallphone").html(callphone);
-                    $("#js_unbindmob").attr('autotext',callphone);
-                    $("#js_unbindmob").append("<option value='1'>手机（"+callphone+"）</option>");
+                    $("#js-logincallphone").html(templet_callphone);
+                    $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
+                    $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
-                    var email=jQuery.trim(returnData.data.email);
-                    if(email==null || email==""){
+                    var templet_email=jQuery.trim(returnData.data.email);
+                    if(templet_email==null || templet_email==""){
                         self.location = '/security';
                     }
                     else{
-
-                        var c=email.split("@");
-                        var ci=c[0].length/2;
-                        var emailnote=c[0].substr(0,ci)+'..'+'@'+c[1]; //emai加.
-                        $("#js_unbindmob").append("<option value='2'>邮箱（"+emailnote+"）</option>");
-
+                        var templet_split = templet_email.split("@");
+                        var templet_hide = templet_split[0].length / 2;
+                        var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                        $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
                     }
                     $("#js_unbindmob").oSelect().init();
                     $('.js-unbingfalse').show();
@@ -156,20 +154,20 @@ $(function(){
     //点击确定按钮
     $(".js_subimGetUp") .unbind().bind('click',function(){
 
-        var notclick = $(this).hasClass('l-btn-disable');
+        var templet_notclick = $(this).hasClass('l-btn-disable');
 
-        if(!notclick)
+        if(!templet_notclick)
         {
 
-            var param; //下拉框的text
-            var code=$('.js_mobileCodeYz').val(); //验证码
-            var pretermit=$('#js_unbindmob').val(); //下拉的value
-            if(pretermit==0){
+            var templet_param;
+            var templet_code=$('.js_mobileCodeYz').val(); //验证码
+            var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
+            if(templet_pretermit=='0' || templet_pretermit=='1'){
 
-                param=$('#js_unbindmob option[value=1]').text();
+                templet_param='mobile';
             }
-            else{
-                param=$('#js_unbindmob').find("option:selected").text();
+            if(templet_pretermit=='2' ){
+                templet_param='email';
             }
 
             $.ajax({
@@ -178,8 +176,8 @@ $(function(){
                 url: "/ids/ts/userInfoManager.jsp",
                 data: {
                     'editOperation':'verify',
-                    'param':param,
-                    'code':code
+                    'param':templet_param,
+                    'code':templet_code
                 },
                 error : function(XMLHttpRequest, textStatus, errorThrown){
                 },
@@ -188,6 +186,7 @@ $(function(){
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
                             $('.js-unbingfalse').hide();
                             $('.js-unbingsuccess').show();
+                            document.cookie="isAlterBind=1";
 
                             var templet_time = 4;
                             var templet_change = setInterval(function(){

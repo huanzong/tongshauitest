@@ -136,6 +136,7 @@ $(function(){
                            if (jQuery.trim(returnData).indexOf("200")>-1) {
                                $('.js-bingfalse').hide();
                                $('.js-bingsuccess').show();
+                               document.cookie="isAlterBind=1";
 
                                var templet_time = 4;
                                var templet_change = setInterval(function(){

@@ -107,10 +107,9 @@
 	border-bottom: 1px solid #edecec;
 	-moz-box-shadow: 0 1px 1px #f8f8f8;
 	box-shadow: 0 1px 1px #f8f8f8;
-	// line-height: 50px;
-	// @media (max-width: 1199px) {
-	// 	display: none;
-	// }
+	@media (max-width: 1199px) {
+		display: none;
+	}
 	.head-name{
 		font-size: 14px;
 		color: #333;
@@ -130,7 +129,63 @@
 		}
 		.head-line-select{
 			display: inline-block;
-			margin-left: -16px;
+			width: 15%;
+			span{
+				margin-left: -16px;
+			}
+		}
+		.head-line-product{
+			display: inline-block;
+			width: 45%;
+			text-indent: 130px;
+		}
+		.head-line-other{
+			display: inline-block;
+			width: 9.3%;
+			text-align: center;
 		}
 	}
+}
+
+//产品列表-表格
+.trolley-prolist{
+	margin-top: 30px;
+	border: 1px solid #eee;
+	border-bottom: none;
+}
+.trolley-coupon{
+	background: #f8f8f8;
+	font-size: 0;
+}
+.coupon-info{
+	padding: 18px 0 14px 60px;
+	.coupon-info-tit{
+		font-size: 14px;
+		line-height: 24px;
+		color: #333;
+	}
+	.coupon-info-des{
+		display: inline-block;
+		font-size: 12px;
+		line-height: 24px;
+		.info-des-icon{
+			color: @l-red;
+		}
+		.info-des-det{
+			color: #666;
+			padding-right: 20px;
+		}
+	}
+}
+.coupon-select{
+	text-align: center;
+	line-height: 80px;
+	color: #666;
+	font-size: 12px;
+}
+.coupon-time{
+	text-align: center;
+	line-height: 80px;
+	color: #666;
+	font-size: 12px;
 }
