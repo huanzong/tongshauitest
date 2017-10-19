@@ -58,9 +58,44 @@
 
             <!-- 配送 -->
             <div class="o_g trolley-distribution">
-                
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="distribution-icon">
+                        <i class="iconfont icon-location-solid"></i>
+                    </div>
+                    <div class="distribution-address">
+                        配送至：
+                        <span>山东省 青岛市 市南区</span>
+                        <i class="iconfont icon-arrow-sanjiao-down-s"></i>
+                    </div>
+                </div>
             </div>
             <!-- 配送 END -->
+
+            <!-- 商品列表-表头 -->
+            <div class="o_g trolley-tablehead">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="o_g">
+                        <div class="o_u o_df_1-5">
+                            <div class="head-name">
+                                <span>
+                                  <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+                                </span>
+                                <!-- <span>
+                                  <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+                                </span>
+                                <span>
+                                    <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
+                                </span> -->
+                                全选
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品列表-表头 END -->
+
 
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
