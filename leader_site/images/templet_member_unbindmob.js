@@ -8,8 +8,7 @@
 $(function(){
     //前台判断是否登陆
     if(!istrsidssdssotoken()){
-        var returnUrl = window.location.href;
-        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+        jumpToLoginPage()
     }
 
     $.ajax({

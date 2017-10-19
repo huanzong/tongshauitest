@@ -312,5 +312,27 @@ function getLocalTime(nS,val) {
 }
 
 
+//判断当前是否存在同域cookie
+function istrsidssdssotoken(){
+    var trsidssdssotoken = "ssotoken";//同域Cookie
+    var sdssotoken = $.cookie(trsidssdssotoken);
+    if(sdssotoken!=null){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//跳转到登录页面
+function jumpToLoginPage(){
+    var returnUrl = window.location.href;
+    if(!istrsidssdssotoken()){
+        var returnUrl = window.location.href;
+        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+    }
+}
+
+
+
 
 

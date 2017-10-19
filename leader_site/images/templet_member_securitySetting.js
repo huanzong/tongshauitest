@@ -5,11 +5,10 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
 
-    //前台判断是否登陆
     if(!istrsidssdssotoken()){
-        var returnUrl = window.location.href;
-        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+        jumpToLoginPage()
     }
+
     //页面加载时调个人信息
     $.ajax({
         type: "get",
@@ -75,8 +74,8 @@ $(function(){
 
                 //最后登录时间
                 var templet_time = jQuery.trim(returnData.data.lastLoginDate);
+                getLocalTime()
 
-                $('js-lastlogindate').html()
 
                 //验证密码强度
                 $.ajax({

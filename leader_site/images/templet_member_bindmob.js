@@ -7,8 +7,7 @@ $(function(){
 
     //前台判断是否登陆
     if(!istrsidssdssotoken()){
-        var returnUrl = window.location.href;
-        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+        jumpToLoginPage()
     }
 
     //页面加载时调个人信息 是否已经绑定过手机号
