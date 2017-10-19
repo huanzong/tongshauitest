@@ -11,9 +11,6 @@ $(function() {
 
     }
 
-
-    
-
     /**
      * 自定义插件
      */
@@ -273,7 +270,27 @@ $(function() {
         $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
         $('.js-submintData').addClass('l-btn-disable');
     });
+
+
+
+
 });
 
 
+//通用弹窗
+function globalShade(alerttext){
+    $('.js_landShade').show();
+    $('.js_landContBox').show();
+    $("body").css({overflow:"hidden"});
+    $('.js-landText').html(alerttext);
+    $('.js_landClose').click(function(){
+        $('.js_landContBox').hide();
+        $('.js_landShade').hide();
+        $("body").css({overflow:"auto"});
+        return false;
+    })
+    //$('.js_alertClose').click(function(){
+    //
+    //})
+}
 

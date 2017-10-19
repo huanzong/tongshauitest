@@ -2,28 +2,15 @@
  * Created by 15610 on 2017/10/18.
  */
 
+
+// 下拉菜单初始化
+$("#js_save").oSelect().init();
+$("#js_city").oSelect().init();
+$("#js_area").oSelect().init();
+$("#js_road").oSelect().init();
+
+
 //地址管理初始化
-//var addressMobile=$(".js-addressMobile ").Validform({
-//    tiptype:3,
-//    label:".label",
-//    showAllError:true,
-//    ajaxPost:true,
-//    btnSubmit:'.js-alertTrue',
-//    btnReset:'.js_memberAddressBtn',
-//    callback:function(from){
-//        console.log(1);
-//        return false;
-//
-//    }
-//
-//
-//});
-
-//var addressMobile=$(".js-addressMobile").Validform();
-
-
-
-
 var address=$(".js_memberNewAddress" ).Validform({
     tiptype:3,
     label:".label",
@@ -35,12 +22,10 @@ var address=$(".js_memberNewAddress" ).Validform({
     callback:function(from){
         console.log(1);
         return false;
-
     }
-
-
 });
 
+//点击取消按钮
 $('.js_addressCancel').click(function(){
     $('.js_landShade').show();
     $('.js_landContBox').show();
@@ -54,14 +39,24 @@ $('.js_addressCancel').click(function(){
 })
 
 
+//点击弹窗的确认与取消按钮
+$('.js-alertClose').click(function(){
+    $('.js_landClose').click();
+})
+
+$('.js-alertTrue').click(function(){
+    $('.js_landClose').click();
+    $('.js_memberNewAddress').fadeOut('100');
+})
+
+
+
+//清空数据函数
 function emptyInput(obj){
     obj.val('');
     obj.blur().removeClass('Validform_error').siblings('p').addClass('Validform_right');
 }
-$('.js-alertClose').click(function(){
-    $('.js_landClose').click();
-    $('.js_memberNewAddress').fadeOut('100');
-})
+
 
 //点击新增地址按钮时 清空输入框内的值
 $('.js_memberAddressBtn').click(function(){

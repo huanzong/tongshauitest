@@ -60,3 +60,62 @@
 		line-height: 70px;
 	}
 } 
+
+//配送地址
+.trolley-distribution{
+	background: #fff;
+	@media (max-width:1199px) {
+		border-bottom: 1px solid #edecec;
+		-moz-box-shadow: 0 1px 1px #f8f8f8;
+		box-shadow: 0 1px 1px #f8f8f8;
+	}
+	.distribution-icon{
+		display: inline-block;
+		width: 52px;
+		padding-top: 22px;
+		text-align: center;
+		margin-left: -26px;
+		@media (max-width: 700px) {
+			padding-top: 18px;
+			width: 44px;
+			margin-left: -22px;
+		}
+		@media (max-width: 575px) {
+			margin-left: -8px;
+		}
+		i{
+			font-size: 22px;
+			color: #ccc;
+		}
+	}
+	.distribution-address{
+		display: inline-block;
+		line-height: 70px;
+		font-size: 16px;
+		color: #333;
+		cursor: pointer;
+		@media (max-width: 700px) {
+			line-height: 60px;
+			font-size: 14px;
+		}
+	}
+}
+
+//表头
+.trolley-tablehead{
+	background: #f8f8f8;
+	border-bottom: 1px solid #edecec;
+	-moz-box-shadow: 0 1px 1px #f8f8f8;
+	box-shadow: 0 1px 1px #f8f8f8;
+	// line-height: 50px;
+	// @media (max-width: 1199px) {
+	// 	display: none;
+	// }
+	.head-name{
+		font-size: 14px;
+		color: #333;
+		.c_ipt_cr{
+			background-image: url(trolley_icon_sm.png);
+		}
+	}
+}

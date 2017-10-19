@@ -44,7 +44,7 @@
                                 <div class="member-revisemob-ratelinebg js-memberRevRateLine"></div>
                             </div>
                         </div>
-                        <div class="member-security-bingmob member-security-revisemob-martop">
+                        <div class="member-security-bingmob member-security-revisemob-martop js_validateMob" style="display: none">
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证方式</div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 selectbox member-bingmob-listipt">
@@ -60,6 +60,35 @@
 
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">短信验证</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
+                                    <input type="text" name="" ph="短信验证码">
+                                    <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送验证短信</a>
+                                </div>
+                            </div>
+
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red ">确定</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="member-security-bingmob member-security-revisemob-martop js_bindNewMob" >
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">手机号码</div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailform">
+                                    <form class="ui_validForm js_ui_validForm">
+                                        <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newEmail" name="" ph="请输入需要绑定的手机号码"  value=""  datatype="e"  errormsg="<i class='iconfont icon-information-solid'></i>请输入您的邮箱地址" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                        <p class="Validform_checktip Validform_wrong js-newEmailerror"></p>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证码</div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
                                     <input type="text" name="" ph="短信验证码">
                                     <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送验证短信</a>
