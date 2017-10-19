@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+    <%=base%>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="images/product_orderconfirm.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <!-- 首屏动画 -->
+        <div class="o_g js_animateLine">
+            <div class="index_animate">
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox"></div>
+            </div>
+        </div>
+        <!-- 首屏动画 -->
+
+        <!-- 头部 -->
+        <div class="o_g trolley-head">
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <div class="trolley-logo">
+                    <img src="images/l_logo.png">
+                </div>
+                <div class="trolley-title">
+                    购物车
+                </div>
+                <a class="trolley-username">
+                    胖大海
+                </a>
+            </div>
+        </div>
+        <!-- 头部 END -->
+
+        <div class="o_g">
+
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <!-- 收获地址 -->
+                <div class="product-ordercon-title o_u o_df_2-2">
+                    <h4 class="o_u">收获地址</h4><a href=""  class="o_u"><span class=" iconfont icon-plus-solid"></span>新增地址</a>
+                </div>
+                <form action="">
+                    <ul class="product-ordercon-box o_u o_df_2-2">
+                        <li>
+                            <div class="o_u o_df_2-12"></div>
+                            <div class="o_u o_df_1-12 product-ordercon-list-title">
+                                <p><span>*</span><i>联系人姓名</i></p>
+                            </div>
+                            <div class="o_u o_df_6-12 l-input product-ordercon-list-input">
+                                <input type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <p class="Validform_checktip"></p>
+                            </div>
+                            <div class="o_u o_df_3-12"></div>
+                        </li>
+                        <li>
+                            <div class="o_u o_df_2-12"></div>
+                            <div class="o_u o_df_1-12 product-ordercon-list-title">
+                                <p><span>*</span><i>手机</i></p>
+                            </div>
+                            <div class="o_u o_df_6-12 l-input product-ordercon-list-input">
+                                <input type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <p class="Validform_checktip"></p>
+                            </div>
+                            <div class="o_u o_df_3-12"></div>
+                        </li>
+                        <li>
+                            <div class="o_u o_df_2-12"></div>
+                            <div class="o_u o_df_1-12 product-ordercon-list-title">
+                                <p><span>*</span><i>电话</i></p>
+                            </div>
+                            <div class="o_u o_df_6-12 l-input product-ordercon-list-input">
+                                <input type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <p class="Validform_checktip"></p>
+                            </div>
+                            <div class="o_u o_df_3-12"></div>
+                        </li>
+                        <li>
+                            <div class="o_u o_df_2-12"></div>
+                            <div class="o_u o_df_1-12 product-ordercon-list-title">
+                                <p><span>*</span><i>详细地址</i></p>
+                            </div>
+                            <div class="o_u o_df_6-12 l-input product-ordercon-list-input" >
+                                <div class="o_u o_df_11-12 ">
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
+                                        <div class="selectbox">
+                                            <div class="">
+                                                <select name="" id="js_orderConfirmSave"  autotext="省">
+                                                    <option value="0">--山东--</option>
+                                                    <option value="1">北京</option>
+                                                    <option value="2">上海</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
+                                        <div class="selectbox">
+                                            <div class="">
+                                                <select name="" id="js_orderConfirmCity"  autotext="市">
+                                                    <option value="0">--青岛--</option>
+                                                    <option value="1">北京</option>
+                                                    <option value="2">上海</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
+                                        <div class="selectbox">
+                                            <div class="">
+                                                <select name="" id="js_orderConfirmArea"  autotext="区">
+                                                    <option value="0">--市南--</option>
+                                                    <option value="1">市南</option>
+                                                    <option value="2">市南</option>
+                                                </select>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
+                                        <div class="selectbox">
+                                            <div class="">
+                                                <select name="" id="js_orderConfirmRode"  autotext="街道">
+                                                    <option value="0">--湛山街道--</option>
+                                                    <option value="1">某某街道</option>
+                                                    <option value="2">某某街道</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_3-12"></div>
+                        </li>
+                        <li>
+                            <div class="o_u o_df_3-12"></div>
+                            <div class="o_u o_df_6-12 l-textarea product-ordercon-list-input">
+                                <textarea type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"></textarea>
+                                <p class="Validform_checktip"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="o_u o_df_3-12"></div>
+                            <div class="o_u o_df_6-12 l-input product-ordercon-list-input">
+                                <div class="o_u o_df_11-12">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 ">
+                                        <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red      js_orderConfirmGetUpData">保存</a>
+                                    </div>
+                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 ">
+                                        <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消收藏？')">取消</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="o_u o_df_3-12"></div>
+                        </li>
+                    </ul>
+                </form>
+                <ul class="product-address-list-box  ">
+                    <li class="product-address-list o_g">
+                        <!--<div class="o_u o_df_1-12"></div>-->
+                        <span class="c_ipt_cr c_ipt_cr_cus"></span>
+                        <p class="o_u">
+                            <i class="product-address-list-name">王柯科</i>
+                            <i class="product-address-list-phone">13884973771</i>
+                            <i class="product-address-list-address">山东 青岛 黄岛区 长江中路2号9907室</i>
+                        </p>
+                    </li>
+                    <li class="product-address-list o_g">
+                        <!--<div class="o_u o_df_1-12"></div>-->
+                        <span class="c_ipt_cr c_ipt_cr_cus"></span>
+                        <p class="o_u">
+                            <i class="product-address-list-name">王柯科</i>
+                            <i class="product-address-list-phone">13884973771</i>
+                            <i class="product-address-list-address">山东 青岛 黄岛区 长江中路2号9907室</i>
+                        </p>
+                    </li>
+                    <li class="product-address-list o_g">
+                        <!--<div class="o_u o_df_1-12"></div>-->
+                        <span class="c_ipt_cr c_ipt_cr_cus"></span>
+                        <p class="o_u">
+                            <i class="product-address-list-name">王柯科</i>
+                            <i class="product-address-list-phone">13884973771</i>
+                            <i class="product-address-list-address">山东 青岛 黄岛区 长江中路2号9907室</i>
+                        </p>
+                    </li>
+                    <li class="product-address-list o_g">
+                        <!--<div class="o_u o_df_1-12"></div>-->
+                        <span class="c_ipt_cr c_ipt_cr_cus"></span>
+                        <p class="o_u">
+                            <i class="product-address-list-name">王柯科</i>
+                            <i class="product-address-list-phone">13884973771</i>
+                            <i class="product-address-list-address">山东 青岛 黄岛区 长江中路2号9907室</i>
+                        </p>
+                    </li>
+                    <li class="product-address-list o_g">
+                        <!--<div class="o_u o_df_1-12"></div>-->
+                        <span class="c_ipt_cr c_ipt_cr_cus"></span>
+                        <p class="o_u">
+                            <i class="product-address-list-name">王柯科</i>
+                            <i class="product-address-list-phone">13884973771</i>
+                            <i class="product-address-list-address">山东 青岛 黄岛区 长江中路2号9907室</i>
+                        </p>
+                    </li>
+                    <li class="product-address-list o_g">
+                        <!--<div class="o_u o_df_1-12"></div>-->
+                        <span class="c_ipt_cr c_ipt_cr_cus"></span>
+                        <p class="o_u">
+                            <i class="product-address-list-name">王柯科</i>
+                            <i class="product-address-list-phone">13884973771</i>
+                            <i class="product-address-list-address">山东 青岛 黄岛区 长江中路2号9907室</i>
+                        </p>
+                    </li>
+                </ul>
+                <!-- 收获地址 END -->
+
+                <!-- 支付方式 -->
+                <div class="product-ordercon-title o_u o_df_2-2">
+                    <h4 class="o_u">支付方式</h4>
+                </div>
+                <div class="product-ordercon-payment">
+                    <p>在线支付（支持微信、支付宝、花呗分期、银联等）</p>
+                </div>
+                <!-- 支付方式 END -->
+
+                <!-- 配送时间 -->
+                <div class="product-ordercon-title o_u o_df_2-2">
+                    <h4 class="o_u">配送时间</h4>
+                </div>
+                <div class="product-ordercon-time-box js_orderconTime">
+                    <div class="o_u o_df_11-12">
+                        <a href="javascript:;" class="l-btn-normal l-btn-line2">标准配送</a>
+                        <a href="javascript:;" class="l-btn-normal l-btn-line2">橘色按钮</a>
+                        <p>您订购的产品将于 08月07日(周一)22:00 送达，请保持手机畅通</p>
+                        <div class=" product-ordercon-time-cont js_orderconTimeBox" data-alt="1" style="display: none">
+                            <p>请选择配送时间</p>
+                            <div class="selectbox o_u "  >
+                                <div class="">
+                                    <select name="" id="js_orderDate"  autotext="预约日期">
+                                        <option value="0">--请点击下拉菜单--</option>
+                                        <option value="1">我是下拉菜单1</option>
+                                        <option value="2">我是下拉菜单2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="selectbox o_u "  >
+                                <div class="">
+                                    <select name="" id="js_orderTime"  autotext="预约时段">
+                                        <option value="0">--请点击下拉菜单--</option>
+                                        <option value="1">我是下拉菜单1</option>
+                                        <option value="2">我是下拉菜单2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="o_g product-ordercon-time-btn">
+                                <div class=" o_u o_df_5-12">
+                                    <div class="o_u o_df_11-12">
+                                        <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 ">
+                                            <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red      js_orderConfirmGetUpData">保存</a>
+                                        </div>
+                                        <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 ">
+                                            <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消收藏？')">取消</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 配送时间 END -->
+
+                <!-- 发票信息 -->
+                <div class="product-ordercon-title o_u o_df_2-2">
+                    <h4 class="o_u">发票信息</h4>
+                </div>
+
+                <div class="product-ordercon-invoice-box js_orderconInvoiceBox ">
+                    <p class="o_u">发票类型：<span>电子发票（个人）</span>发票抬头: <span>王柯科</span>发票内容: <span>商品明细</span> </p>
+                    <a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>
+                </div>
+                <ul class="product-ordercon-setInvoice js_orderconInvoiceSet" style="display: none">
+                    <li>
+                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票类型</p>
+                        <div class="ordercon-setInvoice-list-cont o_u o_df_1-2">
+                            <span><input  type="radio" checked  class="js_radio" name="invoice" value="电子发票"></span>
+                            <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span>
+                            <p>1. 电子发票是国家税务局机关认可的有效凭证，与纸质发票具有同等法律效力</p>
+                            <p>2. 电子发票开具后，将不可更改发票信息及更其他种类发票</p>
+                            <p>3. 如需纸质发票，可在“个人中心-我的订单”中下载后打印</p>
+                            <a href="javascript:;">了解细则</a>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票抬头类型</p>
+                        <div class=" o_u o_df_1-2">
+                            <span><input  type="radio" checked   class="js_radio" name="invoicetop" value="个人"></span>
+                            <span><input  type="radio" class="js_radio" name="invoicetop" value="公司" ></span>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票抬头</p>
+                        <div class="l-input o_u o_df_1-2">
+                            <input  type="text" class="o_u o_df_11-12" name="" ph="请填写发票抬头" value="">
+                        </div>
+                    </li>
+                    <li>
+                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票内容</p>
+                        <div class="l-input o_u o_df_1-2">
+                            <input type="text" class="o_u o_df_11-12" name="" ph="商品明细"   value="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="o_u o_df_1-3"></div>
+                        <div class="o_u o_df_4-10 ordercon-setInvoice-list-btn">
+                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 ">
+                                <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red      js_orderConfirmGetUpData">保存</a>
+                            </div>
+                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 ">
+                                <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderconSetBtnClose " onclick="globalShade('确定取消设定吗？')">取消</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 发票信息 END -->
+                <!--商品清单及优惠-->
+                <div class="product-ordercon-title o_u o_df_2-2">
+                    <h4 class="o_u">商品清单及优惠</h4><a href=""  class="o_u"><span class=" iconfont icon-arrow-line-left"></span>返回购物车</a>
+                </div>
+                <div class="">
+                    <strong>【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</strong>
+                </div>
+                <div>
+                    <div class="o_u o_df_1-10">
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+                <!--商品清单及优惠 END-->
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+    <!--#include virtual="public/foot.shtml"-->
+
+    <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="images/member_orderconfirm.js"></script>
+
+</body>
+</html>
