@@ -1,61 +1,55 @@
-/**
- * Created by 15610 on 2017/10/16.
- */
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-安全设置-解绑手机
+* @author:      刘悦
+* @date        2017.10.19
+* ---------------------------------------------------------------------------*/
 //option value:1--手机号 2——邮箱
 
 $(function(){
+    //前台判断是否登陆
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage()
+    }
 
-    //前端判断是否登录
-
-    // if(!istrsidssdssotoken()){
-    //     window.location.href ='/ids/ts/login.jsp'
-    // }
-    //后端判断是否登录
     $.ajax({
         type: "get",
         dataType: "json",
         url: "/user/front/user/userInfo",
         data: "",
-        error : function(XMLHttpRequest, textStatus, errorThrown){
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
         },
         success: function(returnData){
+            if (jQuery.trim(returnData).length > 0) {
+                if(returnData.resultMsg=='用户未登录'){
+                    window.location.href ='/ids/ts/login.jsp';
+                }
 
-            if(returnData.resultMsg=='用户未登录'){
-                window.location.href ='/ids/ts/login.jsp'
-            }
-        }
+                var templet_call=jQuery.trim(returnData.data.mobile);
+                if(templet_call==null || templet_call==""){
+                    self.location = '/security';
+                }else{
 
-    });
+                    var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
 
-    $.ajax({
-        type: "post",
-        dataType: "json",
-        url: "/user/front/user/userInfo",
-        data: "",
-        success: function(returnData){
-            if(returnData.cellPhone==null || returnData.cellPhone==""){
+                    $("#js-logincallphone").html(templet_callphone);
+                    $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
+                    $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
-            }else{
-                var call=returnData.cellPhone
-                var callphone = call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
-
-                $("#js-logincallphone").html(callphone)
-                $("#js_unbindmob").attr('autotext',callphone)
-                $("#js_unbindmob").append("<option value='1'>手机（"+callphone+"）</option>")
-
-                if(returnData.email==null || returnData.email==""){}
-                else{
-                    var email=returnData.email()
-                    var c=email.split("@");
-                    var ci=c[0].length/2
-                    var emailnote=c[0].substr(0,ci)+'..'+'@'+c[1]; //emai加.
-                    $("#js_unbindmob").append("<option value='2'>邮箱（"+callphone+"）</option>")
+                    var templet_email=jQuery.trim(returnData.data.email);
+                    if(templet_email==null || templet_email==""){
+                        self.location = '/security';
+                    }
+                    else{
+                        var templet_split = templet_email.split("@");
+                        var templet_hide = templet_split[0].length / 2;
+                        var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                        $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
+                    }
+                    $("#js_unbindmob").oSelect().init();
+                    $('.js-unbingfalse').show();
+                    $('.js-unbingsuccess').hide();
 
                 }
-                $("#js_unbindmob").oSelect().init();
-                $('.js-unbingfalse').show();
-                $('.js-unbingsuccess').hide();
-
             }
         }
     });
@@ -68,14 +62,14 @@ $(function(){
         var val=$("#js_unbindmob").val();
         if(val==1)
         {
-            $('.js_mobileCodeYz').attr('placeholder','短信验证码')
+            $('.js_mobileCodeYz').attr('placeholder','短信验证码');
             $('.js-sendmobile').show();
             $('.js-sendmail').hide();
 
         }
         if(val==2)
         {
-            $('.js_mobileCodeYz').attr('placeholder','邮箱验证码')
+            $('.js_mobileCodeYz').attr('placeholder','邮箱验证码');
             $('.js-sendmobile').hide();
             $('.js-sendmail').show();
         }
@@ -83,8 +77,8 @@ $(function(){
 //点击发送短信验证码
     $(".js-sendmobile").click(function(){
 
-        var param
-        var pretermit=$('#js_unbindmob').val()
+        var param;
+        var pretermit=$('#js_unbindmob').val();
         if(pretermit==0){
 
             param=$('#js_unbindmob option[value=1]').text();
@@ -110,11 +104,11 @@ $(function(){
                     if (jQuery.trim(returnData).indexOf("200")>-1) {}
                     else if (jQuery.trim(returnData).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的')
+                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的');
                     }
                     else if (jQuery.trim(returnData).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败')
+                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                     }
                 }
             }
@@ -142,11 +136,11 @@ $(function(){
                     if (jQuery.trim(returnData).indexOf("200")>-1) {}
                     else if (jQuery.trim(returnData).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送邮件的手机号不是当前用户的')
+                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送邮件的手机号不是当前用户的');
                     }
                     else if (jQuery.trim(returnData).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败')
+                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                     }
                 }
             }
@@ -160,20 +154,20 @@ $(function(){
     //点击确定按钮
     $(".js_subimGetUp") .unbind().bind('click',function(){
 
-        var notclick = $(this).hasClass('l-btn-disable')
+        var templet_notclick = $(this).hasClass('l-btn-disable');
 
-        if(!notclick)
+        if(!templet_notclick)
         {
 
-            var param //下拉框的text
-            var code=$('.js_mobileCodeYz').val() //验证码
-            var pretermit=$('#js_unbindmob').val() //下拉的value
-            if(pretermit==0){
+            var templet_param;
+            var templet_code=$('.js_mobileCodeYz').val(); //验证码
+            var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
+            if(templet_pretermit=='0' || templet_pretermit=='1'){
 
-                param=$('#js_unbindmob option[value=1]').text();
+                templet_param='mobile';
             }
-            else{
-                param=$('#js_unbindmob').find("option:selected").text();
+            if(templet_pretermit=='2' ){
+                templet_param='email';
             }
 
             $.ajax({
@@ -182,8 +176,8 @@ $(function(){
                 url: "/ids/ts/userInfoManager.jsp",
                 data: {
                     'editOperation':'verify',
-                    'param':param,
-                    'code':code
+                    'param':templet_param,
+                    'code':templet_code
                 },
                 error : function(XMLHttpRequest, textStatus, errorThrown){
                 },
@@ -192,26 +186,27 @@ $(function(){
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
                             $('.js-unbingfalse').hide();
                             $('.js-unbingsuccess').show();
+                            document.cookie="isAlterBind=1;path=/";
 
-                            var i = 4;
-                            var t = setInterval(function(){
-                                if (i == 0) {
-                                    clearInterval(t);
-                                    window.location.href ='/security'
-                                    return;
-                                }
-                                document.getElementById("js-countdown").innerHTML = i;
-                                i--;
-                            }, 1000)
+                            // var templet_time = 4;
+                            // var templet_change = setInterval(function(){
+                            //     if (templet_time == 0) {
+                            //         clearInterval(templet_change);
+                            //         window.location.href ='/security'
+                            //         return;
+                            //     }
+                            //     document.getElementById("js-countdown").innerHTML = templet_time;
+                            //     templet_time--;
+                            // }, 1000);
                         }
                         else if (jQuery.trim(returnData).indexOf("code_can_not_be_null")>-1){
 
-                            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空')
+                            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空');
 
                         }
                         else if (jQuery.trim(returnData).indexOf("unbind_code_can_not_be_select")>-1 || jQuery.trim(returnData).indexOf("unbind_mcode_is_illegal")>-1 ){
 
-                            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误')
+                            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误');
 
                         }
 
@@ -232,7 +227,7 @@ $(function(){
 
 
 //解绑手机号码验证
-$("#js_unbindmob").oSelect().init();
+
 $('.js_mobileCodeYz').blur(function(){
 
     if($(this).val().length==6){

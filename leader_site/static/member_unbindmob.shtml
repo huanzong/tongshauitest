@@ -28,7 +28,7 @@
                     <div class="member-security-contbox js-contRightContBox">
                         <!-- 解绑手机 START-->
                         <div class="member-unbingmob o_g  js-unbingfalse"  style="display: none">
-                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-unbingmob-text">解绑后，您将无法再使用 <span id="js-logincallphone">157****3370</span> 进行登录，密码重置或其他安全验证</div>
+                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-unbingmob-text">解绑后，您将无法再使用 <span id="js-logincallphone"></span> 进行登录，密码重置或其他安全验证</div>
                         </div>
                         <div class="member-security-bingmob member-security-unbingmob-martop js-unbingfalse"  style="display: none">
                             <div class="o_g member-bingmob-list">
@@ -86,6 +86,6 @@
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member.js"></script>
-<script type="text/javascript" src="images/member_unbindmob.js"></script>
+<script type="text/javascript" src="images/templet_member_unbindmob.js"></script>
 </body>
 </html>

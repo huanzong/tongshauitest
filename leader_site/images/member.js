@@ -91,8 +91,6 @@ $(function() {
         }
 
 
-
-
         $('.js-personal').height(contHeight);
         $('.js-submenu').height(contHeight);
         $('.js-submenubtn').height(contHeight);
@@ -118,31 +116,6 @@ $(function() {
     }
 
 
-
-//下拉菜单初始化
-
-    $("#js_save").oSelect().init();
-    $("#js_city").oSelect().init();
-    $("#js_area").oSelect().init();
-    $("#js_persave").oSelect().init();
-    $("#js_percity").oSelect().init();
-    $("#js_perarea").oSelect().init();
-
-
-
-    //个人信息
-    $('.js-personalinfotab').click( function () {
-        var tabNmu =$(this).index();
-        $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
-        $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
-        $('.js-uploadPhoto').show();
-        $('.js-modifyPhoto').hide();
-        $('.js-modifyPhotoBtn').hide();
-    })
-
-
-
-    $(".js_sex").jq_qvote();
 
     //修改手机页面三种状态
     //$('.js-memberRevRateLine').css('width','0%');

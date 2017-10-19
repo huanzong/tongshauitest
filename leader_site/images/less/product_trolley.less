@@ -1,1 +1,191 @@
 @import "l_variable";
+
+//购物车头部
+.trolley-head{
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+.trolley-logo{
+	display: inline-block;
+	margin-left: -30px;
+	padding-top: 30px;
+	width: 60px;
+	height: 60px;
+	@media (min-width:701px) and (max-width: 1199px) {
+		margin-left: -25px;
+		padding-top: 25px;
+		width: 50px;
+		height: 50px;
+	}
+	@media (max-width: 700px) {
+		margin-left: -20px;
+		padding-top: 15px;
+		width: 40px;
+		height: 40px;
+	}
+	@media (max-width: 575px) {
+		margin-left: 0;
+	}
+	img{
+		width: 100%;
+	}
+}
+.trolley-title{
+	display: inline-block;
+	line-height: 120px;
+	font-size: 24px;
+	text-indent: 25px;
+	font-family: 'Microsoft YaHei';
+	@media (min-width:701px) and (max-width: 1199px) {
+		line-height: 100px;
+		text-indent: 20px;
+	}
+	@media (max-width: 700px) {
+		line-height: 70px;
+		font-size: 20px;
+		text-indent: 20px;
+	}
+}
+.trolley-username{
+	float: right;
+	display: inline-block;
+	line-height: 120px;
+	font-size: 14px;
+	font-family: 'Microsoft YaHei';
+	color: #333;
+	@media (min-width:701px) and (max-width: 1199px) {
+		line-height: 100px;
+	}
+	@media (max-width: 700px) {
+		line-height: 70px;
+	}
+} 
+
+//配送地址
+.trolley-distribution{
+	background: #fff;
+	@media (max-width:1199px) {
+		border-bottom: 1px solid #edecec;
+		-moz-box-shadow: 0 1px 1px #f8f8f8;
+		box-shadow: 0 1px 1px #f8f8f8;
+	}
+	.distribution-icon{
+		display: inline-block;
+		width: 52px;
+		padding-top: 22px;
+		text-align: center;
+		margin-left: -26px;
+		@media (max-width: 700px) {
+			padding-top: 18px;
+			width: 44px;
+			margin-left: -22px;
+		}
+		@media (max-width: 575px) {
+			margin-left: -8px;
+		}
+		i{
+			font-size: 22px;
+			color: #ccc;
+		}
+	}
+	.distribution-address{
+		display: inline-block;
+		line-height: 70px;
+		font-size: 16px;
+		color: #333;
+		cursor: pointer;
+		@media (max-width: 700px) {
+			line-height: 60px;
+			font-size: 14px;
+		}
+	}
+}
+
+//表头
+.trolley-tablehead{
+	background: #f8f8f8;
+	border-bottom: 1px solid #edecec;
+	-moz-box-shadow: 0 1px 1px #f8f8f8;
+	box-shadow: 0 1px 1px #f8f8f8;
+	@media (max-width: 1199px) {
+		display: none;
+	}
+	.head-name{
+		font-size: 14px;
+		color: #333;
+		line-height: 32px;
+		padding: 10px 0;
+		.c_ipt_cr{
+			background-image: url(trolley_icon_sm.png);
+			height: 32px;
+    		line-height: 32px;
+			padding-left: 40px;
+		}
+		.c_ipt_cr_cs{
+			background-position: 0 -62px;
+		}
+		.c_ipt_cr_cus{
+			background-position: 0 0;
+		}
+		.head-line-select{
+			display: inline-block;
+			width: 15%;
+			span{
+				margin-left: -16px;
+			}
+		}
+		.head-line-product{
+			display: inline-block;
+			width: 45%;
+			text-indent: 130px;
+		}
+		.head-line-other{
+			display: inline-block;
+			width: 9.3%;
+			text-align: center;
+		}
+	}
+}
+
+//产品列表-表格
+.trolley-prolist{
+	margin-top: 30px;
+	border: 1px solid #eee;
+	border-bottom: none;
+}
+.trolley-coupon{
+	background: #f8f8f8;
+	font-size: 0;
+}
+.coupon-info{
+	padding: 18px 0 14px 60px;
+	.coupon-info-tit{
+		font-size: 14px;
+		line-height: 24px;
+		color: #333;
+	}
+	.coupon-info-des{
+		display: inline-block;
+		font-size: 12px;
+		line-height: 24px;
+		.info-des-icon{
+			color: @l-red;
+		}
+		.info-des-det{
+			color: #666;
+			padding-right: 20px;
+		}
+	}
+}
+.coupon-select{
+	text-align: center;
+	line-height: 80px;
+	color: #666;
+	font-size: 12px;
+}
+.coupon-time{
+	text-align: center;
+	line-height: 80px;
+	color: #666;
+	font-size: 12px;
+}

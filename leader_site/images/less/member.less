@@ -2490,7 +2490,7 @@
 						}
 					}
 
-					.member-address-textarea3-1 {
+					.member-address-textarea3-1 ,.member-address-textarea3-3{
 						padding-right: 10px;
 						position: relative;
 						z-index: 19;
@@ -2510,7 +2510,7 @@
 							padding-right: 0px;
 						}
 					}
-					.member-address-textarea3-2 {
+					.member-address-textarea3-2,.member-address-textarea3-4 {
 						padding-right: 10px;
 						position: relative;
 						z-index: 18;
@@ -2530,7 +2530,9 @@
 							padding-right: 0px;
 						}
 					}
-
+					.member-address-textarea3-3,.member-address-textarea3-4{
+						z-index: 17;
+					}
 					.member-address-inputbox {
 						width: 100%;
 
@@ -2634,85 +2636,64 @@
 				}
 			}
 
-			.member-addressbox-cutrule {
-				width: 100%;
-				height: 1px;
-				background: #eee;
-				margin-top: 50px;
-				margin-bottom: 15px;
-
-				@media (min-width: 992px) and (max-width: 1199px) {
-					/* lg*/
-				}
-				@media (min-width: 701px) and (max-width: 991px) {
-					/* md*/
-					margin-top: 38px;
-				}
-				@media (min-width: 576px) and (max-width: 700px) {
-					/* sm*/
-					margin-top: 37px;
-				}
-				@media (max-width: 575px) {
-					/* xs*/
-					margin-top: 23px;
-					margin-bottom: 0;
-				}
-			}
-			.member-addressbox {
-				width: 100%;
-				padding-top: 30px;
-				display: inline-block;
-				border-top: 1px solid #eee;
-				margin-top: 50px;
-
-
-				.member-addressleftbox {
-					padding-right: 15px;
-					@media (max-width: 575px) {
-						/* xs*/
-						padding-right: 0px;
-					}
-				}
-
-				.member-addressrightbox {
-					padding-left: 15px;
-					@media (max-width: 575px) {
-						/* xs*/
-						padding-left: 0px;
-					}
-				}
-
-				.member-addresslistbox {
+				.member-addressbox-cutrule {
 					width: 100%;
-					height: 200px;
-					box-sizing: border-box;
-					border: 1px solid #eee;
-					box-shadow: 0 0 10px #f9f9f9;
-					margin-bottom: 30px;
-					border-radius: 7px;
-					padding: 0 30px;
-					position: relative;
+					height: 1px;
+					background: #eee;
+					margin-top: 50px;
+					margin-bottom: 15px;
 
 					@media (min-width: 992px) and (max-width: 1199px) {
 						/* lg*/
 					}
 					@media (min-width: 701px) and (max-width: 991px) {
 						/* md*/
+						margin-top: 38px;
 					}
 					@media (min-width: 576px) and (max-width: 700px) {
 						/* sm*/
+						margin-top: 37px;
 					}
 					@media (max-width: 575px) {
 						/* xs*/
-						height: 170px;
+						margin-top: 23px;
+						margin-bottom: 0;
+					}
+				}
+			.memeber-address-list-box{
+				.member-addressbox {
+					width: 100%;
+					padding-top: 20px;
+					display: inline-block;
+					margin-top: 10px;
+					text-align: left;
+					>div:nth-child(1){
+						padding-right: 15px;
+						@media (max-width: 575px) {
+							/* xs*/
+							padding-right: 0px;
+						}
+					}
+					>div:nth-child(2){
+						padding-left: 15px;
+						@media (max-width: 575px) {
+							/* xs*/
+							padding-left: 0px;
+						}
 					}
 
-					.member-address-name {
+
+
+					.member-addresslistbox {
 						width: 100%;
-						margin-top: 30px;
-						text-align: left;
-						font-size: 20px;
-						color: #333;
+						height: 200px;
+						box-sizing: border-box;
+						border: 1px solid #eee;
+						box-shadow: 0 0 10px #f9f9f9;
+						margin-bottom: 30px;
+						border-radius: 7px;
+						padding: 0 30px;
+						position: relative;
 
 						@media (min-width: 992px) and (max-width: 1199px) {
 							/* lg*/
@@ -2725,81 +2706,111 @@
 						}
 						@media (max-width: 575px) {
 							/* xs*/
-							font-size: 16px;
-							margin-top: 20px;
+							height: 170px;
 						}
-					}
-					.member-address-mobnumber {
-						width: 100%;
-						margin-top: 17px;
-						text-align: left;
-						font-size: 12px;
-						color: #666;
 
-						@media (max-width: 575px) {
-							/* xs*/
-							margin-top: 12px;
+						.member-address-name {
+							width: 100%;
+							margin-top: 30px;
+							text-align: left;
+							font-size: 20px;
+							color: #333;
+
+							@media (min-width: 992px) and (max-width: 1199px) {
+								/* lg*/
+							}
+							@media (min-width: 701px) and (max-width: 991px) {
+								/* md*/
+							}
+							@media (min-width: 576px) and (max-width: 700px) {
+								/* sm*/
+							}
+							@media (max-width: 575px) {
+								/* xs*/
+								font-size: 16px;
+								margin-top: 20px;
+							}
 						}
-					}
-					.member-address-addtext {
-						width: 100%;
-						margin-top: 5px;
-						text-align: left;
-						font-size: 12px;
-						color: #666;
-						line-height: 18px;
-						height: 36px;
-						overflow: hidden;
-					}
-
-					.member-address-btnbox {
-						width: 100%;
-						margin-top: 25px;
-
-						i {
-							font-size: 14px;
-							display: inline-block;
-							color: #ccc;
-							margin-left: 2px;
-						}
-						a {
-							display: inline-block;
+						.member-address-mobnumber {
+							width: 100%;
+							margin-top: 17px;
+							text-align: left;
 							font-size: 12px;
 							color: #666;
-							margin-left: 8px;
-						}
-						.member-address-line {
-							width: 1px;
-							height: 12px;
-							background: #eee;
-							margin-left: 8px;
-							display: inline-block;
-							margin-top: 2px;
-						}
-					}
-					.member-address-tab {
-						position: absolute;
-						top: 0;
-						display: inline-block;
-						right: 20px;
-						padding: 0 15px;
-					}
 
-					.member-address-fitaddbtn {
-						position: absolute;
-						font-size: 12px;
-						top: 20px;
-						display: inline-block;
-						right: 20px;
-						padding: 0 15px;
-						@media (max-width: 575px) {
-							/* xs*/
-							top: 15px;
-							right: 15px;
+							@media (max-width: 575px) {
+								/* xs*/
+								margin-top: 12px;
+							}
+						}
+						.member-address-addtext {
+							width: 100%;
+							margin-top: 5px;
+							text-align: left;
+							font-size: 12px;
+							color: #666;
+							line-height: 18px;
+							height: 36px;
+							overflow: hidden;
+						}
+
+						.member-address-btnbox {
+							width: 100%;
+							margin-top: 25px;
+
+							i {
+								font-size: 14px;
+								display: inline-block;
+								color: #ccc;
+								margin-left: 2px;
+							}
+							a {
+								display: inline-block;
+								font-size: 12px;
+								color: #666;
+								margin-left: 8px;
+							}
+							.member-address-line {
+								width: 1px;
+								height: 12px;
+								background: #eee;
+								margin-left: 8px;
+								display: inline-block;
+								margin-top: 2px;
+							}
+						}
+						.member-address-tab {
+							position: absolute;
+							top: 0;
+							display: inline-block;
+							right: 20px;
+							padding: 0 15px;
+						}
+
+						.member-address-fitaddbtn {
+							position: absolute;
+							font-size: 12px;
+							top: 20px;
+							display: inline-block;
+							right: 20px;
+							padding: 0 15px;
+							@media (max-width: 575px) {
+								/* xs*/
+								top: 15px;
+								right: 15px;
+							}
 						}
 					}
 				}
+				>div:first-child{
+					border-top: 1px solid #eee;
+					padding-top: 50px;
+
+				}
 			}
+
+
+
 
 			/*个人信息*/
 			.member-personalinfo {
@@ -4094,6 +4105,37 @@
 
 		}
 	}
+
+}
+.member-comment-leftbox{
+	padding-bottom: 45px;
+	border-bottom: 1px solid #eee;
+	.member-comment-leftcont{
+		p{
+			font-size: 16px;
+			color: #666;
+			margin: 0 auto;
+			line-height: 22px;
+			padding-top: 20px;
+		}
+		@media (min-width: 1200px){
+			/* lg*/
+			p{
+				width: 115px;
+				display: block;
+			}
+
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			/* lg*/
+			p{
+				display: inline-block;
+				text-align: left;
+			}
+
+		}
+
+	}
 }
 .member-share-rightbox{
 	display: inline-block;
@@ -4323,7 +4365,33 @@
 
 
 }
+.member-comment-rightbox{
+	@media (min-width: 992px) and (max-width: 1199px) {
+		/* lg*/
+			border-left: none;
 
+	}
+	@media (min-width: 701px) and (max-width: 991px) {
+		/* md*/
+		margin: 0 40px;
+		border-left: none;
+		padding-bottom: 30px;
+	}
+	@media (min-width: 576px) and (max-width: 700px) {
+		/* sm*/
+		margin: 0 30px ;
+		border-left: none;
+		padding-bottom: 30px;
+
+	}
+	@media (max-width: 575px) {
+		/* xs*/
+		margin: 0 30px;
+		border-left: none;
+		padding-bottom: 30px;
+
+	}
+}
 
 .member-share-score-selected-false{
 	.selected_g{
@@ -4561,6 +4629,40 @@
 	}
 	.member-myshare-more{
 		a{color: #666;}
+	}
+}
+
+//评价
+.member-comment-impress-box{
+	.member-comment-impress-cont{
+		text-align: left;
+		a{
+			font-size: 12px;
+			margin-right: 8px;
+			text-align: center;
+			margin-bottom: 10px;
+
+		}
+		i{
+			font-size: 12px;
+			margin-right: 8px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.select,.addselect{
+			color:#fff;
+			background: red;
+			border-color: red;
+		}
+	}
+	.member-comment-impress-add{
+		>div{
+			margin-right: 8px;
+		}
+	}
+	.member-comment-impress-addclose{
+		border: 1px dashed #32beff;
+		color: #666666;
 	}
 }
 

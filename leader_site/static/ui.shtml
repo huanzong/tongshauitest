@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>ui</title>
-    <%=ui_base%>
+    <!--<%=ui_base%>-->
+    <%=base%>
     <!--#include virtual="public/head.shtml"-->
     <link rel="stylesheet" type="text/css" href="images/ui.css">
 </head>
@@ -289,6 +290,45 @@
                  $(".js_checkbox,.js_radio").jq_qvote();
             </script>
         </textarea>
+
+        <h3><b>复选框</b>-购物车/订单相关页面</h3>
+        <div class="l-checkbox">
+            <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+        </div>
+        <div class="l-checkbox">
+            <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+        </div>
+        <textarea>
+            <div class="l-checkbox">
+                <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+            </div>
+            <div class="l-checkbox">
+                <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+            </div>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();//与上面用法一致
+            </script>
+        </textarea>
+        <h3><b>单选框</b>-购物车/订单相关页面</h3>
+        <div class="l-radio">
+            <input  type="radio" class="js_radio" name="cc" value="单选框">
+        </div>
+        <div class="l-radio">
+            <input  type="radio" class="js_radio" name="cc" value="单选框">
+        </div>
+        <textarea>
+            <div class="l-radio">
+                <input  type="radio" class="js_radio" name="cc" value="单选框">
+            </div>
+            <div class="l-radio">
+                <input  type="radio" class="js_radio" name="cc" value="单选框">
+            </div>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();//与上面用法一致
+            </script>
+        </textarea>
     </div>
     <!-- 多选/单选按钮 End -->
 
@@ -379,6 +419,19 @@
                 <p class="Validform_checktip"></p>
             </div>
         </form>
+        <h3>--- 注意 ---</h3>
+        <p>data-normal="1"</p>
+        <textarea>
+            $('.js_myForm').Validform({
+                tiptype: 3,
+                btnSubmit: '.js_submitBtn',
+                callback:function(form){
+                    //这里是所有验证都通过以后，执行的回调函数
+                    return false;//最后加上这个，这个必须写
+                }
+            });
+
+        </textarea>
         <h3>--- HTML ---</h3>
         <textarea>
             <form class="ui_validForm js_ui_validForm">
@@ -508,6 +561,66 @@
     </div>
 
     <!--分页 END-->
+    <!--弹窗-->
+    <div class="main markdown" id="ui_float">
+        <h1>弹窗</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="globalShade('自定义输入内容')" >点击触发</a>
+            <i></i>
+        </div>
+        <textarea>
+              <!--弹窗触发方式-->
+            <a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="globalShade('自定义输入内容')" >橘色按钮</a>
+            <!--弹窗触发方式 END-->
+             <!--弹窗html代码-->
+            <div class="o_g land-shade js_landShade">
+                <div class="land-box js_landContBox">
+                    <div class="land-cont-title alert-cont-title o_u">
+                        <a href="" class="o_u iconfont icon-close js_landClose"></a>
+                    </div>
+                    <div class="js_landInputBox">
+                        <div class="land-cont-normal-input o_g">
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                                    <p class="js-landText">确定取消收藏？</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-alert-btn o_g">
+                        <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
+                        <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
+                    </div>
+                </div>
+            </div>
+            <!--弹窗html代码 END-->
+        </textarea>
+    </div>
+    <!--<a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="globalShade('自定义输入内容')" >橘色按钮</a>-->
+
+    <div class="o_g land-shade js_landShade">
+        <div class="land-box js_landContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <a href="" class="o_u iconfont icon-close js_landClose"></a>
+            </div>
+            <div class="js_landInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <div class="o_g member-bingmob-list">
+                        <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                            <p class="js-landText">确定取消收藏？</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="member-alert-btn o_g">
+                <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">按钮一</a>
+                <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">按钮二</a>
+            </div>
+        </div>
+    </div>
+    <!--弹窗 END-->
     <!-- iconfont -->
     <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
@@ -517,5 +630,8 @@
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/ui.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>

@@ -11,9 +11,6 @@ $(function() {
 
     }
 
-
-    
-
     /**
      * 自定义插件
      */
@@ -273,7 +270,77 @@ $(function() {
         $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
         $('.js-submintData').addClass('l-btn-disable');
     });
+
+
+
+
 });
+
+
+//通用弹窗
+function globalShade(alerttext){
+    $('.js_landShade').show();
+    $('.js_landContBox').show();
+    $("body").css({overflow:"hidden"});
+    $('.js-landText').html(alerttext);
+    $('.js_landClose').click(function(){
+        $('.js_landContBox').hide();
+        $('.js_landShade').hide();
+        $("body").css({overflow:"auto"});
+        return false;
+    })
+    //$('.js_alertClose').click(function(){
+    //
+    //})
+}
+
+//时间戳转换日期 时间戳，选格式，时间戳类型
+function getLocalTime(nS,val,type) {
+    if(type==2)
+    {
+        var timestamp4 =new Date(parseInt(nS) * 1000);
+    }
+    else
+    {
+        var timestamp4 =new Date(parseInt(nS));
+    }
+
+    var y = timestamp4.getFullYear();
+    var m = timestamp4.getMonth() + 1;
+    var d = timestamp4.getDate();
+    if(val == 2){
+        return y + "." + (m < 10 ? "0" + m : m) + "." + (d < 10 ? "0" + d : d) ;
+    }else if(val == 3){
+        return y + "/" + (m < 10 ? "0" + m : m) + "/" + (d < 10 ? "0" + d : d) ;
+    }else if(val == 4){
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
+    }
+    return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + timestamp4.toTimeString().substr(0, 8);
+
+}
+
+
+//判断当前是否存在同域cookie
+function istrsidssdssotoken(){
+    var trsidssdssotoken = "ssotoken";//同域Cookie
+    var sdssotoken = $.cookie(trsidssdssotoken);
+    if(sdssotoken!=null){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//跳转到登录页面
+function jumpToLoginPage(){
+    var returnUrl = window.location.href;
+    if(!istrsidssdssotoken()){
+        var returnUrl = window.location.href;
+        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+    }
+}
+
+
 
 
 
