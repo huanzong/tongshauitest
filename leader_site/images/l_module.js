@@ -294,9 +294,17 @@ function globalShade(alerttext){
     //})
 }
 
-//时间戳转换日期
-function getLocalTime(nS,val) {
-    var timestamp4 =new Date(parseInt(nS) * 1000);
+//时间戳转换日期 时间戳，选格式，时间戳类型
+function getLocalTime(nS,val,type) {
+    if(type==2)
+    {
+        var timestamp4 =new Date(parseInt(nS) * 1000);
+    }
+    else
+    {
+        var timestamp4 =new Date(parseInt(nS));
+    }
+
     var y = timestamp4.getFullYear();
     var m = timestamp4.getMonth() + 1;
     var d = timestamp4.getDate();

@@ -74,7 +74,8 @@ $(function(){
 
                 //最后登录时间
                 var templet_time = jQuery.trim(returnData.data.lastLoginDate);
-                getLocalTime()
+                var templet_timechange=getLocalTime(templet_time)
+                $('js-lastlogindate').html(templet_timechange)
 
 
                 //验证密码强度
