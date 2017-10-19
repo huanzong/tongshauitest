@@ -35,9 +35,12 @@ $(function(){
         error : function(XMLHttpRequest, textStatus, errorThrown){
         },
         success: function(returnData){
-            if(returnData.data.email==null || returnData.data.email==""){
-            }else{
-                self.location='/security';
+            if (jQuery.trim(returnData).length > 0) {
+                var email=jQuery.trim(returnData.data.email)
+                if (email == null || email == "") {
+                } else {
+                    self.location = '/security';
+                }
             }
         }
     });
