@@ -290,6 +290,45 @@
                  $(".js_checkbox,.js_radio").jq_qvote();
             </script>
         </textarea>
+
+        <h3><b>复选框</b>-购物车/订单相关页面</h3>
+        <div class="l-checkbox">
+            <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+        </div>
+        <div class="l-checkbox">
+            <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+        </div>
+        <textarea>
+            <div class="l-checkbox">
+                <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+            </div>
+            <div class="l-checkbox">
+                <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+            </div>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();//与上面用法一致
+            </script>
+        </textarea>
+        <h3><b>单选框</b>-购物车/订单相关页面</h3>
+        <div class="l-radio">
+            <input  type="radio" class="js_radio" name="cc" value="单选框">
+        </div>
+        <div class="l-radio">
+            <input  type="radio" class="js_radio" name="cc" value="单选框">
+        </div>
+        <textarea>
+            <div class="l-radio">
+                <input  type="radio" class="js_radio" name="cc" value="单选框">
+            </div>
+            <div class="l-radio">
+                <input  type="radio" class="js_radio" name="cc" value="单选框">
+            </div>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();//与上面用法一致
+            </script>
+        </textarea>
     </div>
     <!-- 多选/单选按钮 End -->
 

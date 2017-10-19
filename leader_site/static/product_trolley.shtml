@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
         <!--#include virtual="public/head.shtml"-->
-        <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
         <link rel="stylesheet" type="text/css" href="images/product_trolley.css">
 </head>
 
@@ -76,25 +76,85 @@
             <div class="o_g trolley-tablehead">
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
-                    <div class="o_g">
-                        <div class="o_u o_df_1-5">
-                            <div class="head-name">
+                    <div class="head-name">
 
-                                <div class="head-line-select">
-                                  <input class="js_checkbox" type="checkbox" data-notnull="true" value="全选">
-                                  <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
-                                </div>
-
-                            </div>
+                        <div class="head-line-select">
+                          <input class="js_checkbox" type="checkbox" data-notnull="true" value="全选">
+                          <!-- <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框"> -->
+                        </div>
+                        <div class="head-line-product">
+                            商品
+                        </div>
+                        <div class="head-line-other">
+                            单价
+                        </div>
+                        <div class="head-line-other">
+                            数量
+                        </div>
+                        <div class="head-line-other">
+                            小计
+                        </div>
+                        <div class="head-line-other">
+                            操作
                         </div>
                     </div>
                 </div>
             </div>
             <!-- 商品列表-表头 END -->
 
+            <!-- 商品列表 -->
+            <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="trolley-prolist">
+                        <div class="trolley-coupon o_g">
+                            <div class="o_u o_df_7-10">
+                                <div class="coupon-info">
+                                    <div class="coupon-info-tit">
+                                        【唤醒初夏】套购满额送豪礼
+                                    </div>
+                                    <div class="coupon-info-des">
+                                        <span class="info-des-icon">【满减】</span>
+                                        <span class="info-des-det">
+                                            已满2000，可使用2000减1000满减券
+                                        </span>
+                                        <span class="info-des-icon">【满减】</span>
+                                        <span class="info-des-det">
+                                            已满2000，可使用2000减1000满减券
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="coupon-select">
+                                    优惠券
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-5">
+                                <div class="coupon-time">
+                                    7月31日-8月3日
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_g trolley-product">
+                            <div class="o_u o_df_3-5">
+                                <div class="l-checkbox">
+                                  <input class="js_checkbox" type="checkbox" data-notnull="true" value="">
+                                </div>
+                            </div>
+                            <div class="o_u d_df_1-10"></div>
+                            <div class="o_u d_df_1-10"></div>
+                            <div class="o_u d_df_1-10"></div>
+                            <div class="o_u d_df_1-10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品列表 END -->
+
 
     <!--#include virtual="public/foot.shtml"-->
-    <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+    <!-- <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script> -->
     <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="images/product_trolley.js"></script>
 
