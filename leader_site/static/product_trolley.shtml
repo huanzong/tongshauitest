@@ -79,16 +79,12 @@
                     <div class="o_g">
                         <div class="o_u o_df_1-5">
                             <div class="head-name">
-                                <span>
+
+                                <div class="head-line-select">
+                                  <input class="js_checkbox" type="checkbox" data-notnull="true" value="全选">
                                   <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
-                                </span>
-                                <!-- <span>
-                                  <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
-                                </span>
-                                <span>
-                                    <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
-                                </span> -->
-                                全选
+                                </div>
+
                             </div>
                         </div>
                     </div>
