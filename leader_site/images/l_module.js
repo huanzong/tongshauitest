@@ -294,3 +294,23 @@ function globalShade(alerttext){
     //})
 }
 
+//时间戳转换日期
+function getLocalTime(nS,val) {
+    var timestamp4 =new Date(parseInt(nS) * 1000);
+    var y = timestamp4.getFullYear();
+    var m = timestamp4.getMonth() + 1;
+    var d = timestamp4.getDate();
+    if(val == 2){
+        return y + "." + (m < 10 ? "0" + m : m) + "." + (d < 10 ? "0" + d : d) ;
+    }else if(val == 3){
+        return y + "/" + (m < 10 ? "0" + m : m) + "/" + (d < 10 ? "0" + d : d) ;
+    }else if(val == 4){
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
+    }
+    return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + timestamp4.toTimeString().substr(0, 8);
+
+}
+
+
+
+

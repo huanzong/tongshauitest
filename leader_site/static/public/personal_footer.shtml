@@ -24,8 +24,6 @@
             return false;
         }
     }
-    if(!istrsidssdssotoken()){
-        window.location.href ='/ids/ts/login.jsp'
-    }
+
 
 </script>
