@@ -118,6 +118,6 @@
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member.js"></script>
-<script type="text/javascript" src="images/member_securitySetting.js"></script>
+<script type="text/javascript" src="images/templet_member_securitySetting.js"></script>
 </body>
 </html>

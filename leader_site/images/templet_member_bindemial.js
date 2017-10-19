@@ -1,30 +1,14 @@
-/**
- * Created by 15610 on 2017/10/13.
- */
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-安全设置-绑定邮箱
+* @author:      刘悦
+* @date        2017.10.19
+* ---------------------------------------------------------------------------*/
 $(function(){
 
-//前端判断是否登录
-
+    //前台判断是否登陆
     if(!istrsidssdssotoken()){
-        window.location.href ='/ids/ts/login.jsp'
+        jumpToLoginPage()
     }
-
-    //后端判断是否登录
-    $.ajax({
-        type: "get",
-        dataType: "json",
-        url: "/user/front/user/userInfo",
-        data: "",
-        error : function(XMLHttpRequest, textStatus, errorThrown){
-        },
-        success: function(returnData){
-
-            if(returnData.resultMsg=='用户未登录'){
-                window.location.href ='/ids/ts/login.jsp'
-            }
-        }
-
-    });
 
     //页面加载时调个人信息 是否已经绑定邮箱
     $.ajax({
@@ -36,7 +20,11 @@ $(function(){
         },
         success: function(returnData){
             if (jQuery.trim(returnData).length > 0) {
-                var email=jQuery.trim(returnData.data.email)
+                if(returnData.resultMsg=='用户未登录'){
+                    window.location.href ='/ids/ts/login.jsp';
+                }
+
+                var email=jQuery.trim(returnData.data.email);
                 if (email == null || email == "") {
                 } else {
                     self.location = '/security';
@@ -75,34 +63,34 @@ $(function(){
                                 if (jQuery.trim(returnData).indexOf("200")>-1) {}
                                 else if (jQuery.trim(returnData).indexOf("newEmail_can_not_be_null")>-1){
                                     if($('.js-newEmailerror').hasClass('Validform_right')){
-                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空')
+                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空');
                                     }
                                     else{
-                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空')
+                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空');
                                     }
                                 }
                                 else if (jQuery.trim(returnData).indexOf("newEmail_type_is_illegal")>-1){
                                     if($('.js-newEmailerror').hasClass('Validform_right')){
-                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法')
+                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法');
                                     }
                                     else{
-                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法')
+                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法');
                                     }
                                 }
                                 else if (jQuery.trim(returnData).indexOf("newEmail_is_used")>-1){
                                     if($('.js-newEmailerror').hasClass('Validform_right')){
-                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱已被占用')
+                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱已被占用');
                                     }
                                     else{
-                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱已被占用')
+                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱已被占用');
                                     }
                                 }
                                 else if (jQuery.trim(returnData).indexOf("create_confirm_error")>-1){
                                     if($('.js-newEmailerror').hasClass('Validform_right')){
-                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败')
+                                        $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                                     }
                                     else{
-                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败')
+                                        $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                                     }
                                 }
 
@@ -147,55 +135,55 @@ $(function(){
                                 $('.js-bingfalse').hide();
                                 $('.js-bingsuccess').show();
 
-                                var i = 4;
-                                var t = setInterval(function(){
-                                    if (i == 0) {
-                                        clearInterval(t);
+                                var templet_time = 4;
+                                var templet_change = setInterval(function(){
+                                    if (templet_time == 0) {
+                                        clearInterval(templet_change);
                                         window.location.href ='/security'
                                         return;
                                     }
-                                    document.getElementById("js-countdown").innerHTML = i;
-                                    i--;
-                                }, 1000)
+                                    document.getElementById("js-countdown").innerHTML = templet_time;
+                                    templet_time--;
+                                }, 1000);
                             }
                             else if (jQuery.trim(returnData).indexOf("newEmail_can_not_be_null")>-1){
                                 if($('.js-emailCodeerror').hasClass('Validform_right')){
-                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空')
+                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空');
                                 }
                                 else{
-                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空')
+                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空');
                                 }
                             }
                             else if (jQuery.trim(returnData).indexOf("newEmail_type_is_illegal")>-1){
                                 if($('.js-emailCodeerror').hasClass('Validform_right')){
-                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法')
+                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法');
                                 }
                                 else{
-                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法')
+                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱格式非法');
                                 }
                             }
                             else if (jQuery.trim(returnData).indexOf("emailCode_can_not_be_null")>-1){
                                 if($('.js-emailCodeerror').hasClass('Validform_right')){
-                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码不能为空')
+                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码不能为空');
                                 }
                                 else{
-                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码不能为空')
+                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码不能为空');
                                 }
                             }
                             else if (jQuery.trim(returnData).indexOf("can_not_query_this_code") >-1 || jQuery.trim(returnData).indexOf("code_is_illegal") >-1){
                                 if($('.js-emailCodeerror').hasClass('Validform_right')){
-                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码错误')
+                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码错误');
                                 }
                                 else{
-                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码错误')
+                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱验证码错误');
                                 }
                             }
                             else if (jQuery.trim(returnData).indexOf("绑定失败，错误码")  >-1){
                                 if($('.js-emailCodeerror').hasClass('Validform_right')){
-                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败')
+                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
                                 }
                                 else{
-                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败')
+                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
                                 }
                             }
 
