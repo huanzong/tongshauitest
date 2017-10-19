@@ -11,9 +11,6 @@ $(function() {
 
     }
 
-
-    
-
     /**
      * 自定义插件
      */
@@ -275,13 +272,12 @@ $(function() {
     });
 
 
-    /**
-     *
-     * 通用弹窗
-     * */
+
 
 });
 
+
+//通用弹窗
 function globalShade(alerttext){
     $('.js_landShade').show();
     $('.js_landContBox').show();
