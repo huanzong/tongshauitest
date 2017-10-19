@@ -136,6 +136,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="o_g trolley-product">
+                            <div class="o_u o_df_3-5">
+                                <div class="l-checkbox">
+                                  <input class="js_checkbox" type="checkbox" data-notnull="true" value="">
+                                </div>
+                            </div>
+                            <div class="o_u d_df_1-10"></div>
+                            <div class="o_u d_df_1-10"></div>
+                            <div class="o_u d_df_1-10"></div>
+                            <div class="o_u d_df_1-10"></div>
+                        </div>
                     </div>
                 </div>
             </div>
