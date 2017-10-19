@@ -12,4 +12,6 @@ $(function() {
         var screenHeight = document.body.offsetHeight;
     }
 
+    $(".js_checkbox,.js_radio").jq_qvote();
+
 });
