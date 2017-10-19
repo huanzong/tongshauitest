@@ -44,7 +44,7 @@ $(function(){
 
                 yanzhengtrue = $('.js-newEmail').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){
-                    var newEmail=$('.js-newEmail').val();
+                    var templet_newEmail=$('.js-newEmail').val();
 
                     //  个人中心绑定邮箱发送验证码接口
                     $.ajax({
@@ -54,7 +54,7 @@ $(function(){
                         url: "/ids/ts/userInfoManager.jsp",
                         data: {
                             'editOperation':'sendBindEmailCode',
-                            'newEmail':newEmail
+                            'newEmail':templet_newEmail
                         },
                         error : function(XMLHttpRequest, textStatus, errorThrown){
                         },
@@ -115,8 +115,8 @@ $(function(){
         if(yanzhengtrue){//点击确定 个人中心绑定邮箱接口
             $('.js-submintData').unbind().bind('click',function(){
 
-                var newEmail=$('.js-newEmail').val();
-                var emailCode=$('.js-emailCode').val();
+                var templet_newEmail=$('.js-newEmail').val();
+                var templet_emailCode=$('.js-emailCode').val();
 
                 $.ajax({
                     type: "post",
@@ -124,8 +124,8 @@ $(function(){
                     url: "/ids/ts/userInfoManager.jsp",
                     data: {
                         'editOperation':'bindNewEmail',
-                        'newEmail':newEmail,
-                        'emailCode':emailCode
+                        'newEmail':templet_newEmail,
+                        'emailCode':templet_emailCode
                     },
                     error : function(XMLHttpRequest, textStatus, errorThrown){
                     },
@@ -134,6 +134,7 @@ $(function(){
                             if (jQuery.trim(returnData).indexOf("200")>-1) {
                                 $('.js-bingfalse').hide();
                                 $('.js-bingsuccess').show();
+                                document.cookie="isAlterBind=1";
 
                                 var templet_time = 4;
                                 var templet_change = setInterval(function(){
