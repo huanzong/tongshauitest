@@ -11,3 +11,21 @@
 
     </div></div>
 </div>
+
+
+<script>
+    //判断当前是否存在同域cookie
+    function istrsidssdssotoken(){
+        var trsidssdssotoken = "ssotoken";//同域Cookie
+        var sdssotoken = $.cookie(trsidssdssotoken);
+        if(sdssotoken!=null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    if(!istrsidssdssotoken()){
+        window.location.href ='/ids/ts/login.jsp'
+    }
+
+</script>
