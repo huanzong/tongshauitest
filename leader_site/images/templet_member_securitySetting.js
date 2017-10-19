@@ -9,7 +9,7 @@ $(function(){
         jumpToLoginPage()
     }
     if($.cookie('isAlterBind') == null ){
-        document.cookie="isAlterBind=0";
+        document.cookie="isAlterBind=0;path=/";
     }
 
     //页面加载时调个人信息

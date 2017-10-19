@@ -186,18 +186,18 @@ $(function(){
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
                             $('.js-unbingfalse').hide();
                             $('.js-unbingsuccess').show();
-                            document.cookie="isAlterBind=1";
+                            document.cookie="isAlterBind=1;path=/";
 
-                            var templet_time = 4;
-                            var templet_change = setInterval(function(){
-                                if (templet_time == 0) {
-                                    clearInterval(templet_change);
-                                    window.location.href ='/security'
-                                    return;
-                                }
-                                document.getElementById("js-countdown").innerHTML = templet_time;
-                                templet_time--;
-                            }, 1000);
+                            // var templet_time = 4;
+                            // var templet_change = setInterval(function(){
+                            //     if (templet_time == 0) {
+                            //         clearInterval(templet_change);
+                            //         window.location.href ='/security'
+                            //         return;
+                            //     }
+                            //     document.getElementById("js-countdown").innerHTML = templet_time;
+                            //     templet_time--;
+                            // }, 1000);
                         }
                         else if (jQuery.trim(returnData).indexOf("code_can_not_be_null")>-1){
 
