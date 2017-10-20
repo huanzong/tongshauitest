@@ -12,6 +12,22 @@ $(function() {
         var screenHeight = document.body.offsetHeight;
     }
 
-    $(".js_checkbox,.js_radio").jq_qvote();
+    $(".js_checkbox").jq_qvote();
+    // $(".js_checkbox ")
+    
+    /**
+     * 商品数量加减
+     */
+    $('.js_trolleyNumber').numberRule({
 
+        plus:'.icon-plus',
+        minus:'.icon-minus',
+        input:'input',
+        preNum:1,
+
+        callback:function(){
+
+        }
+
+    });
 });
