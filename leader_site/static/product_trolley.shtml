@@ -200,7 +200,7 @@
                                 <div class="trolley-price-old">￥890.34</div>
                             </div>
                             <div class="o_u o_df_1-10 o_df-center">
-                                <div class="trolley-number">
+                                <div class="trolley-number js_trolleyNumber">
                                     <i class="iconfont icon-minus"></i>
                                     <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
                                     <i class="iconfont icon-plus"></i>

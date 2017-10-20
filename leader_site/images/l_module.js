@@ -231,17 +231,16 @@ $(function() {
                 var inputVal = parseInt(ele.inputEle.val());
                 inputVal += elActive.preNum;
                 ele.inputEle.val(inputVal);
-                elActive.callback(num);
+                elActive.callback(inputVal);
             });
 
             //减法
-            ele.plusEle.on('click',function(){
+            ele.minusEle.on('click',function(){
                 var inputVal = parseInt(ele.inputEle.val());
-                inputVal += elActive.preNum;
+                inputVal -= elActive.preNum;
                 ele.inputEle.val(inputVal);
             });
             
-
         }
         
     });

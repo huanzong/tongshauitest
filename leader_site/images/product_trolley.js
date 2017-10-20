@@ -20,13 +20,14 @@ $(function() {
      */
     $('.js_trolleyNumber').numberRule({
 
-        plus:'.icon-plus',
-        minus:'.icon-minus',
-        input:'input',
-        preNum:1,
+        // plus:'.icon-plus',
+        // minus:'.icon-minus',
+        // input:'input',
+        // preNum:1,
 
-        callback:function(){
-
+        callback:function(num){
+            console.log(num);
+            // $('.js_trolleyNumber').find('.icon-plus').off();
         }
 
     });
