@@ -10,6 +10,7 @@ $(function(){
     //     jumpToLoginPage()；
     // }
 
+    $('.js-memberRevRateLine').css('width','25%');
     //页面加载时调个人信息
     $.ajax({
         type: "get",
@@ -97,8 +98,11 @@ $(function(){
                 success: function(returnData){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
-                            $('.js_validateEmail').hide();
-                            $('.js_bindNewMob').show();
+                            $('.js-memberRevRateLine').css('width','75%');
+                            $('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
+                            $('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+                            $('.js-validateEmail').hide();
+                            $('.js-bindNewMob').show();
                         }
 
                     }
@@ -207,8 +211,10 @@ $(function(){
                     success: function(returnData){
                         if (jQuery.trim(returnData).length > 0) {
                             if (jQuery.trim(returnData).indexOf("200")>-1) {
-                                $('.js_bindNewMob').hide();
-                                $('.js_bingsuccess').show();
+                                $('.js-memberRevRateLine').css('width','100%');
+                                $('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+                                $('.js-bindNewMob').hide();
+                                $('.js-bingsuccess').show();
                                 document.cookie="isAlterBind=1;path=/";
 
                                 var templet_time = 4;
