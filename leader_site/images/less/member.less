@@ -1963,6 +1963,7 @@
 						float: left;
 						display: inline-block;
 						background: @l-green;
+						width: 25%;
 					}
 
 					i {
@@ -2078,6 +2079,55 @@
 
 					.member-revisemob-ratelinebg {
 						width: 100%;
+					}
+				}
+				.member-revisemob-No1{
+					.member-revisemob-line-point01{
+						//color: #ccc;
+						span {
+							color:#ccc;
+						}
+					}
+					.member-revisemob-line-point02{
+						color:@l-green;
+					}
+					.member-revisemob-line-point03{
+						color:@l-green;
+					}
+				}
+				.member-revisemob-No2{
+					.member-revisemob-line-point01{
+						span {
+							color:@l-green;
+						}
+					}
+					.member-revisemob-line-point02{
+						span {
+							color:@l-green;
+						}
+					}
+					.member-revisemob-line-point03{
+						span {
+							color: #ccc;
+						}
+					}
+				}
+				.member-revisemob-No3{
+					.member-revisemob-line-point01{
+						//color: #ccc;
+						span {
+							color:@l-green;
+						}
+					}
+					.member-revisemob-line-point02{
+						span {
+							color:@l-green;
+						}
+					}
+					.member-revisemob-line-point03{
+						span {
+							color:@l-green;
+						}
 					}
 				}
 			}
@@ -2663,7 +2713,7 @@
 			.memeber-address-list-box{
 				.member-addressbox {
 					width: 100%;
-					padding-top: 20px;
+					padding-top: 30px;
 					display: inline-block;
 					margin-top: 10px;
 					text-align: left;
@@ -2782,7 +2832,7 @@
 						.member-address-tab {
 							position: absolute;
 							top: 0;
-							display: inline-block;
+							display: none;
 							right: 20px;
 							padding: 0 15px;
 						}
@@ -2801,10 +2851,18 @@
 							}
 						}
 					}
+					.member-address-setdefault{
+						.member-address-tab{
+							display: inline-block;
+						}
+					 	.member-address-fitaddbtn{
+							display: none;
+						}
+					}
 				}
 				>div:first-child{
 					border-top: 1px solid #eee;
-					padding-top: 50px;
+					padding-top-top: 50px;
 
 				}
 			}

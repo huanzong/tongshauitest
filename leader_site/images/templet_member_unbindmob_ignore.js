@@ -252,7 +252,7 @@ $('.js_emailCodeYz').blur(function(){
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
         $('.js_subimGetUp').click(function(){
-            console.log(1111);
+
             return false;
         })
     }

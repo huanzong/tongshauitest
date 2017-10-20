@@ -6,9 +6,9 @@
 $(function(){
 
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
+    //if(!istrsidssdssotoken()){
+    //    jumpToLoginPage()
+    //}
 
     //页面加载时调个人信息 是否已经绑定邮箱
     $.ajax({

@@ -166,8 +166,8 @@
                         <!--<div class="member-addressbox-cutrule"></div>-->
                         <div class="memeber-address-list-box js_lineInfo">
                             <div class="member-addressbox o_g js_memberAddressList">
-                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox">
-                                    <div class="member-addresslistbox">
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox  ">
+                                    <div class="member-addresslistbox member-address-setdefault">
                                         <div class="member-address-name">王柯科</div>
                                         <div class="member-address-mobnumber">157****3370</div>
                                         <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
@@ -178,6 +178,7 @@
                                             <a href="javascript:;" >删除</a>
                                         </div>
                                         <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressrightbox">
@@ -191,7 +192,8 @@
                                             <div class="member-address-line"></div>
                                             <a href="javascript:;" >删除</a>
                                         </div>
-                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn">设为默认</a>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
+                                        <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
                                     </div>
                                 </div>
                             </div>
@@ -207,6 +209,7 @@
                                             <div class="member-address-line"></div>
                                             <a href="javascript:;" >删除</a>
                                         </div>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
                                         <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
                                     </div>
                                 </div>
@@ -221,7 +224,8 @@
                                             <div class="member-address-line"></div>
                                             <a href="javascript:;" >删除</a>
                                         </div>
-                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn">设为默认</a>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
+                                        <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
                                     </div>
                                 </div>
                             </div>
