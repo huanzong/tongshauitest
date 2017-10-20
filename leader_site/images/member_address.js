@@ -71,3 +71,9 @@ $('.js_memberAddressBtn').click(function(){
 $('.js_addressGetUpData').click(function(){
     //if()
 })
+//点击设置默认地址按钮
+$('.js_addressSetDefault').click(function(){
+    $('.member-address-setdefault').removeClass('member-address-setdefault');
+   //$(this).parents('.member-addressrightbox').find('.member-addresslistbox').siblings().removeClass('member-address-setdefault');
+    $(this).parents('.member-addresslistbox').addClass('member-address-setdefault');
+})
