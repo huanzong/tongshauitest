@@ -81,6 +81,7 @@
   border-radius: 7px;
   padding-top: 35px;
   padding-bottom: 60px;
+  background: #fff;
   .product-ordercon-list-title{
     font-size: 14px;
     line-height: 40px;
@@ -107,6 +108,11 @@
     .product-ordercon-list-btn{
       color: #666;
     }
+    .name{
+      top: 0px;
+      right: 0px;
+      border: none;
+    }
   }
   >li{
     margin-bottom: 20px;
@@ -122,6 +128,7 @@
     margin-bottom: 25px;
     border: 1px solid #eee;
     box-shadow: 0 0 10px #eee;
+    background: #fff;
     >.c_ipt_cr{
       background-image: url(trolley_icon_sm.png);
       height: 32px;
@@ -283,5 +290,96 @@
     }
     float: right;
     padding-right: 30px;
+  }
+}
+.product-orderconfirm-prolist-box{
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 7px;
+  .product-orderconfirm-prolist-title{
+    font-size: 14px;
+    background: #f3f3f3;
+    i{
+      padding-left: 40px;
+      line-height: 65px;
+
+    }
+  }
+  .product-orderconfirm-prolist-cont{
+    padding: 20px 0;
+    background: #fff;
+    .order-prolist-cont-img{
+      text-align: right;
+      vertical-align: middle;
+      img{
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .order-prolist-cont-title{
+      text-align: left;
+      vertical-align: middle;
+      p{
+        font-size: 16px;
+        color: #333;
+        line-height: 27px;
+      }
+      span{
+        font-size: 14px;
+        color: #999;
+      }
+    }
+    .order-prolist-cont-nub{
+      font-size: 14px;
+      line-height: 80px;
+      text-align: left;
+      span{
+        font-size: 17px;
+        color: #333;padding-right: 5px;
+        vertical-align: bottom;
+      }
+      span:nth-child(2){
+        font-size: 14px;
+        padding-left: 5px;
+      }
+    }
+
+    .order-prolist-cont-total{
+      color: red;
+      font-size: 17px;
+      line-height: 80px;
+      text-align: center;
+
+    }
+  }
+  .product-nogoods{
+    .order-prolist-cont-productno{
+      color: #f39800;
+      font-size: 14px;
+      line-height: 80px;
+    }
+    .order-prolist-cont-img{
+      position: relative;
+
+
+      img{
+        opacity:0.4;
+        filter:alpha(opacity=40);
+
+      }
+    }
+    .order-prolist-cont-title, .order-prolist-cont-nub,.order-prolist-cont-total{
+      color: #999;
+      span{
+        color: #999;
+      }
+      p{
+        color: #999!important;
+      }
+      i{
+        color: #999;
+      }
+    }
   }
 }

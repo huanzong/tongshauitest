@@ -353,17 +353,133 @@
                 <div class="product-ordercon-title o_u o_df_2-2">
                     <h4 class="o_u">商品清单及优惠</h4><a href=""  class="o_u"><span class=" iconfont icon-arrow-line-left"></span>返回购物车</a>
                 </div>
-                <div class="">
-                    <strong>【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</strong>
-                </div>
-                <div>
-                    <div class="o_u o_df_1-10">
-                        <img src="" alt="">
+                <div class="product-orderconfirm-prolist-box">
+                    <div class="product-orderconfirm-prolist-title">
+                        <i>【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
                     </div>
+                    <div class="product-orderconfirm-prolist-cont">
+                        <div class="o_u o_df_1-10 order-prolist-cont-img">
+                            <img src="images/compare_goods.PNG" alt="">
+                        </div>
+                        <div class="o_u o_df_4-10 order-prolist-cont-title">
+                            <p>对开双门大容量浅薄静音节能冰箱</p>
+                            <span>BCD-455WLDPC</span>
+                        </div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-nub">
+                            <span>¥ 1799</span>x<span>1</span>
+                        </div>
+                        <div class="o_u o_df_1-10 order-prolist-cont-productno">地区无货</div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-total">
+                            <i>¥ 1799 </i>
+                        </div>
+
+                    </div>
+                    <!--无货商品添加 class product-nogoods -->
+                    <div class="product-orderconfirm-prolist-cont product-nogoods">
+                        <div class="o_u o_df_1-10 order-prolist-cont-img">
+                            <img src="images/compare_goods.PNG" alt="">
+                        </div>
+                        <div class="o_u o_df_4-10 order-prolist-cont-title">
+                            <p>对开双门大容量浅薄静音节能冰箱</p>
+                            <span>BCD-455WLDPC</span>
+                        </div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-nub">
+                            <span>¥ 1799</span>x<span>1</span>
+                        </div>
+                        <div class="o_u o_df_1-10 order-prolist-cont-productno">地区无货</div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-total">
+                            <i>¥ 1799 </i>
+                        </div>
+
+                    </div>
+                    <div class="product-orderconfirm-prolist-title">
+                        <i>【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+                    </div>
+                    <div class="product-orderconfirm-prolist-cont">
+                        <div class="o_u o_df_1-10 order-prolist-cont-img">
+                            <img src="images/compare_goods.PNG" alt="">
+                        </div>
+                        <div class="o_u o_df_4-10 order-prolist-cont-title">
+                            <p>对开双门大容量浅薄静音节能冰箱</p>
+                            <span>BCD-455WLDPC</span>
+                        </div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-nub">
+                            <span>¥ 1799</span>x<span>1</span>
+                        </div>
+                        <div class="o_u o_df_1-10 order-prolist-cont-productno">地区无货</div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-total">
+                            <i>¥ 1799 </i>
+                        </div>
+
+                    </div>
+                    <div class="product-orderconfirm-prolist-cont">
+                        <div class="o_u o_df_1-10 order-prolist-cont-img">
+                            <img src="images/compare_goods.PNG" alt="">
+                        </div>
+                        <div class="o_u o_df_4-10 order-prolist-cont-title">
+                            <p>对开双门大容量浅薄静音节能冰箱</p>
+                            <span>BCD-455WLDPC</span>
+                        </div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-nub">
+                            <span>¥ 1799</span>x<span>1</span>
+                        </div>
+                        <div class="o_u o_df_1-10 order-prolist-cont-productno">地区无货</div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-total">
+                            <i>¥ 1799 </i>
+                        </div>
+
+                    </div>
+                    <div class="product-orderconfirm-prolist-title">
+                        <i>【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+                    </div>
+                    <div class="product-orderconfirm-prolist-cont">
+                        <div class="o_u o_df_1-10 order-prolist-cont-img">
+                            <img src="images/compare_goods.PNG" alt="">
+                        </div>
+                        <div class="o_u o_df_4-10 order-prolist-cont-title">
+                            <p>对开双门大容量浅薄静音节能冰箱</p>
+                            <span>BCD-455WLDPC</span>
+                        </div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-nub">
+                            <span>¥ 1799</span>x<span>1</span>
+                        </div>
+                        <div class="o_u o_df_1-10 order-prolist-cont-productno">地区无货</div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-total">
+                            <i>¥ 1799 </i>
+                        </div>
+
+                    </div>
+                    <div class="product-orderconfirm-prolist-title">
+                        <i>【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+                    </div>
+                    <div class="product-orderconfirm-prolist-cont">
+                        <div class="o_u o_df_1-10 order-prolist-cont-img">
+                            <img src="images/compare_goods.PNG" alt="">
+                        </div>
+                        <div class="o_u o_df_4-10 order-prolist-cont-title">
+                            <p>对开双门大容量浅薄静音节能冰箱</p>
+                            <span>BCD-455WLDPC</span>
+                        </div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-nub">
+                            <span>¥ 1799</span>x<span>1</span>
+                        </div>
+                        <div class="o_u o_df_1-10 order-prolist-cont-productno">地区无货</div>
+                        <div class="o_u o_df_2-10 order-prolist-cont-total">
+                            <i>¥ 1799 </i>
+                        </div>
+
+                    </div>
+                    <div class="product-orderconfirm-prolist-title">
+                        <i>【套餐】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC</i>
+                    </div>
+                </div>
+
+                <!--商品清单及优惠 END-->
+                <!--赠品-->
+                <div class="product-orderconfirm-give-box">
 
                 </div>
-                <!--商品清单及优惠 END-->
-
+                <!--赠品 END-->
             </div>
 
         </div>

@@ -118,8 +118,19 @@ $(function() {
 
 
     //修改手机页面三种状态
-    //$('.js-memberRevRateLine').css('width','0%');
-    //$('.js-memberRevRateLine').css('width','50%');
+
+
+    ////第二种
+    //$('.js-memberRevRateLine').css('width','75%');
+    //$('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
+    //$('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+    ////第三种
     //$('.js-memberRevRateLine').css('width','100%');
+    //$('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+    //
+
+
+
+
 
 });
