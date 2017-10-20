@@ -326,6 +326,59 @@
                         </div>
                     </div>
                     <!-- 限额商品 END -->
+                    <!-- 组合商品-->
+                    <div class="trolley-prolist">
+                        <div class="trolley-coupon o_g">
+                            <div class="o_u o_df_7-10">
+                                <div class="coupon-info-time">
+                                    <div class="coupon-info-tit">
+                                        【组合】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_3-10">
+                                <div class="coupon-time">
+                                    <span>剩余数量</span>
+                                    <span class="coupon-time-orange">14</span>
+                                    <span>份</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_g trolley-product">
+                            <div class="o_u o_df_3-5">
+                                <div class="l-checkbox trolley-product-check">
+                                  <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
+                                </div>
+                                <div class="trolley-product-img">
+                                    <img src="images/compare_goods.PNG">
+                                </div>
+                                <div class="trolley-product-font">
+                                  <div class="trolley-middle-box">
+                                        <div class="trolley-middle-inner">
+                                            <p class="trolley-product-zh">统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然</p>
+                                            <p class="trolley-product-en">JIGEJOJ-GHEGJOEJ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-price-only">￥89034</div>
+                            </div>
+                            <div class="o_u o_df_1-10 o_df-center">
+                                <div class="trolley-number-static">
+                                    <i class="iconfont icon-close"></i>
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-price-total">￥89034</div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <a href="javascript:;" class="trolley-price-delete">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 组合商品 END -->
                 </div>
             </div>
             <!-- 商品列表 END -->

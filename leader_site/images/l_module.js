@@ -205,41 +205,46 @@ $(function() {
         numberRule:function(el){
 
             var $this = $(this);
+            console.log($this);
             //默认元素
             var elActive = {
                 plus:'.icon-plus',
                 minus:'.icon-minus',
                 input:'input',
                 preNum:1,
-                callback:function(num){
-
-                }
+                callback:function(num){}
             };
 
             //实际元素-用户定义
             jQuery.extend(elActive, el);
 
-            //元素存储
-            var ele = {
-                plusEle:$this.find(elActive.plus),
-                minusEle:$this.find(elActive.minus),
-                inputEle:$this.find(elActive.input),
-            };
+            //避免相同命名冲突
+            $this.each(function(i,n){
 
-            //加法
-            ele.plusEle.on('click',function(){
-                var inputVal = parseInt(ele.inputEle.val());
-                inputVal += elActive.preNum;
-                ele.inputEle.val(inputVal);
-                elActive.callback(inputVal);
+                //元素存储
+                var ele = {
+                    plusEle:$(this).find(elActive.plus),
+                    minusEle:$(this).find(elActive.minus),
+                    inputEle:$(this).find(elActive.input),
+                };
+
+                //加法
+                ele.plusEle.on('click',function(){
+                    var inputVal = parseInt(ele.inputEle.val());
+                    inputVal += elActive.preNum;
+                    ele.inputEle.val(inputVal);
+                    elActive.callback(inputVal);
+                });
+
+                //减法
+                ele.minusEle.on('click',function(){
+                    var inputVal = parseInt(ele.inputEle.val());
+                    inputVal -= elActive.preNum;
+                    ele.inputEle.val(inputVal);
+                });
             });
 
-            //减法
-            ele.minusEle.on('click',function(){
-                var inputVal = parseInt(ele.inputEle.val());
-                inputVal -= elActive.preNum;
-                ele.inputEle.val(inputVal);
-            });
+                
             
         }
         
