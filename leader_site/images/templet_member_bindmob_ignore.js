@@ -1,30 +1,14 @@
-/**
- * Created by 15610 on 2017/10/13.
- */
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-安全设置-绑定手机
+* @author:      刘悦
+* @date        2017.10.19
+* ---------------------------------------------------------------------------*/
 $(function(){
-    //前端判断是否登录
 
-    if(!istrsidssdssotoken()){
-        window.location.href ='/ids/ts/login.jsp'
-    }
-
-
-    //后端判断是否登录
-    $.ajax({
-        type: "get",
-        dataType: "json",
-        url: "/user/front/user/userInfo",
-        data: "",
-        error : function(XMLHttpRequest, textStatus, errorThrown){
-        },
-        success: function(returnData){
-
-            if(returnData.resultMsg=='用户未登录'){
-                window.location.href ='/ids/ts/login.jsp'
-            }
-        }
-
-    });
+    //前台判断是否登陆
+    // if(!istrsidssdssotoken()){
+    //     jumpToLoginPage()
+    // }
 
     //页面加载时调个人信息 是否已经绑定过手机号
     $.ajax({
@@ -36,8 +20,12 @@ $(function(){
         },
        success: function(returnData){
            if (jQuery.trim(returnData).length > 0) {
-               var mobile=jQuery.trim(returnDate.data.mobile)
-               if (mobile == null || mobile == "") {
+               if(returnData.resultMsg=='用户未登录'){
+                   window.location.href ='/ids/ts/login.jsp';
+               }
+
+               var templet_mobile=jQuery.trim(returnData.data.mobile);
+               if (templet_mobile == null || templet_mobile == "") {
 
 
                } else {
@@ -58,7 +46,7 @@ $(function(){
 
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){
-                    var newMobile=$('.js-newMobile').val();
+                    var templet_newMobile=$('.js-newMobile').val();
 
                     //  个人中心绑定手机号发送验证码接口
                    $.ajax({
@@ -68,7 +56,7 @@ $(function(){
                        url: "/ids/ts/userInfoManager.jsp",
                        data: {
                            'editOperation':'sendBindMobileCode',
-                           'newMobile':newMobile
+                           'newMobile':templet_newMobile
                        },
                        error : function(XMLHttpRequest, textStatus, errorThrown){
                        },
@@ -79,34 +67,34 @@ $(function(){
                                }
                                else if (jQuery.trim(returnData).indexOf("newMobile_can_not_be_null")>-1){
                                    if($('.js-newMobileerror').hasClass('Validform_right')){
-                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
+                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空');
                                    }
                                    else{
-                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空')
+                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号不能为空');
                                    }
                                }
                                else if (jQuery.trim(returnData).indexOf("newMobile_type_is_illegal")>-1){
                                    if($('.js-newMobileerror').hasClass('Validform_right')){
-                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法')
+                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法');
                                    }
                                    else{
-                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法')
+                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号格式非法');
                                    }
                                }
                                else if (jQuery.trim(returnData).indexOf("newMobile_is_used")>-1){
                                    if($('.js-newMobileerror').hasClass('Validform_right')){
-                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号已被占用')
+                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号已被占用');
                                    }
                                    else{
-                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号已被占用')
+                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>手机号已被占用');
                                    }
                                }
                                else if (jQuery.trim(returnData).indexOf("create_confirm_error")>-1){
                                    if($('.js-newMobileerror').hasClass('Validform_right')){
-                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败')
+                                       $('.js-newMobileerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                                    }
                                    else{
-                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败')
+                                       $('.js-newMobileerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                                    }
                                }
                            }
@@ -128,9 +116,8 @@ $(function(){
 
         if(yanzhengtrue){//点击确定 个人中心绑定手机号接口
             $('.js-submintData').unbind().bind('click',function(){
-
-                var newMobile=$('.js-newMobile').val();
-                var mobileCode=$('.js-mobileCode').val();
+                var templet_newMobile=$('.js-newMobile').val();
+                var templet_mobileCode=$('.js-mobileCode').val();
 
                $.ajax({
                    type: "post",
@@ -138,8 +125,8 @@ $(function(){
                    url: "/ids/ts/userInfoManager.jsp",
                    data: {
                        'editOperation':'changeMobile',
-                       'newMobile':newMobile,
-                       'mobileCode':mobileCode
+                       'newMobile':templet_newMobile,
+                       'mobileCode':templet_mobileCode
                    },
                    error : function(XMLHttpRequest, textStatus, errorThrown){
                    },
@@ -148,17 +135,18 @@ $(function(){
                            if (jQuery.trim(returnData).indexOf("200")>-1) {
                                $('.js-bingfalse').hide();
                                $('.js-bingsuccess').show();
+                               document.cookie="isAlterBind=1;path=/";
 
-                               var i = 4;
-                               var t = setInterval(function(){
-                                   if (i == 0) {
-                                       clearInterval(t);
+                               var templet_time = 4;
+                               var templet_change = setInterval(function(){
+                                   if (templet_time == 0) {
+                                       clearInterval(templet_change);
                                        window.location.href ='/security'
                                        return;
                                    }
-                                   document.getElementById("js-countdown").innerHTML = i;
-                                   i--;
-                               }, 1000)
+                                   document.getElementById("js-countdown").innerHTML = templet_time;
+                                   templet_time--;
+                               }, 1000);
                            }
                            else if (jQuery.trim(returnData).indexOf("newMobile_can_not_be_null")>-1){
                                if($('.js-mobileCodeerror').hasClass('Validform_right')){

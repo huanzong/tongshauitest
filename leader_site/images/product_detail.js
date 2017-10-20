@@ -115,6 +115,10 @@ $(function() {
                     $(this).attr('src', src);
                 }
             });
+            //点击加好显示所有图片
+            $('.js_foldimg .box').each(function (i) {
+                $(this).removeClass("o_df-hide");
+            })
 
             //小屏幕文字列表-轮播
 	        if(document.body.offsetWidth <= 991){
@@ -142,6 +146,12 @@ $(function() {
                     $(this).attr('src', '');
                 }
             });
+            //点击加号隐藏img(除了第一个)
+            $('.js_foldimg .box').each(function (i) {
+                $(this).addClass("o_df-hide");
+                $('.js_foldimg .box').eq(0).removeClass("o_df-hide");
+            })
+
 
             $('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
             $('.js_center').oBoxCenter().init();
@@ -151,15 +161,18 @@ $(function() {
 
         //锚点定位后，左侧按钮定位
         $('.js_foldoverNav').find('a').on('click',function(){
-        	var index = parseInt($(this).attr('data-index'))-1;
-        	var top = 370;
+        	var index = parseInt($(this).attr('data-index'));
+        	//点击当前锚点，添加选中状态，同类去掉选中状态
+        	$(this).addClass("alive").siblings().removeClass("alive");
+            var btnNum = $(".js_foldlsit_btn").find("a").length;
+        	var top = (btnNum * 52) + 60;
         	for(var i=0 ; i<index ; i++){
         		top += $('.js_foldimg').find('img').eq(i).height();
         	}
             if(document.body.offsetWidth>991){
                 $('.js_foldPlus').css('top',top);
                 $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
-                $('.js_foldlist').css('top',top-310);
+                $('.js_foldlist').css('top',top-(btnNum * 52));
             }else{
                 $('.js_foldoverNav').css('height',0);
             }
@@ -458,5 +471,32 @@ $(function() {
         ajaxPost: true
 
     });
+
+
+    foldlsit();
+    //电商拉页
+    function foldlsit() {
+        $(".js_foldlsit_btn").html("");
+        var num =$(".js_buyhtml .js_box").length;
+        var btnhtml = '';
+        var url=window.location.href.split("/")[window.location.href.split("/").length-1]
+        url = url.split("/")[0];
+        for(var i=0;i<num;i++){
+            $(".js_buyhtml .js_box").eq(i).attr("id",i+'F').addClass("o_df-hide");
+            $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
+            var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
+            if(i == 0){
+                btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
+            }else{
+                btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
+            }
+            $(".js_foldlsit_btn").html(btnhtml);
+
+        }
+        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        var foldPlus = (btnNum * 52) + 60;
+        $(".js_foldPlus").css("top",foldPlus+'px');
+    }
+
 
 });

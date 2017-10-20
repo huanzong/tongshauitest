@@ -38,7 +38,7 @@
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                         <div class="l-input member-address-allinput  ">
                                             <!--js-addressUserName-->
-                                            <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-bindUsername js_inputCheck" name="" ph="请输入联系人的姓名"  value=""  datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>请输入您的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                            <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-bindUsername js_inputCheck" name="" ph="请输入联系人的姓名"  value=""  datatype="s2-8"  data-normal="1" errormsg="<i class='iconfont icon-information-solid'></i>请输入您的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                             <p class="Validform_checktip Validform_wrong js-addressUserError"></p>
                                         </div>
                                     </div>
@@ -50,7 +50,7 @@
                                         <div class="l-input member-address-allinput ">
                                             <!--js-addressMobile-->
                                             <form class="ui_validForm js_ui_validForm">
-                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 inputxt js-bindmobinput js-newMobile js_inputCheck" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 inputxt js-bindmobinput js-newMobile js_inputCheck" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  data-normal="1" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                                 <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                             </form>
                                         </div>
@@ -81,7 +81,7 @@
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5  o_sm_2-2 o_xs_2-2 member-address-listname">详细地址<span>*</span></div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
-                                        <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
                                             <div class="selectbox">
                                                 <div class="member-address-inputbox">
                                                     <select name="" id="js_save"  autotext="省">
@@ -93,7 +93,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
                                             <div class="selectbox">
                                                 <div class="member-address-inputbox">
                                                     <select name="" id="js_city"  autotext="市">
@@ -105,7 +105,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
                                             <div class="selectbox">
                                                 <div class="member-address-inputbox">
                                                     <select name="" id="js_area"  autotext="区">
@@ -116,23 +116,26 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
+                                            <div class="selectbox">
+                                                <div class="member-address-inputbox">
+                                                    <select name="" id="js_road"  autotext="街道">
+                                                        <option value="0">--湛山街道--</option>
+                                                        <option value="1">某某街道</option>
+                                                        <option value="2">某某街道</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p class="Validform_checktip Validform_wrong   Validform_right js-newMobileerror"><i class="iconfont icon-information-solid"></i>请在普通输入框填写信息</p>
-
                                     </div>
-
                                 </div>
-
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
                                         <div class="l-textarea member-address-textareabox ">
-                                            <!--js_addressDetailed-->
-                                            <!--<form class="ui_validForm js_ui_validForm">-->
-                                            <!--<input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>-->
-                                            <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" ></textarea>
+                                            <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" datatype="s1-100"  data-normal="1" errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" ></textarea>
                                             <p class="Validform_checktip Validform_wrong member-address-error js-addressMobError"></p>
-                                            <!--</form>-->
-
                                         </div>
                                     </div>
                                 </div>
@@ -148,50 +151,86 @@
 
                                 <!-- 增加地址或者更改地址时的样式 -->
                                 <div class="o_g member-address-list">
-                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
+                                    <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g ">
                                         <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-address-editaddenterbtn">
                                             <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-red  l-btn-disable js_addressGetUpData">保存</a>
                                         </div>
                                         <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-address-addcancelbtn">
-                                            <a href="javascript:;" class="l-btn-normal l-btn-line2 js_addressCancel">取消</a>
+                                            <a href="javascript:;" class="l-btn-normal l-btn-line2 js_addressCancel" onclick="globalShade('确定取消收藏？')">取消</a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </form>
                         <!--<div class="member-addressbox-cutrule"></div>-->
-                        <div class="member-addressbox o_g js_memberAddressList">
-                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox">
-                                <div class="member-addresslistbox">
-                                    <div class="member-address-name">王柯科</div>
-                                    <div class="member-address-mobnumber">157****3370</div>
-                                    <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
-                                    <div class="member-address-btnbox">
-                                        <i class="iconfont icon-pencil-solid"></i>
-                                        <a href="javascript:;" >修改</a>
-                                        <div class="member-address-line"></div>
-                                        <a href="javascript:;" >删除</a>
+                        <div class="memeber-address-list-box js_lineInfo">
+                            <div class="member-addressbox o_g js_memberAddressList">
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox  ">
+                                    <div class="member-addresslistbox member-address-setdefault">
+                                        <div class="member-address-name">王柯科</div>
+                                        <div class="member-address-mobnumber">157****3370</div>
+                                        <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
+                                        <div class="member-address-btnbox">
+                                            <i class="iconfont icon-pencil-solid"></i>
+                                            <a href="javascript:;" >修改</a>
+                                            <div class="member-address-line"></div>
+                                            <a href="javascript:;" >删除</a>
+                                        </div>
+                                        <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
                                     </div>
-                                    <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                </div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressrightbox">
+                                    <div class="member-addresslistbox">
+                                        <div class="member-address-name">王柯科</div>
+                                        <div class="member-address-mobnumber">157****3370</div>
+                                        <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
+                                        <div class="member-address-btnbox">
+                                            <i class="iconfont icon-pencil-solid"></i>
+                                            <a href="javascript:;" >修改</a>
+                                            <div class="member-address-line"></div>
+                                            <a href="javascript:;" >删除</a>
+                                        </div>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
+                                        <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressrightbox">
-                                <div class="member-addresslistbox">
-                                    <div class="member-address-name">王柯科</div>
-                                    <div class="member-address-mobnumber">157****3370</div>
-                                    <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
-                                    <div class="member-address-btnbox">
-                                        <i class="iconfont icon-pencil-solid"></i>
-                                        <a href="javascript:;" >修改</a>
-                                        <div class="member-address-line"></div>
-                                        <a href="javascript:;" >删除</a>
+                            <div class="member-addressbox o_g js_memberAddressList">
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressleftbox">
+                                    <div class="member-addresslistbox">
+                                        <div class="member-address-name">王柯科</div>
+                                        <div class="member-address-mobnumber">157****3370</div>
+                                        <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
+                                        <div class="member-address-btnbox">
+                                            <i class="iconfont icon-pencil-solid"></i>
+                                            <a href="javascript:;" >修改</a>
+                                            <div class="member-address-line"></div>
+                                            <a href="javascript:;" >删除</a>
+                                        </div>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
+                                        <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
                                     </div>
-                                    <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn">设为默认</a>
+                                </div>
+                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-addressrightbox">
+                                    <div class="member-addresslistbox">
+                                        <div class="member-address-name">王柯科</div>
+                                        <div class="member-address-mobnumber">157****3370</div>
+                                        <div class="member-address-addtext">山东省青岛市黄岛区长江中路2号9907室</div>
+                                        <div class="member-address-btnbox">
+                                            <i class="iconfont icon-pencil-solid"></i>
+                                            <a href="javascript:;" >修改</a>
+                                            <div class="member-address-line"></div>
+                                            <a href="javascript:;" >删除</a>
+                                        </div>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault">设为默认</a>
+                                        <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- 地址管理 End-->
                     </div>
                     <!-- 内容区域 End-->
@@ -200,7 +239,6 @@
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
-
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->
@@ -212,8 +250,8 @@
         <div class="js_landInputBox">
             <div class="land-cont-normal-input o_g">
                 <div class="o_g member-bingmob-list">
-                    <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landUserId">
-                        <p>确定取消收藏？</p>
+                    <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                        <p class="js-landText"></p>
                     </div>
                 </div>
             </div>
