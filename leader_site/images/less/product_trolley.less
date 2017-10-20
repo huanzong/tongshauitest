@@ -115,18 +115,6 @@
 		color: #333;
 		line-height: 32px;
 		padding: 10px 0;
-		.c_ipt_cr{
-			background-image: url(trolley_icon_sm.png);
-			height: 32px;
-    		line-height: 32px;
-			padding-left: 40px;
-		}
-		.c_ipt_cr_cs{
-			background-position: 0 -62px;
-		}
-		.c_ipt_cr_cus{
-			background-position: 0 0;
-		}
 		.head-line-select{
 			display: inline-block;
 			width: 15%;
@@ -147,7 +135,7 @@
 	}
 }
 
-//产品列表-表格
+//产品列表-表格-优惠券
 .trolley-prolist{
 	margin-top: 30px;
 	border: 1px solid #eee;
@@ -159,22 +147,25 @@
 }
 .coupon-info{
 	padding: 18px 0 14px 60px;
-	.coupon-info-tit{
-		font-size: 14px;
-		line-height: 24px;
-		color: #333;
+}
+.coupon-info-time{
+	padding: 28px 0 28px 60px;
+}
+.coupon-info-tit{
+	font-size: 14px;
+	line-height: 24px;
+	color: #333;
+}
+.coupon-info-des{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 24px;
+	.info-des-icon{
+		color: @l-red;
 	}
-	.coupon-info-des{
-		display: inline-block;
-		font-size: 12px;
-		line-height: 24px;
-		.info-des-icon{
-			color: @l-red;
-		}
-		.info-des-det{
-			color: #666;
-			padding-right: 20px;
-		}
+	.info-des-det{
+		color: #666;
+		padding-right: 20px;
 	}
 }
 .coupon-select{
@@ -188,4 +179,119 @@
 	line-height: 80px;
 	color: #666;
 	font-size: 12px;
+}
+.coupon-time-orange{
+	font-size: 18px;
+	color: @l-orange;
+	font-weight: bold;
+}
+//产品列表-表格-产品列表信息
+.trolley-product{
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+.trolley-middle-box{
+	display: table; 
+	height: 140px;
+}
+.trolley-middle-inner{
+	display: table-cell; 
+	vertical-align:middle;
+}
+.trolley-product-check{
+	margin-left: -16px;
+	padding-top: 53px;
+}
+.trolley-product-img{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	padding: 30px 45px;
+	img{
+		width: 100%;
+	}
+}
+.trolley-product-zh{
+	font-size: 16px;
+}
+.trolley-product-en{
+	font-size: 14px;
+	font-size: "Open Sans";
+}
+.trolley-product-font{
+	display: inline-block;
+	max-width: 67%;
+	p{
+		line-height: 22px;
+		padding-left: 15px;
+		color: #333;
+	}
+}
+.trolley-price-now{
+	text-align: center;
+	color: #333;
+	line-height: 24px;
+	font-size: 16px;
+	padding-top: 50px;
+}
+.trolley-price-old{
+	text-align: center;
+	color: #999;
+	line-height: 20px;
+	font-size: 12px;
+}
+.trolley-price-only{
+	text-align: center;
+	color: #333;
+	line-height: 140px;
+	font-size: 16px;
+}
+.trolley-number{
+	display: inline-block;
+	min-width: 88px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 54px;
+	border: 1px solid #ccc;
+	border-radius: 30px;
+	font-size: 0;
+	cursor: pointer;
+	input{
+		display: inline-block;
+		border: none;
+		padding: 0;
+		width: 45px;
+		text-align: center;
+		line-height: 30px;
+		font-size: 12px;
+	}
+	i{
+		display: inline-block;
+		line-height: 30px;
+		font-size: 12px;
+	}
+}
+.trolley-number-static{
+	line-height: 140px;
+	font-size: 14px;
+	color: #333;
+	i{
+		font-size: 12px;
+	}
+	span{
+		font-size: 16px;
+	}
+}
+.trolley-price-total{
+	line-height: 140px;
+	font-size: 16px;
+	color: @l-red;
+	text-align: center;
+}
+.trolley-price-delete{
+	display: block;
+	line-height: 140px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
 }
