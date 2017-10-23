@@ -335,7 +335,7 @@ function globalShade(alerttext){
         $('.js_landShade').hide();
         $("body").css({overflow:"auto"});
         return false;
-    })
+    });
     //$('.js_alertClose').click(function(){
     //
     //})
