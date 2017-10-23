@@ -329,19 +329,29 @@
                     <!-- 组合商品-->
                     <div class="trolley-prolist">
                         <div class="trolley-coupon o_g">
-                            <div class="o_u o_df_7-10">
+                            <div class="o_u o_df_6-10">
                                 <div class="coupon-info-time">
                                     <div class="coupon-info-tit">
                                         【组合】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_3-10">
-                                <div class="coupon-time">
-                                    <span>剩余数量</span>
-                                    <span class="coupon-time-orange">14</span>
-                                    <span>份</span>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-price-groupNow">￥89034</div>
+                                <div class="trolley-price-old">￥890.34</div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-number trolley-number-group js_trolleyNumber">
+                                    <i class="iconfont icon-minus"></i>
+                                    <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
+                                    <i class="iconfont icon-plus"></i>
                                 </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-group-price">￥890.34</div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <a href="javascript:;" class="trolley-delete">删除</a>
                             </div>
                         </div>
                         <div class="o_g trolley-product">
@@ -371,6 +381,48 @@
                                 </div>
                             </div>
                             <div class="o_u o_df_1-10">
+                                <!-- <div class="trolley-price-total">￥89034</div> -->
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <!-- <a href="javascript:;" class="trolley-price-delete">删除</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 组合商品 END -->
+                    <!-- 单个商品-有货 -->
+                    <div class="trolley-prolist">
+                        <div class="o_g trolley-product">
+                            <div class="o_u o_df_3-5">
+                                <!-- <div class="middle-box">
+                                    <div class="middle-inner"></div>
+                                </div> -->
+                                <div class="l-checkbox trolley-product-check">
+                                  <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
+                                </div>
+                                <div class="trolley-product-img">
+                                    <img src="images/compare_goods.PNG">
+                                </div>
+                                <div class="trolley-product-font">
+                                  <div class="trolley-middle-box">
+                                        <div class="trolley-middle-inner">
+                                            <p class="trolley-product-zh">统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然</p>
+                                            <p class="trolley-product-en">JIGEJOJ-GHEGJOEJ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-price-now">￥89034</div>
+                                <div class="trolley-price-old">￥890.34</div>
+                            </div>
+                            <div class="o_u o_df_1-10 o_df-center">
+                                <div class="trolley-number js_trolleyNumber">
+                                    <i class="iconfont icon-minus"></i>
+                                    <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
+                                    <i class="iconfont icon-plus"></i>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
                                 <div class="trolley-price-total">￥89034</div>
                             </div>
                             <div class="o_u o_df_1-10">
@@ -378,11 +430,68 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 组合商品 END -->
+                    <!-- 单个商品-有货 END -->
+                    <!-- 单个商品-无货 -->
+                    <div class="trolley-prolist trolley-pro-none">
+                        <div class="o_g trolley-product">
+                            <div class="o_u o_df_3-5">
+                                <!-- <div class="l-checkbox trolley-product-check">
+                                  <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
+                                </div> -->
+                                <div class="trolley-product-uncheck">
+                                  地区<br>无货
+                                </div>
+                                <div class="trolley-product-img">
+                                    <img src="images/compare_goods.PNG">
+                                </div>
+                                <div class="trolley-product-font">
+                                  <div class="trolley-middle-box">
+                                        <div class="trolley-middle-inner">
+                                            <p class="trolley-product-zh">统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然气统帅天然</p>
+                                            <p class="trolley-product-en">JIGEJOJ-GHEGJOEJ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-price-only">￥89034</div>
+                            </div>
+                            <div class="o_u o_df_1-10 o_df-center">
+                                <div class="trolley-number">
+                                    <i class="iconfont icon-minus"></i>
+                                    <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1" readonly="">
+                                    <i class="iconfont icon-plus"></i>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <div class="trolley-price-total">￥89034</div>
+                            </div>
+                            <div class="o_u o_df_1-10">
+                                <a href="javascript:;" class="trolley-price-delete">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 单个商品-无货 END -->
                 </div>
             </div>
             <!-- 商品列表 END -->
 
+            <!-- 购物车底部 -->
+            <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_5-12">
+                    <div class="l-checkbox trolley-footer-check">
+                        <input class="js_checkbox" type="checkbox" data-notnull="true" value="">
+                    </div>
+                </div>
+                <div class="o_u o_df_3-12">
+                    <div class="trolley-footer-total">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 购物车底部 END -->
+    <!--#include virtual="public/footer.shtml"-->
 
     <!--#include virtual="public/foot.shtml"-->
     <!-- <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script> -->

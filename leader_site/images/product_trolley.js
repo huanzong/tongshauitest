@@ -27,7 +27,6 @@ $(function() {
 
         callback:function(num){
             console.log(num);
-            // $('.js_trolleyNumber').find('.icon-plus').off();
         }
 
     });
