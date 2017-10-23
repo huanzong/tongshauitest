@@ -89,6 +89,31 @@ $(function() {
         debug: true
     });
 
+    if (window.innerWidth == undefined || window.innerWidth > 1199) {
+        $(".js_Date").datetimepicker({
+            language: 'zh-CN',      //语言
+            weekStart: 0,           //一周从哪一天开始
+            todayBtn: 1,            //底部显示“今天”
+            autoclose: 1,           //选择后关闭选择器
+            todayHighlight: 1,      //高亮当前日期
+            startView: 2,           //首先显示的视图
+            minView: 2,             //视图
+            forceParse: true,       //解析输入值
+            format: "yyyy-mm-dd",   // 日期格式
+            pickerPosition: "bottom-left",
+            // startDate: new Date()     // 开始时间
+        });
+    }else{
+        $('.js_Date').mobiscroll().date({
+            preset: 'date',           //日期
+            lang: "zh",               //语言
+            display: 'center',
+            dateFormat: 'yyyy-mm-dd', // 日期格式
+            dateOrder: 'yymmdd',      //面板中日期排列格式
+            // minDate:new Date()        //  最小时间
+        });
+    }
+
 
 
 

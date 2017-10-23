@@ -147,9 +147,21 @@
 }
 .coupon-info{
 	padding: 18px 0 14px 60px;
+	@media (max-width: 991px) {
+		padding: 18px 0 14px 45px
+	}
+	@media (max-width:700px) {
+		padding: 18px 0 14px 30px
+	}
 }
 .coupon-info-time{
 	padding: 28px 0 28px 60px;
+	@media (max-width: 991px) {
+		padding: 28px 0 28px 45px;
+	}
+	@media (max-width:700px) {
+		padding: 18px 0 14px 30px
+	}
 }
 .coupon-info-tit{
 	font-size: 14px;
@@ -202,10 +214,6 @@
 	margin-left: -16px;
 	padding-top: 53px;
 }
-.trolley-footer-check{
-	margin-left: -16px;
-	padding-top: 60px;
-}
 .trolley-product-uncheck{
 	display: inline-block;
 	margin: 45px 0 0 -25px;
@@ -223,6 +231,11 @@
 	width: 80px;
 	height: 80px;
 	padding: 30px 45px;
+	@media (max-width: 991px) {
+		padding: 30px;
+		width: 70px;
+		height: 70px;
+	}
 	img{
 		width: 100%;
 	}
@@ -236,11 +249,17 @@
 }
 .trolley-product-font{
 	display: inline-block;
-	max-width: 67%;
+	max-width: 60%;
+	@media (max-width: 991px) {
+		max-width: 46%;
+	}
 	p{
 		line-height: 22px;
 		padding-left: 15px;
 		color: #333;
+		@media (max-width: 991px) {
+			padding-left: 0;
+		}
 	}
 }
 .trolley-price-now{
@@ -249,6 +268,9 @@
 	line-height: 24px;
 	font-size: 16px;
 	padding-top: 50px;
+	@media (max-width: 1199px) {
+		line-height: 40px;
+	}
 }
 .trolley-price-groupNow{
 	text-align: center;
@@ -256,12 +278,19 @@
 	line-height: 24px;
 	font-size: 16px;
 	padding-top: 20px;
+	@media (max-width: 1199px) {
+		line-height: 40px;
+	}
 }
 .trolley-price-old{
 	text-align: center;
 	color: #999;
 	line-height: 20px;
 	font-size: 12px;
+	text-decoration:line-through;
+	@media (max-width: 1199px) {
+		display: none;
+	}
 }
 .trolley-price-only{
 	text-align: center;
@@ -297,6 +326,7 @@
 	}
 }
 .trolley-number-group{
+	display: inline-block;
 	margin-top: 24px;
 }
 .trolley-number-static{
@@ -322,6 +352,9 @@
 	font-size: 12px;
 	color: #666;
 	text-align: center;
+	@media (max-width: 991px) {
+		text-align: left;
+	}
 }
 .trolley-group-price{
 	line-height: 80px;
@@ -335,6 +368,9 @@
 	color: #666;
 	font-size: 12px;
 	text-align: center;
+	@media (max-width: 991px) {
+		text-align: left;
+	}
 }
 .trolley-pro-none{
 	color: #ccc;
@@ -355,15 +391,90 @@
 		opacity: 0.5; 
 	}
 }
+.trolley-footer{
+	@media (max-width: 1199px) {
+		position: fixed;
+		bottom: 0;
+		border-top: 1px solid #eee;
+		background: #fff;
+		z-index: 3;
+	}
+}
+.trolley-footer-check{
+	margin-left: -16px;
+	padding-top: 60px;
+	@media (min-width:576px) and (max-width:1199px) {
+		padding-top: 24px;
+	}
+	@media (max-width:575px) {
+		padding-top: 19px;
+	}
+}
 .trolley-footer-total{
 	padding: 40px 40px;
+	@media (max-width: 1199px) {
+		padding: 0
+	}
 	.footer-total-num{
 		line-height: 28px;
 		font-size: 14px;
+		@media (max-width: 1199px) {
+			display: inline-block;
+			line-height: 80px;
+		}
+		@media (max-width: 575px) {
+			line-height: 70px;
+		}
+		span{
+			color: @l-red;
+		}
 	}
 	.footer-total-price{
 		line-height: 45px;
 		font-size: 32px;
+		color: @l-red;
+		@media (max-width: 1199px) {
+			float: right;
+			display: inline-block;
+			line-height: 80px;
+			padding-right: 15px;
+		}
+		@media (max-width: 575px) {
+			line-height: 70px;
+			font-size: 14px;
+		}
+		span{
+			@media (min-width:1200px) {
+				display: none;
+			}
+			color: #333;
+			line-height: 80px;
+			font-size: 14px;
+			@media (min-width:1200px) {
+				display: none;
+			}
+			@media (max-width: 575px) {
+				line-height: 70px;
+			}
+		}
+	}
+}
+.trolley-footer-btn{
+	padding-top: 45px;
+	@media (max-width:1199px) {
+		padding-top: 15px;
+	}
+	a{
+		display: block;
+		text-align: center;
+		@media (min-width:700px) and (max-width:1199px) {
+			margin-left: 15px;
+		}
+		@media (max-width:575px) {
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+		}
 	}
 }
 
