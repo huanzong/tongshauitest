@@ -76,4 +76,5 @@ $('.js_addressSetDefault').click(function(){
     $('.member-address-setdefault').removeClass('member-address-setdefault');
    //$(this).parents('.member-addressrightbox').find('.member-addresslistbox').siblings().removeClass('member-address-setdefault');
     $(this).parents('.member-addresslistbox').addClass('member-address-setdefault');
+
 })

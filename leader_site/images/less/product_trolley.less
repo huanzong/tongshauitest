@@ -202,6 +202,22 @@
 	margin-left: -16px;
 	padding-top: 53px;
 }
+.trolley-footer-check{
+	margin-left: -16px;
+	padding-top: 60px;
+}
+.trolley-product-uncheck{
+	display: inline-block;
+	margin: 45px 0 0 -25px;
+	width: 50px;
+	padding: 10px 0;
+	background: #999;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 14px;
+}
 .trolley-product-img{
 	display: inline-block;
 	width: 80px;
@@ -234,6 +250,13 @@
 	font-size: 16px;
 	padding-top: 50px;
 }
+.trolley-price-groupNow{
+	text-align: center;
+	color: #333;
+	line-height: 24px;
+	font-size: 16px;
+	padding-top: 20px;
+}
 .trolley-price-old{
 	text-align: center;
 	color: #999;
@@ -256,6 +279,8 @@
 	border-radius: 30px;
 	font-size: 0;
 	cursor: pointer;
+	text-align: center;
+	background: #fff;
 	input{
 		display: inline-block;
 		border: none;
@@ -270,6 +295,9 @@
 		line-height: 30px;
 		font-size: 12px;
 	}
+}
+.trolley-number-group{
+	margin-top: 24px;
 }
 .trolley-number-static{
 	line-height: 140px;
@@ -295,3 +323,48 @@
 	color: #666;
 	text-align: center;
 }
+.trolley-group-price{
+	line-height: 80px;
+	color: @l-red;
+	font-size: 16px;
+	text-align: center;
+}
+.trolley-delete{
+	display: block;
+	line-height: 80px;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+}
+.trolley-pro-none{
+	color: #ccc;
+	.trolley-product-zh,
+	.trolley-product-en,
+	.trolley-price-only,
+	.trolley-price-total,
+	.trolley-number{
+		input{
+			color: #ccc;
+		}
+		color: #ccc;
+	}
+	.trolley-product-img{
+		filter:alpha(opacity=50);   
+		-moz-opacity:0.5;   
+		 -khtml-opacity: 0.5;   
+		opacity: 0.5; 
+	}
+}
+.trolley-footer-total{
+	padding: 40px 40px;
+	.footer-total-num{
+		line-height: 28px;
+		font-size: 14px;
+	}
+	.footer-total-price{
+		line-height: 45px;
+		font-size: 32px;
+	}
+}
+
+		

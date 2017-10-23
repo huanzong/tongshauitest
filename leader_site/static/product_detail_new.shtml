@@ -429,7 +429,7 @@
             </div>
             <!-- 详情展示 -->
             <!-- 电商拉页 -->
-            <div class="o_g detail-foldover">
+            <div class="o_g detail-foldover js_detail-foldover">
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
                     <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
                         <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
@@ -439,82 +439,23 @@
                         <a href="product_detail_new.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
                         <a href="product_detail_new.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
                     </div>
-                    <!-- <a class="iconfont icon-bg-solid js_foldPlus"> -->
-                    <!-- <i class="iconfont icon-plus"></i> -->
-                    <!-- <i class="iconfont icon-close"></i> -->
-                    <!-- </a> -->
-                    <!-- <div class=""> -->
-                        <a class="iconfont icon-bg-solid js_foldPlus">
-                            <i class="iconfont icon-plus"></i>
-                            <!-- <i class="iconfont icon-close"></i> -->
-                        </a>
-                    <!-- </div> -->
-                    <!-- <div class="o_df-hide o_md-show o_sm-show o_xs-show">
-                        <a class="iconfont icon-bg-solid js_foldPlus_sm icon-md-solid">
-                            <i class="iconfont icon-plus"></i>
-                        </a>
-                    </div> -->
-                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
-                            </div>
-                        </div>
+                    <a class="iconfont icon-bg-solid js_foldPlus">
+                        <i class="iconfont icon-plus"></i>
+                        <span>详细产品介绍</span>
+                    </a>
+                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
                 </div>
                 <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                     <div class="foldover-img js_oHerlSizeFoldover js_foldimg js_buyhtml">
-                        <!--<img src="images/login_bg.JPG" id="1F">
-                        <img data-src="images/share_cur.png" id="2F">
-                        <img data-src="images/footer_logo1.jpg" id="3F">
-                        <img data-src="images/footer_logo2.jpg" id="4F">
-                        <img data-src="images/footer_logo3.jpg" id="5F">
-                        <img data-src="images/index_entrance01.JPG" id="6F">-->
-                        <!--<div class="box"  id="1F">
-                            <p class="o_df-hide">1台挂在墙上的机柜</p>
-                            <p>
-                                <img src="images/login_bg.JPG">
-                            </p>
-                        </div>
-                        <div class="box o_df-hide" id="2F">
-                            <p class="o_df-hide">2台挂在墙上的机柜</p>
-                            <p>
-                            <img src="images/share_cur.png" >
-                            </p>
-                        </div>
-                        <div class="box o_df-hide"  id="3F">
-                            <p class="o_df-hide">3台挂在墙上的机柜</p> <p>
-                            <img src="images/footer_logo1.jpg"></p>
-                        </div>
-                        <div class="box o_df-hide"  id="4F">
-                            <p class="o_df-hide">4台挂在墙上的机柜</p> <p>
-                            <img src="images/footer_logo2.jpg"></p>
-                        </div>
-                        <div class="box o_df-hide"  id="5F">
-                            <p class="o_df-hide">5台挂在墙上的机柜</p> <p>
-                            <img src="images/footer_logo3.jpg"></p>
-                        </div>
-                        <div class="box o_df-hide"  id="6F">
-                            <p class="o_df-hide">6台挂在墙上的机柜</p> <p>
-                            <img src="images/index_entrance01.JPG" ></p>
-                        </div>-->
                         <div class='view TRS_UEDITOR trs_paper_default'>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
                                 <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
@@ -614,27 +555,7 @@
             </div>
             <!-- 电商拉页 END -->
             <!-- 轮播 -->
-            <div class="o_g">
-                <div class="detail-scene1">
-                    <div class="swiper-container js_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <!-- <img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg" md="images/pc.jpg" lg="images/pc.jpg" xl="images/pc.jpg" alt=""> -->
-                                <img src="images/nav_bg_lg.PNG">
-                            </div>
-                            <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                            <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                        </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="swiper-pagination js_swiper_pagination"></div>
-                        <!-- 如果需要导航按钮 -->
-                        <div class="swiper-button-prev js_swiper_prev"></div>
-                        <div class="swiper-button-next js_swiper_next"></div>
-                        <!-- 如果需要滚动条 -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
-                    </div>
-                </div>
-            </div>
+
             <!-- 轮播 END -->
             <!-- 产品口碑-->
             <div class="detail-title">产品口碑</div>
@@ -1048,7 +969,7 @@
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
-    <script type="text/javascript" src="images/product_detail.js"></script>
+    <script type="text/javascript" src="images/product_detail_new.js"></script>
     <script>
 
     </script>
