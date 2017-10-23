@@ -89,6 +89,7 @@ $(function() {
         debug: true
     });
 
+    //时间组件
     if (window.innerWidth == undefined || window.innerWidth > 1199) {
         $(".js_Date").datetimepicker({
             language: 'zh-CN',      //语言
