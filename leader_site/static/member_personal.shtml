@@ -49,23 +49,21 @@
                                             </div>
                                         </div>
                                         <div class="og member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">性别</div>
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>性别</div>
                                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
-                                                <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 " ><input  type="radio" class="js_sex "  checked name="cc" value="男"></span><span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 "><input  type="radio" class="js_sex" name="cc" value="女" ></span>
+                                                <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 " ><input  type="radio" id="js_genderboy" class="js_sex"  checked name="cc" value="男"></span><span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 "><input  type="radio" class="js_sex" id="js_gendergirl"  name="cc" value="女" ></span>
                                             </div>
 
 
                                         </div>
                                         <div class="o_g member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">生日</div>
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>生日</div>
                                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
                                                 <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
                                                     <div class="selectbox">
                                                         <div class="member-personalinfo-inputbox">
                                                             <select name="" id="js_persave"  autotext="年">
-                                                                <option value="0">--1900--</option>
-                                                                <option value="1">1901</option>
-                                                                <option value="2">1902</option>
+                                                                <option value="0">--年--</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -74,9 +72,7 @@
                                                     <div class="selectbox">
                                                         <div class="member-personalinfo-inputbox">
                                                             <select name="" id="js_percity"  autotext="月">
-                                                                <option value="0">--1--</option>
-                                                                <option value="1">2</option>
-                                                                <option value="2">3</option>
+                                                                <option value="0">--月--</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -86,9 +82,7 @@
                                                     <div class="selectbox">
                                                         <div class="member-personalinfo-inputbox">
                                                             <select name="" id="js_perarea"  autotext="日">
-                                                                <option value="0">--1--</option>
-                                                                <option value="1">2</option>
-                                                                <option value="2">3</option>
+                                                                <option value="0">--日--</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -97,7 +91,7 @@
                                         </div>
 
                                         <div class="o_g member-personalinfo-list member-personalinfo-list-adds">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">居住地</div>
+                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"><span>*</span>居住地</div>
                                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
                                                 <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
                                                     <div class="selectbox">
