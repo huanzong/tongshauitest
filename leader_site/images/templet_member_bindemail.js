@@ -25,8 +25,8 @@ $(function(){
                     window.location.href ='/ids/ts/login.jsp';
                 }
 
-                var templet_mobile=jQuery.trim(returnData.data.mobile);
-                if (templet_mobile != null && templet_mobile != "") {
+                var templet_email=jQuery.trim(returnData.data.email);
+                if (templet_email != null && templet_email != "") {
                     self.location = '/security';
                 }
 
