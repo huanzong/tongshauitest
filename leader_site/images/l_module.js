@@ -340,6 +340,46 @@ function globalShade(alerttext){
     //
     //})
 }
+function globalShade2(alerttext,type,time){
+    var outTime = time>2000?time:2000;
+    $('.js_popUpBox2').show();
+    $("body").css({overflow:"hidden"});
+    $('.js_popUpText').html(alerttext);
+    if(type==1){
+        $('.js_popUpFales').hide();
+        $('.js_popUpWarn').hide();
+        $('.js_popUpTrue').show();
+    }else if(type==2){
+        $('.js_popUpTrue').hide();
+        $('.js_popUpWarn').hide();
+        $('.js_popUpFales').show();
+    }else if(type==3){
+        $('.js_popUpTrue').hide();
+        $('.js_popUpWarn').show();
+        $('.js_popUpFales').hide();
+    }else{
+        $('.js_popUpTrue').hide();
+        $('.js_popUpWarn').hide();
+        $('.js_popUpFales').hide();
+        $('.js_popUpText').css('')
+    }
+    if(outTime){
+       setTimeout(function(){
+           $('.js_popUpBox2').hide();
+           $("body").css({overflow:"auto"});
+       },outTime);
+    }else{
+        setTimeout(function(){
+            $('.js_popUpBox2').hide();
+            $("body").css({overflow:"auto"});
+        },2000);
+    }
+    //$('.js_alertClose').click(function(){
+    //
+    //})
+}
+
+
 
 //时间戳转换日期 时间戳，选格式，时间戳类型
 function getLocalTime(nS,val,type) {
