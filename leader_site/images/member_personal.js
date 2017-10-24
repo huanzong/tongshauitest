@@ -117,9 +117,9 @@ $('.js-personalinfotab').click( function () {
 // $("#js_persave").oSelect().init();
 // $("#js_percity").oSelect().init();
 //     $("#js_perarea").oSelect().init();
-    $("#js_save").oSelect().init();
-    $('#js_city').oSelect().init();
-    $('#js_area').oSelect().init();
+//     $("#js_save").oSelect().init();
+//     $('#js_city').oSelect().init();
+//     $('#js_area').oSelect().init();
 
 })
 
