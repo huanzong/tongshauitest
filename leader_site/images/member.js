@@ -94,13 +94,15 @@ $(function() {
         $('.js-personal').height(contHeight);
         $('.js-submenu').height(contHeight);
         $('.js-submenubtn').height(contHeight);
-        $('.js-membercontbox').height(contHeight);
+        //$('.js-membercontbox').height(contHeight);
+        $('.js-membercontbox').css('min-height',contHeight);
         //console.log(contHeight);
         if(windowWidth<576){
             $('.js-personal').height('auto');
             $('.js-submenubtn').height('auto');
             $('.js-submenu').height('auto');
-            $('.js-membercontbox').height(contRightHeight+100);
+            //$('.js-membercontbox').height(contRightHeight+100);
+            $('.js-membercontbox').css('min-height',contRightHeight+100);
         }
 
         //延迟加载图片

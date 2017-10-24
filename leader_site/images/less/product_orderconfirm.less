@@ -62,6 +62,19 @@
 .product-ordercon-title{
   text-align: left;
   margin: 60px 0 30px 0 ;
+  @media (min-width:701px) and (max-width: 1199px) {
+    margin: 30px 0 0 0 ;
+    h4{
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 700px) {
+    margin: 30px 0 0 0 ;
+    h4{
+      margin-bottom: 20px;
+    }
+
+  }
   h4{
     font-size: 24px;
     color: #333;
@@ -82,6 +95,7 @@
   padding-top: 35px;
   padding-bottom: 60px;
   background: #fff;
+  display: none;
   .product-ordercon-list-title{
     font-size: 14px;
     line-height: 40px;
@@ -90,14 +104,51 @@
       color: red;
       padding-right: 5px;
     }
+    p{
+      @media (max-width: 575px) {
+        /* xs*/
+       text-align: left;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        text-align: left;
+
+
+      }
+    }
   }
   .product-ordercon-list-input{
     text-align: center;
     .member-address-textarea3-2,.member-address-textarea3-4{
       padding-left: 10px;
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        padding:0px;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        padding:0px;
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        padding:0px;
+      }
+
     }
     .member-address-textarea3-1,.member-address-textarea3-3{
       padding-right: 10px;
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        padding:0px;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        padding:0px;
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        padding:0px;
+      }
     }
 
     a{
@@ -113,9 +164,27 @@
       right: 0px;
       border: none;
     }
+    @media (max-width: 575px) {
+      /* xs*/
+      >div>div{margin-bottom: 10px;}
+    }
   }
   >li{
     margin-bottom: 20px;
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      text-align: center;
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      text-align: center;
+
+    }
+
   }
 }
 .product-address-list-box{
@@ -123,7 +192,7 @@
   //border-radius: 7px;
 
   .product-address-list{
-    height: 80px;
+    //height: 80px;
     line-height: 80px;
     margin-bottom: 25px;
     border: 1px solid #eee;
@@ -153,8 +222,27 @@
       i{
         padding-right: 20px;
       }
+
     }
-  }
+    >a{
+      text-align: right;
+      color: #999;
+      font-size: 12px;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      >p{line-height: 25px;}
+      >a{
+        text-align: right;
+      }
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      >p{line-height: 25px;  }
+      >a{ text-align: right;  }
+    }
+    }
+
 
 }
 .product-ordercon-payment{
@@ -162,6 +250,7 @@
   box-shadow: 0 0 10px #eee;
   font-size: 14px;
   line-height: 60px;
+  background: #fff;
   color: #333;
   p{
     padding-left: 40px;
@@ -173,18 +262,39 @@
   box-shadow: 0 0 10px #eee;
   border-radius: 7px;
   text-align: center;
+  background: #fff;
   >div{
     text-align: left;
+
+
     >a{
-      width: 250px;
+      width: 200px;
       font-size: 14px;
       text-align: center;
       margin-right: 12px;
     }
     >p{
       color: #ee9500;
-      margin-top: 20px;
+      margin: 10px 0;
     }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      text-align: center;
+      >a{
+        margin-bottom: 10px;
+      }
+    }
+
   }
 
   p{
@@ -209,6 +319,7 @@
   a{
     font-size: 14px;
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -258,9 +369,18 @@
     }
     .ordercon-setInvoice-list-btn{
       margin-top: 10px;
+      @media (max-width: 575px) {
+        /* xs*/
+        text-align: center;
+        a{
+          margin-bottom: 10px;
+        }
+      }
       a{
         font-size: 14px;
         text-align: center;
+
+
       }
     }
   }
@@ -272,8 +392,10 @@
   border: 1px solid #eee;
   box-shadow: 0 0 10px #eee;
   border-radius: 7px;
-  p{
+  background: #fff;
+  div{
     padding-left: 40px;
+
     span{
       color: #333;
       padding-right: 30px;
@@ -304,6 +426,26 @@
       line-height: 65px;
 
     }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      font-size: 12px;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      font-size: 12px;
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      font-size: 12px;
+      text-align: center;
+      i{
+
+        padding: 0;
+      }
+
+    }
+
   }
   .product-orderconfirm-prolist-cont{
     padding: 20px 0;
@@ -314,6 +456,21 @@
       img{
         width: 80px;
         height: 80px;
+      }
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        text-align: center;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        text-align: center;
+
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        text-align: center;
+        display: none;
+
       }
     }
 
@@ -329,6 +486,31 @@
         font-size: 14px;
         color: #999;
       }
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        p,span{
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        p,span{
+          font-size: 12px;
+          line-height: 18px;
+
+        }
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        p,span{
+          font-size: 12px;
+          line-height: 18px;
+
+        }
+        margin-left: 20px;
+
+      }
     }
     .order-prolist-cont-nub{
       font-size: 14px;
@@ -343,6 +525,32 @@
         font-size: 14px;
         padding-left: 5px;
       }
+
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        text-align: right;
+        span{
+          font-size: 14px;
+        }
+
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        text-align: right;
+        span{
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        text-align: right;
+        span{
+          font-size: 14px;
+        }
+        float: right;
+        padding-right: 10px;
+        line-height: 40px;
+      }
     }
 
     .order-prolist-cont-total{
@@ -350,7 +558,20 @@
       font-size: 17px;
       line-height: 80px;
       text-align: center;
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        font-size: 14px;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        font-size: 14px;
 
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        font-size: 14px;
+        display: none;
+      }
     }
   }
   .product-nogoods{
@@ -358,6 +579,16 @@
       color: #f39800;
       font-size: 14px;
       line-height: 80px;
+      text-align: right;
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        line-height: 50px;
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        line-height: 50px;
+
+      }
     }
     .order-prolist-cont-img{
       position: relative;
@@ -384,7 +615,12 @@
   }
 }
 .product-orderconfirm-give-box{
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 7px;
+  margin-top: 30px;
   text-align: center;
+  background: #fff;
   .product-orderconfirm-give-list{
     text-align: left;
     border-bottom: 1px solid #eeeeee;
@@ -421,6 +657,27 @@
       float: right;
       color: #666;
       font-size: 12px;
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        float: none;
+        margin-left: 50px;
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        float: none;
+        margin-left: 50px;
+        line-height: 25px;
+        padding-bottom: 10px;
+
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        float: none;
+        margin-left: 50px;
+        line-height: 25px;
+        padding-bottom: 10px;
+      }
+
     }
     .orderconfirm-give-list-discount{
       font-size: 14px;color: #333;
@@ -428,8 +685,120 @@
     .selectbox{
       width: 200px;
       display: inline-block;
+      vertical-align: middle;
+      margin: 0 25px 0 10px;
+
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        width: 90%;
+        margin: 0px;
+
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        width: 90%;
+      line-height: 50px;
+
+      }
 
     }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      div:nth-child(2){
+        margin-left: 55px;
+      }
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      >div:nth-child(3){
+        margin-left: 55px;
+      }
+
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      line-height: 50px;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      line-height: 50px;
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      line-height: 50px;
+
+    }
+
   }
 
+}
+.product-orderconfirm-price{
+  text-align: center;
+  margin-top: 40px;
+  .orderconfirm-price-list{
+    text-align: right;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 30px;
+
+    li{
+      p{
+        width: 200px;
+        display: inline-block;
+        line-height: 35px;
+        font-size: 14px;
+          span{
+            color: @l-red;
+            padding-right: 5px;
+          }
+        }
+      i{
+        display: inline-block;
+        width: 90px;
+        padding-left: 20px;
+        line-height: 35px;
+        color: @l-red;
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+}
+.product-orderconfirm-total{
+  text-align: right;
+  line-height: 90px;
+  span{
+    font-size: 14px;
+    color: #333;
+    vertical-align: bottom;
+  }
+  i{
+    font-size: 32px;
+    color: @l-red;
+    vertical-align: bottom;
+    padding-left: 30px;
+  }
+}
+.product-orderconfirm-address{
+  line-height: 60px;
+  text-align: right;
+  background: #f8f8f8;
+  p{
+    font-size: 14px;
+    display: inline-block;
+    padding:0 30px 0 0;
+    span{
+      color: #666;
+    }
+  }
+}
+.product-orderconfirm-btn{
+  font-size: 20px;
+  margin: 45px 0;
+  text-align: right;
+ a{
+   width: 200px;
+   text-align: center;
+ }
 }

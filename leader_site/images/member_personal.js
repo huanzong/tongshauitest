@@ -122,3 +122,5 @@ $('.js-personalinfotab').click( function () {
     $('#js_area').oSelect().init();
 
 })
+
+
