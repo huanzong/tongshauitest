@@ -26,7 +26,7 @@ $(function() {
         // preNum:1,
 
         callback:function(num){
-            console.log(num);
+            // console.log(num);
         }
 
     });
