@@ -53,8 +53,8 @@ $(function() {
 
         //轮播模板
         swiper.mySwiper = new Swiper('.js_swiper', {
-            direction: 'horizontal',
-            grabCursor: true,
+            // direction: 'horizontal',
+            // grabCursor: true,
             loop: true,
             autoplay: 1000,
 

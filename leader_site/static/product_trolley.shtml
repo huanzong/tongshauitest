@@ -136,18 +136,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="o_g trolley-product">
+                        <!-- 作废的xs外的列表 -->
+                        <!-- <div class="o_g trolley-product o_xs-hide">
                             <div class="o_u o_df_3-5 o_md_1-2">
-                                <!-- <div class="middle-box">
-                                    <div class="middle-inner"></div>
-                                </div> -->
                                 <div class="l-checkbox trolley-product-check">
                                   <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
                                 </div>
                                 <div class="trolley-product-img">
                                     <img src="images/compare_goods.PNG">
                                 </div>
-                                <div class="trolley-product-font">
+                                <div class="trolley-product-font js_trolleyFont">
                                   <div class="trolley-middle-box">
                                         <div class="trolley-middle-inner">
                                             <p class="trolley-product-zh">统帅天然气统帅天然气统帅天然气</p>
@@ -156,15 +154,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_1-10 o_md_1-5">
-                                <div class="trolley-price-now">￥89034</div>
+                            <div class="o_u o_df_1-10 o_md_1-5 o_sm_1-5">
+                                <div class="trolley-price-now js_trolleyPrice">￥89034</div>
                                 <div class="trolley-price-old">￥890.34</div>
                             </div>
                             <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center">
-                                <div class="trolley-number js_trolleyNumber">
+                                <div class="trolley-number opacity-0 js_trolleyNumber">
                                     <i class="iconfont icon-minus"></i>
                                     <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
                                     <i class="iconfont icon-plus"></i>
+                                    <a href="javascript:;" class="trolley-price-delete">删除</a>
                                 </div>
                             </div>
                             <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
@@ -172,13 +171,12 @@
                             </div>
                             <div class="o_u o_df_1-10">
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
+                                <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
-                        </div>
+                        </div> -->
+                        <!-- 作废的xs外的列表 -->
                         <div class="o_g trolley-product">
-                            <div class="o_u o_df_3-5 o_md_1-2">
-                                <!-- <div class="middle-box">
-                                    <div class="middle-inner"></div>
-                                </div> -->
+                            <div class="o_u o_df_3-5 o_md_1-2 o_xs_2-2">
                                 <div class="l-checkbox trolley-product-check">
                                   <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
                                 </div>
@@ -186,30 +184,37 @@
                                     <img src="images/compare_goods.PNG">
                                 </div>
                                 <div class="trolley-product-font">
-                                  <div class="trolley-middle-box">
-                                        <div class="trolley-middle-inner">
-                                            <p class="trolley-product-zh">统帅天然气统帅天然气统帅天然气</p>
+                                    <div class="trolley-middle-box">
+                                        <div class="trolley-middle-inner js_trolleyFont">
+                                            <p class="trolley-product-zh">统帅天然气统帅天然气统帅天然气统</p>
                                             <p class="trolley-product-en">JIGEJOJ-1</p>
                                         </div>
+                                        <p class="trolley-product-xs">
+                                            <span class=" js_trolleyPrice">￥3433</span>
+                                            <a class="opacity-0 trolley-xs-delete js_deleteXs">删除</a>
+                                            <a class="js_edit" data-oppo='edit'>编辑</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_1-10 o_md_1-5">
-                                <div class="trolley-price-now">￥89034</div>
+                            <div class="o_u o_df_1-10 o_md_1-5 o_sm_1-5 o_xs-hide">
+                                <div class="trolley-price-now js_trolleyPrice">￥89034</div>
                                 <div class="trolley-price-old">￥890.34</div>
                             </div>
-                            <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center">
-                                <div class="trolley-number js_trolleyNumber">
+                            <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center trolley-number-xs">
+                                <div class="trolley-number opacity-0 js_trolleyNumber">
                                     <i class="iconfont icon-minus"></i>
                                     <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
                                     <i class="iconfont icon-plus"></i>
+                                    <a href="javascript:;" class="trolley-price-delete">删除</a>
                                 </div>
                             </div>
                             <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
                                 <div class="trolley-price-total">￥89034</div>
                             </div>
-                            <div class="o_u o_df_1-10">
+                            <div class="o_u o_df_1-10 o_xs-hide">
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
+                                <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
                         </div>
                     </div>
@@ -217,14 +222,14 @@
                     <!-- 限时商品-剩余时间 -->
                     <div class="trolley-prolist">
                         <div class="trolley-coupon o_g">
-                            <div class="o_u o_df_7-10">
+                            <div class="o_u o_df_7-10 o_sm_2-2 o_xs_2-2">
                                 <div class="coupon-info-time">
                                     <div class="coupon-info-tit">
                                         【限时抢购】购买即送扫地机器人
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_3-10">
+                            <div class="o_u o_df_3-10 o_sm-hide o_xs-hide">
                                 <div class="coupon-time">
                                     <span class="coupon-time-orange">1</span>
                                     <span>天</span>
@@ -268,6 +273,7 @@
                             </div>
                             <div class="o_u o_df_1-10">
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
+                                <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
                         </div>
                     </div>
@@ -275,14 +281,14 @@
                     <!-- 限额商品-->
                     <div class="trolley-prolist">
                         <div class="trolley-coupon o_g">
-                            <div class="o_u o_df_7-10">
+                            <div class="o_u o_df_7-10 o_sm_2-2 o_xs_2-2">
                                 <div class="coupon-info-time">
                                     <div class="coupon-info-tit">
                                         【限额抢购】前100名，8折优惠
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_3-10">
+                            <div class="o_u o_df_3-10 o_sm-hide o_xs-hide">
                                 <div class="coupon-time">
                                     <span>剩余数量</span>
                                     <span class="coupon-time-orange">14</span>
@@ -329,28 +335,30 @@
                     <div class="trolley-prolist">
                         <div class="trolley-coupon o_g">
                             <div class="o_u o_df_6-10 o_md_1-2">
-                                <div class="coupon-info-time">
+                                <div class="coupon-info-time js_trolleyFont">
                                     <div class="coupon-info-tit">
                                         【组合】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_1-10 o_md_1-5">
-                                <div class="trolley-price-groupNow">￥89034</div>
+                            <div class="o_u o_df_1-10 o_md_1-5 o_sm_1-5">
+                                <div class="trolley-price-groupNow js_trolleyPrice">￥89034</div>
                                 <div class="trolley-price-old">￥890.34</div>
                             </div>
                             <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center">
-                                <div class="trolley-number trolley-number-group js_trolleyNumber">
+                                <div class="trolley-number trolley-number-group opacity-0 js_trolleyNumber">
                                     <i class="iconfont icon-minus"></i>
                                     <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
                                     <i class="iconfont icon-plus"></i>
+                                    <a href="javascript:;" class="trolley-price-delete">删除</a>
                                 </div>
                             </div>
                             <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
                                 <div class="trolley-group-price">￥890.34</div>
                             </div>
-                            <div class="o_u o_df_1-10">
+                            <div class="o_u o_df_1-10 trolley-group-oppo">
                                 <a href="javascript:;" class="trolley-delete">删除</a>
+                                <a href="javascript:;" class="trolley-edit js_edit" data-oppo="edit">编辑</a>
                             </div>
                         </div>
                         <div class="o_g trolley-product">
@@ -414,7 +422,7 @@
                                 <div class="trolley-price-now">￥89034</div>
                                 <div class="trolley-price-old">￥890.34</div>
                             </div>
-                            <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center">
+                            <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center opacity-0">
                                 <div class="trolley-number js_trolleyNumber">
                                     <i class="iconfont icon-minus"></i>
                                     <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
@@ -452,7 +460,7 @@
                             <div class="o_u o_df_1-10 o_md_1-5">
                                 <div class="trolley-price-only">￥89034</div>
                             </div>
-                            <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center">
+                            <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center opacity-0">
                                 <div class="trolley-number">
                                     <i class="iconfont icon-minus"></i>
                                     <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1" readonly="">
