@@ -2932,7 +2932,7 @@
 
 					.member-personalinfo-listbox {
 						width: 100%;
-						display: none;
+
 						font-size: 12px;
 
 						.member-personalinfo-table {
@@ -2963,6 +2963,20 @@
 								width: 100%;
 								display: inline-block;
 								margin-bottom: 20px;
+								.personalist-wrong-box{
+									display: block;
+									padding-left: 25px;
+									line-height: 30px;
+
+									.personalist-wrong{
+										color: @l-orange;
+										font-size: 12px;
+										text-align: left;
+									}
+								}
+								.personalist-right{
+									display: none;
+								}
 								@media (min-width: 992px) and (max-width: 1199px) {
 									/* lg*/
 								}
@@ -3022,6 +3036,7 @@
 								padding: 0 15px;
 								box-sizing: border-box;
 
+
 								@media (min-width: 992px) and (max-width: 1199px) {
 									/* lg*/
 								}
@@ -3041,10 +3056,21 @@
 								}
 
 								.member-personalinfo-allinput {
-									width: 100%;
+
 
 									input {
 										width: 100%;
+									}
+
+								}
+								.member-personalinfo-namefixed{
+									width: 100%;
+									display: none;
+									p{
+										text-align: left;
+										font-size: 16px;
+										color: #666;
+										line-height: 40px;
 									}
 								}
 
