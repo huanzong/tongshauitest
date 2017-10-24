@@ -20,9 +20,11 @@ $.jUploader.setDefaults({
 });
 $.jUploader({
     fileField: 'file',
+    name:'multipartFile',
     button: "js_imgUpload", // 这里设置按钮id
-    action: '/comment/uploadcasartejfmallproductcommentimage/uploadImage',//这里写地址
+    action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
+
 
     onUpload: function(data) {
         if(data){

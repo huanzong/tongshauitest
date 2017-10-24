@@ -7,9 +7,9 @@
 
 $(function(){
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
+    // if(!istrsidssdssotoken()){
+    //     jumpToLoginPage()
+    // }
 
     $.ajax({
         type: "get",
@@ -62,6 +62,7 @@ $(function(){
         var val=$("#js_unbindmob").val();
         if(val==1)
         {
+            $('.js-send').html('短信验证');
             $('.js_mobileCodeYz').attr('placeholder','短信验证码');
             $('.js-sendmobile').show();
             $('.js-sendmail').hide();
@@ -69,6 +70,7 @@ $(function(){
         }
         if(val==2)
         {
+            $('.js-send').html('邮箱验证');
             $('.js_mobileCodeYz').attr('placeholder','邮箱验证码');
             $('.js-sendmobile').hide();
             $('.js-sendmail').show();
@@ -146,8 +148,6 @@ $(function(){
             }
 
         })
-
-
     })
 
 
@@ -185,19 +185,8 @@ $(function(){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
                             $('.js-unbingfalse').hide();
-                            $('.js-unbingsuccess').show();
-                            document.cookie="isAlterBind=1;path=/";
+                            $('.js_validateMob').show();
 
-                            // var templet_time = 4;
-                            // var templet_change = setInterval(function(){
-                            //     if (templet_time == 0) {
-                            //         clearInterval(templet_change);
-                            //         window.location.href ='/security'
-                            //         return;
-                            //     }
-                            //     document.getElementById("js-countdown").innerHTML = templet_time;
-                            //     templet_time--;
-                            // }, 1000);
                         }
                         else if (jQuery.trim(returnData).indexOf("code_can_not_be_null")>-1){
 
@@ -209,16 +198,103 @@ $(function(){
                             $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误');
 
                         }
+                    }
+                }
+            })
+        }
+    })
 
+    //确定绑定
+    $(".js-unbind") .unbind().bind('click',function(){
+        var templet_param;
+        var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
+        if(templet_pretermit=='0' || templet_pretermit=='1'){
+
+            templet_param='mobile';
+        }
+        if(templet_pretermit=='2' ){
+            templet_param='email';
+        }
+        var templet_code=$('.js_mobileCodeYz').val();
+
+
+        $.ajax({
+            type: "post",
+            dataType: "text",
+            url: "/ids/ts/userInfoManager.jsp",
+            data: {
+                'editOperation': 'cancelUnbind',
+                'param': templet_param ,
+                'code':templet_code
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            },
+            success: function (returnData) {
+                if (jQuery.trim(returnData).length > 0) {
+                    if (jQuery.trim(returnData).indexOf("200")>-1) {
+                        $('.js_validateMob').hide();
+                        $('.js-unbingsuccess').show();
+
+                        document.cookie="isAlterBind=1;path=/";
+
+                        var templet_time = 4;
+                        var templet_change = setInterval(function(){
+                            if (templet_time == 0) {
+                                clearInterval(templet_change);
+                                window.location.href ='/security'
+                                return;
+                            }
+                            document.getElementById("js-countdown").innerHTML = templet_time;
+                            templet_time--;
+                        }, 1000);
+                    }
+                }
+            }
+        });
+    });
+
+    //取消绑定
+    $(".js-cancelUnbind") .unbind().bind('click',function(){
+
+        var templet_param;
+        var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
+        if(templet_pretermit=='0' || templet_pretermit=='1'){
+
+            templet_param='mobile';
+        }
+        if(templet_pretermit=='2' ){
+            templet_param='email';
+        }
+
+        $.ajax({
+            type: "post",
+            dataType: "text",
+            url: "/ids/ts/userInfoManager.jsp",
+            data: {
+                'editOperation': 'cancelUnbind',
+                'param': templet_param
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            },
+            success: function (returnData) {
+                if (jQuery.trim(returnData).length > 0) {
+                    if (jQuery.trim(returnData).indexOf("200")>-1) {
+                        self.location = '/security';
+                    }
+                    else if (jQuery.trim(returnData).indexOf("unbind_verify_is_illegaled")>-1){
+
+                        //验证码不能为空
+
+                    }
+                    else if (jQuery.trim(returnData).indexOf("403")>-1 ){
+
+                      //解除绑定失败
 
                     }
                 }
-
-            })
-
-        }
-
-    })
+            }
+        });
+    });
 
 })
 
