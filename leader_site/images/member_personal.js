@@ -113,6 +113,7 @@ $.jUploader({
 
 
     onUpload: function(data) {
+        console.log(11);
         if(data){
             $('.js-uploadPhoto').hide();
             $('.js-modifyPhoto').show();
@@ -172,6 +173,7 @@ $('#target').Jcrop({
     boundy = bounds[1];
 });
 
+var imgX,imgY,imgW;
 function updatePreview(c)
 {
     if (parseInt(c.w) > 0)
@@ -185,7 +187,11 @@ function updatePreview(c)
             marginTop: '-' + Math.round(ry * c.y) + 'px'
         });
     }
-}
+
+    imgX= c.x;
+    imgY= c.y;
+    imgW= c.w;
+}   console.log(imgX,imgY,imgW);
 
 
 //个人信息
