@@ -111,14 +111,16 @@ $('.js-personalinfotab').click( function () {
 })
 
 //初始化
-$(".js_sex").jq_qvote();
+    //$(".js_sex").jq_qvote();
 
 //下拉菜单初始化
-$("#js_persave").oSelect().init();
-$("#js_percity").oSelect().init();
-    $("#js_perarea").oSelect().init();
-    $("#js_save").oSelect().init();
-    $('#js_city').oSelect().init();
-    $('#js_area').oSelect().init();
+// $("#js_persave").oSelect().init();
+// $("#js_percity").oSelect().init();
+//     $("#js_perarea").oSelect().init();
+//     $("#js_save").oSelect().init();
+//     $('#js_city').oSelect().init();
+//     $('#js_area').oSelect().init();
 
 })
+
+

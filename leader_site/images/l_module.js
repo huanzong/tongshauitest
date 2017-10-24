@@ -8,7 +8,6 @@ $(function() {
 
     function init() {
 
-
     }
 
     /**
@@ -335,7 +334,7 @@ function globalShade(alerttext){
         $('.js_landShade').hide();
         $("body").css({overflow:"auto"});
         return false;
-    })
+    });
     //$('.js_alertClose').click(function(){
     //
     //})
@@ -366,7 +365,7 @@ function globalShade2(alerttext,type,time){
     if(outTime){
        setTimeout(function(){
            $('.js_popUpBox2').hide();
-           $("body").css({overflow:"auto"});
+           $("body").css({overflow:"js_popUpBox2uto"});
        },outTime);
     }else{
         setTimeout(function(){
