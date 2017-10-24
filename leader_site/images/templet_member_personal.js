@@ -7,9 +7,13 @@
 $(function(){
 
     //前台判断是否登陆
-    // if(!istrsidssdssotoken()){
-    //     jumpToLoginPage()；
-    // }
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage();
+    }
+
+    var templet_select_sheng=$("#js_save").oSelect();
+    var templet_select_shi=$("#js_city").oSelect();
+    var templet_select_qu=$("#js_area").oSelect();
 
     //页面加载时调个人信息
     $.ajax({
@@ -58,17 +62,168 @@ $(function(){
                 $("#js_perarea").oSelect().init();
 
                 //居住地
+                var template_provinceName=jQuery.trim(returnData.data.provinceName);
+                var template_city=jQuery.trim(returnData.data.city);
+                var template_areaName=jQuery.trim(returnData.data.areaName);
+                //省
+                $.ajax({
+                    url:"/interaction-service/regionInfo/regionList",
+                    type:"get",
+                    dataType:"json",
+                    data:{"parentId":'0'},
+                    success:function(responseT){
+                        if(responseT.isSuccess){
+                            var provinceList=responseT.data;
+                            $("#js_save").html("");
+                            $("#js_save").append('<option value="">--请选择省份--</option>');
+                            if(provinceList!=null){
+                                for(var i=0; i<provinceList.length; i++){
+                                    var isSelected="";
+                                    if(template_provinceName==provinceList[i].regionName){
+                                        isSelected="selected";
+                                    }
 
+                                    var provinceEach=' <option value="' + provinceList[i].regionCode + '" '+isSelected+'>' + provinceList[i].regionName + '</option>';
+                                    $("#js_save").append(provinceEach);
+                                }
 
+                            }
+                            templet_select_sheng.init();
+                            //如果省不为空，肯定有市，区，个人信息里市区显示
+                            if(template_provinceName!=null && template_provinceName!=""){
+                                var shengVal=$("#js_save").val();
+                                $.ajax({
+                                    url:"/interaction-service/regionInfo/regionList",
+                                    type:"get",
+                                    dataType:"json",
+                                    data:{"parentId":shengVal},
+                                    success:function(responseT){
+                                        if(responseT.isSuccess){
+                                            var provinceList=responseT.data;
+                                            $("#js_city").html("");
+                                            $("#js_city").append('<option value="">--请选择城市--</option>');
+                                            if(provinceList!=null){
+                                                for(var i=0; i<provinceList.length; i++){
+                                                    var isSelected="";
+                                                    if(template_city==provinceList[i].regionName){
+                                                        isSelected="selected";
+                                                    }
+                                                    var provinceEach=' <option value="' + provinceList[i].regionCode + '" '+isSelected+'>' + provinceList[i].regionName + '</option>';
+                                                    $("#js_city").append(provinceEach);
+                                                }
 
+                                            }
+                                            templet_select_shi.init();
+                                            var quVal=$("#js_city").val();
+                                            $.ajax({
+                                                url:"/interaction-service/regionInfo/regionList",
+                                                type:"get",
+                                                dataType:"json",
+                                                data:{"parentId":quVal},
+                                                success:function(responseT){
+                                                    if(responseT.isSuccess){
+                                                        var provinceList=responseT.data;
+                                                        $("#js_area").html("");
+                                                        $("#js_area").append('<option value="">--请选择区--</option>');
+                                                        if(provinceList!=null){
+                                                            for(var i=0; i<provinceList.length; i++){
+                                                                var isSelected="";
+                                                                if(template_areaName==provinceList[i].regionName){
+                                                                    isSelected="selected";
+                                                                }
+                                                                var provinceEach=' <option value="' + provinceList[i].regionCode + '" '+isSelected+'>' + provinceList[i].regionName + '</option>';
+                                                                $("#js_area").append(provinceEach);
+                                                            }
 
-
+                                                        }
+                                                        templet_select_qu.init();
+                                                    }
+                                                },
+                                                error:function(){}
+                                            });
+                                        }
+                                    },
+                                    error:function(){}
+                                });
+                            }
+                        }
+                    },
+                    error:function(){}
+                })
 
 
             }
         }
     });
+    //省改变，市区变为空
+    $("#js_save").change(function(){
+        $("#js_city").html("");
+        templet_select_shi.init();
+        templet_select_shi.lose();
+        var shengVal=$("#js_save").val();
+        $.ajax({
+            url:"/interaction-service/regionInfo/regionList",
+            type:"get",
+            dataType:"json",
+            data:{"parentId":shengVal},
+            success:function(responseT){
+                if(responseT.isSuccess){
+                    var provinceList=responseT.data;
+                    $("#js_city").html("");
+                    $("#js_city").append('<option value="">--请选择城市--</option>');
+                    if(provinceList!=null){
+                        for(var i=0; i<provinceList.length; i++){
+                            var provinceEach=' <option value="'+provinceList[i].regionCode+'">'+provinceList[i].regionName+'</option>';
+                            $("#js_city").append(provinceEach);
+                        }
 
+                    }
+                    templet_select_shi.init();
 
+                    //省变动,区一并重新初始化
+                    $("#js_area").html("");
+                    templet_select_qu.init();
+                    templet_select_qu.lose();
+                }
+            },
+            error:function(){}
+        });
+    });
 
+    //省改变，市区变为空
+    $("#js_city").change(function(){
+        $("#js_area").html("");
+        templet_select_qu.init();
+        templet_select_qu.lose();
+        var shiVal=$("#js_city").val();
+        $.ajax({
+            url:"/interaction-service/regionInfo/regionList",
+            type:"get",
+            dataType:"json",
+            data:{"parentId":shiVal},
+            success:function(responseT){
+                if(responseT.isSuccess){
+                    var provinceList=responseT.data;
+                    $("#js_city").html("");
+                    $("#js_city").append('<option value="">--请选择城市--</option>');
+                    if(provinceList!=null){
+                        for(var i=0; i<provinceList.length; i++){
+                            var provinceEach=' <option value="'+provinceList[i].regionCode+'">'+provinceList[i].regionName+'</option>';
+                            $("#js_city").append(provinceEach);
+                        }
+
+                    }
+                    templet_select_shi.init();
+
+                    //省变动,区一并重新初始化
+                    $("#js_area").html("");
+                    templet_select_qu.init();
+                    templet_select_qu.lose();
+                }
+            },
+            error:function(){}
+        });
+    });
 })
+
+

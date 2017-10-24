@@ -97,9 +97,7 @@
                                                     <div class="selectbox">
                                                         <div class="member-personalinfo-inputbox">
                                                             <select name="" id="js_save"  autotext="省">
-                                                                <option value="0">--山东--</option>
-                                                                <option value="1">北京</option>
-                                                                <option value="2">上海</option>
+
                                                             </select>
                                                         </div>
                                                     </div>
@@ -108,9 +106,7 @@
                                                     <div class="selectbox">
                                                         <div class="member-personalinfo-inputbox">
                                                             <select name="" id="js_city"  autotext="市">
-                                                                <option value="0">--青岛--</option>
-                                                                <option value="1">北京</option>
-                                                                <option value="2">上海</option>
+
                                                             </select>
                                                         </div>
                                                     </div>
@@ -120,9 +116,7 @@
                                                     <div class="selectbox">
                                                         <div class="member-personalinfo-inputbox">
                                                             <select name="" id="js_area"  autotext="区">
-                                                                <option value="0">--市南--</option>
-                                                                <option value="1">市南</option>
-                                                                <option value="2">市南</option>
+
                                                             </select>
                                                         </div>
                                                     </div>
@@ -220,6 +214,7 @@
 <script type="text/javascript" src="images/jquery.color.js"></script>
 <script type="text/javascript" src="images/member.js"></script>
 <script type="text/javascript" src="images/member_personal.js"></script>
+<script type="text/javascript" src="images/templet_member_personal.js"></script>
 
 </body>
 </html>
