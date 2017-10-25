@@ -10,6 +10,8 @@
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+
     <link rel="stylesheet" type="text/css" href="images/member.css">
 </head>
 
@@ -18,11 +20,14 @@
     <div class="o_main">
         <div class="o_g  ">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/member_nav.shtml"-->
+            <!--#include virtual="public/header_nav.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
-            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+
+            <div class="o_u o_df_12-12  member-security js-membercontbox">
                 <div class="member-security-width js-securityheight">
+                    <div class="land-shade js_navshade"></div>
                     <div class="member-security-tit">
                         <p>地址管理</p>
                         <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn">新增地址</a>
@@ -236,6 +241,9 @@
                     <!-- 内容区域 End-->
                 </div>
             </div>
+
+                </div>
+
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
@@ -272,7 +280,8 @@
 
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-<script type="text/javascript" src="images/member.js"></script>
+<!--<script type="text/javascript" src="images/member.js"></script>-->
+<script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_address.js"></script>
 </body>
 </html>
