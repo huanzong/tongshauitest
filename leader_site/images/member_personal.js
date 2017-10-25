@@ -6,8 +6,8 @@
 $(function(){
 
 //初始化
- var boy = $(".js_genderboy").jq_qvote();
-    var sex =   $(".js_sex").jq_qvote();
+//  var boy = $(".js_genderboy").jq_qvote();
+//     var sex =   $(".js_sex").jq_qvote();
     //$('#js_genderboy').siblings('span').click();
 
 //    用户名判定
@@ -23,7 +23,7 @@ $(function(){
 
     $('.js_member input').blur(function(){
         var username =  $('.js_member input').val();
-        if(username.length>3&&username.length<17){
+        if(username.length>3&&username.length<21){
             $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
             if(!nubreg.test(username)){
                 $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
@@ -106,11 +106,14 @@ $.jUploader.setDefaults({
 });
 $.jUploader({
     fileField: 'file',
+    name:'multipartFile',
     button: "js_imgUpload", // 这里设置按钮id
-    action: '/comment/uploadcasartejfmallproductcommentimage/uploadImage',//这里写地址
+    action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
+
     onUpload: function(data) {
+        console.log(11);
         if(data){
             $('.js-uploadPhoto').hide();
             $('.js-modifyPhoto').show();
@@ -170,6 +173,7 @@ $('#target').Jcrop({
     boundy = bounds[1];
 });
 
+var imgX,imgY,imgW;
 function updatePreview(c)
 {
     if (parseInt(c.w) > 0)
@@ -183,6 +187,10 @@ function updatePreview(c)
             marginTop: '-' + Math.round(ry * c.y) + 'px'
         });
     }
+
+    imgX= c.x;
+    imgY= c.y;
+    imgW= c.w;
 }
 
 
