@@ -6,8 +6,8 @@
 $(function(){
 
 //初始化
- var boy = $(".js_genderboy").jq_qvote();
-    var sex =   $(".js_sex").jq_qvote();
+//  var boy = $(".js_genderboy").jq_qvote();
+//     var sex =   $(".js_sex").jq_qvote();
     //$('#js_genderboy').siblings('span').click();
 
 //    用户名判定
@@ -23,7 +23,7 @@ $(function(){
 
     $('.js_member input').blur(function(){
         var username =  $('.js_member input').val();
-        if(username.length>3&&username.length<17){
+        if(username.length>3&&username.length<21){
             $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
             if(!nubreg.test(username)){
                 $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
@@ -191,7 +191,7 @@ function updatePreview(c)
     imgX= c.x;
     imgY= c.y;
     imgW= c.w;
-}   console.log(imgX,imgY,imgW);
+}
 
 
 //个人信息

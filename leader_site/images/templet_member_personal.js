@@ -20,6 +20,8 @@ $(function(){
     var template_provinceName;
     var template_city;
     var template_areaName;
+    var template_birthday;
+    var template_loginName;
 
     //页面加载时调个人信息
     $.ajax({
@@ -34,6 +36,10 @@ $(function(){
                 if(returnData.resultMsg=='用户未登录'){
                     window.location.href ='/ids/ts/login.jsp';
                 }
+
+                //loginName 需要在这里调取接口判断一下他是不是之前修改过 如果没修改过就是TEXT 修改过是不能填写的
+                template_loginName=jQuery.trim(returnData.data.loginName);
+                $('#js_loginName').val(template_loginName);
 
                 //性别
                 template_sex=jQuery.trim(returnData.data.sex);
@@ -51,23 +57,8 @@ $(function(){
                 $(".js_sex").jq_qvote();
 
                 //生日放进去
-                var template_birthday=jQuery.trim(returnData.data.birthday);
-                if(template_birthday!=null && template_birthday!=''){
-                    var template_birthdayArr=template_birthday.split("-");
-                    var yearU=template_birthdayArr[0];
-                    var monthU=template_birthdayArr[1];
-                    var dayU=template_birthdayArr[2];
-
-                    $('#js_persave').attr('autotext',yearU);
-                    $('#js_percity').attr('autotext',monthU);
-                    $('#js_perarea').attr('autotext',dayU);
-                }
-
-                //年月日往里放值待定
-
-                $("#js_persave").oSelect().init();
-                $("#js_percity").oSelect().init();
-                $("#js_perarea").oSelect().init();
+                template_birthday=jQuery.trim(returnData.data.birthday);
+                $('.js_Date').val(template_birthday);
 
 
                 //居住地
@@ -231,6 +222,8 @@ $(function(){
 
     //点击取消按钮
     $(".js-cancel").unbind().click(function () {
+        $('#js_loginName').val(template_loginName);
+
         if(template_sex=="1"){//男
             $('#js_genderboy').siblings('span').click();
         }else if(template_sex=="2"){//女
@@ -238,6 +231,8 @@ $(function(){
         }else{//其它情况
             $('#js_genderboy').siblings('span').click();
         }
+
+        $('.js_Date').val(template_birthday);
 
         $("#js_save").html("");
         templet_select_sheng.init();
@@ -342,17 +337,18 @@ $(function(){
         if(templet_isSubmiting){//正在提交
             return;
         }
+        var templet_loginName=$.trim($('#js_loginName').val());
         var templet_sex=$.trim($('input[name="cc"]:checked').attr("data"));
+        var templet_birthday=$.trim($('.js_Date').val());
         var templet_provinceName=$.trim($("#js_save  option:selected").text());
         var templet_provinceId=$.trim($("#js_save  option:selected").val());
         var templet_city=$.trim($("#js_city  option:selected").text());
         var templet_cityId=$.trim($("#js_city  option:selected").val());
         var templet_areaName=$.trim($("#js_area  option:selected").text());
         var templet_areaId=$.trim($("#js_area  option:selected").val());
-        if(templet_provinceId=='' ||templet_cityId=='' ||templet_areaId=='' ){
+        if(templet_provinceId=='' ||templet_cityId=='' ||templet_areaId=='' || templet_birthday==''){
             return;
         }
-        //判断几个提示框有没有提示，没有执行ajax
 
         var templet_data={
             "sex":templet_sex,
@@ -362,6 +358,7 @@ $(function(){
             "cityId":templet_cityId,
             "areaName":templet_areaName,
             "areaId":templet_areaId,
+            "birthday":templet_birthday
         }
         templet_isSubmiting=true;
         $.ajax({

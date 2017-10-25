@@ -47,7 +47,7 @@
                                             </div>
                                             <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox">
                                                 <div class="l-input o_u o_df_2-2 member-personalinfo-allinput js_member">
-                                                    <input type="text" name="" ph="TS23948475" value="">
+                                                    <input id="js_loginName" type="text" name="" ph="" value="">
                                                 </div>
                                                 <div class="l-input member-personalinfo-namefixed js_personalinfo-namefixed">
                                                     <p>asdasdasdasd</p>
