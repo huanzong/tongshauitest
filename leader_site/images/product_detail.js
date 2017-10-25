@@ -1,100 +1,84 @@
 $(function() {
+    
+    //用来存放所有轮播
+    var swiper = {};
 
-    var swiper = {
-        // preferentialSwiper:'',
-        // mySwiper:'',
-        // preferentialSwiper:'',
-    }; //用来存放所有轮播
+    //文字卖点
+    swiper.fontSwiper = new Swiper('.js_fontSwiper',{
+        slidesPerView : 'auto',
+    });
 
-    setTimeout(function() {
+    //场景展示
+    $(".js_scenePicture").each(function() {
+        $(this).oPicture({}).init();
+    });
+    swiper.sceneSwiper = new Swiper('.js_sceneSwiper',{
+        loop: true,
+        autoplay: 1000,
+        slidesPerView: 1,//滑动展示个数
+        centeredSlides: true,
+        slidesPerGroup: 1,//每次滑动移动个数
+        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
+    });
 
-        //文字卖点
-        swiper.fontSwiper = new Swiper('.js_fontSwiper',{
-            slidesPerView : 'auto',
-        });
+    //核心卖点
+    swiper.sellPointSwiper = new Swiper('.js_swiperSellPoint', {
+        grabCursor: true,
+        // loop: true,
+        // autoplay: 1000,
+        onFirstInit: function(swiper){
+            $('.js_sellpointFont').hide();
+            $('.js_sellpointFont').eq(0).show();
+        },
+        onSlideChangeEnd:function(swiper){
+            var index = swiper.activeIndex;
+            $('.js_sellpointFont').hide();
+            $('.js_sellpointFont').eq(index).show();
+        }
+    });
+    $('.js_swiperSellPointNext').on('click',function(){
+        swiper.sellPointSwiper.swipeNext();
+    });
 
-        //核心卖点
-        swiper.sellPointSwiper = new Swiper('.js_swiperSellPoint', {
-            grabCursor: true,
-            // loop: true,
-            // autoplay: 1000,
-            onFirstInit: function(swiper){
-                $('.js_sellpointFont').hide();
-                $('.js_sellpointFont').eq(0).show();
-            },
-            onSlideChangeEnd:function(swiper){
-                var index = swiper.activeIndex;
-                $('.js_sellpointFont').hide();
-                $('.js_sellpointFont').eq(index).show();
-            }
-        });
-        $('.js_swiperSellPointNext').on('click',function(){
-            swiper.sellPointSwiper.swipeNext();
-        });
+    //优惠组合
+    swiper.preferentialSwiper = new Swiper('.js_swiperPreferential', {
+        direction: 'horizontal',
+        grabCursor: true,
+        loop: true,
+        // autoplay: 1000,
+        slidesPerView: 4,
+        // 如果需要分页器
+        // pagination: '.js_swiperPreferential',
+        paginationType: 'bullets',
 
-        //优惠组合
-        swiper.preferentialSwiper = new Swiper('.js_swiperPreferential', {
-            direction: 'horizontal',
-            grabCursor: true,
-            loop: true,
-            // autoplay: 1000,
-            slidesPerView: 4,
-            // 如果需要分页器
-            // pagination: '.js_swiperPreferential',
-            paginationType: 'bullets',
+        // 如果需要前进后退按钮
+        nextButton: '.js_swiper_next',
+        prevButton: '.js_swiper_prev',
 
-            // 如果需要前进后退按钮
-            nextButton: '.js_swiper_next',
-            prevButton: '.js_swiper_prev',
+        // 如果需要滚动条
+        // scrollbar: '.swiper-scrollbar'
+    });
 
-            // 如果需要滚动条
-            // scrollbar: '.swiper-scrollbar'
-        });
+    //更多选择
+    swiper.moreSwiper = new Swiper('.js_swiperMore1', {
+        loop: true,
+        autoplay: 1000,
 
-        //轮播模板
-        swiper.mySwiper = new Swiper('.js_swiper', {
-            // direction: 'horizontal',
-            // grabCursor: true,
-            loop: true,
-            autoplay: 1000,
+        slidesPerView: 3,//滑动展示个数
+        centeredSlides: true,
+        slidesPerGroup: 1,//每次滑动移动个数
+        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
 
-            // 如果需要分页器
-            pagination: '.js_swiper_pagination',
-            paginationType: 'bullets',
+    });
 
-            // 如果需要前进后退按钮
-            nextButton: '.js_swiper_next',
-            prevButton: '.js_swiper_prev',
+    $('.js_swiperMore_prev').click(function(){
+        swiper.moreSwiper.swipePrev(); 
+    });
+    $('.js_swiperMore_next').click(function(){
+        swiper.moreSwiper.swipeNext(); 
+    });
 
-            // 如果需要滚动条
-            // scrollbar: '.swiper-scrollbar'
-        });
-
-
-        //更多选择
-        swiper.moreSwiper = new Swiper('.js_swiperMore', {
-            direction: 'horizontal',
-            grabCursor: true,
-            loop: true,
-            autoplay: 1000,
-
-            //分组
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-
-            // 如果需要分页器
-            pagination: '.js_swiper_paginationMore',
-            paginationType: 'bullets',
-
-            // 如果需要前进后退按钮
-            nextButton: '.js_swiper_nextMore',
-            prevButton: '.js_swiper_prevMore',
-        });
-
-        init();
-    }, 1000);
-
-
+    init();
 
 
     //电商拉页
@@ -174,75 +158,14 @@ $(function() {
 
         });
 
-
-
     });
-    //滚动条.position().top
-    // $(window).scroll(function)
 
-    $(window).resize(function() {
-        init();
-
-        var screenWidth = document.body.offsetWidth;
-        //电商拉页展开按钮位置
-        if(screenWidth>991){
-
-        }
-
-    });
 
     //产品参数-结构图居中
     $(".js_structbg").oBgCover().init(); //激活方法
     $(".js_structbg").css('margin-left', '-424px');
 
     $(".js_swiperPreferential .js_checkbox").jq_qvote();
-
-    function init() {
-        var screenWidth = document.body.offsetWidth;
-        var screenHeight = document.body.offsetHeight;
-
-        var slidesPerView = 4;
-
-        if (screenWidth <= 575) {
-            slidesPerView = 1;
-        } else if (screenWidth > 1199) {
-            slidesPerView = 4;
-        } else {
-            slidesPerView = 2;
-        }
-
-        swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
-
-        setTimeout(function() {
-            $('.js_oHerl').css('height', $('.js_oHerlSize').outerHeight());
-            $('.js_center').oBoxCenter().init();
-        }, 1000);
-
-        //延迟加载图片
-        setTimeout(function() {
-            $(".o_picture").each(function() {
-                $(this).oPicture({
-                    //自定义节点宽度
-                    //sm:544,md:700,lg:992,xl:1200,
-                }).init();
-            });
-        }, 300);
-
-
-        setTimeout(function() {
-
-            // 更多选择
-            $('.js_oHerlMore').css('height', $('.js_oHerlSizeMore').outerHeight());
-            $('.js_center').oBoxCenter().init();
-            //电商拉页
-            if(screenWidth>991){
-                $('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
-            }
-
-
-        }, 1000);
-
-    }
 
     //浏览产品细节图
     $('.js_bannerSwiperClose').on('click', function() {
@@ -318,6 +241,65 @@ $(function() {
         });
     });
 
+
+    $(window).resize(function() {
+        init();
+    });
+
+
+    function init() {
+        var screenWidth = document.body.offsetWidth;
+        var screenHeight = document.body.offsetHeight;
+
+        var slidesPerView = 4;
+
+        if (screenWidth <= 575) {
+            slidesPerView = 1;
+        } else if (screenWidth > 1199) {
+            slidesPerView = 4;
+        } else {
+            slidesPerView = 2;
+        }
+
+        swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
+
+        setTimeout(function() {
+            $('.js_oHerl').css('height', $('.js_oHerlSize').outerHeight());
+            $('.js_center').oBoxCenter().init();
+        }, 1000);
+
+        //延迟加载图片
+        setTimeout(function() {
+            $(".o_picture").each(function() {
+                $(this).oPicture({
+                    //自定义节点宽度
+                    //sm:544,md:700,lg:992,xl:1200,
+                }).init();
+            });
+        }, 300);
+
+
+        setTimeout(function() {
+
+            // 更多选择
+            $('.js_oHerlMore').css('height', $('.js_oHerlSizeMore').outerHeight());
+            $('.js_center').oBoxCenter().init();
+            //电商拉页
+            if(screenWidth>991){
+                $('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
+            }
+
+
+        }, 1000);
+
+        //更多选择
+        if(screenWidth>575){
+            swiper.moreSwiper.reInit();
+        }
+
+    }
+
+
     //手机验证
     $('.js-bindmobinput').blur(function() {
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
@@ -338,9 +320,6 @@ $(function() {
 
     });
 
-
-
-
     //验证码成功后可点击提交
     $('.js-mobileCode').blur(function() {
 
@@ -353,7 +332,7 @@ $(function() {
                 var mobileCode = $('.js-mobileCode').val();
 
 
-            })
+            });
         } else {
             //    提示错误信息 验证码错误
 
@@ -361,10 +340,10 @@ $(function() {
             $('.js-submintData').unbind().bind('click', function() {
                 $(this).addClass('l-btn-disable');
                 return false;
-            })
+            });
         }
 
-    })
+    });
     //密码验证
     $('.js-landUserIdInput').blur(function() {
         var yanzhengtrue = $(this).parents('.land-cont-normal-input').find('.Validform_right');
@@ -383,7 +362,7 @@ $(function() {
                 return false;
             })
         }
-    })
+    });
     //密码验证
     $('.js-landPassWordInput').blur(function() {
         var yanzhengtrue = $(this).parents('.land-cont-normal-input').find('.Validform_right');
@@ -403,8 +382,7 @@ $(function() {
             })
         }
 
-    })
-
+    });
 
     //账号验证
     $('.js-landUserIdInput').blur(function() {
@@ -424,7 +402,7 @@ $(function() {
             $('.js-getinfo').addClass('l-btn-disable');
         }
 
-    })
+    });
     //手机验证
     $('.js-bindmobinput').blur(function() {
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
@@ -443,8 +421,7 @@ $(function() {
             $('.js-getinfo').addClass('l-btn-disable');
         }
 
-    })
-
+    });
 
     var phone = $(".js-landPhone").Validform({
         tiptype: 3,
