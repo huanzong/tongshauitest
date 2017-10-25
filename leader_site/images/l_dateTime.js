@@ -1498,7 +1498,7 @@
             }
             return j
         },
-        headTemplate: '<thead><tr><th class="prev"><i class="{iconType} {leftArrow} iconfont icon-zuojiantou"/></th><th colspan="5" class="switch"></th><th class="next"><i class="{iconType} {rightArrow} iconfont icon-youjiantou"/></th></tr></thead>',
+        headTemplate: '<thead><tr><th class="prev"><i class="{iconType} {leftArrow} iconfont icon-arrow-line-left"/></th><th colspan="5" class="switch"></th><th class="next"><i class="{iconType} {rightArrow} iconfont icon-arrow-line-right"/></th></tr></thead>',
         headTemplateV3: '<thead><tr><th class="prev"><span class="{iconType} {leftArrow}"></span> </th><th colspan="5" class="switch"></th><th class="next"><span class="{iconType} {rightArrow}"></span> </th></tr></thead>',
         contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
         footTemplate: '<tfoot><tr><th colspan="7" class="today"></th></tr><tr><th colspan="7" class="clear"></th></tr></tfoot>'
