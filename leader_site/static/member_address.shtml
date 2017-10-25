@@ -10,6 +10,7 @@
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
     <link rel="stylesheet" type="text/css" href="images/member.css">
 </head>
 
@@ -18,11 +19,14 @@
     <div class="o_main">
         <div class="o_g  ">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/member_nav.shtml"-->
+            <!--#include virtual="public/header_nav.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
-            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+
+            <div class="o_u o_df_12-12  member-security js-membercontbox">
                 <div class="member-security-width js-securityheight">
+                    <div class="land-shade js_navshade"></div>
                     <div class="member-security-tit">
                         <p>地址管理</p>
                         <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn">新增地址</a>
@@ -35,7 +39,7 @@
                                 <div class="member-address-title">添加新地址</div>
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5  o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                         <div class="l-input member-address-allinput  ">
                                             <!--js-addressUserName-->
                                             <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-bindUsername js_inputCheck" name="" ph="请输入联系人的姓名"  value=""  datatype="s2-8"  data-normal="1" errormsg="<i class='iconfont icon-information-solid'></i>请输入您的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
@@ -46,7 +50,7 @@
 
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5  o_sm_2-2 o_xs_2-2 member-address-listname">手机<span>*</span></div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                         <div class="l-input member-address-allinput ">
                                             <!--js-addressMobile-->
                                             <form class="ui_validForm js_ui_validForm">
@@ -59,7 +63,7 @@
 
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">电话</div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g js_addressTellNub">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g js_addressTellNub">
                                         <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                             <div class="l-input member-address-inputbox">
                                                 <input type="text" name="" ph="区号" value="">
@@ -80,7 +84,7 @@
 
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5  o_sm_2-2 o_xs_2-2 member-address-listname">详细地址<span>*</span></div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
                                             <div class="selectbox">
                                                 <div class="member-address-inputbox">
@@ -132,7 +136,7 @@
                                 </div>
                                 <div class="o_g member-address-list">
                                     <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
+                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
                                         <div class="l-textarea member-address-textareabox ">
                                             <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" datatype="s1-100"  data-normal="1" errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" ></textarea>
                                             <p class="Validform_checktip Validform_wrong member-address-error js-addressMobError"></p>
@@ -236,6 +240,9 @@
                     <!-- 内容区域 End-->
                 </div>
             </div>
+
+                </div>
+
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
@@ -272,7 +279,8 @@
 
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-<script type="text/javascript" src="images/member.js"></script>
+<!--<script type="text/javascript" src="images/member.js"></script>-->
+<script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_address.js"></script>
 </body>
 </html>
