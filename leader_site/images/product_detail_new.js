@@ -95,7 +95,7 @@ $(function() {
     }, 1000);
 
 
-
+    /********电商拉页*******/
     //电商拉页
     $('.js_foldPlus').on('click', function() {
         //电商拉页-点击加号，展示锚点定位
@@ -158,7 +158,6 @@ $(function() {
 
     });
 
-
     //锚点定位后，左侧按钮定位
     $('.js_foldoverNav .js_foldlist').find('a').on('click',function(){
         var index = parseInt($(this).attr('data-index'));
@@ -178,7 +177,6 @@ $(function() {
         }
     });
 
-
     $(window).scroll(function () {
         var $winTop = $(window).scrollTop();
         var foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 70;
@@ -193,6 +191,47 @@ $(function() {
 
     });
 
+    foldlsit();
+    //电商拉页重新绘制拉页锚点
+    function foldlsit() {
+        $(".js_foldlsit_btn").html("");
+        $(".js_foldoverNav_btn").html("");
+        var num =$(".js_buyhtml .js_box").length;
+        var btnhtml = '';
+        var url=window.location.href.split("/")[window.location.href.split("/").length-1]
+        url = url.split("/")[0];
+        for(var i=0;i<num;i++){
+            $(".js_buyhtml .js_box").eq(i).attr("id",i+'F').addClass("o_df-hide");
+            $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
+            var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
+            if(document.body.offsetWidth>991){
+                if(i == 0){
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
+                }else{
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
+                }
+                $(".js_foldlsit_btn").html(btnhtml);
+            }else{
+                if(i == 0){
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2 alive" data-index='+i+'>'+text+'</a>';
+                }else{
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2" data-index='+i+'>'+text+'</a>';
+                }
+                $(".js_foldoverNav_btn").html(btnhtml);
+            }
+
+
+        }
+        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        var foldPlus = (btnNum * 52) + 60;
+        if(document.body.offsetWidth>991){
+            $(".js_foldPlus").css("top",foldPlus+'px');
+        }
+
+    }
+
+
+    /********电商拉页*********/
 
     $(window).resize(function() {
         init();
@@ -484,44 +523,6 @@ $(function() {
     });
 
 
-    foldlsit();
-    //电商拉页
-    function foldlsit() {
-        $(".js_foldlsit_btn").html("");
-        $(".js_foldoverNav_btn").html("");
-        var num =$(".js_buyhtml .js_box").length;
-        var btnhtml = '';
-        var url=window.location.href.split("/")[window.location.href.split("/").length-1]
-        url = url.split("/")[0];
-        for(var i=0;i<num;i++){
-            $(".js_buyhtml .js_box").eq(i).attr("id",i+'F').addClass("o_df-hide");
-            $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
-            var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
-            if(document.body.offsetWidth>991){
-                if(i == 0){
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
-                }else{
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
-                }
-                $(".js_foldlsit_btn").html(btnhtml);
-            }else{
-                if(i == 0){
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2 alive" data-index='+i+'>'+text+'</a>';
-                }else{
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2" data-index='+i+'>'+text+'</a>';
-                }
-                $(".js_foldoverNav_btn").html(btnhtml);
-            }
-
-
-        }
-        var btnNum = $(".js_foldlsit_btn").find("a").length;
-        var foldPlus = (btnNum * 52) + 60;
-        if(document.body.offsetWidth>991){
-            $(".js_foldPlus").css("top",foldPlus+'px');
-        }
-
-    }
 
 
 });
