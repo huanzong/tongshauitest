@@ -51,25 +51,6 @@ $(function() {
             // scrollbar: '.swiper-scrollbar'
         });
 
-        //轮播模板
-        swiper.mySwiper = new Swiper('.js_swiper', {
-            // direction: 'horizontal',
-            // grabCursor: true,
-            loop: true,
-            autoplay: 1000,
-
-            // 如果需要分页器
-            pagination: '.js_swiper_pagination',
-            paginationType: 'bullets',
-
-            // 如果需要前进后退按钮
-            nextButton: '.js_swiper_next',
-            prevButton: '.js_swiper_prev',
-
-            // 如果需要滚动条
-            // scrollbar: '.swiper-scrollbar'
-        });
-
 
         //更多选择
         swiper.moreSwiper = new Swiper('.js_swiperMore', {
@@ -79,8 +60,8 @@ $(function() {
             autoplay: 1000,
 
             //分组
-            slidesPerView: 3,
-            slidesPerGroup: 1,
+            slidesPerView: 3,//滑动展示个数
+            slidesPerGroup: 1,//每次滑动移动个数
 
             // 如果需要分页器
             pagination: '.js_swiper_paginationMore',
@@ -241,6 +222,30 @@ $(function() {
 
 
         }, 1000);
+
+        //轮播模板
+        swiper.mySwiper = new Swiper('.js_swiperMore1', {
+            loop: true,
+            autoplay: 1000,
+
+            slidesPerView: 3,//滑动展示个数
+            slidesPerGroup: 1,//每次滑动移动个数
+            centeredSlides: true,
+
+        });
+        if(screenWidth>991){
+            console.log('>991')
+            swiper.mySwiper.params.slidesPerView = 3;
+        }else{
+            console.log('<991')
+            swiper.mySwiper.params.slidesPerView = 1;
+        }
+        $('.js_swiperMore_prev').click(function(){
+            swiper.mySwiper.swipePrev(); 
+        });
+        $('.js_swiperMore_next').click(function(){
+            swiper.mySwiper.swipeNext(); 
+        });
 
     }
 

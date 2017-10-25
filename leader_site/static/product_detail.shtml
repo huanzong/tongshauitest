@@ -492,26 +492,84 @@
             </div>
             <!-- 电商拉页 END -->
             <!-- 轮播 -->
+            <div class="detail-title">更多选择</div>
             <div class="o_g">
-                <div class="detail-scene1">
-                    <div class="swiper-container js_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <!-- <img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg" md="images/pc.jpg" lg="images/pc.jpg" xl="images/pc.jpg" alt=""> -->
-                                <img src="images/nav_bg_lg.PNG">
+                <div class="o_u o_df_1-6"></div>
+                <div class="o_u o_df_2-3">
+                    <div class="detail-scene1">
+                        <div class="swiper-container js_swiperMore1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo1.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo2.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo3.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                            <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
                         </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="swiper-pagination js_swiper_pagination"></div>
                         <!-- 如果需要导航按钮 -->
-                        <div class="swiper-button-prev js_swiper_prev"></div>
-                        <div class="swiper-button-next js_swiper_next"></div>
-                        <!-- 如果需要滚动条 -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
+                        <div class="swiper-prev js_swiperMore_prev">
+                            <i class="iconfont icon-arrow-jiantou-left"></i>
+                        </div>
+                        <div class="swiper-next js_swiperMore_next">
+                            <i class="iconfont icon-arrow-jiantou-right"></i>
+                        </div>
                     </div>
+                        
                 </div>
+                <div class="o_u o_df_1-6"></div>
+                    
             </div>
             <!-- 轮播 END -->
             <!-- 产品口碑-->
@@ -666,11 +724,6 @@
                             </div>
                             <!-- 如果需要分页器 -->
                             <div class="swiper-pagination js_swiper_paginationMore"></div>
-                            <!-- 如果需要导航按钮 -->
-                            <!-- <div class="swiper-button-prev js_swiper_prevMore"></div>
-						    <div class="swiper-button-next js_swiper_nextMore"></div> -->
-                            <!-- 如果需要滚动条 -->
-                            <!-- <div class="swiper-scrollbar"></div> -->
                         </div>
                     </div>
                 </div>
