@@ -863,14 +863,137 @@
 	}
 }
 
-//轮播
-.detail-scene1{
+//轮播-更多选择
+.detail-more{
+	position: relative;
 	font-size: 12px;
-	.swiper-container{
-		height: 500px;
-		img{
-			width: 100%;
+	@media (max-width:575px) {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.detail-scene1-img{
+		@media (max-width: 575px) {
+			display: block;
+			width: 180px;
+			padding:0;
+			margin: 0 auto;
+			img{
+				width: 100%;
+			}
 		}
+	}
+	.detail-more-price{
+		padding-bottom: 20px;
+	}
+	.swiper-container{
+		@media (min-width: 1200px) {
+			height: 600px;
+		}
+		@media (min-width: 992px) and (max-width: 1199px){
+			height: 500px;
+		}
+		@media (min-width: 900px) and (max-width: 991px){
+			min-height: 750px;
+		}
+		@media (min-width: 800px) and (max-width: 899px){
+			min-height: 700px;
+		}
+		@media (min-width: 700px) and (max-width: 799px){
+			min-height: 560px;
+		}
+		@media (min-width: 600px) and (max-width: 699px){
+			min-height: 500px;
+		}
+		@media (min-width: 576px) and (max-width: 599px){
+			min-height: 460px;
+		}
+	}
+	.swiper-slide{
+		text-align: center;
+		.detail-scene1-img{
+			padding: 60px 60px 0;
+			img{
+				width: 100%;
+			}
+			@media (max-width:991px) {
+				display: none;
+				padding: 0 60px;
+			}
+		}
+		.detail-more-info{
+			display: none;
+		}
+		&.swiper-slide-active{
+			@media (max-width: 991px) {
+				z-index: 2;
+			}
+			.detail-scene1-img{
+				@keyframes aniLG{
+					from {padding: 60px 60px 0;}
+					to {padding: 0;}
+				}
+				@media (min-width:992px) {
+					animation:aniLG 0.7s;
+					-moz-animation:aniLG 0.7s; /* Firefox */
+					-webkit-animation:aniLG 0.7s; /* Safari and Chrome */
+					-o-animation:aniLG 0.7s; /* Opera */
+					padding: 0;
+				}
+				@media (max-width:991px) {
+					display: block;
+				}
+				
+			}
+			.detail-more-info,.detail-scene1-img{
+				@media (max-width: 991px) {
+					margin-left: -100%;
+					margin-right: -100%;
+				}
+			}
+			.detail-more-info{
+				display: block;
+			}
+		}
+	}
+	
+	.swiper-prev,.swiper-next{
+		position: absolute;
+		top: 25%; 
+		cursor: pointer;
+		i{
+			font-size: 22px;
+		}
+	}
+	.swiper-prev{
+		left: -12%;
+	}
+	.swiper-next{
+		right: -12%;
+	}
+}
+.detail-more-info{
+	text-align: center;
+	padding-top: 18px;
+	.detail-more-tit{
+		font-size: 24px;
+		color: #333;
+		line-height: 35px;
+	}
+	.detail-more-titinfo{
+		font-size: 16px;
+		color: #333;
+		line-height: 28px;
+		font-family: "Open Sans";
+	}
+	.detail-more-special{
+		font-size: 14px;
+		color: #333;
+		line-height: 35px;
+	}
+	.detail-more-price{
+		font-size: 20px;
+		color: @l-red;
+		line-height: 42px;
 	}
 }
 
@@ -1168,19 +1291,6 @@
 				}
 			}
 		}
-	}
-}
-
-//更多选择
-.detail-more{
-	.swiper-slide{
-		img{
-			width: 100%;
-		}
-	}
-	.swiper-button-prev{
-		// position: relative;
-		// left: -30%;
 	}
 }
 
