@@ -191,9 +191,10 @@ function updatePreview(c)
     imgX= c.x;
     imgY= c.y;
     imgW= c.w;
+    console.log(imgX, imgY, imgW);
 }
 
-
+$('#getupimg').click(function(){    console.log(imgX, imgY, imgW);})
 //个人信息
 $('.js-personalinfotab').click( function () {
     var tabNmu =$(this).index();

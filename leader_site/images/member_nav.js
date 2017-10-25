@@ -4,71 +4,56 @@
 $(function(){
 
 
-    //var memberContboxW = $('.js-membercontboxs').width();
-    //var windowW = $(window).width();
-    //var windowH = $(window).height();
-    //var contH   = $('body').height();
-    //$('.js_memberNavMiddleBtn').css({'padding-top':contH/2,height:contH});
-    //$('.js_memberNavLeft').height($('.js_memberNavMiddle').height());
-    //$('.js_memberNavMiddleBtn').height($('.js_memberNavMiddle').height());
-    //if(windowW<576){
-    //    $('.js_memberNavLeft').height('60px');
-    //}
-    //if(windowW>992){
-    //}else if(windowW>700&&windowW<992){
-    //    memberContboxW =memberContboxW+windowW*0.166;
-    //    $('.js-membercontboxs').width(memberContboxW);
-    //
-    //}else if(windowW>575&&windowW<701){
-    //    memberContboxW =memberContboxW+windowW*0.4166*0.1666;
-    //    $('.js-membercontboxs').width(memberContboxW);
-    //
-    //}
+    var windowW = $(window).width();
+    var windowH = $(document).height();
+    var contH   = $('body').height();
+    $('.js_memberNavMiddleBtn').css({'padding-top':contH/2,height:windowH});
+    $('.js_memberNavLeft').height(windowH);
+
+    if(windowW<576){
+        $('.js_memberNavLeft').height('60px');
+    }
+    if(windowW>992){
+    }else if(windowW>700&&windowW<992){
+        $('.js-membercontboxs').width(windowW*0.85);
+    }else if(windowW>575&&windowW<701){
+
+        $('.js-membercontboxs').width(windowW*0.75);
+
+    }
+
 
 
 
     $(window).resize(function() {
-        var memberContboxW = $('.js-membercontboxs').width();
-        //console.log(memberContboxW,$(".js-membercontboxs").width(),'1');
         var windowW = $(window).width();
-        var windowH = $(window).height();
+        var windowH = $(document).height();
         var contH   = $('body').height();
-        //console.log(windowW,$(window).width(),'1');
-        //console.log(windowH,$(window).height(),'1');
-        //console.log(contH,$('body').height(),'1');
-        //
-        //console.log(1);
+        $('.js_memberNavLeft').height($('.js_memberNavMiddle').height());
         if(windowW<576){
-            console.log(windowW);
             //$('.js_memberNavLeft').height('60px');
             $('.js_memberNavLeft').css('height','60px');
         }
         if(windowW>992){
+            $('.js-membercontboxs').width(windowW*0.66666);
         }else if(windowW>700&&windowW<992){
-            console.log(memberContboxW+windowW*0.166);
-            memberContboxW =memberContboxW+windowW*0.166;
-            $('.js-membercontboxs').width(memberContboxW);
-            console.log(memberContboxW,'922');
+            $('.js-membercontboxs').width(windowW*0.85);
 
         }else if(windowW>575&&windowW<701){
-            console.log(memberContboxW+windowW*0.4166*0.1666);
-            memberContboxW =memberContboxW+windowW*0.4166*0.1666;
-            $('.js-membercontboxs').width(memberContboxW);
-
-            console.log(memberContboxW,'575');
-
-
+            $('.js-membercontboxs').width(windowW*0.75);
+        }else if(windowW<576){
+            $('.js-membercontboxs').width('100%');
         }
-        console.log(2 );
-
-        $('.js_memberNavMiddleBtn').css({'padding-top':contH/2,height:contH});
-        $('.js_memberNavLeft').height($('.js_memberNavMiddle').height());
-        $('.js_memberNavMiddleBtn').height($('.js_memberNavMiddle').height());
+        $('.js_memberNavMiddleBtn').css({'padding-top':contH/2,height:windowH});
+        $('.js_memberNavLeft').height(windowH);
 
     });
 
+
     //       xs模式 导航按钮点击时间
     $('.js_memberNavMiddleBtn').click(function(){
+
+
         var dataType = $(this).attr('data-alt');
         if(dataType==1){
             $(this).children('span').removeClass('icon-menu1').addClass('icon-close');
