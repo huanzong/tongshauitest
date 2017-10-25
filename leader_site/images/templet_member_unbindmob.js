@@ -23,31 +23,28 @@ $(function(){
                 if(returnData.resultMsg=='用户未登录'){
                     window.location.href ='/ids/ts/login.jsp';
                 }
-
+                var templet_email=jQuery.trim(returnData.data.email);
                 var templet_call=jQuery.trim(returnData.data.mobile);
-                if(templet_call==null || templet_call==""){
+                if(templet_email==null || templet_email==""){
                     self.location = '/security';
                 }else{
 
-                    var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
+                    if( templet_call!=null && templet_call!=""){
+                        var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
 
-                    $("#js-logincallphone").html(templet_callphone);
-                    $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
-                    $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
+                        $("#js-logincallphone").html(templet_callphone);
+                        $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
-                    var templet_email=jQuery.trim(returnData.data.email);
-                    if(templet_email==null || templet_email==""){
-                        self.location = '/security';
                     }
-                    else{
-                        var templet_split = templet_email.split("@");
-                        var templet_hide = templet_split[0].length / 2;
-                        var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
-                        $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
-                    }
+
+                    var templet_split = templet_email.split("@");
+                    var templet_hide = templet_split[0].length / 2;
+                    var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                    $("#js_unbindmob").attr('autotext',"邮箱（"+templet_emailnote+"）");
+                    $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
+
                     $("#js_unbindmob").oSelect().init();
-                    $('.js-unbingfalse').show();
-                    $('.js-unbingsuccess').hide();
+
 
                 }
             }

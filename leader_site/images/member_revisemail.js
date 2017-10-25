@@ -1,8 +1,77 @@
-/**
- * Created by 15610 on 2017/10/16.
- */
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-安全设置-修改邮件
+* @author:      刘悦
+* @date        2017.10.19
+* ---------------------------------------------------------------------------*/
 $(function(){
-    $("#js_revisemail").oSelect().init();
+    //前台判断是否登陆
+    // if(!istrsidssdssotoken()){
+    //     jumpToLoginPage()
+    // }
+
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: "/user/front/user/userInfo",
+        data: "",
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        },
+        success: function(returnData){
+            if (jQuery.trim(returnData).length > 0) {
+                if(returnData.resultMsg=='用户未登录'){
+                    window.location.href ='/ids/ts/login.jsp';
+                }
+                var templet_email=jQuery.trim(returnData.data.email);
+                if(templet_email==null || templet_email==""){
+                    self.location = '/security';
+                }
+
+                var templet_call=jQuery.trim(returnData.data.mobile);
+                if(templet_call!=null && templet_call!=""){
+
+                    var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
+
+                    $("#js-logincallphone").html(templet_callphone);
+                    $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
+                    $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
+                }
+
+                var templet_split = templet_email.split("@");
+                var templet_hide = templet_split[0].length / 2;
+                var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
+
+                $("#js_unbindmob").oSelect().init();
+                $('.js-unbingfalse').show();
+                $('.js-unbingsuccess').hide();
+
+
+            }
+        }
+    });
+//通过点击不同的下拉列表框 转换手机和邮箱
+    $("#js_unbindmob").change(function() { SelectChange(); });
+    function SelectChange(){
+
+        var val=$("#js_revisemail").val();
+        if(val==1)
+        {
+            $('.js-send').html('短信验证');
+            $('.js_mobileCodeYz').attr('placeholder','短信验证码');
+            $('.js-sendmobile').show();
+            $('.js-sendmail').hide();
+
+        }
+        if(val==2)
+        {
+            $('.js-send').html('邮箱验证');
+            $('.js_mobileCodeYz').attr('placeholder','邮箱验证码');
+            $('.js-sendmobile').hide();
+            $('.js-sendmail').show();
+        }
+    }
+
+
     $('.js_emailCodeYz').blur(function(){
         if($(this).val().length==6){
             $('.js_subimGetUp').removeClass('l-btn-disable');
