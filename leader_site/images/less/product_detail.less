@@ -867,16 +867,45 @@
 .detail-scene1{
 	position: relative;
 	font-size: 12px;
+	@media (max-width:575px) {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.detail-scene1-img{
+		@media (max-width: 575px) {
+			width: 180px;
+			padding:0;
+			margin: 0 auto;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.detail-more-price{
+		padding-bottom: 20px;
+	}
 	.swiper-container{
 		@media (min-width: 1200px) {
-			// height: 360px;
 			height: 600px;
 		}
 		@media (min-width: 992px) and (max-width: 1199px){
-			// height: 260px;
 			height: 500px;
 		}
-		
+		@media (min-width: 900px) and (max-width: 991px){
+			min-height: 750px;
+		}
+		@media (min-width: 800px) and (max-width: 899px){
+			min-height: 700px;
+		}
+		@media (min-width: 700px) and (max-width: 799px){
+			min-height: 560px;
+		}
+		@media (min-width: 600px) and (max-width: 699px){
+			min-height: 500px;
+		}
+		@media (min-width: 576px) and (max-width: 599px){
+			min-height: 460px;
+		}
 	}
 	.swiper-slide{
 		text-align: center;
@@ -885,21 +914,40 @@
 			img{
 				width: 100%;
 			}
+			@media (max-width:991px) {
+				display: none;
+				padding: 0 60px;
+			}
 		}
 		.detail-more-info{
 			display: none;
 		}
 		&.swiper-slide-active{
+			@media (max-width: 991px) {
+				z-index: 2;
+			}
 			.detail-scene1-img{
-				@keyframes myfirst{
+				@keyframes aniLG{
 					from {padding: 60px 60px 0;}
 					to {padding: 0;}
 				}
-				animation:myfirst 0.7s;
-				-moz-animation:myfirst 0.7s; /* Firefox */
-				-webkit-animation:myfirst 0.7s; /* Safari and Chrome */
-				-o-animation:myfirst 0.7s; /* Opera */
-				padding: 0;
+				@media (min-width:992px) {
+					animation:aniLG 0.7s;
+					-moz-animation:aniLG 0.7s; /* Firefox */
+					-webkit-animation:aniLG 0.7s; /* Safari and Chrome */
+					-o-animation:aniLG 0.7s; /* Opera */
+					padding: 0;
+				}
+				@media (max-width:991px) {
+					display: block;
+				}
+				
+			}
+			.detail-more-info,.detail-scene1-img{
+				@media (max-width: 991px) {
+					margin-left: -100%;
+					margin-right: -100%;
+				}
 			}
 			.detail-more-info{
 				display: block;
