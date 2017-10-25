@@ -361,7 +361,19 @@
             <!-- 场景展示 -->
             <div class="o_g">
                 <div class="detail-scene">
-                    <img class="o_picture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                    <div class="swiper-container js_sceneSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 场景展示 -->
@@ -411,8 +423,8 @@
                 </div>
                 <div class="o_u o_df_1-12 js_oHerl">
                     <a class="js_swiperSellPointNext js_center">
-						    			<img src="images/detail_icon.PNG">
-						    		</a>
+		    			<img src="images/detail_icon.PNG">
+		    		</a>
                 </div>
             </div>
             <!-- 核心卖点 -->
@@ -628,10 +640,10 @@
             <div class="o_g">
                 <div class="o_u o_df_1-6"></div>
                 <div class="o_u o_df_2-3">
-                    <div class="detail-scene1 o_xs-hide">
+                    <div class="detail-more o_xs-hide">
                         <div class="swiper-container js_swiperMore1">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <a class="swiper-slide">
                                     <div class="detail-scene1-img">
                                         <img src="images/footer_logo1.jpg">
                                     </div>
@@ -649,8 +661,8 @@
                                             ￥79008
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
+                                </a>
+                                <a class="swiper-slide">
                                     <div class="detail-scene1-img">
                                         <img src="images/footer_logo2.jpg">
                                     </div>
@@ -668,8 +680,8 @@
                                             ￥79008
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
+                                </a>
+                                <a class="swiper-slide">
                                     <div class="detail-scene1-img">
                                         <img src="images/footer_logo3.jpg">
                                     </div>
@@ -687,7 +699,7 @@
                                             ￥79008
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <!-- 如果需要导航按钮 -->
@@ -698,10 +710,10 @@
                             <i class="iconfont icon-arrow-jiantou-right"></i>
                         </div>
                     </div>
-                    <div class="detail-scene1 o_df-hide o_xs-show">
-                        <div class="detail-scene1-img">
+                    <div class="detail-more o_df-hide o_xs-show">
+                        <a class="detail-scene1-img">
                             <img src="images/footer_logo1.jpg">
-                        </div>
+                        </a>
                         <div class="detail-more-info">
                             <div class="detail-more-tit">
                                 三开门家用节能小冰箱
@@ -716,9 +728,9 @@
                                 ￥79008
                             </div>
                         </div>
-                        <div class="detail-scene1-img">
+                        <a class="detail-scene1-img">
                             <img src="images/footer_logo2.jpg">
-                        </div>
+                        </a>
                         <div class="detail-more-info">
                             <div class="detail-more-tit">
                                 三开门家用节能小冰箱
@@ -733,9 +745,9 @@
                                 ￥79008
                             </div>
                         </div>
-                        <div class="detail-scene1-img">
+                        <a class="detail-scene1-img">
                             <img src="images/footer_logo3.jpg">
-                        </div>
+                        </a>
                         <div class="detail-more-info">
                             <div class="detail-more-tit">
                                 三开门家用节能小冰箱

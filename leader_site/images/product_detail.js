@@ -1,15 +1,24 @@
 $(function() {
     
     //用来存放所有轮播
-    var swiper = {
-        // preferentialSwiper:'',
-        // mySwiper:'',
-        // preferentialSwiper:'',
-    }; 
+    var swiper = {};
 
     //文字卖点
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
         slidesPerView : 'auto',
+    });
+
+    //场景展示
+    $(".js_scenePicture").each(function() {
+        $(this).oPicture({}).init();
+    });
+    swiper.sceneSwiper = new Swiper('.js_sceneSwiper',{
+        loop: true,
+        autoplay: 1000,
+        slidesPerView: 1,//滑动展示个数
+        centeredSlides: true,
+        slidesPerGroup: 1,//每次滑动移动个数
+        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
     });
 
     //核心卖点
@@ -50,29 +59,8 @@ $(function() {
         // scrollbar: '.swiper-scrollbar'
     });
 
-
     //更多选择
-    swiper.moreSwiper = new Swiper('.js_swiperMore', {
-        direction: 'horizontal',
-        grabCursor: true,
-        loop: true,
-        autoplay: 1000,
-
-        //分组
-        slidesPerView: 3,//滑动展示个数
-        slidesPerGroup: 1,//每次滑动移动个数
-
-        // 如果需要分页器
-        pagination: '.js_swiper_paginationMore',
-        paginationType: 'bullets',
-
-        // 如果需要前进后退按钮
-        nextButton: '.js_swiper_nextMore',
-        prevButton: '.js_swiper_prevMore',
-    });
-
-    //轮播模板
-    swiper.mySwiper = new Swiper('.js_swiperMore1', {
+    swiper.moreSwiper = new Swiper('.js_swiperMore1', {
         loop: true,
         autoplay: 1000,
 
@@ -84,10 +72,10 @@ $(function() {
     });
 
     $('.js_swiperMore_prev').click(function(){
-        swiper.mySwiper.swipePrev(); 
+        swiper.moreSwiper.swipePrev(); 
     });
     $('.js_swiperMore_next').click(function(){
-        swiper.mySwiper.swipeNext(); 
+        swiper.moreSwiper.swipeNext(); 
     });
 
     init();
@@ -306,7 +294,7 @@ $(function() {
 
         //更多选择
         if(screenWidth>575){
-            swiper.mySwiper.reInit();
+            swiper.moreSwiper.reInit();
         }
 
     }
