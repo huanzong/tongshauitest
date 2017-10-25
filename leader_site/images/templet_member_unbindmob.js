@@ -184,6 +184,10 @@ $(function(){
                 success: function(returnData){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
+                            $('.js-memberRevRateLine').css('width','75%');
+                            $('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
+                            $('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+
                             $('.js-unbingfalse').hide();
                             $('.js_validateMob').show();
 
@@ -204,7 +208,7 @@ $(function(){
         }
     })
 
-    //确定绑定
+    //确定取消绑定
     $(".js-unbind") .unbind().bind('click',function(){
         var templet_param;
         var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
@@ -217,43 +221,48 @@ $(function(){
         }
         var templet_code=$('.js_mobileCodeYz').val();
 
+        if(templet_param!=''){
+            $.ajax({
+                type: "post",
+                dataType: "text",
+                url: "/ids/ts/userInfoManager.jsp",
+                data: {
+                    'editOperation': 'unbind',
+                    'param': templet_param ,
+                    'code':templet_code
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                },
+                success: function (returnData) {
+                    if (jQuery.trim(returnData).length > 0) {
+                        if (jQuery.trim(returnData).indexOf("200")>-1) {
+                            $('.js-memberRevRateLine').css('width','100%');
+                            $('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
 
-        $.ajax({
-            type: "post",
-            dataType: "text",
-            url: "/ids/ts/userInfoManager.jsp",
-            data: {
-                'editOperation': 'cancelUnbind',
-                'param': templet_param ,
-                'code':templet_code
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-            },
-            success: function (returnData) {
-                if (jQuery.trim(returnData).length > 0) {
-                    if (jQuery.trim(returnData).indexOf("200")>-1) {
-                        $('.js_validateMob').hide();
-                        $('.js-unbingsuccess').show();
+                            $('.js_validateMob').hide();
+                            $('.js-unbingsuccess').show();
 
-                        document.cookie="isAlterBind=1;path=/";
+                            document.cookie="isAlterBind=1;path=/";
 
-                        var templet_time = 4;
-                        var templet_change = setInterval(function(){
-                            if (templet_time == 0) {
-                                clearInterval(templet_change);
-                                window.location.href ='/security'
-                                return;
-                            }
-                            document.getElementById("js-countdown").innerHTML = templet_time;
-                            templet_time--;
-                        }, 1000);
+                            // var templet_time = 4;
+                            // var templet_change = setInterval(function(){
+                            //     if (templet_time == 0) {
+                            //         clearInterval(templet_change);
+                            //         window.location.href ='/security'
+                            //         return;
+                            //     }
+                            //     document.getElementById("js-countdown").innerHTML = templet_time;
+                            //     templet_time--;
+                            // }, 1000);
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
+
     });
 
-    //取消绑定
+    //取消取消绑定
     $(".js-cancelUnbind") .unbind().bind('click',function(){
 
         var templet_param;
@@ -297,10 +306,6 @@ $(function(){
     });
 
 })
-
-
-
-
 
 //解绑手机号码验证
 
