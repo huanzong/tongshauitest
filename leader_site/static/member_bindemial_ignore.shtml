@@ -25,6 +25,8 @@
             <!-- 右侧内容 START-->
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
                 <div class="o_u o_df_12-12 member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
+
                     <div class="member-security-width js-securityheight">
                         <div class="member-security-tit"><p>绑定邮箱</p></div>
                         <!-- 内容区域 START-->
