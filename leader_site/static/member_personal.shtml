@@ -11,8 +11,9 @@
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+
     <link rel="stylesheet" type="text/css" href="images/member.css">
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
     <link rel="stylesheet" type="text/css" href="images/l_dateTime.css">
 </head>
 
