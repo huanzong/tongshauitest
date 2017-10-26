@@ -10,12 +10,13 @@
     	 * 生产环境地址
     	 */
         // domain:"http://user.tongshuai.com",
-//        domain: "",
+        // domain: "",
         
         /**
          * 测试环境地址
          */
-         domain: "http://tuser.tongshuai.com"//本地
+         userUrl: "http://tuser.tongshuai.com",//本地
+         domain: "http://test.tongshuai.com"//本地
 
     };
 </script>
