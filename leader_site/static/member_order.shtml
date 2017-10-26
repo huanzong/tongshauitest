@@ -358,6 +358,26 @@
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
+        <div class="o_g land-shade  land-shade-top js_landShadeTop">
+            <div class="land-box js_landContBox">
+                <div class="land-cont-title alert-cont-title o_u">
+                    <a href="" class="o_u iconfont icon-close js_landClose"></a>
+                </div>
+                <div class="js_landType">
+                    <div class="land-cont-type-normal o_u o_df_1-2 cur">普通登录</div>
+                    <div class="land-cont-type-phone o_u o_df_1-2">手机动态密码登录</div>
+                </div>
+                <div class="js_landInputBox">
+                    <div class="land-cont-normal-input o_g">
+                        <div class="o_g member-bingmob-list">
+                            <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                                <p class="js-landText"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

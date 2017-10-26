@@ -341,6 +341,7 @@ function globalShade(alerttext){
 }
 function globalShade2(alerttext,type,time){
     var outTime = time>2000?time:2000;
+
     $('.js_popUpBox2').show();
     $("body").css({overflow:"hidden"});
     $('.js_popUpText').html(alerttext);
@@ -362,17 +363,22 @@ function globalShade2(alerttext,type,time){
         $('.js_popUpFales').hide();
         $('.js_popUpText').css('')
     }
-    if(outTime){
-       setTimeout(function(){
-           $('.js_popUpBox2').hide();
-           $("body").css({overflow:"js_popUpBox2uto"});
-       },outTime);
+    if(outTime=='forever'){
+        return false;
     }else{
-        setTimeout(function(){
-            $('.js_popUpBox2').hide();
-            $("body").css({overflow:"auto"});
-        },2000);
+        if(outTime){
+            setTimeout(function(){
+                $('.js_popUpBox2').hide();
+                $("body").css({overflow:"js_popUpBox2uto"});
+            },outTime);
+        }else{
+            setTimeout(function(){
+                $('.js_popUpBox2').hide();
+                $("body").css({overflow:"auto"});
+            },2000);
+        }
     }
+
     //$('.js_alertClose').click(function(){
     //
     //})
