@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>支付订单</title>
+    <%=base%>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <!--#include virtual="public/head.shtml"-->
+        <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="images/product_pay.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <!-- 头部 -->
+            <div class="o_g trolley-head">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="trolley-logo">
+                        <img src="images/l_logo.png">
+                    </div>
+                    <div class="trolley-title">
+                        支付订单
+                    </div>
+                    <a class="trolley-username">
+                        胖大海
+                    </a>
+                </div>
+            </div>
+            <!-- 头部 END -->
+            <!-- 支付成功页面内容 -->
+            <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <!-- 订单成功 -->
+                    <div class="pay-success">
+                       <div class="success-logo">
+                           <i class="iconfont icon-success-solid"></i>
+                       </div> 
+                    </div>
+                    <!-- 订单成功 END -->
+                </div>
+            </div>
+            <!-- 支付成功页面内容 END -->
+
+            <!--#include virtual="public/footer.shtml"-->
+        </div>
+    </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/product_pay.js"></script>
+
+</body>
+
+</html>
