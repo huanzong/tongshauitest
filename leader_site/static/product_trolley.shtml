@@ -509,7 +509,6 @@
         </div>
     </div>
     <!--#include virtual="public/foot.shtml"-->
-    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="images/product_trolley.js"></script>
 
 </body>
