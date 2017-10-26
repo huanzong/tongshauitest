@@ -6,10 +6,10 @@
 
 $(function(){
 
-    //前台判断是否登陆
-    // if(!istrsidssdssotoken()){
-    //     jumpToLoginPage();
-    // }
+    // 前台判断是否登陆
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage();
+    }
 
     var templet_select_sheng=$("#js_save").oSelect();
     var templet_select_shi=$("#js_city").oSelect();
@@ -151,7 +151,8 @@ $(function(){
                     error:function(){}
                 })
 
-
+                //头像放进去
+                $("#js-imgleft").attr("src",returnData.data.headUrl);
             }
         }
     });
@@ -346,11 +347,41 @@ $(function(){
         var templet_cityId=$.trim($("#js_city  option:selected").val());
         var templet_areaName=$.trim($("#js_area  option:selected").text());
         var templet_areaId=$.trim($("#js_area  option:selected").val());
-        if(templet_provinceId=='' ||templet_cityId=='' ||templet_areaId=='' || templet_birthday==''){
+
+        if( $('.js_personalistwrongbox_user').hasClass('personalist-wrong-box') || templet_loginName==''){
+            wrongInfo($('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名格式不正确');
+            return;
+        }
+        if(templet_birthday=='' ){
+            wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'生日不能为空');
+            return;
+        }
+        //判断生日是否超出现在日期
+        var myDate = new Date();
+        var birthdayArr=templet_birthday.split("-");
+        yearU=birthdayArr[0];
+        monthU=birthdayArr[1]-1;
+        dayU=birthdayArr[2];
+        if(yearU>myDate.getFullYear() ||monthU>myDate.getMonth() ){
+            wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'请填写正确日期');
+            return;
+        }
+        if(monthU==myDate.getMonth()&&dayU>myDate.getDate()){
+            wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'请填写正确日期');
+            return;
+        }
+        if(templet_provinceId=='' ||templet_cityId=='' ||templet_areaId==''){
+            wrongInfo($('.js_personalistwrongbox_address'),$('.js_personawrong_address'),'居住地不能为空');
             return;
         }
 
+        $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+        $('.js_personalistwrongbox_data').addClass('personalist-right').removeClass('personalist-wrong-box');
+        $('.js_personalistwrongbox_address').addClass('personalist-right').removeClass('personalist-wrong-box');
+
+
         var templet_data={
+            "loginName":templet_loginName,
             "sex":templet_sex,
             "provinceId":templet_provinceId,
             "provinceName":templet_provinceName,
@@ -372,10 +403,18 @@ $(function(){
             success: function (returnData) {
                 if(returnData.isSuccess){
                     document.cookie="isAlterBind=1;path=/";
-                    alert('保存成功')
+                    globalShade2('保存成功','1');
+
+                    template_sex=templet_sex;
+                    template_provinceName=templet_provinceName;
+                    template_city=templet_city;
+                    template_areaName=templet_areaName;
+                    template_birthday=templet_birthday;
+                    template_loginName=templet_loginName;
                 }
                 else{
-                    alert('保存失败')
+
+                    globalShade2(returnData.resultMsg,'2');
                 }
                 templet_isSubmiting=false;
             }
