@@ -324,7 +324,12 @@ $(function() {
 
 });
 //地址弹窗通用方法
+<<<<<<< HEAD
+    function addressAlert(add){
+        //addressAlert= function(add){
+=======
 //function addressAlert(add){
+>>>>>>> cb9e616155a24dac0b78ef8c5cd4d71ea779c89f
 
     //$('#aadd').click(function(){
     //    addressAlert(111);
@@ -345,12 +350,21 @@ $(function() {
     function addressAlert(add){
         $('.js_landShadeTop').show();
         $('.js_landContBox').show();
+<<<<<<< HEAD
+        var saveText = save,
+            saveCode = saveCode,
+            cityText = city,
+            cityCode = cityCode,
+            areaText = area,
+            areaCode = areaText;
+=======
         //var saveText = save,
         //    saveCode = saveCode,
         //    cityText = city,
         //    cityCode = cityCode,
         //    areaText = area,
         //    areaCode = areaText;
+>>>>>>> cb9e616155a24dac0b78ef8c5cd4d71ea779c89f
         var addressSave,addressCity,addressArea,citycode_used;
         //判定传入值是否存在
         if(add.save&&add.savecode){
@@ -366,7 +380,11 @@ $(function() {
         $('.js_landType>div').eq(0).show().siblings().hide();
 
         //获取省份并汇入
+<<<<<<< HEAD
+        if(!saveCode){
+=======
         if(!add.savecode){
+>>>>>>> cb9e616155a24dac0b78ef8c5cd4d71ea779c89f
             $.ajax({
                 type:'GET',
                 url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
@@ -390,6 +408,10 @@ $(function() {
         $('.js_alertAddress_save_cont>li').live('click',function(){
             saveText =  $(this).html();
             saveCode = $(this).attr('data-code');
+<<<<<<< HEAD
+            alert(saveCode);
+=======
+>>>>>>> cb9e616155a24dac0b78ef8c5cd4d71ea779c89f
             //获取city信息并汇入
             //简单判断本次选择的省份是否与上次为相同数据，如果不同再次请求
             if(saveCode != citycode_used){
@@ -433,6 +455,7 @@ $(function() {
                 },
                 success:function(data){
                     var contdata = data.data;
+<<<<<<< HEAD
 
                     console.log(123,contdata);
                     if(data.isSuccess){
@@ -459,7 +482,38 @@ $(function() {
             return addressJson;
         });
     }
+    // $('#aadd').click(function(){
+    //    addressAlert(111);
+    // });
+=======
 
+                    console.log(123,contdata);
+                    if(data.isSuccess){
+                        for(var i = 0;i<contdata.length;i++){
+                            addressArea+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
+                        }
+                        $('.js_alertAddress_area_cont ').html(addressArea);
+                    }
+                }
+            });
+
+            $('.js_alertAddress_city').show().html(cityText).attr('data-code','cityCode');
+            $('.js_alertAddress_area').html('');
+            $('.js_landType div').eq(2).show().click();
+            return false;
+        })
+        $('.js_alertAddress_area_cont>li').live('click',function(){
+            areaText =  $(this).html();
+            areaCode = $(this).attr('data-code');
+            $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');;
+            var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
+            $('.js_landShadeTop').show();
+            $('.js_landContBox').show();
+            return addressJson;
+        })
+    }
+
+>>>>>>> cb9e616155a24dac0b78ef8c5cd4d71ea779c89f
 
     //通用弹窗
     function globalShade(alerttext){
@@ -568,3 +622,12 @@ $(function() {
         }
     }
 
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
+>>>>>>> cb9e616155a24dac0b78ef8c5cd4d71ea779c89f
