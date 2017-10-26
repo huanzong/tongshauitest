@@ -322,7 +322,9 @@ $(function() {
 
 //地址弹窗通用方法
 function addressAlert(add){
-    $('.js_landShadeTop').show();
+//    addressAlert= function(add){
+
+        $('.js_landShadeTop').show();
     $('.js_landContBox').show();
     var saveText = save,
         saveCode = saveCode,
@@ -424,7 +426,6 @@ function addressAlert(add){
             }
         });
 
-
         $('.js_alertAddress_city').show().html(cityText).attr('data-code','cityCode');
         $('.js_alertAddress_area').html('');
         $('.js_landType div').eq(2).show().click();
@@ -440,121 +441,123 @@ function addressAlert(add){
         return addressJson;
     })
 }
-})
-$('#aadd').click(function(){
-    addressAlert('山东','11','青岛','112','市南','111');
-})
-
+    //$('#aadd').click(function(){
+    //    addressAlert(111);
+    //});
 
 //通用弹窗
-function globalShade(alerttext){
-    $('.js_landShade').show();
-    $('.js_landContBox').show();
-    $("body").css({overflow:"hidden"});
-    $('.js-landText').html(alerttext);
-    $('.js_landClose').click(function(){
-        $('.js_landContBox').hide();
-        $('.js_landShade').hide();
-        $("body").css({overflow:"auto"});
-        return false;
-    });
-    //$('.js_alertClose').click(function(){
-    //
-    //})
-}
-function globalShade2(alerttext,type,time){
-    var outTime = time>2000?time:2000;
-
-    $('.js_popUpBox2').show();
-    $("body").css({overflow:"hidden"});
-    $('.js_popUpText').html(alerttext);
-    if(type==1){
-        $('.js_popUpFales').hide();
-        $('.js_popUpWarn').hide();
-        $('.js_popUpTrue').show();
-    }else if(type==2){
-        $('.js_popUpTrue').hide();
-        $('.js_popUpWarn').hide();
-        $('.js_popUpFales').show();
-    }else if(type==3){
-        $('.js_popUpTrue').hide();
-        $('.js_popUpWarn').show();
-        $('.js_popUpFales').hide();
-    }else{
-        $('.js_popUpTrue').hide();
-        $('.js_popUpWarn').hide();
-        $('.js_popUpFales').hide();
-        $('.js_popUpText').css('')
+    function globalShade(alerttext){
+        $('.js_landShade').show();
+        $('.js_landContBox').show();
+        $("body").css({overflow:"hidden"});
+        $('.js-landText').html(alerttext);
+        $('.js_landClose').click(function(){
+            $('.js_landContBox').hide();
+            $('.js_landShade').hide();
+            $("body").css({overflow:"auto"});
+            return false;
+        });
+        //$('.js_alertClose').click(function(){
+        //
+        //})
     }
-    if(outTime=='forever'){
-        $("body").css({overflow:"auto"});
-        return false;
-    }else{
-        if(outTime){
-            setTimeout(function(){
-                $('.js_popUpBox2').hide();
-                $("body").css({overflow:"auto"});
-            },outTime);
+    function globalShade2(alerttext,type,time){
+        var outTime = time>2000?time:2000;
+
+        $('.js_popUpBox2').show();
+        $("body").css({overflow:"hidden"});
+        $('.js_popUpText').html(alerttext);
+        if(type==1){
+            $('.js_popUpFales').hide();
+            $('.js_popUpWarn').hide();
+            $('.js_popUpTrue').show();
+        }else if(type==2){
+            $('.js_popUpTrue').hide();
+            $('.js_popUpWarn').hide();
+            $('.js_popUpFales').show();
+        }else if(type==3){
+            $('.js_popUpTrue').hide();
+            $('.js_popUpWarn').show();
+            $('.js_popUpFales').hide();
         }else{
-            setTimeout(function(){
-                $('.js_popUpBox2').hide();
-                $("body").css({overflow:"auto"});
-            },2000);
+            $('.js_popUpTrue').hide();
+            $('.js_popUpWarn').hide();
+            $('.js_popUpFales').hide();
+            $('.js_popUpText').css('')
+        }
+        if(outTime=='forever'){
+            $("body").css({overflow:"auto"});
+            return false;
+        }else{
+            if(outTime){
+                setTimeout(function(){
+                    $('.js_popUpBox2').hide();
+                    $("body").css({overflow:"auto"});
+                },outTime);
+            }else{
+                setTimeout(function(){
+                    $('.js_popUpBox2').hide();
+                    $("body").css({overflow:"auto"});
+                },2000);
+            }
+        }
+
+        //$('.js_alertClose').click(function(){
+        //
+        //})
+    }
+
+//时间戳转换日期 时间戳，选格式，时间戳类型
+    function getLocalTime(nS,val,type) {
+        if(type==2)
+        {
+            var timestamp4 =new Date(parseInt(nS) * 1000);
+        }
+        else
+        {
+            var timestamp4 =new Date(parseInt(nS));
+        }
+
+        var y = timestamp4.getFullYear();
+        var m = timestamp4.getMonth() + 1;
+        var d = timestamp4.getDate();
+        if(val == 2){
+            return y + "." + (m < 10 ? "0" + m : m) + "." + (d < 10 ? "0" + d : d) ;
+        }else if(val == 3){
+            return y + "/" + (m < 10 ? "0" + m : m) + "/" + (d < 10 ? "0" + d : d) ;
+        }else if(val == 4){
+            return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
+        }
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + timestamp4.toTimeString().substr(0, 8);
+
+    }
+
+//判断当前是否存在同域cookie
+    function istrsidssdssotoken(){
+        var trsidssdssotoken = "ssotoken";//同域Cookie
+        var sdssotoken = $.cookie(trsidssdssotoken);
+        if(sdssotoken!=null){
+            return true;
+        }else{
+            return false;
         }
     }
 
-    //$('.js_alertClose').click(function(){
-    //
-    //})
-}
-
-
-
-//时间戳转换日期 时间戳，选格式，时间戳类型
-function getLocalTime(nS,val,type) {
-    if(type==2)
-    {
-        var timestamp4 =new Date(parseInt(nS) * 1000);
-    }
-    else
-    {
-        var timestamp4 =new Date(parseInt(nS));
-    }
-
-    var y = timestamp4.getFullYear();
-    var m = timestamp4.getMonth() + 1;
-    var d = timestamp4.getDate();
-    if(val == 2){
-        return y + "." + (m < 10 ? "0" + m : m) + "." + (d < 10 ? "0" + d : d) ;
-    }else if(val == 3){
-        return y + "/" + (m < 10 ? "0" + m : m) + "/" + (d < 10 ? "0" + d : d) ;
-    }else if(val == 4){
-        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
-    }
-    return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + timestamp4.toTimeString().substr(0, 8);
-
-}
-
-
-//判断当前是否存在同域cookie
-function istrsidssdssotoken(){
-    var trsidssdssotoken = "ssotoken";//同域Cookie
-    var sdssotoken = $.cookie(trsidssdssotoken);
-    if(sdssotoken!=null){
-        return true;
-    }else{
-        return false;
-    }
-}
-
 //跳转到登录页面
-function jumpToLoginPage(){
-    var returnUrl = window.location.href;
-    if(!istrsidssdssotoken()){
+    function jumpToLoginPage(){
         var returnUrl = window.location.href;
-        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+        if(!istrsidssdssotoken()){
+            var returnUrl = window.location.href;
+            window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+        }
     }
-}
+
+
+
+
+})
+
+
 
 
 
