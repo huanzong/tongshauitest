@@ -74,9 +74,6 @@ $(function() {
       'margin-left': -455.5,
       'margin-top': -250
     });
-
-    
-
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
@@ -112,6 +109,19 @@ $(function() {
 
 	},1000);
 
+  /**
+   * 产线入口
+   */
+  $('.js_enterMore').on('click',function(){
+    $('.js_enterShow').toggleClass('l-none');
+    if($(this).attr('data-type')=='more'){
+      $(this).html('展开全部产品分类 +');
+      $(this).attr('data-type','');
+    }else{
+      $(this).html('收起全部产品分类 x');
+      $(this).attr('data-type','more');
+    }
+  });
 
 	/**
 	 * 产品推荐

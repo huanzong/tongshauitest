@@ -19,17 +19,17 @@ $(function(){
         }else{
             $('.js_orderconTimeBox').hide();
         }
-    })
+    });
 
     $('.js_orderconSetInaoice').click(function(){
         $('.js_orderconInvoiceBox').hide();
         $('.js_orderconInvoiceSet').show();
-    })
+    });
     $('.js_orderconSetBtnClose').click(function(){
         $('.js_orderconInvoiceSet').hide();
         $('.js_orderconInvoiceBox').show();
 
 
-    })
+    });
 
-})
+});
