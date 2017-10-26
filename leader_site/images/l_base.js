@@ -74,7 +74,6 @@ $(function () {
         var $ele = $(this).parent().siblings($('.js_footLink'));
         $ele.toggle();
         $ele.toggleClass('link_border');
-
     });
 
     /**
