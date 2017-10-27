@@ -243,7 +243,6 @@ $(function() {
                 });
             });
 
-                
             
         }
         
@@ -346,9 +345,6 @@ $('.js_addClose').click(function(){
 })
 
 
-
-
-
 /*
 * 公用地址弹窗
 * */
@@ -382,7 +378,7 @@ function addressAlert(add){
                 console.log(123,contdata);
                 if(data.isSuccess){
                     for(var i = 0;i<contdata.length;i++){
-                        addressSave+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
+                        addressSave+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                     }
                     $('.js_alertAddress_save_cont').html(addressSave);
                     $('.js_landInputBox>div').eq(0).show().siblings().hide();
@@ -414,7 +410,7 @@ function addressAlert(add){
                     if (data.isSuccess) {
                         addressCity='';
                         for (var i = 0; i < contdata.length; i++) {
-                            addressCity += '<li class="o_u o_df_3-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
+                            addressCity += '<li class="o_u o_df_3-12 o_xs_11-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
                         }
                         $('.js_alertAddress_ctiy_cont').html(addressCity);
                         //$('.js_landInputBox>div').eq(1).show().siblings().hide();
@@ -447,7 +443,7 @@ function addressAlert(add){
                 if(data.isSuccess){
                     addressArea='';
                     for(var i = 0;i<contdata.length;i++){
-                        addressArea+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
+                        addressArea+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                     }
                     $('.js_alertAddress_area_cont ').html(addressArea);
                     addAleatBtn(2);
@@ -478,7 +474,6 @@ function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
     $('.js_landInputBox>div').eq(index).show().siblings().hide();
 }
-
 
 
 
@@ -535,5 +530,3 @@ function globalShade2(alerttext,type,time){
             },2000);
         }
 }
-
-

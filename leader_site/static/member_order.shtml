@@ -357,7 +357,7 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <a href="javascript:;" id="aadd" onclick="" style="font-size: 20px;color: red ">aaaaaa</a>
+        <a href="javascript:;" id="aadd" style="font-size: 14px; color: red">aaaaaa</a>
         <!--#include virtual="public/personal_footer.shtml"-->
         <div class="o_g land-shade  land-shade-top js_addShadeTop">
             <div class="land-box land-box-address js_addContBox">
@@ -369,9 +369,9 @@
                     <a href="" class="o_u iconfont icon-close js_addClose"></a>
                 </div>
                 <div class="js_addType" data-alt="1">
-                    <div class="land-cont-type-normal o_u o_df_1-3 cur">省</div>
-                    <div class="land-cont-type-phone o_u o_df_1-3">市</div>
-                    <div class="land-cont-type-phone o_u o_df_1-3">区</div>
+                    <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                    <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                    <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
                 </div>
                 <div class="js_landInputBox">
                     <div class="land-cont-normal-input o_g">
