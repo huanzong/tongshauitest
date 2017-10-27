@@ -103,11 +103,11 @@ $(function(){
                     if (jQuery.trim(returnData).indexOf("200")>-1) {}
                     else if (jQuery.trim(returnData).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的');
+                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                     else if (jQuery.trim(returnData).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
+                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                 }
             }
@@ -327,9 +327,11 @@ $("#js_unbindmail").oSelect().init();
 $('.js_emailCodeYz').blur(function(){
     if($(this).val().length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
+        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
         $('.js_subimGetUp').click(function(){
+            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
 
             return false;
         })

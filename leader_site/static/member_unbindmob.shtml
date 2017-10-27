@@ -68,10 +68,10 @@
                                 <div class="o_g member-bingmob-list">
                                     <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_2-2 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext js-send">短信验证</div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt">
-                                        <input type="text" class="js_mobileCodeYz" name="" placeholder="短信验证码">
+                                        <input type="text" class="js_emailCodeYz" name="" placeholder="短信验证码">
                                         <a href="javascript:;" class="l-btn-sm l-btn-red js-sendmobile">发送验证短信</a>
                                         <a href="javascript:;" class="l-btn-sm l-btn-red js-sendmail " style="display: none">发送验证邮件</a>
-                                        <p class="Validform_checktip Validform_wrong js-error"></p>
+                                        <p class="Validform_checktip Validform_wrong Validform_right js-error"><span class="iconfont icon-information-solid"></span>不可为空</p>
                                     </div>
                                 </div>
 

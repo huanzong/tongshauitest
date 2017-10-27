@@ -46,12 +46,14 @@ $(function(){
 
     //第一步确定按钮变亮
     $('.js_emailCodeYz').blur(function(){
+        console.log($(this).val());
         if($(this).val().length==6){
             $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
         }else{
             $('.js_subimGetUp').addClass('l-btn-disable');
             $('.js_subimGetUp').click(function(){
-
+                $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
                 return false;
             })
         }
