@@ -310,59 +310,52 @@ $(function() {
             return false;
         });
     });
-    //$('.js_landType >div').click(function(){
-    //    var clickIndex = $(this).index();
-    //    $(this).addClass('cur').siblings().removeClass('cur');
-    //    $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
-    //    $('.js-submintData').addClass('l-btn-disable');
-    //
-    //});
+
+
 });
-
-
-
-
 
 //顶部导航点击
 $('.js_addType>div').click(function(){
     var dataAlt = $('.js_addType').attr('data-alt');
     var divIndex = $(this).index();
+    console.log(dataAlt,divIndex);
+    //alert(dataAlt);
     if(dataAlt==1){
-        if(divIndex==1){
-            $(this).addClass('cur');
-           $('.js_landInputBox').eq(0).show().siblings().hide();
+        if(divIndex==0){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.js_landInputBox>div').eq(1).show().siblings().hide();
         }else{
             return false;
         }
     }else if(dataAlt==2){
-        if(divIndex!=3){
-            $(this).addClass('cur');
-            $('.js_landInputBox').eq(divIndex).show().siblings().hide();
+        if(divIndex!=2){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.js_landInputBox>div').eq(divIndex).show().siblings().hide();
         }else{
             return false;
         }
     }else if (dataAlt==3){
-        $(this).addClass('cur');
-        $('.js_landInputBox').eq(divIndex).show().siblings().hide();
+        $(this).addClass('cur').siblings().removeClass('cur');
+        $('.js_landInputBox>div').eq(divIndex).show().siblings().hide();
     }
 });
+$('.js_addClose').click(function(){
+    $('.js_addShadeTop').hide();
+    $('.js_addContBox').hide();
+    return false;
+})
 
 
 
 
 
-
-
-
-
-
-
-
-
+/*
+* 公用地址弹窗
+* */
 function addressAlert(add){
-    $('.js_landShadeTop').show();
-    $('.js_landContBox').show();
-    var addressSave,addressCity,addressArea,citycode_used;
+    $('.js_addShadeTop').show();
+    $('.js_addContBox').show();
+    var addressSave,addressCity,addressArea,savecode_used;
     //判定传入值是否存在
     if(add.save&&add.savecode){
         $('.js_alertAddress_save').html(add.save).attr('data-code',add.savecode);
@@ -373,13 +366,6 @@ function addressAlert(add){
         $('.js_alertAddress_city').html('北京').attr('data-code','1');
         $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
     }
-    //$('.js_alertAddress_save_cont').show();
-    //$('.js_alertAddress_ctiy_cont').show();
-    //$('.js_alertAddress_area_cont').hide();
-    //$('.js_landType>div').eq(0).show().siblings().hide();
-    $('.js_addType>div').unbind().eq(0).siblings().bind('click',function(){
-        return false;
-    });
     $('.js_landInputBox>div').eq(0).show().siblings().hide();
     //获取省份并汇入
     if(!add.savecode){
@@ -410,9 +396,10 @@ function addressAlert(add){
         $('.js_addType').attr('data-alt',2);
         saveText = $(this).html();
         saveCode = $(this).attr('data-code');
+        console.log(1,saveCode);
         //获取city信息并汇入
         //简单判断本次选择的省份是否与上次为相同数据，如果不同再次请求
-        if (saveCode != citycode_used) {
+        if (saveCode != savecode_used) {
             $.ajax({
                 type: 'GET',
                 url: siteConfig.domain + '/interaction-service/regionInfo/regionList/',
@@ -422,9 +409,10 @@ function addressAlert(add){
                 },
                 success: function (data) {
                     var contdata = data.data;
-                    citycode_used = saveCode;
-                    console.log(123, contdata);
+                    savecode_used = saveCode;
+                    console.log(2,saveCode);
                     if (data.isSuccess) {
+                        addressCity='';
                         for (var i = 0; i < contdata.length; i++) {
                             addressCity += '<li class="o_u o_df_3-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
                         }
@@ -455,21 +443,18 @@ function addressAlert(add){
             },
             success:function(data){
                 var contdata = data.data;
-
                 console.log(123,contdata);
                 if(data.isSuccess){
+                    addressArea='';
                     for(var i = 0;i<contdata.length;i++){
                         addressArea+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                     }
                     $('.js_alertAddress_area_cont ').html(addressArea);
-                    //$('.js_landInputBox>div').eq(2).show().siblings().hide();
-
                     addAleatBtn(2);
 
                 }
             }
         });
-
 
         $('.js_alertAddress_city').show().html(cityText).attr('data-code','cityCode');
         $('.js_alertAddress_area').html('');
@@ -484,34 +469,17 @@ function addressAlert(add){
         $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');
         var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
         addAleatBtn(3);
-        //$('.js_landShadeTop').hide();
-        //$('.js_landContBox').hide();
-
         return addressJson;
 
     });
+
 }
-
-
 function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
     $('.js_landInputBox>div').eq(index).show().siblings().hide();
-    if(index==0){
-
-        $('.js_addType>div').eq(index).siblings().click(function(){
-
-            return false;
-        })
-
-    }else if(index==1){
-
-        $('.js_addType>div').eq(2).click(function(){
-            return false;
-        })
-    }else{
-
-    }
 }
+
+
 
 
 //通用弹窗
