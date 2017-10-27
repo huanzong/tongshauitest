@@ -310,14 +310,50 @@ $(function() {
             return false;
         });
     });
-    $('.js_landType >div').click(function(){
-        var clickIndex = $(this).index();
-        $(this).addClass('cur').siblings().removeClass('cur');
-        $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
-        $('.js-submintData').addClass('l-btn-disable');
-
-    });
+    //$('.js_landType >div').click(function(){
+    //    var clickIndex = $(this).index();
+    //    $(this).addClass('cur').siblings().removeClass('cur');
+    //    $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
+    //    $('.js-submintData').addClass('l-btn-disable');
+    //
+    //});
 });
+
+
+
+
+
+//顶部导航点击
+$('.js_addType>div').click(function(){
+    var dataAlt = $('.js_addType').attr('data-alt');
+    var divIndex = $(this).index();
+    if(dataAlt==1){
+        if(divIndex==1){
+            $(this).addClass('cur');
+           $('.js_landInputBox').eq(0).show().siblings().hide();
+        }else{
+            return false;
+        }
+    }else if(dataAlt==2){
+        if(divIndex!=3){
+            $(this).addClass('cur');
+            $('.js_landInputBox').eq(divIndex).show().siblings().hide();
+        }else{
+            return false;
+        }
+    }else if (dataAlt==3){
+        $(this).addClass('cur');
+        $('.js_landInputBox').eq(divIndex).show().siblings().hide();
+    }
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -351,10 +387,11 @@ function addressAlert(add){
             type:'GET',
             url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
             data: 'parentId=0',
-            error:function(data){
-                console.log(data);
-            },
-            success:function(data){
+            //error:function(data){
+            //    console.log(data);
+            //},
+            login:true,
+            success_cb:function(data){
                 var contdata = data.data;
                 console.log(123,contdata);
                 if(data.isSuccess){
@@ -363,13 +400,14 @@ function addressAlert(add){
                     }
                     $('.js_alertAddress_save_cont').html(addressSave);
                     $('.js_landInputBox>div').eq(0).show().siblings().hide();
-
+                    $('.js_addType').attr('data-alt',1);
                 }
             }
 
         })
     }
     $('.js_alertAddress_save_cont>li').live('click',function() {
+        $('.js_addType').attr('data-alt',2);
         saveText = $(this).html();
         saveCode = $(this).attr('data-code');
         //获取city信息并汇入
@@ -404,6 +442,7 @@ function addressAlert(add){
         }
     });
     $('.js_alertAddress_ctiy_cont>li').live('click',function(){
+        $('.js_addType').attr('data-alt',3);
         cityText =  $(this).html();
         cityCode = $(this).attr('data-code');
         //获取区的数据并汇入
@@ -424,6 +463,7 @@ function addressAlert(add){
                     }
                     $('.js_alertAddress_area_cont ').html(addressArea);
                     //$('.js_landInputBox>div').eq(2).show().siblings().hide();
+
                     addAleatBtn(2);
 
                 }
@@ -434,57 +474,37 @@ function addressAlert(add){
         $('.js_alertAddress_city').show().html(cityText).attr('data-code','cityCode');
         $('.js_alertAddress_area').html('');
         addAleatBtn(2);
-
-        //$('.js_addType>div')
-        //$('.js_addType>div').unbind().eq(0).bind('click',function(){
-        //    $(this).addClass('cur').siblings().removeClass('cur');
-        //    $('.js_landInputBox>div').eq(0).show().siblings().hide();
-        //});
-        //$('.js_addType>div').unbind().eq(1).bind('click',function(){
-        //    $(this).addClass('cur').siblings().removeClass('cur');
-        //    $('.js_landInputBox>div').eq(1).show().siblings().hide();
-        //});
-        //$('.js_addType>div').unbind().eq(2).bind('click',function(){
-        //    $(this).addClass('cur').siblings().removeClass('cur');
-        //    $('.js_landInputBox>div').eq(2).show().siblings().hide();
-        //});
         return false;
     });
     $('.js_alertAddress_area_cont>li').live('click',function(){
         areaText =  $(this).html();
         areaCode = $(this).attr('data-code');
-        $('.js_alertAddress_area').html(areaText).attr('data-code','areaCode');;
-        var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
+        console.log(areaText);
 
-        //$('.js_addType>div').unbind().eq(0).bind('click',function(){
-        //    $(this).addClass('cur').siblings().removeClass('cur');
-        //    $('.js_landInputBox>div').eq(0).show().siblings().hide();
-        //});
-        //$('.js_addType>div').unbind().eq(1).bind('click',function(){
-        //    $(this).addClass('cur').siblings().removeClass('cur');
-        //    $('.js_landInputBox>div').eq(1).show().siblings().hide();
-        //});
-        //$('.js_addType>div').unbind().eq(2).bind('click',function(){
-        //    $(this).addClass('cur').siblings().removeClass('cur');
-        //    $('.js_landInputBox>div').eq(2).show().siblings().hide();
-        //});
+        $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');
+        var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
         addAleatBtn(3);
         //$('.js_landShadeTop').hide();
         //$('.js_landContBox').hide();
+
         return addressJson;
 
     });
 }
 
+
 function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
     $('.js_landInputBox>div').eq(index).show().siblings().hide();
     if(index==0){
+
         $('.js_addType>div').eq(index).siblings().click(function(){
+
             return false;
         })
 
     }else if(index==1){
+
         $('.js_addType>div').eq(2).click(function(){
             return false;
         })
@@ -492,6 +512,7 @@ function addAleatBtn(index){
 
     }
 }
+
 
 //通用弹窗
 function globalShade(alerttext){

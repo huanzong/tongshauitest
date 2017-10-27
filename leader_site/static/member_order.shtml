@@ -368,7 +368,7 @@
                     <i class="js_alertAddress_area">西湖区</i>
                     <a href="" class="o_u iconfont icon-close js_landClose"></a>
                 </div>
-                <div class="js_addType">
+                <div class="js_addType" data-alt="1">
                     <div class="land-cont-type-normal o_u o_df_1-3 cur">省</div>
                     <div class="land-cont-type-phone o_u o_df_1-3">市</div>
                     <div class="land-cont-type-phone o_u o_df_1-3">区</div>

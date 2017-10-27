@@ -100,7 +100,7 @@ $(function(){
                 success: function(returnData){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
-                            $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-thres').removeClass('member-revisemob-one');
+                            $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-three').removeClass('member-revisemob-one');
                             //$('.js-memberRevRateLine').css('width','75%');
                             //$('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
                             //$('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
@@ -214,7 +214,7 @@ $(function(){
                     success: function(returnData){
                         if (jQuery.trim(returnData).length > 0) {
                             if (jQuery.trim(returnData).indexOf("200")>-1) {
-                                $('.js_memberRevisThree').addClass('member-revisemob-thres').removeClass('member-revisemob-two').removeClass('member-revisemob-one');
+                                $('.js_memberRevisThree').addClass('member-revisemob-three').removeClass('member-revisemob-two').removeClass('member-revisemob-one');
                                 //$('.js-memberRevRateLine').css('width','100%');
                                 //$('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
                                 $('.js-bindNewMob').hide();
