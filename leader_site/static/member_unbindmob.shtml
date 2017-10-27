@@ -71,7 +71,7 @@
                                         <input type="text" class="js_emailCodeYz" name="" placeholder="短信验证码">
                                         <a href="javascript:;" class="l-btn-sm l-btn-red js-sendmobile">发送验证短信</a>
                                         <a href="javascript:;" class="l-btn-sm l-btn-red js-sendmail " style="display: none">发送验证邮件</a>
-                                        <p class="Validform_checktip  Validform_right js-error"><span class="iconfont icon-information-solid"></span>不可为空</p>
+                                        <p class="Validform_checktip Validform_wrong Validform_right js-error"><span class="iconfont icon-information-solid"></span>不可为空</p>
                                     </div>
                                 </div>
 
