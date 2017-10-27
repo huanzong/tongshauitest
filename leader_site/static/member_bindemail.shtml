@@ -68,7 +68,7 @@
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
                                     <input type="text" class="js_phoneCodeYz" name="" ph="短信验证码">
                                     <a href="javascript:;" class="l-btn-sm l-btn-red js-sendphonecode">发送验证短信</a>
-                                    <p class="Validform_checktip Validform_wrong js-emailCodeerror "></p>
+                                    <p class="Validform_checktip Validform_wrong js-emailCodeerror ">123213</p>
                                 </div>
                             </div>
 
