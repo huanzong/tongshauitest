@@ -67,17 +67,20 @@
                                                     <span class="js_EvaluateValLength">0</span><span>/500</span>
                                                 </div>
                                             </div>
+                                            <div class="o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"></div>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="iconfont icon-information-solid"></span>不可为空</div>
+
                                         </div>
                                         <div class="member-share-photo ">
-                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span></span>照片分享<i>*</i></p>
+                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>&nbsp;&nbsp;</span>照片分享<i>*</i></p>
                                             <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                                <ul class="member-share-right-photo">
+                                                <ul class="member-share-right-photo js_sharephotobox">
 
                                                 </ul>
-                                                <a href="javascript:;"  id="js_shareimgUploadPC" class="l-btn-sm l-btn-line1">本地上传</a><a href="javascript:;" id="js_shareimgUploadMb" class="l-btn-sm l-btn-line1">手机上传</a>
+                                                <a href="javascript:;"  id="js_shareimgUpload" class="js_share_getup_img l-btn-sm l-btn-line1">本地上传</a>
                                             </div>
                                             <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
-                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">0/10  支持jpg、jpge、png，大小不超过2MB</p>
+                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持jpg、jpge、png，大小不超过2MB</p>
                                         </div>
                                         <div class="member-share-right-getup o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                             <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>

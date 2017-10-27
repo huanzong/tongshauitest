@@ -9,8 +9,8 @@ $(function(){
     // if(!istrsidssdssotoken()){
     //     jumpToLoginPage()；
     // }
-
-    $('.js-memberRevRateLine').css('width','25%');
+    //
+    //$('.js-memberRevRateLine').css('width','25%');
     //页面加载时调个人信息
     $.ajax({
         type: "get",
@@ -96,9 +96,10 @@ $(function(){
                 success: function(returnData){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
-                            $('.js-memberRevRateLine').css('width','75%');
-                            $('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
-                            $('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+                            $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-thres').removeClass('member-revisemob-one');
+                            //
+                            //$('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
+                            //$('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
                             $('.js-validatePhone').hide();
                             $('.js-bindNewEmail').show();
                         }

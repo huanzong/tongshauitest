@@ -10,7 +10,7 @@ $(function(){
     //     jumpToLoginPage()；
     // }
 
-    $('.js-memberRevRateLine').css('width','25%');
+
     //页面加载时调个人信息
     $.ajax({
         type: "get",
@@ -46,12 +46,14 @@ $(function(){
 
     //第一步确定按钮变亮
     $('.js_emailCodeYz').blur(function(){
+        console.log($(this).val());
         if($(this).val().length==6){
             $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
         }else{
             $('.js_subimGetUp').addClass('l-btn-disable');
             $('.js_subimGetUp').click(function(){
-
+                $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
                 return false;
             })
         }
@@ -98,9 +100,10 @@ $(function(){
                 success: function(returnData){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
-                            $('.js-memberRevRateLine').css('width','75%');
-                            $('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
-                            $('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+                            $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-thres').removeClass('member-revisemob-one');
+                            //$('.js-memberRevRateLine').css('width','75%');
+                            //$('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
+                            //$('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
                             $('.js-validateEmail').hide();
                             $('.js-bindNewMob').show();
                         }
@@ -211,8 +214,9 @@ $(function(){
                     success: function(returnData){
                         if (jQuery.trim(returnData).length > 0) {
                             if (jQuery.trim(returnData).indexOf("200")>-1) {
-                                $('.js-memberRevRateLine').css('width','100%');
-                                $('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+                                $('.js_memberRevisThree').addClass('member-revisemob-thres').removeClass('member-revisemob-two').removeClass('member-revisemob-one');
+                                //$('.js-memberRevRateLine').css('width','100%');
+                                //$('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
                                 $('.js-bindNewMob').hide();
                                 $('.js-bingsuccess').show();
                                 document.cookie="isAlterBind=1;path=/";
