@@ -317,40 +317,15 @@ $(function() {
         $('.js-submintData').addClass('l-btn-disable');
 
     });
-
-
-
-    
-
-});
-//地址弹窗通用方法
-//function addressAlert(add){
-
-    //$('#aadd').click(function(){
-    //    addressAlert(111);
-    //});
-
-
-
-
-
-
-
 })
 
 
 
 
-//var  addressAlert= function(add){
+
     function addressAlert(add){
         $('.js_landShadeTop').show();
         $('.js_landContBox').show();
-        //var saveText = save,
-        //    saveCode = saveCode,
-        //    cityText = city,
-        //    cityCode = cityCode,
-        //    areaText = area,
-        //    areaCode = areaText;
         var addressSave,addressCity,addressArea,citycode_used;
         //判定传入值是否存在
         if(add.save&&add.savecode){
@@ -362,9 +337,14 @@ $(function() {
             $('.js_alertAddress_city').html('北京').attr('data-code','1');
             $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
         }
-
-        $('.js_landType>div').eq(0).show().siblings().hide();
-
+        //$('.js_alertAddress_save_cont').show();
+        //$('.js_alertAddress_ctiy_cont').show();
+        //$('.js_alertAddress_area_cont').hide();
+        //$('.js_landType>div').eq(0).show().siblings().hide();
+        $('.js_addType>div').unbind().eq(0).siblings().bind('click',function(){
+            return false;
+        });
+        $('.js_landInputBox>div').eq(0).show().siblings().hide();
         //获取省份并汇入
         if(!add.savecode){
             $.ajax({
@@ -382,43 +362,46 @@ $(function() {
                             addressSave+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                         }
                         $('.js_alertAddress_save_cont').html(addressSave);
+                        $('.js_landInputBox>div').eq(0).show().siblings().hide();
+
                     }
                 }
 
             })
         }
-        $('.js_alertAddress_save_cont>li').live('click',function(){
-            saveText =  $(this).html();
+        $('.js_alertAddress_save_cont>li').live('click',function() {
+            saveText = $(this).html();
             saveCode = $(this).attr('data-code');
             //获取city信息并汇入
             //简单判断本次选择的省份是否与上次为相同数据，如果不同再次请求
-            if(saveCode != citycode_used){
+            if (saveCode != citycode_used) {
                 $.ajax({
-                    type:'GET',
-                    url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
-                    data: 'parentId='+saveCode,
-                    error:function(data){
+                    type: 'GET',
+                    url: siteConfig.domain + '/interaction-service/regionInfo/regionList/',
+                    data: 'parentId=' + saveCode,
+                    error: function (data) {
                         console.log(data);
                     },
-                    success:function(data){
+                    success: function (data) {
                         var contdata = data.data;
                         citycode_used = saveCode;
-                        console.log(123,contdata);
-                        if(data.isSuccess){
-                            for(var i = 0;i<contdata.length;i++){
-                                addressCity+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
+                        console.log(123, contdata);
+                        if (data.isSuccess) {
+                            for (var i = 0; i < contdata.length; i++) {
+                                addressCity += '<li class="o_u o_df_3-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
                             }
                             $('.js_alertAddress_ctiy_cont').html(addressCity);
+                            //$('.js_landInputBox>div').eq(1).show().siblings().hide();
+                            $('.js_alertAddress_save').html(saveText).show().siblings('i').hide();
+                            addAleatBtn(1);
                         }
                     }
                 });
-            }else{
+            } else {
                 $('.js_alertAddress_city_cont').html(addressCity);
+                $('.js_alertAddress_save').html(saveText);
+                addAleatBtn(1);
             }
-            $('.js_alertAddress_save').html(saveText).attr('data-code','saveCode').siblings('i').html('').hide();
-            $('.js_landType div').eq(1).show().click();
-            $('.js_landType div').eq(2).hide();
-            return false;
         });
         $('.js_alertAddress_ctiy_cont>li').live('click',function(){
             cityText =  $(this).html();
@@ -440,26 +423,75 @@ $(function() {
                             addressArea+='<li class="o_u o_df_3-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                         }
                         $('.js_alertAddress_area_cont ').html(addressArea);
+                        //$('.js_landInputBox>div').eq(2).show().siblings().hide();
+                        addAleatBtn(2);
+
                     }
                 }
             });
 
+
             $('.js_alertAddress_city').show().html(cityText).attr('data-code','cityCode');
             $('.js_alertAddress_area').html('');
-            $('.js_landType div').eq(2).show().click();
+            addAleatBtn(2);
+
+            //$('.js_addType>div')
+            //$('.js_addType>div').unbind().eq(0).bind('click',function(){
+            //    $(this).addClass('cur').siblings().removeClass('cur');
+            //    $('.js_landInputBox>div').eq(0).show().siblings().hide();
+            //});
+            //$('.js_addType>div').unbind().eq(1).bind('click',function(){
+            //    $(this).addClass('cur').siblings().removeClass('cur');
+            //    $('.js_landInputBox>div').eq(1).show().siblings().hide();
+            //});
+            //$('.js_addType>div').unbind().eq(2).bind('click',function(){
+            //    $(this).addClass('cur').siblings().removeClass('cur');
+            //    $('.js_landInputBox>div').eq(2).show().siblings().hide();
+            //});
             return false;
         });
         $('.js_alertAddress_area_cont>li').live('click',function(){
             areaText =  $(this).html();
             areaCode = $(this).attr('data-code');
-            $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');;
+            $('.js_alertAddress_area').html(areaText).attr('data-code','areaCode');;
             var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
-            $('.js_landShadeTop').show();
-            $('.js_landContBox').show();
+
+            //$('.js_addType>div').unbind().eq(0).bind('click',function(){
+            //    $(this).addClass('cur').siblings().removeClass('cur');
+            //    $('.js_landInputBox>div').eq(0).show().siblings().hide();
+            //});
+            //$('.js_addType>div').unbind().eq(1).bind('click',function(){
+            //    $(this).addClass('cur').siblings().removeClass('cur');
+            //    $('.js_landInputBox>div').eq(1).show().siblings().hide();
+            //});
+            //$('.js_addType>div').unbind().eq(2).bind('click',function(){
+            //    $(this).addClass('cur').siblings().removeClass('cur');
+            //    $('.js_landInputBox>div').eq(2).show().siblings().hide();
+            //});
+            addAleatBtn(3);
+            //$('.js_landShadeTop').hide();
+            //$('.js_landContBox').hide();
             return addressJson;
+
         });
     }
 
+function addAleatBtn(index){
+    $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
+    $('.js_landInputBox>div').eq(index).show().siblings().hide();
+    if(index==0){
+        $('.js_addType>div').eq(index).siblings().click(function(){
+            return false;
+        })
+
+    }else if(index==1){
+        $('.js_addType>div').eq(2).click(function(){
+            return false;
+        })
+    }else{
+
+    }
+}
 
     //通用弹窗
     function globalShade(alerttext){
@@ -501,10 +533,7 @@ $(function() {
             $('.js_popUpFales').hide();
             $('.js_popUpText').css('')
         }
-        if(outTime=='forever'){
-            $("body").css({overflow:"auto"});
-            return false;
-        }else{
+
             if(outTime){
                 setTimeout(function(){
                     $('.js_popUpBox2').hide();
@@ -516,11 +545,6 @@ $(function() {
                     $("body").css({overflow:"auto"});
                 },2000);
             }
-        }
-
-        //$('.js_alertClose').click(function(){
-        //
-        //})
     }
 
     //时间戳转换日期 时间戳，选格式，时间戳类型
