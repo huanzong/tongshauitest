@@ -33,7 +33,7 @@
                             <div class="member-security-table o_g">
                                 <div class="member-share-leftbox o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_2-2 o_xs_2-2 ">
                                     <div class="member-share-leftcont ">
-                                        <img id="" src="images/compare_goods.PNG" alt="">
+                                        <img id="" src="images/compare_goods.PNG" alt="" class="js-productimg">
                                         <p class="o_u o_sm_2-3 o_xs_2-3 js-productName">统帅323L大容量无霜冰箱 <br><span>BCD-323WLDPN</span></p>
                                     </div>
                                 </div>

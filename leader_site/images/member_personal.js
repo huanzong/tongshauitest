@@ -103,7 +103,6 @@ $.jUploader.setDefaults({
 });
 $.jUploader({
     fileField: 'file',
-    name:'multipartFile',
     button: "js_imgUpload", // 这里设置按钮id
     action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
@@ -274,7 +273,6 @@ $('.js-personalinfotab').click( function () {
 
     //点击上传图片
     $('#getupimg').unbind().click( function () {
-    alert('15165')
         $.ajax({
             url: "/user/front/user/updateHeadPic",
             type: "get",

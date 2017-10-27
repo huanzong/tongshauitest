@@ -74,7 +74,7 @@ $.jUploader.setDefaults({
 $.jUploader({
     fileField: 'file',
     button: "js_shareimgUploadPC", // 这里设置按钮id
-    action: '/comment/uploadcasartejfmallproductcommentimage/uploadImage',//这里写地址
+    action: siteConfig.userUrl+'/interaction-comment/comment/imageUpload/',//这里写地址
     // 开始上传事件
     onUpload: function(data) {
         // $.jUploader.defaults.otherArgs = {
@@ -86,10 +86,9 @@ $.jUploader({
     // 上传完成事件
     onComplete: function(name, data) {
         if (data.isSuccess) {
-            console.log('上传成功');
-            console.log(data);
+            $('.js-img').append('<li class="member-share-photo-cur"><img src="'+s+'" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>');
         } else {
-            console.log('上传失败');
+            globalShade2('图片上传失败','2');
         }
 
     },
@@ -147,9 +146,9 @@ $.jUploader({
     debug: true
 });
 
-//点击提交按钮
-$('.js-memberShareGetUp').click(function(){
-    var scoreNub = $('.member-share-score-selected').length;  //这个是用户的评价分数
-    $.ajax()
-
-})
+// //点击提交按钮
+// $('.js-memberShareGetUp').click(function(){
+//     var scoreNub = $('.member-share-score-selected').length;  //这个是用户的评价分数
+//     $.ajax()
+//
+// })

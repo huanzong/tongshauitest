@@ -61,10 +61,9 @@ $(function(){
         $.ajax({
             type: "post",
             dataType: "text",
-            url: "",
+            url: "/ids/ts/userInfoManager.jsp",
             data: {
-                'editOperation':'XXXXXX',
-                'XXXXXXX':'XXXXXX'
+                'editOperation':'beforeBindEmailSendMobileCode'
             },
             error : function(XMLHttpRequest, textStatus, errorThrown){
             },
@@ -82,14 +81,16 @@ $(function(){
 
     //第一步点击确定
     $('.js_subimGetUp').unbind().click(function () {
+        var templet_code=$('.js_phoneCodeYz').val();
         if(!$('.js_subimGetUp').hasClass('l-btn-disable')){
             $.ajax({
                 type: "post",
                 dataType: "text",
-                url: "",
+                url: "/ids/ts/userInfoManager.jsp",
                 data: {
-                    'editOperation':'XXXXXX',
-                    'XXXXXXX':'XXXXXX'
+                    'editOperation':'beforeBindEmailVerifyCode',
+                    'param':'mobile',
+                    'code':templet_code
                 },
                 error : function(XMLHttpRequest, textStatus, errorThrown){
                 },
