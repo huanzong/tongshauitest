@@ -322,20 +322,20 @@ $('.js_addType>div').click(function(){
     if(dataAlt==1){
         if(divIndex==0){
             $(this).addClass('cur').siblings().removeClass('cur');
-            $('.js_landInputBox>div').eq(1).show().siblings().hide();
+            $('.js_addInputBox>div').eq(1).show().siblings().hide();
         }else{
             return false;
         }
     }else if(dataAlt==2){
         if(divIndex!=2){
             $(this).addClass('cur').siblings().removeClass('cur');
-            $('.js_landInputBox>div').eq(divIndex).show().siblings().hide();
+            $('.js_addInputBox>div').eq(divIndex).show().siblings().hide();
         }else{
             return false;
         }
     }else if (dataAlt==3){
         $(this).addClass('cur').siblings().removeClass('cur');
-        $('.js_landInputBox>div').eq(divIndex).show().siblings().hide();
+        $('.js_addInputBox>div').eq(divIndex).show().siblings().hide();
     }
 });
 $('.js_addClose').click(function(){
@@ -353,16 +353,22 @@ function addressAlert(add){
     $('.js_addContBox').show();
     var addressSave,addressCity,addressArea,savecode_used;
     //判定传入值是否存在
-    if(add.save&&add.savecode){
-        $('.js_alertAddress_save').html(add.save).attr('data-code',add.savecode);
-        $('.js_alertAddress_city').html(add.city).attr('data-code',add.citycode);
-        $('.js_alertAddress_area').html(add.area).attr('data-code',add.areacode);
-    }else{
+    if(!add){
         $('.js_alertAddress_save').html('北京').attr('data-code','1');
         $('.js_alertAddress_city').html('北京').attr('data-code','1');
         $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
+    }else{
+        if(add.save&&add.savecode){
+            $('.js_alertAddress_save').html(add.save).attr('data-code',add.savecode);
+            $('.js_alertAddress_city').html(add.city).attr('data-code',add.citycode);
+            $('.js_alertAddress_area').html(add.area).attr('data-code',add.areacode);
+        }else{
+            $('.js_alertAddress_save').html('北京').attr('data-code','1');
+            $('.js_alertAddress_city').html('北京').attr('data-code','1');
+            $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
+        }
     }
-    $('.js_landInputBox>div').eq(0).show().siblings().hide();
+    $('.js_addInputBox>div').eq(0).show().siblings().hide();
     //获取省份并汇入
     if(!add.savecode){
         $.ajax({
@@ -381,7 +387,7 @@ function addressAlert(add){
                         addressSave+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                     }
                     $('.js_alertAddress_save_cont').html(addressSave);
-                    $('.js_landInputBox>div').eq(0).show().siblings().hide();
+                    $('.js_addInputBox>div').eq(0).show().siblings().hide();
                     $('.js_addType').attr('data-alt',1);
                 }
             }
@@ -413,7 +419,7 @@ function addressAlert(add){
                             addressCity += '<li class="o_u o_df_3-12 o_xs_11-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
                         }
                         $('.js_alertAddress_ctiy_cont').html(addressCity);
-                        //$('.js_landInputBox>div').eq(1).show().siblings().hide();
+                        //$('.js_addInputBox>div').eq(1).show().siblings().hide();
                         $('.js_alertAddress_save').html(saveText).show().siblings('i').hide();
                         addAleatBtn(1);
                     }
@@ -472,7 +478,7 @@ function addressAlert(add){
 }
 function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
-    $('.js_landInputBox>div').eq(index).show().siblings().hide();
+    $('.js_addInputBox>div').eq(index).show().siblings().hide();
 }
 
 

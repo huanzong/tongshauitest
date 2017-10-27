@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="images/ui.css">
     
 </head>
-
 <body>
     <div class="ui_nav">
         <ul>
@@ -672,6 +671,80 @@
         </div>
     </div>
     <!--弹窗 END-->
+    <!--地址弹窗-->
+        <div class="main markdown" id="ui_add">
+             <h1>地址弹窗</h1>
+        </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="addressAlert(1111)" >点击触发</a>
+            <i></i>
+        </div>
+             <textarea>
+
+
+                 <!--触发方式-->
+                    addressAlert(add);如果未传值默认填写 北京 北京 朝阳区 add的格式
+                 var add = {'save':'北京'，'city':'北京','area':'朝阳','savecode':'1','citycode':'1','areacode':'1'}
+                 <!--触发方式 END-->
+              <div class="o_g land-shade  land-shade-top js_addShadeTop">
+                  <div class="land-box land-box-address js_addContBox">
+                      <div class="land-cont-title alert-cont-title o_u">
+                          <span>配送至：</span>
+                          <i class="js_alertAddress_save">浙江</i>
+                          <i class="js_alertAddress_city">杭州市</i>
+                          <i class="js_alertAddress_area">西湖区</i>
+                          <a href="" class="o_u iconfont icon-close js_addClose"></a>
+                      </div>
+                      <div class="js_addType" data-alt="1">
+                          <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                          <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                          <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
+                      </div>
+                      <div class="js_landInputBox">
+                          <div class="land-cont-normal-input o_g">
+                              <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
+                          </div>
+                          <div class="land-cont-normal-input o_g">
+                              <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
+                          </div>
+                          <div class="land-cont-normal-input o_g">
+                              <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+           </textarea>
+    </div>
+
+    <div class="o_g land-shade  land-shade-top js_addShadeTop">
+        <div class="land-box land-box-address js_addContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <span>配送至：</span>
+                <i class="js_alertAddress_save">浙江</i>
+                <i class="js_alertAddress_city">杭州市</i>
+                <i class="js_alertAddress_area">西湖区</i>
+                <a href="" class="o_u iconfont icon-close js_addClose"></a>
+            </div>
+            <div class="js_addType" data-alt="1">
+                <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
+            </div>
+            <div class="js_addInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--地址弹窗 end-->
     <!-- iconfont -->
     <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
