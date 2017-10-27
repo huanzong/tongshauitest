@@ -4,20 +4,49 @@
 * @date        2017.10.19
 * ---------------------------------------------------------------------------*/
 $(function () {
-    var orderId = getQueryString("orderId");
+
+    //前台判断是否登陆
+    // if(!istrsidssdssotoken()){
+    //     jumpToLoginPage()
+    // }
+
     $.ajax({
         type: "get",
         dataType: "json",
-        url: "",
+        url: siteConfig.userUrl+"/user/front/user/userInfo",
         data: "",
         error: function (XMLHttpRequest, textStatus, errorThrown) {
         },
         success: function (returnData) {
             if (jQuery.trim(returnData).length > 0) {
-                $('.js-productName').html('产品名 <br><span>编码</span>');
-
+                if (returnData.resultMsg == '用户未登录') {
+                    window.location.href = '/ids/ts/login.jsp';
+                }
             }
+        }
+    });
 
+    var orderId=getQueryString("orderId");
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: "",
+        data: "",
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+        },
+        success: function(returnData){
+            if (jQuery.trim(returnData).length > 0) {
+                $('.js-productName').html('产品名 <br><span>编码</span>');
+                $('.js-productimg').attr('src','');
+            }
+        }
+    })
+    //小星星数量
+    var templet_isSubmiting=false;
+    $('.js-memberShareGetUp').unbind().click(function () {
+        if(templet_isSubmiting){//正在提交
+            globalShade2('正在提交','3');
+            return;
         }
 
     })
@@ -26,6 +55,49 @@ $(function () {
         var templet_grade = 0;
         for (var i = 0; i < $shareArr.length; i++) {
 
+        var templet_star = $('.member-share-score-selected').length;
+
+        var templet_content=$('.js_EvaluateVal').val();
+        //移动端，网页端
+        var templet_innerWidth=window.innerWidth;
+        var templet_devSource=1;
+        if(templet_innerWidth<750){
+            templet_devSource=2;
+        }
+        templet_isSubmiting=true;
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
+            data: {
+                'star':templet_star,
+                'content':templet_content,
+                'isHavePic':'0',
+                'devSource':templet_devSource,
+                'businessId':'23',
+                'channelSource':'1',
+                'productCategoryId':'61',
+                'orderId':'1'
+
+            },
+            error : function(XMLHttpRequest, textStatus, errorThrown){
+            },
+            success: function(returnData){
+                if(returnData.isSuccess){
+                    globalShade2('成功分享','1');
+                }
+
+            }
+        })
+    });
+
+});
+//获取参数
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
             if ($shareArr.eq(i).hasClass('member-share-score-selected')) {
                 templet_grade++;
             }

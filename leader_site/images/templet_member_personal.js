@@ -27,7 +27,7 @@ $(function(){
     $.ajax({
         type: "get",
         dataType: "json",
-        url: "/user/front/user/userInfo",
+        url: siteConfig.userUrl+"/user/front/user/userInfo/",
         data: "",
         error : function(XMLHttpRequest, textStatus, errorThrown){
         },
@@ -67,7 +67,7 @@ $(function(){
                 template_areaName=jQuery.trim(returnData.data.areaName);
                 //省
                 $.ajax({
-                    url:"/interaction-service/regionInfo/regionList",
+                    url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                     type:"get",
                     dataType:"json",
                     data:{"parentId":'0'},
@@ -93,7 +93,7 @@ $(function(){
                             if(template_provinceName!=null && template_provinceName!=""){
                                 var shengVal=$("#js_save").val();
                                 $.ajax({
-                                    url:"/interaction-service/regionInfo/regionList",
+                                    url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                                     type:"get",
                                     dataType:"json",
                                     data:{"parentId":shengVal},
@@ -116,7 +116,7 @@ $(function(){
                                             templet_select_shi.init();
                                             var quVal=$("#js_city").val();
                                             $.ajax({
-                                                url:"/interaction-service/regionInfo/regionList",
+                                                url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                                                 type:"get",
                                                 dataType:"json",
                                                 data:{"parentId":quVal},
@@ -163,7 +163,7 @@ $(function(){
         templet_select_shi.lose();
         var shengVal=$("#js_save").val();
         $.ajax({
-            url:"/interaction-service/regionInfo/regionList",
+            url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
             dataType:"json",
             data:{"parentId":shengVal},
@@ -198,7 +198,7 @@ $(function(){
         templet_select_qu.lose();
         var shiVal=$("#js_city").val();
         $.ajax({
-            url:"/interaction-service/regionInfo/regionList",
+            url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
             dataType:"json",
             data:{"parentId":shiVal},
@@ -246,7 +246,7 @@ $(function(){
         templet_select_qu.lose();
 
         $.ajax({
-            url:"/interaction-service/regionInfo/regionList",
+            url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
             dataType:"json",
             data:{"parentId":'0'},
@@ -272,7 +272,7 @@ $(function(){
                     if(template_provinceName!=null && template_provinceName!=""){
                         var shengVal=$("#js_save").val();
                         $.ajax({
-                            url:"/interaction-service/regionInfo/regionList",
+                            url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                             type:"get",
                             dataType:"json",
                             data:{"parentId":shengVal},
@@ -295,7 +295,7 @@ $(function(){
                                     templet_select_shi.init();
                                     var quVal=$("#js_city").val();
                                     $.ajax({
-                                        url:"/interaction-service/regionInfo/regionList",
+                                        url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                                         type:"get",
                                         dataType:"json",
                                         data:{"parentId":quVal},
@@ -336,6 +336,7 @@ $(function(){
     var templet_isSubmiting=false;
     $(".js-preserve").unbind().click(function () {
         if(templet_isSubmiting){//正在提交
+            globalShade2('正在提交，请稍后','3');
             return;
         }
         var templet_loginName=$.trim($('#js_loginName').val());
@@ -395,7 +396,7 @@ $(function(){
         $.ajax({
             type: "post",
             dataType: "json",
-            url: "/user/front/user/updateUserInfo",
+            url: siteConfig.userUrl+"/user/front/user/updateUserInfo/",
             data:templet_data,
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 templet_isSubmiting=false;
