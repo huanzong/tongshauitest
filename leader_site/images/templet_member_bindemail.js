@@ -61,10 +61,9 @@ $(function(){
         $.ajax({
             type: "post",
             dataType: "text",
-            url: "",
+            url: "/ids/ts/userInfoManager.jsp",
             data: {
-                'editOperation':'XXXXXX',
-                'XXXXXXX':'XXXXXX'
+                'editOperation':'beforeBindEmailSendMobileCode'
             },
             error : function(XMLHttpRequest, textStatus, errorThrown){
             },
@@ -82,21 +81,23 @@ $(function(){
 
     //第一步点击确定
     $('.js_subimGetUp').unbind().click(function () {
+        var templet_code=$('.js_phoneCodeYz').val();
         if(!$('.js_subimGetUp').hasClass('l-btn-disable')){
             $.ajax({
                 type: "post",
                 dataType: "text",
-                url: "",
+                url: "/ids/ts/userInfoManager.jsp",
                 data: {
-                    'editOperation':'XXXXXX',
-                    'XXXXXXX':'XXXXXX'
+                    'editOperation':'beforeBindEmailVerifyCode',
+                    'param':'mobile',
+                    'code':templet_code
                 },
                 error : function(XMLHttpRequest, textStatus, errorThrown){
                 },
                 success: function(returnData){
                     if (jQuery.trim(returnData).length > 0) {
                         if (jQuery.trim(returnData).indexOf("200")>-1) {
-                            $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-thres').removeClass('member-revisemob-one');
+                            $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-three').removeClass('member-revisemob-one');
                             //
                             //$('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
                             //$('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');

@@ -535,6 +535,22 @@ Pagination Styles
 		margin:  0 auto;
 		margin-top: 5%;
 		display: none;
+		@media (min-width: 701px) and (max-width: 991px) {
+			/* md*/
+			margin-top: 10%;
+		}
+		@media (min-width: 576px) and (max-width: 700px) {
+			/* sm*/
+			margin-top: 10%;
+			width: 100%;
+		}
+		@media (max-width: 575px) {
+			/* xs*/
+			margin-top: 10%;
+			width: 100%;
+
+		}
+
 		.land-cont-title{
 			font-size: 16px;
 			color: #333;
@@ -603,7 +619,6 @@ Pagination Styles
 		}
 	}
 
-
 	}
 	.land-box-address{
 		.land-cont-title{
@@ -634,6 +649,18 @@ Pagination Styles
 					font-size: 14px;
 					color: #333;
 					text-align: left;
+
+				}
+				@media (max-width: 575px) {
+					/* xs*/
+					height: 400px;
+					overflow: auto;
+					text-align: center;
+					>li{
+						border-bottom: 1px solid #eee;
+						text-align: left;
+						line-height: 40px;
+					}
 				}
 			}
 		}

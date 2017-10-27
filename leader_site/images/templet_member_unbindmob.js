@@ -33,6 +33,7 @@ $(function(){
                         var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
 
                         $("#js-logincallphone").html(templet_callphone);
+                        $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
                         $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
                     }
@@ -40,9 +41,8 @@ $(function(){
                     var templet_split = templet_email.split("@");
                     var templet_hide = templet_split[0].length / 2;
                     var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
-                    $("#js_unbindmob").attr('autotext',"邮箱（"+templet_emailnote+"）");
-                    $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
 
+                    $("#js_unbindmob").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
                     $("#js_unbindmob").oSelect().init();
 
 
@@ -93,8 +93,7 @@ $(function(){
             dataType: "text",
             url: "/ids/ts/userInfoManager.jsp",
             data: {
-                'editOperation':'sendUnbindMobileCode',
-                'param':param
+                'editOperation':'unbindMobileSendMobileCode'
             },
             error : function(XMLHttpRequest, textStatus, errorThrown){
             },
@@ -125,8 +124,7 @@ $(function(){
             dataType: "text",
             url: "/ids/ts/userInfoManager.jsp",
             data: {
-                'editOperation':'sendUnbindEmailCode',
-                'param':param
+                'editOperation':'unbindMobileSendEmailCode'
             },
             error : function(XMLHttpRequest, textStatus, errorThrown){
             },
@@ -172,7 +170,7 @@ $(function(){
                 dataType: "text",
                 url: "/ids/ts/userInfoManager.jsp",
                 data: {
-                    'editOperation':'verify',
+                    'editOperation':'unbindMobileVerifyCode',
                     'param':templet_param,
                     'code':templet_code
                 },
