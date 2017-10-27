@@ -509,19 +509,26 @@ function globalShade2(alerttext,type,time){
         $('.js_popUpFales').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpTrue').show();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else if(type==2){
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpFales').show();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else if(type==3){
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').show();
         $('.js_popUpFales').hide();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else{
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpFales').hide();
-        $('.js_popUpText').css('')
+        $('.js_popUpText').css('');
+        $('.js_popUpText').addClass('type3-text');
     }
 
         if(outTime){
