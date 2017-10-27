@@ -34,7 +34,7 @@
                     <div class="member-security-contbox js-contRightContBox">
                         <!-- 绑定邮箱 START-->
                         <div class="member-revisemob o_g">
-                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-three">
+                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-one">
                                 <i class="member-revisemob-line-point01">
                                     <span>　1. 验证手机</span>
                                     <div class="member-revisemob-line-finishpoint"></div>
