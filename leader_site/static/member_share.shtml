@@ -67,9 +67,12 @@
                                                     <span class="js_EvaluateValLength">0</span><span>/500</span>
                                                 </div>
                                             </div>
+                                            <div class="o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"></div>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="iconfont icon-information-solid"></span>不可为空</div>
+
                                         </div>
                                         <div class="member-share-photo ">
-                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span></span>照片分享<i>*</i></p>
+                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>&nbsp;&nbsp;</span>照片分享<i>*</i></p>
                                             <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <ul class="member-share-right-photo">
 
