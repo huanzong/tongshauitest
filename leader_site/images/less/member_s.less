@@ -52,6 +52,7 @@
   .memeber-nav-userinfo{
     padding: 60px 0 40px 0;
     border-bottom: 1px solid #eee;
+    display: block !important;
     img{
       height: 80px;
       width: 80px;
@@ -69,6 +70,7 @@
     @media (min-width: 992px) and (max-width: 1199px) {
       /* lg*/
       border: none;
+      display: block !important;
       img{
         height: 40px;
         width: 40px;
@@ -80,10 +82,12 @@
         display: none;
       }
 
+
     }
     @media (min-width: 701px) and (max-width: 991px) {
       /* md*/
       border: none;
+      display: block !important;
 
       img{
         height: 40px;
@@ -99,6 +103,7 @@
     @media (min-width: 576px) and (max-width: 700px) {
       /* sm*/
       border: none;
+      display: inline-block !important;
 
       img{
         height: 40px;
@@ -113,7 +118,7 @@
     }
     @media (max-width: 575px) {
       /* xs*/
-      display: inline-block;
+      display: inline-block !important;
       border: none;
     padding: 15px 0 15px 0;
       text-align: right;
@@ -250,12 +255,23 @@
         }
       }
     }
+    display: block;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+      display: block;
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      display: block;
+    }
     @media (min-width: 576px) and (max-width: 700px) {
       /* sm*/
       display: inline-block;
     }
     @media (max-width: 575px) {
       /* xs*/
+      display: inline-block;
+
       li{display: none;}
       li:nth-child(2){
         display: inline-block;
@@ -396,6 +412,90 @@
     border-left: 1px solid #eee;
     background: #fff;
     .memeber-nav-middle-btn{
+      display: none;
+    }
+  }
+}
+.memeber-homenav-top{
+  background: url("member_home_title.png") no-repeat center;
+  height: 120px;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* lg*/
+  }
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    display: none;
+
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    display: none;
+
+  }
+}
+.memeber-homenav-top-md{
+  display: none;
+  background: url("member_home_title.png") no-repeat center;
+  height: 120px;
+  position: relative;
+  text-align: left;
+>p{
+  color: #666666;
+  font-size: 16px;
+  padding: 32px 0 0 60px ;
+}
+  >h2{
+    color: #333;
+    font-size: 28px;
+    padding: 0 0 0 60px ;
+
+  }
+  >div{
+    position: absolute;
+      right: 20px;
+      bottom: 20px;
+    color: @l-red;
+    font-size: 35px;
+  }
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+    display: block;
+    >p{
+      padding: 32px 0 0 45px ;
+    }
+    >h2{
+      padding: 0 0 0 45px ;
+    }
+ 
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    display: block;
+    >p{
+      padding: 32px 0 0 45px ;
+    }
+    >h2{
+      padding: 0 0 0 45px;
+    }
+    >div{
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    display: block;
+    >p{
+      padding: 32px 0 0 45px ;
+    }
+    >h2{
+      padding: 0 0 0 45px;
+    }
+    >div{
       display: none;
     }
   }
