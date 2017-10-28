@@ -10,16 +10,11 @@
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="images/member.css">
     <link rel="stylesheet" type="text/css" href="images/member_s.css">
-
-
-
 </head>
-
 <body>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g js-contBox">
-
             <!-- 左侧导航 START-->
             <!--#include virtual="public/header_nav2.shtml"-->
             <!-- 左侧导航 End-->

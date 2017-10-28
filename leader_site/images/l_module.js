@@ -311,6 +311,7 @@ $(function() {
     });
 
 
+
 });
 
 //顶部导航点击
@@ -475,6 +476,9 @@ function addressAlert(add){
 
     });
 
+
+
+
 }
 function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
@@ -542,4 +546,27 @@ function globalShade2(alerttext,type,time){
                 $("body").css({overflow:"auto"});
             },2000);
         }
+}
+
+//倒计时通用模块
+
+function btnTimeOut(obj,time,timetext){
+    var btnDisable,timeTotal;
+    var objHtml = obj.html();
+    var timeText = ' '+timetext;
+    timeTotal = time;
+    btnDisable = 'l-btn-disable';
+    if(obj.hasClass(btnDisable)){
+      return false;
+    }else{
+        obj.addClass(btnDisable);
+        obj.html((timeTotal--)+'秒'+timeText);
+    }
+  var timeHtml =setInterval(function(){
+        obj.html((timeTotal--)+'秒'+timeText);
+      if(timeTotal<=0){
+          clearInterval(timeHtml);
+          obj.removeClass(btnDisable).html(objHtml);
+      }
+    },1000);
 }
