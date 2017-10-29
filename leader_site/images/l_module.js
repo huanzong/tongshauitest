@@ -158,7 +158,7 @@ $(function() {
                         }
                         //表单校验时触发
                         if(!$this.attr('phtype')){
-                            $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                            //$this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
                             // $this.css('border','1px solid #ccc');
                         }
                     },300);
@@ -175,17 +175,17 @@ $(function() {
                     }
                     //表单校验时触发
                     if(!$this.attr('phtype')){
-                       $this.css('border','1px solid #e60012');
+                       //$this.css('border','1px solid #e60012');
                     }
                 });
             }else if($this.attr("type") == "password"){
                 $this.blur(function () {
                     setTimeout(function(){//先校验是否符合规则，再添加样式
-                        $this.css('border','1px solid #ccc');
+                        //$this.css('border','1px solid #ccc');
                         $this.css('color','#666');
                         //表单校验时触发
                         if(!$this.attr('phtype')){
-                            $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                            //$this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
                             // $this.css('border','1px solid #ccc');
                         }
                     },300);
@@ -194,8 +194,7 @@ $(function() {
                     if(!$this.attr('data-normal')){
                         $this.validHideError();
                     }
-                    
-                    $this.css('border','1px solid #e60012');
+                    //$this.css('border','1px solid #e60012');
                 });
             }
         },
@@ -276,7 +275,7 @@ $(function() {
                 }
                 //表单校验时触发
                 if(!$this.attr('phtype')){
-                    $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                    //$this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
                     // $this.css('border','1px solid #ccc');
                 }
                 
@@ -288,7 +287,7 @@ $(function() {
                 }
                 //表单校验时触发
                 if(!$this.attr('phtype')){
-                   $this.css('border','1px solid #e60012');
+                   //$this.css('border','1px solid #e60012');
                 }
             });
         // }
