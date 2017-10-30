@@ -368,7 +368,7 @@ function addressAlert(add){
             $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
         }
     }
-    $('.js_addInputBox>div').eq(0).show().siblings().hide();
+    //$('.js_addInputBox>div').eq(0).show().siblings().hide();
     //获取省份并汇入
     if(!add.savecode){
         $.ajax({
