@@ -44,6 +44,7 @@ $(function(){
     $('.js_orderconBoxBtn').click(function(){
         $('.js_productOrderTitle').after($('.js_orderUserInforBox'));
         $('.js_orderconBox').show();
+        $('.js_addressListCont').show();
         resetInput(userinfo,inputArr);
     });
 
@@ -78,6 +79,7 @@ $(function(){
         $('.js_order_username').val(userinfoName);
         $('.js_order_userphone').val(userinfoPhone);
         $('.js_order_usertell').val(userinfoAddress);
+
         $('.js_addressListCont').show();
         objparents.children('.js_addressListCont').hide();
         objparents.append($('.js_orderUserInforBox'));

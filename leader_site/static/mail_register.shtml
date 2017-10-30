@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱注册</title>
+
+    <base href='../'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+    <link rel="stylesheet" href="images/mail_register.css">
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g  ">
+            <div class="o_u o_df_8-12 mail_register_bkleft">
+
+            </div>
+            <div class="o_u o_df_2-12"></div>
+            <div class="o_u o_df_2-12 mail_register_bkright"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
