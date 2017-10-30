@@ -351,6 +351,17 @@
             </span>
             <i></i>
         </div>
+        <div class="l-float-tops">
+            <div class="float_content">
+                我是浮层<br>
+                说明：<br>
+                浮层宽度需要自定义<br>
+                右侧小箭头会随着宽度自行居中<br>
+            </div>
+            <p>
+                <i></i>
+            </p>
+        </div>
         <textarea>
             <div class="l-float">
                 <span>

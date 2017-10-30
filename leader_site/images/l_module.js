@@ -552,17 +552,17 @@ function globalShade2(alerttext,type,time){
 function btnTimeOut(obj,time,timetext){
     var btnDisable,timeTotal;
     var objHtml = obj.html();
-    var timeText = ' '+timetext;
+    var timeText = timetext;
     timeTotal = time;
     btnDisable = 'l-btn-disable';
     if(obj.hasClass(btnDisable)){
       return false;
     }else{
         obj.addClass(btnDisable);
-        obj.html((timeTotal--)+'秒'+timeText);
+        obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
     }
   var timeHtml =setInterval(function(){
-        obj.html((timeTotal--)+'秒'+timeText);
+      obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
       if(timeTotal<=0){
           clearInterval(timeHtml);
           obj.removeClass(btnDisable).html(objHtml);
