@@ -58,6 +58,8 @@
                                                     <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
                                                 </li>
                                             </ul>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="iconfont icon-information-solid"></span>不可为空</div>
+
                                         </div>
                                         <div class="member-share-evaluate ">
                                             <p class="member-share-right-title o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
@@ -97,7 +99,18 @@
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
-
+        <!--弹窗2-->
+        <div class="pop-up2 js_popUpBox2 ">
+            <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+            <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+            <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+            <p class="o_u  js_popUpText"></p>
+        </div>
+        <div class="pop-up2 js_popUpBox3 pop-up-share">
+            <h3 class="o_u  js_popUpText">提交成功！</h3>
+            <p>您的晒单将会在客服人员审核（1-3个工作日）通过后展示</p>
+            <div class=""><span class="js_popUpTimeOver">5</span>后返回 <a href="#">我的晒单</a></div>
+        </div>
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->

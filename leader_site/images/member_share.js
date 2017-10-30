@@ -152,3 +152,14 @@ $.jUploader({
 //     $.ajax()
 //
 // })
+
+
+
+//提交成功弹出层
+//$('.js_popUpBox3').show();
+//
+//btnTimeOut($('.js_popUpTimeOver'),5,'');
+//
+//setTimeout(function(){
+//    window.location.href='http://www.baidu.com';
+//},4000);
