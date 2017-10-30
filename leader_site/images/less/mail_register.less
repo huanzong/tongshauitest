@@ -1,11 +1,211 @@
 @import "l_variable";
-.mail_register_bkleft{
-  width: 1200px;
-  height: 1000px;
-  background: url('email_bg_left.jpg') no-repeat center;
-}
-.mail_register_bkright{
-  background: url('email_bg_right.png') no-repeat center;
-  width: 200px;
-  height: 1000px;
+.mail_register_box{
+  background: #f8f8f8;
+  @media (max-width: 575px) {
+    /* xs*/
+    background: #fff;
+
+  }
+  .mail_register_bkleft{
+    width: 1200px;
+    height: 850px;
+    background: url('email_bg_left.jpg') no-repeat top left;
+    background-size:  auto 850px ;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+      height: 700px;
+      background-size:  auto 700px ;
+    }
+
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      height: 350px;
+      background: url('reg_bg_top1.png') no-repeat top center;
+      background-size:  100% 350px ;
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      height: 260px;
+      background: url('reg_bg_top1.png') no-repeat top center;
+      background-size:  100% 260px ;
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      height: 120px;
+      background: url('reg_bg_top2.JPG') no-repeat top center;
+      background-size:  100% 120px ;
+    }
+  }
+  .mail_register_bkright{
+    background: url('email_bg_right.png') no-repeat center right;
+    width: 200px;
+    height: 850px;
+    //background-size:200px  auto ;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+      height: 700px;
+    }
+
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      display: none;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      display: none;
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      display: none;
+
+    }
+  }
+  .mail_register_bkmid{
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      height: 600px;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      height: 500px;
+
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      //display: none;
+      height: 500px;
+
+    }
+  }
+  .mail_register_contbox{
+    position: absolute;
+    top: 135px;
+    left: 0;
+    text-align: center;
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      top: 60px;
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      top: 90px;
+
+    }
+  }
+  .mail_register_cont{
+    width: 480px;
+    border-radius: 8px;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    display: inline-block;
+
+    box-shadow: 0px 0px 7px 0px #eee;
+    >div{
+      img{
+        margin:  40px 0 20px 0;
+      }
+      >h2{
+        font-size: 28px;
+        padding-bottom: 40px;
+      }
+      >p{
+        font-size: 14px;
+      }
+      >i{
+        font-size: 24px;
+        color: @l-red;
+        line-height: 60px;
+      }
+      >span{
+        font-size: 14px;
+      }
+      >a{
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        margin: 45px 0 20px 0;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+
+      }
+
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        >img{
+          margin: -40px 0 0 0;
+          border: 10px solid #fff;
+          border-radius: 60px;
+        }
+        >h2{
+          margin:0  0 70px  0;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        >img{
+          margin: -40px 0 0 0;
+          border: 10px solid #fff;
+          border-radius: 60px;
+        }
+        >h2{
+          margin:0  0 70px  0;
+        }
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+
+        >img{
+          margin: -40px 0 0 0;
+          border: 10px solid #fff;
+          border-radius: 60px;
+        }
+        >h2{
+          margin:0  0 70px  0;
+        }
+      }
+    }
+    .mail_register_cont_time{
+      font-size: 12px;
+      color: #666666;
+      span{
+        color: @l-orange;
+      }
+    }
+    .mail_register_cont_down{
+      font-size: 12px;
+      border-top: 1px solid #eee;
+      margin: 90px 0 0 0;
+      padding: 20px 0;
+      color: #666;
+      i{
+        color: #999;
+        font-size: 20px;
+        padding-left: 10px;
+
+      }
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      border-radius: 0px;
+      box-shadow: none;
+    }
+  }
+  .login_footer{
+    @media (max-width: 575px) {
+      /* xs*/
+      background: #fff;
+      border-top: 0;
+
+    }
+  }
 }
