@@ -130,6 +130,29 @@ $.jUploader({
 
             templet_pic='/tongshuaifile'+$.trim(data.data);
 
+
+            //图片加载完成后获取图片信息
+            var imgs = new Image();
+            var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow;
+             imgs.src = 'http://tuser.tongshuai.com/tongshuaifile'+$.trim(data.data);
+            imgs.onload = function(){
+                imgsW=imgs.width;
+                imgsH = imgs.height;
+
+                if(imgsW>imgsH){
+                    imgsWb = 300%imgsW;
+                    imgsHnow = imgsH*imgsWb;
+                    $('.js-rightimg').width('300px').height(imgsHnow);
+
+                }else{
+                    imgsWb = 300%imgsH;
+                    imgsWnow = imgsW*imgsWb;
+                    $('.js-rightimg').height('300px').width(imgsWnow);
+
+                }
+
+            }
+
             $("#js-imgsplit").attr("src",templet_pic);
             $(".js-rightimg").attr("src",templet_pic);
             //裁剪图片
@@ -175,6 +198,18 @@ $.jUploader({
                 imgY= c.y;
                 imgW= c.w;
                 console.log(imgX, imgY, imgW);
+
+
+
+
+
+                //获取的宽度/比例就等于原来的宽度
+                // x坐标的位置位于宽度的百分比*图片宽度
+               // 发送这三个数据
+               var nowX =imgX/300*imgsW;
+               var nowY= imgY/300*imgsH;
+                var nowImgW = imgW%imgsWb;
+
             }
 
 
