@@ -46,7 +46,7 @@ $('.js_EvaluateVal').blur(function(){
 
 
 //        删除图片
-$('.js_sharePhotoDelect').click(function(){
+$('.js_sharePhotoDelect').unbind().live('click',function(){
     $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
     $.ajax({
 
