@@ -115,13 +115,6 @@ $.jUploader({
 
         }
 
-
-        console.log(data,11111);
-        // $.jUploader.defaults.otherArgs = {
-        //   // activityId: activityId,
-        //   proportion: proportion,
-        //   slotId: minSizeSlotId
-        // };
     },
     // 上传完成事件
     onComplete: function(name, data) {
@@ -135,7 +128,7 @@ $.jUploader({
             $('.js-modifyPhoto').show();
             $('.js-modifyPhotoBtn').show();
 
-            templet_pic='http://test.tongshuai.com/tongshuaifile'+$.trim(data.data);
+            templet_pic='/tongshuaifile'+$.trim(data.data);
 
             $("#js-imgsplit").attr("src",templet_pic);
             $(".js-rightimg").attr("src",templet_pic);
@@ -188,6 +181,7 @@ $.jUploader({
 
         } else {
             //上传头像失败出现弹窗
+            globalShade2(data.resultMsg,2);
         }
 
     },
