@@ -11,7 +11,8 @@
   },
   "preview_template":{
     "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/'>",
-    "ui_base":"<ui_base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/preview/'>"
+    "ui_base":"<ui_base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/preview/'>",
+    "ROOT_PATH":""
   },
   "debug_template":{
     "base":"<base href='../'>",
