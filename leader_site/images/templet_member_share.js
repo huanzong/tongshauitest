@@ -10,6 +10,56 @@ $(function () {
         jumpToLoginPage()
     }
 
+    //小星星点击事件
+
+    $('.js_shareScoreImg>li').click(function(){
+        var $shareArr=$('.js_shareScoreImg>li');
+        var shareImgIndex = $(this).index();
+        for(var i=0;i<$shareArr.length;i++){
+
+            if(i > shareImgIndex){
+                $shareArr.eq(i).removeClass('member-share-score-selected');
+
+            }else{
+                $shareArr.eq(i).addClass('member-share-score-selected');
+            }
+        }
+    })
+
+
+    //整体评价内容字数验证
+    var textLength =  $('.js_EvaluateVal').val().length;
+    $('.js_EvaluateValLength').html(textLength);
+    $('.js_EvaluateVal').keydown(function(e){
+
+        var textlength = $(this).val().length;
+        if( textlength>= 500){
+            if(e.keyCode==8){
+                $('.js_EvaluateValLength').html(textlength);
+            }else{
+                event.returnValue = false;
+                $('.js_EvaluateValLength').html(500);
+                $('.js_EvaluateVal').val($(this).val().substring(0,500));
+            }
+        }else{
+            $('.js_EvaluateValLength').html(textlength);
+        }
+    })
+
+    $('.js_EvaluateVal').blur(function(){
+        var textlength = $(this).val().length;
+        if( textlength>= 500){
+            $('.js_EvaluateVal').val($(this).val().substring(0,500));
+            $('.js_EvaluateValLength').html(500);
+
+        }else{
+            $('.js_EvaluateValLength').html(textlength);
+
+        }
+    })
+
+    //刘悦 暂空
+
     var orderId=getQueryString("orderId");
     $.ajax({
         type: "get",
@@ -179,7 +229,7 @@ $('.js_share_getup_false').click(function(){
     globalShade2('最多可以上传10张图片', 3, '2000');
 });
 //        删除图片
-$('.js_sharePhotoDelect').unbind().click(function(){
+$('.js_sharePhotoDelect').unbind().live('click',function(){
 
     $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
     $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
