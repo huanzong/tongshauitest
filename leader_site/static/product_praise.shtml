@@ -124,6 +124,18 @@
 	    			</div>
 	    		</div>
 	    	</div>
+	    	<div class="o_g product-prise-page">
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
+                <a  class="l-pagination-pagenumber">4</a>
+                <a  class="l-pagination-pagenumber">5</a>
+                <a  class="l-pagination-pagenumber">6</a>
+                <a  class="l-pagination-pagenumber">7</a>
+                <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-next ">下一页</a>
+	    	</div>
         </div>
 	</div>
 	<!--#include virtual="public/foot.shtml"-->

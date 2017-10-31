@@ -33,8 +33,8 @@
                             <div class="member-security-table o_g">
                                 <div class="member-share-leftbox o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_2-2 o_xs_2-2 ">
                                     <div class="member-share-leftcont ">
-                                        <img id="" src="images/compare_goods.PNG" alt="" class="js-productimg">
-                                        <p class="o_u o_sm_2-3 o_xs_2-3 js-productName">统帅323L大容量无霜冰箱 <br><span>BCD-323WLDPN</span></p>
+                                        <img id="" src="" alt="" class="js-productimg">
+                                        <p class="o_u o_sm_2-3 o_xs_2-3 js-productName"> </p>
                                     </div>
                                 </div>
                                 <div class="member-share-rightbox o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2">
@@ -58,6 +58,8 @@
                                                     <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
                                                 </li>
                                             </ul>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="iconfont icon-information-solid"></span>不可为空</div>
+
                                         </div>
                                         <div class="member-share-evaluate ">
                                             <p class="member-share-right-title o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
@@ -78,6 +80,7 @@
 
                                                 </ul>
                                                 <a href="javascript:;"  id="js_shareimgUpload" class="js_share_getup_img l-btn-sm l-btn-line1">本地上传</a>
+                                                <a href="javascript:;"  class="js_share_getup_false l-btn-sm l-btn-line1 l-btn-disable share_getup_false">本地上传</a>
                                             </div>
                                             <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
                                             <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持jpg、jpge、png，大小不超过2MB</p>
@@ -97,7 +100,18 @@
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
-
+        <!--弹窗2-->
+        <div class="pop-up2 js_popUpBox2 ">
+            <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+            <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+            <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+            <p class="o_u  js_popUpText"></p>
+        </div>
+        <div class="pop-up2 js_popUpBox3 pop-up-share">
+            <h3 class="o_u  js_popUpText">提交成功！</h3>
+            <p>您的晒单将会在客服人员审核（1-3个工作日）通过后展示</p>
+            <div class=""><span class="js_popUpTimeOver">5</span>后返回 <a href="#">我的晒单</a></div>
+        </div>
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->

@@ -159,7 +159,7 @@ $(function() {
                         //表单校验时触发
                         if(!$this.attr('phtype')){
                             $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                            // $this.css('border','1px solid #ccc');
+                             $this.css('border','1px solid #ccc');
                         }
                     },300);
                     
@@ -175,18 +175,18 @@ $(function() {
                     }
                     //表单校验时触发
                     if(!$this.attr('phtype')){
-                       $this.css('border','1px solid #e60012');
+                       //$this.css('border','1px solid #e60012');
                     }
                 });
             }else if($this.attr("type") == "password"){
                 $this.blur(function () {
                     setTimeout(function(){//先校验是否符合规则，再添加样式
-                        $this.css('border','1px solid #ccc');
+                        //$this.css('border','1px solid #ccc');
                         $this.css('color','#666');
                         //表单校验时触发
                         if(!$this.attr('phtype')){
                             $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                            // $this.css('border','1px solid #ccc');
+                             $this.css('border','1px solid #ccc');
                         }
                     },300);
                 }).focus(function () {
@@ -194,7 +194,6 @@ $(function() {
                     if(!$this.attr('data-normal')){
                         $this.validHideError();
                     }
-                    
                     $this.css('border','1px solid #e60012');
                 });
             }
@@ -277,7 +276,7 @@ $(function() {
                 //表单校验时触发
                 if(!$this.attr('phtype')){
                     $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                    // $this.css('border','1px solid #ccc');
+                     $this.css('border','1px solid #ccc');
                 }
                 
             }).focus(function () {
@@ -311,6 +310,7 @@ $(function() {
     });
 
 
+
 });
 
 //顶部导航点击
@@ -322,20 +322,20 @@ $('.js_addType>div').click(function(){
     if(dataAlt==1){
         if(divIndex==0){
             $(this).addClass('cur').siblings().removeClass('cur');
-            $('.js_landInputBox>div').eq(1).show().siblings().hide();
+            $('.js_addInputBox>div').eq(1).show().siblings().hide();
         }else{
             return false;
         }
     }else if(dataAlt==2){
         if(divIndex!=2){
             $(this).addClass('cur').siblings().removeClass('cur');
-            $('.js_landInputBox>div').eq(divIndex).show().siblings().hide();
+            $('.js_addInputBox>div').eq(divIndex).show().siblings().hide();
         }else{
             return false;
         }
     }else if (dataAlt==3){
         $(this).addClass('cur').siblings().removeClass('cur');
-        $('.js_landInputBox>div').eq(divIndex).show().siblings().hide();
+        $('.js_addInputBox>div').eq(divIndex).show().siblings().hide();
     }
 });
 $('.js_addClose').click(function(){
@@ -353,16 +353,22 @@ function addressAlert(add){
     $('.js_addContBox').show();
     var addressSave,addressCity,addressArea,savecode_used;
     //判定传入值是否存在
-    if(add.save&&add.savecode){
-        $('.js_alertAddress_save').html(add.save).attr('data-code',add.savecode);
-        $('.js_alertAddress_city').html(add.city).attr('data-code',add.citycode);
-        $('.js_alertAddress_area').html(add.area).attr('data-code',add.areacode);
-    }else{
+    if(!add){
         $('.js_alertAddress_save').html('北京').attr('data-code','1');
         $('.js_alertAddress_city').html('北京').attr('data-code','1');
         $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
+    }else{
+        if(add.save&&add.savecode){
+            $('.js_alertAddress_save').html(add.save).attr('data-code',add.savecode);
+            $('.js_alertAddress_city').html(add.city).attr('data-code',add.citycode);
+            $('.js_alertAddress_area').html(add.area).attr('data-code',add.areacode);
+        }else{
+            $('.js_alertAddress_save').html('北京').attr('data-code','1');
+            $('.js_alertAddress_city').html('北京').attr('data-code','1');
+            $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
+        }
     }
-    $('.js_landInputBox>div').eq(0).show().siblings().hide();
+    //$('.js_addInputBox>div').eq(0).show().siblings().hide();
     //获取省份并汇入
     if(!add.savecode){
         $.ajax({
@@ -381,7 +387,7 @@ function addressAlert(add){
                         addressSave+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
                     }
                     $('.js_alertAddress_save_cont').html(addressSave);
-                    $('.js_landInputBox>div').eq(0).show().siblings().hide();
+                    $('.js_addInputBox>div').eq(0).show().siblings().hide();
                     $('.js_addType').attr('data-alt',1);
                 }
             }
@@ -413,7 +419,7 @@ function addressAlert(add){
                             addressCity += '<li class="o_u o_df_3-12 o_xs_11-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
                         }
                         $('.js_alertAddress_ctiy_cont').html(addressCity);
-                        //$('.js_landInputBox>div').eq(1).show().siblings().hide();
+                        //$('.js_addInputBox>div').eq(1).show().siblings().hide();
                         $('.js_alertAddress_save').html(saveText).show().siblings('i').hide();
                         addAleatBtn(1);
                     }
@@ -469,10 +475,13 @@ function addressAlert(add){
 
     });
 
+
+
+
 }
 function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
-    $('.js_landInputBox>div').eq(index).show().siblings().hide();
+    $('.js_addInputBox>div').eq(index).show().siblings().hide();
 }
 
 
@@ -503,19 +512,26 @@ function globalShade2(alerttext,type,time){
         $('.js_popUpFales').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpTrue').show();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else if(type==2){
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpFales').show();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else if(type==3){
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').show();
         $('.js_popUpFales').hide();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else{
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpFales').hide();
-        $('.js_popUpText').css('')
+        $('.js_popUpText').css('');
+        $('.js_popUpText').addClass('type3-text');
     }
 
         if(outTime){
@@ -529,4 +545,27 @@ function globalShade2(alerttext,type,time){
                 $("body").css({overflow:"auto"});
             },2000);
         }
+}
+
+//倒计时通用模块
+
+function btnTimeOut(obj,time,timetext){
+    var btnDisable,timeTotal;
+    var objHtml = obj.html();
+    var timeText = timetext;
+    timeTotal = time;
+    btnDisable = 'l-btn-disable';
+    if(obj.hasClass(btnDisable)){
+      return false;
+    }else{
+        obj.addClass(btnDisable);
+        obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
+    }
+  var timeHtml =setInterval(function(){
+      obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
+      if(timeTotal<=0){
+          clearInterval(timeHtml);
+          obj.removeClass(btnDisable).html(objHtml);
+      }
+    },1000);
 }
