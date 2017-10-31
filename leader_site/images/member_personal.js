@@ -107,12 +107,9 @@ $.jUploader({
     action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
-
     onUpload: function(data) {
-
         if(data){
             globalShade2('图片上传中，请耐心等待,,,',4,'forever');
-
         }
 
     },
@@ -127,13 +124,11 @@ $.jUploader({
             $('.js-uploadPhoto').hide();
             $('.js-modifyPhoto').show();
             $('.js-modifyPhotoBtn').show();
-
             templet_pic='/tongshuaifile'+$.trim(data.data);
-
 
             //图片加载完成后获取图片信息
             var imgs = new Image();
-            var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow;
+            var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
              imgs.src = 'http://tuser.tongshuai.com/tongshuaifile'+$.trim(data.data);
             imgs.onload = function(){
                 imgsW=imgs.width;
@@ -193,22 +188,17 @@ $.jUploader({
                         marginTop: '-' + Math.round(ry * c.y) + 'px'
                     });
                 }
-
                 imgX= c.x;
                 imgY= c.y;
                 imgW= c.w;
                 console.log(imgX, imgY, imgW);
 
-
-
-
-
                 //获取的宽度/比例就等于原来的宽度
                 // x坐标的位置位于宽度的百分比*图片宽度
                // 发送这三个数据
-               var nowX =imgX/300*imgsW;
-               var nowY= imgY/300*imgsH;
-                var nowImgW = imgW%imgsWb;
+                nowX =imgX/300*imgsW;
+                nowY= imgY/300*imgsH;
+                nowImgW = imgW%imgsWb;
 
             }
 
@@ -275,7 +265,6 @@ $.jUploader({
 //}
 
 
-
 //个人信息
 $('.js-personalinfotab').click( function () {
     var tabNmu =$(this).index();
@@ -307,9 +296,12 @@ $('.js-personalinfotab').click( function () {
             type: "get",
             dataType: "json",
             data: {
-                    "picX": imgX,
-                    "picY": imgY,
-                    "width": imgW,
+                    //"picX": imgX,
+                    //"picY": imgY,
+                    //"width": imgW,
+                     "picX": nowX,
+                     "picY": nowY,
+                     "width": nowImgW,
                     "userHeadPic": templet_pic
             },
             success: function (responseT) {
