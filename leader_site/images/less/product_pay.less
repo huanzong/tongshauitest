@@ -145,10 +145,13 @@
 	}
 }
 // 支付方式
-.pay-system{
+.pay-system-xl{
 	width: 100%;
 	border-top: 1px solid #eee;
 	border-left: 1px solid #eee;
+	@media (max-width: 1199px) {
+		display: none;
+	}
 }
 .pay-system-head{
 	a{
@@ -258,10 +261,114 @@
 }
 .more-info{
 	padding: 60px 0 30px;
+	margin-right: 60px;
 	font-size: 14px;
 	line-height: 18px;
 	color: #666;
+	border-top: 1px solid #eee;
+	&:first-child{
+		border: none;
+	}
 	em{
 		color: #333;
+	}
+}
+.more-list{
+	padding: 0 30px 15px 0;
+	li{
+		display: inline-block;
+		padding-bottom: 30px;
+		width: 25%;
+	}
+}
+.more-list-pre{
+	margin-right: 30px;
+	border: 1px solid #eee;
+	text-align: center;
+	img{
+		display: inline-block;
+		width: 150px;
+		height: 30px;
+		padding: 14px 0;
+	}
+}
+
+.pay-system-lg{
+	padding-bottom: 90px;
+	border-top: 1px solid #eee;
+	text-align: center;
+	@media (min-width: 1200px) {
+		display: none;
+	}
+}
+.system-tit{
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 20px;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+	background: #fff;
+	color: #333;
+}
+.system-lg-con{
+	position: relative;
+	left: 0;
+	right: -30px;
+	padding-top: 25px;
+	text-align: left;
+}
+.system-pay{
+	margin: 0 30px 30px 0;
+	border: 1px solid #eee;
+	text-align: center;
+	@media (max-width: 575px) {
+		margin: 0 0 30px 0;
+	}
+	&:hover,&.active{
+		border: 1px solid @l-red;
+		cursor: pointer;
+	}
+	img{
+		padding: 35px 0;
+		width: 150px;
+		height: 30px;
+	}
+}
+.pay-footer{
+	// position: fixed;
+	bottom: 0;
+	background: #fff;
+	border-top: 1px solid #eee;
+	text-align: center;
+	@media (min-width:1200px) {
+		display: none;
+	}
+	a{
+		margin: 20px 0;
+		min-width: 370px;
+		color: #fff;
+		font-size: 12px;
+		@media (min-width:992px) {
+			font-size: 16px;
+		}
+		@media (min-width:701px) and (max-width: 991px) {
+			min-width: 260px;
+		}
+		@media (min-width:576px) and (max-width: 700px) {
+			min-width: 275px;
+		}
+		@media (max-width: 575px) {
+			min-width: 80%;
+		}
+	}
+	.l-btn-lg{
+		display: none;
+	}
+	.l-btn-normal{
+		@media (min-width:992px) {
+			display: none;
+		}
 	}
 }
