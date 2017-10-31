@@ -35,15 +35,16 @@ $(function () {
         //小星星数量
         var templet_star = $('.member-share-score-selected').length;
         if(templet_star==0){
-
+            $('.js-star').removeClass('member-share-evaluate-right');
             return;
         }
-
+        $('.js-star').addClass('member-share-evaluate-right');
         var templet_content=$('.js_EvaluateVal').val();
         if(templet_content==0){
-
+            $('.js-content').removeClass('member-share-evaluate-right');
             return;
         }
+        $('.js-content').addClass('member-share-evaluate-right');
         //移动端，网页端
         var templet_innerWidth=window.innerWidth;
         var templet_devSource=1;
@@ -69,27 +70,34 @@ $(function () {
             templet_isHavePic=1;
         }
 
+        var data={
+            'pathsStr':commentpics,
+            'star':templet_star,
+            'content':templet_content,
+            'isHavePic':templet_isHavePic,
+            'devSource':templet_devSource,
+            'businessId':'BCD-458WDIAU1',
+            'channelSource':'1',
+            'productCategoryId':'61',
+            'orderId':'1'
+        };
         $.ajax({
-            type: "post",
-            dataType: "json",
+            contentType:"application/json",
             url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
-            data: {
-                'pathsStr':commentpics,
-                'star':templet_star,
-                'content':templet_content,
-                'isHavePic':templet_isHavePic,
-                'devSource':templet_devSource,
-                'businessId':'BCD-458WDIAU1',
-                'channelSource':'1',
-                'productCategoryId':'61',
-                'orderId':'1'
-
-            },
-            success: function(returnData){
+            data:  JSON.stringify(data),
+            success_cb: function(returnData){
                 if(returnData.isSuccess){
-                    globalShade2('成功分享','1');
-                }
+                    $('.js_popUpBox3').show();
 
+                    btnTimeOut($('.js_popUpTimeOver'),5,'');
+
+                    setTimeout(function(){
+                        window.location.href='/order';
+                    },4000);
+                }
+                else{
+                    $('.js-content').removeClass('member-share-evaluate-right').html(returnData);
+                }
             }
         });
     });

@@ -244,9 +244,8 @@ $('.js-personalinfotab').click( function () {
         var imgSize = jcrop_api.tellSelect();
         console.log(imgSize);
         $.ajax({
-            url: "/user/front/user/updateHeadPic",
+            url: siteConfig.userUrl+"/user/front/user/updateHeadPic",
             type: "get",
-            dataType: "json",
             data: {
                     "picX": parseInt(imgSize.x),
                     "picY": parseInt(imgSize.y),
@@ -254,8 +253,8 @@ $('.js-personalinfotab').click( function () {
                      "height": parseInt(imgSize.h),
                      "userHeadPic": imgs.src
             },
-            success: function (responseT) {
-                if (responseT.isSuccess) {
+            success_cb: function (data) {
+                if (data.isSuccess) {
                     var tabNmu =$('.js-personalPicuure').index();
                     $('.js-personalinfotabcont').hide();
                     $('.js-personalinfotabcont').eq(tabNmu).show()
@@ -264,7 +263,7 @@ $('.js-personalinfotab').click( function () {
                     $('.js-uploadPhoto').show();
                     $('.js-modifyPhoto').hide();
                     $('.js-modifyPhotoBtn').hide();
-                    $("#js-imgleft").attr("src",responseT.data);
+                    $("#js-imgleft").attr("src",data.data);
                 }
                 else{
 //      上传头像失败出现弹窗

@@ -48,14 +48,8 @@ $(function(){
 
 //        删除图片
     $('.js_sharePhotoDelect').unbind().live('click',function(){
-
-
         $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
-        $.ajax({
-
-        })
-
-
+        $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
         //图片删除成功后执行
         var photoNub =  $('.js_sharephotobox>li').length();
         if(photoNub<10){
@@ -65,11 +59,7 @@ $(function(){
             $('#js_shareimgUpload').hide();
             $('.js_share_getup_false').show();
         }
-
-
     })
-
-
 
 //本地上传
     $.jUploader.setDefaults({
@@ -105,11 +95,11 @@ $(function(){
             }
 
                 //上传成功后运行函数
-                var photoNub =  $('.js_sharephotobox>li').length();
-                if(photoNub>=10){
-                    $('#js_shareimgUpload').hide();
-                    $('.js_share_getup_false').show();
-                }
+            var photoNub =  $('.js_sharephotobox>li').length();
+            if(photoNub>=10){
+                $('#js_shareimgUpload').hide();
+                $('.js_share_getup_false').show();
+            }
         },
 
         // 系统信息显示（例如后缀名不合法）
@@ -145,11 +135,11 @@ $(function(){
 
 
 //提交成功弹出层
-//$('.js_popUpBox3').show();
+// $('.js_popUpBox3').show();
 //
-//btnTimeOut($('.js_popUpTimeOver'),5,'');
+// btnTimeOut($('.js_popUpTimeOver'),5,'');
 //
-//setTimeout(function(){
+// setTimeout(function(){
 //    window.location.href='http://www.baidu.com';
-//},4000);
+// },4000);
 })
