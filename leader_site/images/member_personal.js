@@ -39,28 +39,51 @@ $(function(){
     });
 
 
+            // Create variables (in this scope) to hold the API and image size
+            var jcrop_api,
+                boundx,
+                boundy,
+            // Grab some information about the preview pane
+                $preview = $('#preview-pane'),
+                $pcnt = $('#preview-pane .preview-container'),
+                $pimg = $('#preview-pane .preview-container img'),
+                xsize = $pcnt.width(),
+                ysize = $pcnt.height();
+    var imgs = new Image();
+    var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
+            $('#target').Jcrop({
+                    onChange: updatePreview,
+                    onSelect: updatePreview,
+                    boxWidth:300,
+                    boxHeight:300,
+                    setSelect: [ 60, 60, 260, 260 ]
+                }
+                ,function(){
+                    // Use the API to get the real image size
 
-//      裁剪图片控件加载
-    var jcrop_api,
-        boundx,
-        boundy,
-        $preview = $('#preview-pane'),
-        $pcnt = $('#preview-pane .preview-container'),
-        $pimg = $('#preview-pane .preview-container img'),
-        xsize = $pcnt.width(),
-        ysize = $pcnt.height();
-    $('#target').Jcrop({
-        onChange: updatePreview,
-        onSelect: updatePreview,
-        aspectRatio: xsize / ysize,
-        setSelect: [ 60, 60, 260, 260 ]
-    },function(){
-        // Use the API to get the real image size
-        var bounds = this.getBounds();
-        jcrop_api = this;
-        boundx = bounds[0];
-        boundy = bounds[1];
-    });
+                    // Store the API in the jcrop_api variable
+                    jcrop_api = this;
+                    // Move the preview into the jcrop container for css positioning
+
+                }
+            );
+            function updatePreview(c){
+                if (parseInt(c.w) > 0) {
+                    var rx = xsize / c.w;
+                    var ry = ysize / c.h;
+                    $('#js-imgsplit').css({
+                            width: Math.round(rx * imgsW) + 'px',
+                            height: Math.round(ry * imgsH) + 'px',
+                            marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                            marginTop: '-' + Math.round(ry * c.y) + 'px'
+                        }
+                    );
+
+
+
+
+                }
+            };
 
 //    时间控件
 
@@ -140,63 +163,41 @@ $.jUploader({
             templet_pic='/tongshuaifile'+$.trim(data.data);
 
             //图片加载完成后获取图片信息
-            var imgs = new Image();
-            var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
-             imgs.src = 'http://tuser.tongshuai.com/tongshuaifile'+$.trim(data.data);
+
+             imgs.src = 'http://test.tongshuai.com/tongshuaifile'+$.trim(data.data);
             imgs.onload = function(){
                 imgsW=imgs.width;
                 imgsH = imgs.height;
-
+                //bounds=[imgsW,imgsH];
                 if(imgsW>imgsH){
-                    imgsWb = 300%imgsW;
+                    imgsWb = 300/imgsW;
                     imgsHnow = imgsH*imgsWb;
-                    $('.js-rightimg').width('300px').height(imgsHnow);
+//      初始化更改选择框内图片
+                    jcrop_api.setImage(templet_pic, function(){
+                        this.setOptions({
+                            outerImage: templet_pic,
+                            setSelect: [ 60, 60, 260, 260 ]
+                        })
+                    });
+
+                    $(".jcrop-preview").attr("src",templet_pic);
 
                 }else{
-                    imgsWb = 300%imgsH;
+                    imgsWb = 300/imgsH;
                     imgsWnow = imgsW*imgsWb;
-                    $('.js-rightimg').height('300px').width(imgsWnow);
-
-                }
-
-            };
 //      初始化更改选择框内图片
-            jcrop_api.setImage(templet_pic, function(){
-                this.setOptions({
-                    outerImage: templet_pic
-                })
-            });
-
-            //$("#js-imgsplit").attr("src",templet_pic);
-            $(".js-rightimg").attr("src",templet_pic);
-
-
-            function updatePreview(c)
-            {
-                if (parseInt(c.w) > 0)
-                {
-                    var rx = xsize / c.w;
-                    var ry = ysize / c.h;
-                    $pimg.css({
-                        width: Math.round(rx * boundx) + 'px',
-                        height: Math.round(ry * boundy) + 'px',
-                        marginLeft: '-' + Math.round(rx * c.x) + 'px',
-                        marginTop: '-' + Math.round(ry * c.y) + 'px'
+                    jcrop_api.setImage(templet_pic, function(){
+                        this.setOptions({
+                            outerImage: templet_pic,
+                            setSelect: [ 60, 60, 260, 260 ]
+                        })
                     });
+
+                    $(".jcrop-preview").attr("src",templet_pic);
+
                 }
-                imgX= c.x;
-                imgY= c.y;
-                imgW= c.w;
-                console.log(imgX, imgY, imgW);
+            };
 
-//      获取的宽度/比例就等于原来的宽度
-                // x坐标的位置位于宽度的百分比*图片宽度
-               // 发送这三个数据
-                nowX =imgX/300*imgsW;
-                nowY= imgY/300*imgsH;
-                nowImgW = imgW%imgsWb;
-
-            }
         } else {
 //      上传头像失败出现弹窗
             globalShade2(data.resultMsg,2);
@@ -211,51 +212,6 @@ $.jUploader({
     onCancel: function(fileName) {},
     debug: true
 });
-
-////裁剪图片
-////jQuery(function($){
-//// Create variables (in this scope) to hold the API and image size
-//var jcrop_api,
-//    boundx,
-//    boundy,
-//// Grab some information about the preview pane
-//    $preview = $('#preview-pane'),
-//    $pcnt = $('#preview-pane .preview-container'),
-//    $pimg = $('#preview-pane .preview-container img'),
-//    xsize = $pcnt.width(),
-//    ysize = $pcnt.height();
-//$('#target').Jcrop({
-//    onChange: updatePreview,
-//    onSelect: updatePreview,
-//    aspectRatio: xsize / ysize,
-//    setSelect: [ 60, 60, 260, 260 ]
-//},function(){
-//    // Use the API to get the real image size
-//    var bounds = this.getBounds();
-//    boundx = bounds[0];
-//    boundy = bounds[1];
-//});
-//
-//var imgX,imgY,imgW;
-//function updatePreview(c)
-//{
-//    if (parseInt(c.w) > 0)
-//    {
-//        var rx = xsize / c.w;
-//        var ry = ysize / c.h;
-//        $pimg.css({
-//            width: Math.round(rx * boundx) + 'px',
-//            height: Math.round(ry * boundy) + 'px',
-//            marginLeft: '-' + Math.round(rx * c.x) + 'px',
-//            marginTop: '-' + Math.round(ry * c.y) + 'px'
-//        });
-//    }
-//
-//    imgX= c.x;
-//    imgY= c.y;
-//    imgW= c.w;
-//    console.log(imgX, imgY, imgW);
-//}
 
 
 //      个人信息
@@ -284,18 +240,19 @@ $('.js-personalinfotab').click( function () {
 
 //      点击上传图片
     $('#getupimg').unbind().click( function () {
+
+        var imgSize = jcrop_api.tellSelect();
+        console.log(imgSize);
         $.ajax({
             url: "/user/front/user/updateHeadPic",
             type: "get",
             dataType: "json",
             data: {
-                    //"picX": imgX,
-                    //"picY": imgY,
-                    //"width": imgW,
-                     "picX": nowX,
-                     "picY": nowY,
-                     "width": nowImgW,
-                    "userHeadPic": templet_pic
+                    "picX": parseInt(imgSize.x),
+                    "picY": parseInt(imgSize.y),
+                     "width": parseInt(imgSize.w),
+                     "height": parseInt(imgSize.h),
+                     "userHeadPic": imgs.src
             },
             success: function (responseT) {
                 if (responseT.isSuccess) {

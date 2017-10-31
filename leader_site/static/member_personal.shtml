@@ -197,6 +197,7 @@
                                         <ul class=" o_g  member-personalinfo-table2 meber-personalinfo-photo js-modifyPhoto">
                                             <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
                                                 <div class="membe-personalinfo-photo-left">
+
                                                     <div id="preview-pane">
                                                         <div class="preview-container " style="width: 180px;height: 180px;">
                                                             <img src="../images/ignore_prodetail3.JPG" class="jcrop-preview"
