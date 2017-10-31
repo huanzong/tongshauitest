@@ -19,7 +19,7 @@ $(function(){
             if (jQuery.trim(data).length > 0) {
                 var templet_email=jQuery.trim(data.data.email);
                 if (templet_email != null && templet_email != "") {
-                    self.location = '/security';
+                    //self.location = '/security';
                 }
 
                 var templet_mobile=jQuery.trim(data.data.mobile);
