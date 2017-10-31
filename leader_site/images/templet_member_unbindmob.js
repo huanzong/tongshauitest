@@ -7,9 +7,9 @@
 
 $(function(){
     //前台判断是否登陆
-    // if(!istrsidssdssotoken()){
-    //     jumpToLoginPage()
-    // }
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage()
+    }
 
     $.ajax({
         type: "get",
@@ -74,30 +74,19 @@ $(function(){
         btnTimeOut($('.js-sendmobile'),'60',' 重新获取验证码');
 
         $.ajax({
+            dataType: "text",
             url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
             data: {
                 'editOperation':'unbindMobileSendMobileCode'
             },
-            error : function(data){
-                var responseText=data.responseText;
-                if (jQuery.trim(responseText).indexOf("user_is_illegal")>-1){
-                    $('.js_subimGetUp').addClass('l-btn-disable');
-                    $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
-                }
-                else if (jQuery.trim(responseText).indexOf("create_confirm_error")>-1) {
-                    $('.js_subimGetUp').addClass('l-btn-disable');
-                    $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
-                }
-            },
             success_cb: function(data){
-                var responseText=data.responseText;
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
-                    else if (jQuery.trim(responseText).indexOf("user_is_illegal")>-1){
+                    else if (jQuery.trim(data).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
                     }
-                    else if (jQuery.trim(responseText).indexOf("create_confirm_error")>-1){
+                    else if (jQuery.trim(data).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
                     }
@@ -113,30 +102,19 @@ $(function(){
         }
         btnTimeOut($('.js-sendmail'),'120',' 重新获取验证码');
         $.ajax({
+            dataType: "text",
             url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
             data: {
                 'editOperation':'unbindMobileSendEmailCode'
             },
-            error : function(data){
-                var responseText=data.responseText;
-                if (jQuery.trim(responseText).indexOf("user_is_illegal")>-1){
-                    $('.js_subimGetUp').addClass('l-btn-disable');
-                    $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送邮件的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
-                }
-                else if (jQuery.trim(responseText).indexOf("create_confirm_error")>-1){
-                    $('.js_subimGetUp').addClass('l-btn-disable');
-                    $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
-                }
-            },
             success_cb: function(data){
-                var responseText=data.responseText;
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
-                    else if (jQuery.trim(responseText).indexOf("user_is_illegal")>-1){
+                    else if (jQuery.trim(data).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送邮件的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
                     }
-                    else if (jQuery.trim(responseText).indexOf("create_confirm_error")>-1){
+                    else if (jQuery.trim(data).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
                     }
@@ -165,39 +143,26 @@ $(function(){
             }
 
             $.ajax({
+                dataType: "text",
                 url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
                 data: {
                     'editOperation':'unbindMobileVerifyCode',
                     'param':templet_param,
                     'code':templet_code
                 },
-                error : function(data){
-                    var responseText=data.responseText;
-                    if (jQuery.trim(responseText).indexOf("code_can_not_be_null")>-1){
-
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空').addClass('Validform_wrong').removeClass('Validform_right');
-
-                    }
-                    else if (jQuery.trim(responseText).indexOf("unbind_code_can_not_be_select")>-1 || jQuery.trim(responseText).indexOf("unbind_mcode_is_illegal")>-1 ){
-
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误').addClass('Validform_wrong').removeClass('Validform_right');
-
-                    }
-                },
                 success_cb: function(data){
-                    var responseText=data.responseText;
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
                             $('.js-memberRevRateTree').addClass('member-revisemob-two').removeClass('member-revisemob-three').removeClass('member-revisemob-one');
                             $('.js-unbingfalse').hide();
                             $('.js_validateMob').show();
                         }
-                        else if (jQuery.trim(responseText).indexOf("code_can_not_be_null")>-1){
+                        else if (jQuery.trim(data).indexOf("code_can_not_be_null")>-1){
 
                             $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空').addClass('Validform_wrong').removeClass('Validform_right');
 
                         }
-                        else if (jQuery.trim(responseText).indexOf("unbind_code_can_not_be_select")>-1 || jQuery.trim(responseText).indexOf("unbind_mcode_is_illegal")>-1 ){
+                        else if (jQuery.trim(data).indexOf("unbind_code_can_not_be_select")>-1 || jQuery.trim(data).indexOf("unbind_mcode_is_illegal")>-1 ){
 
                             $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误').addClass('Validform_wrong').removeClass('Validform_right');
 
@@ -223,23 +188,14 @@ $(function(){
 
         if(templet_code!=''){
             $.ajax({
+                dataType: "text",
                 url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
                 data: {
                     'editOperation': 'unbind',
                     'param': templet_param ,
                     'code':templet_code
                 },
-                error: function (data) {
-                    var responseText=data.responseText;
-                    if(jQuery.trim(responseText).indexOf("unbind_verify_is_illegaled")>-1){
-                        globalShade2('验证码不能为空',2);
-                    }
-                    else if(jQuery.trim(responseText).indexOf("403")>-1){
-                        globalShade2('解除绑定失败',2);
-                    }
-                },
                 success: function (data) {
-                    var responseText=data.responseText;
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
                             $('.js-memberRevRateLine').css('width','100%');
@@ -261,10 +217,10 @@ $(function(){
                                 templet_time--;
                             }, 1000);
                         }
-                        else if(jQuery.trim(responseText).indexOf("unbind_verify_is_illegaled")>-1){
+                        else if(jQuery.trim(data).indexOf("unbind_verify_is_illegaled")>-1){
                             globalShade2('验证码不能为空',2);
                         }
-                        else if(jQuery.trim(responseText).indexOf("403")>-1){
+                        else if(jQuery.trim(data).indexOf("403")>-1){
                             globalShade2('解除绑定失败',2);
                         }
                     }
@@ -275,7 +231,6 @@ $(function(){
 
     //取消取消绑定
     $(".js-cancelUnbind") .unbind().bind('click',function(){
-
         var templet_param;
         var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
         if(templet_pretermit=='0' || templet_pretermit=='1'){
@@ -285,8 +240,8 @@ $(function(){
         if(templet_pretermit=='2' ){
             templet_param='email';
         }
-
         $.ajax({
+            dataType: "text",
             url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
             data: {
                 'editOperation': 'cancelUnbind',

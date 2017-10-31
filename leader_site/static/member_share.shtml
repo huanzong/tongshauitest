@@ -58,7 +58,7 @@
                                                     <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
                                                 </li>
                                             </ul>
-                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="iconfont icon-information-solid"></span>不可为空</div>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-star"><span class="iconfont icon-information-solid"></span>不可为空</div>
 
                                         </div>
                                         <div class="member-share-evaluate ">
@@ -70,7 +70,7 @@
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"></div>
-                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="iconfont icon-information-solid"></span>不可为空</div>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-content"><span class="iconfont icon-information-solid"></span>不可为空</div>
 
                                         </div>
                                         <div class="member-share-photo ">

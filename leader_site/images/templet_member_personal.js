@@ -26,12 +26,10 @@ $(function(){
     //页面加载时调个人信息
     $.ajax({
         type: "get",
-        dataType: "json",
         url: siteConfig.userUrl+"/user/front/user/userInfo/",
         data: "",
-        error : function(XMLHttpRequest, textStatus, errorThrown){
-        },
-        success: function(returnData){
+        login:true,
+        success_cb: function(returnData){
             if (jQuery.trim(returnData).length > 0) {
                 if(returnData.resultMsg=='用户未登录'){
                     window.location.href ='/ids/ts/login.jsp';
@@ -69,11 +67,10 @@ $(function(){
                 $.ajax({
                     url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                     type:"get",
-                    dataType:"json",
                     data:{"parentId":'0'},
-                    success:function(responseT){
-                        if(responseT.isSuccess){
-                            var provinceList=responseT.data;
+                    success_cb:function(data){
+                        if(data.isSuccess){
+                            var provinceList=data.data;
                             $("#js_save").html("");
                             $("#js_save").append('<option value="">--请选择省份--</option>');
                             if(provinceList!=null){
@@ -95,11 +92,10 @@ $(function(){
                                 $.ajax({
                                     url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                                     type:"get",
-                                    dataType:"json",
                                     data:{"parentId":shengVal},
-                                    success:function(responseT){
-                                        if(responseT.isSuccess){
-                                            var provinceList=responseT.data;
+                                    success_cb:function(data){
+                                        if(data.isSuccess){
+                                            var provinceList=data.data;
                                             $("#js_city").html("");
                                             $("#js_city").append('<option value="">--请选择城市--</option>');
                                             if(provinceList!=null){
@@ -118,11 +114,10 @@ $(function(){
                                             $.ajax({
                                                 url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                                                 type:"get",
-                                                dataType:"json",
                                                 data:{"parentId":quVal},
-                                                success:function(responseT){
-                                                    if(responseT.isSuccess){
-                                                        var provinceList=responseT.data;
+                                                success_cb:function(data){
+                                                    if(data.isSuccess){
+                                                        var provinceList=data.data;
                                                         $("#js_area").html("");
                                                         $("#js_area").append('<option value="">--请选择区--</option>');
                                                         if(provinceList!=null){
@@ -138,19 +133,15 @@ $(function(){
                                                         }
                                                         templet_select_qu.init();
                                                     }
-                                                },
-                                                error:function(){}
+                                                }
                                             });
                                         }
-                                    },
-                                    error:function(){}
+                                    }
                                 });
                             }
                         }
-                    },
-                    error:function(){}
-                })
-
+                    }
+                });
                 //头像放进去
                 $("#js-imgleft").attr("src",returnData.data.headUrl);
             }
@@ -165,11 +156,10 @@ $(function(){
         $.ajax({
             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
-            dataType:"json",
             data:{"parentId":shengVal},
-            success:function(responseT){
-                if(responseT.isSuccess){
-                    var provinceList=responseT.data;
+            success_cb:function(data){
+                if(data.isSuccess){
+                    var provinceList=data.data;
                     $("#js_city").html("");
                     $("#js_city").append('<option value="">--请选择城市--</option>');
                     if(provinceList!=null){
@@ -186,8 +176,7 @@ $(function(){
                     templet_select_qu.init();
                     templet_select_qu.lose();
                 }
-            },
-            error:function(){}
+            }
         });
     });
 
@@ -200,11 +189,10 @@ $(function(){
         $.ajax({
             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
-            dataType:"json",
             data:{"parentId":shiVal},
-            success:function(responseT){
-                if(responseT.isSuccess){
-                    var provinceList=responseT.data;
+            success_cb:function(data){
+                if(data.isSuccess){
+                    var provinceList=data.data;
                     $("#js_area").html("");
                     $("#js_area").append('<option value="">--请选择区--</option>');
                     if(provinceList!=null){
@@ -212,12 +200,10 @@ $(function(){
                             var provinceEach=' <option value="'+provinceList[i].regionCode+'">'+provinceList[i].regionName+'</option>';
                             $("#js_area").append(provinceEach);
                         }
-
                     }
                     templet_select_qu.init();
                 }
-            },
-            error:function(){}
+            }
         });
     });
 
@@ -234,7 +220,6 @@ $(function(){
         }
 
         $('.js_Date').val(template_birthday);
-
         $("#js_save").html("");
         templet_select_sheng.init();
         templet_select_sheng.lose();
@@ -248,11 +233,10 @@ $(function(){
         $.ajax({
             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
-            dataType:"json",
             data:{"parentId":'0'},
-            success:function(responseT){
-                if(responseT.isSuccess){
-                    var provinceList=responseT.data;
+            success_cb:function(data){
+                if(data.isSuccess){
+                    var provinceList=data.data;
                     $("#js_save").html("");
                     $("#js_save").append('<option value="">--请选择省份--</option>');
                     if(provinceList!=null){
@@ -261,11 +245,9 @@ $(function(){
                             if(template_provinceName==provinceList[i].regionName){
                                 isSelected="selected";
                             }
-
                             var provinceEach=' <option value="' + provinceList[i].regionCode + '" '+isSelected+'>' + provinceList[i].regionName + '</option>';
                             $("#js_save").append(provinceEach);
                         }
-
                     }
                     templet_select_sheng.init();
                     //如果省不为空，肯定有市，区，个人信息里市区显示
@@ -274,11 +256,10 @@ $(function(){
                         $.ajax({
                             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                             type:"get",
-                            dataType:"json",
                             data:{"parentId":shengVal},
-                            success:function(responseT){
-                                if(responseT.isSuccess){
-                                    var provinceList=responseT.data;
+                            success_cb:function(data){
+                                if(data.isSuccess){
+                                    var provinceList=data.data;
                                     $("#js_city").html("");
                                     $("#js_city").append('<option value="">--请选择城市--</option>');
                                     if(provinceList!=null){
@@ -297,11 +278,10 @@ $(function(){
                                     $.ajax({
                                         url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
                                         type:"get",
-                                        dataType:"json",
                                         data:{"parentId":quVal},
-                                        success:function(responseT){
-                                            if(responseT.isSuccess){
-                                                var provinceList=responseT.data;
+                                        success_cb:function(data){
+                                            if(data.isSuccess){
+                                                var provinceList=data.data;
                                                 $("#js_area").html("");
                                                 $("#js_area").append('<option value="">--请选择区--</option>');
                                                 if(provinceList!=null){
@@ -313,21 +293,17 @@ $(function(){
                                                         var provinceEach=' <option value="' + provinceList[i].regionCode + '" '+isSelected+'>' + provinceList[i].regionName + '</option>';
                                                         $("#js_area").append(provinceEach);
                                                     }
-
                                                 }
                                                 templet_select_qu.init();
                                             }
-                                        },
-                                        error:function(){}
+                                        }
                                     });
                                 }
-                            },
-                            error:function(){}
+                            }
                         });
                     }
                 }
-            },
-            error:function(){}
+            }
         })
 
     });
@@ -395,14 +371,13 @@ $(function(){
         templet_isSubmiting=true;
         $.ajax({
             type: "post",
-            dataType: "json",
             url: siteConfig.userUrl+"/user/front/user/updateUserInfo/",
             data:templet_data,
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            error: function (data) {
                 templet_isSubmiting=false;
             },
-            success: function (returnData) {
-                if(returnData.isSuccess){
+            success_cb: function (data) {
+                if(data.isSuccess){
                     document.cookie="isAlterBind=1;path=/";
                     globalShade2('保存成功','1');
 
@@ -415,7 +390,7 @@ $(function(){
                 }
                 else{
 
-                    globalShade2(returnData.resultMsg,'2');
+                    globalShade2(data.resultMsg,'2');
                 }
                 templet_isSubmiting=false;
             }
