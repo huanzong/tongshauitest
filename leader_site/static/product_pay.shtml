@@ -39,9 +39,126 @@
                     <div class="pay-success">
                        <div class="success-logo">
                            <i class="iconfont icon-success-solid"></i>
-                       </div> 
+                       </div>
+                       <div class="success-tip">
+                           <div class="success-tip-tit">
+                               订单提交成功
+                           </div>
+                           <div class="success-tip-det">
+                               请在<em>48</em>小时内完成支付，超时将取消订单
+                           </div>
+                       </div>
+                    </div>
+                    <div class="success-tip-address">
+                       <span class="tip-address-tit">收货地址：</span>
+                       <span>海尔统帅</span>
+                       <span>山东省青岛市市南区费金额哦根据9900金额</span>
+                       <span class="tip-address-price">应付金额：<em>￥9900</em></span>
                     </div>
                     <!-- 订单成功 END -->
+                    <!-- 支付方式 -->
+                    <div class="pay-system">
+                        <div class="o_g pay-system-head js_paySystem">
+                            <div class="o_u o_df_1-5">
+                                <a href="javascript:;" pay-index="1" class="active">微信支付</a>
+                            </div>
+                            <div class="o_u o_df_1-5">
+                                <a href="javascript:;" pay-index="2">支付宝</a>
+                            </div>
+                            <div class="o_u o_df_1-5">
+                                <a href="javascript:;" pay-index="3">分期付款</a>
+                            </div>
+                            <div class="o_u o_df_1-5">
+                                <a href="javascript:;" pay-index="4">更多在线支付</a>
+                            </div>
+                            <div class="o_u o_df_1-5">
+                                <a href="javascript:;" pay-index="5">信用卡快捷支付</a>
+                            </div>
+                        </div>
+                        <div class="pay-system-con">
+                            <!-- 微信支付 -->
+                            <div class="pay-system-wechat js_paySystemBox">
+                                <img src="images/pay_wechat.jpg">
+                            </div>
+                            <!-- 微信支付 END -->
+                            <!-- 支付宝 -->
+                            <div class="pay-system-alipay l-none js_paySystemBox">
+                                <img src="images/pay_system1.jpg">
+                                <div class="alipay-info">
+                                    前往支付宝直接扫码或登录完成付款
+                                </div>
+                                <div class="alipay-btn">
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red">立即前往</a>
+                                </div>
+                            </div>
+                            <!-- 支付宝 END -->
+                            <!-- 分期付款 -->
+                            <div class="pay-system-instalments l-none js_paySystemBox">
+                                <ul class="instalments-select">
+                                    <li>
+                                        <img src="images/pay_system1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="images/pay_system2.jpg">
+                                    </li>
+                                </ul>
+                                <div class="instalments-info">
+                                    花呗分期是阿里旗下蚂蚁小贷提供的先消费后分期还款的网购服务，您将进入支付宝界面，完成最后支付
+                                </div>
+                                <ul class="instalments-con">
+                                    <li>
+                                        <div class="instalments-box">
+                                            <div class="instalments-price">
+                                                878元 x 3期
+                                            </div>
+                                            <div class="instalments-price-gray">
+                                                手续费880元
+                                            </div>
+                                            <div class="instalments-btn">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-red">选择该分期方式</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="instalments-box">
+                                            <div class="instalments-price">
+                                                878元 x 3期
+                                            </div>
+                                            <div class="instalments-price-gray">
+                                                手续费880元
+                                            </div>
+                                            <div class="instalments-btn">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-red">选择该分期方式</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="instalments-box">
+                                            <div class="instalments-price">
+                                                878元 x 3期
+                                            </div>
+                                            <div class="instalments-price-gray">
+                                                手续费880元
+                                            </div>
+                                            <div class="instalments-btn">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-red">选择该分期方式</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 分期付款 END -->
+                            <!-- 更多在线支付 -->
+                            <div class="pay-system-more l-none js_paySystemBox">
+                                <div class="more-info">
+                                    <em>网上银行：</em>
+                                    <span>支持以下银行，可使用储蓄卡或信用卡支付，需开通网上银行</span>
+                                </div>
+                            </div>
+                            <!-- 更多在线支付 END -->
+                        </div>
+                    </div>
+                    <!-- 支付方式 END -->
                 </div>
             </div>
             <!-- 支付成功页面内容 END -->
