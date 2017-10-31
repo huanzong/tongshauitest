@@ -61,14 +61,7 @@
                                     <p class="member-myshare-listcont-right-text o_u  o_df_9-10 o_lg_6-6 o_md_6-6 o_sm_6-6 o_xs_12-12">洗衣机的各项功能，很实用，特别是烘干衣服的功能很适合我，还可以连接无线网络，非常适合现在的年轻人！操作没得说，因为是触屏而且功能设计的比较简洁，非常容易操作，这一点是最满意的。</p>
                                     <ul class="member-myshare-listcont-right-photo o_g">
                                         <li class="member-share-photo-cur"><img src="images/user_img.jpg " alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg " alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg " alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg " alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg " alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""></li>
-                                        <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""></li>
+
                                     </ul>
                                     <div class="member-myshare-listcont-rightdown">
                                         <div class="member-myshare-data">发表于 <span>2017-10-05</span></div><span>|</span>
@@ -92,5 +85,6 @@
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/templet_member_myshare.js"></script>
 </body>
 </html>

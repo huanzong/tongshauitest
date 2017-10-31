@@ -11,6 +11,8 @@
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="images/member.css">
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+
 </head>
 
 <body>
@@ -96,5 +98,6 @@
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
+
 </body>
 </html>

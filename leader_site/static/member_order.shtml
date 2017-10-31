@@ -357,35 +357,7 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <a href="javascript:;" id="aadd" onclick="" style="font-size: 20px;color: red ">aaaaaa</a>
         <!--#include virtual="public/personal_footer.shtml"-->
-        <div class="o_g land-shade  land-shade-top js_landShadeTop">
-            <div class="land-box land-box-address js_landContBox">
-                <div class="land-cont-title alert-cont-title o_u">
-                    <span>配送至：</span>
-                    <i class="js_alertAddress_save">浙江</i>
-                    <i class="js_alertAddress_city">杭州市</i>
-                    <i class="js_alertAddress_area">西湖区</i>
-                    <a href="" class="o_u iconfont icon-close js_landClose"></a>
-                </div>
-                <div class="js_addType">
-                    <div class="land-cont-type-normal o_u o_df_1-3 cur">省</div>
-                    <div class="land-cont-type-phone o_u o_df_1-3">市</div>
-                    <div class="land-cont-type-phone o_u o_df_1-3">区</div>
-                </div>
-                <div class="js_landInputBox">
-                    <div class="land-cont-normal-input o_g">
-                        <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
-                    </div>
-                    <div class="land-cont-normal-input o_g">
-                        <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
-                    </div>
-                    <div class="land-cont-normal-input o_g">
-                        <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -400,11 +372,6 @@
 <script type="text/javascript" src="images/jquery.color.js"></script>
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
-<!--<script>-->
-    <!--var mySwiper = new Swiper('.swiper-container', {-->
-        <!--slidesPerView: 4-->
 
-    <!--});-->
-<!--</script>-->
 </body>
 </html>

@@ -5,10 +5,6 @@
 
 $(function(){
 
-//初始化
-//  var boy = $(".js_genderboy").jq_qvote();
-//     var sex =   $(".js_sex").jq_qvote();
-    //$('#js_genderboy').siblings('span').click();
 
 //    用户名判定
     var nubreg =/^[0-9]*$/;
@@ -44,8 +40,27 @@ $(function(){
 
 
 
-
-
+//      裁剪图片控件加载
+    var jcrop_api,
+        boundx,
+        boundy,
+        $preview = $('#preview-pane'),
+        $pcnt = $('#preview-pane .preview-container'),
+        $pimg = $('#preview-pane .preview-container img'),
+        xsize = $pcnt.width(),
+        ysize = $pcnt.height();
+    $('#target').Jcrop({
+        onChange: updatePreview,
+        onSelect: updatePreview,
+        aspectRatio: xsize / ysize,
+        setSelect: [ 60, 60, 260, 260 ]
+    },function(){
+        // Use the API to get the real image size
+        var bounds = this.getBounds();
+        jcrop_api = this;
+        boundx = bounds[0];
+        boundy = bounds[1];
+    });
 
 //    时间控件
 
@@ -53,13 +68,6 @@ $(function(){
         var left = $('.member-personalinfo-listiptbox').offset().left;
         $('.datetimepicker').css('left',left+50);
     })
-
-
-    //用户名状态切换
-    //$('.js_member').hide();
-    $('.js_personalinfo-namefixed').hide();
-
-
 
     if (window.innerWidth ==     undefined || window.innerWidth > 1199) {
         $(".js_Date").datetimepicker({
@@ -87,6 +95,11 @@ $(function(){
     }
 
 
+//   用户名状态切换
+    //$('.js_member').hide();
+    $('.js_personalinfo-namefixed').hide();
+
+
 //    上传组件
 
 $.jUploader.setDefaults({
@@ -103,66 +116,59 @@ $.jUploader.setDefaults({
 });
 $.jUploader({
     fileField: 'file',
-    name:'multipartFile',
     button: "js_imgUpload", // 这里设置按钮id
     action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
-
     onUpload: function(data) {
-
         if(data){
             globalShade2('图片上传中，请耐心等待,,,',4,'forever');
-
         }
 
-
-        console.log(data,11111);
-        // $.jUploader.defaults.otherArgs = {
-        //   // activityId: activityId,
-        //   proportion: proportion,
-        //   slotId: minSizeSlotId
-        // };
     },
-    // 上传完成事件
+//      上传完成事件
     onComplete: function(name, data) {
         if (data.isSuccess) {
 
-            //隐藏永恒显示弹窗
+//      隐藏永恒显示弹窗
             $('.js_popUpBox2').hide();
             $("body").css({overflow:"js_popUpBox2uto"});
 
             $('.js-uploadPhoto').hide();
             $('.js-modifyPhoto').show();
             $('.js-modifyPhotoBtn').show();
+            templet_pic='/tongshuaifile'+$.trim(data.data);
 
-            templet_pic='http://test.tongshuai.com/tongshuaifile'+$.trim(data.data);
+            //图片加载完成后获取图片信息
+            var imgs = new Image();
+            var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
+             imgs.src = 'http://tuser.tongshuai.com/tongshuaifile'+$.trim(data.data);
+            imgs.onload = function(){
+                imgsW=imgs.width;
+                imgsH = imgs.height;
 
-            $("#js-imgsplit").attr("src",templet_pic);
-            $(".js-rightimg").attr("src",templet_pic);
-            //裁剪图片
-            //jQuery(function($){
-            // Create variables (in this scope) to hold the API and image size
-            var jcrop_api,
-                boundx,
-                boundy,
-                // Grab some information about the preview pane
-                $preview = $('#preview-pane'),
-                $pcnt = $('#preview-pane .preview-container'),
-                $pimg = $('#preview-pane .preview-container img'),
-                xsize = $pcnt.width(),
-                ysize = $pcnt.height();
-            $('#target').Jcrop({
-                onChange: updatePreview,
-                onSelect: updatePreview,
-                aspectRatio: xsize / ysize,
-                setSelect: [ 60, 60, 260, 260 ]
-            },function(){
-                // Use the API to get the real image size
-                var bounds = this.getBounds();
-                boundx = bounds[0];
-                boundy = bounds[1];
+                if(imgsW>imgsH){
+                    imgsWb = 300%imgsW;
+                    imgsHnow = imgsH*imgsWb;
+                    $('.js-rightimg').width('300px').height(imgsHnow);
+
+                }else{
+                    imgsWb = 300%imgsH;
+                    imgsWnow = imgsW*imgsWb;
+                    $('.js-rightimg').height('300px').width(imgsWnow);
+
+                }
+
+            };
+//      初始化更改选择框内图片
+            jcrop_api.setImage(templet_pic, function(){
+                this.setOptions({
+                    outerImage: templet_pic
+                })
             });
+
+            //$("#js-imgsplit").attr("src",templet_pic);
+            $(".js-rightimg").attr("src",templet_pic);
 
 
             function updatePreview(c)
@@ -178,25 +184,30 @@ $.jUploader({
                         marginTop: '-' + Math.round(ry * c.y) + 'px'
                     });
                 }
-
                 imgX= c.x;
                 imgY= c.y;
                 imgW= c.w;
                 console.log(imgX, imgY, imgW);
+
+//      获取的宽度/比例就等于原来的宽度
+                // x坐标的位置位于宽度的百分比*图片宽度
+               // 发送这三个数据
+                nowX =imgX/300*imgsW;
+                nowY= imgY/300*imgsH;
+                nowImgW = imgW%imgsWb;
+
             }
-
-
-
         } else {
-            //上传头像失败出现弹窗
+//      上传头像失败出现弹窗
+            globalShade2(data.resultMsg,2);
         }
 
     },
-    // 系统信息显示（例如后缀名不合法）
+//      系统信息显示（例如后缀名不合法）
     showMessage: function(message) {
         alert(message);
     },
-    // 取消上传事件
+//      取消上传事件
     onCancel: function(fileName) {},
     debug: true
 });
@@ -247,8 +258,7 @@ $.jUploader({
 //}
 
 
-
-//个人信息
+//      个人信息
 $('.js-personalinfotab').click( function () {
     var tabNmu =$(this).index();
     $('.js-personalinfotabcont').hide();
@@ -260,7 +270,7 @@ $('.js-personalinfotab').click( function () {
     $('.js-modifyPhotoBtn').hide();
 })
 
-//点击取消
+//      点击取消
     $('.js-imgcancel').unbind().click( function () {
         var tabNmu =$('.js-personalPicuure').index();
         $('.js-personalinfotabcont').hide();
@@ -272,17 +282,19 @@ $('.js-personalinfotab').click( function () {
         $('.js-modifyPhotoBtn').hide();
     })
 
-    //点击上传图片
+//      点击上传图片
     $('#getupimg').unbind().click( function () {
-    alert('15165')
         $.ajax({
             url: "/user/front/user/updateHeadPic",
             type: "get",
             dataType: "json",
             data: {
-                    "picX": imgX,
-                    "picY": imgY,
-                    "width": imgW,
+                    //"picX": imgX,
+                    //"picY": imgY,
+                    //"width": imgW,
+                     "picX": nowX,
+                     "picY": nowY,
+                     "width": nowImgW,
                     "userHeadPic": templet_pic
             },
             success: function (responseT) {
@@ -298,25 +310,10 @@ $('.js-personalinfotab').click( function () {
                     $("#js-imgleft").attr("src",responseT.data);
                 }
                 else{
-                    //上传头像失败出现弹窗
+//      上传头像失败出现弹窗
                 }
             }
         });
-    })
-
-
-//下拉菜单初始化
-// $("#js_persave").oSelect().init();
-// $("#js_percity").oSelect().init();
-//     $("#js_perarea").oSelect().init();
-//     $("#js_save").oSelect().init();
-//     $('#js_city').oSelect().init();
-//     $('#js_area').oSelect().init();
-
-
-//    提交按钮验证
-    $('.js_personalinfoBtn').click(function(){
-
     })
 
 })

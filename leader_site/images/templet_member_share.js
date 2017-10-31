@@ -4,34 +4,98 @@
 * @date        2017.10.19
 * ---------------------------------------------------------------------------*/
 $(function () {
-    var orderId = getQueryString("orderId");
+
+    //前台判断是否登陆
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage()
+    }
+
+    var orderId=getQueryString("orderId");
     $.ajax({
         type: "get",
         dataType: "json",
         url: "",
         data: "",
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        error : function(XMLHttpRequest, textStatus, errorThrown){
         },
-        success: function (returnData) {
+        success: function(returnData){
             if (jQuery.trim(returnData).length > 0) {
                 $('.js-productName').html('产品名 <br><span>编码</span>');
-
+                $('.js-productimg').attr('src','');
             }
-
         }
+    });
 
-    })
+    var templet_isSubmiting=false;
     $('.js-memberShareGetUp').unbind().click(function () {
-        var $shareArr = $('.js_shareScoreImg>li');
-        var templet_grade = 0;
-        for (var i = 0; i < $shareArr.length; i++) {
+        if(templet_isSubmiting){//正在提交
+            globalShade2('正在提交','3');
+            return;
+        }
+        //小星星数量
+        var templet_star = $('.member-share-score-selected').length;
+        if(templet_star==0){
 
-            if ($shareArr.eq(i).hasClass('member-share-score-selected')) {
-                templet_grade++;
-            }
+            return;
         }
 
-    })
+        var templet_content=$('.js_EvaluateVal').val();
+        if(templet_content==0){
+
+            return;
+        }
+        //移动端，网页端
+        var templet_innerWidth=window.innerWidth;
+        var templet_devSource=1;
+        if(templet_innerWidth<750){
+            templet_devSource=2;
+        }
+        templet_isSubmiting=true;
+        var commentpics='';
+        $(".js_sharephotobox").find('li:not(.empty)').each(function(){
+            var imgurl=$(this).find("img").attr("src");
+            if(imgurl!=""&&imgurl!=null&&imgurl!="null"){
+                if(commentpics==""){
+                    commentpics=imgurl;
+                }else{
+                    commentpics+=";"+imgurl;
+                }
+            }
+        });
+        commentpics=commentpics.replace(/\/tongshuaifile/g,"");
+
+        var templet_isHavePic=0;
+        if(commentpics!=''){
+            templet_isHavePic=1;
+        }
+
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
+            data: {
+                'pathsStr':commentpics,
+                'star':templet_star,
+                'content':templet_content,
+                'isHavePic':templet_isHavePic,
+                'devSource':templet_devSource,
+                'businessId':'BCD-458WDIAU1',
+                'channelSource':'1',
+                'productCategoryId':'61',
+                'orderId':'1'
+
+            },
+            success: function(returnData){
+                if(returnData.isSuccess){
+                    globalShade2('成功分享','1');
+                }
+
+            }
+        });
+    });
+
+//获取参数
+
     function getQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);
@@ -40,9 +104,11 @@ $(function () {
     }
 
     $('.js_share_getup_img').click(function(){
-      var photoNub=   $('.js_sharephotobox').children('li').length;
+
+        var photoNub=$('.js_sharephotobox').children('li').length;
         if(photoNub>=10){
             globalShade2('最多可以上传10张图片',3,'2000');
+
         }else{
             $.jUploader.setDefaults({
                 cancelable: true, // 可取消上传
@@ -59,26 +125,23 @@ $(function () {
             $.jUploader({
                 fileField: 'file',
                 button: "js_shareimgUpload", // 这里设置按钮id
-                action: siteConfig.domain+'',//这里写地址
+                action: siteConfig.domain+'/interaction-comment/comment/imageUpload/',//这里写地址
                 // 开始上传事件
                 onUpload: function(data) {
-                    // $.jUploader.defaults.otherArgs = {
-                    //   // activityId: activityId,
-                    //   proportion: proportion,
-                    //   slotId: minSizeSlotId
-                    // };
+                    share_getup_img=true;
                 },
                 // 上传完成事件
                 onComplete: function(name, data) {
+                    share_getup_img=false;
                     if (data.isSuccess) {
-                        console.log('上传成功');
-                        console.log(data);
+                        templet_pic='/tongshuaifile'+$.trim(data.data);
+                        $('.js_sharephotobox').append('<li class="member-share-photo-cur"><img src='+templet_pic+' alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>');
 
                         //上传成功后写入数量
                         $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
 
                     } else {
-                        console.log('上传失败');
+                        globalShade2('图片上传失败','2');
                     }
 
                 },
@@ -91,8 +154,14 @@ $(function () {
                 debug: true
             });
         }
-
     });
 
 // <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
+})
+
+//        删除图片
+$('.js_sharePhotoDelect').unbind().click(function(){
+
+    $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
+    $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
 })

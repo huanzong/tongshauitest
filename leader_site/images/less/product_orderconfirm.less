@@ -190,14 +190,20 @@
 .product-address-list-box{
   margin: 30px 0;
   //border-radius: 7px;
-
+  >li{
+    margin-bottom: 25px;
+  }
   .product-address-list{
     //height: 80px;
     line-height: 80px;
-    margin-bottom: 25px;
+
     border: 1px solid #eee;
     box-shadow: 0 0 10px #eee;
     background: #fff;
+    >a{
+      float: right;
+      padding-right: 30px;
+    }
     >.c_ipt_cr{
       background-image: url(trolley_icon_sm.png);
       height: 32px;
@@ -624,7 +630,7 @@
   .product-orderconfirm-give-list{
     text-align: left;
     border-bottom: 1px solid #eeeeee;
-    overflow: hidden;
+    //overflow: hidden;
     line-height: 75px;
     span{
       font-size: 14px;

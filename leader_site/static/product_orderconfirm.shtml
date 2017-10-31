@@ -60,10 +60,10 @@
             <div class="o_u o_df_1-12"></div>
             <div class="o_u o_df_10-12">
                 <!-- 收获地址 -->
-                <div class="product-ordercon-title o_u o_df_2-2">
+                <div class="product-ordercon-title js_productOrderTitle o_u o_df_2-2">
                     <h4 class="o_u">收获地址</h4><a href="javascript:;"  class="o_u js_orderconBoxBtn"><span class=" iconfont icon-plus-solid"></span>新增地址</a>
                 </div>
-                <form action="">
+                <form action="" class="js_orderUserInforBox">
                     <ul class="product-ordercon-box  js_orderconBox o_u o_df_2-2">
                         <li>
                             <div class="o_u o_df_2-12"></div>
@@ -71,7 +71,7 @@
                                 <p><span>*</span><i>联系人姓名</i></p>
                             </div>
                             <div class="o_u o_df_6-12    o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <input type="text" class="o_u o_df_11-12 js_order_username" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                 <p class="Validform_checktip"></p>
                             </div>
                             <!--<div class="o_u o_df_3-12"></div>-->
@@ -82,7 +82,7 @@
                                 <p><span>*</span><i>手机</i></p>
                             </div>
                             <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <input type="text" class="o_u o_df_11-12 js_order_userphone" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                 <p class="Validform_checktip"></p>
                             </div>
                             <div class="o_u o_df_3-12"></div>
@@ -93,7 +93,7 @@
                                 <p class="  "><span>*</span><i>电话</i></p>
                             </div>
                             <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <input type="text" class="o_u o_df_11-12 js_order_usertell" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
                                 <p class="Validform_checktip"></p>
                             </div>
                             <!--<div class="o_u o_df_3-12"></div>-->
@@ -181,20 +181,39 @@
                         </li>
                     </ul>
                 </form>
+
                 <ul class="product-address-list-box  ">
-                    <li class="product-address-list o_g">
-                        <div class="l-radio">
-                            <input  type="radio" class="js_radio" name="cc" value="">
+                    <li class="">
+                        <div class="product-address-list o_g js_addressListCont">
+                            <div class="l-radio">
+                                <input  type="radio" class="js_radio" name="cc" value="">
+                            </div>
+                            <!--<div class="o_u o_df_1-12"></div>-->
+                            <!--<span class="c_ipt_cr c_ipt_cr_cus"></span>-->
+                            <p class="o_u o_sm_9-12 o_xs_9-12 js_orderAddressCont">
+                                <i class="product-address-list-name">王柯科</i>
+                                <i class="product-address-list-phone">13884973771</i>
+                                <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
+                            </p>
+                            <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
                         </div>
-                        <!--<div class="o_u o_df_1-12"></div>-->
-                        <!--<span class="c_ipt_cr c_ipt_cr_cus"></span>-->
-                        <p class="o_u o_sm_9-12 o_xs_9-12">
-                            <i class="product-address-list-name">王柯科</i>
-                            <i class="product-address-list-phone">13884973771</i>
-                            <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
-                        </p>
-                        <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid">修改</a>
                     </li>
+                    <li class="">
+                        <div class="product-address-list o_g js_addressListCont">
+                            <div class="l-radio">
+                                <input  type="radio" class="js_radio" name="cc" value="">
+                            </div>
+                            <!--<div class="o_u o_df_1-12"></div>-->
+                            <!--<span class="c_ipt_cr c_ipt_cr_cus"></span>-->
+                            <p class="o_u o_sm_9-12 o_xs_9-12 js_orderAddressCont">
+                                <i class="product-address-list-name">王柯科111</i>
+                                <i class="product-address-list-phone">13884973771</i>
+                                <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
+                            </p>
+                            <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
+                        </div>
+                    </li>
+
 
 
 
@@ -216,7 +235,7 @@
                 </div>
                 <div class="product-ordercon-time-box js_orderconTime">
                     <div class="o_u o_df_11-12">
-                        <a href="javascript:;" class="l-btn-normal l-btn-line2  l-btn-orange js_standardTime">标准配送</a>
+                        <a href="javascript:;" class="l-btn-normal    l-btn-orange js_standardTime">标准配送</a>
                         <a href="javascript:;" class="l-btn-normal l-btn-line2 js_appointment">预约配送</a>
                         <p>您订购的产品将于 08月07日(周一)22:00 送达，请保持手机畅通</p>
                         <div class=" product-ordercon-time-cont js_orderconTimeBox" data-alt="1" style="display: none">
@@ -264,7 +283,7 @@
                 </div>
 
                 <div class="product-ordercon-invoice-box js_orderconInvoiceBox ">
-                    <div class="o_u o_sm_2-3 o_xs_2-3">
+                    <div class="o_u o_sm_2-3 o_xs_2-3 ">
                         <p class="o_u">发票类型：<span>电子发票（个人）</span></p>
                         <p class="o_u">发票抬头: <span>王柯科</span></p>
                         <p class="o_u">发票内容: <span>商品明细</span></p>
@@ -534,6 +553,7 @@
         <div class="member-alert-btn o_g">
             <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
             <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
+
         </div>
     </div>
 </div>

@@ -5,29 +5,27 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
 
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage()
-    //}
-    //if($.cookie('isAlterBind') == null ){
-    //    document.cookie="isAlterBind=0;path=/";
-    //}
+    //前台判断是否登陆
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage();
+    }
+    if($.cookie('isAlterBind') == null ){
+       document.cookie="isAlterBind=0;path=/";
+    }
 
     //页面加载时调个人信息
     $.ajax({
         type: "get",
-        dataType: "json",
-        url: "/user/front/user/userInfo",
+        url: siteConfig.userUrl+"/user/front/user/userInfo",
         data: "",
-        error : function(XMLHttpRequest, textStatus, errorThrown){
-        },
-        success: function(returnData){
-            if (jQuery.trim(returnData).length > 0) {
+        success_cb: function(data){
+            if (jQuery.trim(data).length > 0) {
                 //有没有邮箱
-                if (returnData.resultMsg == '用户未登录') {
+                if (data.resultMsg == '用户未登录') {
                     window.location.href = '/ids/ts/login.jsp';
                 }
                 var templet_grade=10;
-                var templet_emailtrim = jQuery.trim(returnData.data.email)
+                var templet_emailtrim = jQuery.trim(data.data.email)
                 if (templet_emailtrim == null || templet_emailtrim == "") {
                     $('.js-emailsuccessfirst').html('');
                     $('.js-emailsuccessfirst').hide();
@@ -49,7 +47,7 @@ $(function(){
                 }
 
                 //有没有手机号
-                var templet_mobiletrim = jQuery.trim(returnData.data.mobile);
+                var templet_mobiletrim = jQuery.trim(data.data.mobile);
                 if (templet_mobiletrim == null || templet_mobiletrim == "") {
                     $('.js-mobilesuccessfirst').html('');
                     $('.js-mobilesuccessfirst').hide();
@@ -76,27 +74,22 @@ $(function(){
                 }
 
                 //最后登录时间
-                var templet_time = jQuery.trim(returnData.data.lastLoginDate);
+                var templet_time = jQuery.trim(data.data.lastLoginDate);
                 var templet_timechange=getLocalTime(templet_time)
                 $('#js-lastlogindate').html('上次登录时间：'+ templet_timechange)
 
 
                 //验证密码强度
                 $.ajax({
-                    type: "post",
-                    dataType: "json",
-                    url: '/ids/ts/userInfoManager.jsp',
+                    url: siteConfig.userUrl+'/ids/ts/userInfoManager.jsp',
                     data:"editOperation=getPwdLevel",
-                    error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-                    },
-                    success: function (returnData) {
-                        if(returnData.isSuccess){
-                            if(returnData.pwdType=="STRONG")
+                    success_cb: function (data) {
+                        if(data.isSuccess){
+                            if(data.pwdType=="STRONG")
                             { templet_grade=templet_grade+30; }
-                            if(returnData.pwdType=="NORMAL")
+                            if(data.pwdType=="NORMAL")
                             {  templet_grade=templet_grade+20; }
-                            if(returnData.pwdType=="WEAK")
+                            if(data.pwdType=="WEAK")
                             { templet_grade=templet_grade+10; }
 
                             //显示个人中心安全级别
@@ -125,21 +118,15 @@ $(function(){
                                 $('#js-securitysetting').html('优秀');
                             }
                         }
-
                     }
-
                 });
             }
         }
     });
 
-
-
-
-
-    // $('.js-emailsuccesslast').click(function(){//修改邮箱
-    //     window.location.href =''
-    // })
+    $('.js-emailsuccesslast').click(function(){//修改邮箱
+        window.location.href ='/security/revisemail_96.shtml'
+    })
     $('.js-emailfalselast').click(function(){//绑定邮箱
         window.location.href ='/security/bindemial_69.shtml'
     })
@@ -149,6 +136,4 @@ $(function(){
     $('.js-mobilefalselast').click(function(){//绑定手机
         window.location.href ='/security/bindmob_68.shtml'
     })
-
-
 })

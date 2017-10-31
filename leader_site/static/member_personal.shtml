@@ -206,8 +206,7 @@
                                                 </div>
                                             </li>
                                             <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2">
-                                                <img src="../images/ignore_prodetail3.JPG" id="target" width="300px"
-                                                     height="300px" alt="[Jcrop Example]"/>
+                                                <img src="../images/ignore_prodetail3.JPG" id="target"   alt="[Jcrop Example]"/>
                                             </li>
                                         </ul>
 

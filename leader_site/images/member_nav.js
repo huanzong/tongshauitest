@@ -13,9 +13,19 @@ $(function(){
     }
     if(windowW>992){
     }else if(windowW>700&&windowW<992){
-        $('.js-membercontboxs').width(windowW*0.85);
+        if($('js-membercontboxs-2')){
+            $('.js-membercontboxs').width(windowW*0.861);
+        }else{
+            $('.js-membercontboxs').width(windowW*0.85);
+        }
+
     }else if(windowW>575&&windowW<701){
-        $('.js-membercontboxs').width(windowW*0.75);
+
+        if($('js-membercontboxs-2')){
+            $('.js-membercontboxs').width(windowW*0.761);
+        }else{
+            $('.js-membercontboxs').width(windowW*0.75);
+        }
     }
 
     $(window).resize(function() {
@@ -28,10 +38,17 @@ $(function(){
         if(windowW>992){
             $('.js-membercontboxs').width(windowW*0.66666);
         }else if(windowW>700&&windowW<992){
-            $('.js-membercontboxs').width(windowW*0.85);
-
+            if($('js-membercontboxs-2')){
+                $('.js-membercontboxs').width(windowW*0.861);
+            }else{
+                $('.js-membercontboxs').width(windowW*0.85);
+            }
         }else if(windowW>575&&windowW<701){
-            $('.js-membercontboxs').width(windowW*0.75);
+            if($('js-membercontboxs-2')){
+                $('.js-membercontboxs').width(windowW*0.761);
+            }else{
+                $('.js-membercontboxs').width(windowW*0.75);
+            }
         }else if(windowW<576){
             $('.js-membercontboxs').width('100%');
         }
@@ -53,7 +70,12 @@ $(function(){
             $('.js_memberNavMiddle').animate({'margin-left':'0'}).css('position','absolute');
             $('.js_navshade').show();
             $('.js-membercontboxs').css({'position':'absolute','top':0,'right':0});
-
+            //
+            //if($('.js-membercontboxs').hasClass('js-membercontboxs-2')){
+            //    $('.js-membercontboxs').css({'position':'absolute','top':0,'right':0,'padding-top':'120px'});
+            //}else{
+            //    $('.js-membercontboxs').css({'position':'absolute','top':0,'right':0});
+            //}
         }else{
             $(this).children('span').removeClass('icon-close').addClass('icon-menu1');
             $(this).attr('data-alt',1);
