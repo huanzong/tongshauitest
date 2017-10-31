@@ -609,7 +609,7 @@
             <a  class="l-pagination-next ">下一页</a>
         </div>
         <textarea>
-           <div>
+           <div class="l-pagination-box">
                 <a  class="l-pagination-prew">上一页</a>
                 <a  class="l-pagination-pagenumber active">1</a>
                 <a  class="l-pagination-pagenumber">2</a>
