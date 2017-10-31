@@ -6,9 +6,9 @@
 $(function(){
 
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage();
-    }
+    //if(!istrsidssdssotoken()){
+    //    jumpToLoginPage();
+    //}
 
     //页面加载时调个人信息
     $.ajax({
@@ -20,7 +20,7 @@ $(function(){
             if (jQuery.trim(data).length > 0) {
                 var templet_email=jQuery.trim(data.data.email);
                 if (templet_email != null && templet_email != "") {
-                    self.location = '/security';
+                    //self.location = '/security';
                 }
 
                 var templet_mobile=jQuery.trim(data.data.mobile);
