@@ -108,60 +108,79 @@ $(function () {
         var photoNub=$('.js_sharephotobox').children('li').length;
         if(photoNub>=10){
             globalShade2('最多可以上传10张图片',3,'2000');
-
-        }else{
-            $.jUploader.setDefaults({
-                cancelable: true, // 可取消上传
-                allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
-                messages: {
-                    upload: '上传',
-                    cancel: '取消',
-                    emptyFile: "{file} 为空，请选择一个文件.",
-                    //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
-                    invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
-                    onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
-                }
-            });
-            $.jUploader({
-                fileField: 'file',
-                button: "js_shareimgUpload", // 这里设置按钮id
-                action: siteConfig.domain+'/interaction-comment/comment/imageUpload/',//这里写地址
-                // 开始上传事件
-                onUpload: function(data) {
-                    share_getup_img=true;
-                },
-                // 上传完成事件
-                onComplete: function(name, data) {
-                    share_getup_img=false;
-                    if (data.isSuccess) {
-                        templet_pic='/tongshuaifile'+$.trim(data.data);
-                        $('.js_sharephotobox').append('<li class="member-share-photo-cur"><img src='+templet_pic+' alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>');
-
-                        //上传成功后写入数量
-                        $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
-
-                    } else {
-                        globalShade2('图片上传失败','2');
-                    }
-
-                },
-                // 系统信息显示（例如后缀名不合法）
-                showMessage: function(message) {
-                    alert(message);
-                },
-                // 取消上传事件
-                onCancel: function(fileName) {},
-                debug: true
-            });
+            $('#js_shareimgUpload').hide();
+            $('.js_share_getup_false').css('display','inline-block');
+            return false;
         }
+    });
+    $.jUploader.setDefaults({
+        cancelable: true, // 可取消上传
+        allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+        messages: {
+            upload: '上传',
+            cancel: '取消',
+            emptyFile: "{file} 为空，请选择一个文件.",
+            //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
+            invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
+            onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
+        }
+    });
+    $.jUploader({
+        fileField: 'file',
+        button: "js_shareimgUpload", // 这里设置按钮id
+        action: siteConfig.domain+'/interaction-comment/comment/imageUpload/',//这里写地址
+        // 开始上传事件
+        onUpload: function(data) {
+            share_getup_img=true;
+        },
+        // 上传完成事件
+        onComplete: function(name, data) {
+            share_getup_img=false;
+            if (data.isSuccess) {
+                templet_pic='/tongshuaifile'+$.trim(data.data);
+                $('.js_sharephotobox').append('<li class="member-share-photo-cur"><img src='+templet_pic+' alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>');
+
+                //上传成功后写入数量
+                $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
+                var photoNub=$('.js_sharephotobox').children('li').length;
+                if(photoNub>=10) {
+                    $('#js_shareimgUpload').hide();
+                    $('.js_share_getup_false').css('display','inline-block');
+                }else{
+                    $('#js_shareimgUpload').show();
+                    $('.js_share_getup_false').hide();
+                }
+
+            } else {
+                globalShade2('图片上传失败','2');
+            }
+
+        },
+        // 系统信息显示（例如后缀名不合法）
+        showMessage: function(message) {
+            alert(message);
+        },
+        // 取消上传事件
+        onCancel: function(fileName) {},
+        debug: true
     });
 
 // <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
 })
-
+$('.js_share_getup_false').click(function(){
+    globalShade2('最多可以上传10张图片', 3, '2000');
+});
 //        删除图片
 $('.js_sharePhotoDelect').unbind().click(function(){
 
     $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
     $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
-})
+    var photoNub=$('.js_sharephotobox').children('li').length;
+    if(photoNub>=10) {
+        $('#js_shareimgUpload').hide();
+        $('.js_share_getup_false').css('display','inline-block');
+    }else{
+        $('#js_shareimgUpload').show();
+        $('.js_share_getup_false').hide();
+    }
+    })
