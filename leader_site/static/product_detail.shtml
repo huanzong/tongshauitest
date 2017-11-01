@@ -361,7 +361,19 @@
             <!-- 场景展示 -->
             <div class="o_g">
                 <div class="detail-scene">
-                    <img class="o_picture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                    <div class="swiper-container js_sceneSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 场景展示 -->
@@ -411,8 +423,8 @@
                 </div>
                 <div class="o_u o_df_1-12 js_oHerl">
                     <a class="js_swiperSellPointNext js_center">
-						    			<img src="images/detail_icon.PNG">
-						    		</a>
+		    			<img src="images/detail_icon.PNG">
+		    		</a>
                 </div>
             </div>
             <!-- 核心卖点 -->
@@ -491,87 +503,6 @@
                 <div class="o_u o_df_1-12"></div>
             </div>
             <!-- 电商拉页 END -->
-            <!-- 轮播 -->
-            <div class="detail-title">更多选择</div>
-            <div class="o_g">
-                <div class="o_u o_df_1-6"></div>
-                <div class="o_u o_df_2-3">
-                    <div class="detail-scene1">
-                        <div class="swiper-container js_swiperMore1">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="detail-scene1-img">
-                                        <img src="images/footer_logo1.jpg">
-                                    </div>
-                                    <div class="detail-more-info">
-                                        <div class="detail-more-tit">
-                                            三开门家用节能小冰箱
-                                        </div>
-                                        <div class="detail-more-titinfo">
-                                            JOEGJ-97
-                                        </div>
-                                        <div class="detail-more-special">
-                                            三开门 家用节能 小冰箱
-                                        </div>
-                                        <div class="detail-more-price">
-                                            ￥79008
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="detail-scene1-img">
-                                        <img src="images/footer_logo2.jpg">
-                                    </div>
-                                    <div class="detail-more-info">
-                                        <div class="detail-more-tit">
-                                            三开门家用节能小冰箱
-                                        </div>
-                                        <div class="detail-more-titinfo">
-                                            JOEGJ-97
-                                        </div>
-                                        <div class="detail-more-special">
-                                            三开门 家用节能 小冰箱
-                                        </div>
-                                        <div class="detail-more-price">
-                                            ￥79008
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="detail-scene1-img">
-                                        <img src="images/footer_logo3.jpg">
-                                    </div>
-                                    <div class="detail-more-info">
-                                        <div class="detail-more-tit">
-                                            三开门家用节能小冰箱
-                                        </div>
-                                        <div class="detail-more-titinfo">
-                                            JOEGJ-97
-                                        </div>
-                                        <div class="detail-more-special">
-                                            三开门 家用节能 小冰箱
-                                        </div>
-                                        <div class="detail-more-price">
-                                            ￥79008
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 如果需要导航按钮 -->
-                        <div class="swiper-prev js_swiperMore_prev">
-                            <i class="iconfont icon-arrow-jiantou-left"></i>
-                        </div>
-                        <div class="swiper-next js_swiperMore_next">
-                            <i class="iconfont icon-arrow-jiantou-right"></i>
-                        </div>
-                    </div>
-                        
-                </div>
-                <div class="o_u o_df_1-6"></div>
-                    
-            </div>
-            <!-- 轮播 END -->
             <!-- 产品口碑-->
             <div class="detail-title">产品口碑</div>
             <div class="o_g">
@@ -707,31 +638,133 @@
             <!-- 更多选择 -->
             <div class="detail-title">更多选择</div>
             <div class="o_g">
-                <div class="o_u o_df_2-12 js_oHerlMore">
-                    <a class="js_swiper_prevMore js_center">
-					    			<img src="images/detail_icon.PNG">
-					    		</a>
-                </div>
-                <div class="o_u o_df_8-12 js_oHerlSizeMore">
-                    <div class="detail-more">
-                        <div class="swiper-container js_swiperMore">
+                <div class="o_u o_df_1-6"></div>
+                <div class="o_u o_df_2-3">
+                    <div class="detail-more o_xs-hide">
+                        <div class="swiper-container js_swiperMore1">
                             <div class="swiper-wrapper">
-                                <div class="o_u o_df_1-4 swiper-slide">
-                                    <img src="images/nav_bg_lg.PNG">
-                                </div>
-                                <div class="o_u o_df_2-4 swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                                <div class="o_u o_df_1-4 swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
+                                <a class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo1.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo2.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo3.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <!-- 如果需要分页器 -->
-                            <div class="swiper-pagination js_swiper_paginationMore"></div>
+                        </div>
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-prev js_swiperMore_prev">
+                            <i class="iconfont icon-arrow-jiantou-left"></i>
+                        </div>
+                        <div class="swiper-next js_swiperMore_next">
+                            <i class="iconfont icon-arrow-jiantou-right"></i>
                         </div>
                     </div>
+                    <div class="detail-more o_df-hide o_xs-show">
+                        <a class="detail-scene1-img">
+                            <img src="images/footer_logo1.jpg">
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                三开门家用节能小冰箱
+                            </div>
+                            <div class="detail-more-titinfo">
+                                JOEGJ-97
+                            </div>
+                            <div class="detail-more-special">
+                                三开门 家用节能 小冰箱
+                            </div>
+                            <div class="detail-more-price">
+                                ￥79008
+                            </div>
+                        </div>
+                        <a class="detail-scene1-img">
+                            <img src="images/footer_logo2.jpg">
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                三开门家用节能小冰箱
+                            </div>
+                            <div class="detail-more-titinfo">
+                                JOEGJ-97
+                            </div>
+                            <div class="detail-more-special">
+                                三开门 家用节能 小冰箱
+                            </div>
+                            <div class="detail-more-price">
+                                ￥79008
+                            </div>
+                        </div>
+                        <a class="detail-scene1-img">
+                            <img src="images/footer_logo3.jpg">
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                三开门家用节能小冰箱
+                            </div>
+                            <div class="detail-more-titinfo">
+                                JOEGJ-97
+                            </div>
+                            <div class="detail-more-special">
+                                三开门 家用节能 小冰箱
+                            </div>
+                            <div class="detail-more-price">
+                                ￥79008
+                            </div>
+                        </div>
+                    </div>   
                 </div>
-                <div class="o_u o_df_2-12 js_oHerlMore">
-                    <a class="js_swiper_nextMore js_center">
-		    			<img src="images/detail_icon.PNG">
-		    		</a>
-                </div>
+                <div class="o_u o_df_1-6"></div>
             </div>
             <!-- 更多选择 END -->
             <!-- 优惠组合 -->
@@ -919,7 +952,7 @@
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
                     <div class="land-cont-title o_u">
-                        <span class="o_u ">登陆</span>
+                        <span class="o_u ">登录</span>
                         <a href="" class="o_u iconfont icon-close js_landClose"></a>
                     </div>
                     <div class="js_landType">
@@ -980,8 +1013,6 @@
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="images/product_detail.js"></script>
-    <script>
-    </script>
 </body>
 
 </html>

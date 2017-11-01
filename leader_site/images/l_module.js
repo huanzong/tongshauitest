@@ -159,7 +159,7 @@ $(function() {
                         //表单校验时触发
                         if(!$this.attr('phtype')){
                             $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                            // $this.css('border','1px solid #ccc');
+                             $this.css('border','1px solid #ccc');
                         }
                     },300);
                     
@@ -175,18 +175,18 @@ $(function() {
                     }
                     //表单校验时触发
                     if(!$this.attr('phtype')){
-                       $this.css('border','1px solid #e60012');
+                       //$this.css('border','1px solid #e60012');
                     }
                 });
             }else if($this.attr("type") == "password"){
                 $this.blur(function () {
                     setTimeout(function(){//先校验是否符合规则，再添加样式
-                        $this.css('border','1px solid #ccc');
+                        //$this.css('border','1px solid #ccc');
                         $this.css('color','#666');
                         //表单校验时触发
                         if(!$this.attr('phtype')){
                             $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                            // $this.css('border','1px solid #ccc');
+                             $this.css('border','1px solid #ccc');
                         }
                     },300);
                 }).focus(function () {
@@ -194,7 +194,6 @@ $(function() {
                     if(!$this.attr('data-normal')){
                         $this.validHideError();
                     }
-                    
                     $this.css('border','1px solid #e60012');
                 });
             }
@@ -243,7 +242,6 @@ $(function() {
                 });
             });
 
-                
             
         }
         
@@ -278,7 +276,7 @@ $(function() {
                 //表单校验时触发
                 if(!$this.attr('phtype')){
                     $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                    // $this.css('border','1px solid #ccc');
+                     $this.css('border','1px solid #ccc');
                 }
                 
             }).focus(function () {
@@ -310,17 +308,182 @@ $(function() {
             return false;
         });
     });
-    $('.js_landType >div').click(function(){
-        var clickIndex = $(this).index();
+
+
+
+});
+
+//顶部导航点击
+$('.js_addType>div').click(function(){
+    var dataAlt = $('.js_addType').attr('data-alt');
+    var divIndex = $(this).index();
+    console.log(dataAlt,divIndex);
+    //alert(dataAlt);
+    if(dataAlt==1){
+        if(divIndex==0){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.js_addInputBox>div').eq(1).show().siblings().hide();
+        }else{
+            return false;
+        }
+    }else if(dataAlt==2){
+        if(divIndex!=2){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.js_addInputBox>div').eq(divIndex).show().siblings().hide();
+        }else{
+            return false;
+        }
+    }else if (dataAlt==3){
         $(this).addClass('cur').siblings().removeClass('cur');
-        $('.js_landInputBox>div').eq(clickIndex).show().siblings().hide();
-        $('.js-submintData').addClass('l-btn-disable');
+        $('.js_addInputBox>div').eq(divIndex).show().siblings().hide();
+    }
+});
+$('.js_addClose').click(function(){
+    $('.js_addShadeTop').hide();
+    $('.js_addContBox').hide();
+    return false;
+})
+
+
+/*
+* 公用地址弹窗
+* */
+function addressAlert(add){
+    $('.js_addShadeTop').show();
+    $('.js_addContBox').show();
+    var addressSave,addressCity,addressArea,savecode_used;
+    //判定传入值是否存在
+    if(!add){
+        $('.js_alertAddress_save').html('北京').attr('data-code','1');
+        $('.js_alertAddress_city').html('北京').attr('data-code','1');
+        $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
+    }else{
+        if(add.save&&add.savecode){
+            $('.js_alertAddress_save').html(add.save).attr('data-code',add.savecode);
+            $('.js_alertAddress_city').html(add.city).attr('data-code',add.citycode);
+            $('.js_alertAddress_area').html(add.area).attr('data-code',add.areacode);
+        }else{
+            $('.js_alertAddress_save').html('北京').attr('data-code','1');
+            $('.js_alertAddress_city').html('北京').attr('data-code','1');
+            $('.js_alertAddress_area').html('朝阳区').attr('data-code','11');
+        }
+    }
+    //$('.js_addInputBox>div').eq(0).show().siblings().hide();
+    //获取省份并汇入
+    if(!add.savecode){
+        $.ajax({
+            type:'GET',
+            url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
+            data: 'parentId=0',
+            //error:function(data){
+            //    console.log(data);
+            //},
+            login:true,
+            success_cb:function(data){
+                var contdata = data.data;
+                console.log(123,contdata);
+                if(data.isSuccess){
+                    for(var i = 0;i<contdata.length;i++){
+                        addressSave+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
+                    }
+                    $('.js_alertAddress_save_cont').html(addressSave);
+                    $('.js_addInputBox>div').eq(0).show().siblings().hide();
+                    $('.js_addType').attr('data-alt',1);
+                }
+            }
+
+        })
+    }
+    $('.js_alertAddress_save_cont>li').live('click',function() {
+        $('.js_addType').attr('data-alt',2);
+        saveText = $(this).html();
+        saveCode = $(this).attr('data-code');
+        console.log(1,saveCode);
+        //获取city信息并汇入
+        //简单判断本次选择的省份是否与上次为相同数据，如果不同再次请求
+        if (saveCode != savecode_used) {
+            $.ajax({
+                type: 'GET',
+                url: siteConfig.domain + '/interaction-service/regionInfo/regionList/',
+                data: 'parentId=' + saveCode,
+                error: function (data) {
+                    console.log(data);
+                },
+                success: function (data) {
+                    var contdata = data.data;
+                    savecode_used = saveCode;
+                    console.log(2,saveCode);
+                    if (data.isSuccess) {
+                        addressCity='';
+                        for (var i = 0; i < contdata.length; i++) {
+                            addressCity += '<li class="o_u o_df_3-12 o_xs_11-12" data-code="' + contdata[i].regionCode + '">' + contdata[i].regionName + '</li>'
+                        }
+                        $('.js_alertAddress_ctiy_cont').html(addressCity);
+                        //$('.js_addInputBox>div').eq(1).show().siblings().hide();
+                        $('.js_alertAddress_save').html(saveText).show().siblings('i').hide();
+                        addAleatBtn(1);
+                    }
+                }
+            });
+        } else {
+            $('.js_alertAddress_city_cont').html(addressCity);
+            $('.js_alertAddress_save').html(saveText);
+            addAleatBtn(1);
+        }
+    });
+    $('.js_alertAddress_ctiy_cont>li').live('click',function(){
+        $('.js_addType').attr('data-alt',3);
+        cityText =  $(this).html();
+        cityCode = $(this).attr('data-code');
+        //获取区的数据并汇入
+        $.ajax({
+            type:'GET',
+            url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
+            data: 'parentId='+cityCode,
+            error:function(data){
+                console.log(data);
+            },
+            success:function(data){
+                var contdata = data.data;
+                console.log(123,contdata);
+                if(data.isSuccess){
+                    addressArea='';
+                    for(var i = 0;i<contdata.length;i++){
+                        addressArea+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
+                    }
+                    $('.js_alertAddress_area_cont ').html(addressArea);
+                    addAleatBtn(2);
+
+                }
+            }
+        });
+
+        $('.js_alertAddress_city').show().html(cityText).attr('data-code','cityCode');
+        $('.js_alertAddress_area').html('');
+        addAleatBtn(2);
+        return false;
+    });
+    $('.js_alertAddress_area_cont>li').live('click',function(){
+        areaText =  $(this).html();
+        areaCode = $(this).attr('data-code');
+        console.log(areaText);
+
+        $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');
+        var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
+        addAleatBtn(3);
+        return addressJson;
+
     });
 
 
 
 
-});
+}
+function addAleatBtn(index){
+    $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
+    $('.js_addInputBox>div').eq(index).show().siblings().hide();
+}
+
 
 
 //通用弹窗
@@ -341,6 +504,7 @@ function globalShade(alerttext){
 }
 function globalShade2(alerttext,type,time){
     var outTime = time>2000?time:2000;
+
     $('.js_popUpBox2').show();
     $("body").css({overflow:"hidden"});
     $('.js_popUpText').html(alerttext);
@@ -348,85 +512,61 @@ function globalShade2(alerttext,type,time){
         $('.js_popUpFales').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpTrue').show();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else if(type==2){
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpFales').show();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else if(type==3){
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').show();
         $('.js_popUpFales').hide();
+        $('.js_popUpText').removeClass('type3-text');
+
     }else{
         $('.js_popUpTrue').hide();
         $('.js_popUpWarn').hide();
         $('.js_popUpFales').hide();
-        $('.js_popUpText').css('')
+        $('.js_popUpText').css('');
+        $('.js_popUpText').addClass('type3-text');
     }
-    if(outTime){
-       setTimeout(function(){
-           $('.js_popUpBox2').hide();
-           $("body").css({overflow:"js_popUpBox2uto"});
-       },outTime);
+
+        if(outTime){
+            setTimeout(function(){
+                $('.js_popUpBox2').hide();
+                $("body").css({overflow:"auto"});
+            },outTime);
+        }else{
+            setTimeout(function(){
+                $('.js_popUpBox2').hide();
+                $("body").css({overflow:"auto"});
+            },2000);
+        }
+}
+
+//倒计时通用模块
+
+function btnTimeOut(obj,time,timetext){
+    var btnDisable,timeTotal;
+    var objHtml = obj.html();
+    var timeText = timetext;
+    timeTotal = time;
+    btnDisable = 'l-btn-disable';
+    if(obj.hasClass(btnDisable)){
+      return false;
     }else{
-        setTimeout(function(){
-            $('.js_popUpBox2').hide();
-            $("body").css({overflow:"auto"});
-        },2000);
+        obj.addClass(btnDisable).attr('data-type',1);
+        obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
+
     }
-    //$('.js_alertClose').click(function(){
-    //
-    //})
+  var timeHtml =setInterval(function(){
+      obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
+      if(timeTotal<=0){
+          clearInterval(timeHtml);
+          obj.removeClass(btnDisable).html(objHtml).attr('data-type','0');
+      }
+    },1000);
 }
-
-
-
-//时间戳转换日期 时间戳，选格式，时间戳类型
-function getLocalTime(nS,val,type) {
-    if(type==2)
-    {
-        var timestamp4 =new Date(parseInt(nS) * 1000);
-    }
-    else
-    {
-        var timestamp4 =new Date(parseInt(nS));
-    }
-
-    var y = timestamp4.getFullYear();
-    var m = timestamp4.getMonth() + 1;
-    var d = timestamp4.getDate();
-    if(val == 2){
-        return y + "." + (m < 10 ? "0" + m : m) + "." + (d < 10 ? "0" + d : d) ;
-    }else if(val == 3){
-        return y + "/" + (m < 10 ? "0" + m : m) + "/" + (d < 10 ? "0" + d : d) ;
-    }else if(val == 4){
-        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
-    }
-    return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + timestamp4.toTimeString().substr(0, 8);
-
-}
-
-
-//判断当前是否存在同域cookie
-function istrsidssdssotoken(){
-    var trsidssdssotoken = "ssotoken";//同域Cookie
-    var sdssotoken = $.cookie(trsidssdssotoken);
-    if(sdssotoken!=null){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-//跳转到登录页面
-function jumpToLoginPage(){
-    var returnUrl = window.location.href;
-    if(!istrsidssdssotoken()){
-        var returnUrl = window.location.href;
-        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
-    }
-}
-
-
-
-
-

@@ -11,7 +11,9 @@
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css"/>
+
     <link rel="stylesheet" type="text/css" href="images/member.css">
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
     <link rel="stylesheet" type="text/css" href="images/l_dateTime.css">
 </head>
 
@@ -20,215 +22,225 @@
     <div class="o_main">
         <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/member_nav.shtml"-->
+            <!--#include virtual="public/header_nav.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
-            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
-                <div class="member-security-width js-securityheight">
-                    <div class="member-security-tit">
-                        <p>个人信息</p>
-                    </div>
-                    <!-- 内容区域 START-->
-                    <div class="member-security-contbox js-contRightContBox">
-                        <!-- 个人信息 START-->
-                        <div class="member-personalinfo">
-                            <div class="member-personalinfo-tabbox member-personalinfo-tabbox2">
-                                <div class="member-personalinfo-tab cur js-personalinfotab">基本资料</div>
-                                <div class="member-personalinfo-tab js-personalinfotab">个人头像</div>
-                            </div>
-                            <div class="member-personalinfo-contbox">
-                                <div class="member-personalinfo-listbox cur js-personalinfotabcont">
-                                    <!--基本资料 START-->
-                                    <div class="member-personalinfo-table  ">
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+                <div class="o_u o_df_12-12 member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
 
-                                        <div class="o_g member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                <span>*</span>用户名
-                                            </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox">
-                                                <div class="l-input o_u o_df_2-2 member-personalinfo-allinput js_member">
-                                                    <input id="js_loginName" type="text" name="" ph="" value="">
+                    <div class="member-security-width js-securityheight">
+                        <div class="member-security-tit">
+                            <p>个人信息</p>
+                        </div>
+                        <!-- 内容区域 START-->
+                        <div class="member-security-contbox js-contRightContBox">
+                            <!-- 个人信息 START-->
+                            <div class="member-personalinfo">
+                                <div class="member-personalinfo-tabbox member-personalinfo-tabbox2">
+                                    <div class="member-personalinfo-tab cur js-personalinfotab">基本资料</div>
+                                    <div class="member-personalinfo-tab js-personalinfotab">个人头像</div>
+                                </div>
+                                <div class="member-personalinfo-contbox">
+                                    <div class="member-personalinfo-listbox cur js-personalinfotabcont">
+                                        <!--基本资料 START-->
+                                        <div class="member-personalinfo-table  ">
+
+                                            <div class="o_g member-personalinfo-list">
+                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
+                                                    <span>*</span>用户名
                                                 </div>
-                                                <div class="l-input member-personalinfo-namefixed js_personalinfo-namefixed">
-                                                    <p>asdasdasdasd</p>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox">
+                                                    <div class="l-input o_u o_df_2-2 member-personalinfo-allinput js_member">
+                                                        <input id="js_loginName" type="text" name="" ph="" value="">
+                                                    </div>
+                                                    <div class="l-input member-personalinfo-namefixed js_personalinfo-namefixed">
+                                                        <p>asdasdasdasd</p>
+                                                    </div>
+                                                </div>
+                                                <div class=" personalist-right js_personalistwrongbox_user ">
+                                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
+                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_user">
+                                                        用户名不可为空！</p>
                                                 </div>
                                             </div>
-                                            <div class=" personalist-right js_personalistwrongbox_user ">
-                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_user">
-                                                    用户名不可为空！</p>
-                                            </div>
-                                        </div>
-                                        <div class="og member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                <span>*</span>性别
-                                            </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
-                                                <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男"  data="1"></span>
-                                                <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2"></span>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="o_g member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                <span>*</span>生日
-                                            </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g" style="text-align: left">
-                                                <div class="o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
-                                                    <input type="text" name="" class="js_Date o_u o_df_2-2 l-btn-normal l-btn-line2" data-date="1"> <span class="iconfont icon-events "></span>
+                                            <div class="og member-personalinfo-list">
+                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
+                                                    <span>*</span>性别
                                                 </div>
-                                                <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">-->
-                                                <!--<div class="selectbox">-->
-                                                <!--<div class="member-personalinfo-inputbox">-->
-                                                <!--<select name="" id="js_percity"  autotext="月">-->
-                                                <!--<option value="0">&#45;&#45;月&#45;&#45;</option>-->
-                                                <!--</select>-->
-                                                <!--</div>-->
-                                                <!--</div>-->
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
+                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男"  data="1"></span>
+                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2"></span>
+                                                </div>
 
-                                                <!--</div>-->
-                                                <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">-->
-                                                <!--<div class="selectbox">-->
-                                                <!--<div class="member-personalinfo-inputbox">-->
-                                                <!--<select name="" id="js_perarea"  autotext="日">-->
-                                                <!--<option value="0">&#45;&#45;日&#45;&#45;</option>-->
-                                                <!--</select>-->
-                                                <!--</div>-->
-                                                <!--</div>-->
-                                                <!--</div>-->
-                                            </div>
-                                            <div class=" js_personalistwrongbox personalist-right">
-                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
-                                                    用户名不可为空！</p>
-                                            </div>
-                                        </div>
 
-                                        <div class="o_g member-personalinfo-list member-personalinfo-list-adds">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                <span>*</span>居住地
                                             </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
-                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
-                                                    <div class="selectbox">
-                                                        <div class="member-personalinfo-inputbox">
-                                                            <select name="" id="js_save" autotext="省">
+                                            <div class="o_g member-personalinfo-list">
+                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
+                                                    <span>*</span>生日
+                                                </div>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g" style="text-align: left">
+                                                    <div class="o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
+                                                        <input type="text" name="" class="js_Date o_u o_df_2-2 l-btn-normal l-btn-line2" data-date="1"> <span class="iconfont icon-events "></span>
+                                                    </div>
+                                                    <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">-->
+                                                    <!--<div class="selectbox">-->
+                                                    <!--<div class="member-personalinfo-inputbox">-->
+                                                    <!--<select name="" id="js_percity"  autotext="月">-->
+                                                    <!--<option value="0">&#45;&#45;月&#45;&#45;</option>-->
+                                                    <!--</select>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
 
-                                                            </select>
+                                                    <!--</div>-->
+                                                    <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">-->
+                                                    <!--<div class="selectbox">-->
+                                                    <!--<div class="member-personalinfo-inputbox">-->
+                                                    <!--<select name="" id="js_perarea"  autotext="日">-->
+                                                    <!--<option value="0">&#45;&#45;日&#45;&#45;</option>-->
+                                                    <!--</select>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
+                                                </div>
+                                                <div class=" js_personalistwrongbox personalist-right">
+                                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
+                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
+                                                        用户名不可为空！</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="o_g member-personalinfo-list member-personalinfo-list-adds">
+                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
+                                                    <span>*</span>居住地
+                                                </div>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                        <div class="selectbox">
+                                                            <div class="member-personalinfo-inputbox">
+                                                                <select name="" id="js_save" autotext="省">
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                        <div class="selectbox">
+                                                            <div class="member-personalinfo-inputbox">
+                                                                <select name="" id="js_city" autotext="市">
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                        <div class="selectbox">
+                                                            <div class="member-personalinfo-inputbox">
+                                                                <select name="" id="js_area" autotext="区">
+
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
-                                                    <div class="selectbox">
-                                                        <div class="member-personalinfo-inputbox">
-                                                            <select name="" id="js_city" autotext="市">
+                                                <div class=" js_personalistwrongbox personalist-right">
 
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                                    <div class="selectbox">
-                                                        <div class="member-personalinfo-inputbox">
-                                                            <select name="" id="js_area" autotext="区">
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
+                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_address">
+                                                        用户名不可为空！</p>
                                                 </div>
                                             </div>
-                                            <div class=" js_personalistwrongbox personalist-right">
 
-                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_address">
-                                                    用户名不可为空！</p>
-                                            </div>
-                                        </div>
+                                            <div class="o_g member-personalinfo-list">
+                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"></div>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-personalinfo-savebtn">
+                                                        <a href="javascript:;" class="l-btn-normal l-btn-red js_personalinfoBtn js-preserve">保存</a>
+                                                    </div>
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-personalinfo-cancelbtn">
+                                                        <a href="javascript:;" class="l-btn-normal l-btn-line2 js-cancel" >取消</a>
+                                                    </div>
+                                                </div>
 
-                                        <div class="o_g member-personalinfo-list">
-                                            <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"></div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
-                                                <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-personalinfo-savebtn">
-                                                    <a href="javascript:;" class="l-btn-normal l-btn-red js_personalinfoBtn js-preserve">保存</a>
-                                                </div>
-                                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-personalinfo-cancelbtn">
-                                                    <a href="javascript:;" class="l-btn-normal l-btn-line2 js-cancel" >取消</a>
-                                                </div>
                                             </div>
 
                                         </div>
+                                        <!--基本资料 END-->
+
 
                                     </div>
-                                    <!--基本资料 END-->
+                                    <!--个人头像 START-->
+                                    <div class="member-personalinfo-listbox member-personalinfo-list2 js-personalinfotabcont">
 
-
-                                </div>
-                                <!--个人头像 START-->
-                                <div class="member-personalinfo-listbox member-personalinfo-list2 js-personalinfotabcont">
-
-                                    <ul class="o_g member-personalinfo-table2 js-uploadPhoto">
-                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
-                                            <div class="membe-personalinfo-photo-left">
-                                                <img src="../images/ignore_prodetail3.JPG" alt="">
-                                            </div>
-                                        </li>
-                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2">
-
-                                            <!--<canvas id="js_imgCut"></canvas>-->
-                                            <div class="member-personalinfo-modifyimg">
-                                                <div class="membe-personalinfo-photo-right">
+                                        <ul class="o_g member-personalinfo-table2 js-uploadPhoto">
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
+                                                <div class="membe-personalinfo-photo-left">
                                                     <img src="../images/ignore_prodetail3.JPG" alt="">
                                                 </div>
-                                                <a href="javascript:;" id="js_imgUpload"
-                                                   class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
-                                                <p>支持jpg、jpeg、png，大小不超过2M</p>
-                                            </div>
+                                            </li>
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2">
+
+                                                <!--<canvas id="js_imgCut"></canvas>-->
+                                                <div class="member-personalinfo-modifyimg">
+                                                    <div class="membe-personalinfo-photo-right">
+                                                        <img src="../images/ignore_prodetail3.JPG" alt="">
+                                                    </div>
+                                                    <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
+                                                    <p>支持jpg、jpeg、png，大小不超过2M</p>
+                                                </div>
 
 
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
 
-                                    <ul class=" o_g  member-personalinfo-table2 meber-personalinfo-photo js-modifyPhoto">
-                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
-                                            <div class="membe-personalinfo-photo-left">
-                                                <div id="preview-pane">
-                                                    <div class="preview-container" style="width: 180px;height: 180px;">
-                                                        <img src="../images/ignore_prodetail3.JPG" class="jcrop-preview"
-                                                             alt="Preview"/>
+                                        <ul class=" o_g  member-personalinfo-table2 meber-personalinfo-photo js-modifyPhoto">
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
+                                                <div class="membe-personalinfo-photo-left">
+
+                                                    <div id="preview-pane">
+                                                        <div class="preview-container " style="width: 180px;height: 180px;">
+                                                            <img src="../images/ignore_prodetail3.JPG" class="jcrop-preview"
+                                                                 alt="Preview"/>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2">
-                                            <img src="../images/ignore_prodetail3.JPG" id="target" width="300px"
-                                                 height="300px" alt="[Jcrop Example]"/>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                            <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o-xs_2-2">
+                                                <img src="../images/ignore_prodetail3.JPG" id="target"   alt="[Jcrop Example]"/>
+                                            </li>
+                                        </ul>
 
-                                    <div class="o_g member-personalinfo-list2  js-modifyPhotoBtn">
-                                        <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2 member-personalinfo-upimg">
-                                                <a href="javascript:;" class="l-btn-normal l-btn-red o_df_2-3" id=" ">上传图片</a>
-                                            </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2  member-personalinfo-over">
-                                                <a href="javascript:;" class="l-btn-normal l-btn-line2">取消</a>
+                                        <div class="o_g member-personalinfo-list2  js-modifyPhotoBtn">
+                                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2 member-personalinfo-upimg">
+                                                    <a href="javascript:;" class="l-btn-normal l-btn-red o_df_2-3" id="getupimg">上传图片</a>
+                                                </div>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2  member-personalinfo-over">
+                                                    <a href="javascript:;" class="l-btn-normal l-btn-line2">取消</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!--个人头像 END-->
+                                <!--个人头像 END-->
+                            </div>
                         </div>
+                        <!-- 个人信息 End-->
                     </div>
-                    <!-- 个人信息 End-->
+                    <!-- 内容区域 End-->
                 </div>
-                <!-- 内容区域 End-->
             </div>
         </div>
         <!-- 右侧内容 End-->
+        <!--弹窗2-->
+        <div class="pop-up2 js_popUpBox2">
+            <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+            <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+            <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+            <p class="o_u  js_popUpText"></p>
+        </div>
     </div>
     <!--#include virtual="public/personal_footer.shtml"-->
 </div>
@@ -238,7 +250,7 @@
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
 <script type="text/javascript" src="images/jquery.color.js"></script>
-<script type="text/javascript" src="images/member.js"></script>
+<script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_personal.js"></script>
 <script type="text/javascript" src="images/templet_member_personal.js"></script>
 

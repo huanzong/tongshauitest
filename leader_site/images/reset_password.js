@@ -5,24 +5,6 @@ $(function() {
         init();
     });
     function init() {
-
-        var screenWidth = document.body.offsetWidth;
-        var screenHeight = document.body.offsetHeight;
-        var loginHeight = $('.js_center').height();
-        if (screenWidth <= 700) {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',0);
-            }, 10);
-        } else  if (screenWidth <= 991 && screenWidth > 700) {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-50)+'px');
-            }, 10);
-        } else {
-            setTimeout(function() {
-                $('.js_center').css('margin-top',((screenHeight-loginHeight)/2-30)+'px');
-            }, 10);
-        }
-
         //密码进入事件,更改密码框类型为密码
         $("#js_loginPassword2").focus(function () {
             var $parent = $(this).parent();
@@ -131,6 +113,15 @@ $(function() {
     //下拉菜单初始化
     $("#js_selectValidate").oSelect().init();
 
+    //
+    $('.js_resgoster_hover').hover(function(){
+        $(this).siblings('.l-float-tops').show();
+    },function(){
+        $(this).siblings('.l-float-tops').hide();
+    });
+
+
+    btnTimeOut($('.js_registerContTime'),120,'后可重新发送');
     //倒计时
     var wait = 5;
     function sendTime() {

@@ -11,6 +11,8 @@
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="images/member.css">
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+
 </head>
 
 <body>
@@ -18,17 +20,21 @@
     <div class="o_main">
         <div class="o_g ">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/member_nav.shtml"-->
+            <!--#include virtual="public/header_nav.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
-            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
-                <div class="member-security-width js-securityheight">
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+
+                <div class="o_u o_df_12-12 member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
+
+                    <div class="member-security-width js-securityheight">
                     <div class="member-security-tit"><p>绑定邮箱</p></div>
                     <!-- 内容区域 START-->
                     <div class="member-security-contbox js-contRightContBox">
                         <!-- 绑定邮箱 START-->
                         <div class="member-revisemob o_g">
-                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-three">
+                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-one js_memberRevisThree">
                                 <i class="member-revisemob-line-point01">
                                     <span>　1. 验证手机</span>
                                     <div class="member-revisemob-line-finishpoint"></div>
@@ -62,7 +68,7 @@
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
                                     <input type="text" class="js_phoneCodeYz" name="" ph="短信验证码">
                                     <a href="javascript:;" class="l-btn-sm l-btn-red js-sendphonecode">发送验证短信</a>
-                                    <p class="Validform_checktip Validform_wrong js-emailCodeerror "></p>
+                                    <p class="Validform_checktip Validform_wrong js-mobileCodeerror "></p>
                                 </div>
                             </div>
 
@@ -120,15 +126,23 @@
                     <!-- 内容区域 End-->
                 </div>
             </div>
+            </div>
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
-
+        <!--弹窗2-->
+        <div class="pop-up2 js_popUpBox2">
+            <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+            <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+            <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+            <p class="o_u  js_popUpText"></p>
+        </div>
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
-<script type="text/javascript" src="images/member.js"></script>
+<!--<script type="text/javascript" src="images/member.js"></script>-->
+<script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/templet_member_bindemail.js"></script>
 </body>

@@ -153,7 +153,7 @@
 		position: absolute;
 		right: 20px;
     	top: 5px;
-    	z-index: 2;
+    	z-index: 0;
 	}
 	a{
 		position: absolute;
@@ -273,7 +273,95 @@
 	}
 }
 
+.l-float-top{
+	position: relative;
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 16px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	color: #333;
+	background: #fff;
+	i{
+		position: absolute;
+		right: -8px;
+		top: 50%;
+		//width: 8px;
+		//height: 20px;
+		width: 0;
+		height:0;
+		margin-top: -6px;
+		//background: url(l_float_bg.png) no-repeat;
+		//border-top: 1px solid #eeeeee;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 16px solid #eee;
+	}
+}
 
+.l-float-tops{
+	position:relative;
+
+	display:block;
+	height:100px;
+	width:200px;
+	background-color:transparent;
+	*border:1px solid #eee;
+	>p{
+		position:absolute;
+		top:-20px;
+		*top:-22px;
+		left:20px;
+		display:block;
+		height:0;
+		width:0;
+		font-size: 0;
+		line-height: 0;
+		border-color:transparent transparent #eee transparent;
+		border-style:dashed dashed solid dashed;
+		border-width:10px;
+		i{
+			position:absolute;
+			top:-9px;
+			*top:-9px;
+			left:-10px;
+			display:block;
+			height:0;
+			width:0;
+			font-size: 0;
+			line-height: 0;
+			border-color:transparent transparent #fff transparent;
+			border-style:dashed dashed solid dashed;
+			border-width:10px;
+		}
+	}
+	.float_content{
+		border:1px solid #eee;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		position:absolute;
+		background-color:#fff;
+		width:94%;
+		height:100%;
+ 		font-size: 12px;
+		padding: 5px 10px;
+		*top:-2px;
+		*border-top:1px solid #eee;
+		*border-top:1px solid #eee;
+		*border-left:none;
+		*border-right:none;
+		*height:102px;
+		//box-shadow: 3px 3px 4px #999;
+		//-moz-box-shadow: 3px 3px 4px #999;
+		//-webkit-box-shadow: 3px 3px 4px #999;
+		/* For IE 5.5 - 7 */
+		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');
+		/* For IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+	}
+
+}
 // 表单样式：文本域
 
 .l-textarea {
@@ -447,58 +535,77 @@ Pagination Styles
      
 }
 //分页
-// 上一页按钮
-.l-pagination-prew{
-	height: 38px;
-	width: 77px;
-	border-radius: 50px;
-	display:inline-block;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-	line-height: 38px;
-	color: #808080;
-	background: #ffffff;
-	margin-right: 5px;
-	&:hover{
-		color: #808080;
-	}
-}
-//下一页按钮
-.l-pagination-next{
-	height: 38px;
-	width: 77px;
-	border-radius: 50px;
-	display:inline-block;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-	line-height: 38px;
-	color: #808080;
-	background: #ffffff;
-	&:hover{
-		color: #808080;
-	}
-}
 
-//圆圈页码
-.l-pagination-pagenumber{
-	color: #808080;
-	width: 39px;
-	height: 39px;
-	border: 0.5px solid #d3d3d3;
-	display:inline-block;
-	border-radius: 50px;
-	text-align: center;
-	line-height: 39px;
-	background: #fff;
-	margin-right: 5px;
-	&:hover{
+	// 上一页按钮
+	.l-pagination-prew{
+		height: 38px;
+		width: 77px;
+		font-size: 14px;
+		border-radius: 50px;
+		display:inline-block;
+		border: 1px solid #d3d3d3;
+		text-align: center;
+		line-height: 38px;
 		color: #808080;
+		background: #ffffff;
+		margin-right: 5px;
+		&:hover{
+			color: #808080;
+		}
 	}
-	&.active{
-		border: 0px none ;
-		background: #ff0000;
-		color: #ffffff;
+	//下一页按钮
+	.l-pagination-next{
+		height: 38px;
+		width: 77px;
+		font-size: 14px;
+		border-radius: 50px;
+		display:inline-block;
+		border: 1px solid #d3d3d3;
+		text-align: center;
+		line-height: 38px;
+		color: #808080;
+		background: #ffffff;
+		&:hover{
+			color: #808080;
+		}
 	}
+
+	//圆圈页码
+	.l-pagination-pagenumber{
+		color: #808080;
+		width: 39px;
+		height: 39px;
+		font-size: 14px;
+		border: 0.5px solid #d3d3d3;
+		display:inline-block;
+		border-radius: 50px;
+		text-align: center;
+		line-height: 39px;
+		background: #fff;
+		margin-right: 5px;
+		&:hover{
+			color: #808080;
+		}
+		&.active{
+			border: 0px none ;
+			background: #ff0000;
+			color: #ffffff;
+		}
+	}
+
+
+//圆型数量
+.member-nub-round{
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	background: @l-red;
+	color: #fff;
+	font-size: 10px;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 9px;
+	margin-left: 20px;
 }
 //登陆框和遮罩层
 
@@ -509,7 +616,7 @@ Pagination Styles
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 22;
 	overflow: hidden;
 	display: none;
 	.land-box{
@@ -522,6 +629,31 @@ Pagination Styles
 		margin:  0 auto;
 		margin-top: 5%;
 		display: none;
+		@media (min-width: 701px) and (max-width: 991px) {
+			/* md*/
+			margin-top: 10%;
+		}
+		@media (min-width: 576px) and (max-width: 700px) {
+			/* sm*/
+			margin-top: 0;
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			border-radius: 0;
+		}
+		@media (max-width: 575px) {
+			/* xs*/
+			margin-top: 10%;
+			width: 100%;
+			//height: 50%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			border-radius: 0;
+
+		}
+
 		.land-cont-title{
 			font-size: 16px;
 			color: #333;
@@ -590,15 +722,67 @@ Pagination Styles
 		}
 	}
 
-
 	}
+	.land-box-address{
+		.land-cont-title{
+			border-bottom: 1px solid #eee;
+			line-height: 23px;
+			span{
+				font-size: 14px;
+				color: #999;
+			}
+			i{
+				font-size: 14px;
+				color: #333333;
+				padding: 0 10px;
+			}
+			:nth-child(3){
+				border-left:1px solid #eee ;
+				border-right:1px solid #eee ;
+			}
+		}
+		.land-cont-normal-input{
+			display: none;
+			text-align: center;
 
+			ul{
+				text-align: left;
+				padding-top: 25px;
+				>li{
+					height: 35px;
+					font-size: 14px;
+					color: #333;
+					text-align: left;
+
+				}
+				@media (max-width: 575px) {
+					/* xs*/
+					height: 400px;
+					overflow: auto;
+					text-align: center;
+					>li{
+						border-bottom: 1px solid #eee;
+						text-align: left;
+						line-height: 40px;
+					}
+				}
+			}
+		}
+		//div:first-child{
+		//	display: inline-block;
+        //
+		//}
+	}
+}
+.land-shade-top{
+	z-index: 110;
 }
 .pop-up2{
 	width: 300px;
 	height: 170px;
 	border-radius: 8px;
 	display: none;
+	background: #fff;
 	box-shadow: 0px 0px 8px 0px #eee;
 	text-align: center;
 	position: fixed;
@@ -607,6 +791,7 @@ Pagination Styles
 	top: 0;
 	bottom: 0;
 	margin:auto;
+	z-index: 99;
 	background: #fff;
 	span{
 		display: block;
@@ -635,6 +820,11 @@ Pagination Styles
 		text-align: center;
 		font-size: 24px;
 		color: #333;padding: 20px 0;
+	}
+	.type3-text{
+		font-size:20px;
+	 	line-height: 30px;
+		padding-top: 40px;
 	}
 
 }

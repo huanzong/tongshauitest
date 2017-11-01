@@ -590,9 +590,9 @@
 	.member-submenu {
 		/*详细菜单*/
 		width: 240px;
-		position: absolute;
-		top: 0;
-		right: -240px;
+//		position: absolute;
+//		top: 0;
+//		right: -240px;
 		z-index: 4;
 		background: #fff;
 		border-left: 1px solid #eee;
@@ -969,7 +969,7 @@
 }
 /*个人中心首页*/
 .member-home-cont{
-	padding-top: 120px;
+	//padding-top: 120px;
 	@media (min-width: 992px) and (max-width: 1199px) {
 		/* md*/
 
@@ -1172,10 +1172,9 @@
 	}
 
 	.member-security-width {
-		position: absolute;
-		left: 240px;
-		right: 0;
-
+		//position: absolute;
+		//left: 240px;
+		//right: 0;
 		@media (min-width: 701px) and (max-width: 991px) {
 			/* md*/
 			left: 40px;
@@ -1982,7 +1981,7 @@
 						float: left;
 						display: inline-block;
 						background: @l-green;
-						width: 25%;
+						//width: 25%;
 					}
 
 					i {
@@ -2042,6 +2041,7 @@
 					.member-revisemob-ratelinebg {
 						width: 25%;
 					}
+
 				}
 
 				.member-revisemob-two {
@@ -2063,9 +2063,9 @@
 						}
 					}
 
-					//.member-revisemob-ratelinebg {
-					//	width: 75%;
-					//}
+					.member-revisemob-ratelinebg {
+						width: 75%;
+					}
 				}
 
 				.member-revisemob-three {
@@ -2096,63 +2096,63 @@
 						}
 					}
 
-					//.member-revisemob-ratelinebg {
-					//	width: 100%;
-					//}
-				}
-				.member-revisemob-No1{
-					.member-revisemob-line-point01{
-						//color: #ccc;
-						span {
-							color:@l-green;
-						}
-					}
-					.member-revisemob-line-point02{
-						span{
-							color:#ccc;
-						}
-					}
-					.member-revisemob-line-point03{
-						span{
-							color:#ccc;
-						}
+					.member-revisemob-ratelinebg {
+						width: 100%;
 					}
 				}
-				.member-revisemob-No2{
-					.member-revisemob-line-point01{
-						span {
-							color:@l-green;
-						}
-					}
-					.member-revisemob-line-point02{
-						span {
-							color:@l-green;
-						}
-					}
-					.member-revisemob-line-point03{
-						span {
-							color: #ccc;
-						}
-					}
-				}
-				.member-revisemob-No3{
-					.member-revisemob-line-point01{
-						//color: #ccc;
-						span {
-							color:@l-green;
-						}
-					}
-					.member-revisemob-line-point02{
-						span {
-							color:@l-green;
-						}
-					}
-					.member-revisemob-line-point03{
-						span {
-							color:@l-green;
-						}
-					}
-				}
+				//.member-revisemob-No1{
+				//	.member-revisemob-line-point01{
+				//		//color: #ccc;
+				//		span {
+				//			color:@l-green;
+				//		}
+				//	}
+				//	.member-revisemob-line-point02{
+				//		span{
+				//			color:#ccc;
+				//		}
+				//	}
+				//	.member-revisemob-line-point03{
+				//		span{
+				//			color:#ccc;
+				//		}
+				//	}
+				//}
+				//.member-revisemob-No2{
+				//	.member-revisemob-line-point01{
+				//		span {
+				//			color:@l-green;
+				//		}
+				//	}
+				//	.member-revisemob-line-point02{
+				//		span {
+				//			color:@l-green;
+				//		}
+				//	}
+				//	.member-revisemob-line-point03{
+				//		span {
+				//			color: #ccc;
+				//		}
+				//	}
+				//}
+				//.member-revisemob-No3{
+				//	.member-revisemob-line-point01{
+				//		//color: #ccc;
+				//		span {
+				//			color:@l-green;
+				//		}
+				//	}
+				//	.member-revisemob-line-point02{
+				//		span {
+				//			color:@l-green;
+				//		}
+				//	}
+				//	.member-revisemob-line-point03{
+				//		span {
+				//			color:@l-green;
+				//		}
+				//	}
+				//}
 			}
 
 			/*个人中心-安全设置-绑定手机-绑定成功*/
@@ -2740,18 +2740,31 @@
 					display: inline-block;
 					margin-top: 10px;
 					text-align: left;
+
+
+
+
 					>div:nth-child(1){
 						padding-right: 15px;
+						@media (min-width: 576px) and (max-width: 700px) {
+							/* sm*/
+							padding: 0px;
+						}
 						@media (max-width: 575px) {
 							/* xs*/
-							padding-right: 0px;
+							padding: 0px;
 						}
 					}
 					>div:nth-child(2){
 						padding-left: 15px;
+						@media (min-width: 576px) and (max-width: 700px) {
+							/* sm*/
+							padding: 0px;
+						}
 						@media (max-width: 575px) {
 							/* xs*/
-							padding-left: 0px;
+							padding: 0px;
+
 						}
 					}
 
@@ -4401,11 +4414,17 @@
 				font-size: 12px;
 				color: #ccc;
 			}
+
 		}
+
 
 	}
 
 	.member-share-photo{
+		>.member-share-right-title{
+			padding-top: 10px;
+
+		}
 		.member-share-photo-btn{
 			font-size: 12px;
 			//width: 360px;
@@ -4416,6 +4435,9 @@
 				width: 100px;
 				text-align: center;
 
+			}
+			.share_getup_false{
+				display: none;
 			}
 			.l-btn-sm{
 				margin-right: 10px;
@@ -4768,7 +4790,49 @@
 		color: #666666;
 	}
 }
+.pop-up-share{
+	width: 500px;
+	>p{
+		font-size: 14px;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+	}
+	h3{
+		font-size: 24px;
+		padding-top: 20px;
+	}
+	.type3-text{
+		padding-top: 20px;
+	}
+	>div{
+		font-size: 14px;
+		height:20px;
+		line-height: 20px;
+		padding-top: 20px;
+		span{
+			color: @l-orange;
+			margin: 0;
+			display: inline;
+			height: 20px;
+			width: 100px;
+			font-size: 14px;
+			line-height: 20px;
 
+		}
+	}
+}
+.member-share-evaluate-wrong{
+	color: @l-orange;
+	font-size: 12px;
+	text-align: left;
+	line-height: 30px;
+}
+.member-share-evaluate-right{
+	display: none;
+}
+.member-share-pagination-box{
+	padding: 20px 0;
+}
 @media (min-width: 992px) and (max-width: 1199px) {
 	/* lg*/
 }
