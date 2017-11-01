@@ -391,6 +391,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-share-qq-zone"></i>
+                    <div class="name">share-qq-zone</div>
+                    <div class="fontclass">.icon-share-qq-zone</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-share-weixin"></i>
                     <div class="name">share-weixin</div>
                     <div class="fontclass">.icon-share-weixin</div>

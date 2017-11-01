@@ -64,6 +64,17 @@
                                         <i class="iconfont icon-share-solid"></i>
                                     </div>
                                     <span class="icon-font-info">分享</span>
+                                    <div class="l-float activity-float">
+                                        <div class="float-box float-blog">
+                                            <em class="iconfont icon-share-weibo"></em>
+                                        </div>
+                                        <div class="float-box float-wechat">
+                                            <em class="iconfont icon-share-weixin"></em>
+                                        </div>
+                                        <div class="float-box float-qq">
+                                            <em class="iconfont icon-share-qq-zone"></em>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="banner-pro-tit">小型家用冰箱节能电冰箱</div>
@@ -137,6 +148,17 @@
                                         <i class="iconfont icon-share-solid"></i>
                                     </div>
                                     <span class="icon-font-info">分享</span>
+                                    <div class="l-float activity-float">
+                                        <div class="float-box float-blog">
+                                            <em class="iconfont icon-share-weibo"></em>
+                                        </div>
+                                        <div class="float-box float-wechat">
+                                            <em class="iconfont icon-share-weixin"></em>
+                                        </div>
+                                        <div class="float-box float-qq">
+                                            <em class="iconfont icon-share-qq-zone"></em>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="activity-icon activity-icon-compare">
                                     <div class="icon-font">
@@ -182,6 +204,17 @@
                                         <i class="iconfont icon-share-solid"></i>
                                     </div>
                                     <span class="icon-font-info">分享</span>
+                                    <div class="l-float activity-float">
+                                        <div class="float-box float-blog">
+                                            <em class="iconfont icon-share-weibo"></em>
+                                        </div>
+                                        <div class="float-box float-wechat">
+                                            <em class="iconfont icon-share-weixin"></em>
+                                        </div>
+                                        <div class="float-box float-qq">
+                                            <em class="iconfont icon-share-qq-zone"></em>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="activity-icon activity-icon-compare">
                                     <div class="icon-font">
@@ -440,7 +473,7 @@
             </div>
             <!-- 详情展示 -->
             <!-- 电商拉页 -->
-            <div class="o_g detail-foldover">
+            <!-- <div class="o_g detail-foldover">
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
                     <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide">
                         <a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
@@ -449,23 +482,23 @@
                         <a href="product_detail.shtml#4F" name="4F" class="l-btn-normal" data-index=4>四台挂在墙上的机柜</a>
                         <a href="product_detail.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
                         <a href="product_detail.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
-                    </div>
+                    </div> -->
                     <!-- <a class="iconfont icon-bg-solid js_foldPlus"> -->
                     <!-- <i class="iconfont icon-plus"></i> -->
                     <!-- <i class="iconfont icon-close"></i> -->
                     <!-- </a> -->
                     <!-- <div class=""> -->
-                        <a class="iconfont icon-bg-solid js_foldPlus">
-                            <i class="iconfont icon-plus"></i>
+                        <!-- <a class="iconfont icon-bg-solid js_foldPlus">
+                            <i class="iconfont icon-plus"></i> -->
                             <!-- <i class="iconfont icon-close"></i> -->
-                        </a>
+                        <!-- </a> -->
                     <!-- </div> -->
                     <!-- <div class="o_df-hide o_md-show o_sm-show o_xs-show">
                         <a class="iconfont icon-bg-solid js_foldPlus_sm icon-md-solid">
                             <i class="iconfont icon-plus"></i>
                         </a>
                     </div> -->
-                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav">
+                    <!-- <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
@@ -498,6 +531,131 @@
                         <img data-src="images/footer_logo2.jpg" id="4F">
                         <img data-src="images/footer_logo3.jpg" id="5F">
                         <img data-src="images/index_entrance01.JPG" id="6F">
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12"></div>
+            </div> -->
+            <div class="o_g detail-foldover js_detail-foldover">
+                <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
+                    <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#2F" name="2F" class="l-btn-normal" data-index=2>如此境界，怎忙不爱</a>
+                        <a href="product_detail_new.shtml#3F" name="3F" class="l-btn-normal" data-index=3>三挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#4F" name="4F" class="l-btn-normal" data-index=4>四台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
+                    </div>
+                    <a class="iconfont icon-bg-solid js_foldPlus">
+                        <i class="iconfont icon-plus"></i>
+                        <span>详细产品介绍</span>
+                    </a>
+                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
+                </div>
+                <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
+                    <div class="foldover-img js_oHerlSizeFoldover js_foldimg js_buyhtml">
+                        <!--<div class='view TRS_UEDITOR trs_paper_default'>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称
+                                </p>
+                                <p>
+                                    <img src='images/login_bg.JPG' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称1
+                                </p>
+                                <p>
+                                    <img src='images/share_cur.png' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称2
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称3
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo2.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称4
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo3.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称5
+                                </p>
+                                <p>
+                                    <img src='images/index_entrance01.JPG' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称6
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称7
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称8
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称9
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
+                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
+                                    锚点名称10
+                                </p>
+                                <p>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                </p>
+                            </div>
+                            <p>
+                                <br/>
+                            </p>
+                        </div>-->
+                        <div class='view TRS_UEDITOR trs_paper_default'><div style='margin:0;font-size: 0;'><div style='display: inline-block;width: 50%;padding-bottom: 30px;'><div style='display: inline-block;padding-right: 15px;'><img src='http://image.haier.com/cn/xbsy_37860/sybanner_27044/201709/P020170922667543883140.jpg'/></div></div><div style='display: inline-block;width: 50%;padding-bottom: 30px;'><div style='display: inline-block;padding-left: 15px;'><img src='http://image.haier.com/cn/xbsy_37860/sybanner_27044/201709/P020170922667543883140.jpg'/></div></div></div><div class='box js_box' style='margin:0;font-size: 0;'><p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>锚点名称</p><p><img src='http://image.haier.com/cn/business/central_air_conditioning/home_central/201411/P020141129794546555117.jpg'/></p></div><p><br/></p></div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12"></div>
