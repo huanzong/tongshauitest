@@ -14,7 +14,7 @@ $(function(){
     if(windowW>992){
     }else if(windowW>700&&windowW<992){
         if($('js-membercontboxs-2')){
-            $('.js-membercontboxs').width(windowW*0.861);
+            $('.js-membercontboxs').width(windowW*0.86);
         }else{
             $('.js-membercontboxs').width(windowW*0.85);
         }
@@ -39,7 +39,7 @@ $(function(){
             $('.js-membercontboxs').width(windowW*0.66666);
         }else if(windowW>700&&windowW<992){
             if($('js-membercontboxs-2')){
-                $('.js-membercontboxs').width(windowW*0.861);
+                $('.js-membercontboxs').width(windowW*0.86);
             }else{
                 $('.js-membercontboxs').width(windowW*0.85);
             }
