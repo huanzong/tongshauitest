@@ -4,7 +4,6 @@
 * @date        2017.10.19
 * ---------------------------------------------------------------------------*/
 
-
 //判断登录
 if(!istrsidssdssotoken()){
     jumpToLoginPage()
@@ -36,7 +35,7 @@ var templet_select_qu=$("#js_area").oSelect();
 var templet_select_road=$("#js_road").oSelect();
 function buildProvinces(){
     $.ajax({
-        url:"/interaction-service/regionInfo/regionList",
+        url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
         type:"get",
         dataType:"json",
         data:{"parentId":0},
@@ -68,7 +67,7 @@ function buildProvinces(){
 function buildCity(){
     var shengCode=$("#js_save option:selected").attr("shengCode");
     $.ajax({
-        url:"/interaction-service/regionInfo/regionList",
+        url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
         type:"get",
         dataType:"json",
         data:{"parentId":shengCode},
@@ -107,7 +106,7 @@ function buildCity(){
 function buildArea(){
     var cityCode=$("#js_city option:selected").attr("cityCode");
     $.ajax({
-        url:"/interaction-service/regionInfo/regionList",
+        url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
         type:"get",
         dataType:"json",
         data:{"parentId":cityCode},
@@ -141,7 +140,7 @@ function buildArea(){
 function buildRoad(){
     var areaCode=$("#js_area option:selected").attr("areaCode");
     $.ajax({
-        url:"/interaction-service/regionInfo/regionList",
+        url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
         type:"get",
         dataType:"json",
         data:{"parentId":areaCode},
@@ -234,7 +233,7 @@ function saveUserAddress(){
 
     templet_isSubmiting=true;
     $.ajax({
-        url:"/user/front/userRegion/save",
+        url:siteConfig.userUrl+"/user/front/userRegion/save",
         type:"post",
         dataType:"json",
         data:data,
@@ -286,7 +285,7 @@ $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     $.ajax({
-        url:"/user/front/userRegion/defaultRegion",
+        url:siteConfig.userUrl+"/user/front/userRegion/defaultRegion",
         type:"post",
         dataType: "json",
         data:{
@@ -327,7 +326,7 @@ function deleteAddress(addId) {
         var data = {id: addId};
         //是否删除提示****
         $.ajax({
-            url:"/user/front/userRegion/deleteRegion",
+            url:siteConfig.userUrl+"/user/front/userRegion/deleteRegion",
             type:"get",
             dataType: "json",
             data:data,
@@ -362,7 +361,7 @@ function getAddressInfo(id){
     saveId=id;
     var data = {id:id};
     $.ajax({
-        url:"/user/front/userRegion/show",
+        url:siteConfig.userUrl+"/user/front/userRegion/show",
         type:"get",
         data:data,
         dataType: "json",
@@ -406,7 +405,7 @@ function getAddressInfo(id){
 
 
                 $.ajax({
-                    url: "/interaction-service/regionInfo/regionList",
+                    url: siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
                     type: "get",
                     dataType: "json",
                     data: {"parentId": 0},
@@ -443,7 +442,7 @@ function getAddressInfo(id){
 
                 function loadCityList(templet_shengCod){
                     $.ajax({
-                        url: "/interaction-service/regionInfo/regionList",
+                        url:siteConfig.userUrl+ "/interaction-service/regionInfo/regionList",
                         type: "get",
                         data: {"parentId": templet_shengCod},
                         dataType: "json",
@@ -488,7 +487,7 @@ function getAddressInfo(id){
 
                 function loadAreaList(templet_cityCode){
                     $.ajax({
-                        url: "/interaction-service/regionInfo/regionList",
+                        url: siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
                         type: "get",
                         data: {"parentId":templet_cityCode},
                         dataType: "json",
@@ -534,7 +533,7 @@ function getAddressInfo(id){
 
                 function loadRoadList(templet_areaCode){
                     $.ajax({
-                        url: "/interaction-service/regionInfo/regionList",
+                        url:siteConfig.userUrl+ "/interaction-service/regionInfo/regionList",
                         type: "get",
                         data: {"parentId":templet_areaCode},
                         dataType: "json",
@@ -619,7 +618,7 @@ function updateUserAddress(){
     }
     templet_isSubmiting = true;
     $.ajax({
-        url: "/user/front/userRegion/update",
+        url:siteConfig.userUrl+ "/user/front/userRegion/update",
         type: "post",
         dataType: "json",
         data: data,
@@ -646,7 +645,7 @@ function updateUserAddress(){
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
-        url: "/user/front/userRegion/list",
+        url: siteConfig.userUrl+"/user/front/userRegion/list",
         type: "post",
         dataType: "json",
         data:{
