@@ -145,77 +145,122 @@
 
 		    <!-- 统帅入口 -->
 		    <div class="o_g index-enter">
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon1">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon2">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon3">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon4">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon5">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon6">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
-		    	<a class="o_u enter-con o_lg_1-4 o_md_1-3 o_sm_1-3 o_xs_1-3">
-		    		<div class="enter-con-icon"></div>
+		    	<div class="enter-con enter-con-xs js_enterShow">
+		    		<i class="iconfont icon-icon enter-corner-left"></i>
+		    	</div>
+		    	<a class="enter-con">
+		    		<div class="enter-con-icon icon7">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
 		    		<div class="enter-con-en">REFRIGERATOR</div>
-		    		<div class="enter-con-china">冰箱</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
 		    		<div class="enter-con-point o_xs-hide">
 		    			<span></span>
 		    			<span></span>
 		    			<span></span>
 		    		</div>
 		    	</a>
+		    	<div class="enter-con enter-con-xs js_enterShow">
+		    		<i class="iconfont icon-icon enter-corner-right"></i>
+		    	</div>
+		    	<!-- 以下是超过7个，默认隐藏的产线入口 -->
+		    	<a class="enter-con l-none js_enterShow">
+		    		<div class="enter-con-icon icon7">
+		    			<img src="images/index_enter1.png">
+		    		</div>
+		    		<div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+		    		<div class="enter-con-en">REFRIGERATOR</div>
+		    		<div class="enter-con-china o_xs-hide">冰箱</div>
+		    		<div class="enter-con-point o_xs-hide">
+		    			<span></span>
+		    			<span></span>
+		    			<span></span>
+		    		</div>
+		    	</a>
+		    	<!-- 以下是超过7个，默认隐藏的产线入口 END -->
 		    </div>
+		    <a class="index-enter-more js_enterMore" data-type="more">
+		    	展开全部产品分类 +
+		    </a>
 		    <!-- 统帅入口 END -->
 
 		    <!-- 推荐产品 -->
@@ -325,7 +370,6 @@
 						        				<a href="javascript:;">
 						        					<img src="images/index_entrance01.jpg">
 						        				</a>
-												
 												<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
 													<h3>你是我简单满足<br>的小确幸1111</h3>
 													<p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>

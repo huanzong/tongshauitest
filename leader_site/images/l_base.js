@@ -1,5 +1,7 @@
 $(function () {
 
+    
+
     /**
      * 首页动画：线变化
      */
@@ -68,13 +70,12 @@ $(function () {
     }
 
     /**
-     * 尾页 链接
+     * 产品页-公共尾部 链接
      */
     $('.js_footLindBtn').on('click', 'a', function () {
         var $ele = $(this).parent().siblings($('.js_footLink'));
         $ele.toggle();
         $ele.toggleClass('link_border');
-
     });
 
     /**
@@ -170,8 +171,36 @@ $(function () {
 
 });
 /**
- * 加载导航头的登录状态
+ * ajax初始化
  */
+jQuery.ajaxSetup({
+    type: "post",
+    dataType: "json",
+    cache: false,
+    box_obj: null,
+    scroll: null,
+    beforeSend: function(request) {
+        //需要登录校验，且用户未登录
+        if (this.login && !istrsidssdssotoken()) {
+            request.abort();
+        }
+    },
+    success: function(data) {
+        if (data.isSuccess != undefined && istrsidssdssotoken()) {
+            if (!data.isSuccess) {
+
+            }
+        }
+
+        if (this.success_cb) {
+            this.success_cb(data);
+        }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+    }
+});
+
+//加载导航头的登录状态
 function userLoginStatus() {
     var regFrom = "tongshuai";
     var screenWidth = document.body.offsetWidth;
@@ -321,13 +350,7 @@ function userLoginStatus() {
         $("#header_reg").attr("href", "http://tuser.tongshuai.com/ids/ts/reg.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
     }
 }
-/**
- * 导航头_截取字符串，长度为字符为单位
- * @param str
- * @param len
- * @param hasDot
- * @returns {string}
- */
+//导航头_截取字符串，长度以字符为单位
 function subHZString(str, len, hasDot) {
     var newLength = 0;
     var newStr = '';
@@ -351,4 +374,50 @@ function subHZString(str, len, hasDot) {
         newStr += hasDot;
     }
     return newStr;
+}
+
+
+//时间戳转换日期 时间戳，选格式，时间戳类型
+function getLocalTime(nS,val,type) {
+    if(type==2)
+    {
+        var timestamp4 =new Date(parseInt(nS) * 1000);
+    }
+    else
+    {
+        var timestamp4 =new Date(parseInt(nS));
+    }
+
+    var y = timestamp4.getFullYear();
+    var m = timestamp4.getMonth() + 1;
+    var d = timestamp4.getDate();
+    if(val == 2){
+        return y + "." + (m < 10 ? "0" + m : m) + "." + (d < 10 ? "0" + d : d) ;
+    }else if(val == 3){
+        return y + "/" + (m < 10 ? "0" + m : m) + "/" + (d < 10 ? "0" + d : d) ;
+    }else if(val == 4){
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
+    }
+    return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + timestamp4.toTimeString().substr(0, 8);
+
+}
+
+//判断当前是否存在同域cookie
+function istrsidssdssotoken(){
+    var trsidssdssotoken = "ssotoken";//同域Cookie
+    var sdssotoken = $.cookie(trsidssdssotoken);
+    if(sdssotoken!=null || window.location.host.indexOf('localhost')>=0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//跳转到登录页面
+function jumpToLoginPage(){
+    var returnUrl = window.location.href;
+    if(!istrsidssdssotoken()){
+        var returnUrl = window.location.href;
+        window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;
+    }
 }

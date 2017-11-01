@@ -11,6 +11,7 @@
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="images/member.css">
+    <link rel="stylesheet" type="text/css" href="images/member_s.css">
 </head>
 
 <body>
@@ -18,94 +19,107 @@
     <div class="o_main">
         <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/member_nav.shtml"-->
+            <!--#include virtual="public/header_nav.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
-            <div class="o_u o_df_5-6 o_lg_11-12 o_md_11-12 o_sm_5-6 o_xs_12-12 member-security js-membercontbox">
-                <div class="member-security-width js-securityheight">
-                    <div class="member-security-tit"><p>晒单分享</p></div>
-                    <!-- 内容区域 START-->
-                    <div class="member-security-contbox js-contRightContBox">
-                        <div class="member-security-table o_g">
-                            <div class="member-share-leftbox o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_2-2 o_xs_2-2 ">
-                                <div class="member-share-leftcont ">
-                                    <img src="images/compare_goods.PNG" alt="">
-                                    <p class="o_u o_sm_2-3 o_xs_2-3">统帅323L大容量无霜冰箱 <br><span>BCD-323WLDPN</span></p>
-                                </div>
-                            </div>
-                            <div class="member-share-rightbox o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2">
-                                <div class="member-share-right-cont">
-                                    <div class="member-share-score">
-                                        <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
-                                        <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                            <li>
-                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="member-share-evaluate ">
-                                        <p class="member-share-right-title o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
-                                        <div class="member-share-evaluate-val o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                            <textarea class="js_EvaluateVal o_u o_df_5-6 o_lg_5-6 o_md_5-6 o_sm_5-6 o_xs_5-6"></textarea>
-                                            <div class="member-share-evaluate-vallength">
-                                                <span class="js_EvaluateValLength">0</span><span>/500</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="member-share-photo ">
-                                        <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
-                                        <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                            <ul class="member-share-right-photo">
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                                <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
-                                            </ul>
-                                            <a href="javascript:;"  id="js_shareimgUploadPC" class="l-btn-sm l-btn-line1">本地上传</a><a href="javascript:;" id="js_shareimgUploadMb" class="l-btn-sm l-btn-line1">手机上传</a>
-                                        </div>
-                                        <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
-                                        <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">0/10  支持jpg、jpge、png，大小不超过2MB</p>
-                                    </div>
-                                    <div class="member-share-right-getup o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                        <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>
-                                    </div>
-                                </div>
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+                <div class="o_u o_df_12-12 member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
 
+                    <div class="member-security-width js-securityheight">
+                        <div class="member-security-tit"><p>晒单分享</p></div>
+                        <!-- 内容区域 START-->
+                        <div class="member-security-contbox js-contRightContBox">
+                            <div class="member-security-table o_g">
+                                <div class="member-share-leftbox o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_2-2 o_xs_2-2 ">
+                                    <div class="member-share-leftcont ">
+                                        <img id="" src="" alt="" class="js-productimg">
+                                        <p class="o_u o_sm_2-3 o_xs_2-3 js-productName"> </p>
+                                    </div>
+                                </div>
+                                <div class="member-share-rightbox o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2">
+                                    <div class="member-share-right-cont">
+                                        <div class="member-share-score">
+                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
+                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                <li>
+                                                    <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-star"><span class="iconfont icon-information-solid"></span>不可为空</div>
+
+                                        </div>
+                                        <div class="member-share-evaluate ">
+                                            <p class="member-share-right-title o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
+                                            <div class="member-share-evaluate-val o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                <textarea class="js_EvaluateVal o_u o_df_5-6 o_lg_5-6 o_md_5-6 o_sm_5-6 o_xs_5-6"></textarea>
+                                                <div class="member-share-evaluate-vallength">
+                                                    <span class="js_EvaluateValLength">0</span><span>/500</span>
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"></div>
+                                            <div class="member-share-evaluate-wrong member-share-evaluate-right o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-content"><span class="iconfont icon-information-solid"></span>不可为空</div>
+
+                                        </div>
+                                        <div class="member-share-photo ">
+                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>&nbsp;&nbsp;</span>照片分享<i>*</i></p>
+                                            <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                <ul class="member-share-right-photo js_sharephotobox">
+
+                                                </ul>
+                                                <a href="javascript:;"  id="js_shareimgUpload" class="js_share_getup_img l-btn-sm l-btn-line1">本地上传</a>
+                                                <a href="javascript:;"  class="js_share_getup_false l-btn-sm l-btn-line1 l-btn-disable share_getup_false">本地上传</a>
+                                            </div>
+                                            <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
+                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持jpg、jpge、png，大小不超过2MB</p>
+                                        </div>
+                                        <div class="member-share-right-getup o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
+                        <!-- 内容区域 End-->
                     </div>
-                    <!-- 内容区域 End-->
                 </div>
             </div>
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->
-
+        <!--弹窗2-->
+        <div class="pop-up2 js_popUpBox2 ">
+            <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+            <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+            <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+            <p class="o_u  js_popUpText"></p>
+        </div>
+        <div class="pop-up2 js_popUpBox3 pop-up-share">
+            <h3 class="o_u  js_popUpText">提交成功！</h3>
+            <p>您的晒单将会在客服人员审核（1-3个工作日）通过后展示</p>
+            <div class=""><span class="js_popUpTimeOver">5</span>后返回 <a href="#">我的晒单</a></div>
+        </div>
     </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
-<script type="text/javascript" src="images/member.js"></script>
+<script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_share.js"></script>
+<script type="text/javascript" src="images/templet_member_share.js"></script>
 </body>
 </html>

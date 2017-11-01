@@ -211,6 +211,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-location-solid"></i>
+                    <div class="name">location-solid</div>
+                    <div class="fontclass">.icon-location-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-lock-solid"></i>
                     <div class="name">lock-solid</div>
                     <div class="fontclass">.icon-lock-solid</div>
@@ -394,6 +400,24 @@
                 <i class="icon iconfont icon-share-weibo"></i>
                     <div class="name">share-weibo</div>
                     <div class="fontclass">.icon-share-weibo</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-level-solid"></i>
+                    <div class="name">level-solid</div>
+                    <div class="fontclass">.icon-level-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-pig-solid"></i>
+                    <div class="name">pig-solid</div>
+                    <div class="fontclass">.icon-pig-solid</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon_left"></i>
+                    <div class="name">icon_left</div>
+                    <div class="fontclass">.icon-icon_left</div>
                 </li>
             
         </ul>

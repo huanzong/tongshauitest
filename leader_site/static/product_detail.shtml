@@ -202,71 +202,153 @@
                         </div>
                         <!-- 首屏细节大图 详情弹层 -->
                         <div class="detail-specifics js_specificsBoxShow">
+                            <!-- 关闭按钮 -->
+                            <div class="specifics-close js_bannerSwiperClose">
+                                <i class="iconfont icon-fail-solid"></i>
+                            </div>
+                            <!-- 关闭按钮 END -->
+                            <!-- 轮播 -->
                             <div class="swiper-container js_bannerSwiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide swiper-slide-active">
                                         <a href="javascript:;">
 																        	<img src="images/compare_goods.PNG">
 																        </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-																        	<img src="images/index_banner2.JPG">
-																        </a>
+															        	<img src="images/icon_03.PNG">
+															        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:;">
+															        	<img src="images/icon_01.png">
+															        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-pagination">
-                            	<div class="pagination-box">
-                            		<img src="">
-                            	</div>
+                            <!-- 轮播 END -->
+                            <!-- 分页 -->
+                            <div class="swiper-pagination js_bannerSwiperPage">
+                                <div class="pagination-box active" data-index=0>
+                                    <img src="images/compare_goods.PNG">
+                                </div>
+                                <div class="pagination-box" data-index=1>
+                                    <img src="images/icon_03.PNG">
+                                </div>
+                                <div class="pagination-box" data-index=2>
+                                    <img src="images/icon_01.PNG">
+                                </div>
                             </div>
+                            <!-- 分页 END -->
+                            <!-- 上一页/下一页 -->
+                            <div class="pagination-prev js_bannerSwiperPrev">
+                                <i class="iconfont icon-arrow-line-left"></i>
+                            </div>
+                            <div class="pagination-next js_bannerSwiperNext">
+                                <i class="iconfont icon-arrow-line-right"></i>
+                            </div>
+                            <!-- 上一页/下一页 END -->
                         </div>
                     </div>
                 </div>
             </div>
             <!-- 首屏展示 END -->
             <!-- 文字卖点 -->
-            <div class="o_g">
-                <div class="o_u o_df_1-12"></div>
-                <div class="o_u o_df_10-12">
-                    <div class="o_u o_df_2-2 detail-fontpoint">
-                        <div class="o_u o_df_1-12"></div>
-                        <div class="o_u o_df_10-12">
-                            <div class="o_u o_df_1-5">
-                                <div class="fontpoint-box">
-                                    <div class="fontpoint-bold">342L</div>
-                                    <div class="fontpoint-small">总容积</div>
+            <div class="detail-fontpoint-index">
+                <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-fontpoint-top">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_10-12">
+                        <div class="o_u o_df_2-2 detail-fontpoint">
+                            <div class="o_u o_df_1-12"></div>
+                            <div class="o_u o_df_10-12">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">342L</div>
+                                        <div class="fontpoint-small">总容积</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">风冷</div>
+                                        <div class="fontpoint-small">制冷方式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">一级</div>
+                                        <div class="fontpoint-small">能耗等级</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">变频</div>
+                                        <div class="fontpoint-small">变频定频</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box border-none">
+                                        <div class="fontpoint-bold">多开门</div>
+                                        <div class="fontpoint-small">箱门结构</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="o_u o_df_1-5">
-                                <div class="fontpoint-box">
-                                    <div class="fontpoint-bold">风冷</div>
-                                    <div class="fontpoint-small">制冷方式</div>
+                            <div class="o_u o_df_1-12"></div>
+                        </div>
+                        <div class="o_u o_df_2-2 detail-fontpoint-bottom">
+                            <span>海尔保险</span>
+                            <span>海尔保险</span>
+                            <span>海尔保险</span>
+                            <span>海尔保险</span>
+                            <span>海尔保险</span>
+                        </div>
+                    </div>
+                    <div class="o_u o_df_1-12"></div>
+                </div>
+                <div class="o_g detail-fontpoint-back">
+                    <div class="detail-fontpoint">
+                        <div class="swiper-container js_fontSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">342L</div>
+                                        <div class="fontpoint-small">总容积</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="o_u o_df_1-5">
-                                <div class="fontpoint-box">
-                                    <div class="fontpoint-bold">一级</div>
-                                    <div class="fontpoint-small">能耗等级</div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">风冷</div>
+                                        <div class="fontpoint-small">制冷方式</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="o_u o_df_1-5">
-                                <div class="fontpoint-box">
-                                    <div class="fontpoint-bold">变频</div>
-                                    <div class="fontpoint-small">变频定频</div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">一级</div>
+                                        <div class="fontpoint-small">能耗等级</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="o_u o_df_1-5">
-                                <div class="fontpoint-box border-none">
-                                    <div class="fontpoint-bold">多开门</div>
-                                    <div class="fontpoint-small">箱门结构</div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">变频</div>
+                                        <div class="fontpoint-small">变频定频</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold">多开门</div>
+                                        <div class="fontpoint-small">箱门结构</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="o_u o_df_1-12"></div>
+                        <div class="swiper-prev js_fontSwiperPrev">
+                            <i class="iconfont icon-arrow-jiantou-left"></i>
+                        </div>
+                        <div class="swiper-next js_fontSwiperNext">
+                            <i class="iconfont icon-arrow-jiantou-right"></i>
+                        </div>
                     </div>
-                    <div class="o_u o_df_2-2 detail-fontpoint-bottom">
+                    <div class="o_u o_df_2-2 detail-fontpoint-bottom o_df-hide o_md-show o_sm-show o_xs-show">
                         <span>海尔保险</span>
                         <span>海尔保险</span>
                         <span>海尔保险</span>
@@ -274,18 +356,28 @@
                         <span>海尔保险</span>
                     </div>
                 </div>
-                <div class="o_u o_df_1-12"></div>
             </div>
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
             <div class="o_g">
                 <div class="detail-scene">
-                    <img class="o_picture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                    <div class="swiper-container js_sceneSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="images/ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 场景展示 -->
             <!-- 核心卖点-->
-            <div></div>
             <div class="o_g">
                 <div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
                 <div class="o_u o_df_4-12 bg-f8">
@@ -305,18 +397,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="o_u o_df_5-12 js_oHerl">
+                <div class="o_u o_df_5-12 js_oHerl o_md-hide o_sm-hide o_xs-hide">
                     <div class="o_u o_df_1-5"></div>
                     <div class="o_u o_df_4-5 sellpoint-bg js_oHerl">
                         <div class="sellpoint-describe js_center">
-                            <div class="describe1">如初生</div>
-                            <div class="describe2">风冷无霜更新鲜</div>
-                            <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            <!-- 循环体 -->
+                            <div class="js_sellpointFont">
+                                <div class="describe1">如初生11</div>
+                                <div class="describe2">风冷无霜更新鲜</div>
+                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            </div>
+                            <div class="js_sellpointFont">
+                                <div class="describe1">如初生22</div>
+                                <div class="describe2">风冷无霜更新鲜</div>
+                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            </div>
+                            <div class="js_sellpointFont">
+                                <div class="describe1">如初生33</div>
+                                <div class="describe2">风冷无霜更新鲜</div>
+                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            </div>
+                            <!-- 循环体 END -->
                         </div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12 js_oHerl">
-                    <a class="js_swiper_nextSellPoint js_center">
+                    <a class="js_swiperSellPointNext js_center">
 		    			<img src="images/detail_icon.PNG">
 		    		</a>
                 </div>
@@ -335,58 +441,68 @@
             <!-- 详情展示 -->
             <!-- 电商拉页 -->
             <div class="o_g detail-foldover">
-                <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav">
-                    <div class="o_u o_df_1-2 border-right js_oHerlFoldover">
-                        <div class="foldover-con js_foldlist">
-                            <a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive">一台挂在墙上的机柜</a>
-                            <a href="product_detail.shtml#2F" name="2F" class="l-btn-normal">如此境界，怎忙不爱</a>
-                            <a href="product_detail.shtml#3F" name="3F" class="l-btn-normal">三挂在墙上的机柜</a>
-                            <a href="product_detail.shtml#4F" name="4F" class="l-btn-normal">四台挂在墙上的机柜</a>
-                            <a href="product_detail.shtml#5F" name="5F" class="l-btn-normal">五台挂在墙上的机柜</a>
-                            <a href="product_detail.shtml#6F" name="6F" class="l-btn-normal">六台挂在墙上的机柜</a>
+                <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
+                    <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide">
+                        <a href="product_detail.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
+                        <a href="product_detail.shtml#2F" name="2F" class="l-btn-normal" data-index=2>如此境界，怎忙不爱</a>
+                        <a href="product_detail.shtml#3F" name="3F" class="l-btn-normal" data-index=3>三挂在墙上的机柜</a>
+                        <a href="product_detail.shtml#4F" name="4F" class="l-btn-normal" data-index=4>四台挂在墙上的机柜</a>
+                        <a href="product_detail.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
+                        <a href="product_detail.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
+                    </div>
+                    <!-- <a class="iconfont icon-bg-solid js_foldPlus"> -->
+                    <!-- <i class="iconfont icon-plus"></i> -->
+                    <!-- <i class="iconfont icon-close"></i> -->
+                    <!-- </a> -->
+                    <!-- <div class=""> -->
+                        <a class="iconfont icon-bg-solid js_foldPlus">
+                            <i class="iconfont icon-plus"></i>
+                            <!-- <i class="iconfont icon-close"></i> -->
+                        </a>
+                    <!-- </div> -->
+                    <!-- <div class="o_df-hide o_md-show o_sm-show o_xs-show">
+                        <a class="iconfont icon-bg-solid js_foldPlus_sm icon-md-solid">
+                            <i class="iconfont icon-plus"></i>
+                        </a>
+                    </div> -->
+                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
+                            </div>
                         </div>
                     </div>
-                    <a class="iconfont icon-bg-solid js_center">
-	    				<i class="iconfont icon-plus js_foldPlus"></i>
-	    				<!-- <i class="iconfont icon-close"></i> -->
-	    			</a>
                 </div>
-                <div class="o_u o_df_7-12">
+                <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
+                </div>
+                <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                     <div class="foldover-img js_oHerlSizeFoldover js_foldimg">
                         <img src="images/login_bg.JPG" id="1F">
-                        <img data-src="images/login_bg.JPG" id="2F">
-                        <img data-src="images/login_bg.JPG" id="3F">
-                        <img data-src="images/login_bg.JPG" id="4F">
-                        <img data-src="images/login_bg.JPG" id="5F">
-                        <img data-src="images/login_bg.JPG" id="6F">
+                        <img data-src="images/share_cur.png" id="2F">
+                        <img data-src="images/footer_logo1.jpg" id="3F">
+                        <img data-src="images/footer_logo2.jpg" id="4F">
+                        <img data-src="images/footer_logo3.jpg" id="5F">
+                        <img data-src="images/index_entrance01.JPG" id="6F">
                     </div>
                 </div>
                 <div class="o_u o_df_1-12"></div>
             </div>
             <!-- 电商拉页 END -->
-            <!-- 轮播 -->
-            <div class="o_g">
-                <div class="detail-scene1">
-                    <div class="swiper-container js_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <!-- <img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg" md="images/pc.jpg" lg="images/pc.jpg" xl="images/pc.jpg" alt=""> -->
-                                <img src="images/nav_bg_lg.PNG">
-                            </div>
-                            <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                            <div class="swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                        </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="swiper-pagination js_swiper_pagination"></div>
-                        <!-- 如果需要导航按钮 -->
-                        <div class="swiper-button-prev js_swiper_prev"></div>
-                        <div class="swiper-button-next js_swiper_next"></div>
-                        <!-- 如果需要滚动条 -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
-                    </div>
-                </div>
-            </div>
-            <!-- 轮播 END -->
             <!-- 产品口碑-->
             <div class="detail-title">产品口碑</div>
             <div class="o_g">
@@ -522,36 +638,133 @@
             <!-- 更多选择 -->
             <div class="detail-title">更多选择</div>
             <div class="o_g">
-                <div class="o_u o_df_2-12 js_oHerlMore">
-                    <a class="js_swiper_prevMore js_center">
-		    			<img src="images/detail_icon.PNG">
-		    		</a>
-                </div>
-                <div class="o_u o_df_8-12 js_oHerlSizeMore">
-                    <div class="detail-more">
-                        <div class="swiper-container js_swiperMore">
+                <div class="o_u o_df_1-6"></div>
+                <div class="o_u o_df_2-3">
+                    <div class="detail-more o_xs-hide">
+                        <div class="swiper-container js_swiperMore1">
                             <div class="swiper-wrapper">
-                                <div class="o_u o_df_1-4 swiper-slide">
-                                    <img src="images/nav_bg_lg.PNG">
-                                </div>
-                                <div class="o_u o_df_2-4 swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
-                                <div class="o_u o_df_1-4 swiper-slide"><img src="images/nav_bg_lg.PNG"></div>
+                                <a class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo1.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo2.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="swiper-slide">
+                                    <div class="detail-scene1-img">
+                                        <img src="images/footer_logo3.jpg">
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            三开门家用节能小冰箱
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            JOEGJ-97
+                                        </div>
+                                        <div class="detail-more-special">
+                                            三开门 家用节能 小冰箱
+                                        </div>
+                                        <div class="detail-more-price">
+                                            ￥79008
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <!-- 如果需要分页器 -->
-                            <div class="swiper-pagination js_swiper_paginationMore"></div>
-                            <!-- 如果需要导航按钮 -->
-                            <!-- <div class="swiper-button-prev js_swiper_prevMore"></div>
-						    <div class="swiper-button-next js_swiper_nextMore"></div> -->
-                            <!-- 如果需要滚动条 -->
-                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-prev js_swiperMore_prev">
+                            <i class="iconfont icon-arrow-jiantou-left"></i>
+                        </div>
+                        <div class="swiper-next js_swiperMore_next">
+                            <i class="iconfont icon-arrow-jiantou-right"></i>
                         </div>
                     </div>
+                    <div class="detail-more o_df-hide o_xs-show">
+                        <a class="detail-scene1-img">
+                            <img src="images/footer_logo1.jpg">
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                三开门家用节能小冰箱
+                            </div>
+                            <div class="detail-more-titinfo">
+                                JOEGJ-97
+                            </div>
+                            <div class="detail-more-special">
+                                三开门 家用节能 小冰箱
+                            </div>
+                            <div class="detail-more-price">
+                                ￥79008
+                            </div>
+                        </div>
+                        <a class="detail-scene1-img">
+                            <img src="images/footer_logo2.jpg">
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                三开门家用节能小冰箱
+                            </div>
+                            <div class="detail-more-titinfo">
+                                JOEGJ-97
+                            </div>
+                            <div class="detail-more-special">
+                                三开门 家用节能 小冰箱
+                            </div>
+                            <div class="detail-more-price">
+                                ￥79008
+                            </div>
+                        </div>
+                        <a class="detail-scene1-img">
+                            <img src="images/footer_logo3.jpg">
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                三开门家用节能小冰箱
+                            </div>
+                            <div class="detail-more-titinfo">
+                                JOEGJ-97
+                            </div>
+                            <div class="detail-more-special">
+                                三开门 家用节能 小冰箱
+                            </div>
+                            <div class="detail-more-price">
+                                ￥79008
+                            </div>
+                        </div>
+                    </div>   
                 </div>
-                <div class="o_u o_df_2-12 js_oHerlMore">
-                    <a class="js_swiper_nextMore js_center">
-		    			<img src="images/detail_icon.PNG">
-		    		</a>
-                </div>
+                <div class="o_u o_df_1-6"></div>
             </div>
             <!-- 更多选择 END -->
             <!-- 优惠组合 -->
@@ -739,7 +952,7 @@
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
                     <div class="land-cont-title o_u">
-                        <span class="o_u ">登陆</span>
+                        <span class="o_u ">登录</span>
                         <a href="" class="o_u iconfont icon-close js_landClose"></a>
                     </div>
                     <div class="js_landType">
@@ -798,10 +1011,8 @@
     </div>
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-    <script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="images/product_detail.js"></script>
-    <script>
-    </script>
 </body>
 
 </html>

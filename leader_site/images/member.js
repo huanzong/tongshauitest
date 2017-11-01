@@ -83,18 +83,26 @@ $(function() {
         var navListHeight = $('.js-submenucount').height();
         var contHeight = contRightHeight>navListHeight?contRightHeight+70:navListHeight+70;
         var windowWidth = $(window).width();
+        var contRightWidth = ($(window).width())-$('.js-personal').width();
+        if(contRightWidth){
+            $('.js_memberHomeTile').width(contRightWidth);
+        }else{
+            $('.js_memberHomeTile').width('100%');
+        }
 
 
         $('.js-personal').height(contHeight);
         $('.js-submenu').height(contHeight);
         $('.js-submenubtn').height(contHeight);
-        $('.js-membercontbox').height(contHeight);
+        //$('.js-membercontbox').height(contHeight);
+        $('.js-membercontbox').css('min-height',contHeight);
         //console.log(contHeight);
         if(windowWidth<576){
             $('.js-personal').height('auto');
             $('.js-submenubtn').height('auto');
             $('.js-submenu').height('auto');
-            $('.js-membercontbox').height(contRightHeight+100);
+            //$('.js-membercontbox').height(contRightHeight+100);
+            $('.js-membercontbox').css('min-height',contRightHeight+100);
         }
 
         //延迟加载图片
@@ -111,34 +119,19 @@ $(function() {
 
 
 
-//下拉菜单初始化
-
-    $("#js_save").oSelect().init();
-    $("#js_city").oSelect().init();
-    $("#js_area").oSelect().init();
-    $("#js_persave").oSelect().init();
-    $("#js_percity").oSelect().init();
-    $("#js_perarea").oSelect().init();
-
-
-    //个人信息
-    $('.js-personalinfotab').click( function () {
-        var tabNmu =$(this).index();
-        $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
-        $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
-        $('.js-uploadPhoto').show();
-        $('.js-modifyPhoto').hide();
-        $('.js-modifyPhotoBtn').hide();
-    })
-
-
-
-    $(".js_sex").jq_qvote();
-
     //修改手机页面三种状态
-    //$('.js-memberRevRateLine').css('width','0%');
-    //$('.js-memberRevRateLine').css('width','50%');
+
+
+    ////第二种
+    //$('.js-memberRevRateLine').css('width','75%');
+    //$('.js-memberRevRateTree').addClass('member-revisemob-No2').children('.member-revisemob-line-point02').children('div').addClass('.member-revisemob-line-finishpoint');
+    //$('.js-memberRevRateTree').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+    ////第三种
     //$('.js-memberRevRateLine').css('width','100%');
+    //$('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+    //
+
+
 
 
 
