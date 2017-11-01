@@ -9,7 +9,7 @@
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="member.css">
-    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+    <link rel="stylesheet" type="text/css" href="images/member_nav.css">
 
 </head>
 
