@@ -242,18 +242,20 @@ $(function() {
         }
     });
 
-    $(window).scroll(function () {
-        var $winTop = $(window).scrollTop();
-        var foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 70;
-        if($(".js_foldoverNav").hasClass("cur")){
-            if($winTop > foldH){
-                $(".js_oHerlFoldover").removeClass("fixed");
-            }else{
-                $(".js_oHerlFoldover").addClass("fixed");
+    if($(".js_detail-foldover").length){
+        $(window).scroll(function () {
+            var $winTop = $(window).scrollTop();
+            var foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 70;
+            if($(".js_foldoverNav").hasClass("cur")){
+                if($winTop > foldH){
+                    $(".js_oHerlFoldover").removeClass("fixed");
+                }else{
+                    $(".js_oHerlFoldover").addClass("fixed");
+                }
             }
-        }
 
-    });
+        });
+    }
 
     foldlsit();
     //电商拉页重新绘制拉页锚点
