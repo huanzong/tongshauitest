@@ -82,7 +82,7 @@ $(function() {
 
 
     //电商拉页
-    $('.js_foldPlus').on('click', function() {
+    /*$('.js_foldPlus').on('click', function() {
         //电商拉页-点击加号，展示锚点定位
         var eleI = $(this).find('i').eq(0);
         if (eleI.hasClass('icon-plus')) {
@@ -158,7 +158,149 @@ $(function() {
 
         });
 
+    });*/
+
+    /********电商拉页*******/
+    //电商拉页
+    $('.js_foldPlus').on('click', function() {
+        //电商拉页-点击加号，展示锚点定位
+        var eleI = $(this).find('i').eq(0);
+        if (eleI.hasClass('icon-plus')) {
+            //文字列表
+            $('.js_foldlist').slideDown(300);
+            eleI.removeClass('icon-plus').addClass('icon-close');
+            eleI.parent().css('color', '#ccc');
+
+            //点击加好显示所有图片
+            $('.js_foldimg .box').each(function (i) {
+                $(this).removeClass("o_df-hide");
+            })
+            //小屏幕文字列表-轮播
+            if(document.body.offsetWidth <= 991){
+                $('.js_foldoverSwiper').show();
+                $(this).find('span').html("");
+                $(this).parent(".js_oHerlFoldover").addClass("cur").addClass("fixed");
+                var html = '<a class="iconfont icon-bg-solid round js_round"></a>'
+                $(this).parent(".js_foldoverNav").append(html);
+            }else{
+                $(this).find('span').html("收起产品介绍");
+            }
+            if(document.body.offsetWidth <= 991) {
+                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
+            }else{
+                location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+            }
+        } else {
+
+            //文字列表
+            $('.js_foldlist').slideUp(300);
+            eleI.removeClass('icon-close').addClass('icon-plus');
+            eleI.parent().css('color', '#e60012');
+
+            //小屏幕文字列表-轮播
+            if(document.body.offsetWidth <= 991){
+                $('.js_foldoverSwiper').hide();
+                $(this).parent(".js_oHerlFoldover").removeClass("cur").removeClass("fixed");
+                $(".js_round").remove();
+            }
+
+            //点击加号隐藏img(除了第一个)
+            $('.js_foldimg .box').each(function (i) {
+                $(this).addClass("o_df-hide");
+                $('.js_foldimg .box').eq(0).removeClass("o_df-hide");
+            })
+
+
+            //$('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
+            $('.js_center').oBoxCenter().init();
+            $(this).find('span').html("详细产品介绍");
+            if(document.body.offsetWidth <= 991) {
+                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
+            }else{
+                location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+            }
+        }
+
     });
+
+    //锚点定位后，左侧按钮定位
+    $('.js_foldoverNav .js_foldlist').find('a').on('click',function(){
+        var index = parseInt($(this).attr('data-index'));
+        //点击当前锚点，添加选中状态，同类去掉选中状态
+        $(this).addClass("alive").siblings().removeClass("alive");
+        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        var top = (btnNum * 52) + 60;
+        for(var i=0 ; i<index ; i++){
+            top += $('.js_foldimg').find('img').eq(i).height();
+        }
+        if(document.body.offsetWidth>991){
+            $('.js_foldPlus').css('top',top);
+            $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
+            $('.js_foldlist').css('top',top-(btnNum * 52));
+        }else{
+            $('.js_foldoverNav').css('height',0);
+        }
+    });
+
+    if($(".js_detail-foldover").length){
+        $(window).scroll(function () {
+            var $winTop = $(window).scrollTop();
+            var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 200;
+            var $foldT = $(".js_detail-foldover").offset().top;
+            if($(".js_foldoverNav").hasClass("cur")){
+                if($winTop > $foldH){
+                    $(".js_oHerlFoldover").removeClass("fixed");
+                }else if($winTop < $foldT){
+                    $(".js_oHerlFoldover").removeClass("fixed");
+                }else{
+                    $(".js_oHerlFoldover").addClass("fixed");
+                }
+            }
+
+        });
+    }
+
+    foldlsit();
+    //电商拉页重新绘制拉页锚点
+    function foldlsit() {
+        $(".js_foldlsit_btn").html("");
+        $(".js_foldoverNav_btn").html("");
+        var num =$(".js_buyhtml .js_box").length;
+        var btnhtml = '';
+        var url=window.location.href.split("/")[window.location.href.split("/").length-1]
+        url = url.split("/")[0];
+        for(var i=0;i<num;i++){
+            $(".js_buyhtml .js_box").eq(i).attr("id",i+'F').addClass("o_df-hide");
+            $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
+            var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
+            if(document.body.offsetWidth>991){
+                if(i == 0){
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
+                }else{
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
+                }
+                $(".js_foldlsit_btn").html(btnhtml);
+            }else{
+                if(i == 0){
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2 alive" data-index='+i+'>'+text+'</a>';
+                }else{
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2" data-index='+i+'>'+text+'</a>';
+                }
+                $(".js_foldoverNav_btn").html(btnhtml);
+            }
+
+
+        }
+        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        var foldPlus = (btnNum * 52) + 60;
+        if(document.body.offsetWidth>991){
+            $(".js_foldPlus").css("top",foldPlus+'px');
+        }
+
+    }
+
+
+    /********电商拉页*********/
 
 
     //产品参数-结构图居中
@@ -261,8 +403,9 @@ $(function() {
             slidesPerView = 2;
         }
 
-        swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
-
+        if($(".js_swiperPreferential").length){
+            swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
+        }
         setTimeout(function() {
             $('.js_oHerl').css('height', $('.js_oHerlSize').outerHeight());
             $('.js_center').oBoxCenter().init();

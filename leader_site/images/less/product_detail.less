@@ -65,9 +65,54 @@
 				margin: 0 auto;
 				padding-bottom: 30px;
 				.activity-icon{
+					position: relative;
 					display: inline-block;
 					width: 33.33%;
 					text-align: center;
+					.activity-float{
+						z-index: 2;
+						display: none;
+						position: absolute;
+						top: 32px;
+						margin-top: 10px;
+						padding: 10px 0 10px 10px;
+						min-width: 180px;
+						background: #fff;
+						font-size: 0;
+						border-radius: 10px;
+						@media (max-width: 575px) {
+							top: -90px;
+    						right: 0;
+						}
+						.float-box{
+							display: inline-block;
+							width: 48px;
+							height: 48px;
+							border-radius: 5px;
+							margin-right: 10px;
+							text-align: center;
+							em{
+								position: relative;
+								top: 14px;
+								font-size: 24px;
+								color: #fff;
+							}
+						}
+						.float-blog{
+							background: @l-red;
+						}
+						.float-wechat{
+							background: @l-green;
+						}
+						.float-qq{
+							background: @l-orange;
+						}
+					}
+					&:hover{
+						.activity-float{
+							display: block;
+						}
+					}
 					.icon-font{
 						margin: 0 auto;
 						width: 30px;
@@ -133,6 +178,9 @@
 					right: 30px;
 					text-align: right;
 				}
+			}
+			@media (max-width: 575px) {
+				bottom: auto;
 			}
 			.particulars-browse{
 				padding-top: 60px;
@@ -334,9 +382,54 @@
 					padding-top: 30px;
 				}
 				.activity-icon{
+					position: relative;
 					padding-bottom: 10px;
 					cursor: pointer;
+					.activity-float{
+						z-index: 2;
+						display: none;
+						position: absolute;
+						top: 32px;
+						margin-top: 10px;
+						padding: 10px 0 10px 10px;
+						min-width: 180px;
+						background: #fff;
+						font-size: 0;
+						border-radius: 10px;
+						@media (max-width: 575px) {
+							top: -32px;
+						}
+						.float-box{
+							display: inline-block;
+							width: 48px;
+							height: 48px;
+							border-radius: 5px;
+							margin-right: 10px;
+							text-align: center;
+							em{
+								position: relative;
+								top: 14px;
+								font-size: 24px;
+								color: #fff;
+							}
+						}
+						.float-blog{
+							background: @l-red;
+						}
+						.float-wechat{
+							background: @l-green;
+						}
+						.float-qq{
+							background: @l-orange;
+						}
+					}
+					&:hover{
+						.activity-float{
+							display: block;
+						}
+					}
 					@media (min-width:1200px) {
+
 						&:hover{
 							.icon-font i,.icon-font-info {
 								color: @l-orange;
@@ -752,7 +845,7 @@
 			height: 70px;
 			border-top: 1px solid #edecec;
 			background: #fff;
-
+			z-index: 9;
 			.swiper-container{
 				width: 100%;
 				margin-top: -25px;
