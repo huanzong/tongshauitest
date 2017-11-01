@@ -110,9 +110,9 @@
 
                                 <div class="o_u o_df_11-12 order_content3_box" >
                                     <div class="o_u o_df_2-12 order_content_img">
-                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                        <img src="../images/compare_goods.PNG" alt=""  >
                                     </div>
-                                    <div class="o_u o_df_5-12 o_sm_10-12 o_xs_10-12 order_content_name">
+                                    <div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">
                                         <h4>统帅323L大容量无霜冰箱</h4>
                                         <span>BCD-323WLDPN</span>
                                     </div>
@@ -121,11 +121,23 @@
                                     </div>
                                     <div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">
                                         <ul class="o_u o_df_2-2">
-                                            <li><a href="javascript:;" class="l-btn-sm l-btn-orange o_u o_df_2-2">橘色按钮</a></li>
-                                            <li><a href="javascript:;">查看物流</a></li>
-                                            <li><a href="javascript:;">下载发票</a></li>
-                                            <li><a href="javascript:;">申请售后</a></li>
-                                            <li><a href="javascript:;">更多 <i class="iconfont icon-arrow-line-down"></i></a></li>
+                                            <li class="o_u o_df_2-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;" class="l-btn-sm l-btn-orange o_u o_df_2-2 o_sm_2-3 o_xs_2-3">评价</a></li>
+                                            <li class="o_u o_df_4-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;">申请售后</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2">申请售后</a></li>
+                                            <li class="o_u o_df_2-2 "><a href="javascript:;">下载发票</a></li>
+                                            <li class=" o_u o_df_2-2"><a href="javascript:;">申请售后</a></li>
+                                            <li class="o_u o_df_2-2 o_sm_4-12 o_xs_4-12" ><a href="javascript:;">更多 <i class="iconfont icon-arrow-line-down"></i></a>
+                                                <div class="l-float-tops">
+                                                    <div class="float_content">
+                                                        我是浮层<br>
+                                                        说明：<br>
+                                                        浮层宽度需要自定义<br>
+                                                        右侧小箭头会随着宽度自行居中<br>
+                                                    </div>
+                                                    <p>
+                                                        <i></i>
+                                                    </p>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

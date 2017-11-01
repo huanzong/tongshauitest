@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>个人中心-地址管理</title>
-
+    <base href='../'>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
-    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
-    <link rel="stylesheet" type="text/css" href="member.css">
+    <link rel="stylesheet" type="text/css" href="images/member.css">
     <link rel="stylesheet" type="text/css" href="images/member_nav.css">
 
 </head>
-
+images/
 <body>
 <div class="o_body">
     <div class="o_main">
@@ -173,12 +173,14 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
+        <!--#include virtual="public/personal_footer.shtml"-->
 
 
     </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+
+<!--#include virtual="public/foot.shtml"-->
+
 <!--弹出层1-->
 <div class="o_g land-shade js_landShade">
     <div class="land-box js_landContBox">
@@ -212,9 +214,9 @@
 <!--end弹出层2-->
 
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
-<script type="text/javascript" src="validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
-<script type="text/javascript" src="member_address.js"></script>
-<script type="text/javascript" src="templet_user_addressmanage.js"></script>
+<script type="text/javascript" src="images/member_address.js"></script>
+<script type="text/javascript" src="images/templet_user_addressmanage.js"></script>
 </body>
 </html>
