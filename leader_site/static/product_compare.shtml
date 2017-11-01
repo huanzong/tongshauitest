@@ -62,17 +62,17 @@
 	    			<div class="o_u o_df_1-12"></div>
 	    		</div>
 	    	</div>
-	    	<div class="o_g">
+	    	<div class="o_g productCompareDiv" >
 	    		<div class="compare_pro">
 		    		<div class="o_u o_df_1-12"></div>
-		    		<div class="o_u o_df_10-12">
+		    		<div class="o_u o_df_10-12 productCompareShowDiv">
 		    			<div class="o_u o_df_1-5">
 		    				<div class="compare_info">
 		    					共有<span>2</span>个产品<br>
 		    					最多可添加<span>4</span>个产品
 		    				</div>
 		    			</div>
-		    			<div class="o_u o_df_1-5">
+		    			<div class="o_u o_df_1-5 productInfo isAdd">
 		    				<div class="compare_goods">
 		    					<a class="iconfont icon-close"></a>
 		    					<img src="images/compare_goods.png">
@@ -81,7 +81,7 @@
 		    					<span class="goods_price">￥ 5637</span>
 		    				</div>
 		    			</div>
-		    			<div class="o_u o_df_1-5">
+		    			<div class="o_u o_df_1-5 productInfo isAdd">
 		    				<div class="compare_goods">
 		    					<a class="iconfont icon-close"></a>
 		    					<img src="images/compare_goods.png">
@@ -90,14 +90,14 @@
 		    					<span class="goods_price">￥ 5637</span>
 		    				</div>
 		    			</div>
-		    			<div class="o_u o_df_1-5">
+		    			<div class="o_u o_df_1-5 productInfo isAdd">
 		    				<div class="compare_addgoods">
 		    					<a class="add_box">
 		    						添加<br>产品
 		    					</a>
 		    				</div>
 		    			</div>
-		    			<div class="o_u o_df_1-5">
+		    			<div class="o_u o_df_1-5 productInfo isAdd">
 		    				<div class="compare_addgoods">
 		    					<a class="add_box">
 		    						添加<br>产品

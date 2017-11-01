@@ -3,8 +3,6 @@
  */
 $(function(){
 
-
-
     //页面加载时调个人信息
     $.ajax({
         type: "get",
@@ -89,6 +87,7 @@ $(function(){
         }
 
     });
+    //密码格式验证
     function checkPwdFormat(_sPwd) {
         var result = "200";
         if (_sPwd.length < 6) {
