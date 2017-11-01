@@ -82,7 +82,7 @@ $(function() {
 
 
     //电商拉页
-    $('.js_foldPlus').on('click', function() {/*
+    /*$('.js_foldPlus').on('click', function() {
         //电商拉页-点击加号，展示锚点定位
         var eleI = $(this).find('i').eq(0);
         if (eleI.hasClass('icon-plus')) {
@@ -245,7 +245,6 @@ $(function() {
     $(window).scroll(function () {
         var $winTop = $(window).scrollTop();
         var foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 70;
-        console.log($winTop+'-------'+foldH)
         if($(".js_foldoverNav").hasClass("cur")){
             if($winTop > foldH){
                 $(".js_oHerlFoldover").removeClass("fixed");
