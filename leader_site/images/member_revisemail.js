@@ -238,7 +238,7 @@ $(function(){
             $('.js-newEmail').attr('data-type','0');
         }
 
-    })
+    });
 //第二步点确定以前验证邮箱 验证码是否正确
     $('.js-emailCode').blur(function(){
 
