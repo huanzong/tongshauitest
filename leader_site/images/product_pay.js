@@ -14,7 +14,6 @@ $(function() {
 
                 //内容
                 var index = parseInt($(this).attr('pay-index'))-1;
-                console.log(index);
                 $('.js_paySystemBox').addClass('l-none');
                 $('.js_paySystemBox').eq(index).removeClass('l-none');
 
