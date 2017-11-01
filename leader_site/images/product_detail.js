@@ -400,8 +400,9 @@ $(function() {
             slidesPerView = 2;
         }
 
-        swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
-
+        if($(".js_swiperPreferential").length){
+            swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
+        }
         setTimeout(function() {
             $('.js_oHerl').css('height', $('.js_oHerlSize').outerHeight());
             $('.js_center').oBoxCenter().init();
