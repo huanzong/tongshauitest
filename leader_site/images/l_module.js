@@ -558,14 +558,15 @@ function btnTimeOut(obj,time,timetext){
     if(obj.hasClass(btnDisable)){
       return false;
     }else{
-        obj.addClass(btnDisable);
+        obj.addClass(btnDisable).attr('data-type',1);
         obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
+
     }
   var timeHtml =setInterval(function(){
       obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
       if(timeTotal<=0){
           clearInterval(timeHtml);
-          obj.removeClass(btnDisable).html(objHtml);
+          obj.removeClass(btnDisable).html(objHtml).attr('data-type','0');
       }
     },1000);
 }

@@ -172,8 +172,9 @@ $(function(){
     $('.js-newEmail').blur(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
-
-        if(yanzhengtrue){
+        var timeOut = $(this).attr('data-type');
+        if(yanzhengtrue&&!timeOut){
+            $('.js-newEmail').attr('data-type','1');
             $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
                 if($('.js-getinfo').hasClass('l-btn-disable'))
                 {
@@ -232,9 +233,9 @@ $(function(){
                     });
                 }
             })
-        }
-        else{
+        }else{
             $('.js-getinfo').addClass('l-btn-disable');
+            $('.js-newEmail').attr('data-type','0');
         }
 
     })
