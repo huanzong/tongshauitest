@@ -33,11 +33,11 @@ $(function(){
             if (jQuery.trim(data).length > 0) {
 
                 //loginName 需要在这里调取接口判断一下他是不是之前修改过 如果没修改过就是TEXT 修改过是不能填写的
-                template_loginName=jQuery.trim(returnData.data.loginName);
+                template_loginName=jQuery.trim(data.data.loginName);
                 $('#js_loginName').val(template_loginName);
 
                 //性别
-                template_sex=jQuery.trim(returnData.data.sex);
+                template_sex=jQuery.trim(data.data.sex);
                 if(template_sex=="1"){//男
                     $("#js_genderboy").attr("checked",true);
                     $("#js_gendergirl").attr("checked",false);
@@ -52,14 +52,14 @@ $(function(){
                 $(".js_sex").jq_qvote();
 
                 //生日放进去
-                template_birthday=jQuery.trim(returnData.data.birthday);
+                template_birthday=jQuery.trim(data.data.birthday);
                 $('.js_Date').val(template_birthday);
 
 
                 //居住地
-                template_provinceName=jQuery.trim(returnData.data.provinceName);
-                template_city=jQuery.trim(returnData.data.city);
-                template_areaName=jQuery.trim(returnData.data.areaName);
+                template_provinceName=jQuery.trim(data.data.provinceName);
+                template_city=jQuery.trim(data.data.city);
+                template_areaName=jQuery.trim(data.data.areaName);
                 //省
                 $.ajax({
                     url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
@@ -140,7 +140,12 @@ $(function(){
                     }
                 });
                 //头像放进去
-                $("#js-imgleft").attr("src",returnData.data.headUrl);
+                if(data.data.headUrl==null || data.data.headUrl==''){
+                    $("#js-imgleft").attr("src",'/images/user_img.jpg');
+                }
+                else{
+                    $("#js-imgleft").attr("src",data.data.headUrl);
+                }
             }
         }
     });
