@@ -121,7 +121,7 @@ $(function() {
     });
 
 
-    btnTimeOut($('.js_registerContTime'),120,'后可重新发送');
+    //btnTimeOut($('.js_registerContTime'),120,'后可重新发送');
     //倒计时
     var wait = 5;
     function sendTime() {
