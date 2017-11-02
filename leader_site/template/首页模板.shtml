@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <base href='../'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <!--#include virtual="public/head.shtml"-->
+        <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="images/index.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <!-- 首屏动画 -->
+            <div class="o_g js_animateLine">
+                <div class="index_animate">
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox"></div>
+                </div>
+            </div>
+            <!-- 首屏动画 End -->
+            <!-- 导航 -->
+            <!--#include virtual="public/nav.shtml"-->
+            <!-- 导航 End-->
+            <!-- 首页banner -->
+            <div class="o_g index-banner">
+                <div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
+                    <!-- banner文字循环体 -->
+                    <div class="banner-middle-box js_bannerSwiperFont">
+                        <div class="info-main">
+                            <div class="js_bannnerCenter">
+                                <span>在这个做作的时代11</span>
+                            </div>
+                        </div>
+                        <div class="info-main">
+                            <div class="js_bannnerCenter">
+                                <span>海尔真诚到永远真诚到</span>
+                            </div>
+                        </div>
+                        <div class="info-sub">
+                            <div class="js_bannnerCenter">
+                                <span>在这个做作的时代</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-middle-box js_bannerSwiperFont">
+                        <div class="info-main">
+                            <div class="js_bannnerCenter">
+                                <span>在这个做作的时代22</span>
+                            </div>
+                        </div>
+                        <div class="info-main">
+                            <div class="js_bannnerCenter">
+                                <span>海尔真诚到永远真诚到</span>
+                            </div>
+                        </div>
+                        <div class="info-sub">
+                            <div class="js_bannnerCenter">
+                                <span>在这个做作的时代</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- banner文字循环体 End-->
+                    <!-- banner 分页 不需要循环-->
+                    <div class="banner-page js_bannerSwiperPage">
+                        <div class="page-num active" data-index=1>
+                            <div class="line">
+                                <div class="red-line"></div>
+                            </div>
+                            <div class="num">01</div>
+                        </div>
+                        <div class="page-num" data-index=2>
+                            <div class="line">
+                                <div class="red-line"></div>
+                            </div>
+                            <div class="num">02</div>
+                        </div>
+                        <div class="page-num" data-index=3>
+                            <div class="line">
+                                <div class="red-line"></div>
+                            </div>
+                            <div class="num">03</div>
+                        </div>
+                    </div>
+                    <!-- banner 分页 不需要循环 END-->
+                </div>
+                <div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
+                    <div class="banner-img">
+                        <div class="swiper-container js_bannerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/footer_logo1.jpg" sm="images/footer_logo1.jpg" xs="images/footer_logo1.jpg">
+                                        <!-- <img class="js_bg" src="images/index_banner.JPG"> -->
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <img class="js_recPic" src="" df="images/index_banner2.JPG" md="images/footer_logo1.jpg" sm="images/footer_logo1.jpg" xs="images/footer_logo1.jpg">
+                                        <!-- <img class="js_bg" src="images/index_banner2.JPG"> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
+                    <!-- 循环体 -->
+                    <div class="o_u o_df_2-2 js_bannerSwiperFont1">
+                        <div class="banner-big">在这个做作的时代11</div>
+                        <div class="banner-big">我选择做最真实的自己</div>
+                        <div class="banner-small">我只选择统帅统帅</div>
+                    </div>
+                    <div class="o_u o_df_2-2 js_bannerSwiperFont1">
+                        <div class="banner-big">在这个做作的时代22</div>
+                        <div class="banner-big">我选择做最真实的自己</div>
+                        <div class="banner-small">我只选择统帅统帅</div>
+                    </div>
+                    <!-- 循环体 END -->
+                </div>
+            </div>
+            <!-- 首页banner END -->
+            <!-- 统帅入口 -->
+            <div class="o_g index-enter">
+                <a class="enter-con">
+                    <div class="enter-con-icon icon1">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <a class="enter-con">
+                    <div class="enter-con-icon icon2">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <a class="enter-con">
+                    <div class="enter-con-icon icon3">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <a class="enter-con">
+                    <div class="enter-con-icon icon4">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <a class="enter-con">
+                    <div class="enter-con-icon icon5">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <a class="enter-con">
+                    <div class="enter-con-icon icon6">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <div class="enter-con enter-con-xs js_enterShow">
+                    <i class="iconfont icon-icon enter-corner-left"></i>
+                </div>
+                <a class="enter-con">
+                    <div class="enter-con-icon icon7">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <div class="enter-con enter-con-xs js_enterShow">
+                    <i class="iconfont icon-icon enter-corner-right"></i>
+                </div>
+                <!-- 以下是超过7个，默认隐藏的产线入口 -->
+                <a class="enter-con l-none js_enterShow">
+                    <div class="enter-con-icon icon7">
+                        <img src="images/index_enter1.png">
+                    </div>
+                    <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
+                    <div class="enter-con-en">REFRIGERATOR</div>
+                    <div class="enter-con-china o_xs-hide">冰箱</div>
+                    <div class="enter-con-point o_xs-hide">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <!-- 以下是超过7个，默认隐藏的产线入口 END -->
+            </div>
+            <a class="index-enter-more js_enterMore" data-type="more">
+		    	展开全部产品分类 +
+		    </a>
+            <!-- 统帅入口 END -->
+            <!-- 推荐产品 -->
+            <div class="o_g index-recommend">
+                <div class="recommend-bg o_sm-hide o_xs-hide"></div>
+                <div class="o_u o_df_1-6 o_md_1-12 o_sm-hide o_xs-hide">
+                    <div class="recommend-img-small">
+                        <!-- <img src="images/index_rec_next1.JPG" class=""> -->
+                        <img class="recommend-img-next js_recImgSmall js_recPic" src="" df="images/index_rec_next1.JPG" md="images/index_rec_next3.JPG">
+                    </div>
+                </div>
+                <div class="o_u o_df_1-3 o_md_5-12 o_sm-hide o_xs-hide">
+                    <!-- 循环体 -->
+                    <div class="recommend-info js_recommendFont">
+                        <div class="info-title">对洗衣机也可以11</div>
+                        <div class="info-title">有小随意和小任性</div>
+                        <div class="info-con">
+                            我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+                        </div>
+                        <a class="info-more">
+		    				<span></span>
+		    				<span></span>
+		    				<span></span>
+		    			</a>
+                    </div>
+                    <!-- 循环体 End -->
+                    <div class="recommend-info js_recommendFont">
+                        <div class="info-title">对洗衣机也可以22</div>
+                        <div class="info-title">有小随意和小任性</div>
+                        <div class="info-con">
+                            我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+                        </div>
+                        <a class="info-more">
+		    				<span></span>
+		    				<span></span>
+		    				<span></span>
+		    			</a>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2 recommend-main">
+                    <div class="recommend-main-bg"></div>
+                    <div class="rec-swiper-btn rec-swiper-prev js_swiperRecMainPrev"></div>
+                    <div class="rec-swiper-btn rec-swiper-next js_swiperRecMainNext"></div>
+                    <div class="recommend-main-box">
+                        <div class="swiper-container js_swiperRecMain">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+							        	<img class="js_recPic" src="" df="images/index_rec_next1.JPG" md="images/index_rec_next3.JPG">
+							        </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+							        	<img class="js_recPic" src="" df="images/index_rec_next2.JPG" md="images/index_rec_next4.JPG">
+							        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-main-info o_df-hide o_sm-show o_xs-show">
+                        <!-- 循环体 -->
+                        <div class="js_recommendFont1">
+                            <div class="info-title">对洗衣机也可以11</div>
+                            <div class="info-title">有小随意和小任性</div>
+                            <div class="info-con">
+                                我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+                            </div>
+                            <a class="info-more">
+			    				<span></span>
+			    				<span></span>
+			    				<span></span>
+			    			</a>
+                        </div>
+                        <!-- 循环体 End -->
+                        <div class="js_recommendFont1">
+                            <div class="info-title">对洗衣机也可以22</div>
+                            <div class="info-title">有小随意和小任性</div>
+                            <div class="info-con">
+                                我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性我们的洗衣机，那是最好的，对洗衣机也可以，有小随意和小任性
+                            </div>
+                            <a class="info-more">
+			    				<span></span>
+			    				<span></span>
+			    				<span></span>
+			    			</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 推荐产品 END -->
+            <!-- 首页入口 -->
+            <div class="o_g index-entrance">
+                <div class="o_u o_df_1-12 o_sm-hide o_xs-hide">
+                    <div class="rec-swiper-btn rec-swiper-prev js_swiperEntrabcePrev"></div>
+                </div>
+                <div class="o_u o_df_10-12 o_sm_12-12 o_xs_12-12">
+                    <div class="index-entrance-row">
+                        <div class="swiper-container js_swiperEntrabce">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="o_g">
+                                        <div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
+                                            <div class="l-padding">
+                                                <a href="javascript:;">
+						        					<img src="images/index_entrance01.jpg">
+						        				</a>
+                                                <div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
+                                                    <h3>你是我简单满足<br>的小确幸1111</h3>
+                                                    <p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+                                                    <a class="info-more">
+									    				<span></span>
+									    				<span></span>
+									    				<span></span>
+									    			</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
+                                            <div class="entrance-page o_md-hide">
+                                                <div class="entrance-page-line">
+                                                    <div class="entrance-line-red"></div>
+                                                </div>
+                                                <div class="entrance-page-num js_entrancePage">
+                                                    <div class="page-num" data-index=1>01</div>
+                                                    <div class="page-num" data-index=2>02</div>
+                                                    <div class="page-num" data-index=3>03</div>
+                                                </div>
+                                            </div>
+                                            <div class="l-padding">
+                                                <div class="o_u entrance-img2">
+                                                    <img src="images/index_entrance02.jpg" style="width: 100%">
+                                                </div>
+                                                <br>
+                                                <div class="index-entrance-bottom o_sm-hide o_xs-hide">
+                                                    <div class="o_df-hide o_md-show entrance-page">
+                                                        <div class="entrance-page-line">
+                                                            <div class="entrance-line-red"></div>
+                                                        </div>
+                                                        <div class="entrance-page-num js_entrancePage1">
+                                                            <div class="page-num">01</div>
+                                                            <div class="page-num active">02</div>
+                                                            <div class="page-num">03</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o_u entrance-img3">
+                                                        <img src="images/index_entrance03.jpg" style="width: 100%">
+                                                    </div>
+                                                    <div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
+                                                        <h3>你是我简单满足<br>的小确幸</h3>
+                                                        <p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+                                                        <a class="info-more">
+									    				<span></span>
+									    				<span></span>
+									    				<span></span>
+									    			</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="o_g">
+                                        <div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
+                                            <div class="l-padding">
+                                                <a href="javascript:;">
+						        					<img src="images/index_entrance01.jpg">
+						        				</a>
+                                                <div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
+                                                    <h3>你是我简单满足<br>的小确幸1111</h3>
+                                                    <p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+                                                    <a class="info-more">
+									    				<span></span>
+									    				<span></span>
+									    				<span></span>
+									    			</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
+                                            <div class="entrance-page o_md-hide">
+                                                <div class="entrance-page-line">
+                                                    <div class="entrance-line-red"></div>
+                                                </div>
+                                                <div class="entrance-page-num js_entrancePage">
+                                                    <div class="page-num" data-index=1>01</div>
+                                                    <div class="page-num" data-index=2>02</div>
+                                                    <div class="page-num" data-index=3>03</div>
+                                                </div>
+                                            </div>
+                                            <div class="l-padding">
+                                                <div class="o_u entrance-img2">
+                                                    <img src="images/index_entrance02.jpg" style="width: 100%">
+                                                </div>
+                                                <br>
+                                                <div class="index-entrance-bottom o_sm-hide o_xs-hide">
+                                                    <div class="o_df-hide o_md-show entrance-page">
+                                                        <div class="entrance-page-line">
+                                                            <div class="entrance-line-red"></div>
+                                                        </div>
+                                                        <div class="entrance-page-num js_entrancePage1">
+                                                            <div class="page-num">01</div>
+                                                            <div class="page-num active">02</div>
+                                                            <div class="page-num">03</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o_u entrance-img3">
+                                                        <img src="images/index_entrance03.jpg" style="width: 100%">
+                                                    </div>
+                                                    <div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
+                                                        <h3>你是我简单满足22<br>的小确幸</h3>
+                                                        <p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+                                                        <a class="info-more">
+									    				<span></span>
+									    				<span></span>
+									    				<span></span>
+									    			</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12 o_sm-hide o_xs-hide">
+                    <div class="rec-swiper-btn rec-swiper-next js_swiperEntrabceNext"></div>
+                </div>
+            </div>
+            <!-- 首页入口 END -->
+            <!-- 关于统帅 -->
+            <div class="o_g index-about">
+                <div class="o_g index-about-bg o_sm-hide o_xs-hide">
+                    <div class="o_u o_df_4-12 o_lg_6-12 o_md_6-12">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="o_g">
+                        <div class="o_u o_df_4-10 o_lg_1-2 o_md_1-2 o_sm_3-5 o_xs_3-4 index-about-data">
+                            <div class="o_u o_df-hide o_sm-show o_xs-show about-select-sm">
+                                <div class="about-china">选择统帅</div>
+                                <a class="about-en">WHY CHOOSE US</a>
+                            </div>
+                            <a class="about-data-box">
+                                <div class="data-title">国家研发机构</div>
+                                <div class="data-num">43</div>
+                            </a>
+                            <a class="about-data-box">
+                                <div class="data-title">国家研发机构</div>
+                                <div class="data-num">38</div>
+                            </a>
+                            <a class="about-data-box">
+                                <div class="data-title">国家研发机构</div>
+                                <div class="data-num">38</div>
+                            </a>
+                            <a class="about-data-box">
+                                <div class="data-title">国家研发机构</div>
+                                <div class="data-num">38</div>
+                            </a>
+                            <a class="about-data-box">
+                                <div class="data-title">国家研发机构</div>
+                                <div class="data-num">38</div>
+                            </a>
+                            <a class="about-data-box">
+                                <div class="data-title">国家研发机构</div>
+                                <div class="data-num">38</div>
+                            </a>
+                        </div>
+                        <div class="o_u o_df_6-10 o_lg_1-2 o_md_1-2 o_sm_1-3 o_xs_1-2 index-about-select">
+                            <div class="o_u o_df_1-6 o_lg_2-5 o_md_2-5 o_sm_hide o_xs-hide"></div>
+                            <div class="o_u o_df_5-6 o_lg_3-5 o_md_3-5 o_sm_2-2 o_xs_2-2">
+                                <div class="about-bg-gray">
+                                    <div class="about-font o_sm-hide o_xs-hide">
+                                        <div class="about-china">选择统帅</div>
+                                        <a class="about-en">WHY CHOOSE US</a>
+                                    </div>
+                                    <i class="iconfont icon-icon about-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 关于统帅 END -->
+            <!--#include virtual="public/footer.shtml"-->
+        </div>
+    </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="images/index.js"></script>
+</body>
+
+</html>
