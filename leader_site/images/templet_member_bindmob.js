@@ -107,12 +107,14 @@ $(function(){
     $('.js-newMobile').blur(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+        var timeOut = $(this).attr('data-type');
 
-        if(yanzhengtrue){
+        if(yanzhengtrue&&!timeOut){
+            $('.js-newMobile').attr('data-type','1');
             $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
 
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
-                if(yanzhengtrue){
+                if(yanzhengtrue&&!timeOut){
                     if($('.js-getinfo').hasClass('l-btn-disable'))
                     {
                         return;
@@ -171,6 +173,7 @@ $(function(){
             })
         }
         else{
+            $('.js-newMobile').attr('data-type',0);
             $('.js-getinfo').addClass('l-btn-disable');
         }
     })

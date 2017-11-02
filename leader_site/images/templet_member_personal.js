@@ -29,11 +29,8 @@ $(function(){
         url: siteConfig.userUrl+"/user/front/user/userInfo/",
         data: "",
         login:true,
-        success_cb: function(returnData){
-            if (jQuery.trim(returnData).length > 0) {
-                if(returnData.resultMsg=='用户未登录'){
-                    window.location.href ='/ids/ts/login.jsp';
-                }
+        success_cb: function(data){
+            if (jQuery.trim(data).length > 0) {
 
                 //loginName 需要在这里调取接口判断一下他是不是之前修改过 如果没修改过就是TEXT 修改过是不能填写的
                 template_loginName=jQuery.trim(returnData.data.loginName);
