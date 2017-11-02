@@ -245,9 +245,12 @@ $(function() {
     if($(".js_detail-foldover").length){
         $(window).scroll(function () {
             var $winTop = $(window).scrollTop();
-            var foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 70;
+            var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 200;
+            var $foldT = $(".js_detail-foldover").offset().top;
             if($(".js_foldoverNav").hasClass("cur")){
-                if($winTop > foldH){
+                if($winTop > $foldH){
+                    $(".js_oHerlFoldover").removeClass("fixed");
+                }else if($winTop < $foldT){
                     $(".js_oHerlFoldover").removeClass("fixed");
                 }else{
                     $(".js_oHerlFoldover").addClass("fixed");
