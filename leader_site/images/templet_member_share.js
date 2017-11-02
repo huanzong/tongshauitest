@@ -12,9 +12,9 @@ $(function () {
 
     //根据订单传的orderId 查询商品信息
     var templet_orderId=getQueryString("orderId");
-    //var templet_orderId=getQueryString("orderId");入口2需要传给我产品注册码
-    var templet_productId=getQueryString("productId");
-    if(templet_productId==null){
+    //var templet_XXX=getQueryString("");入口2需要传给我产品注册码
+    var templet_modelNo=getQueryString("modelNo");
+    if(templet_modelNo==null){
         window.location.href ='/order';
     }
 
@@ -35,9 +35,9 @@ $(function () {
                     //如果没在订单里查到对应的产品，返回订单页面
                     var templet_validate=true;
                     for(var i=0;i<templet_productgoods.length;i++){
-                        if(templet_productgoods[i].productId==templet_productId){
+                        if(templet_productgoods[i].modelNo==templet_modelNo){
                             templet_validate=false;
-                            $('.js-productName').html(templet_productgoods[i].goodsName+ '<br><span>'+templet_productgoods[i].outSkuCode+'</span>');
+                            $('.js-productName').html(templet_productgoods[i].goodsName+ '<br><span>'+templet_productgoods[i].modelNo+'</span>');
                             $('.js-productimg').attr('src',templet_productgoods[i].goodsPic);
                         }
                     }
@@ -147,17 +147,17 @@ $(function () {
                 'content':templet_content,
                 'isHavePic':templet_isHavePic,
                 'devSource':templet_devSource,
-                'businessId':templet_productId,
+                'businessId':templet_modelNo,
                 'channelSource':'1',
-                'productCategoryId':'61',
+                'categoryId':'2',
                 'orderId':templet_orderId
             };
             $.ajax({
                 contentType:"application/json",
                 url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
                 data:  JSON.stringify(data),
-                success_cb: function(returnData){
-                    if(returnData.isSuccess){
+                success_cb: function(data){
+                    if(data.isSuccess){
                         $('.js_popUpBox3').show();
 
                         btnTimeOut($('.js_popUpTimeOver'),5,'');
@@ -167,7 +167,7 @@ $(function () {
                         },4000);
                     }
                     else{
-                        $('.js-content').removeClass('member-share-evaluate-right').html(returnData);
+                        $('.js-content').removeClass('member-share-evaluate-right').html(data.fieldErrors.errorMsg);
                     }
                 }
             });
