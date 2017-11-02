@@ -42,39 +42,44 @@
     position: relative;
     margin-right: -5.55%;
     .swiper-container{
-      width: 100%;
-      // width: 65%;
-      height: 626px;
 
       @media (min-width: 1770px) {
+        width: 100%;
         height: 795px;
       }
-      @media (max-width: 1199px) {
+      @media (min-width: 1769px) and (max-width: 1769px) {
+        width: 100%;
+        height: 626px;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        width: 100%;
         height: 500px;
       }
 
       @media (max-width: 991px) {
-        height: 500px;
-        width: auto;
-        margin-left: -69.5%;
-        margin-right: -65%;
+        position: relative;
+        left: -30%;
+        // height: 500px;
+        width: 160%;
+        // margin-left: -69.5%;
+        // margin-right: -65%;
       }
 
       .swiper-slide{
         display: inline-block;
-
+        text-align: center;
         a{
           display: block;
-          height: 100%;
 
           @media (max-width: 991px) {
-            margin: 0 20px;
+            // margin: 0 20px;
           }
         }
 
         img{
+          width: 100%;
           text-align: center;
-          height: 100%;
+          // height: 100%;
         }
       }
     }

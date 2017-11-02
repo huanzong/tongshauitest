@@ -33,7 +33,7 @@ $(function() {
     updateOnImagesReady : true,
     centeredSlides : true,
     // initialSlide :1,
-    onFirstInit: function(swiper){
+    onInit: function(swiper){
       var index = swiper.activeLoopIndex;
       $('.js_bannerSwiperFont').eq(1).fadeIn(100);
       $('.js_bannerSwiperFont1').fadeOut();
@@ -47,19 +47,18 @@ $(function() {
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
       var index = swiper.activeLoopIndex;
 
-      // $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-      //   'height': 500,
-      //   'margin-left': -455.5,
-      //   'margin-top': -250
-      // }, 500);
+      $('.js_bannerSwiper .swiper-slide-active').find('a').animate({
+        // 'height': 500,
+        // 'margin-left': -455.5,
+        'margin': 0
+      }, 500);
 
-      // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-      //   'height': 382,
-      //   'margin-left': -348.5,
-      //   'margin-top': -191
-      // });
+      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('a').css({
+        // 'height': 382,
+        // 'margin-left': -348.5,
+        'margin': 50
+      },10);
 
-      console.log(index);
       //文字
       $('.js_bannerSwiperFont1').hide();
       $('.js_bannerSwiperFont1').eq(index).fadeIn(500);
@@ -67,7 +66,9 @@ $(function() {
       $('.js_bannerSwiperPage .page-num').removeClass('active');
       $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
     };
-
+    // setTimeout(function(){
+    //   swiper.bannerSwiper.reInit();
+    // },1000);
     // $(".js_bg").oBgCover().init();
 
     // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
@@ -93,6 +94,11 @@ $(function() {
       $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
     };
   }
+
+  //确保加载图片以后，重新加载轮播
+  setTimeout(function(){
+    swiper.bannerSwiper.reInit();
+  },1000);
 
   $('.js_bannerSwiperPage .page-num').on('click',function(){
     var pageNum = $(this).attr('data-index');
