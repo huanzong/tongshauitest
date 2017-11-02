@@ -3,15 +3,40 @@
  */
 $(function(){
     var windowW = $(window).width();
-    var windowH = $(document).height();
+    var windowH = $(window).height();
+    var documenHeight;
+    var documenHeights;
     var contH   = $('body').height();
-    $('.js_memberNavMiddleBtn').css({'padding-top':contH/2,height:windowH});
-    $('.js_memberNavLeft').height(windowH);
+    documenHeight = $('.js-membercontboxs').height();
+    $('.js_memberNavLeft').height(documenHeight+60 );
+    $('.js_memberNavMiddle').css({'height':documenHeight+60});
+    $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
+    //$('.js_memberNavLeft').height(windowH);
+
+
+    var time_height = setInterval(function(){
+        if(windowW<576){
+            $('.js_memberNavLeft').height('60px');
+            $('.js_memberNavMiddleBtn').css({height:'60px'});
+
+        }else{
+            documenHeight = $('.js-membercontboxs').height();
+            if(documenHeight!=documenHeights&&documenHeight>762){
+                $('.js_memberNavLeft').height(documenHeight+60 );
+                $('.js_memberNavMiddle').css({'height':documenHeight+60});
+                $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
+            }
+        }
+        console.log(1);
+    },500);
+
 
     if(windowW<576){
         $('.js_memberNavLeft').height('60px');
     }
     if(windowW>992){
+        $('.js-membercontboxs').width(windowW*0.66666);
+
     }else if(windowW>700&&windowW<992){
         if($('js-membercontboxs-2')){
             $('.js-membercontboxs').width(windowW*0.86);
@@ -33,8 +58,8 @@ $(function(){
         var windowH = $(document).height();
         var contH   = $('body').height();
         //$('.js_memberNavLeft').height($('.js_memberNavMiddle').height());
-        $('.js_memberNavLeft').height(windowH);
-        $('.js_memberNavMiddleBtn').css({'padding-top':contH/2,height:windowH});
+        //$('.js_memberNavLeft').height(windowH);
+        //$('.js_memberNavMiddleBtn').css({'padding-top':contH/2});
         if(windowW>992){
             $('.js-membercontboxs').width(windowW*0.66666);
         }else if(windowW>700&&windowW<992){
