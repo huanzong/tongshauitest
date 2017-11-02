@@ -6,8 +6,8 @@
 
     <%=base%>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include virtual="public/head.shtml"-->
 
     <link rel="stylesheet" type="text/css" href="images/reset_password.css">
@@ -16,55 +16,55 @@
 
 <body>
 <div class="o_body">
-    <div class="o_main">
+    <div class="o_main reset_box">
         <div class="o_g">
-            <div class="reset_box">
-                <div class="o_u o_df_1-2 o_lg_10-12 o_md_10-12 o_sm_2-2 o_xs_2-2 box_reset">
-                    <div class="resetbox o_borderbox js_center">
-
-                        <!--START  验证邮件已发送-->
-                        <div class="two_step js_twoStep ">
-                            <div class="resetbox_head o_borderbox o_g">
-                                <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 o_df-textleft  left ">
-                                    <img class="pic" src="images/logo.png"/>
-                                    <div class="txt">找回密码</div>
-                                </div>
-                                <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 o_df-textleft o_lg-textright o_md-center o_sm-center o_xs-center right">
-                                    <div class=" num"><i>1</i><span>确认账号</span></div>
-                                    <div class=" num cur"><i>2</i><span>安全验证</span></div>
-                                    <div class=" num none"><i>3</i><span class="o_xs-hide">重设密码</span></div>
-                                </div>
-                            </div>
-                            <div class="resetbox_form o_borderbox  o_g">
-                                <div class="o_u o_df_10-12 email_sendover">
-                                    <p>我们已将验证邮件发至您的邮箱</p>
-                                    <i class="o_u o_df_2-2">3322512542@qq.com</i>
-                                    <span>请前往邮箱验证</span>
-                                    <a href="javascript:;" class="l-btn-normal l-btn-red o_u o_df_2-2 ">立即登录邮箱</a>
-                                    <div class="mail_register_cont_time js_registerContTime"><a href="">重新发送</a></div>
-                                    <div class="mail_register_cont_down">没有收到邮件<i class="iconfont icon-problem-solid js_resgoster_hover"  ></i>
-                                        <div class="l-float-tops"  >
-                                            <div class="float_content">
-                                                <p>1. 检查邮箱是否正确无误</p>
-                                                <p>2. 检查邮件是否进入垃圾箱</p>
-                                                <p>3. 使用<a href="javascript:;">手机号注册</a> ，更方便快捷</p>
-                                            </div>
-                                            <p>
-                                                <i></i>
-                                            </p>
+            <!--<div class="o_u o_df_1-2 o_lg_10-12 o_md_10-12 o_sm_2-2 o_xs_2-2 box_reset">-->
+            <div class="resetbox o_borderbox js_center">
+                <!--START  验证邮件已发送-->
+                <div class="two_step js_twoStep  email-send">
+                    <div class="resetbox_head o_borderbox o_g">
+                        <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 o_df-textleft  left ">
+                            <img class="pic" src="images/logo.png"/>
+                            <div class="txt">找回密码</div>
+                        </div>
+                        <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 o_df-textleft o_lg-textright o_md-center o_sm-center o_xs-center right">
+                            <div class=" num"><i>1</i><span>确认账号</span></div>
+                            <div class=" num cur"><i>2</i><span>安全验证</span></div>
+                            <div class=" num none"><i>3</i><span class="o_xs-hide">重设密码</span></div>
+                        </div>
+                    </div>
+                    <div class="resetbox_form o_borderbox  o_g">
+                        <div class="o_u o_df_10-12 email_sendover">
+                            <p>我们已将验证邮件发至您的邮箱</p>
+                            <i class="o_u o_df_2-2">3322512542@qq.com</i>
+                            <span>请前往邮箱验证</span>
+                            <a href="javascript:;" class="l-btn-normal l-btn-red o_u o_df_2-2 ">立即登录邮箱</a>
+                            <div class="mail_register_cont_time js_registerContTime"><a href="">重新发送</a></div>
+                            <div class="mail_register_cont_down">没有收到邮件
+                                <i class="iconfont icon-problem-solid js_resgoster_hover">
+                                    <div class="l-float-tops">
+                                        <div class="float_content">
+                                            <p>1. 检查邮箱是否正确无误</p>
+                                            <p>2. 检查邮件是否进入垃圾箱</p>
+                                            <p>3. 使用<a href="javascript:;">手机号注册</a> ，更方便快捷</p>
                                         </div>
+                                        <p>
+                                            <i></i>
+                                        </p>
                                     </div>
-                                </div>
+                                </i>
+
                             </div>
                         </div>
-                        <!--END    验证邮件已发送-->
                     </div>
                 </div>
-                <div class="resetbox_foot">
-                    <!--#include virtual="public/login_footer.shtml"-->
-                </div>
-
+                <!--END    验证邮件已发送-->
             </div>
+            <!--</div>-->
+            <div class="resetbox_foot">
+                <!--#include virtual="public/login_footer.shtml"-->
+            </div>
+
         </div>
 
     </div>
