@@ -5,9 +5,9 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
     //前台判断是否登陆
-    // if(!istrsidssdssotoken()){
-    //     jumpToLoginPage();
-    // }
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage();
+    }
 
     $.ajax({
         type: "get",
@@ -16,9 +16,6 @@ $(function(){
         login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
-                if(data.resultMsg=='用户未登录'){
-                    window.location.href ='/ids/ts/login.jsp';
-                }
                 var templet_email=jQuery.trim(data.data.email);
                 if(templet_email==null || templet_email==""){
                     self.location = '/security';
@@ -136,11 +133,11 @@ $(function(){
             var templet_param;
             var templet_code=$('.js_emailCodeYz').val(); //验证码
             var templet_pretermit=$('#js_revisemail').val(); //下拉的value
-            if(templet_pretermit=='0' || templet_pretermit=='1'){
+            if( templet_pretermit=='1'){
 
                 templet_param='mobile';
             }
-            if(templet_pretermit=='2' ){
+            if(templet_pretermit=='0' ||templet_pretermit=='2' ){
                 templet_param='email';
             }
 
@@ -235,7 +232,7 @@ $(function(){
             })
         }else{
             $('.js-getinfo').addClass('l-btn-disable');
-            $('.js-newEmail').attr('data-type','0');
+            $('.js-newEmail').attr('data-type',0);
         }
 
     });
@@ -332,7 +329,6 @@ $(function(){
                 return false;
             })
         }
-
     })
 
 

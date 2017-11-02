@@ -58,10 +58,11 @@ $(function(){
                 if (templet_mobiletrim != null && templet_mobiletrim != "") {
                     templet_grade = templet_grade + 30;
                     var templet_mobile = templet_mobiletrim.replace(/^(\d{3})\d{4}(\d+)/, "$1****$2");//手机号加*
-                    if (templet_mobile == null || templet_mobile == "") {
+                    if (templet_emailtrim == null || templet_emailtrim == "") {
                         $('.js-mobilesuccessfirst').html(templet_mobile);
                         $('.js-mobilesuccessfirst').show();
                         $('.js-mobilefalsefirst').hide();
+                        $('.js-mobilesuccesslast').hide();
                         $('.js-mobilefalselast').hide();
                     }
                     else {

@@ -18,9 +18,6 @@ $(function(){
         login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
-                if(data.resultMsg=='用户未登录'){
-                    window.location.href ='/ids/ts/login.jsp';
-                }
                 var templet_email=jQuery.trim(data.data.email);
                 var templet_call=jQuery.trim(data.data.mobile);
                 if(templet_email==null || templet_email==""){
