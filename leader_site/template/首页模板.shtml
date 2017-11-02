@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
@@ -10,6 +11,7 @@
         <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
         <link rel="stylesheet" type="text/css" href="images/index.css">
 </head>
+
 <body>
     <div class="o_body">
         <div class="o_main">
