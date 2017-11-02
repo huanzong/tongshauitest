@@ -28,7 +28,7 @@
 					</div>
 					<div class="index_animateBox">
 						<span></span>
-					</div> 
+					</div>
 					<div class="index_animateBox">
 						<span></span>
 					</div>
@@ -873,7 +873,7 @@
 	    					<span class="list-tit">箱门结构：</span>
 	    					<div class="list-line">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
-	    						<a class="l-btn-sm list-btn">按钮</a>
+	    						<a class="l-btn-sm list-btn disabled">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -952,6 +952,10 @@
 	    					</div>
 	    				</li>
 	    			</ul>
+	    			<div class="layer-list-btn">
+							<a href="javascript:;" class="list-btn-reset">重置</a>
+							<a href="javascript:;" class="list-btn-finish js_layerClose">完成</a>
+	    			</div>
 	    		</div>
 	    	</div>
 	    <!-- 弹层-筛选项 END -->
