@@ -324,6 +324,9 @@ $(function() {
             watchActiveIndex: true,
             onFirstInit: function(swiper) {
 
+
+                $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
+
                 // var index = swiper.activeLoopIndex;
                 var index = swiper.activeIndex;
 

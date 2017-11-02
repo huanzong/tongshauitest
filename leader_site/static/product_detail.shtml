@@ -41,7 +41,6 @@
             <!-- 首屏展示 -->
             <div class="o_g">
                 <div class="detail-first">
-                    <!-- <img class="o_picture" src="" df="images/ignore_prodetail1.jpg" xs="images/ignore_prodetail2.jpg" sm="images/ignore_prodetail2.jpg" md="images/ignore_prodetail2.jpg" alt=""> -->
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
@@ -65,14 +64,14 @@
                                     </div>
                                     <span class="icon-font-info">分享</span>
                                     <div class="l-float activity-float">
-                                        <div class="float-box float-blog">
-                                            <em class="iconfont icon-share-weibo"></em>
+                                        <div class="float-box float-blog jiathis_style_32x32">
+                                            <a class="jiathis_button_tsina"></a>
                                         </div>
-                                        <div class="float-box float-wechat">
-                                            <em class="iconfont icon-share-weixin"></em>
+                                        <div class="float-box float-wechat jiathis_style_32x32">
+                                            <a class="jiathis_button_weixin"></a>
                                         </div>
-                                        <div class="float-box float-qq">
-                                            <em class="iconfont icon-share-qq-zone"></em>
+                                        <div class="float-box float-qq jiathis_style_32x32">
+                                            <a class="jiathis_button_qzone"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,14 +148,14 @@
                                     </div>
                                     <span class="icon-font-info">分享</span>
                                     <div class="l-float activity-float">
-                                        <div class="float-box float-blog">
-                                            <em class="iconfont icon-share-weibo"></em>
+                                        <div class="float-box float-blog jiathis_style_32x32">
+                                            <a class="jiathis_button_tsina"></a>
                                         </div>
-                                        <div class="float-box float-wechat">
-                                            <em class="iconfont icon-share-weixin"></em>
+                                        <div class="float-box float-wechat jiathis_style_32x32">
+                                            <a class="jiathis_button_weixin"></a>
                                         </div>
-                                        <div class="float-box float-qq">
-                                            <em class="iconfont icon-share-qq-zone"></em>
+                                        <div class="float-box float-qq jiathis_style_32x32">
+                                            <a class="jiathis_button_qzone"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -205,14 +204,14 @@
                                     </div>
                                     <span class="icon-font-info">分享</span>
                                     <div class="l-float activity-float">
-                                        <div class="float-box float-blog">
-                                            <em class="iconfont icon-share-weibo"></em>
+                                        <div class="float-box float-blog jiathis_style_32x32">
+                                            <a class="jiathis_button_tsina"></a>
                                         </div>
-                                        <div class="float-box float-wechat">
-                                            <em class="iconfont icon-share-weixin"></em>
+                                        <div class="float-box float-wechat jiathis_style_32x32">
+                                            <a class="jiathis_button_weixin"></a>
                                         </div>
-                                        <div class="float-box float-qq">
-                                            <em class="iconfont icon-share-qq-zone"></em>
+                                        <div class="float-box float-qq jiathis_style_32x32">
+                                            <a class="jiathis_button_qzone"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +262,7 @@
                             <!-- 轮播 END -->
                             <!-- 分页 -->
                             <div class="swiper-pagination js_bannerSwiperPage">
-                                <div class="pagination-box active" data-index=0>
+                                <div class="pagination-box" data-index=0>
                                     <img src="images/compare_goods.PNG">
                                 </div>
                                 <div class="pagination-box" data-index=1>
@@ -1170,6 +1169,7 @@
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
     <script type="text/javascript" src="images/product_detail.js"></script>
 </body>
 
