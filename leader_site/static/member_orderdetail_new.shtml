@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-订单详情</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="images/member_nav.css">
+    <link rel="stylesheet" type="text/css" href="images/member_orderdetail.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/header_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+                <div class="o_u o_df_12-12  member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
+                    <div class="member_orderdetail_title_box js-securityheight o_g">
+                        <h2>我的订单</h2>
+                    </div>
+                    <div class="member_contborder_box  o_u  o_df_11-12">
+                        <div class="o_g">
+                            <div class="detail_cont_title_box">
+                                <div class="o_u o_df_11-12">
+                                    <div class="o_u o_df_6-12">
+                                        <span>订单号：</span>
+                                        <i>2017061428818</i>
+                                    </div>
+                                    <div class="o_u o_df_6-12 detail_cont_title_btn">
+                                        <div class="o_u o_df_6-12">
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a>
+                                        </div>
+                                        <div class="o_u o_df_6-12">
+                                            <a href="javascript:;" class="l-btn-sm l-btn-line2">取消订单</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_u o_df_11-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/personal_footer.shtml"-->
+    </div>
+</div>
+
+<!-- Swiper -->
+
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
+<script type="text/javascript" src="images/jquery.color.js"></script>
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/member_nav.js"></script>
+</body>
+</html>
