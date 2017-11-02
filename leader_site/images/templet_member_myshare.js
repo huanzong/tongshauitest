@@ -6,15 +6,14 @@
 
 $(function(){
     //前台判断是否登陆
-    // if(!istrsidssdssotoken()){
-    //     jumpToLoginPage()
-    // }
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage()
+    }
 
     var templat_pagesize='10';
 
     $.ajax({
         type: "get",
-        dataType: "json",
         url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentList/",
         data: {
             'pageNo':'1',
@@ -58,7 +57,6 @@ $(function(){
                 //分页结束
             }
             else{
-
             }
         }
     });
@@ -78,12 +76,12 @@ function paginationInit(curPage,pageCount,pageSize){
             curpage:currPageT
         }
         search(currPageT, pageSize);
-        pager.totalCount =  pageCount;
+        pager.totalPage =  pageCount;
         pager.currPage = currPageT;
         pager.pageCount = pageSize;
         pager.render();
     };
-    pager.totalCount =  pageCount;
+    pager.totalPage =  pageCount;
     pager.currPage = curPage;
     pager.pageCount = pageSize;
     pager.render();
