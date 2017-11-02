@@ -115,9 +115,9 @@ $(function() {
 
     //
     $('.js_resgoster_hover').hover(function(){
-        $(this).siblings('.l-float-tops').show();
+        $(this).children('.l-float-tops').show();
     },function(){
-        $(this).siblings('.l-float-tops').hide();
+        $(this).children('.l-float-tops').hide();
     });
 
 
