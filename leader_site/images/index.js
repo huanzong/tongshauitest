@@ -27,36 +27,81 @@ $(function() {
         //sm:544,md:700,lg:992,xl:1200,
     }).init();
   });
+
+  let indexBannerInit = false
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
-    autoplay: 2000,
     updateOnImagesReady : true,
     centeredSlides : true,
     calculateHeight : true,
-    updateOnImagesReady: true,
+    slidesPerView: 3,
     // initialSlide :1,
     onInit: function(swiper){
       var index = swiper.activeLoopIndex;
       $('.js_bannerSwiperFont').eq(1).fadeIn(100);
       $('.js_bannerSwiperFont1').fadeOut();
       $('.js_bannerSwiperFont1').eq(1).fadeIn(100);
-      $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').eq(0).find('img').eq(0).height());
+      $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(2).find('img').eq(0).height());
+
+      if (screenWidth <= 991) {
+        $('.js_bannerSwiper .swiper-slide').find('a').css({
+          'margin': 50
+        },2000);
+
+        $('.js_bannerSwiper .swiper-slide').stop(true)
+        $('.js_bannerSwiper .swiper-slide').eq(2).find('a').animate({
+          'margin': 0
+        }, 500);
+      }
     }
   });
 
   if (screenWidth <= 991) {
+    let isTouch = false
     swiper.bannerSwiper.params.slidesPerView = 3;
     swiper.bannerSwiper.params.watchActiveIndex = true;
+    swiper.bannerSwiper.params.onTouchStart = function(swiper){
+      isTouch = true
+      $('.js_bannerSwiper .swiper-slide').find('a').css({
+        'margin': 50
+      });
+    }
+    swiper.bannerSwiper.params.onSlideChangeStart = function(swiper){
+      if (!isTouch) {
+        var index = swiper.activeLoopIndex;
+        if (!indexBannerInit) {
+          $('.js_bannerSwiper .swiper-slide').find('a').css({
+            'margin': 50
+          });
+        }
+      }
+      indexBannerInit = true
+      // $('.js_bannerSwiper .swiper-slide').eq(index).find('a').animate({
+      //   'margin': 0
+      // }, 500);
+
+    };
+
+    swiper.bannerSwiper.params.onTouchEnd = function(swiper){
+      isTouch = false
+      $('.js_bannerSwiper .swiper-slide').find('a').css({
+        'margin': 50
+      });
+    }
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
       var index = swiper.activeLoopIndex;
+      if (!isTouch) {
+        $('.js_bannerSwiper .swiper-slide').find('a').css({
+          'margin': 50
+        });
+      }
 
-      $('.js_bannerSwiper .swiper-slide-active').find('a').animate({
+      $('.js_bannerSwiper .swiper-slide').stop(true)
+      $(swiper.activeSlide()).find('a').animate({
         'margin': 0
       }, 500);
 
-      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('a').css({
-        'margin': 50
-      },10);
+      swiper.startAutoplay()
 
       //文字
       $('.js_bannerSwiperFont1').hide();
@@ -64,15 +109,9 @@ $(function() {
       //分页
       $('.js_bannerSwiperPage .page-num').removeClass('active');
       $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
-    };
+    }
 
-    $('.js_bannerSwiper .swiper-slide-active').find('a').animate({
-        'margin': 0
-      }, 500);
 
-      $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('a').css({
-        'margin': 50
-      });
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
@@ -90,6 +129,12 @@ $(function() {
   setTimeout(function(){
     swiper.bannerSwiper.reInit();
   },1000);
+
+  setTimeout(function(){
+    swiper.bannerSwiper.params.autoplay = 2000
+    swiper.bannerSwiper.stopAutoplay()
+    swiper.bannerSwiper.startAutoplay()
+  },2000)
 
   $('.js_bannerSwiperPage .page-num').on('click',function(){
     var pageNum = $(this).attr('data-index');
@@ -280,30 +325,30 @@ $(function() {
 
 
     if (screenWidth <= 991) {
-      swiper.bannerSwiper.params.slidesPerView = 3;
-      swiper.bannerSwiper.params.watchActiveIndex = true;
-      swiper.bannerSwiper.params.updateOnImagesReady = true;
-      swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
-        var index = swiper.activeLoopIndex;
+      // swiper.bannerSwiper.params.slidesPerView = 3;
+      // swiper.bannerSwiper.params.watchActiveIndex = true;
+      // swiper.bannerSwiper.params.updateOnImagesReady = true;
+      // swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
+      //   var index = swiper.activeLoopIndex;
 
-        // $('.js_bannerSwiper .swiper-slide-active').find('a').animate({
-        //   'margin': 0
-        // }, 500);
+      //   // $('.js_bannerSwiper .swiper-slide-active').find('a').animate({
+      //   //   'margin': 0
+      //   // }, 500);
 
-        // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('a').css({
-        //   'margin': 50
-        // },10);
+      //   // $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('a').css({
+      //   //   'margin': 50
+      //   // },10);
 
-        console.log(index);
-        //文字
-        $('.js_bannerSwiperFont1').hide();
-        $('.js_bannerSwiperFont1').eq(index).fadeIn(1);
-        //分页
-        $('.js_bannerSwiperPage .page-num').removeClass('active');
-        $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
-      };
+      //   console.log(index);
+      //   //文字
+      //   $('.js_bannerSwiperFont1').hide();
+      //   $('.js_bannerSwiperFont1').eq(index).fadeIn(1);
+      //   //分页
+      //   $('.js_bannerSwiperPage .page-num').removeClass('active');
+      //   $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
+      // };
 
-      swiper.bannerSwiper.reInit();
+      // swiper.bannerSwiper.reInit();
       $(".js_bg").oBgCover().init();
 
       setTimeout(function(){
