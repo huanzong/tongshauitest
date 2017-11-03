@@ -1,4 +1,5 @@
 	//获取产品个数
+
 	var template_dataNum=$("div.prolist-box").length;
 	$(".js_dataNum").text(template_dataNum);
 	//判断当前tab标签
