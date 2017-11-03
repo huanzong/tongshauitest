@@ -167,10 +167,10 @@ $(function() {
   $('.js_enterMore').on('click',function(){
     $('.js_enterShow').toggleClass('l-none');
     if($(this).attr('data-type')=='more'){
-      $(this).html('展开全部产品分类 +');
+      $(this).html('收起全部产品分类 x');
       $(this).attr('data-type','');
     }else{
-      $(this).html('收起全部产品分类 x');
+      $(this).html('展开全部产品分类 +');
       $(this).attr('data-type','more');
     }
   });
