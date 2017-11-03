@@ -3,31 +3,57 @@
  */
 $(function(){
     var windowW = $(window).width();
-    var windowH = $(window).height();
-    var documenHeight;
-    var documenHeights;
-    var contH   = $('body').height();
+    var documenHeight,documenHeights;
+    var homeMemberContBox = $('.js-membercontboxs-2');
     documenHeight = $('.js-membercontboxs').height();
-    $('.js_memberNavLeft').height(documenHeight+60 );
-    $('.js_memberNavMiddle').css({'height':documenHeight+60});
-    $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
+    if(!homeMemberContBox){
+        $('.js_memberNavLeft').height(documenHeight+60 );
+        $('.js_memberNavMiddle').css({'height':documenHeight+60});
+        $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
+    } else{
+        $('.js_memberNavLeft').height(documenHeight+180);
+        $('.js_memberNavMiddle').css({'height':documenHeight+60});
+        $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
+    }
+
     //$('.js_memberNavLeft').height(windowH);
 
-
+    //个人中心侧导航高度设定
     var time_height = setInterval(function(){
         if(windowW<576){
             $('.js_memberNavLeft').height('60px');
             $('.js_memberNavMiddleBtn').css({height:'60px'});
 
         }else{
+            console.log(documenHeight);
             documenHeight = $('.js-membercontboxs').height();
-            if(documenHeight!=documenHeights&&documenHeight>762){
-                $('.js_memberNavLeft').height(documenHeight+60 );
-                $('.js_memberNavMiddle').css({'height':documenHeight+60});
-                $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
-            }
+                if(documenHeight!=documenHeights&&documenHeight>762){
+                    $('.js_memberNavMiddle').css({'height':documenHeight+60});
+                    $('.js_memberNavMiddleBtn').css({height:documenHeight+60});
+                    if(!homeMemberContBox){
+                        $('.js_memberNavLeft').height(documenHeight+60);
+                    }else{
+                        if(windowW>990){
+                            $('.js_memberNavLeft').height(documenHeight+180);
+                        }else{
+                            $('.js_memberNavLeft').height(documenHeight+60);
+                        }
+                    }
+                }else{
+
+                    $('.js_memberNavMiddle').css({'height':762+60});
+                    $('.js_memberNavMiddleBtn').css({height:762+60});
+                    if(!homeMemberContBox){
+                        $('.js_memberNavLeft').height(762+60);
+                    }else{
+                        if(windowW>990){
+                            $('.js_memberNavLeft').height(762+180);
+                        }else{
+                            $('.js_memberNavLeft').height(762+60);
+                        }
+                    }
+                }
         }
-        console.log(1);
     },500);
 
 
@@ -55,11 +81,6 @@ $(function(){
 
     $(window).resize(function() {
         var windowW = $(window).width();
-        var windowH = $(document).height();
-        var contH   = $('body').height();
-        //$('.js_memberNavLeft').height($('.js_memberNavMiddle').height());
-        //$('.js_memberNavLeft').height(windowH);
-        //$('.js_memberNavMiddleBtn').css({'padding-top':contH/2});
         if(windowW>992){
             $('.js-membercontboxs').width(windowW*0.66666);
         }else if(windowW>700&&windowW<992){
@@ -78,7 +99,6 @@ $(function(){
             $('.js-membercontboxs').width('100%');
         }
         if(windowW<576){
-            //$('.js_memberNavLeft').height('60px');
             $('.js_memberNavLeft').css('height','60px');
         }
     });
