@@ -164,7 +164,7 @@ $.jUploader({
 
             //图片加载完成后获取图片信息
 
-             imgs.src = 'http://test.tongshuai.com/tongshuaifile'+$.trim(data.data);
+             imgs.src = '/tongshuaifile'+$.trim(data.data);
             imgs.onload = function(){
                 imgsW=imgs.width;
                 imgsH = imgs.height;
