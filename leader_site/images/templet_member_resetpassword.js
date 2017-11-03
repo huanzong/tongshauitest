@@ -143,8 +143,9 @@ $(function(){
     $(".js_subimGetUp") .unbind().bind('click',function(){
 
         var templet_notclick = $(this).hasClass('l-btn-disable');
+        var templet_firstwrong = $('.js-mobileCodeerror').hasClass('Validform_wrong');
 
-        if(!templet_notclick)
+        if(!templet_notclick && !templet_firstwrong)
         {
             var templet_param;
             var templet_code=$('.js_phoneCodeYz').val(); //验证码
@@ -250,9 +251,8 @@ $(function(){
     $('.js-resetPassWord').blur(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
-        var templet_validatepassword=$('.js-resetPassWord').siblings('.Validform_checktip').hasClass('Validform_right');
 
-        if(yanzhengtrue && templet_validatepassword){
+        if(yanzhengtrue){
             $('.js-subpassword').unbind().bind('click',function(){
                 if(templet_ensureChanged){
                     $('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>上一次密码操作还未完成,请勿重复操作');
