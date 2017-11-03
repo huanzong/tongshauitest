@@ -272,6 +272,7 @@
                                 <li class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
                                     <div class="system-pay">
                                         <img src="images/pay_system2.jpg">
+                                        <em>金额需大于等于500元</em>
                                     </div>
                                 </li>
                             </ul>
@@ -289,7 +290,7 @@
             <!-- 页脚吸底 END -->
             <!--#include virtual="public/footer.shtml"-->
 
-            
+
         </div>
     </div>
     <!--#include virtual="public/foot.shtml"-->
