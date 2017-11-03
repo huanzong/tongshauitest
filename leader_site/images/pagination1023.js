@@ -9,15 +9,16 @@ var pagination = function(id){
 
     var $this = this;
     this.id = id;
-    //总页数
+    //内部总页数
     this._totalPage = 0;
     this._start = 1;
     this._end = 1;
-
     //每页显示记录数
     this.pageSize = 0;
-    //总页数
+    //总条数
     this.totalCount = 0;
+    //总页数
+    this.totalPage = 0;
     //当前页面 默认从1开始
     this.currPage = 0;
     //显示的分页按钮数量
@@ -50,24 +51,24 @@ var pagination = function(id){
     /**
      * 在显示之前计算各种页码变量的值
      */
-    this._calculate = function(){
+    /*this._calculate = function(){
 
-        $this._totalPage = $this.totalCount;//parseInt(Math.ceil($this.totalCount/$this.pageSize));//计算页码总数
-        if($this._totalPage<8){
-            $this.maxButtons=$this._totalPage;
-        }
-        $this.currPage = parseInt($this.currPage);
-        if($this.currPage>$this._totalPage){
-            $this.currPage = $this._totalPage;
-        }
-        if($this.currPage<1){
-            $this.currPage = 1;
-        }
+     $this._totalPage = $this.totalCount;//parseInt(Math.ceil($this.totalCount/$this.pageSize));//计算页码总数
+     if($this._totalPage<8){
+     $this.maxButtons=$this._totalPage;
+     }
+     $this.currPage = parseInt($this.currPage);
+     if($this.currPage>$this._totalPage){
+     $this.currPage = $this._totalPage;
+     }
+     if($this.currPage<1){
+     $this.currPage = 1;
+     }
 
-        $this._start = Math.max(1, $this.currPage - parseInt($this.maxButtons/2));//
-        $this._end = Math.min($this._totalPage, $this._start + $this.maxButtons - 1);//最后一个页码按钮的页码数
-        $this._start = Math.max(1, $this._end - $this.maxButtons + 1);//第一个页码按钮的页码数
-    }
+     $this._start = Math.max(1, $this.currPage - parseInt($this.maxButtons/2));//
+     $this._end = Math.min($this._totalPage, $this._start + $this.maxButtons - 1);//最后一个页码按钮的页码数
+     $this._start = Math.max(1, $this._end - $this.maxButtons + 1);//第一个页码按钮的页码数
+     }*/
 
 
 
@@ -77,21 +78,22 @@ var pagination = function(id){
     this.render = function(){
 
         var divPage = $(""+$this.id);
-        $this._calculate();
+        //$this._calculate();
         var htmlStr = "";
-        var currpage = $this.currPage;
-        if($this._totalPage<=1 || $this.totalCount==0){
+        var currpage = parseInt($this.currPage);
+        //|| $this.totalCount==0
+        if($this.totalPage<=1){
             return;
         }
 
         // 上一页
         if(1!=currpage){
-            htmlStr+='<a href="javascript:;" class="l-pagination-prew" page="'+(currpage-1)+'">上一页</a>';
+            htmlStr+='<a href="javascript:;" class="l-pagination-prew" page="'+(parseInt(currpage)-1)+'">上一页</a>';
         }
 
         //初始化分页 1:总页数小于8页
-        if($this._totalPage<=$this.showPageCount){
-            for(var m=1;m<$this._totalPage;m++){
+        if($this.totalPage<=$this.showPageCount){
+            for(var m=1;m<=$this.totalPage;m++){
                 if(currpage == m){
 
                     htmlStr+='<a href="javascript:;" class="l-pagination-pagenumber active"  page="'+m+'">'+m+'</a>';
@@ -112,26 +114,55 @@ var pagination = function(id){
                     }
                 }
             }else{
-                var startPageNo = currpage - 3;
+                var startPageNo = 0;
                 var endPageNo=0;
-                //判断分页总数是奇数还是偶数
-                if($this.totalCount%2 == 0){
-                    if(currpage+4 < $this.totalCount ){
-                        endPageNo = currpage+4;
-                    }else{
-                        endPageNo =  $this.totalCount;
-                    }
+                //判断分页显示数
+                if($this.showPageCount == 8){
 
-                    //奇数
-                }else{
-                    if(currpage+3 < $this.totalCount ){
-                        endPageNo = currpage+3;
+                    //判断分页总数是奇数还是偶数
+                    if($this.totalPage%2 == 0){
+                        if(currpage+4 < $this.totalPage ){
+                            startPageNo = currpage -3;
+                            endPageNo = currpage+4;
+                        }else{
+                            endPageNo =  $this.totalPage;
+                            startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
+                        }
+
+                        //奇数
                     }else{
-                        endPageNo =  $this.totalCount;
+                        if(currpage+3 < $this.totalPage ){
+                            startPageNo = currpage -3;
+                            endPageNo = currpage+3;
+                        }else{
+                            endPageNo =  $this.totalPage;
+                            startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
+                        }
+                    }
+                }else if($this.showPageCount == 5){
+                    //判断分页总数是奇数还是偶数
+
+                    if(currpage+2 < $this.totalPage ){
+                        startPageNo = currpage -2;
+                        endPageNo = currpage+2;
+                    }else{
+                        endPageNo =  $this.totalPage;
+                        startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
+                    }
+                }else if($this.showPageCount == 3){
+                    //判断分页总数是奇数还是偶数
+
+                    if(currpage+1 < $this.totalPage ){
+                        startPageNo = currpage -1;
+                        endPageNo = currpage+1;
+                    }else{
+                        endPageNo =  $this.totalPage;
+                        startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
                     }
                 }
 
-                for(var m=startPageNo;m<=$this.endPageNo;m++){
+
+                for(var m=startPageNo;m<=endPageNo;m++){
                     if(currpage == m){
                         htmlStr+='<a href="javascript:;" class="l-pagination-pagenumber active"  page="'+m+'">'+m+'</a>';
                     }else{
@@ -143,8 +174,8 @@ var pagination = function(id){
         }
 
         // 下一页
-        if (currpage != $this._totalPage) {
-            htmlStr+='<a href="javascript:;" class="l-pagination-next" page="'+(currpage+1)+'" >下一页</a>';
+        if (currpage != $this.totalPage) {
+            htmlStr+='<a href="javascript:;" class="l-pagination-next" page="'+(parseInt(currpage)+1)+'" >下一页</a>';
         }
 
         divPage.html(htmlStr);

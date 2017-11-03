@@ -723,7 +723,7 @@
 			</div>
 		<!-- 产品列表 END -->
 		<!-- 分页 -->
-			<div class="o_g product-listpage">
+			<div class="o_g product-listpage pageMax">
                 <a  class="l-pagination-prew">上一页</a>
                 <a  class="l-pagination-pagenumber active">1</a>
                 <a  class="l-pagination-pagenumber">2</a>
@@ -733,6 +733,22 @@
                 <a  class="l-pagination-pagenumber">6</a>
                 <a  class="l-pagination-pagenumber">7</a>
                 <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-next ">下一页</a>
+            </div>
+			<div class="o_g product-listpage pageMiddle">
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
+                <a  class="l-pagination-pagenumber">4</a>
+                <a  class="l-pagination-pagenumber">5</a>
+                <a  class="l-pagination-next ">下一页</a>
+            </div>
+			<div class="o_g product-listpage pageMobile">
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
                 <a  class="l-pagination-next ">下一页</a>
             </div>
 		<!-- 分页 END -->
@@ -861,7 +877,7 @@
 	    	<!--#include virtual="public/footer.shtml"-->
 
 	    <!-- 弹层-筛选项 -->
-	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
+	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate" data-flag="0">
 	    		<div class="o_u o_df_5-12 o_md_4-12 o_sm_3-12 o_xs_2-12 layer-bg"></div>
 	    		<div class="o_u o_df_7-12 o_md_8-12 o_sm_9-12 o_xs_10-12 layer-box">
 	    			<div class="layer-tit">

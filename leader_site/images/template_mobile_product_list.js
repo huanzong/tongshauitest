@@ -5,11 +5,6 @@
  * */
 //====================初始化筛选器===================================
 
-$(function () {
-    //初始化筛选器,读取xml文件
-    readXmlFile(url);
-
-})
 //默认分页信息
 var curPage = 1;
 var pageSize = 24;
@@ -32,80 +27,6 @@ var url = "filter.xml";
 var currentUrl = window.location.href;
 //xml路径
 var _xmlPath = currentUrl.substring(0, currentUrl.lastIndexOf("/")) + "/" + url;
-
-//pc端读取配置文件
-function readXmlFile(url) {
-    var filterItemName = "";
-    var filterItemQuery = "";
-    $.ajax({
-        type: 'get',
-        dataType: 'xml',
-        url: url,
-        success: function (xml) {
-            var viewName = $(xml).find("Filter").attr("viewName");
-            _tableName = viewName;
-            var itemId = "";
-            var html = "";
-            var mobileHtml = "";
-            var filterTypeName = "";
-            var searchItemName = "";
-            //初始化内容
-            $(xml).find("optiongroup").each(function (index) {
-                itemId = $(this).attr("id");
-                searchItemName = $(this).attr("inputName");
-                filterTypeName = $(this).attr("name");
-                if (index > 3) {
-                    html += '<div class="filter-line o_df-hide">';
-                } else {
-                    html += '<div class="filter-line">';
-                }
-                if (index % 2 == 0) {
-                    html += '<div class="filter-sole mar-right">';
-                } else {
-                    html += '<div class="filter-sole mar-left">';
-                }
-                html += '<span class="sole-title" tag="' + itemId + '" inputName="' + searchItemName + '">' + filterTypeName + '：</span>';
-                //移动端
-                mobileHtml += ' <li><span class="list-tit" tag="' + itemId + '" inputName="' + searchItemName + '">' + filterTypeName + '：</span>';
-                mobileHtml += '<div class="list-line">';
-                //解析option
-                $(this).find("option").each(function (index1) {
-                    filterItemName = $(this).attr("name");
-                    filterItemQuery = "(" + $(this).attr("query") + ")";
-                    //pc端筛选项拼接
-                    html += '<span class="sole-type" query="' + filterItemQuery + '" id="' + jQuery(this).attr("id") + '" tag="' + itemId + '" inputName="' + searchItemName + '">' + filterItemName + '</span>';
-                    //移动端筛选项拼接
-                    mobileHtml += '<a class="l-btn-sm list-btn" query="' + filterItemQuery + '" id="' + jQuery(this).attr("id") + '" tag="' + itemId + '" inputName="' + searchItemName + '">' + filterItemName + '</a>';
-                });
-                //pc端拼接
-                html += '</div>';
-                html += '</div>';
-                //移动端拼接
-                mobileHtml += '</div>';
-                mobileHtml += ' </li>';
-            })
-            $(html).insertBefore(".list-more");
-
-            //移动端筛选项初始化
-            $(".layer-list").html(mobileHtml);
-            
-            //if (document.body.offsetWidth >= 1200 ) {
-                setTimeout(noneShaiXuan(".sole-type"), 1000);
-                //pc端监听事件
-                filterItemOnclick(".sole-type");
-                //对比初始化函数
-                setTimeout(initCookie(), 1000);
-                setTimeout(initLoadCookie(), 1000);
-           // }else{
-                setTimeout(noneShaiXuan(".list-btn"), 1000);
-                //移动端监听事件
-                filterItemOnclick(".list-btn");
-                //重置选择
-                mobileResetButtonOnclick();
-            //}
-        }
-    });
-}
 
 //检索产品方法
 function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchTerm) {
@@ -131,7 +52,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                 if (document.body.offsetWidth >= 1200) {
                     displayFilterItem(filterItemList, ".sole-type");
                 } else {
-                    displayFilterItem(filterItemList, ".list-btn");
+                    //displayFilterItem(filterItemList, ".list-btn");
                 }
                 var returnData = data.data.productList.entities;
                 var allPageCount = data.data.productList.pageCount;
@@ -239,11 +160,7 @@ function paginationInit(curPage, pageCount, pageSize, currentClass, showPageNo) 
     pager.render();
     //重写click方法  ajax取数据
     pager.onclick = function (currPageT) {
-        if (document.body.offsetWidth >= 1200 ) {
-            search(searchWord, _tableName, _xmlPath, currPageT, pageSize, order, isSelectItemStr);
-        }else{
-            search(mobileSearchWord, _tableName, _xmlPath, currPageT, pageSize, order, mobileIsSelectItemStr);
-        }
+        search(searchWord, _tableName, _xmlPath, currPageT, pageSize, order, isSelectItemStr);
         pager.totalPage = pageCount;
         pager.currPage = currPageT;
         pager.pageCount = pageSize;
@@ -286,14 +203,8 @@ $(".font").each(function () {
 });
 
 //没有筛选器的隐藏展开按钮
-function noneShaiXuan(currentClass) {
-    var noneShaiXuan;
-    if(currentClass == ".sole-type"){
-        noneShaiXuan = $(".js_screenClick").find(".filter-line");
-    }else{
-        noneShaiXuan = $(".layer-list").find("li");
-    }
-
+function noneShaiXuan() {
+    var noneShaiXuan = $(".js_screenClick").find(".filter-line");
     if (noneShaiXuan.length == '' || noneShaiXuan.length == 0) {
         $(".js_listNavhide").hide();
     } else {
@@ -306,10 +217,6 @@ function noneShaiXuan(currentClass) {
 function filterItemOnclick(onclickClass) {
 
     $(onclickClass).click(function () {
-
-        if($(this).hasClass("disable")){
-            return;
-        }
         //每组筛选项都是单选  =====取消选中筛选项
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
@@ -352,6 +259,7 @@ function filterItemOnclick(onclickClass) {
                 //如果同级的sole-type已经选中，则直接返回不做任何操作
                 if ($(this).hasClass("active")) {
                     isSelectFlag = true;
+                } else {
                 }
             });
 
@@ -367,7 +275,7 @@ function filterItemOnclick(onclickClass) {
                     appendFilterItemShowBar($(this).text(), $(this).attr("inputName"), $(this).attr("query"), $(this).attr("id"));
                     deleteFilterItemShowBarClick();
 
-                 //手机端操作
+                    //手机端操作
                 } else {
                     mobileIsSelectItemStr = mobileIsSelectItemStr + $(this).attr("inputName") + ";";
                     if ($.trim(mobileSearchWord) == "") {
@@ -381,6 +289,11 @@ function filterItemOnclick(onclickClass) {
             }
         }
     });
+}
+
+//关闭监听事件
+function filterItemOffOnclick(onclickClass) {
+    $(onclickClass+".disable").off("click");
 }
 
 //筛选项灰化
@@ -407,6 +320,7 @@ function displayFilterItem(filterItemList, currentClass) {
                     //$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').off("click");
                 }
             }
+
         }
     }
 }
@@ -475,9 +389,6 @@ function isLastFilterItemSelect(currentClass) {
         filterItemDisableLength.each(function (e, n) {
             $(this).removeClass("disable");
         });
-        //pc端初始化
-        //filterItemOnclick(currentClass);
-        //filterItemOnclick(".list-btn");
     }
 }
 //移动端筛选器确定按钮事件
