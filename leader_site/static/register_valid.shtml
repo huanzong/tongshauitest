@@ -23,15 +23,30 @@
             <div class="o_u o_df_2-12 mail_register_bkright"></div>
             <div class="o_g mail_register_contbox">
                 <div class="mail_register_cont o_u o_xs_2-2">
-                    <div class="o_u o_df_10-12">
+                    <div class="o_u o_df_10-12 email_sendover">
                         <img src="images/member_logo.png" alt="">
                         <h2>账号注册</h2>
                         <p>我们已将验证邮件发至您的邮箱</p>
                         <i class="o_u o_df_2-2">3322512542@qq.com</i>
                         <span>请前往邮箱验证</span>
                         <a href="javascript:;" class="l-btn-normal l-btn-red o_u o_df_2-2 ">立即登录邮箱</a>
-                        <div class="mail_register_cont_time"><span>120s</span> 后可重新发送</div>
-                        <div class="mail_register_cont_down">没有收到邮件<i class="iconfont icon-problem-solid"></i></div>
+                        <!--<div class="mail_register_cont_time"><span>120s</span> 后可重新发送</div>-->
+                        <div class="mail_register_cont_time js_registerContTime"><a href="">重新发送</a></div>
+                        <div class="mail_register_wrong_text js_registerWrongText">我是错误提示</div>
+                        <div class="mail_register_cont_down">没有收到邮件
+                            <i class="iconfont icon-problem-solid js_resgoster_hover">
+                                <div class="l-float-tops">
+                                    <div class="float_content">
+                                        <p>1. 检查邮箱是否正确无误</p>
+                                        <p>2. 检查邮件是否进入垃圾箱</p>
+                                        <p>3. 使用<a href="javascript:;">手机号注册</a> ，更方便快捷</p>
+                                    </div>
+                                    <p>
+                                        <i></i>
+                                    </p>
+                                </div>
+                            </i>
+                        </div>
                     </div>
                   </div>
              </div>
@@ -39,6 +54,9 @@
         </div>
     </div>
 </div>
+<!--#include virtual="public/foot.shtml"-->
+
+<script type="text/javascript" src="images/reset_password.js"></script>
 
 </body>
 </html>

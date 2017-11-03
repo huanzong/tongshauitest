@@ -6,7 +6,14 @@
   border-right: 1px solid #eee;
   margin-right: -1px;
   position: relative;
+  min-height: 760px;
+  vertical-align: top;
   z-index: 30;
+  border-bottom: 1px solid #eee;
+  @media (max-width: 575px) {
+    /* xs*/
+    min-height: 60px;
+  }
   .memeber-nav-logo{
     border-bottom: 1px solid #eee;
     padding: 30px 0;
@@ -39,6 +46,7 @@
     }
     @media (max-width: 575px) {
       /* xs*/
+
       border: none;
       text-align: center;
       padding: 15px 0px 15px 10px;
@@ -318,10 +326,13 @@
 .memeber-nav-middle{
   text-align: center;
   border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   position: relative;
   background: #fff;
   z-index: 25;
-  padding-bottom: 60px;
+  //padding-bottom: 60px;
+  vertical-align: top;
+  min-height: 762px;
   .memeber-nav-middle-listbox{
     text-align: center;
     ul{
@@ -363,15 +374,16 @@
   }
 
   .memeber-nav-middle-btn{
-    height: 100vh;
+
     display: none;
-    line-height: 100%;
+    line-height: 500px;
     color: #333;
     text-align: center;
     box-shadow: 0 0 4px #efefef;
     float: right;
     span{
       font-size: 18px;
+      padding-top: 50em;
     }
     border-right: 1px solid #eee;
   }
@@ -417,8 +429,27 @@
   }
 }
 .memeber-homenav-top{
-  background: url("member_home_title.png") no-repeat center;
+  background: url(member_home_title.png) no-repeat center;
   height: 120px;
+  background-size: 100% 100%;
+  position: relative;
+  >div{
+    color: @l-red;
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  p{
+    font-size: 16px;
+    color: #666;
+    padding: 35px 0 0 60px;
+  }
+  h2{
+    font-size: 28px;
+    color: #333;
+    padding: 0px 0 0 60px;
+  }
   @media (min-width: 992px) and (max-width: 1199px) {
     /* lg*/
   }
@@ -439,10 +470,11 @@
 }
 .memeber-homenav-top-md{
   display: none;
-  background: url("member_home_title.png") no-repeat center;
+  background: url(member_home_title.png) no-repeat center;
   height: 120px;
   position: relative;
   text-align: left;
+
 >p{
   color: #666666;
   font-size: 16px;
