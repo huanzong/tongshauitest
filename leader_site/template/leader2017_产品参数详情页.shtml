@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品参数</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+	<link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="product_param.css">
+</head>
+<body>
+<div class="o_body">
+	<div class="o_main product-param">
+	   <!-- 导航 -->
+    <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+    <!-- 导航 End-->
+		<div class="o_g param-bg">
+			<div class="o_u o_df_3-12 o_sm_1-2 o_xs_1-2 param-bg-deep"></div>
+			<div class="o_u o_df_9-12 o_sm_1-2 o_xs_1-2 param-bg-light"></div>
+		</div>
+		<div class="o_g param-con">
+			<div class="o_u o_df_1-12"></div>
+			<div class="o_u o_df_10-12">
+				<div class="param-struct">
+					<div class="param-struct-img">
+						<img src="<TRS_VIEWDATA FIELD='productsize' />" class="js_structbg"/>
+					</div>
+					<div class="param-attachment js_appendixText">
+						<TRS_VIEWDATA field="fjxx">
+                                <TRS_CONDITION  CONDITION='@fjxx' NOT='TRUE' OPERATOR="blank">
+                                <span class="param-attachment-title">附件</span>
+                                <span class="param-attachment-line o_xs-hide"></span>
+                               
+                                </TRS_CONDITION>
+                        </TRS_VIEWDATA>
+
+					</div>
+				</div>
+				<div class="param-basic o_g">
+					<div class="o_u o_df_1-5 o_sm-hide o_xs-hide param-basic-bg"></div>
+					<div class="o_u o_df_4-5 o_sm_2-2 o_xs_2-2 param-basic-con"></div>
+					 
+
+	                 
+				</div>
+				
+				</div>
+			</div>
+		</div>
+		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+	</div>
+</div>
+<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<script type="text/javascript" src="swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="product_param.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//初始化   
+	init();
+});
+var templet_Arry=[
+	<TRS_XVIEWFIELDGROUPS STARTPOS="0"  NUM='1'> 
+		<TRS_XVIEWFIELDGROUPS STARTPOS="2" >
+            	 
+            		[
+
+            
+                    <TRS_VIEWFIELDS>
+                    <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">
+                   
+                     [ "<TRS_VIEWFIELD FIELD="AnotherName"></TRS_VIEWFIELD>","<TRS_VIEWDATA FIELD="${@DBFieldName}" DELIM="/"ISLABEL="true"></TRS_VIEWDATA>"],  
+                      
+                    </TRS_VIEWDATA>
+                    </TRS_VIEWFIELDS>
+	                ["GroupName","<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>"]
+	                 ]
+	             
+	                <TRS_IsNotLastRecord>,</TRS_IsNotLastRecord>        
+		</TRS_XVIEWFIELDGROUPS>   
+									 
+	</TRS_XVIEWFIELDGROUPS> 
+];
+
+	function init(){
+		
+		for (var i = 0; i<templet_Arry.length-1; i++) {
+			var s=getLength(templet_Arry[i])-1;
+			var templet_chu=parseInt(getLength(templet_Arry[i])/2);
+			var templet_yu=getLength(templet_Arry[i])%2;
+			$(".param-basic-con").append('<div class="param-basic-title">'+templet_Arry[i][s][1]+'</div>');
+			
+				if(templet_yu==0){
+					for(var j=0;j<templet_chu;j++)
+					{ 
+						$(".param-basic-con").append('<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="param-basic-box"><div class="param-basic-list"><span class="param-key">'+templet_Arry[i][j][0]+'</span><span class="param-value">'+templet_Arry[i][j][1]+'</span></div></div></div>');
+
+					}
+				for(var j=templet_chu;j<getLength(templet_Arry[i])-1;j++)
+					{
+						$(".param-basic-con").append('<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="param-basic-box"><div class="param-basic-list"><span class="param-key">'+templet_Arry[i][j][0]+'</span><span class="param-value">'+templet_Arry[i][j][1]+'</span></div></div></div>');
+					}
+				}  else {
+					for(var j=0;j<templet_chu+1;j++)
+					{ 
+						$(".param-basic-con").append('<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="param-basic-box"><div class="param-basic-list"><span class="param-key">'+templet_Arry[i][j][0]+'</span><span class="param-value">'+templet_Arry[i][j][1]+'</span></div></div></div>');
+
+					}
+					for(var j=templet_chu;j<getLength(templet_Arry[i])-1;j++)
+					{
+						$(".param-basic-con").append('<div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="param-basic-box"><div class="param-basic-list"><span class="param-key">'+templet_Arry[i][j][0]+'</span><span class="param-value">'+templet_Arry[i][j][1]+'</span></div></div></div>');
+					}
+				}
+			}
+		}
+ 
+  function getLength(data){
+  	var jslength=0;  
+  
+for(var js2 in data){  
+  
+     jslength++;  
+  
+}
+return jslength;
+  }
+</script>
+</body>
+</html>
