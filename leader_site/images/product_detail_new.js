@@ -158,31 +158,17 @@ $(function() {
 
     });
 
-    //锚点定位后，左侧按钮定位
-    $('.js_foldoverNav .js_foldlist').find('a').on('click',function(){
-        var index = parseInt($(this).attr('data-index'));
-        //点击当前锚点，添加选中状态，同类去掉选中状态
-        $(this).addClass("alive").siblings().removeClass("alive");
-        var btnNum = $(".js_foldlsit_btn").find("a").length;
-        var top = (btnNum * 52) + 60;
-        for(var i=0 ; i<index ; i++){
-            top += $('.js_foldimg').find('img').eq(i).height();
-        }
-        if(document.body.offsetWidth>991){
-            $('.js_foldPlus').css('top',top);
-            $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
-            $('.js_foldlist').css('top',top-(btnNum * 52));
-        }else{
-            $('.js_foldoverNav').css('height',0);
-        }
-    });
+
 
     $(window).scroll(function () {
         var $winTop = $(window).scrollTop();
-        var foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 70;
-        console.log($winTop+'-------'+foldH)
+        var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 200;
+        var $foldT = $(".js_detail-foldover").offset().top
+        console.log($winTop+'-------'+$foldH +'----------'+$foldT)
         if($(".js_foldoverNav").hasClass("cur")){
-            if($winTop > foldH){
+            if($winTop > $foldH) {
+                $(".js_oHerlFoldover").removeClass("fixed");
+            }else if($winTop < $foldT){
                 $(".js_oHerlFoldover").removeClass("fixed");
             }else{
                 $(".js_oHerlFoldover").addClass("fixed");
@@ -227,6 +213,25 @@ $(function() {
         if(document.body.offsetWidth>991){
             $(".js_foldPlus").css("top",foldPlus+'px');
         }
+
+        //锚点定位后，左侧按钮定位
+        $('.js_foldoverNav .js_foldlist').find('a').on('click',function(){
+            var index = parseInt($(this).attr('data-index'));
+            //点击当前锚点，添加选中状态，同类去掉选中状态
+            $(this).addClass("alive").siblings().removeClass("alive");
+            var btnNum = $(".js_foldlsit_btn").find("a").length;
+            var top = (btnNum * 52) + 60;
+            for(var i=0 ; i<index ; i++){
+                top += $('.js_foldimg').find('img').eq(i).height();
+            }
+            if(document.body.offsetWidth>991){
+                $('.js_foldPlus').css('top',top);
+                $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
+                $('.js_foldlist').css('top',top-(btnNum * 52));
+            }else{
+                $('.js_foldoverNav').css('height',0);
+            }
+        });
 
     }
 

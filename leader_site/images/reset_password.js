@@ -115,13 +115,13 @@ $(function() {
 
     //
     $('.js_resgoster_hover').hover(function(){
-        $(this).siblings('.l-float-tops').show();
+        $(this).children('.l-float-tops').show();
     },function(){
-        $(this).siblings('.l-float-tops').hide();
+        $(this).children('.l-float-tops').hide();
     });
 
 
-    btnTimeOut($('.js_registerContTime'),120,'后可重新发送');
+    //btnTimeOut($('.js_registerContTime'),120,'后可重新发送');
     //倒计时
     var wait = 5;
     function sendTime() {

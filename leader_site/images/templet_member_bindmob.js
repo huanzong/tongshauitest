@@ -76,6 +76,9 @@ $(function(){
     //第一步点击确定
     $('.js_subimGetUp').unbind().click(function () {
         if(!$('.js_subimGetUp').hasClass('l-btn-disable')){
+            if($('.js-emailCodeerror').hasClass('Validform_wrong')){
+                return;
+            }
             var templet_code=$('.js_emailCodeYz').val();
 
             $.ajax({
@@ -107,16 +110,18 @@ $(function(){
     $('.js-newMobile').blur(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+        var timeOut = $('.js-getinfo').attr('data-type');
 
-        if(yanzhengtrue){
+        if(yanzhengtrue&&!timeOut){
+            $('.js-getinfo').attr('data-type','1');
             $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
-
+                if($('.js-getinfo').hasClass('l-btn-disable'))
+                {
+                    return;
+                }
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){
-                    if($('.js-getinfo').hasClass('l-btn-disable'))
-                    {
-                        return;
-                    }
+
                     var templet_newMobile=$('.js-newMobile').val();
                     btnTimeOut($('.js-getinfo'),'60',' 重新获取验证码');
                     //  个人中心绑定手机号发送验证码接口

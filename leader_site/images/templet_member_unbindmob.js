@@ -18,9 +18,6 @@ $(function(){
         login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
-                if(data.resultMsg=='用户未登录'){
-                    window.location.href ='/ids/ts/login.jsp';
-                }
                 var templet_email=jQuery.trim(data.data.email);
                 var templet_call=jQuery.trim(data.data.mobile);
                 if(templet_email==null || templet_email==""){
@@ -128,8 +125,9 @@ $(function(){
     $(".js_subimGetUp") .unbind().bind('click',function(){
 
         var templet_notclick = $(this).hasClass('l-btn-disable');
+        var templet_error = $('.js-error').hasClass('Validform_wrong');
 
-        if(!templet_notclick)
+        if(!templet_notclick && !templet_error)
         {
             var templet_param;
             var templet_code=$('.js_mobileCodeYz').val(); //验证码

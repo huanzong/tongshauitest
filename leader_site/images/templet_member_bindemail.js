@@ -6,9 +6,9 @@
 $(function(){
 
     //前台判断是否登陆
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage();
-    //}
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage();
+    }
 
     //页面加载时调个人信息
     $.ajax({
@@ -20,7 +20,7 @@ $(function(){
             if (jQuery.trim(data).length > 0) {
                 var templet_email=jQuery.trim(data.data.email);
                 if (templet_email != null && templet_email != "") {
-                    //self.location = '/security';
+                    self.location = '/security';
                 }
 
                 var templet_mobile=jQuery.trim(data.data.mobile);
@@ -51,6 +51,7 @@ $(function(){
         {
             return;
         }
+
         btnTimeOut($('.js-sendphonecode'),'60',' 重新获取验证码');
         $.ajax({
             dataType: "text",
@@ -75,6 +76,10 @@ $(function(){
     $('.js_subimGetUp').unbind().click(function () {
         var templet_code=$('.js_phoneCodeYz').val();
         if(!$('.js_subimGetUp').hasClass('l-btn-disable')){
+            var js_error=$('.js-mobileCodeerror').hasClass('Validform_wrong');
+            if(js_error){
+                return;
+            }
             $.ajax({
                 dataType: "text",
                 url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
@@ -104,18 +109,20 @@ $(function(){
     $('.js-newEmail').blur(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
+        var timeOut = $('.js-getinfo').attr('data-type');
 
-        if(yanzhengtrue){
+        if(yanzhengtrue&&!timeOut){
+            $('.js-getinfo').attr('data-type','1');
             $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
                 if($('.js-getinfo').hasClass('l-btn-disable'))
                 {
                     return;
                 }
-                btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码');
                 yanzhengtrue = $('.js-newEmail').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){
-                    var templet_newEmail=$('.js-newEmail').val();
 
+                    var templet_newEmail=$('.js-newEmail').val();
+                    btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码');
                     //  个人中心绑定邮箱发送验证码接口
                     $.ajax({
                         dataType: "text",

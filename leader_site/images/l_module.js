@@ -566,7 +566,7 @@ function btnTimeOut(obj,time,timetext){
       obj.html('<span style="color: ">'+(timeTotal--)+'</span>'+'秒'+timeText);
       if(timeTotal<=0){
           clearInterval(timeHtml);
-          obj.removeClass(btnDisable).html(objHtml).attr('data-type','0');
+          obj.removeClass(btnDisable).html(objHtml).removeAttr('data-type');
       }
     },1000);
 }

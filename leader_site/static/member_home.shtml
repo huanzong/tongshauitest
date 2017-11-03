@@ -9,7 +9,7 @@
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="images/member.css">
-    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+    <link rel="stylesheet" type="text/css" href="images/member_nav.css">
 </head>
 <body>
 <div class="o_body">
@@ -20,10 +20,10 @@
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <!--o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2-->
-            <div class="o_u o_df_10-12 o_lg_11-12 o_md_11-12  o_sm_10-12 o_xs_2-2 ">
+            <div class="o_u o_df_10-12 o_lg_11-12 o_md_11-12  o_sm_10-12 o_xs_2-2  ">
                 <div class="memeber-homenav-top" >
                     <p>My Account</p>
-                    <h2>统帅用户中心</h2>
+                    <h2>统帅用户中心</h2>memeber-homenav-top
                     <div class="iconfont icon-icon "></div>
                 </div>
                 <div class="o_u o_df_2-12 o_lg_3-12 o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle  memeber-nav-middle2 js_memberNavMiddle ">

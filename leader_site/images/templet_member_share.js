@@ -10,8 +10,49 @@ $(function () {
         jumpToLoginPage()
     }
 
-    //小星星点击事件
+    //根据订单传的orderId 查询商品信息
+    var templet_orderId=getQueryString("orderId");
+    //var templet_XXX=getQueryString("");入口2需要传给我产品注册码
+    var templet_modelNo=getQueryString("modelNo");
+    if(templet_modelNo==null){
+        window.location.href ='/order';
+    }
 
+    //如果订单获取为空，去查询注册产品
+    if(templet_orderId==null){
+
+    }else{
+        $.ajax({
+            type: "get",
+            url: siteConfig.userUrl+"/buy/order/order-front/show/",
+            data: {"orderId":templet_orderId},
+            error : function(){
+                window.location.href ='/order';
+            },
+            success: function(data){
+                if(data.isSuccess){
+                    var templet_productgoods=data.data.goods;
+                    //如果没在订单里查到对应的产品，返回订单页面
+                    var templet_validate=true;
+                    for(var i=0;i<templet_productgoods.length;i++){
+                        if(templet_productgoods[i].modelNo==templet_modelNo){
+                            templet_validate=false;
+                            $('.js-productName').html(templet_productgoods[i].goodsName+ '<br><span>'+templet_productgoods[i].modelNo+'</span>');
+                            $('.js-productimg').attr('src',templet_productgoods[i].goodsPic);
+                        }
+                    }
+                    if(templet_validate){
+                        window.location.href ='/order';
+                    }
+                }
+                else{
+
+                }
+            }
+        });
+    }
+
+    //小星星点击事件
     $('.js_shareScoreImg>li').click(function(){
         var $shareArr=$('.js_shareScoreImg>li');
         var shareImgIndex = $(this).index();
@@ -24,8 +65,7 @@ $(function () {
                 $shareArr.eq(i).addClass('member-share-score-selected');
             }
         }
-    })
-
+    });
 
     //整体评价内容字数验证
     var textLength =  $('.js_EvaluateVal').val().length;
@@ -51,30 +91,10 @@ $(function () {
         if( textlength>= 500){
             $('.js_EvaluateVal').val($(this).val().substring(0,500));
             $('.js_EvaluateValLength').html(500);
-
         }else{
             $('.js_EvaluateValLength').html(textlength);
-
         }
     })
-
-    //刘悦 暂空
-
-    var orderId=getQueryString("orderId");
-    $.ajax({
-        type: "get",
-        dataType: "json",
-        url: "",
-        data: "",
-        error : function(XMLHttpRequest, textStatus, errorThrown){
-        },
-        success: function(returnData){
-            if (jQuery.trim(returnData).length > 0) {
-                $('.js-productName').html('产品名 <br><span>编码</span>');
-                $('.js-productimg').attr('src','');
-            }
-        }
-    });
 
     var templet_isSubmiting=false;
     $('.js-memberShareGetUp').unbind().click(function () {
@@ -120,36 +140,40 @@ $(function () {
             templet_isHavePic=1;
         }
 
-        var data={
-            'pathsStr':commentpics,
-            'star':templet_star,
-            'content':templet_content,
-            'isHavePic':templet_isHavePic,
-            'devSource':templet_devSource,
-            'businessId':'BCD-458WDIAU1',
-            'channelSource':'1',
-            'productCategoryId':'61',
-            'orderId':'1'
-        };
-        $.ajax({
-            contentType:"application/json",
-            url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
-            data:  JSON.stringify(data),
-            success_cb: function(returnData){
-                if(returnData.isSuccess){
-                    $('.js_popUpBox3').show();
+        if(templet_orderId!=null){
+            var data={
+                'pathsStr':commentpics,
+                'star':templet_star,
+                'content':templet_content,
+                'isHavePic':templet_isHavePic,
+                'devSource':templet_devSource,
+                'businessId':templet_modelNo,
+                'channelSource':'1',
+                'categoryId':'2',
+                'orderId':templet_orderId
+            };
+            $.ajax({
+                contentType:"application/json",
+                url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
+                data:  JSON.stringify(data),
+                success_cb: function(data){
+                    if(data.isSuccess){
+                        $('.js_popUpBox3').show();
 
-                    btnTimeOut($('.js_popUpTimeOver'),5,'');
+                        btnTimeOut($('.js_popUpTimeOver'),5,'');
 
-                    setTimeout(function(){
-                        window.location.href='/order';
-                    },4000);
+                        setTimeout(function(){
+                            window.location.href='/order';
+                        },4000);
+                    }
+                    else{
+                        $('.js-content').removeClass('member-share-evaluate-right').html(data.fieldErrors.errorMsg);
+                    }
                 }
-                else{
-                    $('.js-content').removeClass('member-share-evaluate-right').html(returnData);
-                }
-            }
-        });
+            });
+        }else {
+            //第二个入口调接口
+        }
     });
 
 //获取参数

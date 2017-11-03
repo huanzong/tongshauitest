@@ -12,16 +12,23 @@ $(function() {
         var screenHeight = document.body.offsetHeight;
 
     }
+
+
+    //滚动条
+    var bar=$(".js_list").oScrollBar();//创建滚动条
+    bar.init();//初始化激活滚动条
+
     //简易导航栏
-    $('.js_navShow').siblings('li').fadeOut();
+    $('.js_navShow').siblings('ul').fadeOut();
+    $('.js_navShow').siblings('.o_scrollWin').fadeOut();
     $('.js_navShow').on('mouseover',function(){
-        $(this).siblings('li').fadeIn();
+        $(this).siblings('.o_scrollWin').fadeIn();
     });
     $('.js_navShow').siblings('li').on('click',function(){
-        $('.js_navShow').siblings('li').fadeOut();
+        $('.js_navShow').siblings('.o_scrollWin').fadeOut();
     });
-    $('.js_navShow').parent('ul').on('mouseleave',function(){
-        $('.js_navShow').siblings('li').fadeOut();
+    $('.js_navShow').parent('.ui_nav').on('mouseleave',function(){
+        $('.js_navShow').siblings('.o_scrollWin').fadeOut();
     });
 
     //checkbox，radio样式初始化
@@ -114,7 +121,6 @@ $(function() {
             // minDate:new Date()        //  最小时间
         });
     }
-
 
 
 

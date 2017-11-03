@@ -373,12 +373,16 @@ textarea{
   z-index: 2;
   margin-top: 10px;
   border-top:1px solid #eee;
-  li{
+  height: 350px;
+  .o_scrollWin{
+    background: #fff;
+  }
+  li,.ui_nav_tit{
     padding: 0 15px;
     text-align: center;
     background: #fff;
     border-bottom:1px solid #eee;
-    border-right:1px solid #eee;
+    //border-right:1px solid #eee;
     a{
       line-height: 40px;
       color: #333;
@@ -386,6 +390,9 @@ textarea{
         color: red;
       }
     }
+  }
+  .ui_nav_tit{
+    border-right:1px solid #eee;
   }
 }
 // 表单验证

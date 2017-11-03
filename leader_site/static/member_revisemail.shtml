@@ -10,7 +10,7 @@
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include virtual="public/head.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
-    <link rel="stylesheet" type="text/css" href="images/member_s.css">
+    <link rel="stylesheet" type="text/css" href="images/member_nav.css">
     <link rel="stylesheet" type="text/css" href="images/member.css">
 </head>
 
@@ -138,6 +138,6 @@
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
-<script type="text/javascript" src="images/member_revisemail.js"></script>
+<script type="text/javascript" src="images/templet_member_revisemail.js"></script>
 </body>
 </html>
