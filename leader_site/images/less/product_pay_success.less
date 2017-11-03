@@ -1,0 +1,74 @@
+@import "l_variable";
+
+//购物车头部
+.trolley-head{
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.trolley-logo{
+  display: inline-block;
+  margin-left: -30px;
+  padding-top: 30px;
+  width: 60px;
+  height: 60px;
+  @media (min-width:701px) and (max-width: 1199px) {
+    margin-left: -25px;
+    padding-top: 25px;
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 700px) {
+    margin-left: -20px;
+    padding-top: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 575px) {
+    margin-left: 0;
+  }
+  img{
+    width: 100%;
+  }
+}
+.trolley-title{
+  display: inline-block;
+  line-height: 120px;
+  font-size: 24px;
+  text-indent: 25px;
+  font-family: 'Microsoft YaHei';
+  @media (min-width:701px) and (max-width: 1199px) {
+    line-height: 100px;
+    text-indent: 20px;
+  }
+  @media (max-width: 700px) {
+    line-height: 70px;
+    font-size: 20px;
+    text-indent: 20px;
+  }
+}
+.trolley-username{
+  float: right;
+  display: inline-block;
+  line-height: 120px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei';
+  color: #333;
+  @media (min-width:701px) and (max-width: 1199px) {
+    line-height: 100px;
+  }
+  @media (max-width: 700px) {
+    line-height: 70px;
+  }
+}
+// 支付成功
+.pay_sure{
+  display: inline-block;
+  margin: 60px 8.33%;
+  border: 1px solid #eee;
+  width:83.33%;
+  font-size: 12px;
+  @media (min-width: 1200px) {
+    width: 66.66%;
+    margin: 60px 16.66%;
+  }
+}

@@ -15,21 +15,22 @@
 </head>
 <body>
     <div class="ui_nav">
-        <ul>
-            <li class="js_navShow"><a>O(∩_∩)O~ 简易导航栏 </a></li>
+        <div class="ui_nav_tit js_navShow"><a>O(∩_∩)O~ 简易导航栏 </a></div>
+        <ul class="js_list">
             <li><a href="ui.shtml#ui_button">button 按钮</a></li>
             <li><a href="ui.shtml#ui_tag">标签</a></li>
-            <li><a href="ui.shtml#form_login">表单样式：登陆/注册/找回密码</a></li>
-            <li><a href="ui.shtml#ui_checkbox">多选/单选按钮</a></li>
             <li><a href="ui.shtml#ui_float">浮层样式/角标</a></li>
-            <li><a href="ui.shtml#ui_select">下拉菜单</a></li>
-            <li><a href="ui.shtml#ui_date">时间组件</a></li>
-            <li><a href="ui.shtml#ui_formValid">表单验证插件用法</a></li>
-            <li><a href="ui.shtml#ui_imgUpload">上传图片</a></li>
+            <li><a href="ui.shtml#form_login">表单：登陆/注册/找回密码</a></li>
+            <li><a href="ui.shtml#ui_checkbox">表单：多选/单选按钮</a></li>
+            <li><a href="ui.shtml#ui_select">表单：下拉菜单</a></li>
+            <li><a href="ui.shtml#ui_date">表单：时间组件</a></li>
+            <li><a href="ui.shtml#ui_formValid">表单：表单验证插件用法</a></li>
+            <li><a href="ui.shtml#ui_imgUpload">表单：上传图片</a></li>
             <li><a href="ui.shtml#ui_paging">分页</a></li>
-            <li><a href="ui.shtml#ui_alert">弹窗</a></li>
-            <li><a href="ui.shtml#ui_add">地址弹窗</a></li>
+            <li><a href="ui.shtml#ui_alert">弹窗:普通</a></li>
+            <li><a href="ui.shtml#ui_add">弹窗:地址弹窗</a></li>
             <li><a href="ui.shtml#ui_timeout">发送按钮倒计时控件</a></li>
+            <li><a href="ui.shtml#ui_scroll">scroll滚动条</a></li>
             <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
         </ul>
     </div>
@@ -783,6 +784,38 @@
         </div>
     </div>
     <!--地址弹窗 end-->
+
+    <!-- 滚动条 -->
+    <div class="main markdown" id="ui_scroll">
+        <h1>滚动条</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div style="height:100px;width: 500px;">
+            <p class="js_list" style="padding-bottom: 15px;">
+                我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+            </p>
+        </div>
+        <h3>------------HTML-------------</h3>
+        <textarea>
+            //****最外层div必须有高度****
+            <div style="height:100px;width: 500px;">
+                //****这里最好有15像素的下边距****
+                <p class="js_list" style="padding-bottom: 15px;">
+                    我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                    我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                    我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+                </p>
+            </div>
+        </textarea>
+        <h3>------------JS-------------</h3>
+        <textarea>
+            var bar=$(".js_list").oScrollBar();//创建滚动条
+            bar.init();//初始化激活滚动条
+        </textarea>
+    </div>
+    <!-- 滚动条 END -->
     <!-- iconfont -->
     <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
