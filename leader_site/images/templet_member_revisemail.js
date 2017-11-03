@@ -127,8 +127,9 @@ $(function(){
     $(".js_subimGetUp") .unbind().bind('click',function(){
 
         var templet_notclick = $(this).hasClass('l-btn-disable');
+        var templet_error = $('.js-error').hasClass('Validform_wrong');
 
-        if(!templet_notclick)
+        if(!templet_notclick&& !templet_error)
         {
             var templet_param;
             var templet_code=$('.js_emailCodeYz').val(); //验证码
