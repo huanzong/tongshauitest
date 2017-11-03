@@ -335,28 +335,42 @@
 
 
 <div class="o_g land-shade  land-shade-top js_addShadeTop">
-    <div class="land-box  js_addContBox">
+    <div class="land-box  js_logisticsContBox">
         <div class="land-cont-title  o_u">
             <div class="o_u o_df_11-12">
                 <i>物流跟踪（2017061428818）</i>
                 <a href="" class="o_u iconfont icon-close js_addClose"></a>
             </div>
         </div>
-        <div class="o_u o_df_11-12 land-cont-title">
-            <p>对开双门静音节能冰箱  BCD-400WLD</p>
-            <span>物流跟踪仅限商品出库到抵达当地服务中心</span>
+        <div class="js_logisticsCont">
+            <div class="o_u o_df_11-12 logistics-title">
+                <p>对开双门静音节能冰箱  BCD-400WLD</p>
+                <span>物流跟踪仅限商品出库到抵达当地服务中心</span>
+            </div>
+            <ul class="logistics-list">
+                <li class="o_u o_df_11-12 over">
+                    <span class="iconfont icon-bg-solid"></span>
+                    <i class="o_u">2016-07-22  15:21</i>
+                    <p class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
+                </li>
+                <li class="o_u o_df_11-12">
+                    <span class="iconfont icon-bg-solid"></span>
+                    <i>2016-07-22  15:21</i>
+                    <p  class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
+                </li>
+                <li class="o_u o_df_11-12">
+                    <span class="iconfont icon-bg-solid"></span>
+                    <i>2016-07-22  15:21</i>
+                    <p  class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
+                </li>
+                <li class="o_u o_df_11-12">
+                    <span class="iconfont icon-bg-solid"></span>
+                    <i>2016-07-22  15:21</i>
+                    <p  class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
+                </li>
+            </ul>
         </div>
-        <div class="js_landInputBox">
-            <div class="land-cont-normal-input o_g">
-                <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
-            </div>
-            <div class="land-cont-normal-input o_g">
-                <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
-            </div>
-            <div class="land-cont-normal-input o_g">
-                <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
-            </div>
-        </div>
+
     </div>
 </div>
 <!-- Swiper -->
