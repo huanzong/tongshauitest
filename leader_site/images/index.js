@@ -1,8 +1,5 @@
 $(function() {
 
-  init();
-
-
   function init() {
 
     var screenWidth = document.body.offsetWidth;
@@ -30,9 +27,10 @@ $(function() {
 
   var indexBannerInit = false;
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
-    // loop: true,
+    loop: true,
     updateOnImagesReady : true,
-    centeredSlides : true,
+    autoplay: 2000,
+    // centeredSlides : true,
     calculateHeight : true,
     slidesPerView: 3,
     // initialSlide :1,
@@ -60,6 +58,7 @@ $(function() {
     var isTouch = false;
     swiper.bannerSwiper.params.slidesPerView = 3;
     swiper.bannerSwiper.params.watchActiveIndex = true;
+    swiper.bannerSwiper.params.centeredSlides = true;
     swiper.bannerSwiper.params.onTouchStart = function(swiper){
       isTouch = true;
       $('.js_bannerSwiper .swiper-slide').find('a').css({
@@ -111,11 +110,13 @@ $(function() {
 
   } else {
   	swiper.bannerSwiper.params.slidesPerView = 1;
+    swiper.bannerSwiper.params.centeredSlides = false;
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
       var index = swiper.activeLoopIndex;
       //文字
       $('.js_bannerSwiperFont').hide();
       $('.js_bannerSwiperFont').eq(index).fadeIn(500);
+      $(".js_bannnerCenter").oBoxCenter().init();
       //分页
       $('.js_bannerSwiperPage .page-num').removeClass('active');
       $('.js_bannerSwiperPage .page-num').eq(index).addClass('active');
@@ -125,24 +126,18 @@ $(function() {
   //确保加载图片以后，重新加载轮播
   setTimeout(function(){
     swiper.bannerSwiper.reInit();
-  },1000);
-
-  setTimeout(function(){
-    swiper.bannerSwiper.params.autoplay = 2000;
+    swiper.bannerSwiper.swipeNext(); 
+    // swiper.bannerSwiper.params.autoplay = 2000;
     swiper.bannerSwiper.stopAutoplay();
     swiper.bannerSwiper.startAutoplay();
-  },2000);
+  },500);
 
-  $('.js_bannerSwiperPage .page-num').on('click',function(){
-    var pageNum = $(this).attr('data-index');
-    swiper.bannerSwiper.swipeTo(pageNum-1, 100, false);
+  // setTimeout(function(){
+  //   swiper.bannerSwiper.params.autoplay = 2000;
+  //   swiper.bannerSwiper.stopAutoplay();
+  //   swiper.bannerSwiper.startAutoplay();
+  // },2000);
 
-    $('.js_bannerSwiperPage .page-num').removeClass('active');
-    $(this).addClass('active');
-
-    $('.js_bannerSwiperFont').fadeOut();
-    $('.js_bannerSwiperFont').eq(pageNum-1).fadeIn(100);
-  });
 
 	setTimeout(function(){
 
@@ -154,6 +149,17 @@ $(function() {
     $(".js_bannnerCenter").oBoxCenter().init();
 
 	},1000);
+  
+  $('.js_bannerSwiperPage .page-num').on('click',function(){
+    var pageNum = $(this).attr('data-index');
+    swiper.bannerSwiper.swipeTo(pageNum-1, 100, false);
+
+    $('.js_bannerSwiperPage .page-num').removeClass('active');
+    $(this).addClass('active');
+
+    $('.js_bannerSwiperFont').fadeOut();
+    $('.js_bannerSwiperFont').eq(pageNum-1).fadeIn(100);
+  });
 
   /**
    * 产线入口
@@ -304,6 +310,8 @@ $(function() {
 	// },2000);
 
 
+
+  init();
 
   $(window).resize(function() {
     init();
