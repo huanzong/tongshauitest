@@ -139,11 +139,13 @@ $.jUploader.setDefaults({
 });
 $.jUploader({
     fileField: 'file',
+    fillsize:'2',
     button: "js_imgUpload", // 这里设置按钮id
     action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
     onUpload: function(data) {
+        console.log(data,111);
         if(data){
             globalShade2('图片上传中，请耐心等待,,,',4,'forever');
         }
