@@ -127,8 +127,8 @@
                                     </div>
                                     <div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">
                                         <ul class="o_u o_df_2-2">
-                                            <li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12"><a href="javascript:;" class="l-btn-sm l-btn-orange o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a></li>
-                                            <li class="o_u o_df_4-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;">查看物流</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2">查看物流</a></li>
+                                            <li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12"><a href="javascript:;" class="l-btn-sm l-btn-orange  o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a></li>
+                                            <li class="o_u o_df_4-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;" class="check_logistics">查看物流</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_logistics">查看物流</a></li>
                                             <li class="o_u o_df_2-2 "><a href="javascript:;">下载发票</a></li>
                                             <li class=" o_u o_df_2-2"><a href="javascript:;">申请售后</a></li>
                                             <li class="o_u o_df_2-2 o_sm_5-12 o_xs_5-12 order_list_more" ><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>
@@ -266,7 +266,7 @@
                                     <div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">
                                         <ul class="o_u o_df_2-2">
                                             <li class="o_u o_df_2-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;" class="btn_df_show">查看评价</a><a href="javascript:;" class="l-btn-sm l-btn-line2  btn_sm_show  o_u o_df_2-2 o_sm_11-12 o_xs_11-12">查看评价</a></li>
-                                            <li class="o_u o_df_4-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;">查看物流</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_sm_11-12 o_xs_11-12">查看物流</a></li>
+                                            <li class="o_u o_df_4-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;" class="check_logistics">查看物流</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_sm_11-12 o_xs_11-12 check_logistics">查看物流</a></li>
                                             <li class="o_u o_df_2-2 "><a href="javascript:;">下载发票</a></li>
                                             <li class=" o_u o_df_2-2"><a href="javascript:;">申请售后</a></li>
                                             <li class="o_u o_df_2-2 o_sm_4-12 o_xs_4-12 order_list_more" ><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>
@@ -334,41 +334,69 @@
 </div>
 
 
-<div class="o_g land-shade  land-shade-top js_addShadeTop">
-    <div class="land-box  js_logisticsContBox">
+<div class="o_g land-shade  land-shade-top js_addShadeTop"  >
+    <div class="land-box  js_logisticsContBox" >
         <div class="land-cont-title  o_u">
             <div class="o_u o_df_11-12">
                 <i>物流跟踪（2017061428818）</i>
                 <a href="" class="o_u iconfont icon-close js_addClose"></a>
             </div>
         </div>
-        <div class="js_logisticsCont">
-            <div class="o_u o_df_11-12 logistics-title">
-                <p>对开双门静音节能冰箱  BCD-400WLD</p>
-                <span>物流跟踪仅限商品出库到抵达当地服务中心</span>
+        <div class=" logistics_cont">
+            <div class="js_logisticsCont">
+                <div class="o_u o_df_11-12 logistics-title">
+                    <p>对开双门静音节能冰箱  BCD-400WLD</p>
+                    <span>物流跟踪仅限商品出库到抵达当地服务中心</span>
+                </div>
+                <ul class="logistics-list">
+                    <li class="o_u o_df_11-12 over">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i class="o_u">2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+
+                    </li>
+                    <li class="o_u o_df_11-12">
+                        <span class="iconfont icon-bg-solid"></span>
+                        <i>2016-07-22  15:21</i>
+                        <p  class="o_u"><span class="o_u o_xs_11-12">快件已到达【上海中部公司】</span><span class="o_u o_xs_11-12">扫描员是【零点班扫描4】</span></p>
+
+                    </li>
+                </ul>
             </div>
-            <ul class="logistics-list">
-                <li class="o_u o_df_11-12 over">
-                    <span class="iconfont icon-bg-solid"></span>
-                    <i class="o_u">2016-07-22  15:21</i>
-                    <p class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
-                </li>
-                <li class="o_u o_df_11-12">
-                    <span class="iconfont icon-bg-solid"></span>
-                    <i>2016-07-22  15:21</i>
-                    <p  class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
-                </li>
-                <li class="o_u o_df_11-12">
-                    <span class="iconfont icon-bg-solid"></span>
-                    <i>2016-07-22  15:21</i>
-                    <p  class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
-                </li>
-                <li class="o_u o_df_11-12">
-                    <span class="iconfont icon-bg-solid"></span>
-                    <i>2016-07-22  15:21</i>
-                    <p  class="o_u">快件已到达【上海中部公司】 扫描员是【零点班扫描4】</p>
-                </li>
-            </ul>
         </div>
 
     </div>
