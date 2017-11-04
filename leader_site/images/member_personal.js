@@ -147,12 +147,13 @@ $.jUploader({
     onUpload: function(data) {
         console.log(data,111);
         if(data){
-            globalShade2('图片上传中，请耐心等待,,,',4,'forever');
+            globalShade2('图片上传中，请耐心等待....',4,'forever');
         }
 
     },
 //      上传完成事件
     onComplete: function(name, data) {
+
         if (data.isSuccess) {
 
 //      隐藏永恒显示弹窗
@@ -202,7 +203,8 @@ $.jUploader({
 
         } else {
 //      上传头像失败出现弹窗
-            globalShade2(data.resultMsg,2);
+//            alert(111);
+            globalShade2('图片上传失败',2,2000);
         }
 
     },
