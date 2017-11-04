@@ -127,7 +127,7 @@ $(function(){
 
 $.jUploader.setDefaults({
     cancelable: true, // 可取消上传
-    allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+    allowedExtensions: ['jpg', 'png'], // 只允许上传图片
     messages: {
         upload: '上传',
         cancel: '取消',
