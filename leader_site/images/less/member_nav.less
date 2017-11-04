@@ -1,0 +1,534 @@
+@import "l_variable";
+.memeber-nav-left{
+  background: #fbfbfb;
+  text-align: center;
+  height: 100vh;
+  border-right: 1px solid #eee;
+  margin-right: -1px;
+  position: relative;
+  min-height: 760px;
+  vertical-align: top;
+  z-index: 30;
+  border-bottom: 1px solid #eee;
+  @media (max-width: 575px) {
+    /* xs*/
+    min-height: 60px;
+  }
+  .memeber-nav-logo{
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+    margin-right: -1px;
+
+    img{
+      width: 64px;
+      height: 64px;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      img{
+        width: 36px;
+        height: 36px;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      img{
+        width: 36px;
+        height: 36px;
+      }
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+
+      border: none;
+      text-align: center;
+      padding: 15px 0px 15px 10px;
+      img{
+        width: 33px;
+        height: 33px;
+      }
+    }
+  }
+
+  .memeber-nav-userinfo{
+    padding: 60px 0 40px 0;
+    border-bottom: 1px solid #eee;
+    display: block !important;
+    img{
+      height: 80px;
+      width: 80px;
+      border-radius: 80px;
+    }
+    p{
+      font-size: 12px;
+      line-height: 20px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+      border: none;
+      display: block !important;
+      img{
+        height: 40px;
+        width: 40px;
+      }
+      p{
+        display: none;
+      }
+      span{
+        display: none;
+      }
+
+
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      border: none;
+      display: block !important;
+
+      img{
+        height: 40px;
+        width: 40px;
+      }
+      p{
+        display: none;
+      }
+      span{
+        display: none;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      border: none;
+      display: block !important;
+
+      img{
+        height: 40px;
+        width: 40px;
+      }
+      p{
+        display: none;
+      }
+      span{
+        display: none;
+      }
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      display: inline-block !important;
+      border: none;
+    padding: 15px 0 15px 0;
+      text-align: right;
+      img{
+        height: 31px;
+        width: 31px;
+      }
+      p{
+        display: none;
+      }
+      span{
+        display: none;
+      }
+    }
+  }
+  .memeber-nav-left-list{
+    li{
+      border-bottom: 1px solid #eee;
+      font-size: 12px;
+      text-align: left;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+
+      a{
+        color: #cccccc;
+        font-size: 17px;
+        position: relative;
+        span{
+          color: #666;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+        >i{
+          display: none;
+          height: 10px;
+          width: 10px;
+          background: @l-red;
+          border-radius: 10px;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+
+      }
+      >i{
+        float: right;
+      }
+      .memeber-nav-safety{
+        color: @l-orange;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+        text-align: center;
+        border: none;
+        a{
+          height: 17px;
+          width: 17px;
+          display: inline-block;
+
+          span{
+            display: none;
+          }
+          >i{
+            display: block;
+          }
+        }
+        >i{
+          display: none;
+        }
+      }
+      @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        text-align: center;
+        border: none;
+
+        a{
+          height: 17px;
+          width: 17px;
+          display: inline-block;
+          position: relative;
+          span{
+            display: none;
+          }
+          >i{
+            display: block;
+          }
+        }
+        >i{
+          display: none;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        text-align: center;
+        border: none;
+
+        a{
+          height: 17px;
+          width: 17px;
+          display: inline-block;
+          position: relative;
+          span{
+            display: none;
+          }
+          >i{
+            display: block;
+          }
+
+        }
+        >i{
+          display: none;
+        }
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        text-align: center;
+        border: none;
+
+        a{
+          height: 17px;
+          width: 17px;
+          display: inline-block;
+          position: relative;
+          span{
+            display: none;
+          }
+          >i{
+            display: block;
+          }
+        }
+        >i{
+          display: none;
+        }
+      }
+    }
+    display: block;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+      display: block;
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+      display: block;
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      display: inline-block;
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      display: inline-block;
+
+      li{display: none;}
+      li:nth-child(2){
+        display: inline-block;
+        padding: 0;
+        line-height: 60px;
+        a{
+          font-size: 22px;
+          color: #333;
+        }
+      }
+    }
+  }
+  .memeber-nav-top-btn{
+    display: none;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* lg*/
+  }
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+  border-bottom: 1px solid #eee;
+
+    .memeber-nav-logo-text{
+      font-size: 14px;
+      color: #333;
+      line-height: 60px;
+      text-align: left;
+    }
+    .memeber-nav-top-btn{
+      color: #333;
+      text-align: center;
+      font-size: 22px;
+      line-height: 60px;
+      display: inline-block;
+    }
+  }
+}
+.memeber-nav-middle{
+  text-align: center;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  background: #fff;
+  z-index: 25;
+  //padding-bottom: 60px;
+  vertical-align: top;
+  min-height: 762px;
+  .memeber-nav-middle-listbox{
+    text-align: center;
+    ul{
+      padding-top: 10px;
+      .memeber-nav-middle-title{
+        font-size: 16px;color: #999;
+        margin: 30px 0 10px 0;
+
+      }
+      li{
+        padding: 8px 0;
+        font-size: 14px;
+        text-align: left;
+
+        a{
+          color: #666;
+          font-size: 12px;
+        }
+        .cur{
+          color: @l-red;
+        }
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /* lg*/
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+      /* md*/
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+
+    }
+  }
+
+  .memeber-nav-middle-btn{
+
+    display: none;
+    line-height: 500px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 0 4px #efefef;
+    float: right;
+    span{
+      font-size: 18px;
+      padding-top: 50em;
+    }
+    border-right: 1px solid #eee;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* lg*/
+  }
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+    text-align: center;
+    border: none;
+    margin-left:-27.6%;
+    .memeber-nav-middle-btn{
+      display: inline-block;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    text-align: center;
+    border: none;
+    //margin-left: -180px;
+    margin-left:-34.5%;
+    .memeber-nav-middle-btn{
+      display: inline-block;
+    }
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    display: block;
+    text-align: center;
+    border: none;
+    position: absolute;
+    right: -50%;
+    top:60px;
+    //margin-left: -180px;
+    //margin-left: calc(~"41.66667% *83%");
+
+    border-left: 1px solid #eee;
+    background: #fff;
+    .memeber-nav-middle-btn{
+      display: none;
+    }
+  }
+}
+.memeber-homenav-top{
+  background: url(member_home_title.png) no-repeat center;
+  height: 120px;
+  background-size: 100% 100%;
+  position: relative;
+  >div{
+    color: @l-red;
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  p{
+    font-size: 16px;
+    color: #666;
+    padding: 35px 0 0 60px;
+  }
+  h2{
+    font-size: 28px;
+    color: #333;
+    padding: 0px 0 0 60px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* lg*/
+  }
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    display: none;
+
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    display: none;
+
+  }
+}
+.memeber-homenav-top-md{
+  display: none;
+  background: url(member_home_title.png) no-repeat center;
+  height: 120px;
+  position: relative;
+  text-align: left;
+
+>p{
+  color: #666666;
+  font-size: 16px;
+  padding: 32px 0 0 60px ;
+}
+  >h2{
+    color: #333;
+    font-size: 28px;
+    padding: 0 0 0 60px ;
+
+  }
+  >div{
+    position: absolute;
+      right: 20px;
+      bottom: 20px;
+    color: @l-red;
+    font-size: 35px;
+  }
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+    display: block;
+    >p{
+      padding: 32px 0 0 45px ;
+    }
+    >h2{
+      padding: 0 0 0 45px ;
+    }
+
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    display: block;
+    >p{
+      padding: 32px 0 0 45px ;
+    }
+    >h2{
+      padding: 0 0 0 45px;
+    }
+    >div{
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    display: block;
+    >p{
+      padding: 32px 0 0 45px ;
+    }
+    >h2{
+      padding: 0 0 0 45px;
+    }
+    >div{
+      display: none;
+    }
+  }
+}

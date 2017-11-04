@@ -1,0 +1,334 @@
+@import "l_variable";
+
+/*
+    服务条款页面
+*/
+.service_term_titlebox{
+  text-align: center;
+  width: 100%;
+
+}
+//大标题
+.service_term_title{
+  color: #333333;
+  line-height: 50px;
+  @media (min-width:701px){
+    font-size: 32px;
+    margin-top: 49px;
+    margin-bottom: 21px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    margin-top: 25px;
+    font-size: 28px;
+    margin-bottom: 7px;
+  }
+  @media (max-width: 575px){
+    font-size: 24px;
+    margin-bottom: 2px;
+    margin-top: 25px;
+  }
+}
+//内容div
+.service_term_contentbox{
+  @media (min-width:1200px){
+    margin: 0px 240px 90px 240px;
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    margin: 0px 170px 87px 170px;
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    margin: 0px 125px 62px 125px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    margin: 0px 50px 58px 50px;
+  }
+  @media (max-width: 575px){
+    margin: 0px 30px 58px 30px;
+  }
+}
+//内容
+.service_term_content{
+  color: #666666;
+  @media (min-width:701px){
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    font-size: 14px;
+    line-height: 25px;
+  }
+  @media (max-width: 575px){
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+//小标题
+.service_term_smalltitle{
+  color: #333333;
+  line-height: 30px;
+  @media (min-width:701px){
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    font-size: 14px;
+    margin-top: 21px;
+    margin-bottom: 6px;
+  }
+  @media (max-width: 575px){
+    font-size: 14px;
+    margin-top: 21px;
+    margin-bottom: 6px;
+  }
+}
+/*
+    404页面
+*/
+
+//上面的大div
+.service_error_abovebox{
+  font-size: 0;
+  border-bottom: solid 1px #ccc;
+  margin: 0 8.3% 0 8.3%;
+}
+//广告div
+.service_error_adbox{
+  @media (min-width:1200px){
+    margin: 120px 0;
+    width: 50%;
+    height: 295px;
+    display: inline-block;
+    &.smallbg{
+      display: none;
+    }
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    margin: 120px 0;
+    width: 50%;
+    height: 210px;
+    display: inline-block;
+    &.smallbg{
+      display: none;
+    }
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    margin: 90px 0 140px 0;
+    width: 50%;
+    height: 155px;
+    //float: left;
+    display: inline-block;
+    &.smallbg{
+      display: none;
+    }
+  }
+
+  @media (min-width:576px)and ( max-width:700px){
+    height: 250px;
+    width: 100%;
+    margin: 45px 0 45px 0;
+    display: block;
+    &.bigbg{
+      display: none;
+    }
+  }
+  @media ( max-width:575px){
+    height: 150px;
+    width: 100%;
+    margin: 30px 0 30px 0;
+    display: block;
+    &.bigbg{
+      display: none;
+    }
+  }
+}
+//广告图片div
+.service_error_adimgbox{
+  margin-right: 15px;
+  height: 100%;
+  @media ( max-width:700px){
+    margin-right: 0;
+  }
+}
+//广告图片
+.service_error_adimg{
+  width: 100%;
+  height: 100%;
+}
+
+//右侧包含404图片文本的div
+.service_error_rightbox{
+
+  @media (min-width:1200px){
+    margin: 55px 0 0 0;
+    width: 50%;
+    display: inline-block;
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    margin: 60px 0 0 0;
+    width: 50%;
+    display: inline-block;
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    margin: 45px 0 0 0;
+    width: 50%;
+    display: inline-block;
+  }
+
+
+  @media (min-width:576px)and ( max-width:700px){
+    //height: 250px;
+    width: 100%;
+    margin: 0;
+  }
+  @media ( max-width:575px){
+    //height: 150px;
+    width: 100%;
+    margin: 30px 0 30px 0;
+  }
+}
+//404图片div
+.service_error_errorbox{
+  @media (min-width:1200px){
+    margin-top: 0;
+    margin-left: 15px;
+    height: 242px;
+    width: 80%;
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    margin-top: 0;
+    margin-left: 15px;
+    height: 170px;
+    width: 80%;
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    margin-top: 0;
+    margin-left: 15px;
+    margin-right: 0px;
+    height: 155px;
+  }
+}
+//404 图片
+.service_error_errorimg{
+  height: 100%;
+  width: 100%;
+}
+//文本div
+.service_error_testbox{
+
+  margin-left: 20%;
+  @media (max-width:701px){
+    margin-left: 0;
+    text-align: center;
+  }
+
+}
+//错误描述
+.service_error_describe{
+  color: #333333;
+  @media (min-width:1200px){
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  @media ( max-width:575px){
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+}
+//错误原因标题
+.service_error_reasontitle{
+  color: #666666;
+  @media (min-width:1200px){
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 15px;
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+  @media ( max-width:575px){
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+}
+//错误原因
+.service_error_reason{
+  color: #999999;
+  margin-bottom: 7px;
+
+  @media (min-width:1200px){
+    font-size: 14px;
+    line-height: 14px;
+
+  }
+  @media (min-width:992px)and ( max-width:1199px){
+    font-size: 14px;
+    line-height: 14px;
+  }
+  @media (min-width:701px)and ( max-width:991px){
+    font-size: 12px;
+    line-height: 12px;
+  }
+  @media (min-width:576px)and ( max-width:700px){
+    font-size: 14px;
+    line-height: 14px;
+  }
+  @media ( max-width:575px){
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+//返回首页按钮
+.service_error_goback{
+  margin-top: 16px;
+  width: 120px;
+  font-size: 12px;
+  text-align: center;
+  display:inline-block;
+  background: #ff0000;
+  color: #ffffff;
+  border-radius: 20px;
+
+  @media (min-width:991px){
+    width: 160px;
+  }
+
+  @media (min-width:701px){
+    height: 40px;
+    line-height: 40px;
+  }
+  @media ( max-width:700px){
+    height: 32px;
+    line-height: 32px;
+  }
+}

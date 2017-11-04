@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-我的晒单</title>
+    <base href='../'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="images/member_nav.css">
+    <link rel="stylesheet" type="text/css" href="images/member.css">
+</head>
+
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g js-contBox">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="public/header_nav.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+                <div class="o_u o_df_12-12  member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
+
+                    <div class="member-security-width js-securityheight">
+                        <div class="member-security-tit"><p>我的晒单</p></div>
+                        <!-- 内容区域 START-->
+                        <div class="member-myshare-list-box o_g js-myshare">
+
+                        </div>
+
+                        <!-- 内容区域 End-->
+                        <div>
+                            <a  class="l-pagination-prew">上一页</a>
+                            <a  class="l-pagination-pagenumber active">1</a>
+                            <a  class="l-pagination-pagenumber">2</a>
+                            <a  class="l-pagination-pagenumber">3</a>
+                            <a  class="l-pagination-pagenumber">4</a>
+                            <a  class="l-pagination-pagenumber">5</a>
+                            <a  class="l-pagination-pagenumber">6</a>
+                            <a  class="l-pagination-pagenumber">7</a>
+                            <a  class="l-pagination-pagenumber">8</a>
+                            <a  class="l-pagination-next ">下一页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="public/personal_footer.shtml"-->
+
+    </div>
+</div>
+<!--#include virtual="public/foot.shtml"-->
+<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="images/member_nav.js"></script>
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/templet_member_myshare.js"></script>
+</body>
+</html>

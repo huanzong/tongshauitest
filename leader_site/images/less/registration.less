@@ -1,0 +1,252 @@
+@import "l_variable";
+
+//登录页面样式
+.o_body{
+	background: #f8f8f8;
+}
+.o_main{
+	background: url(reg_bg_left1.jpg) no-repeat;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+	-moz-background-size: auto 100%;
+	background-size: auto 100%;
+	@media (min-width: 992px)and (max-width: 1199px){
+		background: url(reg_bg_left2.jpg) no-repeat;
+	}
+	@media (max-width: 991px){
+		background: none;
+	}
+	@media (max-width: 575px){
+		background: #fff;
+	}
+}
+
+.reg-conbox{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -300px;
+
+    @media (min-width: 901px){
+		margin-top: -285px;
+	}
+	@media (max-width: 575px) {
+		position: relative;
+	    top: 0;
+	    width: 100%;
+	    margin-top: 0;
+	}
+}
+
+
+.reg{
+	// position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // width: 100%;
+    min-height: 632px;
+    font-size: 14px;
+    text-align: center;
+
+    background: url(reg_bg_right.jpg) no-repeat right;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+	-moz-background-size: auto 100%;  
+	background-size: auto 100%;
+	@media (max-width: 991px){
+		background: url(reg_bg_top1.png) no-repeat top;
+		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+		-moz-background-size: 100% auto;  
+		background-size: 100% auto;
+	}
+	@media (max-width: 991px) and (min-width: 701px){
+		min-height: 800px;
+	}
+	@media (max-width: 700px) and (min-width: 576px){
+		min-height: 870px;
+	}
+
+    @media (max-width: 575px){
+		background: #fff;
+		position: relative;
+		min-height: 600px;
+	}
+
+}
+
+.reg_footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	@media (min-width: 576px) and (max-width: 700px){
+		position: relative;
+		padding-top: 50px;
+	}
+	@media (max-width: 575px) {
+		position: relative;
+		padding-top: 60px;
+	}
+}
+
+.reg-box{
+	position: relative;
+	border-radius: 10px;
+	background-color: #fff;
+	.reg-login{
+		position: absolute;
+		top: -25px;
+		right: 5px;
+	}
+}
+	
+
+
+.reg-con{
+	position: relative;
+	background: #fff;
+	min-height: 550px;
+	font-size: 14px;
+	border-radius: 10px;
+	@media (min-width: 576px) and (max-width: 991px){
+		min-height: 600px;
+	}
+	@media (max-width: 575px){
+		background: url(reg_bg_top2.jpg) no-repeat;
+		background-position: center top;
+	}
+	.reg-tab{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 81px;
+		height: 81px;
+		.reg-shade{
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			top: 0;
+			background: url(login_tab.png) no-repeat;
+			width: 81px;
+			height: 81px;
+			z-index: 2;
+		}
+		.reg-float{
+			position: absolute;
+			right: 50%;
+			top: 20px;
+			min-width: 150px;
+			z-index: 3;
+		}
+		i.iconfont{
+		    position: absolute;
+		    top: 13px;
+		    left: 31px;
+			color: @l-red;
+			font-size: 40px;
+			z-index: 1;
+		}
+	}
+}
+.reg-logo{
+	display: inline-block;
+	margin-top: 50px;
+	width: 80px;
+	height: 80px;
+	background: url(logo.png) no-repeat;
+	@media  (min-width: 576px) and (max-width: 991px){
+		margin-top: -40px;
+	}
+	@media  (max-width: 575px){
+		margin-top: 90px;
+	}
+}
+.reg-tit{
+	font-size: 28px;
+	height: 52px;
+	line-height: 52px;
+	@media  (max-width: 574px){
+		height: 40px;
+		line-height: 40px;
+	}
+}
+.reg-form{
+	padding-top: 21px;
+	.reg-input{
+		position: relative;
+		width: 100%;
+		margin-bottom: 10px;
+		color: #ccc;
+		.l-input{
+			width: 75%;
+			@media (max-width: 575px){
+				width: 80%;
+			}
+			input{
+				width: 100%;
+				border: 1px solid #ccc;
+				border-radius: 40px;
+				height: 40px;
+				line-height: 40px;
+				text-indent: 20px;
+			}
+			.Validform_checktip i {
+				top: 0;
+			}
+			i{
+				top: 10px;
+			}
+			a{
+				top: 5px;
+			}
+			a.validLink{
+				top: 0;
+			}
+		}
+	}
+	.reg-btn{
+		display: inline-block;
+		margin-top: 10px;
+		width: 75%;
+		color: #fff;
+		padding: 0;
+		&.l-btn-disable{
+			color: #666;
+		}
+		@media (max-width: 575px){
+			width: 80%;
+		}
+	}
+	.reg-btn-line{
+		padding: 0;
+		margin-top: 10px;
+		width: 75%;
+		@media (max-width: 575px){
+			width: 80%;
+		}
+	}
+	.reg-login-bottom{
+		position: relative;
+		height: 1px;
+		width: 75%;
+		background: #eee;
+		margin: 100px 0 15px;
+		text-align: center;
+		@media (max-width: 574px){
+			margin-top: 50px;
+			width: 75%;
+		}
+		span{
+			position: relative;
+			bottom: 10px;
+			background: #fff;
+		}
+	}
+}
+
+//注册页面样式
+.reg-info{
+	padding-top: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #666;
+}

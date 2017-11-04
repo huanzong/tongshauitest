@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登录统帅</title>
+
+<%=base%>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/head.shtml"-->
+<link rel="stylesheet" type="text/css" href="images/login.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <div class="o_g">
+                <div class="login">
+                    <div class="login-conbox">
+                        <div class="o_u o_df_2-3 o_lg_5-6 o_md_5-6 o_sm_2-2 o_xs_2-2">
+                            <div class="login-box js_center">
+                                <div class="o_g">
+                                    <div class="o_u o_df_1-2 o_md-hide o_sm-hide o_xs-hide"></div>
+                                    <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 login-con">
+                                        <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
+                                            <a class="login-shade js_loginType" data-login=1></a>
+                                            <i class="iconfont icon-phone js_loginType_tab"></i>
+                                            <!-- <i class="iconfont icon-computer"></i> -->
+                                        </div>
+                                        <div class="login-logo"></div>
+                                        <div class="login-tit js_loginType_tit">登录统帅</div>
+                                        <div class="login-form js_loginType_pc">
+                                            <div class="l-input login-input">
+                                                <input type="text" name="username" ph="手机号 / 邮箱 / 用户名">
+                                                <i class="iconfont icon-member"></i>
+                                                <p class="Validform_checktip js_demo"></p>
+                                            </div>
+                                            <div class="l-input login-input js_password">
+                                                <input type="password" name="password" ph="密码">
+                                                <i class="iconfont icon-lock-solid"></i>
+                                                <p class="Validform_checktip"></p>
+                                            </div>
+                                            <div class="l-input login-input o_borderbox">
+                                                <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
+                                                <a href="javascript:;" class="exchange">换一换</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
+                                            </div>
+                                            <div class="login-role">
+                                                <span>
+                                                  <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="2周内免登录">
+                                                </span>
+                                                <a class="forget-psw l-fr">忘记密码</a>
+                                                <i class="iconfont icon-problem-solid l-fr"></i>
+                                                <p class="Validform_checktip"></p>
+                                            </div>
+                                            <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">登录</a>
+                                            <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用动态密码登录</a>
+                                            <div class="login-reg">
+                                                <a href="javascript:;">立即注册</a>
+                                            </div>
+                                        </div>
+                                        <div class="login-form js_loginType_phone">
+                                            <div class="l-input login-input">
+                                                <input type="text" name="username" ph="手机号" datatype="m" nullmsg="<i class='iconfont icon-information-solid'></i>请填写手机号" errormsg="<i class='iconfont icon-information-solid'></i>手机号格式不对">
+                                                <i class="iconfont icon-phone-solid"></i>
+                                                <p class="Validform_checktip"></p>
+                                            </div>
+                                            <div class="l-input login-input">
+                                                <input type="text" name="password" ph="动态密码" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写动态密码">
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                                <p class="Validform_checktip"></p>
+                                            </div>
+                                            <div class="login-role">&nbsp;</div>
+                                            <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">登录</a>
+                                            <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show login-btn-line js_loginType"  data-login=1>使用账号密码登录</a>
+                                            <div class="login-reg">
+                                                <a href="javascript:;">立即注册</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_2-2 login_footer">
+                    <!--#include virtual="public/login_footer.shtml"-->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="images/login.js"></script>
+</body>
+</html>

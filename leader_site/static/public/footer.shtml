@@ -1,0 +1,111 @@
+<div class="o_g footer">
+    <div class="line-red"></div>
+    <div class="line"></div>
+    <div class="o_u o_df_1-12"></div>
+    <div class="o_u o_df_10-12">
+        <div class="o_g footer_box">
+            <div class="o_u o_df_1-6 o_md_1-4 o_sm_2-2 o_xs_2-2">
+                <div class="foot_head js_footLindBtn">
+                    <i class="iconfont icon-problem-solid"></i>
+                    <span>了解统帅</span>
+                    <a class="iconfont icon-plus o_df-hide o_sm-show o_xs-show"></a>
+                </div>
+                <div class="foot_linkbox js_footLink">
+                    <a class="foot_link">悠生活</a>
+                    <a class="foot_link">关于统帅</a>
+                    <a class="foot_link">新闻资讯</a>
+                    <a class="foot_link">联系我们</a>
+                </div>
+            </div>
+            <div class="o_u o_df_1-6 o_md_1-4 o_sm_2-2 o_xs_2-2">
+                <div class="foot_head js_footLindBtn">
+                    <i class="iconfont icon-problem-solid"></i>
+                    <span>了解统帅</span>
+                    <a class="iconfont icon-plus o_df-hide o_sm-show o_xs-show"></a>
+                </div>
+                <div class="foot_linkbox js_footLink">
+                    <a class="foot_link">悠生活</a>
+                    <a class="foot_link">关于统帅</a>
+                    <a class="foot_link">新闻资讯</a>
+                    <a class="foot_link">联系我们</a>
+                    <a class="foot_link">悠生活</a>
+                    <a class="foot_link">关于统帅</a>
+                    <a class="foot_link">新闻资讯</a>
+                </div>
+            </div>
+            <div class="o_u o_df_1-6 o_md_1-4 o_sm_2-2 o_xs_2-2">
+                <div class="foot_head js_footLindBtn">
+                    <i class="iconfont icon-problem-solid"></i>
+                    <span>了解统帅</span>
+                    <a class="iconfont icon-plus o_df-hide o_sm-show o_xs-show"></a>
+                </div>
+                <div class="foot_linkbox js_footLink">
+                    <a class="foot_link">悠生活</a>
+                    <a class="foot_link">关于统帅</a>
+                    <a class="foot_link">新闻资讯</a>
+                    <a class="foot_link">联系我们</a>
+                </div>
+            </div>
+            <div class="o_u o_df_1-6 o_md_1-4 o_sm_2-2 o_xs_2-2">
+                <div class="foot_head js_footLindBtn">
+                    <i class="iconfont icon-problem-solid"></i>
+                    <span>了解统帅</span>
+                    <a class="iconfont icon-plus o_df-hide o_sm-show o_xs-show"></a>
+                </div>
+                <div class="foot_linkbox js_footLink">
+                    <a class="foot_link">悠生活</a>
+                    <a class="foot_link">关于统帅</a>
+                    <a class="foot_link">新闻资讯</a>
+                    <a class="foot_link">联系我们</a>
+                </div>
+            </div>
+            <div class="o_u o_df_2-6 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                <div class="o_u o_df_2-2 o_md_8-12 foot_shop">
+                    <div class="shop_head">统帅旗舰店</div>
+                    <ul class="o_g shop_box">
+                        <li class="o_u o_df_1-3">
+                            <img src="images/footer_logo1.jpg">
+                            <span>京东旗舰店</span>
+                            <div class="line"></div>
+                        </li>
+                        <li class="o_u o_df_1-3">
+                            <img src="images/footer_logo2.jpg">
+                            <span>天猫旗舰店</span>
+                            <div class="line"></div>
+                        </li>
+                        <li class="o_u o_df_1-3">
+                            <img src="images/footer_logo3.jpg">
+                            <span>苏宁旗舰店</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="o_u o_df_2-2 o_md_4-12 o_xs_2-2 shop_phone">
+                    <span class="phone_tit">24小时客服热线：</span>
+                    <span class="phone_num">4006-999-999</span>
+                </div>
+            </div>
+        </div>
+    	<div class="footer_copy">
+
+            <span class="link">
+                <a href="javascript:;"  class="iconfont icon-share-weixin"></a>
+                <a href="javascript:;" class="iconfont icon-share-weibo"></a>
+            </span>
+            <ul>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">服务条款</a></li>
+                <li><a href="">法律生命</a></li>
+            </ul>
+    		<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
+           <div class="footer_copy_img_box">
+               <a href="http://cdn09.ehaier.com/v5/images/yingyezhizhao.png" class="footer_copy_img1"></a>
+               <a href="" class="footer_copy_img2"></a>
+               <a href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></a>
+           </div>
+
+    		<!--<span class="copy_service">服务条款33333</span>-->
+    	</div>
+    </div>
+    <div class="o_u o_df_1-12"></div>
+</div>
