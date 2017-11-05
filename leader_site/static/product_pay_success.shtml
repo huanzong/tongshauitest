@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>支付订单</title>
+    <title>支付订单-测试</title>
     <%=base%>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
