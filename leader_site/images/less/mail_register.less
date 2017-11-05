@@ -8,7 +8,7 @@
   }
   .mail_register_bkleft{
     width: 1200px;
-    height: 850px;
+    height: 100vh;
     background: url('email_bg_left.jpg') no-repeat top left;
     background-size:  auto 850px ;
 
@@ -41,7 +41,7 @@
   .mail_register_bkright{
     background: url('email_bg_right.png') no-repeat center right;
     width: 200px;
-    height: 850px;
+    height: 100vh;
     //background-size:200px  auto ;
     @media (min-width: 992px) and (max-width: 1199px) {
       /* lg*/
@@ -81,25 +81,25 @@
 
     }
   }
-  .mail_register_contbox{
-    position: absolute;
-    top: 135px;
-    left: 0;
-    text-align: center;
-    @media (min-width: 701px) and (max-width: 991px) {
-      /* md*/
-
-    }
-    @media (min-width: 576px) and (max-width: 700px) {
-      /* sm*/
-      top: 60px;
-    }
-    @media (max-width: 575px) {
-      /* xs*/
-      top: 90px;
-
-    }
-  }
+  //.mail_register_contbox{
+  //  //position: absolute;
+  //  //top: 135px;
+  //  //left: 0;
+  //  //text-align: center;
+  //  @media (min-width: 701px) and (max-width: 991px) {
+  //    /* md*/
+  //
+  //  }
+  //  @media (min-width: 576px) and (max-width: 700px) {
+  //    /* sm*/
+  //    top: 60px;
+  //  }
+  //  @media (max-width: 575px) {
+  //    /* xs*/
+  //    top: 90px;
+  //
+  //  }
+  //}
   .mail_register_cont{
     width: 480px;
     border-radius: 8px;
@@ -107,6 +107,13 @@
     background: #fff;
     color: #333;
     display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 550px;
 
     box-shadow: 0px 0px 7px 0px #eee;
     >div{
@@ -184,7 +191,7 @@
     .mail_register_cont_down{
       font-size: 12px;
       border-top: 1px solid #eee;
-      margin: 90px 0 0 0;
+      margin: 60px 0 0 0;
       padding: 20px 0;
       color: #666;
       i{
@@ -201,6 +208,9 @@
     }
   }
   .login_footer{
+    position: absolute;
+    bottom: 0;
+    background: #fff;
     @media (max-width: 575px) {
       /* xs*/
       background: #fff;

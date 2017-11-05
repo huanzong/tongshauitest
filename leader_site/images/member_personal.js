@@ -127,7 +127,7 @@ $(function(){
 
 $.jUploader.setDefaults({
     cancelable: true, // 可取消上传
-    allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+    allowedExtensions: ['jpg', 'png','jpeg'], // 只允许上传图片
     messages: {
         upload: '上传',
         cancel: '取消',
@@ -139,18 +139,21 @@ $.jUploader.setDefaults({
 });
 $.jUploader({
     fileField: 'file',
+    fillsize:'2',
     button: "js_imgUpload", // 这里设置按钮id
     action: '/user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
     onUpload: function(data) {
+        console.log(data,111);
         if(data){
-            globalShade2('图片上传中，请耐心等待,,,',4,'forever');
+            globalShade2('图片上传中，请耐心等待....',4,'forever');
         }
 
     },
 //      上传完成事件
     onComplete: function(name, data) {
+
         if (data.isSuccess) {
 
 //      隐藏永恒显示弹窗
@@ -200,7 +203,8 @@ $.jUploader({
 
         } else {
 //      上传头像失败出现弹窗
-            globalShade2(data.resultMsg,2);
+//            alert(111);
+            globalShade2('图片上传失败',2,2000);
         }
 
     },

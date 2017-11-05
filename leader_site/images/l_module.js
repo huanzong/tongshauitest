@@ -534,12 +534,15 @@ function globalShade2(alerttext,type,time){
         $('.js_popUpText').addClass('type3-text');
     }
 
-        if(outTime){
+        if(outTime&&outTime=='forever'){
+            return false;
+
+        }else if(outTime&&outTime!='forever'){
             setTimeout(function(){
                 $('.js_popUpBox2').hide();
                 $("body").css({overflow:"auto"});
             },outTime);
-        }else{
+        } else{
             setTimeout(function(){
                 $('.js_popUpBox2').hide();
                 $("body").css({overflow:"auto"});

@@ -25,7 +25,6 @@ $(function(){
             $('.js_memberNavMiddleBtn').css({height:'60px'});
 
         }else{
-            console.log(documenHeight);
             documenHeight = $('.js-membercontboxs').height();
                 if(documenHeight!=documenHeights&&documenHeight>762){
                     $('.js_memberNavMiddle').css({'height':documenHeight+60});
