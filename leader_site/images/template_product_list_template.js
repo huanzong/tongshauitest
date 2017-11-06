@@ -21,36 +21,35 @@ function cur(){
     });
 }
 
+//重新绘制价格
+$(".js_minPrice").each(function(){
+    var templet_price=$(this).attr("sku_value");
+    if(templet_price==''||templet_price==null){
+        $(this).css('display','none');//没有价格隐藏
+    }else{
+        $(this).find("span").text(readJsonString(templet_price));
+    }
 
-	//重新绘制价格
-	$(".js_minPrice").each(function(){
-		var templet_price=$(this).attr("sku_value");
-		if(templet_price==''||templet_price==null){
-			$(this).css('display','none');//没有价格隐藏
-		}else{
-			$(this).find("span").text(readJsonString(templet_price));
-		}
-		
-	})
+})
 
-	//价格转化获取最小值
-	function readJsonString(templet_price){
-	    var minPrice = 0;
-	    var jsonObj = eval('(' + templet_price + ')');
-	    if(jsonObj != null && jsonObj!="" && jsonObj.length>0){
-	        var currentPrice = 0;
-	        for(var i=0;i<jsonObj.length;i++){
-	     
-	            currentPrice = jsonObj[i].salePrice;
-	            if(i==0){
-	                minPrice=currentPrice;
-	            }else if(parseInt(minPrice)>parseInt(currentPrice)){
-	                minPrice = currentPrice;
-	            }
-	        }
-	    }
-	    return minPrice;
-	}
+//价格转化获取最小值
+function readJsonString(templet_price){
+    var minPrice = 0;
+    var jsonObj = eval('(' + templet_price + ')');
+    if(jsonObj != null && jsonObj!="" && jsonObj.length>0){
+        var currentPrice = 0;
+        for(var i=0;i<jsonObj.length;i++){
+
+            currentPrice = jsonObj[i].salePrice;
+            if(i==0){
+                minPrice=currentPrice;
+            }else if(parseInt(minPrice)>parseInt(currentPrice)){
+                minPrice = currentPrice;
+            }
+        }
+    }
+    return minPrice;
+}
 
 //精选推荐手机端添加class
 $(".js_recommend").find('a').eq(2).addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
@@ -101,46 +100,45 @@ $('.js_recomChange').click(function(){
                 recommendData+='<span class="pro-info-price js_minPrice">￥<span>'+minPrice+'</span></span>';
                 recommendData+='</div></a>';
 
-	           }
-	           $(".js_recommend").html(recommendData);
+            }
+            $(".js_recommend").html(recommendData);
+        }
+    });
 
-	        }
-	    });
-
-	})
+})
 
 
-	//wcm分页==========start============
+//wcm分页==========start============
 
-	function getPageIncss(_currentPage, pageInclude) {
-	    var Inc = Math.ceil(_currentPage / pageInclude);
-	    return Inc;
-	}
+function getPageIncss(_currentPage, pageInclude) {
+    var Inc = Math.ceil(_currentPage / pageInclude);
+    return Inc;
+}
 
-	function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude){
-	    if(_nPageCount<=1){  //一页时不显示          
-	       return ""; 
-	    }
-	    //_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude
-	    //一共多少页数，当前页数，   首页，		扩展名，，一共多少数据,显示的分页按钮数量
-	    //第一页
-	    var firstPage = _sPageName + "." + _sPageExt;
-	    //上一页
-	    var previousPage = 0;
-	    //下一页
-	    var nextPage = 0;
-	    //最后一页
-	    var lastPage = _sPageName + "_" + (_nPageCount - 1) + "." + _sPageExt;
-	    var pagehtml = '';
+function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude){
+    if(_nPageCount<=1){  //一页时不显示
+        return "";
+    }
+    //_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude
+    //一共多少页数，当前页数，   首页，		扩展名，，一共多少数据,显示的分页按钮数量
+    //第一页
+    var firstPage = _sPageName + "." + _sPageExt;
+    //上一页
+    var previousPage = 0;
+    //下一页
+    var nextPage = 0;
+    //最后一页
+    var lastPage = _sPageName + "_" + (_nPageCount - 1) + "." + _sPageExt;
+    var pagehtml = '';
 
-	    var maxButtons = 4;  //按钮数量
-	    if (_nPageCount < 4) {
-	        maxButtons = _nPageCount;
-	    }
+    var maxButtons = 4;  //按钮数量
+    if (_nPageCount < 4) {
+        maxButtons = _nPageCount;
+    }
 
-	    var currInNum = _nCurrIndex + 1;
-	    var nCurrIndex = _nCurrIndex || 0;
-	    if (nCurrIndex != 0) {
+    var currInNum = _nCurrIndex + 1;
+    var nCurrIndex = _nCurrIndex || 0;
+    if (nCurrIndex != 0) {
 
     }
     if (nCurrIndex >= 1) {
@@ -151,71 +149,71 @@ $('.js_recomChange').click(function(){
         }
         pagehtml += '<a class="l-pagination-prew" href="' + firstIndex + '.' + _sPageExt + '">上一页</a>';
 
-	    } else {
-	        pagehtml += '<a class="l-pagination-prew">上一页</a>';
-	    }
-	    var pL = "";
-	    var curIndex = _nCurrIndex + 1;
-	    var currInclude = getPageIncss(curIndex, pageInclude);
-	    var prePage = pageInclude * currInclude;
-	    if (prePage > _nPageCount) {
-	        prePage = _nPageCount;
-	    }
+    } else {
+        pagehtml += '<a class="l-pagination-prew">上一页</a>';
+    }
+    var pL = "";
+    var curIndex = _nCurrIndex + 1;
+    var currInclude = getPageIncss(curIndex, pageInclude);
+    var prePage = pageInclude * currInclude;
+    if (prePage > _nPageCount) {
+        prePage = _nPageCount;
+    }
 
-	    if (1 != curIndex) {
-	        pL += '<a class="l-pagination-pagenumber href="' + firstPage + '">1</a> ';
+    if (1 != curIndex) {
+        pL += '<a class="l-pagination-pagenumber href="' + firstPage + '">1</a> ';
 
-	    }
+    }
 
-	    var temp1 = 5;
-	    if (_nPageCount <= 6) {
-	        temp1 = 5;
-	    }
+    var temp1 = 5;
+    if (_nPageCount <= 6) {
+        temp1 = 5;
+    }
 
-	    if (curIndex > temp1) {
-	        pL += '<span>...</span>';
-	    }
+    if (curIndex > temp1) {
+        pL += '<span>...</span>';
+    }
 
-	    var pageNum = 0;
-	    for (var pageN = (currInclude - 1) * pageInclude + 1; pageN <= prePage; pageN++) {
-	        pageNum = pageN;
-	        if (pageN == (_nCurrIndex + 1)) {
-	            pL += '<a href="javascript:;" class="l-pagination-pagenumber active">' + pageN + '</a> ';
-	        }
-	        else {
-	            if (pageN != 1 && pageN != _nPageCount)
-	                pL += '<a class="l-pagination-pagenumber" href="' + _sPageName + '_' + (pageN - 1) + '.' + _sPageExt + '">' + pageN + '</a> ';
+    var pageNum = 0;
+    for (var pageN = (currInclude - 1) * pageInclude + 1; pageN <= prePage; pageN++) {
+        pageNum = pageN;
+        if (pageN == (_nCurrIndex + 1)) {
+            pL += '<a href="javascript:;" class="l-pagination-pagenumber active">' + pageN + '</a> ';
+        }
+        else {
+            if (pageN != 1 && pageN != _nPageCount)
+                pL += '<a class="l-pagination-pagenumber" href="' + _sPageName + '_' + (pageN - 1) + '.' + _sPageExt + '">' + pageN + '</a> ';
 
-	        }
-	    }
+        }
+    }
 
-	    var temp = 2;
-	    if (_nPageCount <= 6) {
-	        temp = 5;
-	    }
+    var temp = 2;
+    if (_nPageCount <= 6) {
+        temp = 5;
+    }
 
-	    if (curIndex + temp < _nPageCount) {
-	        pL += '<span>...</span>';
-	    }
+    if (curIndex + temp < _nPageCount) {
+        pL += '<span>...</span>';
+    }
 
-	    if (curIndex != _nPageCount) {
-	        pL += '<a class="l-pagination-pagenumber" href="' + lastPage + '">' + _nPageCount + '</a>';
-	    }
+    if (curIndex != _nPageCount) {
+        pL += '<a class="l-pagination-pagenumber" href="' + lastPage + '">' + _nPageCount + '</a>';
+    }
 
-	    pagehtml += pL;
+    pagehtml += pL;
 
-	    if (nCurrIndex < _nPageCount - 1) {
-	        pagehtml += '<a class="l-pagination-next" href="' + _sPageName + "_" + (nCurrIndex + 1) + "." + _sPageExt + '">下一页</a>';
-	    } else {
-	        pagehtml += '<a class="l-pagination-next">下一页</a>';
-	    }
+    if (nCurrIndex < _nPageCount - 1) {
+        pagehtml += '<a class="l-pagination-next" href="' + _sPageName + "_" + (nCurrIndex + 1) + "." + _sPageExt + '">下一页</a>';
+    } else {
+        pagehtml += '<a class="l-pagination-next">下一页</a>';
+    }
 
-	    if (nCurrIndex != _nPageCount - 1) {
-	        //	pagehtml+='<a href="'+lastPage+'"><b>尾页</b></a>';
-	    }
+    if (nCurrIndex != _nPageCount - 1) {
+        //	pagehtml+='<a href="'+lastPage+'"><b>尾页</b></a>';
+    }
 
 
-	    return pagehtml;
-	}
+    return pagehtml;
+}
 
-	//wcm分页==========end============
+//wcm分页==========end============
