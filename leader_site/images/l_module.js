@@ -503,7 +503,12 @@ function globalShade(alerttext){
     //})
 }
 function globalShade2(alerttext,type,time){
-    var outTime = time>2000?time:2000;
+    if(time == 'forever'){
+        var outTime = 'forever';
+    }else{
+        var outTime = time>2000?time:2000;
+    }
+
 
     $('.js_popUpBox2').show();
     $("body").css({overflow:"hidden"});
