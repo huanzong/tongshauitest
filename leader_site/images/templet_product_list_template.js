@@ -116,9 +116,9 @@ function getPageIncss(_currentPage, pageInclude) {
 }
 
 function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude){
-    if(_nPageCount<=1){  //一页时不显示
-        return "";
-    }
+    //if(_nPageCount<=1){  //一页时不显示
+      //  return "";
+    //}
     //_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude
     //一共多少页数，当前页数，   首页，		扩展名，，一共多少数据,显示的分页按钮数量
     //第一页
