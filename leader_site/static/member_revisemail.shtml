@@ -32,7 +32,7 @@
                         <div class="member-security-contbox js-contRightContBox">
                             <!-- 修改手机 START-->
                             <div class="member-revisemob o_g">
-                                <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-one js-memberRevRateTree">
+                                <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-one js_memberRevisThree">
                                     <i class="member-revisemob-line-point01">
                                         <span>　1. 安全验证</span>
                                         <div class="member-revisemob-line-finishpoint"></div>
@@ -73,7 +73,7 @@
                                 <div class="o_g member-bingmob-list">
                                     <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
-                                        <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-disable js_subimGetUp">确定</a>
+                                        <a href="javascript:;" class="l-btn-normal l-btn-red   js_subimGetUp">确定</a>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailyanzheng">
                                         <form class="ui_validForm js_ui_validForm">
                                             <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-validateinput js-emailCode " name="" ph="邮件验证码"  value=""  datatype="*6-6"  errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
-                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证邮件</a>
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red  js-getinfo">发送验证邮件</a>
                                             <p class="Validform_checktip Validform_wrong js-emailCodeerror"></p>
                                         </form>
                                     </div>
@@ -139,6 +139,7 @@
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 
-<script type="text/javascript" src="images/templet_member_revisemail.js"></script>
+<!--<script type="text/javascript" src="images/templet_member_revisemail.js"></script>-->
+<script type="text/javascript" src="images/member_revisemail.js"></script>
 </body>
 </html>
