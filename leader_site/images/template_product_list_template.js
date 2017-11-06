@@ -68,19 +68,19 @@ $('.js_recomChange').click(function(){
             $(".js_recommend").html('');
             var recommendData="";
             var chooseArray=[];
-	           	for(var j=0; j<4; j++){
-                    var modelno=data[Math.round(Math.random()*data.length-1)].modelno;
-	           	for(var j=0; j<Math.round(Math.random()*data.length)-1; j++){
+            for(var j=0; j<4; j++){
+                while(true){
+                    var random=Math.round(Math.random()*(data.length-2));
                     if(!chooseArray[random]){
                         break;
                     }
                 }
                 chooseArray[random]=true;
-	           		var pname=data[j].pname;
-                    var modelno=data[j].modelno;
-                    var dochref=data[j].dochref;
-                    var pic=data[j].pic;
-                    var sku_value=data[j].sku_value;
+                var pname=data[random].pname;
+                var modelno=data[random].modelno;
+                var dochref=data[random].dochref;
+                var pic=data[random].pic;
+                var sku_value=data[random].sku_value;
                 var minPrice = 0;
                 if(sku_value != null && sku_value!="" && sku_value.length>0){
                     var currentPrice = 0;
