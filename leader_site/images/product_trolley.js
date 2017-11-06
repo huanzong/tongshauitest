@@ -53,5 +53,28 @@ $(function() {
     /** 
      *   服务对接
      */
-    // $
+    if(window.location.host.indexOf("123")!=-1){
+        return false;
+    }
+    //前台判断是否登陆
+    // if(!istrsidssdssotoken()){
+    //     jumpToLoginPage();
+    // }
+
+    var trolleyData = {
+        cartGoodsQueryDTO:{},
+    };
+    $.ajax({
+        type: "post",
+        url: siteConfig.domain+"/order/cartGoods/list/",
+        data: {
+            cartGoodsQueryDTO:{}
+        },
+        login:true,
+        success_cb: function(data){
+            console.log(data);
+
+
+        }
+    });
 });

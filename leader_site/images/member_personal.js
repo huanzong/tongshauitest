@@ -268,6 +268,7 @@ $('.js-personalinfotab').click( function () {
                     $('.js-modifyPhoto').hide();
                     $('.js-modifyPhotoBtn').hide();
                     $("#js-imgleft").attr("src",data.data);
+                    location.reload();
                 }
                 else{
 //      上传头像失败出现弹窗
