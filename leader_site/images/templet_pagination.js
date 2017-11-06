@@ -49,6 +49,7 @@ var pagination = function(id){
         }else{
             $this.currPage = oldPage;
         }
+        $('html, body').scrollTop(0);
     }
 
     /**
