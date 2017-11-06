@@ -82,6 +82,7 @@
 					</trs_viewdatas>
 				</div>
 				<!-- banner 分页 不需要循环 END-->
+
 			</div>
 			<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
 				<div class="banner-img">
@@ -90,8 +91,7 @@
 							<trs_viewdatas id="首页banner" num="5">
 								<div class="swiper-slide">
 									<a href="<trs_viewdata field='link'/>">
-										<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG" /> -->
-										<img class="js_bg" src="<trs_viewdata field='banner'/>" />
+										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='0' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='1' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" sm="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='1' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='1' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>">
 									</a>
 								</div>
 							</trs_viewdatas>
