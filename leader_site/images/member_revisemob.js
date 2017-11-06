@@ -29,12 +29,18 @@ $(function(){
         btnTimeOut($(this),120,'内有效');
     });
 
+    $('.js_sendmessages').click(function(){
+        btnTimeOut($(this),120,'内有效');
+    });
+
     $('.js_getewmobBtn').click(function(){
         $('.js_bindNewMob').hide();
         $('.js_revisemobsuccess').show();
         $('.js-memberRevRateTree').removeClass('member-revisemob-two').addClass('member-revisemob-three');
 
     });
+
+
 
 
 

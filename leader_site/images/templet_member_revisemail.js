@@ -5,9 +5,9 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
     //前台判断是否登陆
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage();
-    //}
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage();
+    }
 
     $.ajax({
         type: "get",
@@ -41,15 +41,10 @@ $(function(){
     });
 
     //静态页面测试添加，正常后隐藏
-    $("#js_revisemail").attr('autotext',"邮箱（"+'151151515115115151515151151515155@163.com'+"）");
-    $("#js_revisemail").append("<option value='1'>手机（"+15115151515+"）</option>");
-    $("#js_revisemail").append("<option value='2'>手机（"+18616161616+"）</option>");
-    $("#js_revisemail").oSelect().init();
-
-
-
-
-
+    // $("#js_revisemail").attr('autotext',"邮箱（"+'151151515115115151515151151515155@163.com'+"）");
+    // $("#js_revisemail").append("<option value='1'>手机（"+15115151515+"）</option>");
+    // $("#js_revisemail").append("<option value='2'>手机（"+18616161616+"）</option>");
+    // $("#js_revisemail").oSelect().init();
 
 
 //通过点击不同的下拉列表框 转换手机和邮箱
@@ -82,7 +77,17 @@ $(function(){
         }else{
             $('.js_subimGetUp').addClass('l-btn-disable');
             $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
-            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码')
+            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+        }
+    })
+    $('.js_emailCodeYz').keyup(function(){
+        if($(this).val().length==6){
+            $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+        }else{
+            $('.js_subimGetUp').addClass('l-btn-disable');
+            $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
+
         }
     })
 
