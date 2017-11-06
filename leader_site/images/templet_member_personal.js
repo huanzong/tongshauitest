@@ -84,7 +84,7 @@ $(function(){
                             }
                             templet_select_sheng.init();
                             //如果省不为空，肯定有市，区，个人信息里市区显示
-                            if(template_provinceName!=null && template_provinceName!=""){
+                            if(template_provinceName!=null && template_provinceName!=""&& template_provinceName!="null"){
                                 var shengVal=$("#js_save").val();
                                 $.ajax({
                                     url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
@@ -140,7 +140,7 @@ $(function(){
                     }
                 });
                 //头像放进去
-                if(data.data.headUrl==null || data.data.headUrl==''){
+                if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
                     $("#js-imgleft").attr("src",'/images/user_img.jpg');
                 }
                 else{
@@ -253,7 +253,7 @@ $(function(){
                     }
                     templet_select_sheng.init();
                     //如果省不为空，肯定有市，区，个人信息里市区显示
-                    if(template_provinceName!=null && template_provinceName!=""){
+                    if(template_provinceName!=null && template_provinceName!="" && template_provinceName!="null"){
                         var shengVal=$("#js_save").val();
                         $.ajax({
                             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
