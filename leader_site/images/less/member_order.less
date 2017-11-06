@@ -381,20 +381,31 @@
           >a{
             display: none;
           }
+          .btn_df_show{
+            display: none;
+          }
           .btn_sm_show{
             display: inline-block;
             font-size: 12px;
             color: #666;
           }
+          .l-btn-orange{
+            display: inline-block;
+          }
         }
         @media (max-width: 575px) {
           /* xs*/
           text-align: left;
-
+          .btn_df_show{
+            display: none;
+          }
           .btn_sm_show{
             display: inline-block;
             font-size: 12px;
-
+            color: #666;
+          }
+          .l-btn-orange{
+            display: inline-block;
           }
         }
       }
@@ -534,6 +545,154 @@
 
      }
 
+    }
+  }
+}
+
+//弹窗样式
+.land-cont-title{
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  >div{
+    text-align: left;
+    >i{
+      font-size: 16px;
+
+    }
+  }
+}
+.land-shade .land-box{
+  width: 600px;
+  text-align: center;
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    width: 92%;
+    position: relative;
+    margin: 15% auto  0 ;
+    border-radius: 8px;
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    width: 92%;
+    position: relative;
+    margin: 15% auto  0 ;
+    border-radius: 8px;
+  }
+}
+
+.logistics-title{
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding: 30px 0 20px 0;
+  line-height: 28px;
+  p{
+    font-size: 16px;
+    text-align: left;
+  }
+  span{
+    font-size: 12px;
+    color: @l-orange;
+  }
+}
+.logistics_cont{
+  max-height: 250px;
+  height: 250px;
+  padding-bottom: 30px;
+}
+.logistics-list{
+  text-align: center;
+  padding:0 0 40px 0;
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    :last-child{
+      border-left: none;
+    }
+    padding: 20px 0 40px 0 ;
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+
+    :last-child{
+      border-left: none;
+    }
+    padding: 20px 0 0 0 ;
+  }
+  :first-child{
+    border-left: none;
+    margin-bottom: -1px;
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      border-left: 1px solid #eee;
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      border-left: 1px solid #eee;
+
+    }
+  }
+  li{
+    border-left: 1px solid #eee;
+    text-align: left;
+    padding-top: 20px;
+    height: 18px;
+    @media (min-width: 576px) and (max-width: 700px) {
+      /* sm*/
+      height: auto;
+      padding:0 0 20px 0 ;
+
+    }
+    @media (max-width: 575px) {
+      /* xs*/
+      height: auto;
+      padding:0 0 20px 0 ;
+      >span{
+        vertical-align: top;
+      }
+      i{
+        vertical-align: top;
+      }
+      p{
+        vertical-align: top !important;
+
+      }
+    }
+    >span{
+      color: #ccc;
+      font-size: 10px;
+      margin-left: -6px;
+      vertical-align: middle;
+      position: relative;
+      z-index: 2;
+    }
+    i{
+      color: #666;
+      font-size: 12px;
+      vertical-align: middle;
+      padding: 0 20px;
+    }
+    p{
+      font-size: 12px;
+      color: #666;
+      vertical-align: middle;
+
+      @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+        display: block;
+        padding: 10px 0 0 20px;
+        width: 90%;
+      }
+      @media (max-width: 575px) {
+        /* xs*/
+        span{
+          padding-bottom: 10px;
+          border-left: none !important;
+        }
+      }
+    }
+  }
+  .over{
+    >span{
+      color: @l-red;
     }
   }
 }

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ui</title>
+    <!--<%=ui_base%>-->
+    <%=base%>
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" type="text/css" href="images/l_dateTime.css">
+    <link rel="stylesheet" type="text/css" href="images/ui.css">
+    
+</head>
+<body>
+    <div class="ui_nav">
+        <div class="ui_nav_tit js_navShow"><a>O(∩_∩)O~ 简易导航栏 </a></div>
+        <ul class="js_list">
+            <li><a href="ui.shtml#ui_button">button 按钮</a></li>
+            <li><a href="ui.shtml#ui_tag">标签</a></li>
+            <li><a href="ui.shtml#ui_float">浮层样式/角标</a></li>
+            <li><a href="ui.shtml#form_login">表单：登陆/注册/找回密码</a></li>
+            <li><a href="ui.shtml#ui_checkbox">表单：多选/单选按钮</a></li>
+            <li><a href="ui.shtml#ui_select">表单：下拉菜单</a></li>
+            <li><a href="ui.shtml#ui_date">表单：时间组件</a></li>
+            <li><a href="ui.shtml#ui_formValid">表单：表单验证插件用法</a></li>
+            <li><a href="ui.shtml#ui_imgUpload">表单：上传图片</a></li>
+            <li><a href="ui.shtml#ui_paging">分页</a></li>
+            <li><a href="ui.shtml#ui_alert">弹窗:普通</a></li>
+            <li><a href="ui.shtml#ui_add">弹窗:地址弹窗</a></li>
+            <li><a href="ui.shtml#ui_timeout">发送按钮倒计时控件</a></li>
+            <li><a href="ui.shtml#ui_scroll">scroll滚动条</a></li>
+            <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
+        </ul>
+    </div>
+    <!-- button 按钮 -->
+    <div class="main markdown" id="ui_button">
+        <h1>button 按钮</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-red">小号按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-red">大号按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-red">小号按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-red">大号按钮</a>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-orange">橘色按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-orange">橘色按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-orange">橘色按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-orange">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-orange">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-orange">橘色按钮</a>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-orange l-btn-disable">橘色按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-orange l-btn-disable">橘色按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable">橘色按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-orange l-btn-disable">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-orange l-btn-disable">橘色按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-orange l-btn-disable">橘色按钮</a>
+            只要在class里加上“l-btn-disable”即可
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-line1">品牌按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-line1">品牌按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-line1">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-line1">品牌按钮</a>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-line2">品牌按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-line2">品牌按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-line2">品牌按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-line2">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-line2">品牌按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-line2">品牌按钮</a>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-line1 l-btn-disable">次级按钮</a>
+        <a href="javascript:;" class="l-btn-normal l-btn-line1 l-btn-disable">次级按钮</a>
+        <a href="javascript:;" class="l-btn-lg l-btn-line1 l-btn-disable">次级按钮</a>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-line1 l-btn-disable">次级按钮</a>
+            <a href="javascript:;" class="l-btn-normal l-btn-line1 l-btn-disable">次级按钮</a>
+            <a href="javascript:;" class="l-btn-lg l-btn-line1 l-btn-disable">次级按钮</a>
+            只要在class里加上“l-btn-disable”即可
+        </textarea>
+    </div>
+    <!-- button 按钮  End-->
+
+    <!-- 标签 -->
+    <div class="main markdown" id="ui_tag">
+        <h1>标签</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <h3>普通标签:自定义宽度</h3>
+        <div>
+            <span class="l-tag-normal l-tag-blue">普通标签</span>
+            <span class="l-tag-normal l-tag-green">普通标签</span>
+            <span class="l-tag-normal l-tag-yellow">普通标签</span>
+            <span class="l-tag-normal l-tag-orange">普通标签</span>
+            <span class="l-tag-normal l-tag-red">普通标签</span>
+            <span class="l-tag-normal l-tag-gray">普通标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-normal l-tag-blue">普通标签</span>
+            <span class="l-tag-normal l-tag-green">普通标签</span>
+            <span class="l-tag-normal l-tag-yellow">普通标签</span>
+            <span class="l-tag-normal l-tag-orange">普通标签</span>
+            <span class="l-tag-normal l-tag-red">普通标签</span>
+            <span class="l-tag-normal l-tag-gray">普通标签</span>
+        </textarea>
+        <h3>自带padding的标签</h3>
+        <div>
+            <span class="l-tag-padding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-gray">自带padding的标签</span>
+
+        </div>
+        <textarea>
+            <span class="l-tag-padding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-padding l-tag-gray">自带padding的标签</span>
+        </textarea>
+        <h3>只有下边角的标签：普通</h3>
+        <div>
+            <span class="l-tag-radius l-tag-blue">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-green">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-yellow">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-orange">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-red">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-gray">只有下边角的标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-radius l-tag-blue">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-green">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-yellow">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-orange">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-red">只有下边角的标签</span>
+            <span class="l-tag-radius l-tag-gray">只有下边角的标签</span>
+        </textarea>
+        <h3>只有下边角的标签：自带边距</h3>
+        <div>
+            <span class="l-tag-rapadding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-gray">自带padding的标签</span>
+        </div>
+        <textarea>
+            <span class="l-tag-rapadding l-tag-blue">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-green">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-yellow">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-orange">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-red">自带padding的标签</span>
+            <span class="l-tag-rapadding l-tag-gray">自带padding的标签</span>
+        </textarea>
+    </div>
+    <!-- 标签 END -->
+
+    <!-- 表单样式：登陆/注册/找回密码 -->
+    <div class="main markdown" id="form_login">
+        <h1>表单样式：登陆/注册/找回密码</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="初始表单" value="">
+            </div>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input">
+            <input type="text" name="" ph="右边有图标" value="">
+            <i class="iconfont icon-lock-solid"></i>
+        </div>
+        <div class="l-input-iconleft">
+            <input type="text" name="" ph="左侧有图标">
+            <i class="iconfont icon-lock-solid"></i>
+        </div>
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="右边有图标" value="">
+                <i class="iconfont icon-lock-solid"></i>
+            </div>
+            <div class="l-input-iconleft">
+                <input type="text" name="" ph="左侧有图标">
+                <i class="iconfont icon-lock-solid"></i>
+            </div>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input">
+            <input type="text" name="" ph="带按钮">
+            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">带按钮</a>
+        </div>
+        <div class="l-input">
+            <input type="text" name="" ph="带按钮">
+            <a href="javascript:;" class="l-btn-sm l-btn-red">带按钮</a>
+        </div>
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="带按钮">
+                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+            </div>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input">
+            <input type="text" name="" ph="带信息">
+            <span>我是信息</span>
+        </div>
+        <textarea>
+            <div class="l-input">
+                <input type="text" name="" ph="带信息">
+                <span>我是信息</span>
+            </div>
+        </textarea>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input o_borderbox" >
+            <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4" style="width: 300px;">
+            <a href="javascript:;" class="exchange">换一换</a>
+            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
+        </div>
+        <textarea>
+            <div class="l-input o_borderbox">
+                <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
+                <a href="javascript:;" class="exchange">换一换</a>
+                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
+            </div>
+        </textarea>
+    </div>
+    <!-- 表单样式：登陆/注册/找回密码 -->
+
+    <!-- 多选/单选按钮 -->
+    <div class="main markdown" id="ui_checkbox">
+        <h1>多选/单选按钮</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <span>
+          <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+        </span>
+        <span>
+          <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+        </span>
+        <span>
+            <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
+        </span>
+        <textarea>
+            <span>
+              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+            </span>
+            <span>
+              <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+            </span>
+            <span>
+                <input class="js_checkbox" type="checkbox" data-notnull="true" disabled value="不可选">
+            </span>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();
+            </script>
+        </textarea>
+
+        <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
+        <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
+        <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
+        <textarea>
+            <span><input  type="radio" class="js_radio" name="cc" value="单选框"></span>
+            <span><input  type="radio" class="js_radio" name="cc" value="单选框" ></span>
+            <span><input  type="radio" class="js_radio" name="cc" value="不可选" disabled="true"></span>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();
+            </script>
+        </textarea>
+
+        <h3><b>复选框</b>-购物车/订单相关页面</h3>
+        <div class="l-checkbox">
+            <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+        </div>
+        <div class="l-checkbox">
+            <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+        </div>
+        <textarea>
+            <div class="l-checkbox">
+                <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框">
+            </div>
+            <div class="l-checkbox">
+                <input class="js_checkbox" type="checkbox" data-notnull="true" value="复选框">
+            </div>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();//与上面用法一致
+            </script>
+        </textarea>
+        <h3><b>单选框</b>-购物车/订单相关页面</h3>
+        <div class="l-radio">
+            <input  type="radio" class="js_radio" name="cc" value="单选框">
+        </div>
+        <div class="l-radio">
+            <input  type="radio" class="js_radio" name="cc" value="单选框">
+        </div>
+        <textarea>
+            <div class="l-radio">
+                <input  type="radio" class="js_radio" name="cc" value="单选框">
+            </div>
+            <div class="l-radio">
+                <input  type="radio" class="js_radio" name="cc" value="单选框">
+            </div>
+            js初始化
+            <script>
+                 $(".js_checkbox,.js_radio").jq_qvote();//与上面用法一致
+            </script>
+        </textarea>
+    </div>
+    <!-- 多选/单选按钮 End -->
+
+    <!-- 浮层样式/角标 -->
+    <div class="main markdown" id="ui_float">
+        <h1>浮层样式/角标</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <span>
+                我是浮层<br>
+                说明：<br>
+                浮层宽度需要自定义<br>
+                右侧小箭头会随着宽度自行居中<br>
+            </span>
+            <i></i>
+        </div>
+        <div class="l-float-tops">
+            <div class="float_content">
+                我是浮层<br>
+                说明：<br>
+                浮层宽度需要自定义<br>
+                右侧小箭头会随着宽度自行居中<br>
+            </div>
+            <p>
+                <i></i>
+            </p>
+        </div>
+        <textarea>
+            <div class="l-float">
+                <span>
+                    其实"<span></span>"也是可以不用的，为了方便加上了而已
+                </span>
+                <i></i>
+            </div>
+        </textarea>
+    </div>
+    <!-- 浮层样式/角标 END -->
+
+    <!-- 下拉菜单 -->
+    <div class="main markdown" id="ui_select">
+        <h1>下拉菜单</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="selectbox" style="width: 50%;">
+            <div class="">
+                <select name="" id="js_select"  autotext="请点击下拉菜单">
+                    <option value="0">--请点击下拉菜单--</option>
+                    <option value="1">我是下拉菜单1</option>
+                    <option value="2">我是下拉菜单2</option>
+                    <option value="3">我是下拉菜单3</option>
+                </select>
+            </div>
+        </div>
+        <h3>--- HTML ---</h3>
+        <textarea>
+            <div class="selectbox" style="width: 50%;">
+                <div class="">
+                    <select name="" id="js_select"  autotext="请点击下拉菜单">
+                        <option value="0">--请点击下拉菜单--</option>
+                        <option value="1">我是下拉菜单1</option>
+                        <option value="2">我是下拉菜单2</option>
+                    </select>
+                </div>
+            </div>
+        </textarea>
+        <h3>--- JS ---</h3>
+        <textarea style="min-height: 25px;">
+            //下拉菜单初始化
+            $("#js_select1").oSelect().init();
+        </textarea>
+    </div>
+    <!-- 下拉菜单 END -->
+    <!-- 时间组件 -->
+    <div class="main markdown" id="ui_date">
+        <h1>时间组件</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-input">
+            <input type="text" name="" class="js_Date">
+        </div>
+        <h3>--- 引用文件 ---</h3>
+        <textarea>
+            --- CSS ---
+            <link rel="stylesheet" type="text/css" href="images/l_dateTime.css">
+            --- JS ---
+            <script type="text/javascript" src="images/l_dateTime.js"></script>
+        </textarea>
+        <h3>--- HTML ---</h3>
+        <textarea>
+            <input type="text" name="" class="js_Date">
+        </textarea>
+        <h3>--- JS ---</h3>
+        <textarea>
+            if (window.innerWidth == undefined || window.innerWidth > 1199) {
+                $(".js_Date").datetimepicker({
+                    language: 'zh-CN',      //语言
+                    weekStart: 0,           //一周从哪一天开始
+                    todayBtn: 1,            //底部显示“今天”
+                    autoclose: 1,           //选择后关闭选择器
+                    todayHighlight: 1,      //高亮当前日期
+                    startView: 2,           //首先显示的视图
+                    minView: 2,             //视图
+                    forceParse: true,       //解析输入值
+                    format: "yyyy-mm-dd",   // 日期格式
+                    pickerPosition: "bottom-left",
+                    // startDate: new Date()     // 开始时间
+                });
+            }else{
+                $('.js_Date').mobiscroll().date({
+                    preset: 'date',           //日期
+                    lang: "zh",               //语言
+                    display: 'center',
+                    dateFormat: 'yyyy-mm-dd', // 日期格式
+                    dateOrder: 'yymmdd',      //面板中日期排列格式
+                    // minDate:new Date()        //  最小时间
+                });
+            }
+        </textarea>
+    </div>
+    <!-- 时间组件 END -->
+
+    <!-- 表单验证插件用法 -->
+    <div class="main markdown" id="ui_formValid">
+        <h1>表单验证插件用法</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <p>这里只提供基本用法，如有需要，请参考官方文档或询问许一红</p>
+        <p>官网地址：<a href="http://validform.rjboy.cn/document.html" target="_blank">http://validform.rjboy.cn/document.html</a></p>
+        <h2>使用步骤</h2>
+        <h3>1.引用插件</h3>
+        <textarea style="min-height: 18px;">
+            <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+        </textarea>
+        <h3>2.示例</h3>
+        <form class="ui_validForm js_ui_validForm">
+            <div class="l-input">
+                <input type="text" name="" ph="5-16个字符" value="" datatype="zh2-4" errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" data-normal='1'/>
+                <p class="Validform_checktip"></p>
+            </div>
+            <div class="l-input">
+                <input type="password" name="" value="" datatype="*6-20" errormsg="密码6到20位任意字符" nullmsg="<i class='iconfont icon-information-solid'></i>请填写密码"/>
+                <p class="Validform_checktip"></p>
+            </div>
+            <div class="l-input">
+                <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                <p class="Validform_checktip"></p>
+            </div>
+        </form>
+        <h3>--- 注意 ---</h3>
+        <p>data-normal="1"</p>
+        <textarea>
+            $('.js_myForm').Validform({
+                tiptype: 3,
+                btnSubmit: '.js_submitBtn',
+                callback:function(form){
+                    //这里是所有验证都通过以后，执行的回调函数
+                    return false;//最后加上这个，这个必须写
+                }
+            });
+
+        </textarea>
+        <h3>--- HTML ---</h3>
+        <textarea>
+            <form class="ui_validForm js_ui_validForm">
+                <div class="l-input">
+                    <input type="text" name="" ph="5-16个字符" value="" datatype="zh2-4" errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                    <p class="Validform_checktip"></p>
+                </div>
+                <div class="l-input">
+                    <input type="password" name="" value="" datatype="*6-20" errormsg="密码6到20位任意字符" nullmsg="<i class='iconfont icon-information-solid'></i>请填写密码"/>
+                    <p class="Validform_checktip"></p>
+                </div>
+                <div class="l-input">
+                    <input type="text" name="" ph="普通输入框" value="" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                    <p class="Validform_checktip"></p>
+                </div>
+            </form>
+        </textarea>
+        <h3>--- JS ---</h3>
+        <textarea>
+            var demo=$(".js_ui_validForm").Validform({
+                tiptype:3,
+                label:".label",
+                showAllError:true,
+                datatype:{
+                    "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+                },
+                ajaxPost:true
+            });
+        </textarea>
+    </div>
+    <!-- 表单验证插件用法 END -->
+    <!-- 上传图片插件 -->
+    <div class="main markdown" id="ui_imgUpload">
+        <h1>上传图片插件</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <a href="javascript:;" class="l-btn-sm l-btn-red" id="js_imgUpload">上传图片</a>
+
+        <h3>--- HTML ---</h3>
+        <textarea>
+            <a href="javascript:;" class="l-btn-sm l-btn-red" id="js_imgUpload">上传图片</a>
+            <!-- 注意：是id -->
+        </textarea>
+        <h3>--- JS ---</h3>
+        <textarea>
+            //引用文件
+            <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+
+            //代码片段
+            $.jUploader.setDefaults({
+                cancelable: true, // 可取消上传
+                allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+                messages: {
+                    upload: '上传',
+                    cancel: '取消',
+                    emptyFile: "{file} 为空，请选择一个文件.",
+                    //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
+                    invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
+                    onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
+                }
+            });
+            $.jUploader({
+                fileField: 'file',
+                button: "js_imgUpload", // 这里设置按钮id
+                action: '/comment/uploadcasartejfmallproductcommentimage/uploadImage',//这里写地址
+                // 开始上传事件
+                onUpload: function(data) {
+                    // $.jUploader.defaults.otherArgs = {
+                    //   // activityId: activityId,
+                    //   proportion: proportion,
+                    //   slotId: minSizeSlotId
+                    // };
+                },
+                // 上传完成事件
+                onComplete: function(name, data) {
+                    if (data.isSuccess) {
+                        console.log('上传成功');
+                        console.log(data);
+                    } else {
+                        console.log('上传失败'); 
+                    }
+
+                },
+                // 系统信息显示（例如后缀名不合法）
+                showMessage: function(message) {
+                    alert(message);
+                },
+                // 取消上传事件
+                onCancel: function(fileName) {},
+                debug: true
+            });
+        </textarea>
+    </div>
+    <!-- 上传图片插件 END -->
+    
+    <!--分页-->
+    <div class="main markdown" id="ui_paging">
+        <h1>分页</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div>
+            <a  class="l-pagination-prew">上一页</a>
+            <a  class="l-pagination-pagenumber active">1</a>
+            <a  class="l-pagination-pagenumber">2</a>
+            <a  class="l-pagination-pagenumber">3</a>
+            <a  class="l-pagination-pagenumber">4</a>
+            <a  class="l-pagination-pagenumber">5</a>
+            <a  class="l-pagination-pagenumber">6</a>
+            <a  class="l-pagination-pagenumber">7</a>
+            <a  class="l-pagination-pagenumber">8</a>
+            <a  class="l-pagination-next ">下一页</a>
+        </div>
+        <textarea>
+           <div>
+                <a  class="l-pagination-prew">上一页</a>
+                <a  class="l-pagination-pagenumber active">1</a>
+                <a  class="l-pagination-pagenumber">2</a>
+                <a  class="l-pagination-pagenumber">3</a>
+                <a  class="l-pagination-pagenumber">4</a>
+                <a  class="l-pagination-pagenumber">5</a>
+                <a  class="l-pagination-pagenumber">6</a>
+                <a  class="l-pagination-pagenumber">7</a>
+                <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-next ">下一页</a>
+            </div>
+        </textarea>
+    </div>
+
+    <!--分页 END-->
+    <!--弹窗-->
+    <div class="main markdown" id="ui_alert">
+        <h1>弹窗</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="globalShade('自定义输入内容')" >点击触发</a>
+            <i></i>
+        </div>
+        <textarea>
+              <!--弹窗触发方式-->
+            <a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="globalShade('自定义输入内容')" >橘色按钮</a>
+            <!--弹窗触发方式 END-->
+             <!--弹窗html代码-->
+            <div class="o_g land-shade js_landShade">
+                <div class="land-box js_landContBox">
+                    <div class="land-cont-title alert-cont-title o_u">
+                        <a href="" class="o_u iconfont icon-close js_landClose"></a>
+                    </div>
+                    <div class="js_landInputBox">
+                        <div class="land-cont-normal-input o_g">
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                                    <p class="js-landText">确定取消收藏？</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-alert-btn o_g">
+                        <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
+                        <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
+                    </div>
+                </div>
+            </div>
+            <!--弹窗html代码 END-->
+        </textarea>
+    </div>
+    <!--<a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="globalShade('自定义输入内容')" >橘色按钮</a>-->
+
+    <div class="o_g land-shade js_landShade">
+        <div class="land-box js_landContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <a href="" class="o_u iconfont icon-close js_landClose"></a>
+            </div>
+            <div class="js_landInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <div class="o_g member-bingmob-list">
+                        <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                            <p class="js-landText">确定取消收藏？</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="member-alert-btn o_g">
+                <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">按钮一</a>
+                <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">按钮二</a>
+            </div>
+        </div>
+    </div>
+    <!--弹窗 END-->
+    <!--地址弹窗-->
+        <div class="main markdown" id="ui_add">
+             <h1>地址弹窗</h1>
+        </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <a href="javascript:;" class="l-btn-normal l-btn-orange" onclick="addressAlert(1111)" >点击触发</a>
+            <i></i>
+        </div>
+             <textarea>
+
+
+                 <!--触发方式-->
+                    addressAlert(add);如果未传值默认填写 北京 北京 朝阳区 add的格式
+                 var add = {'save':'北京'，'city':'北京','area':'朝阳','savecode':'1','citycode':'1','areacode':'1'}
+                 <!--触发方式 END-->
+              <div class="o_g land-shade  land-shade-top js_addShadeTop">
+                  <div class="land-box land-box-address js_addContBox">
+                      <div class="land-cont-title alert-cont-title o_u">
+                          <span>配送至：</span>
+                          <i class="js_alertAddress_save">浙江</i>
+                          <i class="js_alertAddress_city">杭州市</i>
+                          <i class="js_alertAddress_area">西湖区</i>
+                          <a href="" class="o_u iconfont icon-close js_addClose"></a>
+                      </div>
+                      <div class="js_addType" data-alt="1">
+                          <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                          <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                          <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
+                      </div>
+                      <div class="js_landInputBox">
+                          <div class="land-cont-normal-input o_g">
+                              <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
+                          </div>
+                          <div class="land-cont-normal-input o_g">
+                              <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
+                          </div>
+                          <div class="land-cont-normal-input o_g">
+                              <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+           </textarea>
+    </div>
+
+
+    <!--地址弹窗 end-->
+    <!--按钮倒计时控件-->
+    <div class="main markdown" id="ui_timeout">
+        <h1>按钮倒计时控件</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div class="l-float">
+            <a href="javascript:;" class="l-btn-normal l-btn-orange testtimeout" onclick="btnTimeOut($(this),10,'内有效');" >点击触发</a>
+            <i></i>
+        </div>
+             <textarea>
+                 <!--触发方式-->
+                         btnTimeOut(obj,time,timetext);
+                        obj:需要绑定的对象；
+                        time:需要倒计时的时间，单位“秒”
+                        timetext:填写自定义提示，控件默认提示剩余秒数；示例："120秒+timetext"
+                 <!--触发方式 END-->
+                    $('.testtimeout').click(function(){
+                          btnTimeOut($(this),10,'内有效');
+                    })
+           </textarea>
+    </div>
+
+    <div class="o_g land-shade  land-shade-top js_addShadeTop">
+        <div class="land-box land-box-address js_addContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <span>配送至：</span>
+                <i class="js_alertAddress_save">浙江</i>
+                <i class="js_alertAddress_city">杭州市</i>
+                <i class="js_alertAddress_area">西湖区</i>
+                <a href="" class="o_u iconfont icon-close js_addClose"></a>
+            </div>
+            <div class="js_addType" data-alt="1">
+                <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
+            </div>
+            <div class="js_addInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--地址弹窗 end-->
+
+    <!-- 滚动条 -->
+    <div class="main markdown" id="ui_scroll">
+        <h1>滚动条</h1>
+    </div>
+    <div class="main markdown small-padding">
+        <div style="height:100px;width: 500px;">
+            <p class="js_list" style="padding-bottom: 15px;">
+                我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+            </p>
+        </div>
+        <h3>------------HTML-------------</h3>
+        <textarea>
+            //****最外层div必须有高度****
+            <div style="height:100px;width: 500px;">
+                //****这里最好有15像素的下边距****
+                <p class="js_list" style="padding-bottom: 15px;">
+                    我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                    我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+                    我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+                </p>
+            </div>
+        </textarea>
+        <h3>------------JS-------------</h3>
+        <textarea>
+            var bar=$(".js_list").oScrollBar();//创建滚动条
+            bar.init();//初始化激活滚动条
+        </textarea>
+    </div>
+    <!-- 滚动条 END -->
+    <!-- iconfont -->
+    <div id="ui_iconfont"></div>
+    <!--#include virtual="demo_fontclass.shtml"-->
+    <!-- iconfont END -->
+
+<!--#include virtual="public/foot.shtml"-->
+<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/l_dateTime.js"></script>
+<script type="text/javascript" src="images/ui.js"></script>
+</body>
+</html>

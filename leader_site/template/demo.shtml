@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DEMO</title>
+
+<%=base%>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/head.shtml"-->
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+
+		    <!--#include virtual="public/header_nav.shtml"-->
+
+        	<!-- 首屏动画 -->
+        	<div class="o_g js_animateLine">
+	        	<div class="index_animate">
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox"></div>
+				</div>
+	        </div>
+	        <!-- 首屏动画 End -->
+
+		    <!-- 导航 -->
+		    <!--#include virtual="public/nav.shtml"-->
+		    <!-- 导航 End-->
+
+		    <div>
+		        这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区
+		    </div>
+
+		    <!--#include virtual="public/footer.shtml"-->
+		</div>
+	</div>
+	<!--#include virtual="public/foot.shtml"-->
+</body>
+</html>
