@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱验证码-链接</title>
+
+    <%=base%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include virtual="public/head.shtml"-->
+    <link rel="stylesheet" type="text/css" href="images/verificate_email.css">
+</head>
+<body>
+    <div class="verificate_email_header">
+        <img src="../images/l_logo.png" class="verificate_email_img"/>
+    </div>
+    <div class="verificate_email_middle">
+        <p class="verificate_email_name">亲爱的Alex</p>
+        <p class="verificate_email_content">感谢您注册统帅官网，我们将竭诚为您提供优质服务！</p>
+        <div class="verificate_link_box">
+            <div class="verificate-link-tit">
+                请点击以下链接完成邮箱验证<em>（48小时内有效）</em>
+            </div>
+            <a href="javascript:;">http://</a>
+        </div>
+    </div>
+    <div class="verificate_email_footer">
+        <span class="verificate_email_footertest">本系统邮件自动发出，请勿回复</span>
+        <span class="verificate_email_copyright">鲁ICP备15038556号 Copyright &copy; 海尔集团版权所有</span>
+    </div>
+</body>
+
+</html>
