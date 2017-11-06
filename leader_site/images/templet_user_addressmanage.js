@@ -5,13 +5,13 @@
 * ---------------------------------------------------------------------------*/
 
 //判断登录
-if(!istrsidssdssotoken()){
-    jumpToLoginPage()
-}
+//if(!istrsidssdssotoken()){
+//    jumpToLoginPage()
+//}
 var templet_pageNo=1;
 var templet_pageSize=10;
 
-loadUserInfoList();//获取用户地址列表
+//loadUserInfoList();//获取用户地址列表
 
 //取消弹框提示
 var templet_text="确定取消添加吗？";

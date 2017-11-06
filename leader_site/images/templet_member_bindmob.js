@@ -6,9 +6,14 @@
 $(function(){
 
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage();
-    }
+    //if(!istrsidssdssotoken()){
+    //    jumpToLoginPage();
+    //}
+
+    $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-three').removeClass('member-revisemob-one');
+    $('.js-validateEmail').hide();
+    $('.js-bindNewMob').show();
+
 
     //页面加载时调个人信息
     $.ajax({
@@ -34,6 +39,14 @@ $(function(){
             }
         }
     });
+
+    //静态页面测试添加，正常后隐藏
+    $("#js_unbindmob").attr('autotext',"邮箱（"+'151151515115115151515151151515155@163.com'+"）");
+    $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
+    $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
+    $("#js_unbindmob").oSelect().init();
+
+
 
     //第一步确定按钮变亮
     $('.js_emailCodeYz').blur(function(){
@@ -107,7 +120,7 @@ $(function(){
     });
 
     //第二步手机号码失去焦点 格式正确 发送验证码亮起
-    $('.js-newMobile').blur(function(){
+    $('.js-newMobile').keyup(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         var timeOut = $('.js-getinfo').attr('data-type');

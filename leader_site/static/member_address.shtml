@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="images/member_nav.css">
 
 </head>
-images/
+
 <body>
 <div class="o_body">
     <div class="o_main">
@@ -32,7 +32,7 @@ images/
                         <div class="member-security-contbox js-contRightContBox">
                             <!-- 地址管理 START-->
                             <form action="/user/front/userRegion/save">
-                                <div class="member-address js_newAddress js_form_addAddrManagement" style="display: none;">
+                                <div class="member-address js_newAddress js_form_addAddrManagement"  >
                                     <div class="member-address-title">添加新地址</div>
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
@@ -85,7 +85,7 @@ images/
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_save"  autotext="省">
                                                             <option value="0">--省--</option>
-
+                                                            <option value="山东省" roadCode="'+roadList[i].regionCode+'">山东省</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -95,7 +95,7 @@ images/
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_city"  autotext="市">
                                                             <option value="0">--市--</option>
-
+                                                            <option value="青岛市" roadCode="'+roadList[i].regionCode+'">青岛市</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -106,7 +106,7 @@ images/
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_area"  autotext="区">
                                                             <option value="0">--区--</option>
-
+                                                            <option value="黄岛区" roadCode="'+roadList[i].regionCode+'">黄岛区</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -116,7 +116,7 @@ images/
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_road"  autotext="街道">
                                                             <option value="0">--街道--</option>
-
+                                                            <option value="黄岛区" roadCode="'+roadList[i].regionCode+'">某某街道某某街道某某街道某某街道某某街道</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -163,7 +163,38 @@ images/
                             </form>
 
                             <div class="memeber-address-list-box js_lineInfo">
+                                <div class="member-addressbox o_g js_memberAddressList">
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox">
+                                 <div class="member-addresslistbox">
 
+                                <div class="member-address-name">王可可</div>
+                                 <div class="member-address-mobnumber">155****5555</div>
+                                  <div class="member-address-addtext">山东省青岛市黄岛区长江中路</div>
+                                 <div class="member-address-btnbox">
+                                     <i class="iconfont icon-pencil-solid"></i>
+                                     <a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>
+                                     <div class="member-address-line"></div>
+                                     <a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>
+                                     </div>
+                                 <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                 <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a></div>
+                                 </div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox">
+                                        <div class="member-addresslistbox">
+
+                                            <div class="member-address-name">王可可</div>
+                                            <div class="member-address-mobnumber">155****5555</div>
+                                            <div class="member-address-addtext">山东省青岛市黄岛区长江中路</div>
+                                            <div class="member-address-btnbox">
+                                                <i class="iconfont icon-pencil-solid"></i>
+                                                <a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>
+                                                <div class="member-address-line"></div>
+                                                <a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>
+                                            </div>
+                                            <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                            <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a></div>
+                                    </div>
+                            </div>
                             </div>
                             <!-- 地址管理 End-->
                         </div>
@@ -217,6 +248,6 @@ images/
 <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_address.js"></script>
-<script type="text/javascript" src="images/templet_user_addressmanage.js"></script>
+<!--<script type="text/javascript" src="images/templet_user_addressmanage.js"></script>-->
 </body>
 </html>
