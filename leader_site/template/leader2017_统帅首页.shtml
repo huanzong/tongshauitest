@@ -82,6 +82,7 @@
 					</trs_viewdatas>
 				</div>
 				<!-- banner 分页 不需要循环 END-->
+
 			</div>
 			<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
 				<div class="banner-img">
@@ -92,6 +93,7 @@
 									<a href="<trs_viewdata field='link'/>">
 										<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG" /> -->
 										<img class="js_bg" src="<trs_viewdata field='banner'/>" />
+										<img class="js_recPic" src="" df="images/index_banner.JPG" md="images/footer_logo1.jpg" sm="images/footer_logo1.jpg" xs="images/footer_logo1.jpg">
 									</a>
 								</div>
 							</trs_viewdatas>
