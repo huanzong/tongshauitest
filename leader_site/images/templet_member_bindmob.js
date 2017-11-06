@@ -19,7 +19,7 @@ $(function(){
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
                 var templet_mobile=jQuery.trim(data.data.mobile);
-                if (templet_mobile != null && templet_mobile != "") {
+                if (templet_mobile != null && templet_mobile != "" && templet_mobile != "null") {
                     self.location = '/security';
                 }
 
