@@ -57,23 +57,23 @@ $(function () {
                             //显示个人中心安全级别
                             if(templet_grade>=0 && templet_grade<=33)
                             {
-                                $('#js-securitysetting').addClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safefinetext').removeClass('member-security-safeexcellenttext');
-                                $('#js-securitysetting').html('危险');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-danger');
+                                $('.js-securitysetting').html('危险');
                             }
                             if(templet_grade>=34 && templet_grade<=66)
                             {
-                                $('#js-securitysetting').addClass('member-security-safeplaintext').removeClass('member-security-safeperiltext').removeClass('member-security-safefinetext').removeClass('member-security-safeexcellenttext');
-                                $('#js-securitysetting').html('普通');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-plain');
+                                $('.js-securitysetting').html('普通');
                             }
                             if(templet_grade>=67 && templet_grade<=90)
                             {
-                                $('#js-securitysetting').addClass('member-security-safefinetext').removeClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safeexcellenttext');
-                                $('#js-securitysetting').html('良好');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-fine');
+                                $('.js-securitysetting').html('良好');
                             }
                             if(templet_grade>=91 && templet_grade<=100)
                             {
-                                $('#js-securitysetting').addClass('member-security-safeexcellenttext').removeClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safefinetext');;
-                                $('#js-securitysetting').html('优秀');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-good');
+                                $('.js-securitysetting').html('优秀');
                             }
                         }
                     }
