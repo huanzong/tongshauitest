@@ -20,10 +20,10 @@ $(function(){
             if (jQuery.trim(data).length > 0) {
                 var templet_email=jQuery.trim(data.data.email);
                 var templet_call=jQuery.trim(data.data.mobile);
-                if (templet_email == null && templet_email == "" && templet_call == null && templet_call == "") {
+                if ((templet_email == null || templet_email == ""|| templet_email == "null") && (templet_call == null || templet_call == "" || templet_call == "null")) {
                     self.location = '/security';
                 }
-                if(templet_email!=null && templet_email!=""){
+                if(templet_email!=null && templet_email!=""&& templet_email!="null"){
                     templet_isemail=true;
                     var templet_split = templet_email.split("@");
                     var templet_hide = templet_split[0].length / 2;
@@ -37,7 +37,7 @@ $(function(){
                     $('.js-sendmail').show();
 
                 }
-                if(templet_call!=null && templet_call!=""){
+                if(templet_call!=null && templet_call!="" && templet_call!="null"){
                     templet_isphone=true;
                     var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
                     $("#js_resetpassword").attr('autotext',"手机（"+templet_callphone+"）");
