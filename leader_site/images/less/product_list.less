@@ -42,8 +42,9 @@
 			color: @l-red;
 			font-size: 14px;
 			line-height: 68px;
-			@media (min-width: 1200px) {
-				display: none;
+			display: none;
+			@media (max-width: 1199px) {
+				display: block;
 			}
 		}
 	}
@@ -156,12 +157,12 @@
 		}
 	}
 	.list-filter{
-		display: none;
+		display: inline-block;
 		border-top: 1px solid #eee;
 		padding-top: 14px;
 		width: 100%;
-		@media (min-width: 1200px) {
-			display: inline-block;
+		@media (max-width: 1199px) {
+			display: none;
 		}
 		.mar-left{
 			margin-left: 15px;
@@ -194,9 +195,9 @@
 		}
 	}
 	.list-filter-select{
-		display: none;
-		@media (min-width: 1200px) {
-			display: inline-block;
+		display: inline-block;
+		@media (max-width: 1199px) {
+			display: none;
 		}
 		width: 100%;
 		background: #f8f8f8;
@@ -318,9 +319,11 @@
 			}
 		}
 		.pro-group{
-			@media (min-width:1200px){
-				float: right;
-				margin: 14px 0;
+			float: right;
+			margin: 14px 0;
+			@media (max-width:1199px){
+				float: none;
+				margin: 0;
 			}
 			@media (min-width: 701px) and (max-width:1199px){
 				margin-bottom: 14px;
@@ -388,9 +391,9 @@
 			margin: 0 15px 30px;
 			box-shadow: 0 0 10px #eee;
 			z-index: 1;
-			min-height: 400px;
-			@media (max-width: 1200px) {
-				min-height: 435px;
+			// min-height: 435px;
+			@media (min-width: 1199px) {
+				min-height: 400px;
 			}
 			.pro-tag{
 				position: absolute;
@@ -400,15 +403,26 @@
 				min-width: 54px;
 			}
 
-			@media (min-width: 1200px) {
+
+			&:hover{
+				z-index: 2;
+				margin-bottom: -52px;
+				.pro-read,.pro-info-buy{
+					display: inline-block;
+				}
+				.pro-activity{
+					margin-top: 20px;
+				}
+			}
+			@media (max-width: 1199px) {
 				&:hover{
 					z-index: 2;
-					margin-bottom: -52px;
+					margin-bottom: 30px;
 					.pro-read,.pro-info-buy{
-						display: inline-block;
+						display: none;
 					}
 					.pro-activity{
-						margin-top: 20px;
+						margin-top: 7px;
 					}
 				}
 
@@ -471,9 +485,13 @@
 			font-size: 12px;
 		}
 		.pro-info-take{
-			@media (min-width:1200px) {
-				display: none;
+			display: none;
+			@media (max-width:1199px) {
+				display: inline-block;
 			}
+			// @media (max-width:1200px) {
+			// 	display: none;
+			// }
 			text-align: center;
 			min-width: 80px;
 			font-size: 12px;
@@ -608,6 +626,9 @@
 	z-index: 2;
 	color: #333;
 	font-size: 12px;
+	@media(max-width: 1199px){
+		display: none;
+	}
 
 	.compare-title{
 		display: block;

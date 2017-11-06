@@ -84,7 +84,7 @@ $(function(){
                             }
                             templet_select_sheng.init();
                             //如果省不为空，肯定有市，区，个人信息里市区显示
-                            if(template_provinceName!=null && template_provinceName!=""){
+                            if(template_provinceName!=null && template_provinceName!=""&& template_provinceName!="null"){
                                 var shengVal=$("#js_save").val();
                                 $.ajax({
                                     url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
@@ -140,7 +140,7 @@ $(function(){
                     }
                 });
                 //头像放进去
-                if(data.data.headUrl==null || data.data.headUrl==''){
+                if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
                     $("#js-imgleft").attr("src",'/images/user_img.jpg');
                 }
                 else{
@@ -253,7 +253,7 @@ $(function(){
                     }
                     templet_select_sheng.init();
                     //如果省不为空，肯定有市，区，个人信息里市区显示
-                    if(template_provinceName!=null && template_provinceName!=""){
+                    if(template_provinceName!=null && template_provinceName!="" && template_provinceName!="null"){
                         var shengVal=$("#js_save").val();
                         $.ajax({
                             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
@@ -317,6 +317,10 @@ $(function(){
             globalShade2('正在提交，请稍后','3');
             return;
         }
+        $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+        $('.js_personalistwrongbox_address').addClass('personalist-right').removeClass('personalist-wrong-box');
+        $('.js_personalistwrongbox_data').addClass('personalist-right').removeClass('personalist-wrong-box');
+
         var templet_loginName=$.trim($('#js_loginName').val());
         var templet_sex=$.trim($('input[name="cc"]:checked').attr("data"));
         var templet_birthday=$.trim($('.js_Date').val());
@@ -331,6 +335,7 @@ $(function(){
             wrongInfo($('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名格式不正确');
             return;
         }
+
         if(templet_birthday=='' ){
             wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'生日不能为空');
             return;
@@ -338,26 +343,28 @@ $(function(){
         //判断生日是否超出现在日期
         var myDate = new Date();
         var birthdayArr=templet_birthday.split("-");
-        yearU=birthdayArr[0];
-        monthU=birthdayArr[1]-1;
-        dayU=birthdayArr[2];
-        if(yearU>myDate.getFullYear() ||monthU>myDate.getMonth() ){
+        var templet_yearU=birthdayArr[0];
+        var templet_monthU=birthdayArr[1];
+        var templet_dayU=birthdayArr[2];
+        var templet_monthT=myDate.getMonth()+1;
+
+        if(templet_yearU>myDate.getFullYear()){
             wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'请填写正确日期');
             return;
         }
-        if(monthU==myDate.getMonth()&&dayU>myDate.getDate()){
+        if(templet_yearU==myDate.getFullYear() && templet_monthU>templet_monthT){
             wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'请填写正确日期');
             return;
         }
+        if(templet_yearU==myDate.getFullYear() && templet_monthU==templet_monthT && templet_dayU>myDate.getDate()){
+            wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'请填写正确日期');
+            return;
+        }
+
         if(templet_provinceId=='' ||templet_cityId=='' ||templet_areaId==''){
             wrongInfo($('.js_personalistwrongbox_address'),$('.js_personawrong_address'),'居住地不能为空');
             return;
         }
-
-        $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
-        $('.js_personalistwrongbox_data').addClass('personalist-right').removeClass('personalist-wrong-box');
-        $('.js_personalistwrongbox_address').addClass('personalist-right').removeClass('personalist-wrong-box');
-
 
         var templet_data={
             "loginName":templet_loginName,
