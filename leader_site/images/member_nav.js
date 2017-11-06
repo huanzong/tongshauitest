@@ -4,7 +4,7 @@
 $(function(){
     var windowW = $(window).width();
     var documenHeight,documenHeights;
-    var homeMemberContBox = $('.js-membercontboxs-2');
+    var homeMemberContBox = $('.js-membercontboxs-2').length;
     documenHeight = $('.js-membercontboxs').height();
     if(!homeMemberContBox){
         $('.js_memberNavLeft').height(documenHeight+60 );
@@ -46,7 +46,7 @@ $(function(){
                         $('.js_memberNavLeft').height(762+60);
                     }else{
                         if(windowW>990){
-                            $('.js_memberNavLeft').height(762+60);
+                            $('.js_memberNavLeft').height(762+180);
                         }else{
                             $('.js_memberNavLeft').height(762+60);
                         }

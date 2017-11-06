@@ -10,7 +10,7 @@
     <!--#include virtual="public/head.shtml"-->
     <link rel="stylesheet" type="text/css" href="images/l_dateTime.css">
     <link rel="stylesheet" type="text/css" href="images/ui.css">
-    
+
 </head>
 <body>
     <div class="ui_nav">
@@ -575,7 +575,7 @@
                         console.log('上传成功');
                         console.log(data);
                     } else {
-                        console.log('上传失败'); 
+                        console.log('上传失败');
                     }
 
                 },
@@ -590,7 +590,7 @@
         </textarea>
     </div>
     <!-- 上传图片插件 END -->
-    
+
     <!--分页-->
     <div class="main markdown" id="ui_paging">
         <h1>分页</h1>
