@@ -252,7 +252,7 @@
 <script type="text/javascript" src="images/jquery.color.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_personal.js"></script>
-<!--<script type="text/javascript" src="images/templet_member_personal.js"></script>-->
+<script type="text/javascript" src="images/templet_member_personal.js"></script>
 
 <script type="text/javascript" src="images/l_dateTime.js"></script>
 
