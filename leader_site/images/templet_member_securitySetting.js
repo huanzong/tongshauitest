@@ -5,13 +5,13 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
 
-    //前台判断是否登陆
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage();
-    //}
-    //if($.cookie('isAlterBind') == null ){
-    //   document.cookie="isAlterBind=0;path=/";
-    //}
+    前台判断是否登陆
+    if(!istrsidssdssotoken()){
+       jumpToLoginPage();
+    }
+    if($.cookie('isAlterBind') == null ){
+      document.cookie="isAlterBind=0;path=/";
+    }
 
     //页面加载时调个人信息
     $.ajax({
@@ -21,9 +21,6 @@ $(function(){
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
                 //有没有邮箱
-                if (data.resultMsg == '用户未登录') {
-                    window.location.href = '/ids/ts/login.jsp';
-                }
                 var templet_grade=10;
                 var templet_emailtrim = jQuery.trim(data.data.email)
                 if (templet_emailtrim == null || templet_emailtrim == "") {
@@ -76,8 +73,8 @@ $(function(){
 
                 //最后登录时间
                 var templet_time = jQuery.trim(data.data.lastLoginDate);
-                var templet_timechange=getLocalTime(templet_time)
-                $('#js-lastlogindate').html('上次登录时间：'+ templet_timechange)
+                var templet_timechange=getLocalTime(templet_time);
+                $('#js-lastlogindate').html('上次登录时间：'+ templet_timechange);
 
 
                 //验证密码强度
@@ -97,25 +94,25 @@ $(function(){
                             if(templet_grade>=0 && templet_grade<=33)
                             {
                                 $('#js-slip').addClass('peril');
-                                $('#js-securitysetting').addClass('member-security-safeperiltext');
+                                $('#js-securitysetting').addClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safefinetext').removeClass('member-security-safeexcellenttext');
                                 $('#js-securitysetting').html('危险');
                             }
                             if(templet_grade>=34 && templet_grade<=66)
                             {
                                 $('#js-slip').addClass('plain');
-                                $('#js-securitysetting').addClass('member-security-safeplaintext');
+                                $('#js-securitysetting').addClass('member-security-safeplaintext').removeClass('member-security-safeperiltext').removeClass('member-security-safefinetext').removeClass('member-security-safeexcellenttext');
                                 $('#js-securitysetting').html('普通');
                             }
                             if(templet_grade>=67 && templet_grade<=90)
                             {
                                 $('#js-slip').addClass('fine');
-                                $('#js-securitysetting').addClass('member-security-safefinetext');
+                                $('#js-securitysetting').addClass('member-security-safefinetext').removeClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safeexcellenttext');
                                 $('#js-securitysetting').html('良好');
                             }
                             if(templet_grade>=91 && templet_grade<=100)
                             {
                                 $('#js-slip').addClass('excellent');
-                                $('#js-securitysetting').addClass('member-security-safeexcellenttext');
+                                $('#js-securitysetting').addClass('member-security-safeexcellenttext').removeClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safefinetext');;
                                 $('#js-securitysetting').html('优秀');
                             }
                         }
