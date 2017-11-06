@@ -46,7 +46,7 @@ $(function(){
                         $('.js_memberNavLeft').height(762+60);
                     }else{
                         if(windowW>990){
-                            $('.js_memberNavLeft').height(762+180);
+                            $('.js_memberNavLeft').height(762+60);
                         }else{
                             $('.js_memberNavLeft').height(762+60);
                         }
