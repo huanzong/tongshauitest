@@ -1,5 +1,4 @@
 //获取产品个数
-
 var template_dataNum=$("div.prolist-box").length;
 $(".js_dataNum").text(template_dataNum);
 //判断当前tab标签
@@ -61,7 +60,7 @@ $('.js_recomChange').click(function(){
     $.ajax({
         type: "get",
         dataType:"json",
-	        url: template_url+"recommend_116.json",
+        url: template_url+"recommend_116.json",
         data: "",
         success_cb: function(data){
             $(".js_recommend").html('');
@@ -148,7 +147,7 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
         if (pageIndex != 0) {
             firstIndex = _sPageName + '_' + pageIndex;
         }
-	        pagehtml += '<a class="l-pagination-prew" href="' + firstIndex + '.' + _sPageExt + '">上一页</a>';
+        pagehtml += '<a class="l-pagination-prew" href="' + firstIndex + '.' + _sPageExt + '">上一页</a>';
 
     } else {
         pagehtml += '<a class="l-pagination-prew">上一页</a>';
