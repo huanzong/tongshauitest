@@ -7,9 +7,9 @@
 $(function(){
 
     // 前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage();
-    }
+    //if(!istrsidssdssotoken()){
+    //    jumpToLoginPage();
+    //}
 
     var templet_select_sheng=$("#js_save").oSelect();
     var templet_select_shi=$("#js_city").oSelect();
