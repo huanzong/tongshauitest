@@ -3,9 +3,9 @@
  */
 $(function(){
     //前台判断是否登陆
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage()
-    //}
+    if(!istrsidssdssotoken()){
+        jumpToLoginPage()
+    }
 
     //是否有邮箱 手机号
     var templet_isemail=false;
@@ -205,6 +205,18 @@ $(function(){
             $('.js-subpassword').removeClass('l-btn-disable');
         }
 
+    });
+    $('.js-resetPassWord').keyup(function(){
+        var errorText = checkPwdFormat($(this).val());
+        if(errorText!=200){
+            $(this).addClass('Validform_error');
+            $(this).siblings('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong');
+            $('.js-subpassword').addClass('l-btn-disable');
+        }else{
+            $(this).removeClass('Validform_error');
+            $(this).siblings('.js-resetPassWorderror').removeClass('Validform_wrong').addClass('Validform_right');
+            $('.js-subpassword').removeClass('l-btn-disable');
+        }
     });
     //密码格式验证
     function checkPwdFormat(_sPwd) {
