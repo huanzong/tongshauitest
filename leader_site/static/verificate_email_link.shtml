@@ -12,17 +12,20 @@
     <link rel="stylesheet" type="text/css" href="images/verificate_email.css">
 </head>
 <body>
-    <div class="verificate_email_header">
-        <img src="../images/l_logo.png" class="verificate_email_img"/>
+    <div class="verificate_link_header">
+        <img src="../images/l_logo.png"/>
     </div>
     <div class="verificate_email_middle">
-        <p class="verificate_email_name">亲爱的Alex</p>
+        <p class="verificate_link_name">亲爱的Alex</p>
         <p class="verificate_email_content">感谢您注册统帅官网，我们将竭诚为您提供优质服务！</p>
         <div class="verificate_link_box">
             <div class="verificate-link-tit">
-                请点击以下链接完成邮箱验证<em>（48小时内有效）</em>
+                请点击以下链接完成邮箱验证<br class="o_df-hide o_xs-show o_sm-show"><em>（48小时内有效）</em>
             </div>
-            <a href="javascript:;">http://</a>
+            <a href="javascript:;" class="verificate-link-href">http://user.casarte.com/ids/casarte/confirm.jsp?code=cl1VbFJORlRJazVyS1JlRw%3D%3D&amp;type=cmVn-w%3D%3D&amp;type=cmVn</a>
+            <div class="verificate-link-info">
+                如果您无法点击链接，请将此链接复制到浏览器地址栏中打开
+            </div>
         </div>
     </div>
     <div class="verificate_email_footer">
