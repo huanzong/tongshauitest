@@ -3,9 +3,9 @@
  */
 $(function(){
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
+    //if(!istrsidssdssotoken()){
+    //    jumpToLoginPage()
+    //}
 
     //是否有邮箱 手机号
     var templet_isemail=false;

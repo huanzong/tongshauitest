@@ -10,6 +10,11 @@ $(function(){
     //    jumpToLoginPage();
     //}
 
+    $('.js_memberRevisThree').addClass('member-revisemob-two').removeClass('member-revisemob-three').removeClass('member-revisemob-one');
+    $('.js-validateEmail').hide();
+    $('.js-bindNewMob').show();
+
+
     //页面加载时调个人信息
     $.ajax({
         type: "get",
@@ -115,7 +120,7 @@ $(function(){
     });
 
     //第二步手机号码失去焦点 格式正确 发送验证码亮起
-    $('.js-newMobile').blur(function(){
+    $('.js-newMobile').keyup(function(){
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         var timeOut = $('.js-getinfo').attr('data-type');
