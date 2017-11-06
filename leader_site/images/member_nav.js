@@ -25,7 +25,6 @@ $(function(){
             $('.js_memberNavMiddleBtn').css({height:'60px'});
 
         }else{
-            console.log(documenHeight);
             documenHeight = $('.js-membercontboxs').height();
                 if(documenHeight!=documenHeights&&documenHeight>762){
                     $('.js_memberNavMiddle').css({'height':documenHeight+60});
@@ -47,7 +46,7 @@ $(function(){
                         $('.js_memberNavLeft').height(762+60);
                     }else{
                         if(windowW>990){
-                            $('.js_memberNavLeft').height(762+180);
+                            $('.js_memberNavLeft').height(762+60);
                         }else{
                             $('.js_memberNavLeft').height(762+60);
                         }
