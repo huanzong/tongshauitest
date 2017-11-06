@@ -4,7 +4,7 @@
 $(function(){
     var windowW = $(window).width();
     var documenHeight,documenHeights;
-    var homeMemberContBox = $('.js-membercontboxs-2');
+    var homeMemberContBox = $('.js-membercontboxs-2').length;
     documenHeight = $('.js-membercontboxs').height();
     if(!homeMemberContBox){
         $('.js_memberNavLeft').height(documenHeight+60 );

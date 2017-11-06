@@ -94,6 +94,7 @@
     margin-top: 11px;
     font-size: 14px;
     color: #999;
+    padding: 0 30px;
 }
 //验证码Div
 .verificate_email_verificationdiv{
@@ -257,5 +258,61 @@
     text-decoration: none;
 }
 
-
+//带有链接的邮箱验证码
+.verificate_link_box{
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 25px 50px 20px;
+    width: 600px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 3px #eee;
+    @media (max-width: 700px){
+        padding: 25px 20px 20px;
+        width: 75%;
+    }
+}
+.verificate-link-tit{
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    @media (max-width: 700px){
+        line-height: 20px;
+        padding-bottom: 5px;
+    }
+    em{
+        color: #999;
+    }
+}
+.verificate-link-href{
+    word-wrap:break-word;
+    line-height: 22px;
+    font-size: 12px;
+}
+.verificate-link-info{
+    color: #999;
+    font-size: 12px;
+    line-height: 35px;
+}
+.verificate_link_header{
+    padding: 10px;
+    border-bottom: solid #eee 0.01cm;
+    text-align: center;
+    img{
+        margin: 0 auto;
+        display: block;
+        width: 54px;
+        height: 54px;
+        @media (max-width: 700px){
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+.verificate_link_name{
+    margin-top: 40px;
+    font-size: 20px;
+    color: #666;
+    line-height: 30px;
+}
 

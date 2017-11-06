@@ -11,6 +11,9 @@ $(function() {
 		var screenHeight = document.body.offsetHeight;
     }
 
-    $(".js_structbg").oBgCover().init();//激活方法
-	$(".js_structbg").css('margin-left','-424px');
+
+    $(".js_structbg").css('margin-left','-424px');
+    setTimeout(function(){
+        $(".js_structbg").oBgCover().init();//激活方法
+    },500);
 });

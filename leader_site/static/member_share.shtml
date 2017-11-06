@@ -120,6 +120,6 @@
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_share.js"></script>
-<script type="text/javascript" src="images/templet_member_share.js"></script>
+<!-- <script type="text/javascript" src="images/templet_member_share.js"></script> -->
 </body>
 </html>

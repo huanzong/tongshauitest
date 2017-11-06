@@ -4,6 +4,11 @@
 //上传照片
 
 $(function(){
+    $(".js_sex").jq_qvote();
+    var templet_select_sheng=$("#js_save").oSelect();
+    var templet_select_shi=$("#js_city").oSelect();
+    var templet_select_qu=$("#js_area").oSelect();
+
 
 
 //    用户名判定
@@ -153,59 +158,8 @@ $.jUploader({
     },
 //      上传完成事件
     onComplete: function(name, data) {
-
-        if (data.isSuccess) {
-
-//      隐藏永恒显示弹窗
-            $('.js_popUpBox2').hide();
-            $("body").css({overflow:"js_popUpBox2uto"});
-
-            $('.js-uploadPhoto').hide();
-            $('.js-modifyPhoto').show();
-            $('.js-modifyPhotoBtn').show();
-            templet_pic='/tongshuaifile'+$.trim(data.data);
-
-            //图片加载完成后获取图片信息
-
-             imgs.src = '/tongshuaifile'+$.trim(data.data);
-            imgs.onload = function(){
-                imgsW=imgs.width;
-                imgsH = imgs.height;
-                //bounds=[imgsW,imgsH];
-                if(imgsW>imgsH){
-                    imgsWb = 300/imgsW;
-                    imgsHnow = imgsH*imgsWb;
-//      初始化更改选择框内图片
-                    jcrop_api.setImage(templet_pic, function(){
-                        this.setOptions({
-                            outerImage: templet_pic,
-                            setSelect: [ 60, 60, 260, 260 ]
-                        })
-                    });
-
-                    $(".jcrop-preview").attr("src",templet_pic);
-
-                }else{
-                    imgsWb = 300/imgsH;
-                    imgsWnow = imgsW*imgsWb;
-//      初始化更改选择框内图片
-                    jcrop_api.setImage(templet_pic, function(){
-                        this.setOptions({
-                            outerImage: templet_pic,
-                            setSelect: [ 60, 60, 260, 260 ]
-                        })
-                    });
-
-                    $(".jcrop-preview").attr("src",templet_pic);
-
-                }
-            };
-
-        } else {
-//      上传头像失败出现弹窗
-//            alert(111);
-            globalShade2('图片上传失败',2,2000);
-        }
+        $('.js-uploadPhoto').hide();
+        $('.js-modifyPhoto').show();
 
     },
 //      系统信息显示（例如后缀名不合法）
@@ -247,19 +201,37 @@ $('.js-personalinfotab').click( function () {
 
         var imgSize = jcrop_api.tellSelect();
         console.log(imgSize);
-        $.ajax({
-            url: siteConfig.userUrl+"/user/front/user/updateHeadPic",
-            type: "get",
-            data: {
-                    "picX": parseInt(imgSize.x),
-                    "picY": parseInt(imgSize.y),
-                     "width": parseInt(imgSize.w),
-                     "height": parseInt(imgSize.h),
-                     "userHeadPic": imgs.src
-            },
-            success_cb: function (data) {
-                if (data.isSuccess) {
-                    var tabNmu =$('.js-personalPicuure').index();
+//        $.ajax({
+//            url: siteConfig.userUrl+"/user/front/user/updateHeadPic",
+//            type: "get",
+//            data: {
+//                    "picX": parseInt(imgSize.x),
+//                    "picY": parseInt(imgSize.y),
+//                     "width": parseInt(imgSize.w),
+//                     "height": parseInt(imgSize.h),
+//                     "userHeadPic": imgs.src
+//            },
+//            success_cb: function (data) {
+//                if (data.isSuccess) {
+//                    var tabNmu =$('.js-personalPicuure').index();
+//                    $('.js-personalinfotabcont').hide();
+//                    $('.js-personalinfotabcont').eq(tabNmu).show()
+//                    $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
+//                    $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
+//                    $('.js-uploadPhoto').show();
+//                    $('.js-modifyPhoto').hide();
+//                    $('.js-modifyPhotoBtn').hide();
+//                    $("#js-imgleft").attr("src",data.data);
+//                }
+//                else{
+////      上传头像失败出现弹窗
+//                }
+//            }
+//        });
+    })
+
+})
+var tabNmu =$('.js-personalPicuure').index();
                     $('.js-personalinfotabcont').hide();
                     $('.js-personalinfotabcont').eq(tabNmu).show()
                     $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
@@ -268,19 +240,57 @@ $('.js-personalinfotab').click( function () {
                     $('.js-modifyPhoto').hide();
                     $('.js-modifyPhotoBtn').hide();
                     $("#js-imgleft").attr("src",data.data);
-                }
-                else{
-//      上传头像失败出现弹窗
-                }
-            }
-        });
-    })
-
-})
-
 function wrongInfo(obj,obj2,text){
     obj.addClass('personalist-wrong-box').removeClass('personalist-right');
     obj2.html(text);
 }
+
+
+
+//      隐藏永恒显示弹窗
+    $('.js_popUpBox2').hide();
+    $("body").css({overflow:"js_popUpBox2uto"});
+
+    $('.js-uploadPhoto').hide();
+    $('.js-modifyPhoto').show();
+    $('.js-modifyPhotoBtn').show();
+    templet_pic='/tongshuaifile'+$.trim(data.data);
+
+    //图片加载完成后获取图片信息
+
+    imgs.src = '/tongshuaifile'+$.trim(data.data);
+    imgs.onload = function(){
+        imgsW=imgs.width;
+        imgsH = imgs.height;
+        //bounds=[imgsW,imgsH];
+        if(imgsW>imgsH){
+            imgsWb = 300/imgsW;
+            imgsHnow = imgsH*imgsWb;
+//      初始化更改选择框内图片
+            jcrop_api.setImage(templet_pic, function(){
+                this.setOptions({
+                    outerImage: templet_pic,
+                    setSelect: [ 60, 60, 260, 260 ]
+                })
+            });
+
+            $(".jcrop-preview").attr("src",templet_pic);
+
+        }else{
+            imgsWb = 300/imgsH;
+            imgsWnow = imgsW*imgsWb;
+//      初始化更改选择框内图片
+            jcrop_api.setImage(templet_pic, function(){
+                this.setOptions({
+                    outerImage: templet_pic,
+                    setSelect: [ 60, 60, 260, 260 ]
+                })
+            });
+
+            $(".jcrop-preview").attr("src",templet_pic);
+
+        }
+    };
+
 
 

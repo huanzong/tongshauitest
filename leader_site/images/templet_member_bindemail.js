@@ -7,7 +7,7 @@ $(function(){
 
     //前台判断是否登陆
     if(!istrsidssdssotoken()){
-        jumpToLoginPage();
+       jumpToLoginPage();
     }
 
     //页面加载时调个人信息
@@ -33,7 +33,24 @@ $(function(){
         }
     });
 
+
+    //静态页面测试添加，正常后隐藏
+    // $("#js_unbindmob").attr('autotext',"手机（"+15115151515+"）");
+    // $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
+    // $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
+    // $("#js_unbindmob").oSelect().init();
+
+
     //第一步确定按钮变亮
+    $('.js_phoneCodeYz').keyup(function(){
+        if($(this).val().length==6){
+            $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+        }else{
+            $('.js_subimGetUp').addClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
+        }
+    })
     $('.js_phoneCodeYz').blur(function(){
         if($(this).val().length==6){
             $('.js_subimGetUp').removeClass('l-btn-disable');
@@ -41,7 +58,7 @@ $(function(){
         }else{
             $('.js_subimGetUp').addClass('l-btn-disable');
             $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
-            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码')
+            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
         }
     })
 
@@ -105,9 +122,12 @@ $(function(){
         }
     });
 
-    //第二步邮箱失去焦点 格式正确 发送验证码亮起
-    $('.js-newEmail').blur(function(){
+    //第二步邮箱格式正确 发送验证码亮起
+    $('.js-newEmail').keyup(function(){
 
+    })
+
+    $('.js-newEmail').blur(function(){
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         var timeOut = $('.js-getinfo').attr('data-type');
 
@@ -175,8 +195,7 @@ $(function(){
         else{
             $('.js-getinfo').addClass('l-btn-disable');
         }
-
-    })
+    });
 
     //第二步点确定以前验证邮箱 验证码是否正确
     $('.js-emailCode').blur(function(){
