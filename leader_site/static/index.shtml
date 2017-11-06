@@ -93,12 +93,12 @@
                             </div>
                             <div class="num">02</div>
                         </div>
-                        <div class="page-num" data-index=3>
+                        <!-- <div class="page-num" data-index=3>
                             <div class="line">
                                 <div class="red-line"></div>
                             </div>
                             <div class="num">03</div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- banner 分页 不需要循环 END-->
                 </div>
@@ -219,7 +219,7 @@
                     </div>
                 </a>
                 <div class="enter-con enter-con-xs js_enterShow">
-                    <i class="iconfont icon-icon enter-corner-left"></i>
+                    <i class="iconfont icon-icon_left enter-corner-left"></i>
                 </div>
                 <a class="enter-con">
                     <div class="enter-con-icon icon7">

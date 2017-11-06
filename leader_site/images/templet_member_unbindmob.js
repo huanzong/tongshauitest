@@ -7,9 +7,9 @@
 
 $(function(){
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
+    //if(!istrsidssdssotoken()){
+    //    jumpToLoginPage()
+    //}
 
     $.ajax({
         type: "get",
@@ -41,6 +41,14 @@ $(function(){
             }
         }
     });
+
+    //静态页面测试添加，正常后隐藏
+    $("#js_unbindmob").attr('autotext',"手机（"+15115151515+"）");
+    $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
+    $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
+    $("#js_unbindmob").oSelect().init();
+
+
 
 
 //通过点击不同的下拉列表框 转换手机和邮箱
