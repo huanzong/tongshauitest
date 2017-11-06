@@ -1,4 +1,7 @@
 /**
+ * Created by Norman on 2017/11/6 0006.
+ */
+/**
  * 基于原生javascript构造分页
  *
  * @param {Object} id
@@ -83,6 +86,7 @@ var pagination = function(id){
         var currpage = parseInt($this.currPage);
         //|| $this.totalCount==0
         if($this.totalPage<=1){
+            divPage.html(htmlStr);
             return;
         }
 

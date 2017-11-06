@@ -7,9 +7,9 @@
 
 $(function(){
     //前台判断是否登陆
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage()
-    //}
+    if(!istrsidssdssotoken()){
+       jumpToLoginPage()
+    }
 
     $.ajax({
         type: "get",
@@ -43,10 +43,10 @@ $(function(){
     });
 
     //静态页面测试添加，正常后隐藏
-    $("#js_unbindmob").attr('autotext',"手机（"+15115151515+"）");
-    $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
-    $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
-    $("#js_unbindmob").oSelect().init();
+    // $("#js_unbindmob").attr('autotext',"手机（"+15115151515+"）");
+    // $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
+    // $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
+    // $("#js_unbindmob").oSelect().init();
 
 
 
@@ -276,7 +276,17 @@ $('.js_mobileCodeYz').blur(function(){
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
         $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
-        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码')
+        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+    }
+})
+
+$('.js_mobileCodeYz').keyup(function(){
+    if($(this).val().length==6){
+        $('.js_subimGetUp').removeClass('l-btn-disable');
+        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+    }else{
+        $('.js_subimGetUp').addClass('l-btn-disable');
+        $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
     }
 })
 
@@ -289,10 +299,15 @@ $('.js_emailCodeYz').blur(function(){
         $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
-        $('.js_subimGetUp').click(function(){
-            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
-
-            return false;
-        })
+        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
+    }
+})
+$('.js_emailCodeYz').keyup(function(){
+    if($(this).val().length==6){
+        $('.js_subimGetUp').removeClass('l-btn-disable');
+        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+    }else{
+        $('.js_subimGetUp').addClass('l-btn-disable');
+        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
     }
 })
