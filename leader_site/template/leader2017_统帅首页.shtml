@@ -93,7 +93,7 @@
 									<a href="<trs_viewdata field='link'/>">
 										<!-- <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner.JPG" /> -->
 										<img class="js_bg" src="<trs_viewdata field='banner'/>" />
-										<img class="js_recPic" src="" df="images/index_banner.JPG" md="images/footer_logo1.jpg" sm="images/footer_logo1.jpg" xs="images/footer_logo1.jpg">
+										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='0' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='1' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" sm="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='1' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS  FIELD='banner' startpos='1' num='1'><TRS_VIEWDATAAPPENDIX  URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>">
 									</a>
 								</div>
 							</trs_viewdatas>
