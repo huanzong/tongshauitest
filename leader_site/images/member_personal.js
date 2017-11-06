@@ -21,7 +21,7 @@ $(function(){
 
     $('.js_member input').blur(function(){
         var username =  $('.js_member input').val();
-        if(username.length>3&&username.length<21){
+        if(username.length>3&&username.length<19){
             $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
             if(!nubreg.test(username)){
                 $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
@@ -83,9 +83,6 @@ $(function(){
                             marginTop: '-' + Math.round(ry * c.y) + 'px'
                         }
                     );
-
-
-
 
                 }
             };

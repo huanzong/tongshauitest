@@ -21,7 +21,6 @@ function cur(){
     });
 }
 
-
 //重新绘制价格
 $(".js_minPrice").each(function(){
     var templet_price=$(this).attr("sku_value");
