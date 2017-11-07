@@ -1,7 +1,7 @@
 
 <div class="o_u o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
     <div class="o_u o_df_9-12 o_lg_2-2 o_xs_2-2">
-        <a href="test.tongshuai.com"><div class="memeber-nav-logo o_u o_xs_2-12">
+        <a href="http://test.tongshuai.com/"><div class="memeber-nav-logo o_u o_xs_2-12">
             <img src="images/l_logo.png" alt=""  ignoreapd="1" >
         </div></a>
         <div class=" o_u o_xs_2-12 memeber-nav-logo-text">
@@ -32,13 +32,12 @@
 </div>
 <div class="o_u o_df_2-12 o_lg_3-12 o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle js_memberNavMiddle">
     <div class="o_u o_df_6-10 o_xs_2-3 memeber-nav-middle-listbox">
-        <ul>
+        <ul id="js-navul">
             <li class="memeber-nav-middle-title">个人信息</li>
             <li><a href="/user" class=" cur o_u">个人中心</a></li>
             <!--<li><a href="javascript:;" class="o_u ">我的优惠券</a></li>-->
             <!--<li><a href="javascript:;" class="o_u ">我的礼品卡</a></li>-->
             <!--<li><a href="javascript:;" class="o_u ">我的消息</a><i class="member-nub-round">9</i></li>-->
-            <!--<li><a href="javascript:;" class="o_u ">个人中心</a></li>-->
             <li class="memeber-nav-middle-title">订单与产品</li>
             <li><a href="/order" class="o_u ">我的订单</a></li>
             <!--<li><a href="javascript:;" class="o_u ">收藏与订阅</a></li>-->
@@ -49,7 +48,7 @@
             <li><a href="/security" class="o_u ">安全设置</a></li>
             <li><a href="/address" class="o_u ">地址管理</a></li>
             <li><a href="/info" class="o_u ">个人信息</a></li>
-            <li><a href="/invoice" class="o_u ">增票资质</a></li>
+            <!--<li><a href="/invoice" class="o_u ">增票资质</a></li>-->
         </ul>
     </div>
     <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn" data-alt="1">
