@@ -1,8 +1,27 @@
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-左侧栏
+* @author:      刘悦
+* @date        2017.11.7
+* ---------------------------------------------------------------------------*/
 $(function () {
 
     //前台判断是否登陆
     if (!istrsidssdssotoken()) {
         jumpToLoginPage()
+    }
+
+    var templet_navul = document.getElementById('js-navul');
+    if(templet_navul!=null){
+        var templet_navullength = $('#js-navul > li').length;
+        var templet_classify =document.getElementById("js-leftredlight").innerHTML;
+        $('#js-navul > li').find(".cur").removeClass("cur");
+
+        for(var i=0;i<templet_navullength;i++){
+            var templet_innerText = $('#js-navul > li').eq(i).find(".o_u").text();
+            if(templet_innerText.indexOf(templet_classify)>-1){
+                $('#js-navul > li').eq(i).find(".o_u").addClass("cur");
+            }
+        }
     }
 
     //计算账号安全 读取用户信息
@@ -57,23 +76,23 @@ $(function () {
                             //显示个人中心安全级别
                             if(templet_grade>=0 && templet_grade<=33)
                             {
-                                $('#js-securitysetting').addClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safefinetext').removeClass('member-security-safeexcellenttext');
-                                $('#js-securitysetting').html('危险');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-danger');
+                                $('.js-securitysetting').html('危险');
                             }
                             if(templet_grade>=34 && templet_grade<=66)
                             {
-                                $('#js-securitysetting').addClass('member-security-safeplaintext').removeClass('member-security-safeperiltext').removeClass('member-security-safefinetext').removeClass('member-security-safeexcellenttext');
-                                $('#js-securitysetting').html('普通');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-plain');
+                                $('.js-securitysetting').html('普通');
                             }
                             if(templet_grade>=67 && templet_grade<=90)
                             {
-                                $('#js-securitysetting').addClass('member-security-safefinetext').removeClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safeexcellenttext');
-                                $('#js-securitysetting').html('良好');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-fine');
+                                $('.js-securitysetting').html('良好');
                             }
                             if(templet_grade>=91 && templet_grade<=100)
                             {
-                                $('#js-securitysetting').addClass('member-security-safeexcellenttext').removeClass('member-security-safeperiltext').removeClass('member-security-safeplaintext').removeClass('member-security-safefinetext');;
-                                $('#js-securitysetting').html('优秀');
+                                $('.js-securitysetting').addClass('memeber-nav-safety-good');
+                                $('.js-securitysetting').html('优秀');
                             }
                         }
                     }

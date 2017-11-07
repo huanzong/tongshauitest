@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-我的晒单</title>
+    <title>个人中心</title>
     <base href='../'>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
-    <!--#include virtual="public/head.shtml"-->
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" type="text/css" href="images/member.css">
     <link rel="stylesheet" type="text/css" href="images/member_nav.css">
@@ -16,7 +16,7 @@
     <div class="o_main">
         <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/header_nav2.shtml"-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <!--o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2-->
@@ -30,21 +30,21 @@
                     <div class="o_u o_df_6-10 o_xs_2-3 memeber-nav-middle-listbox">
                         <ul>
                             <li class="memeber-nav-middle-title">个人信息</li>
-                            <li><a href="javascript:;" class=" cur o_u">个人中心</a><i class="member-nub-round">9</i></li>
-                            <li><a href="javascript:;" class="o_u ">我的优惠券</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的礼品卡</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的消息</a></li>
+                            <li><a href="/user" class=" cur o_u">个人中心</a></li>
+                            <!--<li><a href="javascript:;" class="o_u ">我的优惠券</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">我的礼品卡</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">我的消息</a><i class="member-nub-round">9</i></li>-->
                             <li class="memeber-nav-middle-title">订单与产品</li>
-                            <li><a href="javascript:;" class="o_u ">我的订单</a><i class="member-nub-round">9</i></li>
-                            <li><a href="javascript:;" class="o_u ">收藏与订阅</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的产品</a></li>
-                            <li><a href="javascript:;" class="o_u ">售后服务</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的晒单</a></li>
+                            <li><a href="/order" class="o_u ">我的订单</a></li>
+                            <!--<li><a href="javascript:;" class="o_u ">收藏与订阅</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">我的产品</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">售后服务</a></li>-->
+                            <li><a href="/product_share" class="o_u ">我的晒单</a></li>
                             <li class="memeber-nav-middle-title">账户管理</li>
-                            <li><a href="javascript:;" class="o_u ">安全设置</a><i class="member-nub-round">9</i></li>
-                            <li><a href="javascript:;" class="o_u ">地址管理</a></li>
-                            <li><a href="javascript:;" class="o_u ">个人信息</a></li>
-                            <li><a href="javascript:;" class="o_u ">增票资质</a></li>
+                            <li><a href="/security" class="o_u ">安全设置</a></li>
+                            <li><a href="/address" class="o_u ">地址管理</a></li>
+                            <li><a href="/info" class="o_u ">个人信息</a></li>
+                            <!--<li><a href="/invoice" class="o_u ">增票资质</a></li>-->
                         </ul>
                     </div>
                     <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn" data-alt="1">
@@ -70,29 +70,29 @@
                                         <div class="member-personalinfo-listbox cur js-personalinfotabcont">
                                             <!--全部订单 START-->
                                             <div class="member-order-table member-orderdetail-table">
-                                                <!--<div class="member-home-top o_u o_df_11-12">-->
-                                                    <!--<div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">-->
-                                                        <!--<i class="iconfont icon-giftbox-solid"></i>-->
-                                                        <!--<div class="member-home-right-title"  >-->
-                                                            <!--<p>我的等级</p>-->
-                                                            <!--<span class="l-tag-padding l-tag-orange">普通会员</span>-->
-                                                        <!--</div>-->
-                                                    <!--</div>-->
-                                                    <!--<div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">-->
-                                                        <!--<i class="iconfont icon-giftbox-solid"></i>-->
-                                                        <!--<div class="member-home-right-title"  >-->
-                                                            <!--<p>会员积分</p>-->
-                                                            <!--<span class="member-home-right-title-nub">233358</span>-->
-                                                        <!--</div>-->
-                                                    <!--</div>-->
-                                                    <!--<div class="o_u o_df_5-12 o_lg_5-12 o_md_5-12 o_sm_3-6 o_xs_12-12">-->
-                                                        <!--<i class="iconfont icon-giftbox-solid"></i>-->
-                                                        <!--<div class="member-home-right-title"  >-->
-                                                            <!--<p>下一级可享权益</p>-->
-                                                            <!--<span class="l-tag-padding l-tag-green">免费激活</span><span class="l-tag-padding l-tag-green">免费清洗</span><span class="l-tag-padding l-tag-green">生态权益</span>-->
-                                                        <!--</div>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
+                                                <div class="member-home-top o_u o_df_11-12">
+                                                    <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">
+                                                        <i class="iconfont icon-giftbox-solid"></i>
+                                                        <div class="member-home-right-title"  >
+                                                            <p>我的等级</p>
+                                                            <span class="l-tag-padding l-tag-orange">普通会员</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o_u o_df_3-12 o_lg_3-12 o_md_3-12 o_sm_3-6 o_xs_1-2">
+                                                        <i class="iconfont icon-giftbox-solid"></i>
+                                                        <div class="member-home-right-title"  >
+                                                            <p>会员积分</p>
+                                                            <span class="member-home-right-title-nub">233358</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o_u o_df_5-12 o_lg_5-12 o_md_5-12 o_sm_3-6 o_xs_12-12">
+                                                        <i class="iconfont icon-giftbox-solid"></i>
+                                                        <div class="member-home-right-title"  >
+                                                            <p>下一级可享权益</p>
+                                                            <span class="l-tag-padding l-tag-green">免费激活</span><span class="l-tag-padding l-tag-green">免费清洗</span><span class="l-tag-padding l-tag-green">生态权益</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="member-home-top-list o_u o_df_11-12">
                                                     <a class="o_u o_df_3-10">
                                                 <span class="iconfont icon-wallet-solid o_u">
@@ -147,7 +147,7 @@
                                                 <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df">
                                                     <div class="o_g member-home-down-table">
                                                         <div class="o_u o_df_11-12">
-                                                            <span>精选推荐</span>
+                                                            <span>精选收藏</span>
                                                             <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
                                                         </div>
                                                     </div>
@@ -224,14 +224,14 @@
 
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/personal_footer.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
 
     </div>
 </div>
-<!--#include virtual="public/foot.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
-
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/templet_member_nav.js"></script>
 </body>
 </html>
