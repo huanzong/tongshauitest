@@ -69,10 +69,10 @@ $('.js_recomChange').click(function(){
         url: template_url+"recommend_116.json",
         data: "",
         success_cb: function(data){
-            $(".js_recommend").html('');
-            var recommendData="";
-            var chooseArray=[];
             if(data.length>4) {
+                $(".js_recommend").html('');
+                var recommendData="";
+                var chooseArray=[];
                 for (var j = 0; j < 4; j++) {
                     while (true) {
                         var random = Math.round(Math.random() * (data.length - 2));
