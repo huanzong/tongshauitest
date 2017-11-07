@@ -165,13 +165,13 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
 
     }
 
-    var temp1 = 5;
-    if (_nPageCount <= 6) {
-        temp1 = 5;
+    var temp1 = 8;
+    if (_nPageCount <= 9) {
+        temp1 = 8;
     }
 
     if (curIndex > temp1) {
-        pL += '<span>...</span>';
+        pL += '';
     }
 
     var pageNum = 0;
@@ -188,12 +188,12 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
     }
 
     var temp = 2;
-    if (_nPageCount <= 6) {
-        temp = 5;
+    if (_nPageCount <= 9) {
+        temp = 8;
     }
 
     if (curIndex + temp < _nPageCount) {
-        pL += '<span>...</span>';
+        pL += '';
     }
 
     if (curIndex != _nPageCount) {
