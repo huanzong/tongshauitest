@@ -32,8 +32,6 @@
 							<TRS_CONDITION  CONDITION='@fjxx' NOT='TRUE' OPERATOR="blank">
 								<span class="param-attachment-title">附件</span>
 								<span class="param-attachment-line o_xs-hide"></span>
-								<a class="param-attachment-other"><TRS_VIEWDATA field="fjxx" /></a>
-
 							</TRS_CONDITION>
 						</TRS_VIEWDATA>
 					</div>
@@ -59,7 +57,29 @@
   $(function(){
     //初始化
     templet_init();
+    array(appendix,"a","js_appendixText","param-attachment-other");
   });
+  //定义附件信息展示数据
+  var appendix ="<TRS_VIEWDATA field="fjxx"/>";
+  //附件信息
+  function array(str,tab,name,className){
+    if(str!=''){
+      var text=str.split("~");
+      var text2="";
+      var strHtml="";
+      for(var i=0; i<text.length; i++){
+        text2=text[i].split("`")[0];
+        if(className==''||className==null){
+          strHtml+='<'+tab+'>'+text2+'</'+tab+'>';
+        }else{
+          strHtml+='<'+tab+' class="'+className+'">'+text2+'</'+tab+'>';
+        }
+      }
+      $('.'+name+'').append(strHtml);
+
+    }
+
+  }
   var templet_Arry=[
       <TRS_XVIEWFIELDGROUPS STARTPOS="0"  NUM='1'>
       <TRS_XVIEWFIELDGROUPS STARTPOS="2" >
