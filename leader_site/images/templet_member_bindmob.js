@@ -13,7 +13,7 @@ $(function(){
     //页面加载时调个人信息
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/user/front/user/userInfo/",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
         data: {},
         login:true,
         success_cb: function(data){
