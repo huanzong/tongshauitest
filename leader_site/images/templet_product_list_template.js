@@ -165,14 +165,7 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
 
     }
 
-    var temp1 = 8;
-    if (_nPageCount <= 9) {
-        temp1 = 8;
-    }
 
-    if (curIndex > temp1) {
-        pL += '';
-    }
 
     var pageNum = 0;
     for (var pageN = (currInclude - 1) * pageInclude + 1; pageN <= prePage; pageN++) {
@@ -187,14 +180,6 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
         }
     }
 
-    var temp = 2;
-    if (_nPageCount <= 9) {
-        temp = 8;
-    }
-
-    if (curIndex + temp < _nPageCount) {
-        pL += '';
-    }
 
     if (curIndex != _nPageCount) {
         pL += '<a class="l-pagination-pagenumber" href="' + lastPage + '">' + _nPageCount + '</a>';
