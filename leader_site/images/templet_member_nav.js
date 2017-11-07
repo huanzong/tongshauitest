@@ -28,7 +28,7 @@ $(function () {
     //计算账号安全 读取用户信息
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/user/front/user/userInfo",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
         data: "",
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {

@@ -154,7 +154,7 @@ $.jUploader({
     fileField: 'file',
     fillsize:'2',
     button: "js_imgUpload", // 这里设置按钮id
-    action: '/user/front/user/uploadHeadPic',//这里写地址
+    action: '/hshop-user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
     onUpload: function(data) {
@@ -261,7 +261,7 @@ $('.js-personalinfotab').click( function () {
         var imgSize = jcrop_api.tellSelect();
         console.log(imgSize);
         $.ajax({
-            url: siteConfig.userUrl+"/user/front/user/updateHeadPic",
+            url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
             type: "get",
             data: {
                     "picX": parseInt(imgSize.x),

@@ -26,7 +26,7 @@ $(function(){
     //页面加载时调个人信息
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/user/front/user/userInfo/",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
         data: "",
         login:true,
         success_cb: function(data){
@@ -380,7 +380,7 @@ $(function(){
         templet_isSubmiting=true;
         $.ajax({
             type: "post",
-            url: siteConfig.userUrl+"/user/front/user/updateUserInfo/",
+            url: siteConfig.userUrl+"/hshop-user/front/user/updateUserInfo/",
             data:templet_data,
             error: function (data) {
                 templet_isSubmiting=false;
