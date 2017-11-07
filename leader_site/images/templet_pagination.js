@@ -122,8 +122,7 @@ var pagination = function(id){
                 var startPageNo = 0;
                 var endPageNo=0;
                 //判断分页显示数
-                if($this.showPageCount == 8){
-
+                /*if($this.showPageCount == 8){
                     //判断分页总数是奇数还是偶数
                     if($this.totalPage%2 == 0){
                         if(currpage+4 < $this.totalPage ){
@@ -144,12 +143,12 @@ var pagination = function(id){
                             startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
                         }
                     }
-                }else if($this.showPageCount == 5){
+                }else if($this.showPageCount == 6){
                     //判断分页总数是奇数还是偶数
 
                     if(currpage+2 < $this.totalPage ){
                         startPageNo = currpage -2;
-                        endPageNo = currpage+2;
+                        endPageNo = currpage+3;
                     }else{
                         endPageNo =  $this.totalPage;
                         startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
@@ -164,8 +163,27 @@ var pagination = function(id){
                         endPageNo =  $this.totalPage;
                         startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
                     }
+                }*/
+                //偶数分页
+                if($this.totalPage%2 == 0){
+                    if(currpage+parseInt($this.showPageCount/2) < $this.totalPage ){
+                        startPageNo = currpage - parseInt($this.showPageCount/2) +1;
+                        endPageNo = currpage+parseInt($this.showPageCount/2) ;
+                    }else{
+                        endPageNo =  $this.totalPage;
+                        startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
+                    }
+                    
+                 //奇数分页   
+                }else{
+                    if(currpage+parseInt($this.showPageCount/2) < $this.totalPage ){
+                        startPageNo = currpage -parseInt($this.showPageCount/2);
+                        endPageNo = currpage+parseInt($this.showPageCount/2);
+                    }else{
+                        endPageNo =  $this.totalPage;
+                        startPageNo = currpage - ($this.showPageCount-($this.totalPage-currpage))+1;
+                    }
                 }
-
 
                 for(var m=startPageNo;m<=endPageNo;m++){
                     if(currpage == m){
