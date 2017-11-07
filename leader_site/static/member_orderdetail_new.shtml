@@ -26,7 +26,7 @@
                 <div class="o_u o_df_12-12  member-security js-membercontbox">
                     <div class="land-shade js_navshade"></div>
                     <div class="member_orderdetail_title_box js-securityheight o_g">
-                        <h2>我的订单</h2>
+                        <h2>订单详情</h2>
                     </div>
                     <div class="member_contborder_box  o_u  o_df_11-12">
                         <div class="o_g">
@@ -52,11 +52,11 @@
                                     <div class="o_u o_df_2-12 order_content_img">
                                         <img src="../images/compare_goods.PNG" alt=""  >
                                     </div>
-                                    <div class="o_u o_df_6-12 o_sm_8-12 o_xs_10-12 order_content_name">
-                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                    <div class="o_u o_df_6-12 o_sm_8-12 o_xs_2-2 order_content_name">
+                                    <h4>统帅323L大容量无霜冰箱</h4>
                                         <span>BCD-323WLDPN</span>
                                     </div>
-                                    <div class="o_u o_df_2-12 o_md_4-12  o_sm_2-12 o_xs_2-12 order_content_price">&yen;1799<span>x1</span></div>
+                                    <div class="o_u o_df_2-12 o_md_4-12  o_sm_2-12 o_xs_2-2 order_content_price">&yen;1799<span>x1</span></div>
                                     <div class="o_u o_df_2-12 o_sm_2-2 o_xs_2-2 order_content_nub ">
                                         x1
                                     </div>
@@ -76,11 +76,11 @@
                                     <div class="o_u o_df_2-12 order_content_img">
                                         <img src="../images/compare_goods.PNG" alt=""  >
                                     </div>
-                                    <div class="o_u o_df_6-12 o_sm_8-12 o_xs_10-12 order_content_name">
+                                    <div class="o_u o_df_6-12 o_sm_8-12 o_xs_2-2 order_content_name">
                                         <h4>统帅323L大容量无霜冰箱</h4>
                                         <span>BCD-323WLDPN</span>
                                     </div>
-                                    <div class="o_u o_df_2-12 o_md_4-12  o_sm_2-12 o_xs_2-12 order_content_price">&yen;1799<span>x1</span></div>
+                                    <div class="o_u o_df_2-12 o_md_4-12  o_sm_2-12 o_xs_2-2 order_content_price">&yen;1799<span>x1</span></div>
                                     <div class="o_u o_df_2-12 o_sm_2-2 o_xs_2-2 order_content_nub ">
                                         x1
                                     </div>

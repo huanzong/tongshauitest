@@ -1,6 +1,8 @@
-/**
- * Created by 15610 on 2017/10/31.
- */
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-修改密码
+* @author:      刘悦
+* @date        2017.11.7
+* ---------------------------------------------------------------------------*/
 $(function(){
     //前台判断是否登陆
     if(!istrsidssdssotoken()){
@@ -191,26 +193,11 @@ $(function(){
 
     //第二步确定按钮变亮
 
-    $('.js-resetPassWord').blur(function(){
-        var errorText = checkPwdFormat($(this).val());
-        if(errorText!=200){
-            $(this).addClass('Validform_error');
-            $(this).siblings('.js-resetPassWorderror').html(errorText).removeClass('Validform_right').addClass('Validform_wrong');
-            $('.js-subpassword').addClass('l-btn-disable').click(function(){
-                return false;
-            });
-        }else{
-            $(this).removeClass('Validform_error');
-            $(this).siblings('.js-resetPassWorderror').removeClass('Validform_wrong').addClass('Validform_right');
-            $('.js-subpassword').removeClass('l-btn-disable');
-        }
-
-    });
     $('.js-resetPassWord').keyup(function(){
         var errorText = checkPwdFormat($(this).val());
         if(errorText!=200){
             $(this).addClass('Validform_error');
-            $(this).siblings('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong');
+            $(this).siblings('.js-resetPassWorderror').html(errorText).removeClass('Validform_right').addClass('Validform_wrong');
             $('.js-subpassword').addClass('l-btn-disable');
         }else{
             $(this).removeClass('Validform_error');
