@@ -70,8 +70,11 @@
 
             </div>
         </div>
-        <div class="o_g product-prise-page">
-
+        <div class="o_g product-listpage pageMax o_df-show o_sm-hide o_xs-hide">
+        </div>
+        <div class="o_g product-listpage pageMiddle o_df-hide o_sm-show o_xs-hide">
+        </div>
+        <div class="o_g product-listpage pageMobile o_df-hide o_sm-hide o_xs-show">
         </div>
         <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 
