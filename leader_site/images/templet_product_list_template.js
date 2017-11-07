@@ -61,7 +61,7 @@ function readJsonString(templet_price){
 $(".js_recommend").find('a').eq(2).addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
 $(".js_recommend").find('a').eq(3).addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
 //精选推荐切换
-var template_url=window.location.href;
+
 $('.js_recomChange').click(function(){
     $.ajax({
         type: "get",
