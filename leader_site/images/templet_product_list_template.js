@@ -72,42 +72,44 @@ $('.js_recomChange').click(function(){
             $(".js_recommend").html('');
             var recommendData="";
             var chooseArray=[];
-            for(var j=0; j<4; j++){
-                while(true){
-                    var random=Math.round(Math.random()*(data.length-2));
-                    if(!chooseArray[random]){
-                        break;
-                    }
-                }
-                chooseArray[random]=true;
-                var pname=data[random].pname;
-                var modelno=data[random].modelno;
-                var dochref=data[random].dochref;
-                var pic=data[random].pic;
-                var sku_value=data[random].sku_value;
-                var minPrice = 0;
-                if(sku_value != null && sku_value!="" && sku_value.length>0){
-                    var currentPrice = 0;
-                    for(var i=0;i<sku_value.length;i++){
-
-                        currentPrice = sku_value[i].salePrice;
-                        if(i==0){
-                            minPrice=currentPrice;
-                        }else if(parseInt(minPrice)>parseInt(currentPrice)){
-                            minPrice = currentPrice;
+            if(data.length>4) {
+                for (var j = 0; j < 4; j++) {
+                    while (true) {
+                        var random = Math.round(Math.random() * (data.length - 2));
+                        if (!chooseArray[random]) {
+                            break;
                         }
                     }
-                }
-                recommendData+='<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="'+dochref+'">';
-                recommendData+='<img src="'+pic+'"/>';
-                recommendData+='<div class="recommend-pro-info">';
-                recommendData+='<span class="pro-info-title">'+pname+'</span>';
-                recommendData+='<span class="pro-info-type">'+modelno+'</span>';
-                recommendData+='<span class="pro-info-price js_minPrice">￥<span>'+minPrice+'</span></span>';
-                recommendData+='</div></a>';
+                    chooseArray[random] = true;
+                    var pname = data[random].pname;
+                    var modelno = data[random].modelno;
+                    var dochref = data[random].dochref;
+                    var pic = data[random].pic;
+                    var sku_value = data[random].sku_value;
+                    var minPrice = 0;
+                    if (sku_value != null && sku_value != "" && sku_value.length > 0) {
+                        var currentPrice = 0;
+                        for (var i = 0; i < sku_value.length; i++) {
 
+                            currentPrice = sku_value[i].salePrice;
+                            if (i == 0) {
+                                minPrice = currentPrice;
+                            } else if (parseInt(minPrice) > parseInt(currentPrice)) {
+                                minPrice = currentPrice;
+                            }
+                        }
+                    }
+                    recommendData += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + dochref + '">';
+                    recommendData += '<img src="' + pic + '"/>';
+                    recommendData += '<div class="recommend-pro-info">';
+                    recommendData += '<span class="pro-info-title">' + pname + '</span>';
+                    recommendData += '<span class="pro-info-type">' + modelno + '</span>';
+                    recommendData += '<span class="pro-info-price js_minPrice">￥<span>' + minPrice + '</span></span>';
+                    recommendData += '</div></a>';
+
+                }
+                $(".js_recommend").html(recommendData);
             }
-            $(".js_recommend").html(recommendData);
         }
     });
 })
