@@ -70,8 +70,11 @@
 
             </div>
         </div>
-        <div class="o_g product-prise-page">
-
+        <div class="o_g product-prise-page1">
+        </div>
+        <div class="o_g product-prise-page2">
+        </div>
+        <div class="o_g product-prise-page3">
         </div>
         <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 
