@@ -195,13 +195,13 @@ var paginationTwo = function(id){
         }
 
         // 上一页
-        if(1!=currpage){
+        if(0!=currpage){
             htmlStr+='<a href="javascript:;" class="l-pagination-prew" page="'+(parseInt(currpage)-1)+'">上一页</a>';
         }
 
         //初始化分页 1:总页数小于8页
         if($this.totalPage<=$this.showPageCount){
-            for(var m=1;m<=$this.totalPage;m++){
+            for(var m=0;m<$this.totalPage;m++){
                 if(currpage == m){
 
                     htmlStr+='<a href="javascript:;" class="l-pagination-pagenumber active"  page="'+m+'">'+m+'</a>';
@@ -213,7 +213,7 @@ var paginationTwo = function(id){
         }else{
             //当页数小于8时
             if(currpage < $this.showPageCount){
-                for(var m=1;m<=$this.showPageCount;m++){
+                for(var m=0;m<$this.showPageCount;m++){
                     if(currpage == m){
                         htmlStr+='<a href="javascript:;" class="l-pagination-pagenumber active"  page="'+m+'">'+m+'</a>';
                     }else{
@@ -270,7 +270,7 @@ var paginationTwo = function(id){
                 }
 
 
-                for(var m=startPageNo;m<=endPageNo;m++){
+                for(var m=startPageNo;m<endPageNo;m++){
                     if(currpage == m){
                         htmlStr+='<a href="javascript:;" class="l-pagination-pagenumber active"  page="'+m+'">'+m+'</a>';
                     }else{
