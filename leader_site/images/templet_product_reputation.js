@@ -16,9 +16,9 @@ function initContent(data,curPage,pageSize){
   if(data.isSuccess==true){
     //循环每个entity
     //初始化分页
-    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".product-prise-page1",3);
-    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".product-prise-page2",6);
-    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".product-prise-page3",8);
+    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
+    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMiddle",6);
+    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMax",8);
     $(".product-prise-body .o_df_10-12").html("");
     for (var j = 0; j<data.data.entities.length;j++) {
       //append每个entity
@@ -120,9 +120,9 @@ function getContentDataByTag(curPage,pageSize){
       dataType:"json",
       success_cb: function (data){
         //初始化分页
-        templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".product-prise-page1",3);
-        templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".product-prise-page2",6);
-        templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".product-prise-page3",8);
+        templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
+        templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMiddle",6);
+        templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMax",8);
         //判断成功执行，失败。
         if(data.isSuccess==true){
           //循环每个entity
