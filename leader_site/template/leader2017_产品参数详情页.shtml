@@ -31,7 +31,7 @@
 							<TRS_CONDITION  CONDITION='@fjxx' NOT='TRUE' OPERATOR="blank">
 								<span class="param-attachment-title">附件</span>
 								<span class="param-attachment-line o_xs-hide"></span>
-
+								<a class="param-attachment-other"><TRS_VIEWDATA field="fjxx" /></a>
 							</TRS_CONDITION>
 						</TRS_VIEWDATA>
 
