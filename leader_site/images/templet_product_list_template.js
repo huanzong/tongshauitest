@@ -1,3 +1,9 @@
+/*-----------------------------------------------------------------------------
+* @Description:  模板-产品列表页
+* @author:      张静
+* @date        2017.11.07
+* ---------------------------------------------------------------------------*/
+
 //获取产品个数
 var template_dataNum=$("div.prolist-box").length;
 $(".js_dataNum").text(template_dataNum);
@@ -114,10 +120,9 @@ function getPageIncss(_currentPage, pageInclude) {
     var Inc = Math.ceil(_currentPage / pageInclude);
     return Inc;
 }
-
 function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude){
     //if(_nPageCount<=1){  //一页时不显示
-      //  return "";
+    //  return "";
     //}
     //_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD_COUNT,pageInclude
     //一共多少页数，当前页数，   首页，		扩展名，，一共多少数据,显示的分页按钮数量
@@ -130,8 +135,8 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
     //最后一页
     var lastPage = _sPageName + "_" + (_nPageCount - 1) + "." + _sPageExt;
     var pagehtml = '';
-
     var maxButtons = 4;  //按钮数量
+
     if (_nPageCount < 4) {
         maxButtons = _nPageCount;
     }
@@ -166,7 +171,6 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
     }
 
 
-
     var pageNum = 0;
     for (var pageN = (currInclude - 1) * pageInclude + 1; pageN <= prePage; pageN++) {
         pageNum = pageN;
@@ -179,6 +183,7 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
 
         }
     }
+
 
 
     if (curIndex != _nPageCount) {
@@ -199,6 +204,26 @@ function createPageHTMLS(_nPageCount, _nCurrIndex, _sPageName, _sPageExt,_RECORD
 
 
     return pagehtml;
+}
+
+
+function paginationInit(curPage, pageCount, pageSize, currentClass, showPageNo,_sPageName, _sPageExt) {
+    var type;
+    var pager = new pagination(currentClass);
+    pager.currPage = curPage;
+    pager.totalPage = pageCount;
+    pager.pageCount = pageSize;
+    pager.showPageCount = showPageNo;
+    pager.render();
+    //重写click方法  ajax取数据
+    pager.onclick = function (currPageT) {
+        /* pager.totalPage = pageCount;
+         pager.currPage = currPageT;
+         pager.pageCount = pageSize;
+         pager.showPageCount = showPageNo;
+         pager.render();*/
+        window.href.location=_sPageName+"_"+currPageT+_sPageExt;
+    };
 }
 
 //wcm分页==========end============
