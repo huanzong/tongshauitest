@@ -165,7 +165,7 @@ var pagination = function(id){
                     }
                 }*/
                 //偶数分页
-                if($this.totalPage%2 == 0){
+                if($this.showPageCount%2 == 0){
                     if(currpage+$this.showPageCount/2 < $this.totalPage ){
                         startPageNo = currpage - $this.showPageCount/2 +1;
                         endPageNo = currpage+$this.showPageCount/2 ;
