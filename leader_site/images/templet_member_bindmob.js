@@ -11,29 +11,29 @@ $(function(){
     }
 
     //页面加载时调个人信息
-    // $.ajax({
-    //     type: "get",
-    //     url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
-    //     data: {},
-    //     login:true,
-    //     success_cb: function(data){
-    //         if (jQuery.trim(data).length > 0) {
-    //             var templet_mobile=jQuery.trim(data.data.mobile);
-    //             if (templet_mobile != null && templet_mobile != "" && templet_mobile != "null") {
-    //                 self.location = '/security';
-    //             }
-    //
-    //             var templet_email=jQuery.trim(data.data.email);
-    //             var templet_split = templet_email.split("@");
-    //             var templet_hide = templet_split[0].length / 2;
-    //             var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
-    //
-    //             $("#js_unbindmob").attr('autotext',"邮箱（"+templet_emailnote+"）");
-    //             $("#js_unbindmob").append("<option value='1'>邮箱（"+templet_emailnote+"）</option>");
-    //             $("#js_unbindmob").oSelect().init();
-    //         }
-    //     }
-    // });
+    $.ajax({
+        type: "get",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
+        data: {},
+        login:true,
+        success_cb: function(data){
+            if (jQuery.trim(data).length > 0) {
+                var templet_mobile=jQuery.trim(data.data.mobile);
+                if (templet_mobile != null && templet_mobile != "" && templet_mobile != "null") {
+                    self.location = '/security';
+                }
+
+                var templet_email=jQuery.trim(data.data.email);
+                var templet_split = templet_email.split("@");
+                var templet_hide = templet_split[0].length / 2;
+                var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+
+                $("#js_unbindmob").attr('autotext',"邮箱（"+templet_emailnote+"）");
+                $("#js_unbindmob").append("<option value='1'>邮箱（"+templet_emailnote+"）</option>");
+                $("#js_unbindmob").oSelect().init();
+            }
+        }
+    });
 
     //第一步确定按钮变亮
     $('.js_emailCodeYz').blur(function(){
