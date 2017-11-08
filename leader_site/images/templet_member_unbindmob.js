@@ -28,7 +28,6 @@ $(function(){
                     }
                     var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
                     $("#js-logincallphone").html(templet_callphone);
-                    $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
                     $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
                     var templet_split = templet_email.split("@");
@@ -42,15 +41,6 @@ $(function(){
         }
     });
 
-    //静态页面测试添加，正常后隐藏
-    // $("#js_unbindmob").attr('autotext',"手机（"+15115151515+"）");
-    // $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
-    // $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
-    // $("#js_unbindmob").oSelect().init();
-
-
-
-
 //通过点击不同的下拉列表框 转换手机和邮箱
     $("#js_unbindmob").change(function() { SelectChange(); });
     function SelectChange(){
@@ -58,16 +48,30 @@ $(function(){
         if(val==1)
         {
             $('.js-send').html('短信验证');
-            $('.js_mobileCodeYz').attr('placeholder','短信验证码');
+            $('.js_phoneCodeYz').show();
+            $('.js_emailCodeYz').hide();
             $('.js-sendmobile').show();
             $('.js-sendmail').hide();
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+            if($.trim($('.js_phoneCodeYz').val()).length==6){
+                $('.js_subimGetUp').removeClass('l-btn-disable');
+            }else{
+                $('.js_subimGetUp').addClass('l-btn-disable');
+            }
         }
         if(val==2)
         {
             $('.js-send').html('邮箱验证');
-            $('.js_mobileCodeYz').attr('placeholder','邮箱验证码');
+            $('.js_emailCodeYz').show();
+            $('.js_phoneCodeYz').hide();
             $('.js-sendmobile').hide();
             $('.js-sendmail').show();
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+            if($.trim($('.js_emailCodeYz').val()).length==6){
+                $('.js_subimGetUp').removeClass('l-btn-disable');
+            }else{
+                $('.js_subimGetUp').addClass('l-btn-disable');
+            }
         }
     }
 //点击发送短信验证码
@@ -89,16 +93,16 @@ $(function(){
                     if (jQuery.trim(data).indexOf("200")>-1) {}
                     else if (jQuery.trim(data).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送短信的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                     else if (jQuery.trim(data).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                 }
             }
         })
-    })
+    });
 //点击发送邮箱验证码
     $(".js-sendmail").click(function(){
         if($('.js-sendmail').hasClass('l-btn-disable'))
@@ -117,28 +121,27 @@ $(function(){
                     if (jQuery.trim(data).indexOf("200")>-1) {}
                     else if (jQuery.trim(data).indexOf("user_is_illegal")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送邮件的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送邮件的手机号不是当前用户的').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                     else if (jQuery.trim(data).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
-                        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                 }
             }
 
         })
-    })
+    });
 
     //点击确定按钮
     $(".js_subimGetUp") .unbind().bind('click',function(){
 
         var templet_notclick = $(this).hasClass('l-btn-disable');
-        var templet_error = $('.js-error').hasClass('Validform_wrong');
 
-        if(!templet_notclick && !templet_error)
+        if(!templet_notclick)
         {
             var templet_param;
-            var templet_code=$('.js_mobileCodeYz').val(); //验证码
+            var templet_code=$.trim($('.js_mobileCodeYz').val()); //验证码
             var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
             if(templet_pretermit=='0' || templet_pretermit=='1'){
 
@@ -165,19 +168,19 @@ $(function(){
                         }
                         else if (jQuery.trim(data).indexOf("code_can_not_be_null")>-1){
 
-                            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空').addClass('Validform_wrong').removeClass('Validform_right');
+                            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>验证码不能为空').addClass('Validform_wrong').removeClass('Validform_right');
 
                         }
                         else if (jQuery.trim(data).indexOf("unbind_code_can_not_be_select")>-1 || jQuery.trim(data).indexOf("unbind_mcode_is_illegal")>-1 ){
 
-                            $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误').addClass('Validform_wrong').removeClass('Validform_right');
+                            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误').addClass('Validform_wrong').removeClass('Validform_right');
 
                         }
                     }
                 }
             })
         }
-    })
+    });
 
     //确定取消绑定
     $(".js-unbind") .unbind().bind('click',function(){
@@ -190,7 +193,7 @@ $(function(){
         if(templet_pretermit=='2' ){
             templet_param='email';
         }
-        var templet_code=$('.js_mobileCodeYz').val();
+        var templet_code=$.trim($('.js_mobileCodeYz').val());
 
         if(templet_code!=''){
             $.ajax({
@@ -270,23 +273,23 @@ $(function(){
 //解绑手机号码验证
 
 $('.js_mobileCodeYz').blur(function(){
-    if($(this).val().length==6){
+    if($.trim($(this).val()).length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
-        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+        $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
-        $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
-        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+        $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
+        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
     }
 })
 
 $('.js_mobileCodeYz').keyup(function(){
-    if($(this).val().length==6){
+    if($.trim($(this).val()).length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
-        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+        $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
-        $('.js-error').addClass('Validform_wrong').removeClass('Validform_right');
+        $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
     }
 })
 
@@ -294,20 +297,20 @@ $('.js_mobileCodeYz').keyup(function(){
 
 $("#js_unbindmail").oSelect().init();
 $('.js_emailCodeYz').blur(function(){
-    if($(this).val().length==6){
+    if($.trim($(this).val()).length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
-        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+        $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
-        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
+        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
     }
 })
 $('.js_emailCodeYz').keyup(function(){
-    if($(this).val().length==6){
+    if($.trim($(this).val()).length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
-        $('.js-error').addClass('Validform_right').removeClass('Validform_wrong');
+        $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
-        $('.js-error').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
+        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
     }
 })
