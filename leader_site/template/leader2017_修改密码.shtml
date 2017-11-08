@@ -68,7 +68,7 @@
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext js-send"></div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
                                     <input type="text" class="js_phoneCodeYz" name="" placeholder="" style="display: none"  ph="短信验证码" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6"/>
-                                    <input type="text" class="js_emailCodeYz" name="" placeholder="" style="display: none"  ph="请输入需要绑定的邮箱" value=""  maxlength="6"/>
+                                    <input type="text" class="js_emailCodeYz" name="" placeholder="" style="display: none"  ph="邮件验证码" value=""  maxlength="6"/>
                                     <a href="javascript:;" class="l-btn-sm l-btn-red js-sendmobile" style="display: none">发送验证短信</a>
                                     <a href="javascript:;" class="l-btn-sm l-btn-red js-sendmail " style="display: none">发送验证邮件</a>
                                     <p class="Validform_checktip Validform_wrong js-mobileCodeerror "></p>
@@ -89,9 +89,8 @@
                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">新密码</div>
                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailform">
 
-                                        <input type="password" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-resetPassWord" name="" value="" />
-                                        <p class="Validform_checktip Validform_wrong js-resetPassWorderror"></p>
-
+                                    <input type="password" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-resetPassWord" name="" value="" />
+                                    <p class="Validform_checktip Validform_wrong js-resetPassWorderror"></p>
                                 </div>
                             </div>
 
