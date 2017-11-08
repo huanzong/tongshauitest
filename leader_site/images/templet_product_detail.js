@@ -153,7 +153,7 @@ function getCommentData(){
                         }
                         temple_ConHtml+='<span class="name">'+loginAccountName+'</span>';
 
-                        commentTime.split(" ")[0].replace(/-/g, "/");//时间处理
+                        commentTime=commentTime.replace(/-/g, "/");//时间处理
                         temple_ConHtml+='<span class="time">'+commentTime+'</span>';
 
                         if(channelSource==1){//来源
