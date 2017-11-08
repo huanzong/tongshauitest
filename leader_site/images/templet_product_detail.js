@@ -33,12 +33,12 @@ function readJsonString(templet_price){
 }
 
 
-var channelname="<trs_channel id='parent' field='_recurl' URLISABS='true'/>";
+
 var morePro=$(".js_moreProA").find("a").length;
 if(morePro==0||morePro<3){
     $.ajax({
         type: "get",
-        url:channelname+"/morePro_101.json",
+        url:templet_channelName+"/morePro_101.json",
         dataType:"json",
         data: "",
         success_cb: function(data){
