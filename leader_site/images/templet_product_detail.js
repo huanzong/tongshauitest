@@ -110,9 +110,9 @@ function array(str,tab,name,className){
         $('.'+name+'').append(strHtml);
 
     }
-
+    getCommentData();
 }//获取口碑内容
-function getContentData(){
+function getCommentData(){
     $.ajax({
         url:siteConfig.domain+"/interaction-comment/comment/commentListShow/getContentData/",
         data:{businessId:templet_businessId,pageNo:1,pageSize:3},
