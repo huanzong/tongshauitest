@@ -3,6 +3,8 @@
 * @author:      张静
 * @date        2017.11.08
 * ---------------------------------------------------------------------------*/
+//获取价格
+$(".js_price").find("span").text(readJsonString(templet_price));//获取最低价格
 //获取更多价格
 if($('.js_moreProA').find("a").length>3){
     $('.js_morePro .detail-more-price').each(function(){
