@@ -557,7 +557,7 @@ function globalShade2(alerttext,type,time){
 
 //倒计时通用模块
 
-function btnTimeOut(obj,time,timetext){
+function btnTimeOut(obj,time,timetext,callback){
     var btnDisable,timeTotal;
     var objHtml = obj.html();
     var timeText = timetext;
@@ -575,6 +575,7 @@ function btnTimeOut(obj,time,timetext){
       if(timeTotal<=0){
           clearInterval(timeHtml);
           obj.removeClass(btnDisable).html(objHtml).removeAttr('data-type');
+          callback();
       }
     },1000);
 }
