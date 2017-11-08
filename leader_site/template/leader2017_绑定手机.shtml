@@ -27,7 +27,6 @@
 
                    <div class="member-security-width js-securityheight">
                        <div class="member-security-tit"><p>绑定手机</p></div>
-                       <!-- 内容区域 START-->
                        <div class="member-security-contbox js-contRightContBox">
                            <!-- 绑定手机 START-->
                            <div class="member-revisemob o_g">
@@ -63,7 +62,7 @@
                                <div class="o_g member-bingmob-list">
                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮箱验证</div>
                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
-                                       <input type="text" class="js_emailCodeYz" name="" ph="邮件验证码" />
+                                       <input type="text" class="js_emailCodeYz" name="" ph="邮件验证码" maxlength="6">
                                        <a href="javascript:;" class="l-btn-sm l-btn-red js-sendemailcode">发送验证邮件</a>
                                        <p class="Validform_checktip Validform_wrong js-emailCodeerror "></p>
                                    </div>
@@ -72,7 +71,7 @@
                                <div class="o_g member-bingmob-list">
                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
-                                       <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-disable js_subimGetUp">确定</a>
+                                       <a href="javascript:;" class="l-btn-normal l-btn-red  js_subimGetUp l-btn-disable">确定</a>
                                    </div>
                                </div>
 
@@ -83,7 +82,7 @@
                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">手机号码</div>
                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailform">
                                        <form class="ui_validForm js_ui_validForm">
-                                           <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                           <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" maxlength="11"/>
                                            <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                        </form>
                                    </div>
@@ -93,7 +92,7 @@
                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证码</div>
                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindmobyanzheng">
                                        <form class="ui_validForm js_ui_validForm">
-                                           <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                           <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码"  value=""  onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6"/>
                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
                                            <p class="Validform_checktip Validform_wrong js-mobileCodeerror"></p>
                                        </form>
@@ -103,7 +102,7 @@
                                <div class="o_g member-bingmob-list">
                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
-                                       <a href="javascript:;" class="l-btn-normal l-btn-red js-submintData">确定</a>
+                                       <a href="javascript:;" class="l-btn-normal l-btn-red js-submintData l-btn-disable">确定</a>
                                    </div>
                                </div>
 
@@ -140,7 +139,6 @@
 <!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
 <!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="../site5/member_nav.js"></script>
-<script type="text/javascript" src="../site5/validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="../site5/templet_member_bindmob.js"></script>
 <script type="text/javascript" src="../site5/templet_member_nav.js"></script>
 </body>
