@@ -139,7 +139,7 @@ function getCommentData(){
                         if(isHavePic==1){//图片
                             temple_ConHtml+='<div class="detail-praise-img">';
                             for(var j=0; j<paths.length&&j<5; j++){
-                                temple_ConHtml+='<img src="'+paths[j]+'"/>';
+                                temple_ConHtml+='<img src="/tongshuaifile/'+paths[j]+'"/>';
                             }
                             temple_ConHtml+='</div>';
                         }
