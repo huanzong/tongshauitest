@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -10,7 +9,6 @@
     <!--#include virtual="public/head.shtml"-->
     <link rel="stylesheet" type="text/css" href="images/l_dateTime.css">
     <link rel="stylesheet" type="text/css" href="images/ui.css">
-
 </head>
 <body>
     <div class="ui_nav">

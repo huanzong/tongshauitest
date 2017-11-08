@@ -5,6 +5,7 @@
 */*.site
 */build/
 */preview/
+*/images/maps/*.map
 */*.zip
 *.zip
 *.sh

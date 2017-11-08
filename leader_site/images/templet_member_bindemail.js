@@ -58,7 +58,7 @@ $(function(){
         if($('.js-sendphonecode').hasClass('l-btn-disable')){
             return;
         }
-        btnTimeOut($('.js-sendphonecode'),'60',' 重新获取验证码');
+        btnTimeOut($('.js-sendphonecode'),'60','重新获取验证码');
         $.ajax({
             dataType: "text",
             url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
@@ -232,15 +232,14 @@ $(function(){
         }
     });
 
+    //第二步点击确定
     $('.js-submintData').unbind().bind('click',function(){
         if($('.js-submintData').hasClass('l-btn-disable')) {
             return;
         }
-        var yanzhengtrue = $('.js-emailCode').siblings('.Validform_checktip').hasClass('Validform_right');
         var templet_validateemail=$('.js-newEmail').siblings('.Validform_checktip').hasClass('Validform_right');
 
-        //点击确定 个人中心绑定邮箱接口
-        if(yanzhengtrue && templet_validateemail){
+        if( templet_validateemail){
             var templet_newEmail=$.trim($('.js-newEmail').val());
             var templet_emailCode=$.trim($('.js-emailCode').val());
 
