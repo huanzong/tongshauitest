@@ -10,7 +10,7 @@ $(function() {
         delete:function(data){
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/delete/",
-                data: data, 
+                data: data,
                 // applicationType:true,
                 success_cb: function(data){
                     console.log(data);
@@ -26,7 +26,7 @@ $(function() {
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/list/",
                 applicationType:true,
-                data: JSON.stringify(trolleyData), 
+                data: JSON.stringify(trolleyData),
                 success_cb: function(data){
                      var data = {
                           "data": [{
@@ -89,7 +89,7 @@ $(function() {
                 }
             })
         }
-            
+
     }
 
     $(window).resize(function() {
@@ -105,7 +105,7 @@ $(function() {
 
 
 
-    /** 
+    /**
      *   服务对接
      */
 
@@ -120,7 +120,7 @@ $(function() {
         $(".js_checkbox").each(function(i,n){
             $(this).siblings('.c_ipt_cr ').size()<1&&$(this).jq_qvote();
         });
-        
+
         /**
          * 商品数量加减
          */
@@ -143,7 +143,7 @@ $(function() {
                     }
                     $.ajax({
                         url: siteConfig.apiUrl+"/order/cartGoods/delete/",
-                        data: trolleyData, 
+                        data: trolleyData,
                         success_cb: function(data){
                             console.log(data);
                         },
@@ -168,7 +168,7 @@ $(function() {
                 $(this).attr('data-oppo','edit').html('编辑');
                 $(this).siblings('.js_deleteXs').addClass('opacity-0');
             }
-            
+
         });
 
         //删除购物车商品
@@ -197,7 +197,7 @@ $(function() {
     };
     $.ajax({
         url: siteConfig.apiUrl+"/order/cartGoods/list/",
-        data: JSON.stringify(trolleyData), 
+        data: JSON.stringify(trolleyData),
         // contentType:"application/json; charset=utf-8",
         applicationType:true,
         success_cb: function(data){
