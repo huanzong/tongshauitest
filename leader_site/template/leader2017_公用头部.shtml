@@ -1,0 +1,184 @@
+<div class="o_g l-nav">
+	<!-- 一级导航 -->
+	<!-- logo -->
+	<div class="o_u o_df_2-12 o_xs_3-12 nav-logo">
+		<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/logo.png" ignoreapd="true" />
+	</div>
+	<!-- logo END -->
+	<!-- 导航栏目 轻产品/悠生活、服务、会员-->
+	<ul class="o_u o_df_7-12 o_df-center o_md-hide o_sm-hide o_xs-hide js_navSearchLgHide">
+		<li class="nav-column js_column" column='0'>
+			<div class="nav-column-box1"></div>
+			<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/nav-pro.gif" class="o_lg-hide" ignoreapd="true" />
+		</li>
+		<li class="nav-column js_column" column='1'>
+
+			<a href="<trs_viewdatas id="悠生活"><trs_viewdata field='link'/></trs_viewdatas>">
+			<div class="nav-column-box2"></div>
+			<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/nav-life.gif" class="o_lg-hide" ignoreapd="true" />
+			</a>
+		</li>
+		<li class="nav-column js_column" column='2'>
+			<a href="<trs_viewdatas id="会员"><trs_viewdata field='link'/></trs_viewdatas>">
+			<div class="nav-column-box3"></div>
+			</a>
+		</li>
+		<li class="nav-column js_column" column='3'>
+			<a href="<trs_viewdatas id="服务"><trs_viewdata field='link'/></trs_viewdatas>">
+			<div class="nav-column-box4"></div>
+			</a>
+		</li>
+	</ul>
+	<!-- 导航栏目 END-->
+	<!-- 用户信息栏 sf/xl分辨率 -->
+	<div class="o_u o_df_2-12 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+		<div class="nav-search">
+			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory" />
+			<i class="iconfont icon-search"></i>
+			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
+				<div class="search-quick">快速链接</div>
+				<ul class="search-list">
+					<li>我是搜索结果</li>
+					<li>我是搜索结果</li>
+					<li>我是搜索结果</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav-user" id="header_logoutDiv">
+			<a class="login" id="header_login">登录</a>
+			<span class="line"></span>
+			<a class="login" id="header_reg">注册</a>
+			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车</a>
+		</div>
+		<div class="nav-user o_df-hide" id="header_loginDiv">
+			<div class="login nav-zindex1">
+				<span></span>
+				<i class="iconfont icon-arrow-sanjiao-down-s nav-userdown"></i>
+				<i class="iconfont icon-arrow-sanjiao-up-s nav-userup"></i>
+				<ul class="nav-user-column">
+					<li><a href="javascript:;">个人中心</a></li>
+					<li><a href="javascript:;">消息</a></li>
+					<li><a href="javascript:;">我的订单</a></li>
+					<li><a href="javascript:;">我的优惠券</a></li>
+					<li><a href="javascript:;">收藏与订阅</a></li>
+					<li><a href="javascript:;">我的产品</a></li>
+					<li class="nav-quip">
+						<a href="javascript:;" id="header_logout">退出登录</a>
+					</li>
+				</ul>
+			</div>
+			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车<span>34</span></a>
+		</div>
+	</div>
+	<!-- 用户信息栏 sf/xl分辨率 END -->
+	<!-- 用户信息栏 lg分辨率 -->
+	<div class="o_u o_df_5-12 o_xs_1-12 o_df-hide o_md-show o_sm-show o_xs-show js_navSearchLgHide js_ignore"></div>
+	<div class="o_u o_df_3-12 o_md_5-12 o_sm_5-12 o_xs_8-12 o_df-hide o_lg-show o_md-show o_sm-show o_xs-show js_navSearchLgHide">
+		<ul class="nav-search-lg">
+			<li>
+			<!-- 未登录展示 -->
+				<a href="javascript:;" id="header_logoutA">
+					<i class="iconfont icon-member"></i>
+					<span></span>
+				</a>
+				<!-- 未登录展示 END -->
+
+				<!-- 已登录展示 -->
+				<div class="user-headimg o_df-hide" id="header_loginDiv2">
+					<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/user_img.jpg" class="user-img" ignoreapd="true" />
+					<span></span>
+					<ul class="nav-user-column">
+						<li><a href="javascript:;">个人中心</a></li>
+						<li><a href="javascript:;">消息</a></li>
+						<li><a href="javascript:;">我的订单</a></li>
+						<li><a href="javascript:;">我的优惠券</a></li>
+						<li><a href="javascript:;">收藏与订阅</a></li>
+						<li><a href="javascript:;">我的产品</a></li>
+						<li class="nav-quip">
+							<a href="javascript:;" id="header_logout2">退出登录</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 已登录展示 END -->
+			</li>
+			<li>
+				<a href="javascript:;">
+					<i class="iconfont icon-shoppingcart"></i>
+					<sub>84</sub>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="js_search_lg">
+					<i class="iconfont icon-search"></i>
+				</a>
+			</li>
+			<li class="o_df-hide o_md-show o_sm-show o_xs-show">
+				<a href="javascript:;">
+					<i class="iconfont icon-menu js_menuShow"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 用户信息栏 lg分辨率 END -->
+	<!-- 导航 md -->
+	<div class="o_u o_df_2-2 nav-md js_navMdShow">
+		<div class="o_u o_df_1-12"></div>
+		<ul class="o_u o_df_10-12 nav-mdbox">
+			<!-- <li>轻产品<i class="iconfont icon-plus"></i></li> -->
+			<li>轻产品<i class="iconfont icon-arrow-line-right"></i></li>
+			<li>优生活<i class="iconfont icon-arrow-line-right"></i></li>
+			<li>会员<i class="iconfont icon-arrow-line-right"></i></li>
+			<li>服务<i class="iconfont icon-arrow-line-right"></i></li>
+		</ul>
+	</div>
+	<!-- 导航 md End -->
+	<!-- 搜索框 lg以下分辨率 -->
+	<div class="o_u o_df_10-12 o_xs_2-2 nav-searchbox-lg js_navSearchLg">
+		<div class="o_u o_df_2-12 o_df-hide o_xs-show"></div>
+		<input type="text" name="" class="o_u o_df_8-10 o_xs_7-12 js_searchHistory" phtype="1" ph="搜索产品、服务、帮助..." />
+		<div class="o_u o_df_2-10 o_df-center nax-xs-close">
+			<i class="iconfont icon-close js_navSearchClose"></i>
+		</div>
+	</div>
+	<!-- 搜索框 lg以下分辨率 END -->
+	<!-- 一级导航 End -->
+
+	<!-- 搜索结果：lg分辨率 -->
+	<ul class="o_u o_df_2-2 nav-searchresult-lg js_navSearchLg js_searchBox js_searchBox_lg">
+		<div class="o_u o_df_2-12"></div>
+		<div class="o_u o_df_8-12">
+			<div class="searchresult-quick js_searchBoxQuick_lg">
+				<span>快捷链接：</span>
+				<a href="javascript:;">在线保修</a>
+				<a href="javascript:;">产品注册</a>
+				<a href="javascript:;">帮助中心</a>
+				<a href="javascript:;">联系我们</a>
+			</div>
+			<ul class="searchresult-result js_searchBox js_searchBox_lg">
+				<li>搜索结果</li>
+				<li>搜索结果</li>
+				<li>搜索结果</li>
+				<li>搜索结果</li>
+				<li>搜索结果</li>
+			</ul>
+		</div>
+		<div class="o_u o_df_2-12"></div>
+	</ul>
+	<!-- 搜索结果：大屏 END -->
+
+	<!-- 二级导航 冰箱/洗衣机/电视 -->
+	<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
+		<trs_viewdatas id="轻产品">
+			<li class="second-column o_df-center">
+				<a href="<trs_viewdata field="link"/>">
+				<div class="second-column-i">
+					<img src="<trs_viewdata field="pic" UrlIsAbs="true"/>" />
+				</div>
+				<div class="second-column-name"><trs_viewdata field="title"/></div>
+				</a>
+			</li>
+		</trs_viewdatas>
+	</ul>
+
+	<!-- 二级导航 End -->
+</div>
