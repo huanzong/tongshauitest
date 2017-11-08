@@ -111,4 +111,70 @@ function array(str,tab,name,className){
 
     }
 
+}//获取口碑内容
+function getContentData(){
+    $.ajax({
+        url:siteConfig.domain+"/interaction-comment/comment/commentListShow/getContentData/",
+        data:{businessId:templet_businessId,pageNo:1,pageSize:3},
+        type:"GET",
+        dataType:"json",
+        success_cb:	function (data){
+            if(data.isSuccess==true){
+                if(data.length>0){
+                    $('.js_commentContent .praise-box').html("");
+                    var temple_ConHtml='';
+                    for (var i = 0; i<3; i++) {
+                        var commentTime=data.data.entities[i].commentTime;//时间
+                        var content=data.data.entities[i].content;//内容
+                        var isHavePic=data.data.entities[i].isHavePic;//判断有误图片 1有 0无
+                        var paths=data.data.entities[i].paths;//图片集合
+                        var loginAccountName=data.data.entities[i].loginAccountName;//用户名
+                        var channelSource=data.data.entities[i].channelSource;//1.官方 2.天猫 3.京东 4.苏宁 5.国美
+
+                        temple_ConHtml+='<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">';
+                        temple_ConHtml+='<div class="praise-con">';
+                        temple_ConHtml+='<div class="detail-praise-box">'+content+'';
+
+                        if(isHavePic==1){//图片
+                            temple_ConHtml+='<div class="detail-praise-img">';
+                            for(var j=0; j<paths.length&&j<5; j++){
+                                temple_ConHtml+='<img src="'+paths[j]+'"/>';
+                            }
+                            temple_ConHtml+='</div>';
+                        }
+
+                        temple_ConHtml+='<div class="detail-praise-font">';
+
+                        var start = "***";//用户名隐藏
+                        var nameLength = loginAccountName.length;
+                        if (nameLength>=2) {
+                            loginAccountName = loginAccountName.substring(0,1) + start + loginAccountName.substring(loginAccountName.length-1,s.length)
+                        }
+                        temple_ConHtml+='<span class="name">'+loginAccountName+'</span>';
+
+                        commentTime.split(" ")[0].replace(/-/g, "/");//时间处理
+                        temple_ConHtml+='<span class="time">'+commentTime+'</span>';
+
+                        if(channelSource==1){//来源
+                            channelSource="官方";
+                        }else if(channelSource==2){
+                            channelSource="天猫";
+                        }else if(channelSource==3){
+                            channelSource="京东";
+                        }else if(channelSource==4){
+                            channelSource="苏宁";
+                        }else if(channelSource==5){
+                            channelSource="国美";
+                        }
+                        temple_ConHtml+='<span class="from">来自&nbsp;'+channelSource+'</span>';
+                        temple_ConHtml+='</div></div></div>';
+                    }
+                    $('.js_commentContent .praise-box').html(temple_ConHtml);
+
+                }else{
+                    $('.js_commentTitle').hide();
+                    $('.js_commentContent').hide();
+                }
+            }
+        });
 }
