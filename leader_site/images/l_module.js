@@ -203,14 +203,16 @@ $(function() {
         numberRule:function(el){
 
             var $this = $(this);
-            console.log($this);
             //默认元素
             var elActive = {
                 plus:'.icon-plus',
                 minus:'.icon-minus',
                 input:'input',
                 preNum:1,
-                callback:function(num){}
+                beforePlusRule:function(num,$this){},//若终止执行操作，需return true
+                beforeMinusRule:function(num,$this){},//若终止执行操作，需return true
+                plusCallback:function(num,$this){},
+                minusCallback:function(num,$this){},
             };
 
             //实际元素-用户定义
@@ -229,16 +231,22 @@ $(function() {
                 //加法
                 ele.plusEle.on('click',function(){
                     var inputVal = parseInt(ele.inputEle.val());
-                    inputVal += elActive.preNum;
-                    ele.inputEle.val(inputVal);
-                    elActive.callback(inputVal);
+                    if(!elActive.beforePlusRule(inputVal,n)){//若终止执行操作，需return true
+                        inputVal += elActive.preNum;
+                        ele.inputEle.val(inputVal);
+                        elActive.plusCallback(inputVal,n);  
+                    }
+                    
                 });
 
                 //减法
                 ele.minusEle.on('click',function(){
                     var inputVal = parseInt(ele.inputEle.val());
-                    inputVal -= elActive.preNum;
-                    ele.inputEle.val(inputVal);
+                    if(!elActive.beforeMinusRule(inputVal,n)){//若终止执行操作，需return true
+                        inputVal -= elActive.preNum;
+                        ele.inputEle.val(inputVal);
+                        elActive.minusCallback(inputVal,n);
+                    }
                 });
             });
 

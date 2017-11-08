@@ -184,6 +184,11 @@ jQuery.ajaxSetup({
         if (this.login && !istrsidssdssotoken()) {
             request.abort();
         }
+        //contentType: "application/json; charset=utf-8",
+        if (this.applicationType){
+            console.log('888');
+            this.contentType = "application/json; charset=utf-8";
+        }
     },
     success: function(data) {
         if (data.isSuccess != undefined && istrsidssdssotoken()) {
@@ -197,6 +202,10 @@ jQuery.ajaxSetup({
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
+        
+        if (this.error_cb) {
+            this.error_cb(jqXHR, textStatus, errorThrown);
+        }
     }
 });
 
