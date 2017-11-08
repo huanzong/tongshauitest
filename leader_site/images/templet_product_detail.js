@@ -134,7 +134,7 @@ function getCommentData(){
 
                         temple_ConHtml+='<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">';
                         temple_ConHtml+='<div class="praise-con">';
-                        temple_ConHtml+='<div class="detail-praise-box">'+content+'';
+                        temple_ConHtml+='<div class="detail-praise-box">'+content+'</div>';
 
                         if(isHavePic==1){//图片
                             temple_ConHtml+='<div class="detail-praise-img">';
