@@ -575,7 +575,10 @@ function btnTimeOut(obj,time,timetext,callback){
       if(timeTotal<=0){
           clearInterval(timeHtml);
           obj.removeClass(btnDisable).html(objHtml).removeAttr('data-type');
-          callback();
+          if(callback){
+              callback();
+          }
+
       }
     },1000);
 }
