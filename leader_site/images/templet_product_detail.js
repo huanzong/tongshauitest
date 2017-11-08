@@ -121,7 +121,7 @@ function getCommentData(){
         dataType:"json",
         success_cb:	function (data){
             if(data.isSuccess==true){
-                if(data.length>0){
+                if(data.data.entities.length>0){
                     $('.js_commentContent .praise-box').html("");
                     var temple_ConHtml='';
                     for (var i = 0; i<3; i++) {
