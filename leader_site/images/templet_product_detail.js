@@ -149,7 +149,7 @@ function getCommentData(){
                         var start = "***";//用户名隐藏
                         var nameLength = loginAccountName.length;
                         if (nameLength>=2) {
-                            loginAccountName = loginAccountName.substring(0,1) + start + loginAccountName.substring(loginAccountName.length-1,s.length)
+                            loginAccountName = loginAccountName.substring(0,1) + start + loginAccountName.substring(loginAccountName.length-1,loginAccountName.length)
                         }
                         temple_ConHtml+='<span class="name">'+loginAccountName+'</span>';
 
