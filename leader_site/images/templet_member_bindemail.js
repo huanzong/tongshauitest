@@ -133,6 +133,7 @@ $(function(){
 
         if(yanzhengtrue&&!timeOut){
             $('.js-getinfo').attr('data-type','1');
+
             $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
                 if($('.js-getinfo').hasClass('l-btn-disable'))
                 {
@@ -142,7 +143,7 @@ $(function(){
                 if(yanzhengtrue){
 
                     var templet_newEmail=$('.js-newEmail').val();
-                    btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码');
+                    btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码', $('.js-newEmail').blur());
                     //  个人中心绑定邮箱发送验证码接口
                     $.ajax({
                         dataType: "text",
