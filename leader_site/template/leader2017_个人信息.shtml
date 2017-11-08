@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<div id="js-leftredlight" style="display: none;">个人信息</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g js-contBox">
@@ -251,6 +252,7 @@
 <script type="text/javascript" src="../site5/templet_member_personal.js"></script>
 
 <script type="text/javascript" src="../site5/l_dateTime.js"></script>
+<script type="text/javascript" src="../site5/templet_member_nav.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-地址管理</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../site5/member.css">
+    <link rel="stylesheet" type="text/css" href="../site5/member_nav.css">
+
+</head>
+
+<body>
+<div id="js-leftredlight" style="display: none;">地址管理</div>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g  ">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+                <div class="o_u o_df_12-12 member-security js-membercontbox">
+                    <div class="member-security-width js-securityheight">
+                        <div class="member-security-tit">
+                            <p>地址管理</p>
+                            <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn" style="display: none;">新增地址</a>
+                        </div>
+                        <!-- 内容区域 START-->
+                        <div class="member-security-contbox js-contRightContBox">
+                            <!-- 地址管理 START-->
+                            <form action="/user/front/userRegion/save">
+                                <div class="member-address js_newAddress js_form_addAddrManagement" style="display: none;">
+                                    <div class="member-address-title">添加新地址</div>
+                                    <div class="o_g member-address-list">
+                                        <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                            <div class="l-input member-address-allinput js-addressUserName">
+                                                <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入联系人的姓名" value="" datatype="s2-8" errormsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" id="realName" />
+                                                <p class="Validform_checktip Validform_wrong js-addressUserError"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_g member-address-list">
+                                        <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">手机<span>*</span></div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
+                                            <div class="l-input member-address-allinput js-addressMobile">
+                                                <form class="ui_validForm js_ui_validForm">
+                                                    <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请输入需要绑定的手机号" id="mobile" />
+                                                    <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_g member-address-list">
+                                        <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">电话</div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
+                                                <div class="l-input member-address-inputbox">
+                                                    <input type="text" name="" ph="区号" value="" id="phonequhao" />
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
+                                                <div class="l-input member-address-inputbox">
+                                                    <input type="text" name="" ph="电话号" value="" id="phone" />
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                <div class="l-input member-address-inputbox">
+                                                    <input type="text" name="" ph="分机号" value="" id="phonefenjihao" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_g member-address-list">
+                                        <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">详细地址<span>*</span></div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
+                                                <div class="selectbox">
+                                                    <div class="member-address-inputbox">
+                                                        <select name="" id="js_save"  autotext="省">
+                                                            <option value="0">--省--</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
+                                                <div class="selectbox">
+                                                    <div class="member-address-inputbox">
+                                                        <select name="" id="js_city"  autotext="市">
+                                                            <option value="0">--市--</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
+                                                <div class="selectbox">
+                                                    <div class="member-address-inputbox">
+                                                        <select name="" id="js_area"  autotext="区">
+                                                            <option value="0">--区--</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
+                                                <div class="selectbox">
+                                                    <div class="member-address-inputbox">
+                                                        <select name="" id="js_road"  autotext="街道">
+                                                            <option value="0">--街道--</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="Validform_checktip Validform_wrong Validform_right js-newMobileerror"><i class="iconfont icon-information-solid"></i>请在普通输入框填写信息</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="o_g member-address-list">
+                                        <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
+                                            <div class="l-textarea member-address-textareabox">
+                                                <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
+                                                <p class="Validform_checktip Validform_wrong member-address-error js-addressMobError"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 新建地址时的样式 -->
+                                    <!--<div class="o_g member-address-list">
+                                        <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                            <div class="o_u o_df_2-3 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-newaddenterbtn">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-red">保存</a>
+                                            </div>
+                                        </div>
+                                    </div>-->
+
+                                    <!-- 增加地址或者更改地址时的样式 -->
+                                    <div class="o_g member-address-list">
+                                        <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
+                                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-address-editaddenterbtn">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-red  l-btn-red js_btnSubmit" type='1'>保存</a>
+                                            </div>
+                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_1-3 member-address-addcancelbtn">
+                                                <a href="javascript:;" class="l-btn-normal l-btn-line2 js_addressCancel">取消</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <div class="memeber-address-list-box js_lineInfo">
+
+                            </div>
+                            <!-- 地址管理 End-->
+                        </div>
+                        <!-- 内容区域 End-->
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
+
+
+    </div>
+</div>
+<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--弹出层1-->
+<div class="o_g land-shade js_landShade">
+    <div class="land-box js_landContBox">
+        <div class="land-cont-title alert-cont-title o_u">
+            <a href="" class="o_u iconfont icon-close js_landClose"></a>
+        </div>
+        <div class="js_landInputBox">
+            <div class="land-cont-normal-input o_g">
+                <div class="o_g member-bingmob-list">
+                    <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                        <p class="js-landText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="member-alert-btn o_g">
+            <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
+            <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
+        </div>
+    </div>
+</div>
+<!--end弹出层1-->
+<!--弹出层2-->
+<div class="pop-up2 js_popUpBox2">
+    <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+    <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+    <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+    <p class="o_u  js_popUpText"></p>
+</div>
+
+<!--end弹出层2-->
+
+<!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
+<script type="text/javascript" src="../site5/validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../site5/member_nav.js"></script>
+<script type="text/javascript" src="../site5/member_address.js"></script>
+<script type="text/javascript" src="../site5/templet_user_addressmanage.js"></script>
+<script type="text/javascript" src="../site5/templet_member_nav.js"></script>
+</body>
+</html>
