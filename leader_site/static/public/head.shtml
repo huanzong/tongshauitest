@@ -9,14 +9,15 @@
     	/**
     	 * 生产环境地址
     	 */
-        // domain:"http://user.tongshuai.com",
+        // domain:"",
         // domain: "",
         
         /**
          * 测试环境地址
          */
          userUrl: "http://tuser.tongshuai.com",//用于获取用户信息
-         domain: "http://test.tongshuai.com"//本地
+         domain: "http://test.tongshuai.com",//本地
+         apiUrl: "http://test.tongshuai.com/buy"//本地
 
     };
 </script>

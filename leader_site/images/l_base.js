@@ -1,6 +1,6 @@
 $(function () {
 
-    
+
 
     /**
      * 首页动画：线变化
@@ -40,9 +40,9 @@ $(function () {
             $ele.find('.index_animate').css('z-index', '-11');
             // $ele.siblings(":not(.js_ignorAnimate)").removeClass('l-opacity0');
             $ele.siblings(":not(.js_ignorAnimate)").animate({
-                'filter':'alpha(opacity=1)',  
-                '-moz-opacity':'1',   
-                '-khtml-opacity':'1',   
+                'filter':'alpha(opacity=1)',
+                '-moz-opacity':'1',
+                '-khtml-opacity':'1',
                 'opacity': '1'
             }, t);
             // $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
@@ -184,6 +184,11 @@ jQuery.ajaxSetup({
         if (this.login && !istrsidssdssotoken()) {
             request.abort();
         }
+        //contentType: "application/json; charset=utf-8",
+        if (this.applicationType){
+            console.log('888');
+            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+        }
     },
     success: function(data) {
         if (data.isSuccess != undefined && istrsidssdssotoken()) {
@@ -197,6 +202,10 @@ jQuery.ajaxSetup({
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
+
+        if (this.error_cb) {
+            this.error_cb(jqXHR, textStatus, errorThrown);
+        }
     }
 });
 
