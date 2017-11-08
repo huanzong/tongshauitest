@@ -30,7 +30,6 @@ $(function(){
                     var templet_split = templet_email.split("@");
                     var templet_hide = templet_split[0].length / 2;
                     var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
-                    $("#js_resetpassword").attr('autotext',"邮箱（"+templet_emailnote+"）");
                     $("#js_resetpassword").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
 
                     $('.js-send').html('邮箱验证');
@@ -43,7 +42,6 @@ $(function(){
                 if(templet_call!=null && templet_call!="" && templet_call!="null"){
                     templet_isphone=true;
                     var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
-                    $("#js_resetpassword").attr('autotext',"手机（"+templet_callphone+"）");
                     $("#js_resetpassword").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
                     $('.js-send').html('短信验证');
