@@ -110,8 +110,9 @@ function array(str,tab,name,className){
         $('.'+name+'').append(strHtml);
 
     }
-    getCommentData();
-}//获取口碑内容
+}
+//获取口碑内容
+getCommentData();
 function getCommentData(){
     $.ajax({
         url:siteConfig.domain+"/interaction-comment/comment/commentListShow/getContentData/",
