@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+        <link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">
+        <link rel="stylesheet" type="text/css" href="../site5/product_detail.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <div class="o_g js_animateLine">
+                <div class="index_animate">
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox"></div>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+            <!-- 导航 End-->
+            <!-- 首屏展示 -->
+            <div class="o_g">
+                <div class="detail-first">
+                    <!-- <img class="o_picture" src="" df="images/ignore_prodetail1.jpg" xs="images/ignore_prodetail2.jpg" sm="images/ignore_prodetail2.jpg" md="images/ignore_prodetail2.jpg" alt="" /> -->
+                    <div class="detail-banner">
+                        <!-- 中间 -->
+                        <div class="banner-pro">
+                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' />" class="banner-pro-img" />
+                            </TRS_XAPPENDIXS>
+                            <div class="banner-pro-oppo o_df-hide o_xs-show">
+                                <!-- <div class="activity-icon active">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-star-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">收藏</span>
+                                </div>
+                                <div class="activity-icon">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-price-tag-solid1"></i>
+                                    </div>
+                                    <span class="icon-font-info">订阅</span>
+                                </div> -->
+                                <div class="activity-icon">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-share-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">分享</span>
+                                    <!-- JiaThis Button BEGIN -->
+                                    <div class="l-float activity-float">
+                                        <div class="float-box float-blog jiathis_style_32x32">
+                                            <a class="jiathis_button_tsina"></a>
+                                        </div>
+                                        <div class="float-box float-wechat jiathis_style_32x32">
+                                            <a class="jiathis_button_weixin"></a>
+                                        </div>
+                                        <div class="float-box float-qq jiathis_style_32x32">
+                                            <a class="jiathis_button_qzone"></a>
+                                        </div>
+                                    </div>
+                                    <!-- JiaThis Button END -->
+                                </div>
+                            </div>
+                            <div class="banner-pro-tit"><trs_viewdata field="pname"/></div>
+                            <div class="banner-pro-sub"><trs_viewdata field="modelno"/></div>
+                            <div class="banner-pro-info"><trs_viewdata field="cpms"/></div>
+                        </div>
+                        <!-- 右边 -->
+                        <div class="banner-particulars">
+                            <div class="particulars-browse o_md-hide o_sm-hide o_xs-hide js_specificsShow">
+                                <span>浏览产品细节图</span>
+                                <div class="particulars-browse-icon">
+                                    <i class="iconfont icon-photo-solid"></i>
+                                </div>
+                            </div>
+                            <div class="particulars-detail">
+                                <!-- <div class="old-price">￥98034</div> -->
+                                <div class="corrent-price js_price"><sub>￥</sub><span>98034</span></div>
+                                <div class="particulars-capacity">
+                                    <span class="capacity-tit">容量：</span>
+                                    <span class="capacity-box active">798L</span>
+                                    <span class="capacity-box">798L</span>
+                                </div>
+                                <div class="particulars-delivery">
+                                    <div class="delivery-address">
+                                        <span class="address-tit">配送至:</span>
+                                        <span>浙江 杭州市 西湖区</span>
+                                    </div>
+                                    <div class="delivery-time">
+                                        <span>有货</span>
+                                        <span>，预计</span>
+                                        <span>02月89日（周五）22点送达</span>
+                                    </div>
+                                </div>
+                                <div class="particulars-btn">
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red">加入购物车</a>
+                                </div>
+                                <div class="particulars-buy-tit">品牌旗舰店购买:</div>
+                                <div class="particulars-buy-con">
+                                    <div class="particulars-buybox">
+                                        <div class="buy-img tianmao"></div>
+                                        <div class="buy-tit">天猫旗舰店</div>
+                                    </div>
+                                    <div class="particulars-buybox">
+                                        <div class="buy-img jingdong"></div>
+                                        <div class="buy-tit">京东旗舰店</div>
+                                    </div>
+                                    <div class="particulars-buybox">
+                                        <div class="buy-img suning"></div>
+                                        <div class="buy-tit">苏宁旗舰店</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 左边 -->
+                        <div class="banner-activity">
+                            <div class="activity-icon-box o_md-hide o_sm-hide o_xs-hide">
+                                <!-- <div class="activity-icon active">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-star-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">收藏</span>
+                                </div>
+                                <div class="activity-icon">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-price-tag-solid1"></i>
+                                    </div>
+                                    <span class="icon-font-info">订阅</span>
+                                </div> -->
+                                <div class="activity-icon">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-share-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">分享</span>
+                                    <!-- JiaThis Button BEGIN -->
+                                    <div class="l-float activity-float">
+                                        <div class="float-box float-blog jiathis_style_32x32">
+                                            <a class="jiathis_button_tsina"></a>
+                                        </div>
+                                        <div class="float-box float-wechat jiathis_style_32x32">
+                                            <a class="jiathis_button_weixin"></a>
+                                        </div>
+                                        <div class="float-box float-qq jiathis_style_32x32">
+                                            <a class="jiathis_button_qzone"></a>
+                                        </div>
+                                    </div>
+                                    <!-- JiaThis Button END -->
+                                </div>
+                                <div class="activity-icon activity-icon-compare">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-contrast-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">对比</span>
+                                </div>
+                            </div>
+                            <!-- <div class="activity-box">
+                                <div class="activity-con">
+                                    <div class="activity-con-tit">
+                                        清爽大作战，统帅小清新
+                                    </div>
+                                    <div class="activity-con-sub">
+                                        7月31日-8月20日
+                                    </div>
+                                    <div class="activity-con-info">
+                                        套购慢件最高3000，满减赠扫地机器人
+                                    </div>
+                                </div>
+                                <div class="activity-con-small">
+                                    【统帅天猫旗舰店】周年庆满减大奖有好礼
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- 左边 md sm xs-->
+                        <div class="banner-activity banner-activity-md o_df-hide o_md-show o_sm-show">
+                            <div class="activity-icon-box">
+                                <!-- <div class="activity-icon active">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-star-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">收藏</span>
+                                </div>
+                                <div class="activity-icon">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-price-tag-solid1"></i>
+                                    </div>
+                                    <span class="icon-font-info">订阅</span>
+                                </div> -->
+                                <div class="activity-icon">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-share-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">分享</span>
+                                    <!-- JiaThis Button BEGIN -->
+                                    <div class="l-float activity-float">
+                                        <div class="float-box float-blog jiathis_style_32x32">
+                                            <a class="jiathis_button_tsina"></a>
+                                        </div>
+                                        <div class="float-box float-wechat jiathis_style_32x32">
+                                            <a class="jiathis_button_weixin"></a>
+                                        </div>
+                                        <div class="float-box float-qq jiathis_style_32x32">
+                                            <a class="jiathis_button_qzone"></a>
+                                        </div>
+                                    </div>
+                                    <!-- JiaThis Button END -->
+                                </div>
+                                <div class="activity-icon activity-icon-compare">
+                                    <div class="icon-font">
+                                        <i class="iconfont icon-contrast-solid"></i>
+                                    </div>
+                                    <span class="icon-font-info">对比</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右边 md sm xs-->
+                        <div class="banner-particulars banner-particulars-md o_df-hide o_md-show o_sm-show o_xs-show">
+                            <div class="particulars-browse js_specificsShow">
+                                <span>浏览产品细节图</span>
+                                <div class="particulars-browse-icon">
+                                    <i class="iconfont icon-photo-solid"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 首屏细节大图 详情弹层 -->
+                        <div class="detail-specifics js_specificsBoxShow">
+                            <!-- 关闭按钮 -->
+                            <div class="specifics-close js_bannerSwiperClose">
+                                <i class="iconfont icon-fail-solid"></i>
+                            </div>
+                            <!-- 关闭按钮 END -->
+                            <!-- 轮播 -->
+                            <div class="swiper-container js_bannerSwiper">
+                                <div class="swiper-wrapper">
+                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                    <div class="swiper-slide swiper-slide-active">
+                                        <a href="javascript:;">
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>" />
+                                        </a>
+                                    </div>
+                                    </TRS_XAPPENDIXS>
+
+                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:;">
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>" />
+                                        </a>
+                                    </div>
+                                    </TRS_XAPPENDIXS>
+                                    
+                                </div>
+                            </div>
+                            <!-- 轮播 END -->
+                            <!-- 分页 -->
+                            <div class="swiper-pagination js_bannerSwiperPage">
+                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0'>
+                                <div class="pagination-box" data-index=<TRS_ROWNO/>>
+                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>" />
+                                </div>
+                                </TRS_XAPPENDIXS>
+                            </div>
+                            <!-- 分页 END -->
+                            <!-- 上一页/下一页 -->
+                            <div class="pagination-prev js_bannerSwiperPrev">
+                                <i class="iconfont icon-arrow-line-left"></i>
+                            </div>
+                            <div class="pagination-next js_bannerSwiperNext">
+                                <i class="iconfont icon-arrow-line-right"></i>
+                            </div>
+                            <!-- 上一页/下一页 END -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 首屏展示 END -->
+            <!-- 文字卖点 -->
+            <div class="detail-fontpoint-index">
+                <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-fontpoint-top">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_10-12">
+                        <div class="o_u o_df_2-2 detail-fontpoint">
+                            <div class="o_u o_df_1-12"></div>
+                            <div class="o_u o_df_10-12">
+                                <!--冰箱-->
+                                <TRS_CONDITION REFERENCE='冰箱产品' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="xmjg"/></div>
+                                        <div class="fontpoint-small">箱门结构</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zrj"/></div>
+                                        <div class="fontpoint-small">总容积</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zhilengfangshi"/></div>
+                                        <div class="fontpoint-small">制冷方式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nhdj"/></div>
+                                        <div class="fontpoint-small">能耗等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--空调-->
+                                <TRS_CONDITION REFERENCE='空调产品' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ktlx"/></div>
+                                        <div class="fontpoint-small">空调类型</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ps"/></div>
+                                        <div class="fontpoint-small">匹数</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="symj"/></div>
+                                        <div class="fontpoint-small">适用面积</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--洗衣机-->
+                                <TRS_CONDITION REFERENCE='滚筒洗衣机~波轮洗衣机' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="xl"/></div>
+                                        <div class="fontpoint-small">产品类型</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="xdrl"/></div>
+                                        <div class="fontpoint-small">洗涤容量</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kd"/></div>
+                                        <div class="fontpoint-small">宽度</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--电热水器-->
+                                <TRS_CONDITION REFERENCE='电热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="jsrj"/></div>
+                                        <div class="fontpoint-small">机身容积</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="jrgl"/></div>
+                                        <div class="fontpoint-small">加热功率</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kzfs"/></div>
+                                        <div class="fontpoint-small">控制方式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--燃气热水器-->
+                                <TRS_CONDITION REFERENCE='燃气热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="syqy"/></div>
+                                        <div class="fontpoint-small">适用气源</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ss"/></div>
+                                        <div class="fontpoint-small">升数</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="fdx"/></div>
+                                        <div class="fontpoint-small">防冻性</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--空气能热水器-->
+                                <TRS_CONDITION REFERENCE='空气能热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ks"/></div>
+                                        <div class="fontpoint-small">款式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="jsrj"/></div>
+                                        <div class="fontpoint-small">机身容积</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kzfs"/></div>
+                                        <div class="fontpoint-small">控制方式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--吸油烟机-->
+                                <TRS_CONDITION REFERENCE='吸油烟机' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="yyjks"/></div>
+                                        <div class="fontpoint-small">产品类型</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kzfs"/></div>
+                                        <div class="fontpoint-small">控制方式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="yyjpfl"/></div>
+                                        <div class="fontpoint-small">排风量</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--燃气灶-->
+                                <TRS_CONDITION REFERENCE='燃气灶' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="syqy"/></div>
+                                        <div class="fontpoint-small">气源</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zysl"/></div>
+                                        <div class="fontpoint-small">灶眼数量</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="edrfh"/></div>
+                                        <div class="fontpoint-small">额定热负荷</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--冷柜-->
+                                <TRS_CONDITION REFERENCE='冷柜' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="lx"/></div>
+                                        <div class="fontpoint-small">产品类型</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zrj"/></div>
+                                        <div class="fontpoint-small">总容积</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zlfs"/></div>
+                                        <div class="fontpoint-small">制冷方式</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="mbys"/></div>
+                                        <div class="fontpoint-small">面板颜色</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--电视-->
+                                <TRS_CONDITION REFERENCE='电视' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="cpcc"/></div>
+                                        <div class="fontpoint-small">产品尺寸</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ys"/></div>
+                                        <div class="fontpoint-small">颜色</div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_1-5">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="fbl"/></div>
+                                        <div class="fontpoint-small">分辨率</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                            </div>
+                            <div class="o_u o_df_1-12"></div>
+                        </div>
+                        <div class="o_u o_df_2-2 detail-fontpoint-bottom js_pointText">
+                            
+                        </div>
+                    </div>
+                    <div class="o_u o_df_1-12"></div>
+                </div>
+                <div class="o_g detail-fontpoint-back">
+                    <div class="detail-fontpoint">
+                        <div class="swiper-container js_fontSwiper">
+                            <div class="swiper-wrapper">
+                                <!--冰箱-->
+                                <TRS_CONDITION REFERENCE='冰箱产品' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="xmjg"/></div>
+                                        <div class="fontpoint-small">箱门结构</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zrj"/></div>
+                                        <div class="fontpoint-small">总容积</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zhilengfangshi"/></div>
+                                        <div class="fontpoint-small">制冷方式</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nhdj"/></div>
+                                        <div class="fontpoint-small">能耗等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--空调-->
+                                <TRS_CONDITION REFERENCE='空调产品' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ktlx"/></div>
+                                        <div class="fontpoint-small">空调类型</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ps"/></div>
+                                        <div class="fontpoint-small">匹数</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="symj"/></div>
+                                        <div class="fontpoint-small">适用面积</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--洗衣机-->
+                                <TRS_CONDITION REFERENCE='滚筒洗衣机~波轮洗衣机' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="xl"/></div>
+                                        <div class="fontpoint-small">产品类型</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="xdrl"/></div>
+                                        <div class="fontpoint-small">洗涤容量</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kd"/></div>
+                                        <div class="fontpoint-small">宽度</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--电热水器-->
+                                <TRS_CONDITION REFERENCE='电热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="jsrj"/></div>
+                                        <div class="fontpoint-small">机身容积</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="jrgl"/></div>
+                                        <div class="fontpoint-small">加热功率</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kzfs"/></div>
+                                        <div class="fontpoint-small">控制方式</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--燃气热水器-->
+                                <TRS_CONDITION REFERENCE='燃气热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="syqy"/></div>
+                                        <div class="fontpoint-small">适用气源</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ss"/></div>
+                                        <div class="fontpoint-small">升数</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="fdx"/></div>
+                                        <div class="fontpoint-small">防冻性</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--空气能热水器-->
+                                <TRS_CONDITION REFERENCE='空气能热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ks"/></div>
+                                        <div class="fontpoint-small">款式</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="jsrj"/></div>
+                                        <div class="fontpoint-small">机身容积</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kzfs"/></div>
+                                        <div class="fontpoint-small">控制方式</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                        <div class="fontpoint-small">能效等级</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--吸油烟机-->
+                                <TRS_CONDITION REFERENCE='吸油烟机' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="yyjks"/></div>
+                                        <div class="fontpoint-small">产品类型</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="kzfs"/></div>
+                                        <div class="fontpoint-small">控制方式</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="yyjpfl"/></div>
+                                        <div class="fontpoint-small">排风量</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--燃气灶-->
+                                <TRS_CONDITION REFERENCE='燃气灶' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="syqy"/></div>
+                                        <div class="fontpoint-small">气源</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zysl"/></div>
+                                        <div class="fontpoint-small">灶眼数量</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="edrfh"/></div>
+                                        <div class="fontpoint-small">额定热负荷</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--冷柜-->
+                                <TRS_CONDITION REFERENCE='冷柜' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="lx"/></div>
+                                        <div class="fontpoint-small">产品类型</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zrj"/></div>
+                                        <div class="fontpoint-small">总容积</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="zlfs"/></div>
+                                        <div class="fontpoint-small">制冷方式</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="mbys"/></div>
+                                        <div class="fontpoint-small">面板颜色</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                <!--电视-->
+                                <TRS_CONDITION REFERENCE='电视' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="cpcc"/></div>
+                                        <div class="fontpoint-small">产品尺寸</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="ys"/></div>
+                                        <div class="fontpoint-small">颜色</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="fontpoint-box">
+                                        <div class="fontpoint-bold"><trs_viewdata field="fbl"/></div>
+                                        <div class="fontpoint-small">分辨率</div>
+                                    </div>
+                                </div>
+                                </TRS_CONDITION>
+                                
+                            </div>
+                        </div>
+                        <div class="swiper-prev js_fontSwiperPrev">
+                            <i class="iconfont icon-arrow-jiantou-left"></i>
+                        </div>
+                        <div class="swiper-next js_fontSwiperNext">
+                            <i class="iconfont icon-arrow-jiantou-right"></i>
+                        </div>
+                    </div>
+                    <div class="o_u o_df_2-2 detail-fontpoint-bottom o_df-hide o_md-show o_sm-show o_xs-show js_pointText">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 文字卖点 END -->
+            <!-- 场景展示 -->
+            <div class="o_g">
+                <div class="detail-scene">
+                    <div class="swiper-container js_sceneSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="js_scenePicture" src="" df="ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 场景展示 -->
+            <!-- 核心卖点-->
+            <div class="o_g">
+                <div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
+                <div class="o_u o_df_4-12 bg-f8">
+                    <div class="detail-sellpoint js_oHerlSize">
+                        <div class="swiper-container js_swiperSellPoint">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="ignore_prodetail7.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="ignore_prodetail7.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="ignore_prodetail7.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_5-12 js_oHerl o_md-hide o_sm-hide o_xs-hide">
+                    <div class="o_u o_df_1-5"></div>
+                    <div class="o_u o_df_4-5 sellpoint-bg js_oHerl">
+                        <div class="sellpoint-describe js_center">
+                            <!-- 循环体 -->
+                            <div class="js_sellpointFont">
+                                <div class="describe1">如初生11</div>
+                                <div class="describe2">风冷无霜更新鲜</div>
+                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            </div>
+                            <div class="js_sellpointFont">
+                                <div class="describe1">如初生22</div>
+                                <div class="describe2">风冷无霜更新鲜</div>
+                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            </div>
+                            <div class="js_sellpointFont">
+                                <div class="describe1">如初生33</div>
+                                <div class="describe2">风冷无霜更新鲜</div>
+                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                            </div>
+                            <!-- 循环体 END -->
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12 js_oHerl">
+                    <a class="js_swiperSellPointNext js_center">
+                        <img src="detail_icon.PNG" />
+                    </a>
+                </div>
+            </div>
+            <!-- 核心卖点 -->
+            <!-- 详情展示 -->
+            <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="detail-display">
+                        <trs_viewdata field="sjxj"/>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12"></div>
+            </div>
+            <!-- 详情展示 -->
+            <!-- 电商拉页 -->
+             <div class="o_g detail-foldover js_detail-foldover">
+                <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
+                    <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#2F" name="2F" class="l-btn-normal" data-index=2>如此境界，怎忙不爱</a>
+                        <a href="product_detail_new.shtml#3F" name="3F" class="l-btn-normal" data-index=3>三挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#4F" name="4F" class="l-btn-normal" data-index=4>四台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
+                    </div>
+                    <a class="iconfont icon-bg-solid js_foldPlus">
+                        <i class="iconfont icon-plus"></i>
+                        <span>详细产品介绍</span>
+                    </a>
+                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
+                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
+                </div>
+                <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
+                    <div class="foldover-img js_oHerlSizeFoldover js_foldimg js_buyhtml">
+                        <trs_viewdata field="mdjs_ds"/>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12"></div>
+            </div>
+            <!-- 电商拉页 END -->   
+            <!-- 产品口碑-->
+            <div class="detail-title">产品口碑</div>
+            <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12 detail-praise">
+                    <div class="praise-box">
+                        <div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                            <div class="praise-con">
+                                <div class="detail-praise-box">
+                                    打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千
+                                </div>
+                                <div class="detail-praise-img">
+                                    <img src="../site5/nav_bg_lg.PNG" />
+                                    <img src="../site5/nav_bg_lg.PNG" />
+                                    <img src="../site5/nav_bg_lg.PNG" />
+                                </div>
+                                <div class="detail-praise-font">
+                                    <span class="name">海****尔</span>
+                                    <span class="time">2017/08/09</span>
+                                    <span class="from">来自&nbsp;统帅官网</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                            <div class="praise-con">
+                                <div class="detail-praise-box">
+                                    打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟
+                                </div>
+                                <div class="detail-praise-img">
+                                    <img src="../site5/nav_bg_lg.PNG" />
+                                    <img src="../site5/nav_bg_lg.PNG" />
+                                    <img src="../site5/nav_bg_lg.PNG" />
+                                </div>
+                                <div class="detail-praise-font">
+                                    <span class="name">海****尔</span>
+                                    <span class="time">2017/08/09</span>
+                                    <span class="from">来自&nbsp;统帅官网</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                            <div class="praise-con">
+                                <div class="detail-praise-box">
+                                    打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千 打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千
+                                </div>
+                                <div class="detail-praise-font">
+                                    <span class="name">海****尔</span>
+                                    <span class="time">2017/08/09</span>
+                                    <span class="from">来自&nbsp;统帅官网</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prise-btn">
+                        <a href="javascript:;" class="l-btn-normal l-btn-red">查看更多</a>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12"></div>
+            </div>
+            <!-- 产品口碑 End -->
+            <!-- 产品参数 -->
+            <div class="o_g product-param">
+                <div class="o_g param-bg">
+                    <div class="o_u o_df_3-12 o_sm_1-2 o_xs_1-2 param-bg-deep"></div>
+                    <div class="o_u o_df_9-12 o_sm_1-2 o_xs_1-2 param-bg-light"></div>
+                </div>
+                <div class="o_g param-con">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_10-12">
+                        <div class="param-struct">
+                            <div class="param-struct-img">
+                                <img src="<trs_viewdata field='productsize' UrlIsAbs='TRUE'/>" class="js_structbg" />
+                            </div>
+                            <div class="param-attachment js_appendixText">
+                                <trs_viewdata field="fjxx">
+                                <TRS_CONDITION  CONDITION='@fjxx' NOT='TRUE' OPERATOR="blank">
+                                <span class="param-attachment-title">附件</span>
+                                <span class="param-attachment-line o_xs-hide"></span>
+                               
+                                </TRS_CONDITION>
+                                </trs_viewdata>
+                            </div>
+                        </div>
+                        <div class="param-basic">
+                            <div class="o_g">
+                                <div class="o_u o_df_1-5 o_df-hide o_lg-show o_md-show param-basic-bg"></div>
+                                <div class="o_u o_df_2-2 o_lg_4-5 o_md_4-5 param-basic-con">
+                                    <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数" NUM='1'>
+                                    <div class="param-basic-title"><TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP></div>
+                                    <div class="o_u o_df_2-2">
+                                        <div class="param-basic-box">
+                                            <TRS_VIEWFIELDS num="8">
+                                            <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">
+                                            <div class="param-basic-list">
+                                                <span class="param-key"><TRS_VIEWFIELD FIELD="AnotherName"></TRS_VIEWFIELD></span>
+                                                <span class="param-value"><TRS_VIEWDATA FIELD="${@DBFieldName}" DELIM="/"
+                                    ISLABEL="true"></TRS_VIEWDATA></span>
+                                            </div>
+                                            </TRS_VIEWDATA>
+                                            </TRS_VIEWFIELDS>
+                                        </div>
+                                        <a href="javascript:;" class="l-btn-normal l-btn-red param-more js_parameterUrl">查看更多</a>
+                                    </div>
+                                    </TRS_XVIEWFIELDGROUPS>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 产品参数 END -->
+            <!-- 更多选择 -->
+            <div class="detail-title">更多选择</div>
+            <div class="o_g">
+                <div class="o_u o_df_1-6"></div>
+                <div class="o_u o_df_2-3">
+                    <div class="detail-more o_xs-hide">
+                        <div class="swiper-container js_swiperMore1">
+                            <div class="swiper-wrapper js_morePro js_moreProA">
+                                <trs_channels id="parent" startpos="2" num="1">
+                                <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="6">
+                                <a class="swiper-slide" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
+                                    <div class="detail-scene1-img">
+                                        <img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC" UrlIsAbs="TRUE">图片</TRS_VIEWAPPENDIX>' />
+                                    </div>
+                                    <div class="detail-more-info">
+                                        <div class="detail-more-tit">
+                                            <trs_viewdata field="pname"/>
+                                        </div>
+                                        <div class="detail-more-titinfo">
+                                            <trs_viewdata field="modelno"/>
+                                        </div>
+                                        <div class="detail-more-special">
+                                            <trs_viewdata field="cpms" num='33'/>
+                                        </div>
+                                        <div class="detail-more-price" sku_value='<trs_viewdata field="sku_values"/>'>
+                                            ￥<span>X</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </TRS_DOCUMENTS>
+                                </trs_channels>
+
+                                
+                            </div>
+                        </div>
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-prev js_swiperMore_prev">
+                            <i class="iconfont icon-arrow-jiantou-left"></i>
+                        </div>
+                        <div class="swiper-next js_swiperMore_next">
+                            <i class="iconfont icon-arrow-jiantou-right"></i>
+                        </div>
+                    </div>
+                    <div class="detail-more o_df-hide o_xs-show js_morePro js_moreProB">
+                        <trs_channels id="parent" startpos="2" num="1">
+                        <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="6">
+
+                        <a class="detail-scene1-img" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
+                            <img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC" UrlIsAbs="TRUE">图片</TRS_VIEWAPPENDIX>' />
+                        </a>
+                        <div class="detail-more-info">
+                            <div class="detail-more-tit">
+                                <trs_viewdata field="pname"/>
+                            </div>
+                            <div class="detail-more-titinfo">
+                                <trs_viewdata field="modelno"/>
+                            </div>
+                            <div class="detail-more-special">
+                                <trs_viewdata field="cpms" num='33'/>
+                            </div>
+                            <div class="detail-more-price" sku_value='<trs_viewdata field="sku_values"/>'>
+                                ￥<span>X</span>
+                            </div>
+                        </div>
+
+                        
+
+                        </TRS_DOCUMENTS>
+                        </trs_channels>
+                        
+                    </div>   
+                </div>
+                <div class="o_u o_df_1-6"></div>
+            </div>
+            <!-- 更多选择 END -->
+            <!-- 优惠组合 -->
+           <!-- <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="detail-title">优惠组合</div>
+                    <div class="detail-preferential">
+                        <div class="o_u o_df_2-12 o_lg_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 main-prd prd-box">
+                            <div class="o_g">
+                                <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+                                    <img src="detail_prd01.png" />
+                                </div>
+                                <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+                                    <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+                                        <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                        <p class="prd-code">BC-93LTMPA</p>
+                                    </div>
+                                    <div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+                                        <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                        <p class="prd-old-prise">¥1599</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u o_df_1-12 o_lg-hide o_md-hide o_sm-hide o_xs-hide"> </div>
+                        <div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
+                            <div class="o_g">
+                                <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+                                    <img src="images/detail_prd02.png" />
+                                </div>
+                                <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+                                    <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+                                        <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                        <p class="prd-code">BC-93LTMPA</p>
+                                    </div>
+                                    <div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+                                        <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                        <p class="prd-old-prise">¥1599</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
+                            <div class="o_g">
+                                <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+                                    <img src="detail_prd02.png" />
+                                </div>
+                                <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+                                    <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+                                        <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                        <p class="prd-code">BC-93LTMPA</p>
+                                    </div>
+                                    <div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+                                        <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                        <p class="prd-old-prise">¥1599</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
+                            <div class="o_g">
+                                <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+                                    <img src="detail_prd02.png" />
+                                </div>
+                                <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+                                    <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+                                        <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                        <p class="prd-code">BC-93LTMPA</p>
+                                    </div>
+                                    <div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+                                        <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                        <p class="prd-old-prise">¥1599</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-prise">
+                            <a href="javascript:;" class="l-btn-normal l-btn-red o_df-right">加入购物车</a>
+                            <p class="o_u o_df-right o_sm-left o_xs_12-12">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
+                            <div class="o_clear"></div>
+                        </div>
+                    </div>
+                    <div class="detail-preferential">
+                        <div class="o_u o_df_2-12 o_lg_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 main-prd prd-box">
+                            <div class="o_g">
+                                <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
+                                    <img src="detail_prd01.png" />
+                                </div>
+                                <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
+                                    <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
+                                        <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                        <p class="prd-code">BC-93LTMPA</p>
+                                    </div>
+                                    <div class="o_u o_df_12-12 o_md_5-12 o_sm_5-12">
+                                        <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                        <p class="prd-old-prise">¥1599</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u o_df_10-12 o_lg_9-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box swiper-prd-box">
+                            <div class="swiper-container js_swiperPreferential">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="detail_prd02.png" />
+                                        </div>
+                                        <div>
+                                            <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                            <p class="prd-code">BC-93LTMPA</p>
+                                        </div>
+                                        <div>
+                                            <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                            <p class="prd-old-prise">¥1599</p>
+                                        </div>
+                                        <span class="prd-checkbox">
+                                              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框" />
+                                            </span>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="detail_prd02.png" />
+                                        </div>
+                                        <div>
+                                            <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                            <p class="prd-code">BC-93LTMPA</p>
+                                        </div>
+                                        <div>
+                                            <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                            <p class="prd-old-prise">¥1599</p>
+                                        </div>
+                                        <span class="prd-checkbox">
+                                              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框" />
+                                            </span>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="detail_prd02.png" />
+                                        </div>
+                                        <div>
+                                            <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                            <p class="prd-code">BC-93LTMPA</p>
+                                        </div>
+                                        <div>
+                                            <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                            <p class="prd-old-prise">¥1599</p>
+                                        </div>
+                                        <span class="prd-checkbox">
+                                              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框" />
+                                            </span>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="detail_prd02.png" />
+                                        </div>
+                                        <div>
+                                            <p class="prd-name">小型家用冰箱节能电冰箱</p>
+                                            <p class="prd-code">BC-93LTMPA</p>
+                                        </div>
+                                        <div>
+                                            <p class="prd-prise">组合价：<span>¥1799</span></p>
+                                            <p class="prd-old-prise">¥1599</p>
+                                        </div>
+                                        <span class="prd-checkbox">
+                                              <input class="js_checkbox" type="checkbox" checked="true" data-notnull="true" value="复选框" />
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-prise checked-total-prise">
+                            <p class="o_u o_df-left o_sm_12-12 o_xs_12-12">已选择 <span class="prd-num">1</span> 个产品</p>
+                            <a href="javascript:;" class="l-btn-normal l-btn-red o_df-right">加入购物车</a>
+                            <p class="o_u o_df-right o_sm-left o_xs_12-12">组合价：<span class="prise">¥4799</span><span class="save">省¥500</span></p>
+                            <div class="o_clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 优惠组合 END -->
+            <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
+            <!--激活登陆弹窗按钮添加class js_landBtn -->
+            <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+            <div class="o_g land-shade js_landShade">
+                <div class="land-box js_landContBox">
+                    <div class="land-cont-title o_u">
+                        <span class="o_u ">登陆</span>
+                        <a href="" class="o_u iconfont icon-close js_landClose"></a>
+                    </div>
+                    <div class="js_landType">
+                        <div class="land-cont-type-normal o_u o_df_1-2 cur">普通登录</div>
+                        <div class="land-cont-type-phone o_u o_df_1-2">手机动态密码登录</div>
+                    </div>
+                    <div class="js_landInputBox">
+                        <div class="land-cont-normal-input o_g">
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landUserId">
+                                    <form class="ui_validForm js_ui_validForm">
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPassWord">
+                                    <form class="ui_validForm js_ui_validForm">
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <p class="Validform_checktip Validform_wrong"></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="land-cont-phone-input o_g">
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landPhone">
+                                    <form class="ui_validForm js_ui_validForm">
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="o_g member-bingmob-list">
+                                <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPhoneYanzheng">
+                                    <form class="ui_validForm js_ui_validForm">
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
+                                        <p class="Validform_checktip Validform_wrong"></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="land-cont-normal-btn o_g">
+                        <a href="javascript:;" class="l-btn-sm l-btn-red o_u o_df_11-12  l-btn-disable js-submintData">登录</a>
+                    </div>
+                    <div class="land-cont-down">
+                        <a class="o_u" href="javascript:;">立即注册</a>
+                        <a class="o_u" href="javascript:;">忘记密码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+    <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品对比详情页json" EXT="json" ></TRS_PAGEGENERATE>-->
+    <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品口碑详情页" EXT="comment" ></TRS_PAGEGENERATE>-->
+    <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品参数详情页" EXT="parameter" ></TRS_PAGEGENERATE>-->  
+    <script type="text/javascript" src="../site5/validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
+    <script type="text/javascript" src="../site5/product_detail.js"></script>
+    
+    <script>
+
+    var templet_price='<trs_viewdata field="sku_values"/>';//价格字符串
+    var point='<trs_viewdata field="gnld"/>'//功能亮点
+    var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>'//附件信息
+    var templet_parameterUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>'
+    //产品参数链接
+    var templet_parameterNum=templet_parameterUrl.lastIndexOf(".");
+    templet_parameterUrl=templet_parameterUrl.substring(0,templet_parameterNum);
+    templet_parameterUrl=templet_parameterUrl+'_parameter.shtml';
+    $(".js_parameterUrl").prop("href",templet_parameterUrl);
+
+    //获取价格   
+    $(".js_price").find("span").text(readJsonString(templet_price));//获取最低价格
+
+    //获取更多价格
+    if($('.js_moreProA').find("a").length>3){
+        $('.js_morePro .detail-more-price').each(function(){
+            var skuValue=$(this).attr("sku_value");
+            $(this).find("span").text(readJsonString(skuValue));
+
+        })
+    }
+
+     function readJsonString(templet_price){
+        var minPrice = 0;
+        var jsonObj = eval('(' + templet_price + ')');
+        if(jsonObj != null && jsonObj!="" && jsonObj.length>0){
+            var currentPrice = 0;
+            for(var i=0;i<jsonObj.length;i++){
+         
+                currentPrice = jsonObj[i].salePrice;
+                if(i==0){
+                    minPrice=currentPrice;
+                }else if(parseInt(minPrice)>parseInt(currentPrice)){
+                    minPrice = currentPrice;
+                }
+            }
+        }
+        return minPrice;
+    }
+    
+
+    var channelname="<trs_channel id='parent' field='_recurl' URLISABS='true'/>";
+    var morePro=$(".js_moreProA").find("a").length;
+    if(morePro==0||morePro<3){
+        $.ajax({
+            type: "get",
+            url:channelname+"/morePro_101.json",
+            dataType:"json",
+            data: "",
+            success_cb: function(data){
+                $(".js_moreProA").html("");
+                $(".js_moreProB").html("");
+                var mroeproA="";
+                var mroeproB="";
+               for(var j=0; j<data.length-1; j++){
+                    var pname=data[j].pname;
+                    var modelno=data[j].modelno;
+                    var cpms=data[j].cpms;
+                    var dochref=data[j].dochref;
+                    var pic=data[j].pic;
+                    var sku_value=data[j].sku_value;
+                    var minPrice = 0;
+                    if(sku_value != null && sku_value!="" && sku_value.length>0){
+                        var currentPrice = 0;
+                        for(var i=0;i<sku_value.length;i++){
+                     
+                            currentPrice = sku_value[i].salePrice;
+                            if(i==0){
+                                minPrice=currentPrice;
+                            }else if(parseInt(minPrice)>parseInt(currentPrice)){
+                                minPrice = currentPrice;
+                            }
+                        }
+                    }
+
+                    mroeproA+='<a class="swiper-slide" href="'+dochref+'">';
+                    mroeproA+='<div class="detail-scene1-img">';
+                    mroeproA+='<img src='+pic+' /></div>';
+                    mroeproA+='<div class="detail-more-info">';
+                    mroeproA+='<div class="detail-more-tit">'+pname+'</div>';
+                    mroeproA+='<div class="detail-more-titinfo">'+modelno+'</div>';
+                    mroeproA+='<div class="detail-more-special">'+cpms+'</div>';
+                    mroeproA+='<div class="detail-more-price" >￥<span>'+minPrice+'</span></div></div></a>';
+
+                    mroeproB+='<a class="detail-scene1-img" href="'+dochref+'">';
+                    mroeproB+=' <img src="'+pic+'" /></a>';
+                    mroeproB+='<div class="detail-more-info"><div class="detail-more-tit">'+pname+'</div>';
+                    mroeproB+='<div class="detail-more-titinfo">'+modelno+'</div>';
+                    mroeproB+='<div class="detail-more-special">'+cpms+'</div>';
+                    mroeproB+='<div class="detail-more-price">￥<span>'+minPrice+'</span></div></div>';
+
+               }
+               $(".js_moreProA").html(mroeproA);
+               $(".js_moreProB").html(mroeproB);
+
+            }
+        });
+
+    }
+
+    array(point,"span","js_pointText",'');//功能亮点
+    array(appendix,"a","js_appendixText","param-attachment-other");//附件信息
+    function array(str,tab,name,className){
+        if(str!=''){
+            var text=str.split("~");
+            var text2="";
+            var strHtml="";
+            for(var i=0; i<text.length; i++){
+                text2=text[i].split("`")[0];
+                if(className==''||className==null){
+                    strHtml+='<'+tab+'>'+text2+'</'+tab+'>';
+                }else{
+                    strHtml+='<'+tab+' class="'+className+'">'+text2+'</'+tab+'>';
+                } 
+            }
+            $('.'+name+'').append(strHtml);
+            
+        }
+        
+    }
+
+   
+
+    </script>
+</body>
+
+</html>
