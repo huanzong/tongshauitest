@@ -1,7 +1,7 @@
     var templet_price='<trs_viewdata field="sku_values"/>';//价格字符串
-    var point='<trs_viewdata field="gnld"/>'//功能亮点
-    var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>'//附件信息
-    var templet_parameterUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>'
+    var point='<trs_viewdata field="gnld"/>';//功能亮点
+    var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>';//附件信息
+    var templet_parameterUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';
     //产品参数链接
     var templet_parameterNum=templet_parameterUrl.lastIndexOf(".");
     templet_parameterUrl=templet_parameterUrl.substring(0,templet_parameterNum);
