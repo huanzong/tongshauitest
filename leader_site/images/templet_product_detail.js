@@ -3,11 +3,6 @@
 * @author:      张静
 * @date        2017.11.08
 * ---------------------------------------------------------------------------*/
-//产品参数链接
-var templet_parameterNum=templet_parameterUrl.lastIndexOf(".");
-templet_parameterUrl=templet_parameterUrl.substring(0,templet_parameterNum);
-templet_parameterUrl=templet_parameterUrl+'_parameter.shtml';
-$(".js_parameterUrl").prop("href",templet_parameterUrl);
 
 //获取价格
 $(".js_price").find("span").text(readJsonString(templet_price));//获取最低价格
