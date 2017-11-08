@@ -176,5 +176,6 @@ function getContentData(){
                     $('.js_commentContent').hide();
                 }
             }
-        });
+        }
+    });
 }
