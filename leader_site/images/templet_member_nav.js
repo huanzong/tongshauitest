@@ -1,3 +1,8 @@
+/*-----------------------------------------------------------------------------
+* @Description:  模板-个人中心-左侧栏
+* @author:      刘悦
+* @date        2017.11.7
+* ---------------------------------------------------------------------------*/
 $(function () {
 
     //前台判断是否登陆
@@ -5,10 +10,25 @@ $(function () {
         jumpToLoginPage()
     }
 
+    var templet_navul = document.getElementById('js-navul');
+    if(templet_navul!=null){
+        var templet_navullength = $('#js-navul > li').length;
+        var templet_classify =document.getElementById("js-leftredlight").innerHTML;
+        $('#js-navul > li').find(".cur").removeClass("cur");
+
+        for(var i=0;i<templet_navullength;i++){
+            var templet_innerText = $('#js-navul > li').eq(i).find(".o_u").text();
+            if(templet_innerText.indexOf(templet_classify)>-1){
+                $('#js-navul > li').eq(i).find(".o_u").addClass("cur");
+            }
+        }
+    }
+
+
     //计算账号安全 读取用户信息
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/user/front/user/userInfo",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
         data: "",
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {

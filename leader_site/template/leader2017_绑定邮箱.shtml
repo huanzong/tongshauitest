@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-安全设置-绑定邮箱</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <!--<link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../site5/member.css">
+    <link rel="stylesheet" type="text/css" href="../site5/member_nav.css">
+
+</head>
+
+<body>
+<div id="js-leftredlight" style="display: none;">安全设置</div>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_g ">
+            <!-- 左侧导航 START-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
+            <!-- 左侧导航 End-->
+            <!-- 右侧内容 START-->
+            <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
+
+                <div class="o_u o_df_12-12 member-security js-membercontbox">
+                    <div class="land-shade js_navshade"></div>
+
+                    <div class="member-security-width js-securityheight">
+                        <div class="member-security-tit"><p>绑定邮箱</p></div>
+                        <!-- 内容区域 START-->
+                        <div class="member-security-contbox js-contRightContBox">
+                            <!-- 绑定邮箱 START-->
+                            <div class="member-revisemob o_g">
+                                <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_3-5 member-revisemob-line member-revisemob-one js_memberRevisThree">
+                                    <i class="member-revisemob-line-point01">
+                                        <span>　1. 安全验证</span>
+                                        <div class="member-revisemob-line-finishpoint"></div>
+                                    </i>
+                                    <i class="member-revisemob-line-point02">
+                                        <span>　2. 绑定邮箱</span>
+                                        <div class="member-revisemob-line-finishpoint"></div>
+                                    </i>
+                                    <i class="member-revisemob-line-point03">
+                                        <span>　3. 完成</span>
+                                        <div class="member-revisemob-line-finishpoint"></div>
+                                    </i>
+                                    <div class="member-revisemob-ratelinebg js-memberRevRateLine"></div>
+                                </div>
+                            </div>
+                            <div class="member-security-bingmob member-security-revisemob-martop js-validatePhone">
+                                <div class="o_g member-bingmob-list">
+                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证方式</div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 selectbox member-bingmob-listipt">
+                                        <div>
+                                            <select name="" id="js_unbindmob"  autotext="">
+                                                <option value="0">--验证手机是否正确--</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="o_g member-bingmob-list">
+                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">手机验证</div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 l-input member-bingmob-listipt">
+                                        <input type="text" class="js_phoneCodeYz" name="" ph="短信验证码" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6"/>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-red js-sendphonecode">发送验证短信</a>
+                                        <p class="Validform_checktip Validform_wrong js-mobileCodeerror "></p>
+                                    </div>
+                                </div>
+
+                                <div class="o_g member-bingmob-list">
+                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
+                                        <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-disable js_subimGetUp">确定</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="member-security-bingmob member-security-revisemob-martop js-bindNewEmail" style="display: none">
+                                <div class="o_g member-bingmob-list">
+                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">邮箱</div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailform">
+                                        <form class="ui_validForm js_ui_validForm">
+                                            <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newEmail" name="" ph="请输入需要绑定的邮箱" value="" />
+                                            <p class="Validform_checktip Validform_wrong js-newEmailerror"></p>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="o_g member-bingmob-list">
+                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext">验证码</div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_2-2 l-input member-bingmob-listipt js-bindEmailyanzheng">
+                                        <form class="ui_validForm js_ui_validForm">
+                                            <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-validateinput js-emailCode" name="" ph="邮件验证码" value="" />
+                                            <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证邮件</a>
+                                            <p class="Validform_checktip Validform_wrong js-emailCodeerror"></p>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="o_g member-bingmob-list">
+                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_5-6 o_xs_6-6 o_df-textright o_sm-textleft o_xs-textleft member-bingmob-listtext"></div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 member-bingmob-listipt-enterbtn">
+                                        <a href="javascript:;" class="l-btn-normal l-btn-red js-submintData l-btn-disable">确定</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 绑定邮箱 End-->
+                            <!-- 绑定成功 START-->
+                            <div class="member-security-bingsuccess o_g js-bingsuccess" style="display: none">
+                                <i class="iconfont icon-success-solid"></i>
+                                <div class="member-security-bingsuccess-txtbox">
+                                    <div class="member-security-bingsuccess-bigtext">绑定成功</div>
+                                    <div class="member-security-bingsuccess-text"><span id="js-countdown">5</span> 秒后返回 <a href="/security" >安全设置</a></div>
+                                </div>
+                            </div>
+                            <!-- 绑定成功 End-->
+                        </div>
+                        <!-- 内容区域 End-->
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧内容 End-->
+        </div>
+        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
+        <!--弹窗2-->
+        <div class="pop-up2 js_popUpBox2">
+            <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
+            <span class="iconfont icon-close pop-up2_false  js_popUpFales"></span>
+            <span class="iconfont icon-information-solid  pop-up2_warn  js_popUpWarn"></span>
+            <p class="o_u  js_popUpText"></p>
+        </div>
+    </div>
+</div>
+<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="../site5/member.js"></script>-->
+<script type="text/javascript" src="../site5/member_nav.js"></script>
+<script type="text/javascript" src="../site5/validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../site5/templet_member_bindemail.js"></script>
+<script type="text/javascript" src="../site5/templet_member_nav.js"></script>
+</body>
+</html>

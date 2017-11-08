@@ -54,6 +54,7 @@ $(function(){
             $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
+                    aspectRatio: xsize / ysize,
                     boxWidth:300,
                     boxHeight:300,
                     setSelect: [ 60, 60, 260, 260 ]
@@ -62,6 +63,10 @@ $(function(){
                     // Use the API to get the real image size
 
                     // Store the API in the jcrop_api variable
+                    var bounds = this.getBounds();
+                    boundx = bounds[0];
+                    boundy = bounds[1];
+                    // Store the API in the jcrop_api variable
                     jcrop_api = this;
                     // Move the preview into the jcrop container for css positioning
 
@@ -69,19 +74,27 @@ $(function(){
             );
             function updatePreview(c){
                 if (parseInt(c.w) > 0) {
-                    var rx = xsize / c.w;
-                    var ry = ysize / c.h;
+                    var rx = 180 / c.w;
+                    var ry = 180 / c.h;
+                    console.log(imgsW,xsize);
                     $('#js-imgsplit').css({
-                            width: Math.round(rx * imgsW) + 'px',
-                            height: Math.round(ry * imgsH) + 'px',
-                            marginLeft: '-' + Math.round(rx * c.x) + 'px',
-                            marginTop: '-' + Math.round(ry * c.y) + 'px'
+                        //width: Math.round(rx * boundx) + 'px',
+                        //height: Math.round(ry * boundy) + 'px',
+                        //
+                        ////    width: Math.round(rx * imgsW) + 'px',
+                        ////height: Math.round(ry * imgsH) + 'px',
+                        ////'max-width':'300px',
+                        ////'max-height':'300px',
+                        ////width: Math.round($('.js-rightimg').width()) + 'px',
+                        ////height: Math.round($('.js-rightimg').height()) + 'px',
+                        //    marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                        //    marginTop: '-' + Math.round(ry * c.y) + 'px'
+                        width:Math.round(rx *imgsW) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
+                        height:Math.round(rx * imgsH) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
+                        marginLeft:"-" + Math.round(rx * c.w) + "px",
+                        marginTop:"-" + Math.round(ry *c.y) + "px"
                         }
                     );
-
-
-
-
                 }
             };
 
@@ -141,7 +154,7 @@ $.jUploader({
     fileField: 'file',
     fillsize:'2',
     button: "js_imgUpload", // 这里设置按钮id
-    action: '/user/front/user/uploadHeadPic',//这里写地址
+    action: '/hshop-user/front/user/uploadHeadPic',//这里写地址
     // 开始上传事件
 
     onUpload: function(data) {
@@ -248,7 +261,7 @@ $('.js-personalinfotab').click( function () {
         var imgSize = jcrop_api.tellSelect();
         console.log(imgSize);
         $.ajax({
-            url: siteConfig.userUrl+"/user/front/user/updateHeadPic",
+            url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
             type: "get",
             data: {
                     "picX": parseInt(imgSize.x),

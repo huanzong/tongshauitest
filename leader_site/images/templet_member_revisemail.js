@@ -11,7 +11,7 @@ $(function(){
 
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/user/front/user/userInfo/",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
         data: "",
         login:true,
         success_cb: function(data){
@@ -190,12 +190,12 @@ $(function(){
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         var timeOut = $(this).attr('data-type');
         if(yanzhengtrue&&!timeOut){
-            $('.js-newEmail').attr('data-type','1');
             $('.js-getinfo').removeClass('l-btn-disable').unbind().click(function(){
                 if($('.js-getinfo').hasClass('l-btn-disable'))
                 {
                     return;
                 }
+                 $('.js-newEmail').attr('data-type','1');
                 btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码');
                 yanzhengtrue = $('.js-newEmail').siblings('.Validform_checktip').hasClass('Validform_right');
                 if(yanzhengtrue){

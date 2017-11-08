@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>口碑详情</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../site5/product_praise.css">
+    <script type="text/javascript">
+      // 口碑常量配置
+      var reputationConfig= {
+        //产品型号
+        //templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
+        templet_businessId: "BCD-557WDGSU1",
+        templet_pageSize:2
+      };
+    </script>
+</head>
+
+<body>
+
+<div class="o_body">
+    <div class="o_main">
+        <!-- 导航 -->
+        <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+        <!-- 导航 End-->
+        <div class="o_g js_animateLine">
+            <div class="index_animate">
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox">
+                    <span></span>
+                </div>
+                <div class="index_animateBox"></div>
+            </div>
+        </div>
+
+        <div class="o_g product-prise-header">
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <div class="prise-head">
+                    <div class="prise-percent">
+                        <div class="percent-key">好评率：</div>
+                        <div class="percent-value"></div>
+                    </div>
+                    <div class="prise-tips">
+                        <a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment1">全部</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="o_g product-prise-body">
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+
+
+            </div>
+        </div>
+        <div class="o_g product-prise-page pageMax o_df-show o_sm-hide o_xs-hide">
+        </div>
+        <div class="o_g product-prise-page pageMiddle o_df-hide o_sm-show o_xs-hide">
+        </div>
+        <div class="o_g product-prise-page pageMobile o_df-hide o_sm-hide o_xs-show">
+        </div>
+        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+
+    </div>
+</div>
+<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="../site5/product_praise.js"></script>
+<script type="text/javascript" src="../site5/templet_product_reputation.js"></script>
+<script type="text/javascript" src="../site5/templet_pagination.js"></script>
+</body>
+</html>
