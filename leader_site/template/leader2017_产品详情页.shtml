@@ -847,13 +847,13 @@
                         <div class="swiper-container js_swiperSellPoint">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="ignore_prodetail7.jpg" />
+                                    <img src="../site5/ignore_prodetail7.jpg" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="ignore_prodetail7.jpg" />
+                                    <img src="../site5/ignore_prodetail7.jpg" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="ignore_prodetail7.jpg" />
+                                    <img src="../site5/ignore_prodetail7.jpg" />
                                 </div>
                             </div>
                         </div>
@@ -885,7 +885,7 @@
                 </div>
                 <div class="o_u o_df_1-12 js_oHerl">
                     <a class="js_swiperSellPointNext js_center">
-                        <img src="detail_icon.PNG" />
+                        <img src="../site5/detail_icon.PNG" />
                     </a>
                 </div>
             </div>
@@ -936,60 +936,14 @@
             </div>
             <!-- 电商拉页 END -->   
             <!-- 产品口碑-->
-            <div class="detail-title">产品口碑</div>
-            <div class="o_g">
+            <div class="detail-title js_commentTitle">产品口碑</div>
+            <div class="o_g js_commentContent">
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12 detail-praise">
                     <div class="praise-box">
-                        <div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                            <div class="praise-con">
-                                <div class="detail-praise-box">
-                                    打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千
-                                </div>
-                                <div class="detail-praise-img">
-                                    <img src="../site5/nav_bg_lg.PNG" />
-                                    <img src="../site5/nav_bg_lg.PNG" />
-                                    <img src="../site5/nav_bg_lg.PNG" />
-                                </div>
-                                <div class="detail-praise-font">
-                                    <span class="name">海****尔</span>
-                                    <span class="time">2017/08/09</span>
-                                    <span class="from">来自&nbsp;统帅官网</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                            <div class="praise-con">
-                                <div class="detail-praise-box">
-                                    打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟
-                                </div>
-                                <div class="detail-praise-img">
-                                    <img src="../site5/nav_bg_lg.PNG" />
-                                    <img src="../site5/nav_bg_lg.PNG" />
-                                    <img src="../site5/nav_bg_lg.PNG" />
-                                </div>
-                                <div class="detail-praise-font">
-                                    <span class="name">海****尔</span>
-                                    <span class="time">2017/08/09</span>
-                                    <span class="from">来自&nbsp;统帅官网</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                            <div class="praise-con">
-                                <div class="detail-praise-box">
-                                    打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千 打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千
-                                </div>
-                                <div class="detail-praise-font">
-                                    <span class="name">海****尔</span>
-                                    <span class="time">2017/08/09</span>
-                                    <span class="from">来自&nbsp;统帅官网</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="prise-btn">
-                        <a href="javascript:;" class="l-btn-normal l-btn-red">查看更多</a>
+                        <a href="javascript:;" class="l-btn-normal l-btn-red js_commentUrl">查看更多</a>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12"></div>
@@ -1006,7 +960,7 @@
                     <div class="o_u o_df_10-12">
                         <div class="param-struct">
                             <div class="param-struct-img">
-                                <img src="<trs_viewdata field='productsize' UrlIsAbs='TRUE'/>" class="js_structbg" />
+                                <img src="<TRS_VIEWDATAAPPENDIXS startpos='0' num='1' FIELD='productsize'><TRS_VIEWDATAAPPENDIX  FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="js_structbg" />
                             </div>
                             <div class="param-attachment js_appendixText">
                                 <trs_viewdata field="fjxx">
@@ -1130,7 +1084,7 @@
                         <div class="o_u o_df_2-12 o_lg_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 main-prd prd-box">
                             <div class="o_g">
                                 <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
-                                    <img src="detail_prd01.png" />
+                                    <img src="../site5/detail_prd01.png" />
                                 </div>
                                 <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
                                     <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
@@ -1148,7 +1102,7 @@
                         <div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
                             <div class="o_g">
                                 <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
-                                    <img src="images/detail_prd02.png" />
+                                    <img src="../site5/detail_prd02.png" />
                                 </div>
                                 <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
                                     <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
@@ -1165,7 +1119,7 @@
                         <div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
                             <div class="o_g">
                                 <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
-                                    <img src="detail_prd02.png" />
+                                    <img src="../site5/detail_prd02.png" />
                                 </div>
                                 <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
                                     <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
@@ -1182,7 +1136,7 @@
                         <div class="o_u o_df_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 prd-box">
                             <div class="o_g">
                                 <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
-                                    <img src="detail_prd02.png" />
+                                    <img src="../site5/detail_prd02.png" />
                                 </div>
                                 <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
                                     <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
@@ -1206,7 +1160,7 @@
                         <div class="o_u o_df_2-12 o_lg_3-12 o_md_12-12 o_sm_12-12 o_xs_12-12 main-prd prd-box">
                             <div class="o_g">
                                 <div class="o_u o_df_12-12 o_md_3-12 o_sm_3-12 o_xs_3-12">
-                                    <img src="detail_prd01.png" />
+                                    <img src="../site5/detail_prd01.png" />
                                 </div>
                                 <div class="o_u o_md_8-12 o_sm_8-12 o_xs_8-12">
                                     <div class="o_u o_df_12-12 o_md_7-12 o_sm_7-12">
@@ -1225,7 +1179,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div>
-                                            <img src="detail_prd02.png" />
+                                            <img src="../site5/detail_prd02.png" />
                                         </div>
                                         <div>
                                             <p class="prd-name">小型家用冰箱节能电冰箱</p>
@@ -1241,7 +1195,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div>
-                                            <img src="detail_prd02.png" />
+                                            <img src="../site5/detail_prd02.png" />
                                         </div>
                                         <div>
                                             <p class="prd-name">小型家用冰箱节能电冰箱</p>
@@ -1257,7 +1211,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div>
-                                            <img src="detail_prd02.png" />
+                                            <img src="../site5/detail_prd02.png" />
                                         </div>
                                         <div>
                                             <p class="prd-name">小型家用冰箱节能电冰箱</p>
@@ -1273,7 +1227,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div>
-                                            <img src="detail_prd02.png" />
+                                            <img src="../site5/detail_prd02.png" />
                                         </div>
                                         <div>
                                             <p class="prd-name">小型家用冰箱节能电冰箱</p>
@@ -1371,133 +1325,28 @@
     <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
     <script type="text/javascript" src="../site5/product_detail.js"></script>
-    
     <script>
-
-    var templet_price='<trs_viewdata field="sku_values"/>';//价格字符串
-    var point='<trs_viewdata field="gnld"/>'//功能亮点
-    var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>'//附件信息
-    var templet_parameterUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>'
-    //产品参数链接
-    var templet_parameterNum=templet_parameterUrl.lastIndexOf(".");
-    templet_parameterUrl=templet_parameterUrl.substring(0,templet_parameterNum);
-    templet_parameterUrl=templet_parameterUrl+'_parameter.shtml';
-    $(".js_parameterUrl").prop("href",templet_parameterUrl);
-
-    //获取价格   
-    $(".js_price").find("span").text(readJsonString(templet_price));//获取最低价格
-
-    //获取更多价格
-    if($('.js_moreProA').find("a").length>3){
-        $('.js_morePro .detail-more-price').each(function(){
-            var skuValue=$(this).attr("sku_value");
-            $(this).find("span").text(readJsonString(skuValue));
-
-        })
-    }
-
-     function readJsonString(templet_price){
-        var minPrice = 0;
-        var jsonObj = eval('(' + templet_price + ')');
-        if(jsonObj != null && jsonObj!="" && jsonObj.length>0){
-            var currentPrice = 0;
-            for(var i=0;i<jsonObj.length;i++){
-         
-                currentPrice = jsonObj[i].salePrice;
-                if(i==0){
-                    minPrice=currentPrice;
-                }else if(parseInt(minPrice)>parseInt(currentPrice)){
-                    minPrice = currentPrice;
-                }
-            }
-        }
-        return minPrice;
-    }
-    
-
-    var channelname="<trs_channel id='parent' field='_recurl' URLISABS='true'/>";
-    var morePro=$(".js_moreProA").find("a").length;
-    if(morePro==0||morePro<3){
-        $.ajax({
-            type: "get",
-            url:channelname+"/morePro_101.json",
-            dataType:"json",
-            data: "",
-            success_cb: function(data){
-                $(".js_moreProA").html("");
-                $(".js_moreProB").html("");
-                var mroeproA="";
-                var mroeproB="";
-               for(var j=0; j<data.length-1; j++){
-                    var pname=data[j].pname;
-                    var modelno=data[j].modelno;
-                    var cpms=data[j].cpms;
-                    var dochref=data[j].dochref;
-                    var pic=data[j].pic;
-                    var sku_value=data[j].sku_value;
-                    var minPrice = 0;
-                    if(sku_value != null && sku_value!="" && sku_value.length>0){
-                        var currentPrice = 0;
-                        for(var i=0;i<sku_value.length;i++){
-                     
-                            currentPrice = sku_value[i].salePrice;
-                            if(i==0){
-                                minPrice=currentPrice;
-                            }else if(parseInt(minPrice)>parseInt(currentPrice)){
-                                minPrice = currentPrice;
-                            }
-                        }
-                    }
-
-                    mroeproA+='<a class="swiper-slide" href="'+dochref+'">';
-                    mroeproA+='<div class="detail-scene1-img">';
-                    mroeproA+='<img src='+pic+' /></div>';
-                    mroeproA+='<div class="detail-more-info">';
-                    mroeproA+='<div class="detail-more-tit">'+pname+'</div>';
-                    mroeproA+='<div class="detail-more-titinfo">'+modelno+'</div>';
-                    mroeproA+='<div class="detail-more-special">'+cpms+'</div>';
-                    mroeproA+='<div class="detail-more-price" >￥<span>'+minPrice+'</span></div></div></a>';
-
-                    mroeproB+='<a class="detail-scene1-img" href="'+dochref+'">';
-                    mroeproB+=' <img src="'+pic+'" /></a>';
-                    mroeproB+='<div class="detail-more-info"><div class="detail-more-tit">'+pname+'</div>';
-                    mroeproB+='<div class="detail-more-titinfo">'+modelno+'</div>';
-                    mroeproB+='<div class="detail-more-special">'+cpms+'</div>';
-                    mroeproB+='<div class="detail-more-price">￥<span>'+minPrice+'</span></div></div>';
-
-               }
-               $(".js_moreProA").html(mroeproA);
-               $(".js_moreProB").html(mroeproB);
-
-            }
-        });
-
-    }
-
-    array(point,"span","js_pointText",'');//功能亮点
-    array(appendix,"a","js_appendixText","param-attachment-other");//附件信息
-    function array(str,tab,name,className){
-        if(str!=''){
-            var text=str.split("~");
-            var text2="";
-            var strHtml="";
-            for(var i=0; i<text.length; i++){
-                text2=text[i].split("`")[0];
-                if(className==''||className==null){
-                    strHtml+='<'+tab+'>'+text2+'</'+tab+'>';
-                }else{
-                    strHtml+='<'+tab+' class="'+className+'">'+text2+'</'+tab+'>';
-                } 
-            }
-            $('.'+name+'').append(strHtml);
-            
-        }
+        var templet_price='<trs_viewdata field="sku_values"/>';//价格字符串
+        var point='<trs_viewdata field="gnld"/>';//功能亮点
+        var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>';//附件信息
+        var templet_channelName="<trs_channel id='parent' field='_recurl' URLISABS='true'/>";//栏目链接
+        //var templet_businessId="<trs_viewdata field='modelno'/>"
+        var templet_businessId="BCD-557WDGSU1"
+        var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
+        var templet_commentUrl='';//口碑页面
+        var templet_commentUrl='';//参数页面
+        //产品参数链接
+        var templet_detailNum=templet_detailUrl.lastIndexOf(".");
+        templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
+        templet_parameterUrl=templet_detailUrl+'_parameter.shtml';
+        $(".js_parameterUrl").prop("href",templet_parameterUrl);//参数
+        templet_commentUrl=templet_detailUrl+'_comment.shtml';
+        $(".js_commentUrl").prop("href",templet_commentUrl);//口碑
         
-    }
 
-   
-
-    </script>
+    </script> 
+    <script type="text/javascript" src="../site5/templet_product_detail.js"></script> 
+    
 </body>
 
 </html>
