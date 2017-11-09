@@ -252,6 +252,7 @@ function loadUserInfoList(){
         type: "post",
         dataType: "json",
         data:{
+            "id":saveId,
             "pageNo":templet_pageNo,
             "pageSize":templet_pageSize
         },
