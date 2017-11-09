@@ -209,7 +209,8 @@ function saveUserAddress(){
         url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
         type:"post",
         dataType:"json",
-        data:data,
+        data: JSON.stringify(data),
+        contentType:"application/json",
         success:function(responseT){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
