@@ -10,6 +10,7 @@ $(function () {
         jumpToLoginPage()
     }
 
+    //获取当前栏目 左侧栏变红
     var templet_navul = document.getElementById('js-navul');
     if(templet_navul!=null){
         var templet_navullength = $('#js-navul > li').length;
@@ -24,11 +25,10 @@ $(function () {
         }
     }
 
-
     //计算账号安全 读取用户信息
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
         data: "",
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
@@ -44,9 +44,6 @@ $(function () {
                 else{
                     $(".js-imghead").attr("src",data.data.headUrl);
                 }
-
-
-
 
                 //有没有邮箱
                 var templet_grade=10;
@@ -102,4 +99,18 @@ $(function () {
         }
     });
 
+    //购物车的数字
+    $.ajax({
+        type: "post",
+        url: siteConfig.userUrl+"/buy/order/cartGoods/count/",
+        data: "",
+        success_cb: function(data){
+            var carcount=$.trim(data.data)
+            if(carcount==0){
+
+            }else{
+                $('.js-cart').append(' <i class="member-nub-round">'+carcount+'</i>');
+            }
+        }
+    });
 })
