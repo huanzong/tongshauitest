@@ -28,6 +28,7 @@ $(function(){
                     }
                     var templet_callphone = templet_call.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");//手机号加*
                     $("#js-logincallphone").html(templet_callphone);
+                    $("#js_unbindmob").attr('autotext',"手机（"+templet_callphone+"）");
                     $("#js_unbindmob").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
                     var templet_split = templet_email.split("@");
@@ -141,14 +142,16 @@ $(function(){
         if(!templet_notclick)
         {
             var templet_param;
-            var templet_code=$.trim($('.js_mobileCodeYz').val()); //验证码
+            var templet_code; //验证码
             var templet_pretermit=$('#js_unbindmob').val(); //下拉的value
             if(templet_pretermit=='0' || templet_pretermit=='1'){
 
                 templet_param='mobile';
+                templet_code=$.trim($('.js_phoneCodeYz').val());
             }
             if(templet_pretermit=='2' ){
                 templet_param='email';
+                templet_code=$.trim($('.js_emailCodeYz').val());
             }
 
             $.ajax({
@@ -193,7 +196,7 @@ $(function(){
         if(templet_pretermit=='2' ){
             templet_param='email';
         }
-        var templet_code=$.trim($('.js_mobileCodeYz').val());
+        var templet_code=$.trim($('.js_phoneCodeYz').val());
 
         if(templet_code!=''){
             $.ajax({
@@ -272,7 +275,7 @@ $(function(){
 
 //解绑手机号码验证
 
-$('.js_mobileCodeYz').blur(function(){
+$('.js_phoneCodeYz').blur(function(){
     if($.trim($(this).val()).length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
         $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
@@ -283,7 +286,7 @@ $('.js_mobileCodeYz').blur(function(){
     }
 })
 
-$('.js_mobileCodeYz').keyup(function(){
+$('.js_phoneCodeYz').keyup(function(){
     if($.trim($(this).val()).length==6){
         $('.js_subimGetUp').removeClass('l-btn-disable');
         $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
@@ -311,6 +314,6 @@ $('.js_emailCodeYz').keyup(function(){
         $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
     }else{
         $('.js_subimGetUp').addClass('l-btn-disable');
-        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>验证码长度错误').addClass('Validform_wrong').removeClass('Validform_right');
+        $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
     }
 })
