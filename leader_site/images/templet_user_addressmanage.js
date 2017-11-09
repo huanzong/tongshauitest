@@ -5,14 +5,13 @@
 * ---------------------------------------------------------------------------*/
 
 //判断登录
-//if(!istrsidssdssotoken()){
-//    jumpToLoginPage()
-//}
+if(!istrsidssdssotoken()){
+    jumpToLoginPage()
+}
+loadUserInfoList();//获取用户地址列表
+
 var templet_pageNo=1;
 var templet_pageSize=10;
-
-//loadUserInfoList();//获取用户地址列表
-
 //取消弹框提示
 var templet_text="确定取消添加吗？";
 $('.js_addressCancel').click(function(){
@@ -24,8 +23,6 @@ $(".js-alertTrue").click(function(){
     $(".js_memberAddressBtn").show();
 
 });
-
-
 
 var templet_isUpdate=false;//是否修改标识 true 是修改  false添加
 //获取省份信息
@@ -680,7 +677,6 @@ function loadUserInfoList(){
                         if(i%2==0){
                             addhtml+='<div class="member-addressbox o_g js_memberAddressList">';
                         }
-
                         addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox" addid="'+id+'">';
                         if(isDefault==1){
                             addhtml+='<div class="member-addresslistbox member-address-setdefault">';
