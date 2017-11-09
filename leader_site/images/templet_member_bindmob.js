@@ -165,7 +165,7 @@ $(function(){
             var templet_blur = function(){
                 $('.js-newMobile').blur();
             }
-            btnTimeOut($('.js-getinfo'),'10',' 重新获取验证码',templet_blur );
+            btnTimeOut($('.js-getinfo'),'60',' 重新获取验证码',templet_blur );
             //  个人中心绑定手机号发送验证码接口
             $.ajax({
                 dataType: "text",
@@ -246,8 +246,8 @@ $(function(){
         var templet_validatemobile=$('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
 
         if( templet_validatemobile) {
-            var templet_newMobile = $('.js-newMobile').val();
-            var templet_mobileCode = $('.js-mobileCode').val();
+            var templet_newMobile = $.trim($('.js-newMobile').val());
+            var templet_mobileCode = $.trim($('.js-mobileCode').val());
             $.ajax({
                 dataType: "text",
                 url: siteConfig.userUrl + "/ids/ts/userInfoManager.jsp",
