@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>统帅标准化模板</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+</head>
+
+<body>
+	<div class="o_body">
+        <div class="o_main">
+		    <!-- 导航 -->
+		    <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+		    <!-- 导航 End-->
+
+		    <div>
+		        这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区这里是页面主内容区
+		    </div>
+
+		    <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+		</div>
+	</div>
+	<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+</body>
+</html>

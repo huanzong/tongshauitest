@@ -1,0 +1,128 @@
+{
+   "curCategoryComparing_CustomizedParameters":[
+   <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  num="1">
+    <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
+      {
+      
+         "parameterCategoryName":"<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>",
+         "parameterList":[
+         <TRS_VIEWFIELDS>
+            [
+               "<TRS_VIEWFIELD FIELD="AnotherName" AUTOLINK='true' AUTOFORMATTYPE='JAVASCRIPT' ></TRS_VIEWFIELD>",
+               {
+                  "hasTTip":false,
+                  "TTipContentType":""
+               }
+            ], </TRS_VIEWFIELDS>
+            [
+               "",
+               {
+                  "hasTTip":false,
+                  "TTipContentType":""
+               }
+            ]
+         ]
+      },
+    </TRS_XVIEWFIELDGROUPS> 
+    </TRS_DOCUMENTS>
+
+      {
+         "parameterCategoryName":"",
+         "parameterList":[
+            [
+               "",
+               {
+                  "hasTTip":false,
+                  "TTipContentType":""
+               }
+            ]
+         ]
+      }
+   ],
+
+   "casCategoryCompareSub_forCurMainCategory":[
+   { 
+     "subCategoryName":"<TRS_CHANNEL ID="owner" AUTOLINK="false" />",
+     "moldforSubCategory":[
+        
+        <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind">
+        {
+           "productID":"<TRS_VIEWDATA FIELD="MetadataId" />",
+           "productJsonUrl":"<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='TRUE' />",
+           "subCategoryName":"<TRS_CHANNEL ID="owner" AUTOLINK="false" />",
+           "mold":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="modelno">产品型号</TRS_VIEWDATA>",
+           "seriesModel":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="xl">系列</TRS_VIEWDATA>",
+           "title":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="pname">产品名称</TRS_VIEWDATA>",
+           "linkUrl":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" UrlIsAbs="true" FIELD="_RECURL" AUTOLINK="true"></TRS_VIEWDATA>",
+           "imgSrc":"<TRS_VIEWAPPENDIX INDEX="0" UrlIsAbs="true" FIELD="_RECURL" UPLOAD="TRUE" MODE="PIC" WIDTH="136"></TRS_VIEWAPPENDIX>",
+           "msg":"<TRS_VIEWDATA FIELD="outline">确保Outline字段被载入</TRS_VIEWDATA>"
+        },
+        </TRS_DOCUMENTS>
+        {
+           "productID":"",
+           "subCategoryName":"",
+           "mold":"",
+           "seriesModel":"",
+           "title":"",
+           "linkUrl":"",
+           "imgSrc":""
+        }
+     ]
+  },
+  {
+     "subCategoryName":"",
+     "moldforSubCategory":[
+       {
+           "productID":"",
+           "productJsonUrl":"",
+           "subCategoryName":"",
+           "mold":"",
+           "seriesModel":"",
+           "title":"",
+           "linkUrl":"",
+           "imgSrc":"",
+           "msg":""
+        },        {
+           "productID":"",
+           "subCategoryName":"",
+           "mold":"",
+           "seriesModel":"",
+           "title":"",
+           "linkUrl":"",
+           "imgSrc":""
+        }
+     ]
+  }
+  ],
+   "productOtherCustomerCompare":[
+      {
+         "productID":"",
+         "mainCategoryName":"",
+         "subCategoryName":"",
+         "mold":"",
+         "title":"",
+         "linkUrl":"",
+         "imgSrc":"",
+         "price":"",
+         "starLevel":0,
+         "curCommentsNum":18,
+         "CustomizedParameters":[
+            {
+               "parameterCategoryName":"",
+               "parameterList":[
+                  [
+                     "",
+                     "",
+                     {
+                        "hasTTip":false,
+                        "TTipContentType":"",
+                        "hasContentIcon":false,
+                        "ContentIconSrc":""
+                     }
+                  ]
+               ]
+            }
+         ]
+      }
+   ]
+}
