@@ -230,6 +230,7 @@
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/jquery-jtemplates.js"></script>
     <script type="text/javascript" src="images/product_trolley.js"></script>
+    <script type="text/javascript" src="images/test.js"></script>
     <!-- Templates -->
     <p style="display:none">
          <textarea id="template-items">
@@ -241,38 +242,38 @@
                           <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
                         </div>
                         <a class="trolley-product-img" href="{$T.item.productShowVO.proUrl || 'javascript:;'}">
-                            <img src="{$T.item.productShowVO.goodsPic || '暂无'}">
+                            <img src="{$T.item.productShowVO.goodsPic}">
                         </a>
                         <div class="trolley-product-font">
                             <div class="trolley-middle-box">
                                 <div class="trolley-middle-inner js_trolleyFont">
                                     <p class="trolley-product-zh">{$T.item.productShowVO.goodsName || '暂无'}</p>
-                                    <p class="trolley-product-en">{$T.item.productShowVO.modelNo || '暂无'}</p>
+                                    <p class="trolley-product-en">{$T.item.productShowVO.modelNo || ''}</p>
                                 </div>
                                 <p class="trolley-product-xs">
-                                    <span class="js_trolleyPrice">￥{$T.item.skuShowVO.salePrice || '暂无'}</span>
-                                    <a class="opacity-0 trolley-xs-delete js_deleteXs js_proDelete" data-inskucode="{$T.item.skuShowVO.inSkuCode}">删除</a>
+                                    <span class="js_trolleyPrice">￥{$T.item.skuShowVO.salePrice || '0'}</span>
+                                    <a class="opacity-0 trolley-xs-delete js_deleteXs js_proDelete" data-cartGoodId="{$T.item.skuShowVO.cartGoodId}">删除</a>
                                     <a class="js_edit" data-oppo='edit'>编辑</a>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="o_u o_df_1-10 o_md_1-5 o_sm_1-5 o_xs-hide">
-                        <div class="trolley-price-only js_trolleyPrice">￥{$T.item.skuShowVO.salePrice || '暂无'}</div>
+                        <div class="trolley-price-only js_trolleyPrice">￥{$T.item.skuShowVO.salePrice || '0'}</div>
                     </div>
                     <div class="o_u o_df_1-10 o_lg_1-5 o_md_1-5 o_df-center trolley-number-xs">
                         <div class="trolley-number opacity-0 js_trolleyNumber" data-inskucode="{$T.item.skuShowVO.inSkuCode}">
                             <i class="iconfont icon-minus"></i>
-                            <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="1">
+                            <input type="text" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/" value="{$T.item.skuShowVO.quantity}">
                             <i class="iconfont icon-plus"></i>
-                            <a href="javascript:;" class="trolley-price-delete js_proDelete" data-inskucode="{$T.item.skuShowVO.inSkuCode}">删除</a>
+                            <a href="javascript:;" class="trolley-price-delete js_proDelete" data-cartGoodId="{$T.item.skuShowVO.cartGoodId}">删除</a>
                         </div>
                     </div>
                     <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
                         <div class="trolley-price-total">￥{$T.item.skuShowVO.salePrice*5 || '暂无'}</div>
                     </div>
                     <div class="o_u o_df_1-10 o_xs-hide">
-                        <a href="javascript:;" class="trolley-price-delete js_proDelete" data-inskucode="{$T.item.skuShowVO.inSkuCode}">删除</a>
+                        <a href="javascript:;" class="trolley-price-delete js_proDelete" data-cartGoodId="{$T.item.skuShowVO.cartGoodId}">删除</a>
                         <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                     </div>
                 </div>

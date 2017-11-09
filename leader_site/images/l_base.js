@@ -186,7 +186,6 @@ jQuery.ajaxSetup({
         }
         //contentType: "application/json; charset=utf-8",
         if (this.applicationType){
-            console.log('888');
             request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
         }
     },

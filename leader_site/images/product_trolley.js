@@ -5,8 +5,43 @@ $(function() {
 
     /**
      * 服务请求
-     **/
+     **/   
+    var skuServer = {
+        //根据inskucode集合查询SKU相关信息
+        getSkuByCodes:function(data,skuCodesObj){
+            $.ajax({
+                url: siteConfig.apiUrl+"/sku/front/sku/getSkuByCodes/",
+                type: 'get',
+                data: data,
+                success_cb: function(data){
+                    if(data.isSuccess){
+                        //测试数据
+                        // var data = trolleyListData;
+
+                        // 设置模版-填充数据并展示
+                        var trolleyData = data.data;
+                        jQuery.each(trolleyData,function(i,n){
+                            var cartGoodId =  skuCodesObj[n.skuShowVO.inSkuCode]['cartGoodId'],
+                                quantity =  skuCodesObj[n.skuShowVO.inSkuCode]['quantity'];
+                            n.skuShowVO['quantity'] = quantity;
+                            n.skuShowVO['cartGoodId'] = cartGoodId;
+                        })
+                        $(".js_trolleyListData").setTemplateElement("template-items");
+                        $(".js_trolleyListData").processTemplate(trolleyData);
+                        trolleyDatafun();
+                    }
+                        
+                },
+                error_cb: function(jqXHR, textStatus, errorThrown) {
+                    if(jqXHR.status==401){
+                        console.log('用户未登录');
+                    }
+                }
+            });
+        }
+    }
     var trolleyServer = {
+        //删除购物车商品
         delete:function(data){
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/delete/",
@@ -20,77 +55,64 @@ $(function() {
                         console.log('用户未登录');
                     }
                 }
-            })
+            });
         },
+        //获取购物车商品列表
         list:function(data){
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/list/",
+                // data: JSON.stringify(data),
                 applicationType:true,
-                data: JSON.stringify(trolleyData),
                 success_cb: function(data){
-                     var data = {
-                          "data": [{
-                                "productShowVO": {
-                                    "brandId": 1,
-                                    "createBy": "zhangjing",
-                                    "createDate": "2017-11-02",
-                                    "goodsName": "海尔大富豪冷冻冷藏转换柜",
-                                    "goodsPic": "images/compare_goods.PNG",
-                                    "id": 9523339,
-                                    "modelNo": 'BCD-LALAL',
-                                    "operateBy": "zhangjing",
-                                    "operateDate": "2017-11-07",
-                                    "orderMgr": "",
-                                    "proUrl": "",
-                                    "productId": "555",
-                                    "propertyJson": "[{\"outSkuCode\":0,\"available\":0,\"costPrice\":0,\"salePrice\":0,\"skuPicUrl\":\"\",\"property\":\"单规格该字段忽略\",\"inSkuCode\":\"555000\",\"siteId\":5,\"productId\":555,\"skuStockMgr\":\"\",\"freeze\":0,\"sale\":0,\"createBy\":\"zhangjing\",\"operateBy\":\"zhangjing\"}]",
-                                    "riseFlag": 0,
-                                    "skuStockMgr": "",
-                                    "supplierId": "",
-                                    "supplierName": "",
-                                    "supplierVcode": ""
-                                },
-                                "skuShowVO": {
-                                    "available": 0,
-                                    "brandId": 1,
-                                    "costPrice": 0,
-                                    "createBy": "xuyingdong",
-                                    "createDate": "2017-11-07",
-                                    "freeze": 0,
-                                    "inSkuCode": "555000",
-                                    "operateBy": "xuyingdong",
-                                    "operateDate": "2017-11-07",
-                                    "outSkuCode": "0",
-                                    "productId": "555",
-                                    "property": "单规格该字段忽略",
-                                    "sale": 0,
-                                    "salePrice": 10000,
-                                    "skuId": 158,
-                                    "skuPicUrl": "",
-                                    "skuStockMgr": ""
-                                }
-                            }],
-                            "isSuccess": true,
-                            "resultMsg": "执行成功！"
-                        }
-                    // 设置模版
-                    $(".js_trolleyListData").setTemplateElement("template-items");
-
-                    // 填充数据并展示
-                    $(".js_trolleyListData").processTemplate(data.data);
-
-        　　　      //这里也可以写成$("#result_container").setTemplateElement("template-items").processTemplate(data);
-                    trolleyDatafun();
+                    if(data.isSuccess){
+                        //inSkuCode集合
+                        var skuCodesArray = new Array();
+                        //购物车商品数量(quantity)和购物车商品id(cartGoodId)
+                        var skuCodesObj = new Object();
+                        jQuery.each(data.data,function(i,n){
+                            skuCodesArray.push(n.inSkuCode);
+                            skuCodesObj[n.inSkuCode] = new Object();
+                            skuCodesObj[n.inSkuCode]['cartGoodId'] = n.cartGoodId;
+                            skuCodesObj[n.inSkuCode]['quantity'] = n.quantity;
+                        });
+                        var skuData = {
+                            // skuCodes: skuCodesArray.join(','),
+                            skuCodes: skuCodesArray.join(','),
+                            regionCode: 2450
+                        } 
+                        //根据inskucode集合查询SKU相关信息
+                        skuServer.getSkuByCodes(skuData,skuCodesObj);
+                    }
                 },
                 error_cb: function(jqXHR, textStatus, errorThrown) {
                     if(jqXHR.status==401){
                         console.log('用户未登录');
                     }
                 }
-            })
+            });
+        },
+        //修改购物车商品数量
+        save:function(data){
+            $.ajax({
+                url: siteConfig.apiUrl+"/order/cartGoods/save/",
+                data: JSON.stringify(data),
+                applicationType:true,
+                success_cb: function(data){
+                    if (data.isSuccess) {
+                        console.log(000);
+                        return false;
+                    }
+                    return true;//终止购物车商品数量增减
+                },
+                error_cb: function(jqXHR, textStatus, errorThrown) {
+                    // if(jqXHR.status==401){
+                    //     console.log('用户未登录');
+                    // }
+                    return true;//终止购物车商品数量增减
+                }
+            });
         }
-
-    }
+    };
 
     $(window).resize(function() {
         init();
@@ -132,22 +154,33 @@ $(function() {
             // preNum:1,
 
             beforeMinusRule:function(num,ele){
-                if(num<=0){
-                    return true;//终止操作
+                if(num<1){
+                    return true;//终止操作,即终止+1
                 }else{
-                    var inskucode = $(ele).attr('data-inskucode');
+                    var inskucode = $(ele).attr('data-inskucode'),
+                        quantity = parseInt($(ele).find('input').val())-1;
+
                     var trolleyData = {
                         inSkuCode: inskucode,
-                        quantity: -1,
+                        quantity: quantity,
                         regionCode: 2450
                     }
-                    $.ajax({
-                        url: siteConfig.apiUrl+"/order/cartGoods/delete/",
-                        data: trolleyData,
-                        success_cb: function(data){
-                            console.log(data);
-                        },
-                    })
+                    return trolleyServer.save(trolleyData);
+                }
+            },
+            beforePlusRule:function(num,ele){
+                if(num<1){
+                    return true;//终止操作
+                }else{
+                    var inskucode = $(ele).attr('data-inskucode'),
+                        quantity = parseInt($(ele).find('input').val())+1;
+
+                    var trolleyData = {
+                        inSkuCode: inskucode,
+                        quantity: quantity,
+                        regionCode: 2450
+                    }
+                    return trolleyServer.save(trolleyData);
                 }
             }
 
@@ -177,10 +210,9 @@ $(function() {
                 //用户未登录时，物理删除
                 return false;
             }
-            var inskucode = $(this).attr('data-inskucode');
-            console.log(inskucode);
+            var cartGoodId = $(this).attr('data-cartGoodId');
             var trolleyData = {
-                cartGoodId : inskucode
+                cartGoodId : cartGoodId
             }
             trolleyServer.delete(trolleyData);
         });
@@ -192,87 +224,6 @@ $(function() {
         // jumpToLoginPage();
     }
 
-    var trolleyData = {
-        // cartGoodsQueryDTO:{},
-    };
-    $.ajax({
-        url: siteConfig.apiUrl+"/order/cartGoods/list/",
-        data: JSON.stringify(trolleyData),
-        // contentType:"application/json; charset=utf-8",
-        applicationType:true,
-        success_cb: function(data){
-             var data = {
-                  "data": [{
-                        "productShowVO": {
-                            "brandId": 1,
-                            "createBy": "zhangjing",
-                            "createDate": "2017-11-02",
-                            "goodsName": "海尔大富豪冷冻冷藏转换柜",
-                            "goodsPic": "images/compare_goods.PNG",
-                            "id": 9523339,
-                            "modelNo": 'BCD-LALAL',
-                            "operateBy": "zhangjing",
-                            "operateDate": "2017-11-07",
-                            "orderMgr": "",
-                            "proUrl": "",
-                            "productId": "555",
-                            "propertyJson": "[{\"outSkuCode\":0,\"available\":0,\"costPrice\":0,\"salePrice\":0,\"skuPicUrl\":\"\",\"property\":\"单规格该字段忽略\",\"inSkuCode\":\"555000\",\"siteId\":5,\"productId\":555,\"skuStockMgr\":\"\",\"freeze\":0,\"sale\":0,\"createBy\":\"zhangjing\",\"operateBy\":\"zhangjing\"}]",
-                            "riseFlag": 0,
-                            "skuStockMgr": "",
-                            "supplierId": "",
-                            "supplierName": "",
-                            "supplierVcode": ""
-                        },
-                        "skuShowVO": {
-                            "available": 0,
-                            "brandId": 1,
-                            "costPrice": 0,
-                            "createBy": "xuyingdong",
-                            "createDate": "2017-11-07",
-                            "freeze": 0,
-                            "inSkuCode": "555000",
-                            "operateBy": "xuyingdong",
-                            "operateDate": "2017-11-07",
-                            "outSkuCode": "0",
-                            "productId": "555",
-                            "property": "单规格该字段忽略",
-                            "sale": 0,
-                            "salePrice": 10000,
-                            "skuId": 158,
-                            "skuPicUrl": "",
-                            "skuStockMgr": ""
-                        }
-                    }],
-                    "isSuccess": true,
-                    "resultMsg": "执行成功！"
-             }
-            // 设置模版
-            $(".js_trolleyListData").setTemplateElement("template-items");
-
-            // 填充数据并展示
-            $(".js_trolleyListData").processTemplate(data.data);
-
-　　　      //这里也可以写成$("#result_container").setTemplateElement("template-items").processTemplate(data);
-            trolleyDatafun();
-        },
-        error_cb: function(jqXHR, textStatus, errorThrown) {
-            if(jqXHR.status==401){
-                console.log('用户未登录');
-            }
-        }
-    })
+    //获取购物车列表
+    trolleyServer.list();
 });
-function buyAjax(params) {
-    if(!params.url){
-        console.log('url参数不能为空');
-        return false;
-    }
-    var ajaxParams = {
-        data: {},
-        type: 'post',
-        login:true,
-        contentType: "application/json; charset=utf-8",
-    };
-    jQuery.extend(ajaxParams, params);
-    return $.ajax(ajaxParams);
-}
