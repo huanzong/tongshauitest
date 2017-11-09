@@ -10,25 +10,24 @@
         <div class="o_u o_xs_2-12"></div>
 
         <div class="memeber-nav-userinfo o_u o_xs_2-12">
-            <img src="" alt="" class="js-imghead">
-            <p class="js_navUserId"></p>
+            <a href="/info/?to=header"> <img src="" alt="" class="js-imghead"></a>
+            <a href="/info/ "> <p class="js_navUserId"></p></a>
             <!--<span class="l-tag-padding l-tag-orange">普通会员</span>-->
         </div>
         <ul class="memeber-nav-left-list o_u  o_xs_2-12">
             <li class="">
                 <a href="/security" class="iconfont icon-protect-solid"><span>账号安全</span><i></i></a><i class="js-securitysetting"></i>
             </li>
-            <li class="">
+            <li class="js-cart">
                 <a href="/cart" class="iconfont icon-shoppingcart"><span>购物车</span></a>
                 <!--<i class="member-nub-round">9</i>-->
             </li>
             <!--<li class="">-->
-                <!--<a href="javascript:;" class="iconfont icon-price-tag-solid1"><span>优惠卷</span></a><i class="member-nub-round">9</i>-->
+            <!--<a href="javascript:;" class="iconfont icon-price-tag-solid1"><span>优惠卷</span></a><i class="member-nub-round">9</i>-->
             <!--</li>-->
         </ul>
         <div class="o_u o_xs_2-12 iconfont icon-menu memeber-nav-top-btn js_navxsbtn" data-alt="1"></div>
     </div>
-
 </div>
 <div class="o_u o_df_2-12 o_lg_3-12 o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle js_memberNavMiddle">
     <div class="o_u o_df_6-10 o_xs_2-3 memeber-nav-middle-listbox">
