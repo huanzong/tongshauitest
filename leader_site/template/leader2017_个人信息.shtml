@@ -53,7 +53,6 @@
                                                         <input id="js_loginName" type="text" name="" ph="" value="" />
                                                     </div>
                                                     <div class="l-input member-personalinfo-namefixed js_personalinfo-namefixed">
-                                                        <p>asdasdasdasd</p>
                                                     </div>
                                                 </div>
                                                 <div class=" personalist-right js_personalistwrongbox_user ">
