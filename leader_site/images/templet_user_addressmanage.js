@@ -10,8 +10,6 @@ if(!istrsidssdssotoken()){
 }
 loadUserInfoList();//获取用户地址列表
 
-var templet_pageNo=1;
-var templet_pageSize=10;
 //取消弹框提示
 var templet_text="确定取消添加吗？";
 $('.js_addressCancel').click(function(){
@@ -21,8 +19,9 @@ $('.js_addressCancel').click(function(){
 $(".js-alertTrue").click(function(){
     $(".js_form_addAddrManagement").hide();
     $(".js_memberAddressBtn").show();
-
 });
+var templet_pageNo=1;
+var templet_pageSize=10;
 
 var templet_isUpdate=false;//是否修改标识 true 是修改  false添加
 //获取省份信息
@@ -59,7 +58,6 @@ function buildProvinces(){
     })
 }
 
-
 //获取市信息
 function buildCity(){
     var shengCode=$("#js_save option:selected").attr("shengCode");
@@ -91,9 +89,7 @@ function buildCity(){
                 templet_select_qu.lose();
                 templet_select_road.init();
                 templet_select_road.lose();
-
             }
-
         },
         error:function(){}
     })
@@ -158,7 +154,6 @@ function buildRoad(){
                 }
                 templet_select_road.init();
             }
-
         },
         error:function(){}
     })
@@ -176,24 +171,6 @@ $("#js_city").change(function(){
 $("#js_area").change(function(){
     buildRoad();
 })
-
-
-//校验表单验证，成功后保存地址
-$(".js_form_addAddrManagement").Validform({
-    tiptype:3,
-    btnSubmit:".js_btnSubmit",//提交按钮
-    callback:function(form){//验证后保存地址
-        var templet_type=$(".js_btnSubmit").attr("type");//判断保存和修改
-        if(templet_type==1){
-            saveUserAddress();
-        }else if(templet_type==2){
-            updateUserAddress();
-        }
-        return false;
-    }
-});
-
-
 
 //新增地址
 var templet_isSubmiting=false;
@@ -227,10 +204,9 @@ function saveUserAddress(){
         "regionDetail":addressVal,
         "telPhone":telPhoneVal
     }
-
     templet_isSubmiting=true;
     $.ajax({
-        url:siteConfig.userUrl+"/user/front/userRegion/save",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
         type:"post",
         dataType:"json",
         data:data,
@@ -250,9 +226,100 @@ function saveUserAddress(){
             templet_isSubmiting=false;
         }
     });
-
     return bool;
 }
+
+//校验表单验证，成功后保存地址
+$(".js_form_addAddrManagement").Validform({
+    tiptype:3,
+    btnSubmit:".js_btnSubmit",//提交按钮
+    callback:function(form){//验证后保存地址
+        var templet_type=$(".js_btnSubmit").attr("type");//判断保存和修改
+        if(templet_type==1){
+            saveUserAddress();
+        }else if(templet_type==2){
+            updateUserAddress();
+        }
+        return false;
+    }
+});
+
+//获取用户地址列表
+function loadUserInfoList(){
+    $.ajax({
+        url: siteConfig.userUrl+"/hshop-user/front/userRegion/list",
+        type: "post",
+        dataType: "json",
+        data:{
+            "pageNo":templet_pageNo,
+            "pageSize":templet_pageSize
+        },
+        success:function(data){
+            if(data.isSuccess){
+                var addlist = data.data.entities;
+                var count = addlist.length;
+                if(count != 0){
+                    $(".js_memberAddressBtn").show();//显示"新增地址"按钮
+                    $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
+                        templet_text = '确定取消添加？';
+                        resetForm();
+                        $(".js_btnSubmit").attr("type",1);
+                        $(".js_form_addAddrManagement").show();
+                        $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
+                    })
+                    $(".js_lineInfo").html("");
+                    var addhtml="";
+                    for(var i=0;i<count;i++){
+                        var id = addlist[i].id;//地址id
+                        var address = addlist[i].regionDetail ;//详细地址
+                        var isDefault  = addlist[i].isDefault ;//否默认地址  1:是 0:否
+                        var customerName  = addlist[i].customerName ;//用户名
+                        var mobilePhone  = addlist[i].mobilePhone ;//手机号
+                        var province = addlist[i].provinceName ;//省
+                        var cityName  = addlist[i].cityName ;//市
+                        var areaName = addlist[i].areaName ;//区
+                        var streetName = addlist[i].streetName ;//街道
+                        if(i%2==0){
+                            addhtml+='<div class="member-addressbox o_g js_memberAddressList">';
+                        }
+                        addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox" addid="'+id+'">';
+                        if(isDefault==1){
+                            addhtml+='<div class="member-addresslistbox member-address-setdefault">';
+                        }else{
+                            addhtml+='<div class="member-addresslistbox">';
+                        }
+                        addhtml+='<div class="member-address-name">'+customerName+'</div>';
+                        addhtml+='<div class="member-address-mobnumber">'+mobilePhone+'</div>';
+                        addhtml+='<div class="member-address-addtext">'+address+'</div>';
+                        addhtml+='<div class="member-address-btnbox">';
+                        addhtml+='<i class="iconfont icon-pencil-solid"></i>';
+                        addhtml+='<a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>';
+                        addhtml+='<div class="member-address-line"></div>';
+                        addhtml+='<a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>';
+                        addhtml+='</div>';
+                        addhtml+='<span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>';
+                        addhtml+='<a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a>'
+
+                        addhtml+='</div></div>';
+                        if(i%2!=0){
+                            addhtml+='</div>';
+                        }
+                        if(i%2==0 && i==count){
+                            addhtml+='</div>';
+                        }
+                    }
+                    $(".js_lineInfo").html(addhtml);
+
+                }else{
+                    $(".js_form_addAddrManagement").show();//显示"新增地址"表单
+
+
+                }
+
+            }
+        }
+    })
+};
 
 //重置新增表单项
 function resetForm(){
@@ -273,7 +340,6 @@ function resetForm(){
     templet_select_shi.lose();
     templet_select_qu.lose();
     templet_select_road.lose();
-
 };
 
 
@@ -282,14 +348,13 @@ $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     $.ajax({
-        url:siteConfig.userUrl+"/user/front/userRegion/defaultRegion",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/defaultRegion",
         type:"post",
         dataType: "json",
         data:{
             "id":addressId,
             "isDefault":1,
         },
-
         success:function(responseT){
             if(responseT.isSuccess){
                 //loadUserInfoList();//获取列表
@@ -323,7 +388,7 @@ function deleteAddress(addId) {
         var data = {id: addId};
         //是否删除提示****
         $.ajax({
-            url:siteConfig.userUrl+"/user/front/userRegion/deleteRegion",
+            url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
             type:"get",
             dataType: "json",
             data:data,
@@ -358,7 +423,7 @@ function getAddressInfo(id){
     saveId=id;
     var data = {id:id};
     $.ajax({
-        url:siteConfig.userUrl+"/user/front/userRegion/show",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/show",
         type:"get",
         data:data,
         dataType: "json",
@@ -383,8 +448,6 @@ function getAddressInfo(id){
                 $("#phonequhao").val(telPhone2[0]);
                 $("#phone").val(telPhone2[1]);
                 $("#phonefenjihao").val(telPhone2[2]);
-
-
                 if(templet_isUpdate){
                     $("#js_save").change();
                     $("#js_city").change();
@@ -399,8 +462,6 @@ function getAddressInfo(id){
                 $("#js_area").change(function(){
                     loadRoadList();
                 });
-
-
                 $.ajax({
                     url: siteConfig.userUrl+"/interaction-service/regionInfo/regionList",
                     type: "get",
@@ -598,7 +659,6 @@ function updateUserAddress(){
     if (addressVal == "尽可能详解地填写街道、楼号、楼层、门牌号") {
         addressVal = "";
     }
-
     var data = {
         "customerName":realnameVal,
         "provinceName":provinceVal,
@@ -615,7 +675,7 @@ function updateUserAddress(){
     }
     templet_isSubmiting = true;
     $.ajax({
-        url:siteConfig.userUrl+ "/user/front/userRegion/update",
+        url:siteConfig.userUrl+ "/hshop-user/front/userRegion/update",
         type: "post",
         dataType: "json",
         data: data,
@@ -635,87 +695,9 @@ function updateUserAddress(){
             templet_isSubmiting = false;
         }
     });
-
     return bool;
 }
 
-//获取用户地址列表
-function loadUserInfoList(){
-    $.ajax({
-        url: siteConfig.userUrl+"/user/front/userRegion/list",
-        type: "post",
-        dataType: "json",
-        data:{
-            "pageNo":templet_pageNo,
-            "pageSize":templet_pageSize
-        },
-        success:function(data){
-            if(data.isSuccess){
-                var addlist = data.data.entities;
-                var count = addlist.length;
-                if(count != 0){
-                    $(".js_memberAddressBtn").show();//显示"新增地址"按钮
-                    $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
-                        templet_text = '确定取消添加？';
-                        resetForm();
-                        $(".js_btnSubmit").attr("type",1);
-                        $(".js_form_addAddrManagement").show();
-                        $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
-                    })
-                    $(".js_lineInfo").html("");
-                    var addhtml="";
-                    for(var i=0;i<count;i++){
-                        var id = addlist[i].id;//地址id
-                        var address = addlist[i].regionDetail ;//详细地址
-                        var isDefault  = addlist[i].isDefault ;//否默认地址  1:是 0:否
-                        var customerName  = addlist[i].customerName ;//用户名
-                        var mobilePhone  = addlist[i].mobilePhone ;//手机号
-                        var province = addlist[i].provinceName ;//省
-                        var cityName  = addlist[i].cityName ;//市
-                        var areaName = addlist[i].areaName ;//区
-                        var streetName = addlist[i].streetName ;//街道
-                        if(i%2==0){
-                            addhtml+='<div class="member-addressbox o_g js_memberAddressList">';
-                        }
-                        addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox" addid="'+id+'">';
-                        if(isDefault==1){
-                            addhtml+='<div class="member-addresslistbox member-address-setdefault">';
-                        }else{
-                            addhtml+='<div class="member-addresslistbox">';
-                        }
-                        addhtml+='<div class="member-address-name">'+customerName+'</div>';
-                        addhtml+='<div class="member-address-mobnumber">'+mobilePhone+'</div>';
-                        addhtml+='<div class="member-address-addtext">'+address+'</div>';
-                        addhtml+='<div class="member-address-btnbox">';
-                        addhtml+='<i class="iconfont icon-pencil-solid"></i>';
-                        addhtml+='<a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>';
-                        addhtml+='<div class="member-address-line"></div>';
-                        addhtml+='<a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>';
-                        addhtml+='</div>';
-                        addhtml+='<span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>';
-                        addhtml+='<a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a>'
-
-                        addhtml+='</div></div>';
-                        if(i%2!=0){
-                            addhtml+='</div>';
-                        }
-                        if(i%2==0 && i==count){
-                            addhtml+='</div>';
-                        }
-                    }
-                    $(".js_lineInfo").html(addhtml);
-
-                }else{
-                    $(".js_form_addAddrManagement").show();//显示"新增地址"表单
-
-
-                }
-
-            }
-        }
-    })
-
-};
 
 
 
