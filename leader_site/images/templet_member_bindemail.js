@@ -165,7 +165,7 @@ $(function(){
             //  个人中心绑定邮箱发送验证码接口
             $.ajax({
                 dataType: "text",
-                url: siteConfig.userUrl+"/",
+                url: siteConfig.userUrl+"/ids/ts/userInfoManager.jsp",
                 data: {
                     'editOperation':'sendBindEmailCode',
                     'newEmail':templet_newEmail
