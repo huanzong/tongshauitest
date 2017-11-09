@@ -34,6 +34,8 @@ $(function(){
                     $("#js_resetpassword").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
 
                     $('.js-send').html('邮箱验证');
+                    $('.js_emailCodeYz').show();
+                    $('.js_phoneCodeYz').hide();
                     $('.js-sendmobile').hide();
                     $('.js-sendmail').show();
 
@@ -45,6 +47,8 @@ $(function(){
                     $("#js_resetpassword").append("<option value='1'>手机（"+templet_callphone+"）</option>");
 
                     $('.js-send').html('短信验证');
+                    $('.js_phoneCodeYz').show();
+                    $('.js_emailCodeYz').hide();
                     $('.js-sendmobile').show();
                     $('.js-sendmail').hide();
                 }
