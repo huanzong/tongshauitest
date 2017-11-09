@@ -296,7 +296,8 @@ function loadUserInfoList(){
                         addhtml+='<i class="iconfont icon-pencil-solid"></i>';
                         addhtml+='<a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>';
                         addhtml+='<div class="member-address-line"></div>';
-                        addhtml+='<a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>';
+                        //addhtml+='<a href="javascript:;" onclick="deleteAddress('+id+')" addid="'+id+'">删除</a>';
+                        addhtml+='<a href="javascript:;" class="deleteAddress" addid="'+id+'">删除</a>';
                         addhtml+='</div>';
                         addhtml+='<span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>';
                         addhtml+='<a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a>'
@@ -383,7 +384,8 @@ $(".js_addressSetDefault").live("click",function(){
 });
 
 //删除地址
-function deleteAddress(addId) {
+/*function deleteAddress(addId) {
+
     globalShade("确定要删除吗？");
     $(".js-alertTrue").click(function(){
         var data = {id: addId};
@@ -409,13 +411,39 @@ function deleteAddress(addId) {
             },
             error:function(){
                 //删除失败提示****
-                /*globalShade2(responseT.resultMsg,2,2000);*/
+                /!*globalShade2(responseT.resultMsg,2,2000);*!/
             }
         })
     })
 
-}
+}*/
 
+//删除地址2
+$(".deleteAddress").click(function(){
+    var addressId=$(this).attr("addid");
+    var $this=$(this);
+    $.ajax({
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
+        type:"get",
+        dataType: "json",
+        data:{"id": addressId},
+        success:function(responseT){
+            if(responseT.isSuccess){
+                loadUserInfoList();
+                //删除成功之后进行前端元素操作
+                $this.parents(".js_addressBox").remove();
+            }else{
+                //删除失败提示*****
+                globalShade2("删除失败,请稍后重试...",2,2000);
+            }
+        },
+        error:function(){
+            //删除失败提示****
+            /*globalShade2(responseT.resultMsg,2,2000);*/
+        }
+    })
+
+})
 var saveId="";
 //修改地址获取信息
 function getAddressInfo(id){
