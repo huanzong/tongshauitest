@@ -1,7 +1,7 @@
 <div class="o_u o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
     <div class="o_u o_df_9-12 o_lg_2-2 o_xs_2-2">
         <a href="http://test.tongshuai.com/"><div class="memeber-nav-logo o_u o_xs_2-12">
-            <img src="images/l_logo.png" alt=""  ignoreapd="1" >
+            <img src="../images/l_logo.png" alt=""  ignoreapd="1" >
         </div></a>
         <div class=" o_u o_xs_2-12 memeber-nav-logo-text">
             个人中心
