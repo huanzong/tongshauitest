@@ -1,0 +1,60 @@
+{
+         "productID":"<TRS_DOCUMENT FIELD="DOCID" />",
+         "new":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="xinpin">新品</TRS_VIEWDATA>",
+         "rm":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="remaipin">热卖</TRS_VIEWDATA>",
+         "mainCategoryName":"<TRS_CHANNEL ID="OWNER" AUTOLINK="false" />",
+         "subCategoryName":"<TRS_CHANNEL ID="PARENT" AUTOLINK="false" />",
+         "mold":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="modelno">产品型号</TRS_VIEWDATA>",
+         "seriesModel":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="xl">系列</TRS_VIEWDATA>",
+         "title":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="pname">产品名称</TRS_VIEWDATA>",
+         "linkUrl":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" UrlIsAbs="true" AUTOFORMAT="true" FIELD="_RECURL" AUTOLINK="true">发布路径</TRS_VIEWDATA>",
+         "imgSrc":"<TRS_VIEWAPPENDIX INDEX="0" UrlIsAbs="true" UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC" WIDTH="136">图片</TRS_VIEWAPPENDIX>",
+         "price":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="price">产品价格</TRS_VIEWDATA>",
+         "starLevel":0,
+         "curCommentsNum":18,
+         "msg":"<TRS_VIEWDATA FIELD="Outline">确保Outline字段被载入</TRS_VIEWDATA>",
+         "CustomizedParameters":[
+         <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
+            {
+               "parameterCategoryName":"<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>",
+               "parameterList":[
+               <TRS_VIEWFIELDS> <TRS_VIEWDATA  FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">
+                  [
+                     "<TRS_VIEWFIELD FIELD="AnotherName"></TRS_VIEWFIELD>",
+                     "<TRS_VIEWDATA  FIELD="${@DBFieldName}" DELIM="/" ISLABEL="true" AUTOFORMAT="true" AUTOFORMATTYPE="JAVASCRIPT" > </TRS_VIEWDATA>",
+                     {
+                        "hasTTip":false,
+                        "TTipContentType":"",
+                        "hasContentIcon":false,
+                        "ContentIconSrc":""
+                     }
+                  ], </TRS_VIEWDATA> </TRS_VIEWFIELDS>
+                  [
+                     "",
+                     "",
+                     {
+                        "hasTTip":false,
+                        "TTipContentType":"",
+                        "hasContentIcon":false,
+                        "ContentIconSrc":""
+                     }
+                  ]
+               ]
+            },</TRS_XVIEWFIELDGROUPS>
+            {
+               "parameterCategoryName":"",
+               "parameterList":[
+                  [
+                     "",
+                     "",
+                     {
+                        "hasTTip":false,
+                        "TTipContentType":"",
+                        "hasContentIcon":false,
+                        "ContentIconSrc":""
+                     }
+                  ]
+               ]
+            }
+         ]
+      }

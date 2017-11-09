@@ -1,0 +1,30 @@
+[
+    <trs_channels>
+    <!--<trs_channel field="CHANNELSTATE"/>-->
+    <TRS_CONDITION REFERENCE="1" CONDITION="@CHANNELSTATE" OPERATOR="==" >
+
+    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="contain" not="true">
+    {
+        "id":"<TRS_CHANNEL FIELD="CHANNELID" />",
+        "name":"<TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" />",
+        "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data_57.json"
+        
+    },
+    </TRS_CONDITION>
+
+    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="contain">
+    <trs_channels id="owner" startpos="3">
+    {
+        "id":"<TRS_CHANNEL FIELD="CHANNELID" />",
+        "name":"<TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" />",
+        "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data.json"
+        
+    },
+    </trs_channels>
+    </TRS_CONDITION>
+
+    </TRS_CONDITION>
+    </trs_channels>
+    {}
+    
+]

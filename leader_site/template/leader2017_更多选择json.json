@@ -1,0 +1,14 @@
+[
+      <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="wcmdocument.docid desc" num="6">
+    {
+        "pname":"<TRS_VIEWDATA FIELD="pname" />",
+        "modelno":"<TRS_VIEWDATA FIELD="modelno" />",
+        "cpms":"<TRS_VIEWDATA FIELD="cpms"  num='33'/>",
+        "dochref": "<TRS_VIEWDATA FIELD='_RECURL' AA='AA' UrlIsAbs='true'></TRS_VIEWDATA>", 
+        "pic":"<TRS_XAPPENDIXS MODE='PIC' STARTPOS="0" num="1"><TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/></TRS_XAPPENDIXS>",
+        "sku_value":<trs_viewdata field="sku_values"><TRS_CONDITION CONDITION='@sku_values' OPERATOR="blank" not="true"><trs_viewdata field="sku_values"/></TRS_CONDITION><TRS_CONDITION CONDITION='@sku_values' OPERATOR="blank">""</TRS_CONDITION></trs_viewdata>
+    },  
+      </TRS_DOCUMENTS>
+                      
+    {}  
+]
