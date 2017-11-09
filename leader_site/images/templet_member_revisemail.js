@@ -224,11 +224,6 @@ $(function(){
             $(this).siblings('.Validform_checktip').removeClass('Validform_wrong').addClass('Validform_right');
         }else {
             $(this).siblings('.Validform_checktip').removeClass('Validform_right').addClass('Validform_wrong');
-            if (templet_newEmail.length == 0) {
-                $('.js-newEmailerror').html("<i class='iconfont icon-information-solid'></i>邮箱不能为空");
-            } else {
-                $('.js-newEmailerror').html("<i class='iconfont icon-information-solid'></i>邮箱格式错误");
-            }
         }
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
