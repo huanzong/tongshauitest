@@ -10,9 +10,9 @@
                         <div class="o_u o_xs_2-12"></div>
 
                         <div class="memeber-nav-userinfo o_u o_xs_2-12">
-                            <img src="images/member_navhd_img.jpg" alt="">
-                            <p class="js_navUserId">15024865424@sina.com</p>
-                            <span class="l-tag-padding l-tag-orange">普通会员</span>
+                            <a href="javascript:;"><img src="images/member_navhd_img.jpg" alt=""></a>
+                            <a  href="javascript:;" ><p class="js_navUserId">15024865424@sina.com</p></a>
+                            <!--<span class="l-tag-padding l-tag-orange">普通会员</span>-->
                         </div>
                         <ul class="memeber-nav-left-list o_u  o_xs_2-12">
                             <li class="">
