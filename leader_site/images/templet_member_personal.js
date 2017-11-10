@@ -7,9 +7,21 @@
 $(function(){
 
     // 前台判断是否登陆
-    //if(!istrsidssdssotoken()){
-    //    jumpToLoginPage();
-    //}
+    if(!istrsidssdssotoken()){
+       jumpToLoginPage();
+    }
+
+    var templet_orderId=getQueryString("to");
+    if('header'==templet_orderId){
+        var tabNmu =$('.js-personalPicuure').index();
+        $('.js-personalinfotabcont').hide();
+        $('.js-personalinfotabcont').eq(tabNmu).show()
+        $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
+        $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
+        $('.js-uploadPhoto').show();
+        $('.js-modifyPhoto').hide();
+        $('.js-modifyPhotoBtn').hide();
+    }
 
     var templet_select_sheng=$("#js_save").oSelect();
     var templet_select_shi=$("#js_city").oSelect();
@@ -32,9 +44,21 @@ $(function(){
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
 
-                //loginName 需要在这里调取接口判断一下他是不是之前修改过 如果没修改过就是TEXT 修改过是不能填写的
+
+                //loginName 需要在这里判断一下他是不是之前修改过 如果没修改过就是TEXT 修改过是不能填写的
+                var loginName_regexp=/^H\d{3}R\d{13}$/;
+
                 template_loginName=jQuery.trim(data.data.loginName);
                 $('#js_loginName').val(template_loginName);
+                $('.js_personalinfo-namefixed').html('<p>'+template_loginName+'</p>');
+
+                if(loginName_regexp.test(template_loginName)){
+                    $('.js_member').show();
+                    $('.js_personalinfo-namefixed').hide();
+                }else{
+                    $('.js_member').hide();
+                    $('.js_personalinfo-namefixed').show();
+                }
 
                 //性别
                 template_sex=jQuery.trim(data.data.sex);
@@ -317,7 +341,6 @@ $(function(){
             globalShade2('正在提交，请稍后','3');
             return;
         }
-        $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
         $('.js_personalistwrongbox_address').addClass('personalist-right').removeClass('personalist-wrong-box');
         $('.js_personalistwrongbox_data').addClass('personalist-right').removeClass('personalist-wrong-box');
 
@@ -332,7 +355,6 @@ $(function(){
         var templet_areaId=$.trim($("#js_area  option:selected").val());
 
         if( $('.js_personalistwrongbox_user').hasClass('personalist-wrong-box') || templet_loginName==''){
-            wrongInfo($('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名格式不正确');
             return;
         }
 
@@ -407,4 +429,9 @@ $(function(){
     });
 })
 
-
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}
