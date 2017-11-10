@@ -116,8 +116,6 @@ $(function() {
             });
         }
     };
-
-    //
     //获取用户信息
     var userServer = {
        getUserInfo:function(){
@@ -144,8 +142,6 @@ $(function() {
     }
 
     $(".js_checkbox").jq_qvote();
-
-
 
     /**
      *   服务对接
