@@ -97,7 +97,7 @@ $(function () {
     })
 
     var templet_isSubmiting=false;
-    $('.js-memberShareGetUp').unbind().click(function () {
+    $('.js-memberShareGetUp').unbind().click(function() {
         if(templet_isSubmiting){//正在提交
             globalShade2('正在提交','3');
             return;
@@ -121,7 +121,7 @@ $(function () {
         if(templet_innerWidth<750){
             templet_devSource=2;
         }
-        templet_isSubmiting=true;
+
         var commentpics='';
         $(".js_sharephotobox").find('li:not(.empty)').each(function(){
             var imgurl=$(this).find("img").attr("src");
@@ -197,7 +197,7 @@ $(function () {
     });
     $.jUploader.setDefaults({
         cancelable: true, // 可取消上传
-        allowedExtensions: ['jpg', 'png', 'gif'], // 只允许上传图片
+        allowedExtensions: ['jpg', 'png', 'jpeg'], // 只允许上传图片
         messages: {
             upload: '上传',
             cancel: '取消',
@@ -209,6 +209,7 @@ $(function () {
     });
     $.jUploader({
         fileField: 'file',
+        fillsize:'2',
         button: "js_shareimgUpload", // 这里设置按钮id
         action: siteConfig.domain+'/interaction-comment/comment/imageUpload/',//这里写地址
         // 开始上传事件
@@ -252,17 +253,4 @@ $(function () {
 $('.js_share_getup_false').click(function(){
     globalShade2('最多可以上传10张图片', 3, '2000');
 });
-//        删除图片
-$('.js_sharePhotoDelect').unbind().live('click',function(){
 
-    $(this).siblings('img').attr('src',' ').parents('.member-share-photo-cur').remove();
-    $('.js_sharephotoNub').html($('.js_sharephotobox').children('li').length);
-    var photoNub=$('.js_sharephotobox').children('li').length;
-    if(photoNub>=10) {
-        $('#js_shareimgUpload').hide();
-        $('.js_share_getup_false').css('display','inline-block');
-    }else{
-        $('#js_shareimgUpload').show();
-        $('.js_share_getup_false').hide();
-    }
-    })

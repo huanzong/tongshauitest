@@ -310,7 +310,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="zrj"/></div>
-                                        <div class="fontpoint-small">总容积</div>
+                                        <div class="fontpoint-small">总容积(L)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -343,7 +343,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="symj"/></div>
-                                        <div class="fontpoint-small">适用面积</div>
+                                        <div class="fontpoint-small">适用面积(㎡)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -364,13 +364,13 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="xdrl"/></div>
-                                        <div class="fontpoint-small">洗涤容量</div>
+                                        <div class="fontpoint-small">洗涤容量(KG)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="kd"/></div>
-                                        <div class="fontpoint-small">宽度</div>
+                                        <div class="fontpoint-small">宽度(mm)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -385,13 +385,13 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="jsrj"/></div>
-                                        <div class="fontpoint-small">机身容积</div>
+                                        <div class="fontpoint-small">机身容积(L)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="jrgl"/></div>
-                                        <div class="fontpoint-small">加热功率</div>
+                                        <div class="fontpoint-small">加热功率(W)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -418,7 +418,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="ss"/></div>
-                                        <div class="fontpoint-small">升数</div>
+                                        <div class="fontpoint-small">升数(L)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -439,7 +439,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="jsrj"/></div>
-                                        <div class="fontpoint-small">机身容积</div>
+                                        <div class="fontpoint-small">机身容积(L)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -508,7 +508,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="zrj"/></div>
-                                        <div class="fontpoint-small">总容积</div>
+                                        <div class="fontpoint-small">总容积(L)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">

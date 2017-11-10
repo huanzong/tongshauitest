@@ -4,16 +4,16 @@
         // SSI = require('browsersync-ssi'),
         reload = browserSync.reload,
         watch = require('gulp-watch'),
-        uglify = require('gulp-uglify'), 
-        concat = require('gulp-concat'), 
-        jshint = require('gulp-jshint'), 
+        uglify = require('gulp-uglify'),
+        concat = require('gulp-concat'),
+        jshint = require('gulp-jshint'),
         csscomb = require('gulp-csscomb'),
-        csslint = require('gulp-csslint'), 
+        csslint = require('gulp-csslint'),
         csso = require('gulp-csso'),
         prefixer = require('gulp-autoprefixer'),
-        clean = require('gulp-clean'), 
+        clean = require('gulp-clean'),
         rename = require("gulp-rename"),
-        zip = require('gulp-zip'), 
+        zip = require('gulp-zip'),
         imagemin = require('gulp-imagemin'),
         pngquant = require('imagemin-pngquant'),
         template = require('gulp-template'),
@@ -75,13 +75,13 @@
 
 
     // js压缩发布
-    gulp.task('jstask-min', ['jstask'], function() {
-        return gulp.src('./build/*.js')
+    gulp.task('jstask-min', function() {
+        return gulp.src(['./images/member_nav.js', './images/templet_member_nav.js'])
             // 合并js
-            .pipe(concat('main.min.js'))
+            .pipe(concat('templet_member_nav.min.js'))
             // 压缩js
-            .pipe(uglify())
-            .pipe(gulp.dest('./build'));
+            // .pipe(uglify())
+            .pipe(gulp.dest('./images'));
     });
 
 
@@ -118,7 +118,7 @@
     // css压缩发布
     gulp.task('csstask-min', ['csstask'], function() {
         return gulp.src('./build/*.css')
-            //压缩css 
+            //压缩css
             .pipe(csso())
             .pipe(gulp.dest('./build/'));
     });
@@ -192,7 +192,7 @@
 
 
 
-    // ----- 文件操作 ----- 
+    // ----- 文件操作 -----
 
     // 文件清理
     gulp.task('clean', function() {
@@ -222,7 +222,7 @@
             }));
     });
 
-    // ----- 压缩图片 ----- 
+    // ----- 压缩图片 -----
 
     //压缩图片 - imagemin
     gulp.task('imagemin', function() {
@@ -240,8 +240,8 @@
     });
 
     //编译less
-    
-    
+
+
     gulp.task("testLess",function(){
         var combined = combiner.obj([
             gulp.src("./images/less/*.less"),
@@ -262,7 +262,7 @@
     gulp.task('lesstask', function() {
         return gulp.watch('./images/less/*.less', ['testLess']);
     });
- 
+
 
     // 开启本地 Web 服务器功能
     gulp.task('webserver-static', function() {
@@ -278,14 +278,14 @@
                     var baseDir = './preview/';
                     var pathname = require('url').parse(req.url).pathname;
                     var filename = require('path').join(baseDir, pathname.substr(-1) === '/' ? pathname + 'index.html' : pathname);
-                    
+
                     var parser = new ssi(baseDir, baseDir, '/**/*.shtml',true);
                     if (filename.indexOf('.shtml') > -1 && fs.existsSync(filename))
                         res.end(parser.parse(filename, fs.readFileSync(filename, {
                             encoding: 'utf8'
                         })).contents);
                     else
-                        next();       
+                        next();
                 }
             }
         });
@@ -295,7 +295,7 @@
     });
 
 
-    // ----- 任务 ----- 
+    // ----- 任务 -----
 
     //默认任务
     gulp.task('default', function() {

@@ -2,21 +2,32 @@
   "serverPort":"3002",
   "dev_template":{
     "env": "测试",
-  	"base":"",
+    "domain": "",
+    "userUrl": "",
+    "base":"",
     "ROOT_PATH":""
   },
   "pro_template":{
     "env": "生产",
-  	"base":""
+    "domain": "",
+    "userUrl": "",
+    "base":"",
+    "ROOT_PATH":""
   },
   "preview_template":{
+    "env": "预览",
+    "domain": "",
+    "userUrl": "",
     "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/'>",
     "ui_base":"<ui_base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/preview/'>",
     "ROOT_PATH":""
   },
   "debug_template":{
+    "env": "本地",
+    "domain": "http://test.tongshuai.com",
+    "userUrl": "http://tuser.tongshuai.com",
     "base":"<base href='../'>",
-  	"ui_base":"<ui_base href='../'>",
+    "ui_base":"<ui_base href='../'>",
     "ROOT_PATH":""
   },
   "testSiteId":"5",
