@@ -25,17 +25,15 @@
                 <div class="o_u o_df_12-12  member-security js-membercontbox">
                     <div class="land-shade js_navshade"></div>
 
-                    <div class="member-security-width js-securityheight">
+                    <div class="member-security-width js-securityheight js-myshare">
                         <div class="member-security-tit"><p>我的晒单</p></div>
                         <!-- 内容区域 START-->
-                        <div class="member-myshare-list-box o_g js-myshare">
 
-                        </div>
 
                         <!-- 内容区域 End-->
                         <div class='l-pagination-box member-share-pagination-box'>
               
-            </div>
+                        </div>
                     </div>
  
                 </div>
