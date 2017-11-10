@@ -96,7 +96,7 @@
 							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
 								<span class="list-kind-china"><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/><i class="iconfont icon-arrow-line-down"></i></span>
 								<trs_channels id='owner' num="1" startpos='1'>
-								<trs_viewdatas>
+								<trs_viewdatas num="1">
 								<span class="list-kind-english"><trs_viewdata field='epro'/></span>
 								</trs_viewdatas>
 								</trs_channels>
@@ -104,7 +104,7 @@
 							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
 								<span class="list-kind-china"><TRS_CHANNEL id="parent" FIELD="CHNLDESC" AUTOLINK='FALSE'/><i class="iconfont icon-arrow-line-down"></i></span>
 								<trs_channels id='parent' num="1" startpos='1'>
-								<trs_viewdatas>
+								<trs_viewdatas num="1">
 								<span class="list-kind-english"><trs_viewdata field='epro'/></span>
 								</trs_viewdatas>
 								</trs_channels>

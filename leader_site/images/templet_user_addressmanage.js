@@ -420,29 +420,31 @@ $(".js_addressSetDefault").live("click",function(){
 
 //删除地址2
 $(".deleteAddress").click(function(){
-    var addressId=$(this).attr("addid");
-    var $this=$(this);
-    $.ajax({
-        url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
-        type:"get",
-        dataType: "json",
-        data:{"id": addressId},
-        success:function(responseT){
-            if(responseT.isSuccess){
-                loadUserInfoList();
-                //删除成功之后进行前端元素操作
-                $this.parents(".js_addressBox").remove();
-            }else{
-                //删除失败提示*****
-                globalShade2("删除失败,请稍后重试...",2,2000);
+    globalShade("确定要删除吗？");
+    $(".js-alertTrue").click(function(){//确定删除按钮
+        var addressId=$(this).attr("addid");
+        var $this=$(this);
+        $.ajax({
+            url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
+            type:"get",
+            dataType: "json",
+            data:{"id": addressId},
+            success:function(responseT){
+                if(responseT.isSuccess){
+                    loadUserInfoList();
+                    //删除成功之后进行前端元素操作
+                    $this.parents(".js_addressBox").remove();
+                }else{
+                    //删除失败提示*****
+                    globalShade2("删除失败,请稍后重试...",2,2000);
+                }
+            },
+            error:function(){
+                //删除失败提示****
+                /*globalShade2(responseT.resultMsg,2,2000);*/
             }
-        },
-        error:function(){
-            //删除失败提示****
-            /*globalShade2(responseT.resultMsg,2,2000);*/
-        }
+        })
     })
-
 })
 var saveId="";
 //修改地址获取信息
