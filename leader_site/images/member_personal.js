@@ -7,48 +7,82 @@ $(function(){
 
 
 //    用户名判定
-    var nubreg =/^[0-9]*$/;
-    var stringOnereg = /^[a-zA-Z]{1}/;
-    var regEn = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
-    var  regCn = /[·！#￥（——）：；“”‘、，|《。》？、【】[\]]/im;
     var templet_pic;
     var imgX,imgY,imgW;
 
     $('.js_member input').blur(function(){
-        var username =  $('.js_member input').val();
-        if(username.length>3&&username.length<21){
-            $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
-            if(!nubreg.test(username)){
-                $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
-                if(stringOnereg.test(username)){
-                    $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
-                    if(!regEn.test(username)&& !regCn.test(username)){
-                        $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
-                    }else{
-                        wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'不可以使用特殊字符');
-                    }
-                }else{
-                    wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'第一个字符必须为字母');
-                }
-            }else{
-                wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不可以全部是数字');
+        var loginAccountName = $.trim($('.js_member input').val());
+        if ("" == loginAccountName) {
+            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'请填写用户名');
+            return;
+        }
+        //把全部符合\x00-\xff条件的字符用**替换，然后计算长度，即遇到一个中文就用**替换，计算为两位
+        var _sUserName_length = loginAccountName.replace(/[^\x00-\xff]/g, "**").length;
+        if (_sUserName_length <= 3) {
+            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'还不足4个字符哦！');
+            return;
+        }
+        if (_sUserName_length >= 19) {
+            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'已经超过18个字符啦！');
+            return;
+        }
+
+        var pattern2 = "\\·[+《》\"`~!@#$^&*()%=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？] ";
+        var rs = "";
+        var rsArray = new Array();
+        var j = 0;
+        for (var i = 0; i < loginAccountName.length; i++) {
+            var special_index = pattern2.indexOf(loginAccountName.substr(i, 1));
+            if (special_index > 0) {
+                rs += "\"" + loginAccountName.substr(i, 1) + "\"、";
+                rsArray[j] = loginAccountName.substr(i, 1);
+                j++;
             }
-        }else{
-            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名长度不合格');
+        }
+        if (rs.length == 0) {
+            //验证用户名是否全部由数字组成
+            var number = /^\d{4,}$/;
+            if (number.test(loginAccountName)) {
+                //用户名不能以数字开头，这样避免了userNmae 和 mobile 区分不开的问题
+                wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不能全为数字');
+            } else {
+                if (loginAccountName.indexOf("trs_") > -1 || loginAccountName.indexOf("TRS_") > -1) {
+                    wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不能包含trs_等关键字');
+                }else {
+                    $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                }
+            }
+        }else {
+            $.unique(rsArray);
+            var special = "";
+            if (3 < rsArray.length) {
+                special = "\"" + rsArray[0] + "\"、\"" + rsArray[1] + "\"、\"" + rsArray[2] + "\" 等";
+            } else if (1 == rsArray.length) {
+                special = "\"" + rsArray[0] + "\"";
+            } else {
+                for (var i = 0; i < rsArray.length; i++) {
+                    special += "\"" + rsArray[i] + "\"、";
+                }
+                special = special.substr(0, special.length - 1);
+
+                //如果是对的就
+            }
+            //用户名中含有特殊字符
+            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),"用户名中含有特殊字符" + special);
         }
     });
 
 
             // Create variables (in this scope) to hold the API and image size
-            var jcrop_api,
-                boundx,
-                boundy,
-            // Grab some information about the preview pane
-                $preview = $('#preview-pane'),
-                $pcnt = $('#preview-pane .preview-container'),
-                $pimg = $('#preview-pane .preview-container img'),
-                xsize = $pcnt.width(),
-                ysize = $pcnt.height();
+    var jcrop_api,
+        boundx,
+        boundy,
+    // Grab some information about the preview pane
+        $preview = $('#preview-pane'),
+        $pcnt = $('#preview-pane .preview-container'),
+        $pimg = $('#preview-pane .preview-container img'),
+        xsize = $pcnt.width(),
+        ysize = $pcnt.height();
     var imgs = new Image();
     var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
             $('#target').Jcrop({
@@ -133,7 +167,7 @@ $(function(){
 
 //   用户名状态切换
     //$('.js_member').hide();
-    $('.js_personalinfo-namefixed').hide();
+    //$('.js_personalinfo-namefixed').hide();
 
 
 //    上传组件
@@ -272,15 +306,7 @@ $('.js-personalinfotab').click( function () {
             },
             success_cb: function (data) {
                 if (data.isSuccess) {
-                    var tabNmu =$('.js-personalPicuure').index();
-                    $('.js-personalinfotabcont').hide();
-                    $('.js-personalinfotabcont').eq(tabNmu).show()
-                    $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
-                    $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
-                    $('.js-uploadPhoto').show();
-                    $('.js-modifyPhoto').hide();
-                    $('.js-modifyPhotoBtn').hide();
-                    $("#js-imgleft").attr("src",data.data);
+                    globalShade2('保存成功','1');
                     location.reload();
                 }
                 else{
@@ -296,5 +322,7 @@ function wrongInfo(obj,obj2,text){
     obj.addClass('personalist-wrong-box').removeClass('personalist-right');
     obj2.html(text);
 }
+
+
 
 
