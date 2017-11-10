@@ -5,18 +5,7 @@
 <script type="text/javascript">
     // 站点服务配置
     var siteConfig = {
-    	/**
-    	 * 生产环境地址
-    	 */
-        // domain:"http://user.tongshuai.com",
-        domain: "",
-        userUrl: ""
-        
-        /**
-         * 测试环境地址
-         */
-         //userUrl: "http://tuser.tongshuai.com",//用于获取用户信息
-         //domain: "http://test.tongshuai.com"//本地
-
+        domain: "<%=domain%>",
+        userUrl: "<%=userUrl%>"
     };
 </script>
