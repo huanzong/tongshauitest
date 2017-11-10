@@ -88,6 +88,7 @@ $(function(){
                                     }
                                 }
                                 templet_addhtml+='</div>';
+                                templet_addhtml+='<div class=\'l-pagination-box member-share-pagination-box\'></div>';
                                 $(".js-myshare").append(templet_addhtml);
                                 //-------------------分页
                                 paginationInit(currentPageNo,allPageCount,templat_pagesize);
@@ -195,6 +196,7 @@ function search(currPageT, pageSize){
                                 }
                             }
                             templet_addhtml+='</div>';
+                            templet_addhtml+='<div class=\'l-pagination-box member-share-pagination-box\'></div>';
                             $(".js-myshare").append(templet_addhtml);
                             //-------------------分页
                             paginationInit(currentPageNo,allPageCount,pageSize);
