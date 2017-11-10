@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_cn">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+
     <title>购物车</title>
     <%=base%>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-        <meta name="format-detection" content="telephone=no, email=no" />
-        <!--#include virtual="public/head.shtml"-->
-        <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
-        <link rel="stylesheet" type="text/css" href="images/product_trolley.css">
+    <!--#include virtual="public/head.shtml"-->
+    <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="images/product_trolley.css">
+
+    <link rel="preconnect" href="http://test.tongshuai.com">
 </head>
 
 <body>
@@ -49,7 +53,7 @@
                     <div class="trolley-title">
                         购物车
                     </div>
-                    <a class="trolley-username js_userName">
+                    <a href="javascript:;" target="_blank" rel="noopener" class="trolley-username js_userName">
                         胖大海
                     </a>
                 </div>
@@ -127,8 +131,8 @@
                                         </div>
                                         <p class="trolley-product-xs">
                                             <span class=" js_trolleyPrice">￥3433</span>
-                                            <a class="opacity-0 trolley-xs-delete js_deleteXs">删除</a>
-                                            <a class="js_edit" data-oppo='edit'>编辑</a>
+                                            <a href="javascript:;" class="opacity-0 trolley-xs-delete js_deleteXs">删除</a>
+                                            <a href="javascript:;" class="js_edit" data-oppo='edit'>编辑</a>
                                         </p>
                                     </div>
                                 </div>
@@ -223,7 +227,7 @@
                 </div>
             </div>
             <!-- 购物车底部 END -->
-            
+
             <!--#include virtual="public/footer.shtml"-->
         </div>
     </div>
@@ -241,7 +245,7 @@
                         <div class="l-checkbox trolley-product-check">
                           <input class="js_checkbox js_checkSolo" type="checkbox" data-notnull="true" value="">
                         </div>
-                        <a class="trolley-product-img" href="{$T.item.productShowVO.proUrl || 'javascript:;'}">
+                        <a class="trolley-product-img" href="{$T.item.productShowVO.proUrl || 'javascript:;'}" target="_blank" rel="noopener">
                             <img src="{$T.item.productShowVO.goodsPic}">
                         </a>
                         <div class="trolley-product-font">
@@ -252,8 +256,8 @@
                                 </div>
                                 <p class="trolley-product-xs">
                                     <span class="js_trolleyPrice">￥{$T.item.skuShowVO.salePrice || '0'}</span>
-                                    <a class="opacity-0 trolley-xs-delete js_deleteXs js_proDelete" data-cartGoodId="{$T.item.skuShowVO.cartGoodId}">删除</a>
-                                    <a class="js_edit" data-oppo='edit'>编辑</a>
+                                    <a href="javascript:;" class="opacity-0 trolley-xs-delete js_deleteXs js_proDelete" data-cartGoodId="{$T.item.skuShowVO.cartGoodId}">删除</a>
+                                    <a href="javascript:;" class="js_edit" data-oppo='edit'>编辑</a>
                                 </p>
                             </div>
                         </div>
