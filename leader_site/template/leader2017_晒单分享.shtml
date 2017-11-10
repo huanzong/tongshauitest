@@ -82,7 +82,7 @@
                                                 <a href="javascript:;"  class="js_share_getup_false l-btn-sm l-btn-line1 l-btn-disable share_getup_false">本地上传</a>
                                             </div>
                                             <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
-                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持jpg、jpge、png，大小不超过2MB</p>
+                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持JPG、JPGE、PNG，大小不超过2MB</p>
                                         </div>
                                         <div class="member-share-right-getup o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                             <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>

@@ -24,64 +24,78 @@ $(function(){
         success_cb: function(data){
             if(data.isSuccess){
                 var templet_count=data.data.entities.length;
-                var templet_mysharelist = data.data.entities;
-                var allPageCount = data.data.pageCount;
-                var currentPageNo = data.data.pageNo;
-                var templet_addhtml="";
-                var templet_modelNoall='';
-                for(var i=0;i<templet_count;i++){
-                    if(templet_modelNoall==''){
-                        templet_modelNoall+=templet_mysharelist[i].businessId;
-                    }else {
-                        templet_modelNoall+=','+templet_mysharelist[i].businessId;
-                    }
-                }
-
-                //根据modelNo获取商品信息
-                $.ajax({
-                    type: "get",
-                    url: siteConfig.userUrl + "/buy/sku/frontpro/productByModelNo",
-                    data: {
-                        'modelNo':templet_modelNoall
-                    },
-                    login: true,
-                    success_cb: function (data) {
-                        if (data.isSuccess) {
-                            for(var i=0;i<templet_count;i++) {
-                                for (var k = 0; k < data.data.length; k++) {
-                                    if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
-                                        templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
-                                        templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
-                                        templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
-                                        templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
-                                        templet_addhtml+='<p>'+data.data[k].goodsName+'</p><span>'+data.data[k].modelNo+'</span> </div>';
-                                        templet_addhtml+='<ul>';
-                                        for(var j=1;j<=templet_mysharelist[i].star;j++){
-                                            templet_addhtml+='<li class="member-share-score-selected"><p class="selected_g"><i class="iconfont icon-star-solid"></i></p></li>';
-                                        }
-                                        for(var j=1;j<=5-templet_mysharelist[i].star;j++){
-                                            templet_addhtml+='<li class="member-share-score-selected-false"><p class="selected_g"><i class="iconfont icon-star-solid"></i></p></li>';
-                                        }
-                                        templet_addhtml+='</ul></div>';
-                                        templet_addhtml+='<p class="member-myshare-listcont-right-text o_u  o_df_9-10 o_lg_6-6 o_md_6-6 o_sm_6-6 o_xs_12-12">';
-                                        templet_addhtml+=templet_mysharelist[i].content;
-                                        templet_addhtml+='</p><ul class="member-myshare-listcont-right-photo o_g">';
-                                        for(var j=0;j<templet_mysharelist[i].paths.length;j++){
-                                            templet_addhtml+='<li class="member-share-photo-cur"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
-                                        }
-                                        templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
-                                        templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';
-                                        templet_addhtml+=' <div class="member-myshare-more"><a href="">查看详情<i class="iconfont icon-arrow-line-right"></i></a></div></div></div></div>';
-                                    }
-                                }
-                            }
-                            $(".js-myshare").html(templet_addhtml);
-                            //-------------------分页
-                            paginationInit(currentPageNo,allPageCount,templat_pagesize);
-                            //分页结束
+                if(templet_count==0){
+                    var templet_addhtml="";
+                    templet_addhtml +='<div class="member-security-contbox js-contRightContBox">';
+                    templet_addhtml +='<div class="member-security-bingsuccess o_g">';
+                    templet_addhtml += '<div><img src="images/share_nothing.png" alt=""></div>';
+                    templet_addhtml += '<div class="member-security-bingsuccess-txtbox">';
+                    templet_addhtml += '<div class="member-security-bingsuccess-bigtext"><span>还没有任何晒单记录</span></div>';
+                    templet_addhtml += '</div></div></div>';
+                    $(".js-myshare").append(templet_addhtml);
+                }else{
+                    var templet_mysharelist = data.data.entities;
+                    var allPageCount = data.data.pageCount;
+                    var currentPageNo = data.data.pageNo;
+                    var templet_addhtml="";
+                    var templet_modelNoall='';
+                    for(var i=0;i<templet_count;i++){
+                        if(templet_modelNoall==''){
+                            templet_modelNoall+=templet_mysharelist[i].businessId;
+                        }else {
+                            templet_modelNoall+=','+templet_mysharelist[i].businessId;
                         }
                     }
-                })
+
+                    //根据modelNo获取商品信息
+                    $.ajax({
+                        type: "get",
+                        url: siteConfig.userUrl + "/buy/sku/frontpro/productByModelNo",
+                        data: {
+                            'modelNo':templet_modelNoall
+                        },
+                        login: true,
+                        success_cb: function (data) {
+                            if (data.isSuccess) {
+                                templet_addhtml+='<div class="member-myshare-list-box o_g">';
+
+                                for(var i=0;i<templet_count;i++) {
+                                    for (var k = 0; k < data.data.length; k++) {
+                                        if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
+                                            templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
+                                            templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
+                                            templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
+                                            templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
+                                            templet_addhtml+='<p>'+data.data[k].goodsName+'</p><span>'+data.data[k].modelNo+'</span> </div>';
+                                            templet_addhtml+='<ul>';
+                                            for(var j=1;j<=templet_mysharelist[i].star;j++){
+                                                templet_addhtml+='<li class="member-share-score-selected"><p class="selected_g"><i class="iconfont icon-star-solid"></i></p></li>';
+                                            }
+                                            for(var j=1;j<=5-templet_mysharelist[i].star;j++){
+                                                templet_addhtml+='<li class="member-share-score-selected-false"><p class="selected_g"><i class="iconfont icon-star-solid"></i></p></li>';
+                                            }
+                                            templet_addhtml+='</ul></div>';
+                                            templet_addhtml+='<p class="member-myshare-listcont-right-text o_u  o_df_9-10 o_lg_6-6 o_md_6-6 o_sm_6-6 o_xs_12-12">';
+                                            templet_addhtml+=templet_mysharelist[i].content;
+                                            templet_addhtml+='</p><ul class="member-myshare-listcont-right-photo o_g">';
+                                            for(var j=0;j<templet_mysharelist[i].paths.length;j++){
+                                                templet_addhtml+='<li class="member-share-photo-cur"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
+                                            }
+                                            templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
+                                            templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';
+                                            templet_addhtml+=' <div class="member-myshare-more"><a href="">查看详情<i class="iconfont icon-arrow-line-right"></i></a></div></div></div></div>';
+                                        }
+                                    }
+                                }
+                                templet_addhtml+='</div>';
+                                $(".js-myshare").append(templet_addhtml);
+                                //-------------------分页
+                                paginationInit(currentPageNo,allPageCount,templat_pagesize);
+                                //分页结束
+                            }
+                        }
+                    })
+                }
             }
             else{
             }
@@ -150,6 +164,8 @@ function search(currPageT, pageSize){
                     login: true,
                     success_cb: function (data) {
                         if (data.isSuccess) {
+                            templet_addhtml+='<div class="member-myshare-list-box o_g">';
+
                             for(var i=0;i<templet_count;i++) {
                                 for (var k = 0; k < data.data.length; k++) {
                                     if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
@@ -178,7 +194,8 @@ function search(currPageT, pageSize){
                                     }
                                 }
                             }
-                            $(".js-myshare").html(templet_addhtml);
+                            templet_addhtml+='</div>';
+                            $(".js-myshare").append(templet_addhtml);
                             //-------------------分页
                             paginationInit(currentPageNo,allPageCount,pageSize);
                             //分页结束
