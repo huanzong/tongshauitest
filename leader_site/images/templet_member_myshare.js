@@ -26,13 +26,14 @@ $(function(){
                 var templet_count=data.data.entities.length;
                 if(templet_count==0){
                     var templet_addhtml="";
+                    templet_addhtml +='<div class="member-security-tit"><p>我的晒单</p></div>';
                     templet_addhtml +='<div class="member-security-contbox js-contRightContBox">';
                     templet_addhtml +='<div class="member-security-bingsuccess o_g">';
                     templet_addhtml += '<div><img src="images/share_nothing.png" alt=""></div>';
                     templet_addhtml += '<div class="member-security-bingsuccess-txtbox">';
                     templet_addhtml += '<div class="member-security-bingsuccess-bigtext"><span>还没有任何晒单记录</span></div>';
                     templet_addhtml += '</div></div></div>';
-                    $(".js-myshare").append(templet_addhtml);
+                    $(".js-myshare").html(templet_addhtml);
                 }else{
                     var templet_mysharelist = data.data.entities;
                     var allPageCount = data.data.pageCount;
@@ -58,7 +59,7 @@ $(function(){
                         success_cb: function (data) {
                             if (data.isSuccess) {
                                 templet_addhtml+='<div class="member-myshare-list-box o_g">';
-
+                                templet_addhtml +='<div class="member-security-tit"><p>我的晒单</p></div>';
                                 for(var i=0;i<templet_count;i++) {
                                     for (var k = 0; k < data.data.length; k++) {
                                         if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
@@ -89,7 +90,7 @@ $(function(){
                                 }
                                 templet_addhtml+='</div>';
                                 templet_addhtml+='<div class=\'l-pagination-box member-share-pagination-box\'></div>';
-                                $(".js-myshare").append(templet_addhtml);
+                                $(".js-myshare").html(templet_addhtml);
                                 //-------------------分页
                                 paginationInit(currentPageNo,allPageCount,templat_pagesize);
                                 //分页结束
@@ -166,7 +167,7 @@ function search(currPageT, pageSize){
                     success_cb: function (data) {
                         if (data.isSuccess) {
                             templet_addhtml+='<div class="member-myshare-list-box o_g">';
-
+                            templet_addhtml +='<div class="member-security-tit"><p>我的晒单</p></div>';
                             for(var i=0;i<templet_count;i++) {
                                 for (var k = 0; k < data.data.length; k++) {
                                     if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
@@ -197,7 +198,7 @@ function search(currPageT, pageSize){
                             }
                             templet_addhtml+='</div>';
                             templet_addhtml+='<div class=\'l-pagination-box member-share-pagination-box\'></div>';
-                            $(".js-myshare").append(templet_addhtml);
+                            $(".js-myshare").html(templet_addhtml);
                             //-------------------分页
                             paginationInit(currentPageNo,allPageCount,pageSize);
                             //分页结束
