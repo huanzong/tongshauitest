@@ -3,9 +3,11 @@ $(function() {
     var swiper = {
     }; //用来存放所有轮播
 
+
     /**
      * 服务请求
      **/   
+    //sku服务
     var skuServer = {
         //根据inskucode集合查询SKU相关信息
         getSkuByCodes:function(data,skuCodesObj){
@@ -39,7 +41,8 @@ $(function() {
                 }
             });
         }
-    }
+    };
+    //购物车服务
     var trolleyServer = {
         //删除购物车商品
         delete:function(data){
@@ -48,7 +51,9 @@ $(function() {
                 data: data,
                 // applicationType:true,
                 success_cb: function(data){
-                    console.log(data);
+                    if(data.isSuccess){
+                        trolleyServer.list();
+                    }
                 },
                 error_cb: function(jqXHR, textStatus, errorThrown) {
                     if(jqXHR.status==401){
@@ -58,10 +63,9 @@ $(function() {
             });
         },
         //获取购物车商品列表
-        list:function(data){
+        list:function(){
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/list/",
-                // data: JSON.stringify(data),
                 applicationType:true,
                 success_cb: function(data){
                     if(data.isSuccess){
@@ -99,7 +103,6 @@ $(function() {
                 applicationType:true,
                 success_cb: function(data){
                     if (data.isSuccess) {
-                        console.log(000);
                         return false;
                     }
                     return true;//终止购物车商品数量增减
@@ -113,6 +116,23 @@ $(function() {
             });
         }
     };
+
+    //
+    //获取用户信息
+    var userServer = {
+       getUserInfo:function(){
+            $.ajax({
+                type: "get",
+                url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
+                login:true,
+                success_cb:function(data){
+                    if(data.isSuccess){
+                        $('.js_userName').html(data.data.loginName);
+                    }
+                }
+            });
+        }
+    }
 
     $(window).resize(function() {
         init();
@@ -205,16 +225,28 @@ $(function() {
         });
 
         //删除购物车商品
-        $('.js_proDelete').on('click',function(){
+        $('.js_proDelete').on('click',function(event){
+            //防止事件冒泡
+            event.stopPropagation();
+            $this = $(this);
             if(!istrsidssdssotoken()){
                 //用户未登录时，物理删除
                 return false;
             }
-            var cartGoodId = $(this).attr('data-cartGoodId');
-            var trolleyData = {
-                cartGoodId : cartGoodId
-            }
-            trolleyServer.delete(trolleyData);
+
+            leaderConfirm.open({
+                info : "确定要删除这件商品么？", //提示信息
+                ele : $(this), //传递对象
+                callbackFn : function(ele){ //确认后执行方法
+                    var cartGoodId = $this.attr('data-cartGoodId');
+                    var trolleyData = {
+                        cartGoodId : cartGoodId
+                    }
+                    trolleyServer.delete(trolleyData);
+                    return;
+                },
+            });
+                
         });
     }
 
@@ -224,6 +256,13 @@ $(function() {
         // jumpToLoginPage();
     }
 
+    //根据ip获取地址信息
+    var ipAddress = leaderServer.getIpAddress() || '服务取值-山东省青岛市崂山区';
+    $('.js_ipAddress').html(ipAddress);
+
+    //获取用户信息
+    userServer.getUserInfo(); 
     //获取购物车列表
     trolleyServer.list();
+    
 });

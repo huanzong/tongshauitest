@@ -49,7 +49,7 @@
                     <div class="trolley-title">
                         购物车
                     </div>
-                    <a class="trolley-username">
+                    <a class="trolley-username js_userName">
                         胖大海
                     </a>
                 </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="distribution-address">
                         配送至：
-                        <span>山东省 青岛市 市南区</span>
+                        <span class="js_ipAddress">山东省 青岛市 市南区</span>
                         <i class="iconfont icon-arrow-sanjiao-down-s"></i>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/jquery-jtemplates.js"></script>
     <script type="text/javascript" src="images/product_trolley.js"></script>
-    <script type="text/javascript" src="images/test.js"></script>
+    <!-- <script type="text/javascript" src="images/test.js"></script> -->
     <!-- Templates -->
     <p style="display:none">
          <textarea id="template-items">
