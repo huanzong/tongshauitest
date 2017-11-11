@@ -1,7 +1,7 @@
 /**
  * Created by 15610 on 2017/10/23.
  */
- var addressServer{
+ var addressServer = {
     //新增收货地址
     save: function(data){
         $.ajax({
