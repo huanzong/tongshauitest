@@ -5,16 +5,10 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
 
-    //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage();
-    }
-
     //页面加载时调个人信息
     $.ajax({
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
-        data: {},
         login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
@@ -68,6 +62,7 @@ $(function(){
             data: {
                 'editOperation':'beforeBindMobileSendEmailCode'
             },
+            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -92,6 +87,7 @@ $(function(){
                     'code':templet_code,
                     'param':'email'
                 },
+                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -174,6 +170,7 @@ $(function(){
                     'editOperation':'sendBindMobileCode',
                     'newMobile':templet_newMobile
                 },
+                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -256,6 +253,7 @@ $(function(){
                     'newMobile': templet_newMobile,
                     'mobileCode': templet_mobileCode
                 },
+                login:true,
                 success_cb: function (data) {
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200") > -1) {

@@ -5,10 +5,6 @@
 * ---------------------------------------------------------------------------*/
 $(function () {
 
-    //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
 
     //根据订单传的orderId 查询商品信息
     var templet_orderId=getQueryString("orderId");
@@ -26,7 +22,8 @@ $(function () {
             type: "get",
             url: siteConfig.userUrl+"/buy/order/order-front/show/",
             data: {"orderId":templet_orderId},
-            error : function(){
+            login:true,
+            error_cb : function(){
                 window.location.href ='/order';
             },
             success: function(data){
@@ -153,9 +150,10 @@ $(function () {
                 'orderId':templet_orderId
             };
             $.ajax({
-                contentType:"application/json",
                 url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
                 data:  JSON.stringify(data),
+                applicationType:true,
+                login:true,
                 success_cb: function(data){
                     if(data.isSuccess){
                         $('.js_popUpBox3').show();

@@ -5,11 +5,6 @@
 * ---------------------------------------------------------------------------*/
 $(function () {
 
-    //前台判断是否登陆
-    if (!istrsidssdssotoken()) {
-        jumpToLoginPage()
-    }
-
     //获取当前栏目 左侧栏变红
     var templet_navul = document.getElementById('js-navul');
     if(templet_navul!=null){
@@ -29,7 +24,7 @@ $(function () {
     $.ajax({
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
-        data: "",
+        login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
 
@@ -103,7 +98,7 @@ $(function () {
     $.ajax({
         type: "post",
         url: siteConfig.userUrl+"/buy/order/cartGoods/count/",
-        data: "",
+        login:true,
         success_cb: function(data){
             var carcount=$.trim(data.data)
             if(carcount==0){
