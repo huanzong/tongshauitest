@@ -36,7 +36,7 @@ function buildProvinces(){
         dataType:"json",
         data:{"parentId":0},
         login:true,
-        success:function(responseT){
+        success_cb:function(responseT){
             if(responseT.isSuccess){
                 var provinceList=responseT.data;
                 $("#js_save").html("");
@@ -55,7 +55,7 @@ function buildProvinces(){
                 templet_select_sheng.init();
             }
         },
-        error:function(){}
+        error_cb:function(){}
     })
 }
 
@@ -68,7 +68,7 @@ function buildCity(){
         dataType:"json",
         data:{"parentId":shengCode},
         login:true,
-        success:function(responseT){
+        success_cb:function(responseT){
             if(responseT.isSuccess){
                 var cityList=responseT.data;
                 $("#js_city").html("");
@@ -93,7 +93,7 @@ function buildCity(){
                 templet_select_road.lose();
             }
         },
-        error:function(){}
+        error_cb:function(){}
     })
 }
 
@@ -106,7 +106,7 @@ function buildArea(){
         dataType:"json",
         data:{"parentId":cityCode},
         login:true,
-        success:function(responseT){
+        success_cb:function(responseT){
             if(responseT.isSuccess){
                 var areaList=responseT.data;
                 $("#js_area").html("");
@@ -128,7 +128,7 @@ function buildArea(){
             }
 
         },
-        error:function(){}
+        error_cb:function(){}
     })
 }
 
@@ -141,7 +141,7 @@ function buildRoad(){
         dataType:"json",
         data:{"parentId":areaCode},
         login:true,
-        success:function(responseT){
+        success_cb:function(responseT){
             if(responseT.isSuccess){
                 var roadList=responseT.data;
                 $("#js_road").html("");
@@ -159,7 +159,7 @@ function buildRoad(){
                 templet_select_road.init();
             }
         },
-        error:function(){}
+        error_cb:function(){}
     })
 }
 
@@ -210,13 +210,13 @@ function saveUserAddress(){
     }
     templet_isSubmiting=true;
     $.ajax({
-        url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
+        url:siteConfig.userUrl+"/front/userRegion/save",
         type:"post",
         dataType:"json",
         data: JSON.stringify(data),
-        contentType:"application/json",
+        applicationType:true,
         login:true,
-        success:function(responseT){
+        success_cb:function(responseT){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
                 resetForm();//重置表单
@@ -227,7 +227,7 @@ function saveUserAddress(){
             }
             templet_isSubmiting=false;
         },
-        error:function(responseT){
+        error_cb:function(responseT){
             globalShade2(responseT.resultMsg,2,2000);
             templet_isSubmiting=false;
         }
@@ -253,7 +253,7 @@ $(".js_form_addAddrManagement").Validform({
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
-        url: siteConfig.userUrl+"/hshop-user/front/userRegion/list",
+        url: siteConfig.userUrl+"/front/userRegion/list",
         type: "post",
         dataType: "json",
         data:{
@@ -261,7 +261,7 @@ function loadUserInfoList(){
             "pageSize":templet_pageSize
         },
         login:true,
-        success:function(data){
+        success_cb:function(data){
             if(data.isSuccess){
                 var addlist = data.data.entities;
                 var count = addlist.length;
@@ -356,7 +356,7 @@ $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     $.ajax({
-        url:siteConfig.userUrl+"/hshop-user/front/userRegion/defaultRegion",
+        url:siteConfig.userUrl+"/front/userRegion/defaultRegion",
         type:"post",
         dataType: "json",
         data:{
@@ -364,7 +364,7 @@ $(".js_addressSetDefault").live("click",function(){
             "isDefault":1,
         },
         login:true,
-        success:function(responseT){
+        success_cb:function(responseT){
             if(responseT.isSuccess){
                 //loadUserInfoList();//获取列表
                 //设置默认成功,设置前端显示
@@ -383,7 +383,7 @@ $(".js_addressSetDefault").live("click",function(){
                 globalShade2(responseT.resultMsg,2,2000);
             }
         },
-        error:function(){
+        error_cb:function(){
             globalShade2("设置默认地址错误,请稍后重试...",2,2000);
         }
     });
@@ -432,12 +432,12 @@ $(".deleteAddress").click(function(){
         var addressId=$(this).attr("addid");
         var $this=$(this);
         $.ajax({
-            url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
+            url:siteConfig.userUrl+"/front/userRegion/deleteRegion",
             type:"get",
             dataType: "json",
             data:{"id": addressId},
             login:true,
-            success:function(responseT){
+            success_cb:function(responseT){
                 if(responseT.isSuccess){
                     loadUserInfoList();
                     //删除成功之后进行前端元素操作
@@ -447,7 +447,7 @@ $(".deleteAddress").click(function(){
                     globalShade2("删除失败,请稍后重试...",2,2000);
                 }
             },
-            error:function(){
+            error_cb:function(){
                 //删除失败提示****
                 /*globalShade2(responseT.resultMsg,2,2000);*/
             }
@@ -462,12 +462,12 @@ function getAddressInfo(id){
     saveId=id;
     var data = {id:id};
     $.ajax({
-        url:siteConfig.userUrl+"/hshop-user/front/userRegion/show",
+        url:siteConfig.userUrl+"/front/userRegion/show",
         type:"get",
         data:data,
         dataType: "json",
         login:true,
-        success:function(data){
+        success_cb:function(data){
             if(data.isSuccess){
                 var info = data.data;
                 var realname = info.customerName;//用户姓名
@@ -507,7 +507,7 @@ function getAddressInfo(id){
                     type: "get",
                     dataType: "json",
                     data: {"parentId": 0},
-                    success:function(responseT){
+                    success_cb:function(responseT){
                         if(responseT.isSuccess){
                             var provinceList=responseT.data;
                             $("#js_save").html("");
@@ -545,7 +545,7 @@ function getAddressInfo(id){
                         data: {"parentId": templet_shengCod},
                         dataType: "json",
                         login:true,
-                        success: function (responseT) {
+                        success_cb: function (responseT) {
                             if (responseT.isSuccess) {
                                 var cityList=responseT.data;
                                 $("#js_city").html("");
@@ -579,7 +579,7 @@ function getAddressInfo(id){
                                 loadAreaList(templet_cityCode);
                             }
                         },
-                        error: function () {
+                        error_cb: function () {
                         }
                     });
                 }
@@ -591,7 +591,7 @@ function getAddressInfo(id){
                         data: {"parentId":templet_cityCode},
                         dataType: "json",
                         login:true,
-                        success: function (responseT) {
+                        success_cb: function (responseT) {
                             if (responseT.isSuccess) {
                                 var areaList=responseT.data;
                                 $("#js_area").html("");
@@ -626,7 +626,7 @@ function getAddressInfo(id){
                                 loadRoadList(templet_areaCode);
                             }
                         },
-                        error: function () {
+                        error_cb: function () {
                         }
                     });
                 }
@@ -638,7 +638,7 @@ function getAddressInfo(id){
                         data: {"parentId":templet_areaCode},
                         dataType: "json",
                         login:true,
-                        success: function (responseT) {
+                        success_cb: function (responseT) {
                             if (responseT.isSuccess) {
                                 var roadList=responseT.data;
                                 $("#js_road").html("");
@@ -668,7 +668,7 @@ function getAddressInfo(id){
                                 templet_select_road.init();
                             }
                         },
-                        error: function () {
+                        error_cb: function () {
                         }
                     });
                 }
@@ -723,7 +723,7 @@ function updateUserAddress(){
         dataType: "json",
         data: data,
         login:true,
-        success: function (data) {
+        success_cb: function (data) {
             if (data.isSuccess) {
                 loadUserInfoList();
                 $(".js_form_addAddrManagement").hide();
@@ -734,7 +734,7 @@ function updateUserAddress(){
             }
             templet_isSubmiting = false;
         },
-        error: function () {
+        error_cb: function () {
             globalShade2("添加地址错误,请稍后重试...",1,2000);
             templet_isSubmiting = false;
         }
