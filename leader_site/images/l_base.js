@@ -11,6 +11,7 @@ jQuery.ajaxSetup({
         //需要登录校验，且用户未登录
         if (this.login && !istrsidssdssotoken()) {
             request.abort();
+            jumpToLoginPage();
         }
         //contentType: "application/json; charset=utf-8",
         if (this.applicationType){
@@ -29,7 +30,9 @@ jQuery.ajaxSetup({
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
-
+        if(this.login && jqXHR.status==401){
+            jumpToLoginPage();
+        }
         if (this.error_cb) {
             this.error_cb(jqXHR, textStatus, errorThrown);
         }
@@ -448,6 +451,7 @@ function istrsidssdssotoken(){
 //跳转到登录页面
 function jumpToLoginPage(){
     var returnUrl = window.location.href;
+    console.log(istrsidssdssotoken());
     if(!istrsidssdssotoken()){
         var returnUrl = window.location.href;
         window.location.href ='/ids/ts/login.jsp?returnUrl=' +returnUrl;

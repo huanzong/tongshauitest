@@ -67,6 +67,7 @@ $(function() {
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/list/",
                 applicationType:true,
+                login: true,
                 success_cb: function(data){
                     if(data.isSuccess){
                         //inSkuCode集合

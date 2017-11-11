@@ -562,7 +562,8 @@
 
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
-    <script type="text/javascript" src="images/product_orderconfirm.js"></script>
+    <!-- <script type="text/javascript" src="images/product_orderconfirm.js"></script> -->
+    <script type="text/javascript" src="images/templete_product_orderconfirm.js"></script>
 
 </body>
 </html>
