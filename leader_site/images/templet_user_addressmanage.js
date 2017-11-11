@@ -5,9 +5,9 @@
 * ---------------------------------------------------------------------------*/
 
 //判断登录
-if(!istrsidssdssotoken()){
-    jumpToLoginPage()
-}
+//if(!istrsidssdssotoken()){
+    //jumpToLoginPage()
+//}
 loadUserInfoList();//获取用户地址列表
 
 //取消弹框提示
@@ -35,6 +35,7 @@ function buildProvinces(){
         type:"get",
         dataType:"json",
         data:{"parentId":0},
+        login:true,
         success:function(responseT){
             if(responseT.isSuccess){
                 var provinceList=responseT.data;
@@ -66,6 +67,7 @@ function buildCity(){
         type:"get",
         dataType:"json",
         data:{"parentId":shengCode},
+        login:true,
         success:function(responseT){
             if(responseT.isSuccess){
                 var cityList=responseT.data;
@@ -103,6 +105,7 @@ function buildArea(){
         type:"get",
         dataType:"json",
         data:{"parentId":cityCode},
+        login:true,
         success:function(responseT){
             if(responseT.isSuccess){
                 var areaList=responseT.data;
@@ -137,6 +140,7 @@ function buildRoad(){
         type:"get",
         dataType:"json",
         data:{"parentId":areaCode},
+        login:true,
         success:function(responseT){
             if(responseT.isSuccess){
                 var roadList=responseT.data;
@@ -211,6 +215,7 @@ function saveUserAddress(){
         dataType:"json",
         data: JSON.stringify(data),
         contentType:"application/json",
+        login:true,
         success:function(responseT){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
@@ -255,6 +260,7 @@ function loadUserInfoList(){
             "pageNo":templet_pageNo,
             "pageSize":templet_pageSize
         },
+        login:true,
         success:function(data){
             if(data.isSuccess){
                 var addlist = data.data.entities;
@@ -357,6 +363,7 @@ $(".js_addressSetDefault").live("click",function(){
             "id":addressId,
             "isDefault":1,
         },
+        login:true,
         success:function(responseT){
             if(responseT.isSuccess){
                 //loadUserInfoList();//获取列表
@@ -429,6 +436,7 @@ $(".deleteAddress").click(function(){
             type:"get",
             dataType: "json",
             data:{"id": addressId},
+            login:true,
             success:function(responseT){
                 if(responseT.isSuccess){
                     loadUserInfoList();
@@ -458,6 +466,7 @@ function getAddressInfo(id){
         type:"get",
         data:data,
         dataType: "json",
+        login:true,
         success:function(data){
             if(data.isSuccess){
                 var info = data.data;
@@ -535,6 +544,7 @@ function getAddressInfo(id){
                         type: "get",
                         data: {"parentId": templet_shengCod},
                         dataType: "json",
+                        login:true,
                         success: function (responseT) {
                             if (responseT.isSuccess) {
                                 var cityList=responseT.data;
@@ -580,6 +590,7 @@ function getAddressInfo(id){
                         type: "get",
                         data: {"parentId":templet_cityCode},
                         dataType: "json",
+                        login:true,
                         success: function (responseT) {
                             if (responseT.isSuccess) {
                                 var areaList=responseT.data;
@@ -626,6 +637,7 @@ function getAddressInfo(id){
                         type: "get",
                         data: {"parentId":templet_areaCode},
                         dataType: "json",
+                        login:true,
                         success: function (responseT) {
                             if (responseT.isSuccess) {
                                 var roadList=responseT.data;
@@ -710,6 +722,7 @@ function updateUserAddress(){
         type: "post",
         dataType: "json",
         data: data,
+        login:true,
         success: function (data) {
             if (data.isSuccess) {
                 loadUserInfoList();
