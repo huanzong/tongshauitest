@@ -6,6 +6,7 @@
     // 站点服务配置
     var siteConfig = {
         domain: "<%=domain%>",
-        userUrl: "<%=userUrl%>"
+        userUrl: "<%=userUrl%>/hshop-user",
+        apiUrl: "<%=domain%>/buy",//本地
     };
 </script>
