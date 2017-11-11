@@ -117,7 +117,7 @@
 			<trs_viewdatas id="产线分类" startpos="0" num="6">
 				<a class="enter-con" href="<trs_viewdata field='link'/>">
 					<div class="enter-con-icon <trs_viewdata field='icon_class'/>">
-						<img src="<TRS_VIEWDATAAPPENDIXS  FIELD='icon' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+						<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 					</div>
 					<div class="enter-con-china o_df-hide o_xs-show"><trs_viewdata field='pro_name'/></div>
 					<div class="enter-con-en"><trs_viewdata field='eng_name'/></div>
