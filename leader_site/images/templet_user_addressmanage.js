@@ -210,7 +210,7 @@ function saveUserAddress(){
     }
     templet_isSubmiting=true;
     $.ajax({
-        url:siteConfig.userUrl+"/front/userRegion/save",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
         type:"post",
         dataType:"json",
         data: JSON.stringify(data),
@@ -253,7 +253,7 @@ $(".js_form_addAddrManagement").Validform({
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
-        url: siteConfig.userUrl+"/front/userRegion/list",
+        url: siteConfig.userUrl+"/hshop-user/front/userRegion/list",
         type: "post",
         dataType: "json",
         data:{
@@ -356,7 +356,7 @@ $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     $.ajax({
-        url:siteConfig.userUrl+"/front/userRegion/defaultRegion",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/defaultRegion",
         type:"post",
         dataType: "json",
         data:{
@@ -432,7 +432,7 @@ $(".deleteAddress").click(function(){
         var addressId=$(this).attr("addid");
         var $this=$(this);
         $.ajax({
-            url:siteConfig.userUrl+"/front/userRegion/deleteRegion",
+            url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
             type:"get",
             dataType: "json",
             data:{"id": addressId},
@@ -462,7 +462,7 @@ function getAddressInfo(id){
     saveId=id;
     var data = {id:id};
     $.ajax({
-        url:siteConfig.userUrl+"/front/userRegion/show",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/show",
         type:"get",
         data:data,
         dataType: "json",
