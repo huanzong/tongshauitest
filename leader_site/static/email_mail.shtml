@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- <div class="verificate_email_header">
+        <img src="http://test.tongshuai.com/images/l_logo.png" class="verificate_email_img"/>
+    </div>
+    <div class="verificate_email_middle">
+        <p class="verificate_email_name">亲爱的$LOGINNAME</p>
+        <p class="verificate_email_content">感谢您注册统帅官网，我们将竭诚为您提供优质服务！</p>
+        <div class="verificate_email_verificationdiv">
+            <div class="verificate_email_texttimediv">
+                <span class="verificate_email_test">您的邮箱验证码如下</span>
+                <span class="verificate_email_time">（24小时内有效）</span>
+            </div>
+
+            <span class="verificate_email_verificationcode">$ACTIVECODE</span>
+        </div>
+    </div>
+    <div class="verificate_email_footer">
+        <span class="verificate_email_footertest">本系统邮件自动发出，请勿回复</span>
+        <span class="verificate_email_copyright">鲁ICP备15038556号 Copyright &copy; 海尔集团版权所有</span>
+    </div> -->
+    <table style="margin:0;padding: 0;width: 100%;text-align:center;border-collapse: collapse; border-spacing: 0;word-wrap: break-word;">
+    	<tr>
+    		<td style="padding: 10px;border-bottom: solid #eee 1px;text-align: center;">
+    			<img src="http://tuser.tongshuai.com/images/l_logo.png" style="margin: 0 auto;display: block; width: 54px;height: 54px;" />
+    		</td>
+    	</tr>
+    	<tr>
+    		<td style="padding-top: 55px;font-size: 20px;color: #666;line-height: 30px;">
+    			亲爱的Alex
+    		</td>
+    	</tr>
+    	<tr>
+    		<td style="height: 11px;"></td>
+    	</tr>
+    	<tr>
+    		<td style="line-height: 16px;font-size: 14px;color: #999;padding: 0 30px;">
+    			感谢您注册统帅官网，我们将竭诚为您提供优质服务！
+    		</td>
+    	</tr>
+        <tr>
+            <td style="height: 33px;"></td>
+        </tr>
+    	<tr>
+    		<td>
+    			<div style="width: 90%;background: #ffffff;margin-left: auto;text-align: center;display: inline-block;border-top: solid #ffffff 0.5px;border: solid #f4f4f4 0.5px;border-radius: 15px;box-shadow: 0 0 5px #f4f4f4;">
+                    <div style="padding: 30px 0 20px;">
+                        <span style="font-size: 14px;color: #666;line-height: 16px;">您的邮箱验证码如下</span>
+                        <span style="font-size: 14px;color: #999;line-height: 16px;">（24小时内有效）</span>
+                    </div>
+                    <span style="line-height: 50px;font-size: 48px;color: #e60012;display: inline-block;margin-bottom: 21px;">$ACTIVECODE</span>
+                </div>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px;">
+    		</td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px;width: 100%;border-top: solid #eee 1px;color: #d3d3d3;line-height: 50px;">
+    			<span style="font-size: 12px;line-height: 20px;display: block;">本系统邮件自动发出，请勿回复</span>
+        		<span style="line-height: 20px;font-size: 12px;display: block;">鲁ICP备15038556号 Copyright &copy; 海尔集团版权所有</span>
+    		</td>
+    	</tr>
+    </table>
+</body>
+
+</html>
