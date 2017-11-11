@@ -4,10 +4,6 @@
 * @date        2017.11.7
 * ---------------------------------------------------------------------------*/
 $(function(){
-    //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
 
     //是否有邮箱 手机号
     var templet_isemail=false;
@@ -16,7 +12,6 @@ $(function(){
     $.ajax({
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
-        data: "",
         login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
@@ -152,6 +147,7 @@ $(function(){
             data: {
                 'editOperation':'beforeChangePwdSendMobileCode'
             },
+            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -177,6 +173,7 @@ $(function(){
             data: {
                 'editOperation':'beforeChangePwdSendEmailCode'
             },
+            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -226,6 +223,7 @@ $(function(){
                     'param':templet_param,
                     'code':templet_code
                 },
+                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -316,6 +314,7 @@ $(function(){
                     data: {
                         'password':templet_newpassword
                     },
+                    login:true,
                     success_cb: function(data){
                         if (jQuery.trim(data).length > 0) {
                             templet_ensureChanged = false;

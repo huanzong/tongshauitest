@@ -6,11 +6,6 @@
 
 $(function(){
 
-    // 前台判断是否登陆
-    if(!istrsidssdssotoken()){
-       jumpToLoginPage();
-    }
-
     var templet_orderId=getQueryString("to");
     if('header'==templet_orderId){
         var tabNmu =$('.js-personalPicuure').index();
@@ -183,6 +178,7 @@ $(function(){
             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
             data:{"parentId":shengVal},
+            login:true,
             success_cb:function(data){
                 if(data.isSuccess){
                     var provinceList=data.data;
@@ -216,6 +212,7 @@ $(function(){
             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
             data:{"parentId":shiVal},
+            login:true,
             success_cb:function(data){
                 if(data.isSuccess){
                     var provinceList=data.data;
@@ -260,6 +257,7 @@ $(function(){
             url:siteConfig.userUrl+"/interaction-service/regionInfo/regionList/",
             type:"get",
             data:{"parentId":'0'},
+            login:true,
             success_cb:function(data){
                 if(data.isSuccess){
                     var provinceList=data.data;
@@ -404,7 +402,8 @@ $(function(){
             type: "post",
             url: siteConfig.userUrl+"/hshop-user/front/user/updateUserInfo/",
             data:templet_data,
-            error: function (data) {
+            login:true,
+            error_cb: function (data) {
                 templet_isSubmiting=false;
             },
             success_cb: function (data) {
