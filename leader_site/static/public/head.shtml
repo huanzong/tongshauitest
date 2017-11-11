@@ -15,7 +15,7 @@
         /**
          * 测试环境地址
          */
-         userUrl: "http://tuser.tongshuai.com",//用于获取用户信息
+         // userUrl: "http://tuser.tongshuai.com",//用于获取用户信息
          domain: "http://test.tongshuai.com",//本地
          apiUrl: "http://test.tongshuai.com/buy",//本地
          userUrl: "http://test.tongshuai.com/hshop-user",//本地
