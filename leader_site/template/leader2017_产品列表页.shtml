@@ -117,7 +117,7 @@
 								<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
 								<trs_channels id="parent" startpos='2' num='7'>
 								<li>
-									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE'/>">
+									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
 										<TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
 										<span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
 									</a>
@@ -128,7 +128,7 @@
 								<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
 								<trs_channels id="parent.parent" startpos='2' num='7'>
 								<li>
-									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE'/>">
+									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
 										<TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
 										<span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
 									</a>
