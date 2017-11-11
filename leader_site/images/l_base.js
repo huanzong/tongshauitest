@@ -1,6 +1,66 @@
+/**
+ * ajax初始化
+ */
+jQuery.ajaxSetup({
+    type: "post",
+    dataType: "json",
+    cache: false,
+    box_obj: null,
+    scroll: null,
+    beforeSend: function(request) {
+        //需要登录校验，且用户未登录
+        if (this.login && !istrsidssdssotoken()) {
+            request.abort();
+        }
+        //contentType: "application/json; charset=utf-8",
+        if (this.applicationType){
+            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+        }
+    },
+    success: function(data) {
+        if (data.isSuccess != undefined && istrsidssdssotoken()) {
+            if (!data.isSuccess) {
+
+            }
+        }
+
+        if (this.success_cb) {
+            this.success_cb(data);
+        }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+
+        if (this.error_cb) {
+            this.error_cb(jqXHR, textStatus, errorThrown);
+        }
+    }
+});
+/**
+ *  公共服务
+ */
+var leaderServer = {
+    //根据ip地址获取用户地址
+    getIpAddress: function(){
+        $.ajax({
+            url:'http://api.map.baidu.com/location/ip?ak=qT3FXMgALhVQia2XiGKhmeAQ',
+            type:'get',
+            success_cb:function(data){
+                if(data.status==0){
+                    return data.content.address;
+                }else{
+                    return false;
+                }
+                
+            },
+            error_cb:function(data){
+                return false;
+            }
+        });
+    }
+};
+
+
 $(function () {
-
-
 
     /**
      * 首页动画：线变化
@@ -170,44 +230,7 @@ $(function () {
     userLoginStatus();
 
 });
-/**
- * ajax初始化
- */
-jQuery.ajaxSetup({
-    type: "post",
-    dataType: "json",
-    cache: false,
-    box_obj: null,
-    scroll: null,
-    beforeSend: function(request) {
-        //需要登录校验，且用户未登录
-        if (this.login && !istrsidssdssotoken()) {
-            request.abort();
-        }
-        //contentType: "application/json; charset=utf-8",
-        if (this.applicationType){
-            console.log('888');
-            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
-        }
-    },
-    success: function(data) {
-        if (data.isSuccess != undefined && istrsidssdssotoken()) {
-            if (!data.isSuccess) {
 
-            }
-        }
-
-        if (this.success_cb) {
-            this.success_cb(data);
-        }
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-
-        if (this.error_cb) {
-            this.error_cb(jqXHR, textStatus, errorThrown);
-        }
-    }
-});
 
 //加载导航头的登录状态
 function userLoginStatus() {

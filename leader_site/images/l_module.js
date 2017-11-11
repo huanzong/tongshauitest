@@ -1,3 +1,44 @@
+/**
+ * 全局方法定义-控件
+ */
+// confirm弹窗
+var myConfirm=$(".o_body").oConfirm();
+var leaderConfirm = {
+    open:function(el){
+        var elOpen = {
+            info : el.info || '', //提示信息
+            ele : el.ele, //传递对象
+            callbackFn : el.callbackFn,
+            addClass: el.addClass || "l-confirm" //给弹层添加其他class
+        };
+        myConfirm.open(elOpen);
+        $('.o_popupclose').find('span').addClass('iconfont icon-close');
+    }
+}
+/**
+ * 全局方法-公用
+ */
+var leaderFun = {
+    //获取当前用户ip地址
+    getUserIp:function(){
+        if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")){
+            $ip = getenv("HTTP_CLIENT_IP"); 
+        }else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"),"unknown")){
+            $ip = getenv("HTTP_X_FORWARDED_FOR"); 
+        }
+        else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")){
+            $ip = getenv("REMOTE_ADDR"); 
+        }
+        else if (isset ($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR']&& strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")){
+            $ip = $_SERVER['REMOTE_ADDR']; 
+        }
+        else{
+            $ip = "unknown"; 
+        }
+        return ($ip);
+    }
+};
+
 $(function() {
 
     init();
@@ -316,8 +357,6 @@ $(function() {
             return false;
         });
     });
-
-
 
 });
 
