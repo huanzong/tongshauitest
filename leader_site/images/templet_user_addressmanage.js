@@ -212,9 +212,7 @@ function saveUserAddress(){
     $.ajax({
         url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
         type:"post",
-        dataType:"json",
         data:data,
-        applicationType:true,
         login:true,
         success_cb:function(responseT){
             if(responseT.isSuccess){
