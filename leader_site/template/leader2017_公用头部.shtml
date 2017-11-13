@@ -60,11 +60,11 @@
 				<i class="iconfont icon-arrow-sanjiao-up-s nav-userup"></i>
 				<ul class="nav-user-column">
 					<li><a href="javascript:;">个人中心</a></li>
-					<li><a href="javascript:;">消息</a></li>
+					<!--<li><a href="javascript:;">消息</a></li>-->
 					<li><a href="javascript:;">我的订单</a></li>
-					<li><a href="javascript:;">我的优惠券</a></li>
+					<!--<li><a href="javascript:;">我的优惠券</a></li>
 					<li><a href="javascript:;">收藏与订阅</a></li>
-					<li><a href="javascript:;">我的产品</a></li>
+					<li><a href="javascript:;">我的产品</a></li>-->
 					<li class="nav-quip">
 						<a href="javascript:;" id="header_logout">退出登录</a>
 					</li>
@@ -91,12 +91,12 @@
 					<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/user_img.jpg" class="user-img" ignoreapd="true" />
 					<span></span>
 					<ul class="nav-user-column">
-						<li><a href="javascript:;">个人中心</a></li>
-						<li><a href="javascript:;">消息</a></li>
-						<li><a href="javascript:;">我的订单</a></li>
-						<li><a href="javascript:;">我的优惠券</a></li>
+						<li><a href="/user/">个人中心</a></li>
+						<!--<li><a href="javascript:;">消息</a></li>-->
+						<li><a href="/order/ ">我的订单</a></li>
+						<!--<li><a href="javascript:;">我的优惠券</a></li>
 						<li><a href="javascript:;">收藏与订阅</a></li>
-						<li><a href="javascript:;">我的产品</a></li>
+						<li><a href="javascript:;">我的产品</a></li>-->
 						<li class="nav-quip">
 							<a href="javascript:;" id="header_logout2">退出登录</a>
 						</li>
