@@ -436,7 +436,7 @@
 								<trs_viewdata field="xpbqyxq">
 								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='<='>
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
-									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
+									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
 										<span class="pro-info-title"><trs_viewdata field="pname"/></span>
 										<span class="pro-info-type"><trs_viewdata field="modelno"/></span>
@@ -455,9 +455,9 @@
 								<trs_viewdata field="xinpin">
 								<TRS_CONDITION REFERENCE="是" CONDITION="@xinpin" OPERATOR="contain">
 								<trs_viewdata field="xpbqyxq">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='<='>
+								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='>='>
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
-									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
+									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
 										<span class="pro-info-title"><trs_viewdata field="pname"/></span>
 										<span class="pro-info-type"><trs_viewdata field="modelno"/></span>
