@@ -1,3 +1,4 @@
+<script type="text/javascript" src="templete_nav_search.js"></script>
 <div class="o_g l-nav">
 	<!-- 一级导航 -->
 	<!-- logo -->
@@ -13,18 +14,18 @@
 		</li>
 		<li class="nav-column js_column" column='1'>
 
-			<a href="<trs_viewdatas id="悠生活"><trs_viewdata field='link'/></trs_viewdatas>">
+			<a href="<trs_viewdatas id='悠生活'><trs_viewdata field='link'/></trs_viewdatas>">
 			<div class="nav-column-box2"></div>
 			<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/nav-life.gif" class="o_lg-hide" ignoreapd="true" />
 			</a>
 		</li>
 		<li class="nav-column js_column" column='2'>
-			<a href="<trs_viewdatas id="会员"><trs_viewdata field='link'/></trs_viewdatas>">
+			<a href="<trs_viewdatas id='会员'><trs_viewdata field='link'/></trs_viewdatas>">
 			<div class="nav-column-box3"></div>
 			</a>
 		</li>
 		<li class="nav-column js_column" column='3'>
-			<a href="<trs_viewdatas id="服务"><trs_viewdata field='link'/></trs_viewdatas>">
+			<a href="<trs_viewdatas id='服务'><trs_viewdata field='link'/></trs_viewdatas>">
 			<div class="nav-column-box4"></div>
 			</a>
 		</li>
@@ -34,13 +35,15 @@
 	<div class="o_u o_df_2-12 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
 		<div class="nav-search">
 			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory" />
-			<i class="iconfont icon-search"></i>
+			<i class="iconfont icon-search js_jumpto_product_search"></i>
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
 				<div class="search-quick">快速链接</div>
-				<ul class="search-list">
-					<li>我是搜索结果</li>
-					<li>我是搜索结果</li>
-					<li>我是搜索结果</li>
+				<ul class="search-list js_searchBox_listShow">
+					<!--
+                        <li>我是搜索结果</li>
+                        <li>我是搜索结果</li>
+                        <li>我是搜索结果</li>
+                    -->
 				</ul>
 			</div>
 		</div>
@@ -76,7 +79,7 @@
 	<div class="o_u o_df_3-12 o_md_5-12 o_sm_5-12 o_xs_8-12 o_df-hide o_lg-show o_md-show o_sm-show o_xs-show js_navSearchLgHide">
 		<ul class="nav-search-lg">
 			<li>
-			<!-- 未登录展示 -->
+				<!-- 未登录展示 -->
 				<a href="javascript:;" id="header_logoutA">
 					<i class="iconfont icon-member"></i>
 					<span></span>
@@ -154,12 +157,14 @@
 				<a href="javascript:;">帮助中心</a>
 				<a href="javascript:;">联系我们</a>
 			</div>
-			<ul class="searchresult-result js_searchBox js_searchBox_lg">
-				<li>搜索结果</li>
-				<li>搜索结果</li>
-				<li>搜索结果</li>
-				<li>搜索结果</li>
-				<li>搜索结果</li>
+			<ul class="searchresult-result js_searchBox js_searchBox_lg js_searchBox_listShow">
+				<!--
+                    <li>搜索结果</li>
+                    <li>搜索结果</li>
+                    <li>搜索结果</li>
+                    <li>搜索结果</li>
+                    <li>搜索结果</li>
+                -->
 			</ul>
 		</div>
 		<div class="o_u o_df_2-12"></div>
@@ -170,9 +175,9 @@
 	<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
 		<trs_viewdatas id="轻产品">
 			<li class="second-column o_df-center">
-				<a href="<trs_viewdata field="link"/>">
+				<a href="<trs_viewdata field='link'/>">
 				<div class="second-column-i">
-					<img src="<trs_viewdata field="pic" UrlIsAbs="true"/>" />
+					<img src="<trs_viewdata field='pic' UrlIsAbs='true'/>" />
 				</div>
 				<div class="second-column-name"><trs_viewdata field="title"/></div>
 				</a>
