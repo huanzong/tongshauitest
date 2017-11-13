@@ -1334,6 +1334,7 @@
     <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
     <script type="text/javascript" src="../site5/product_detail.js"></script>
+    <script type="text/javascript" src="../site5/templet_product_list_compare.js"></script>
     <script>
         var templet_price='<trs_viewdata field="sku_values"/>';//价格字符串
         var point='<trs_viewdata field="gnld"/>';//功能亮点
