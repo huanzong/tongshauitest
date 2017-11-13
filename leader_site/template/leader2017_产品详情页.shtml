@@ -825,15 +825,12 @@
                 <div class="detail-scene">
                     <div class="swiper-container js_sceneSwiper">
                         <div class="swiper-wrapper">
+                            <TRS_RELNEWS id="cpcjt">
                             <div class="swiper-slide">
-                                <img class="js_scenePicture" src="" df="ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="" />
+                                <img class="js_scenePicture" src="" df="<trs_viewdata field='cpcjt_pc'/>" xs="<trs_viewdata field='cpcjt_yd'/>" sm="<trs_viewdata field='cpcjt_yd'/>" md="<trs_viewdata field='cpcjt_yd'/>" alt="" />
                             </div>
-                            <div class="swiper-slide">
-                                <img class="js_scenePicture" src="" df="ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="js_scenePicture" src="" df="ignore_prodetail3.jpg" xs="images/ignore_prodetail4.jpg" sm="images/ignore_prodetail4.jpg" md="images/ignore_prodetail4.jpg" alt="" />
-                            </div>
+                            </TRS_RELNEWS>
+
                         </div>
                     </div>
                 </div>
@@ -846,15 +843,11 @@
                     <div class="detail-sellpoint js_oHerlSize">
                         <div class="swiper-container js_swiperSellPoint">
                             <div class="swiper-wrapper">
+                                <TRS_RELNEWS id="mdjs_gw" num="5">
                                 <div class="swiper-slide">
-                                    <img src="../site5/ignore_prodetail7.jpg" />
+                                    <img src="<trs_viewdata field='mdpt'/>" />
                                 </div>
-                                <div class="swiper-slide">
-                                    <img src="../site5/ignore_prodetail7.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="../site5/ignore_prodetail7.jpg" />
-                                </div>
+                                </TRS_RELNEWS>
                             </div>
                         </div>
                     </div>
@@ -864,21 +857,13 @@
                     <div class="o_u o_df_4-5 sellpoint-bg js_oHerl">
                         <div class="sellpoint-describe js_center">
                             <!-- 循环体 -->
+                            <TRS_RELNEWS id="mdjs_gw" num="5">
                             <div class="js_sellpointFont">
-                                <div class="describe1">如初生11</div>
-                                <div class="describe2">风冷无霜更新鲜</div>
-                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                                <div class="describe1"><trs_viewdata field='title2'/></div>
+                                <div class="describe2"><trs_viewdata field='title'/></div>
+                                <div class="describe3"><trs_viewdata field='mdjs'/></div>
                             </div>
-                            <div class="js_sellpointFont">
-                                <div class="describe1">如初生22</div>
-                                <div class="describe2">风冷无霜更新鲜</div>
-                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
-                            </div>
-                            <div class="js_sellpointFont">
-                                <div class="describe1">如初生33</div>
-                                <div class="describe2">风冷无霜更新鲜</div>
-                                <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
-                            </div>
+                            </TRS_RELNEWS>
                             <!-- 循环体 END -->
                         </div>
                     </div>
