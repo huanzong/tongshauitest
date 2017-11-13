@@ -426,10 +426,10 @@ $(".js_addressSetDefault").live("click",function(){
 
 //删除地址2
 $(document).on("click",".deleteAddress",function(){
+    var addressId=$(this).attr("addid");
+    var $this=$(this);
     globalShade("确定要删除吗？");
     $(".js-alertTrue").click(function(){//确定删除按钮
-        var addressId=$(this).attr("addid");
-        var $this=$(this);
         $.ajax({
             url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
             type:"get",
