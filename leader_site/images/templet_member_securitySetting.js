@@ -5,10 +5,6 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
 
-    // 前台判断是否登陆
-    if(!istrsidssdssotoken()){
-       jumpToLoginPage();
-    }
     if($.cookie('isAlterBind') == null ){
       document.cookie="isAlterBind=0;path=/";
     }
@@ -18,6 +14,7 @@ $(function(){
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
         data: "",
+        login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
                 //有没有邮箱
@@ -81,6 +78,7 @@ $(function(){
                 $.ajax({
                     url: siteConfig.userUrl+'/ids/ts/userInfoManager.jsp',
                     data:"editOperation=getPwdLevel",
+                    login:true,
                     success_cb: function (data) {
                         if(data.isSuccess){
                             if(data.pwdType=="STRONG")

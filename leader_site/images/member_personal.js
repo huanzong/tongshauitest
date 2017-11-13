@@ -304,6 +304,7 @@ $('.js-personalinfotab').click( function () {
                      "height": parseInt(imgSize.h),
                      "userHeadPic": imgs.src
             },
+            login:true,
             success_cb: function (data) {
                 if (data.isSuccess) {
                     globalShade2('保存成功','1');
