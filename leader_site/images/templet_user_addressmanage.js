@@ -212,6 +212,7 @@ function saveUserAddress(){
     $.ajax({
         url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
         type:"post",
+        dataType:"json",
         data:data,
         login:true,
         success_cb:function(responseT){
@@ -424,7 +425,7 @@ $(".js_addressSetDefault").live("click",function(){
 }*/
 
 //删除地址2
-$(".deleteAddress").click(function(){
+$(document).on("click",".deleteAddress",function(){
     globalShade("确定要删除吗？");
     $(".js-alertTrue").click(function(){//确定删除按钮
         var addressId=$(this).attr("addid");
