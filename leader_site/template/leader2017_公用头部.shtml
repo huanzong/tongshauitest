@@ -1,4 +1,4 @@
-<script type="text/javascript" src="templete_nav_search.js"></script>
+<!-- <script type="text/javascript" src="templete_nav_search.js"></script>-->
 <div class="o_g l-nav">
 	<!-- 一级导航 -->
 	<!-- logo -->
@@ -59,9 +59,9 @@
 				<i class="iconfont icon-arrow-sanjiao-down-s nav-userdown"></i>
 				<i class="iconfont icon-arrow-sanjiao-up-s nav-userup"></i>
 				<ul class="nav-user-column">
-					<li><a href="/user/">个人中心</a></li>
+					<li><a href="http://tuser.tongshuai.com/user/">个人中心</a></li>
 					<!--<li><a href="javascript:;">消息</a></li>-->
-					<li><a href="/order/">我的订单</a></li>
+					<li><a href="http://tuser.tongshuai.com/order/">我的订单</a></li>
 					<!--<li><a href="javascript:;">我的优惠券</a></li>
 					<li><a href="javascript:;">收藏与订阅</a></li>
 					<li><a href="javascript:;">我的产品</a></li>-->
@@ -91,9 +91,9 @@
 					<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/user_img.jpg" class="user-img" ignoreapd="true" />
 					<span></span>
 					<ul class="nav-user-column">
-						<li><a href="/user/">个人中心</a></li>
+						<li><a href="http://tuser.tongshuai.com/user/">个人中心</a></li>
 						<!--<li><a href="javascript:;">消息</a></li>-->
-						<li><a href="/order/">我的订单</a></li>
+						<li><a href="http://tuser.tongshuai.com/order/">我的订单</a></li>
 						<!--<li><a href="javascript:;">我的优惠券</a></li>
 						<li><a href="javascript:;">收藏与订阅</a></li>
 						<li><a href="javascript:;">我的产品</a></li>-->
