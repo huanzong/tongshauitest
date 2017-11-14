@@ -9,6 +9,7 @@
         "modelno":"<TRS_VIEWDATA FIELD="modelno" />",
         "dochref": "<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>", 
         "pic":"<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>",
+        "price":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="price">产品价格</TRS_VIEWDATA>",
         "sku_value":<trs_viewdata field="sku_values"><TRS_CONDITION CONDITION='@sku_values' OPERATOR="blank" not="true"><trs_viewdata field="sku_values"/></TRS_CONDITION><TRS_CONDITION CONDITION='@sku_values' OPERATOR="blank">""</TRS_CONDITION></trs_viewdata>
     }, 
     </TRS_CONDITION>
