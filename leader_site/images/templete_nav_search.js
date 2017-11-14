@@ -106,7 +106,7 @@ $('.js_jumpto_product_search').on('click', function () {
 var timeoutId;
 //搜索框提示浮层
 function searchBoxWord(word) {
-    var channelId = '273690';
+    var channelId = '285710';
     var searchWord = $.trim(word);
     if (!isEmpty(searchWord)) {
         searchWord = encodeURIComponent(searchWord);
