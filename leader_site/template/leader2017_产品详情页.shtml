@@ -46,7 +46,7 @@
                         <!-- 中间 -->
                         <div class="banner-pro">
                             <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' />" class="banner-pro-img" />
+                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img" />
                             </TRS_XAPPENDIXS>
                             <div class="banner-pro-oppo o_df-hide o_xs-show">
                                 <!-- <div class="activity-icon active">
@@ -254,7 +254,7 @@
                                     <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
                                     <div class="swiper-slide swiper-slide-active">
                                         <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>" />
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" />
                                         </a>
                                     </div>
                                     </TRS_XAPPENDIXS>
@@ -1358,5 +1358,6 @@
     <script type="text/javascript" src="../site5/templet_product_detail.js"></script> 
     
 </body>
-
+<!--<TRS_APPENDIX INDEX="0" MODE='PIC' WIDTH='200'/>-->
+<!--<TRS_APPENDIX INDEX="-1" MODE='PIC' WIDTH='1000'/>-->
 </html>
