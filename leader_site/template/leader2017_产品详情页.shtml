@@ -95,7 +95,7 @@
                             </div>
                             <div class="particulars-detail">
                                 <!-- <div class="old-price">￥98034</div> -->
-                                <div class="corrent-price js_price"><sub>￥</sub><span>98034</span></div>
+                                <div class="corrent-price js_price"><sub>￥</sub><span><trs_viewdata field="price"/></span></div>
                                 <div class="particulars-capacity">
                                     <span class="capacity-tit">容量：</span>
                                     <span class="capacity-box active">798L</span>
@@ -1014,7 +1014,7 @@
                                             <trs_viewdata field="cpms" num='33'/>
                                         </div>
                                         <div class="detail-more-price" sku_value='<trs_viewdata field="sku_values"/>'>
-                                            ￥<span>X</span>
+                                            ￥<span><trs_viewdata field="price"/></span>
                                         </div>
                                     </div>
                                 </a>
@@ -1050,7 +1050,7 @@
                                 <trs_viewdata field="cpms" num='33'/>
                             </div>
                             <div class="detail-more-price" sku_value='<trs_viewdata field="sku_values"/>'>
-                                ￥<span>X</span>
+                                ￥<span><trs_viewdata field="price"/></span>
                             </div>
                         </div>
 
