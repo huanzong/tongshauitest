@@ -5,10 +5,11 @@ function isEmpty(value) {
     }
     return false;
 }
+
 var screenWidth = document.body.offsetWidth;
 //搜索历史
 $('.js_searchHistory').bind('input propertychange', function () {
-    if ($(this).val()) {
+    if ($(this).val() && $(this).val() != "搜索产品、服务、帮助...") {
         if (screenWidth > 1199) {
             $('.js_searchBox_xl').show();
         } else {
@@ -97,33 +98,29 @@ $('.js_menuShow').on('click', function () {
 $('.js_jumpto_product_search').on('click', function () {
     var channelId = '273690';
     var searchWord = $.trim($('.js_searchHistory').val());
-    searchWord = encodeURIComponent(searchWord);
-    if (!isEmpty(searchWord)) {
+    if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
+        searchWord = encodeURIComponent(searchWord);
         window.location.href = "/was5/web/search?channelid=" + channelId + "&searchword=" + searchWord;
     }
 });
 
-var timeoutId;
 //搜索框提示浮层
 function searchBoxWord(word) {
-    var channelId = '273690';
+    var channelId = '285710';
     var searchWord = $.trim(word);
-    if (!isEmpty(searchWord)) {
+    if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
         searchWord = encodeURIComponent(searchWord);
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(function () {
-            $.ajax({
-                type: "GET",
-                url: "/was5/web/search?channelid=" + channelId + "&searchword=" + searchWord,
-                dataType: "html",
-                async: true,
-                success: function (data) {
-                    $('.js_searchBox_listShow').after(data);
-                },
-                error: function (data) {
-                }
-            });
-        }, 500);
+        $.ajax({
+            type: "GET",
+            url: "/was5/web/search?channelid=" + channelId + "&searchword=" + searchWord,
+            dataType: "html",
+            async: true,
+            success: function (data) {
+                $('.js_searchBox_listShow').after(data);
+            },
+            error: function (data) {
+            }
+        });
     }
 
 }
