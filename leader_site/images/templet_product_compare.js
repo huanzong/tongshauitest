@@ -54,7 +54,7 @@ jQuery(function () {
     //通过url的channel获取第一个json------得到数据集合json的路径
     $.ajax({
         url: "../../compareurl_56.json",
-        dataType: "text",
+        dataType: "json",
         async: false,
         success: function (data) {
             //解析多个数值
