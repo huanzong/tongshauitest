@@ -18,19 +18,93 @@
             }
         });
     },
-        
- }
+    regionList: function(params,callbackFun,errorFun){
+        $.ajax({
+            type:'GET',
+            url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
+            data: params,
+            login:true,
+            success_cb:function(data){
+                if(data.isSuccess){
+                    callbackFun&&callbackFun(data);
+                }else{
+                    errorFun&&errorFun();
+                }
+            }
+        })
+    }
+}
+var userinfo=$(".js_addressAddForm" ).Validform({
+    tiptype:3,
+    label:".label",
+    showAllError:true,
+    ajaxPost:true,
+    btnSubmit:'.js_addressAddSubmit',
+    btnReset:'.js_addressAddCancel',
+    callback:function(form){
+        var addressData = {
+            customerName:$('.js_customerName').val(),
+            mobilePhone:$('.js_mobilePhone').val(),
+            telPhone:$('.js_telPhone').val(),
+            regionDetail:$('.js_regionDetail').val(),
+            // provinceId:provinceId,
+            // cityId:cityId,
+            // regionId:regionId,
+            // streetId:streetId,
+            provinceName:$('.js_provinceName').val(),
+            cityName:$('.js_cityName').val(),
+            areaName:$('.js_areaName').val(),
+            streetName:$('.js_streetName').val(),
+            regionName:$('.js_regionName').val()
+        };
+
+        return false;
+    }
+});
 $(function(){
-    $('#js_GiftboxSolid1 ').oSelect().init();
+    $('#js_GiftboxSolid1').oSelect().init();
     $('#js_GiftboxSolid2').oSelect().init();
 
     $('#js_orderDate').oSelect().init();
     $('#js_orderTime').oSelect().init();
 
-    $('#js_orderConfirmSave').oSelect().init();
-    $('#js_orderConfirmCity').oSelect().init();
-    $('#js_orderConfirmArea').oSelect().init();
-    $('#js_orderConfirmRode').oSelect().init();
+    // $('#js_orderConfirmSave').oSelect().init();
+    // $('#js_orderConfirmCity').oSelect().init();
+    // $('#js_orderConfirmArea').oSelect().init();
+    // $('#js_orderConfirmRode').oSelect().init();
+
+    //省市区联动
+    addressServer.regionList({
+        parentId: 0
+    },function(data){
+        var listData = data.data;
+            str = '';
+        for(i in listData){
+            str += '<option value="'+listData[i].id+'">'+listData[i].regionName+'</option>';
+        }
+        $('#js_orderConfirmSave').html(str).oSelect().init();
+        //获取市
+        addressServer.regionList({
+            parentId: listData[0].id
+        },function(data){
+            var listData = data.data;
+                str = '';
+            for(i in listData){
+                str += '<option value="'+listData[i].id+'">'+listData[i].regionName+'</option>';
+            }
+            $('#js_orderConfirmCity').html(str).oSelect().init();
+            addressServer.regionList({
+                parentId: listData[0].id
+            },function(data){
+                var listData = data.data;
+                    str = '';
+                for(i in listData){
+                    str += '<option value="'+listData[i].id+'">'+listData[i].regionName+'</option>';
+                }
+                $('#js_orderConfirmArea').html(str).oSelect().init();
+            });
+        });
+    });
 
     $(".js_radio").jq_qvote();
 
@@ -61,34 +135,15 @@ $(function(){
 
     //地址新增
     $('.js_orderconBoxBtn').click(function(){
-        $('.js_productOrderTitle').after($('.js_orderUserInforBox'));
+        $('.js_productOrderTitle').after($('.js_addressAddForm'));
         $('.js_orderconBox').show();
         $('.js_addressListCont').show();
         resetInput(userinfo,inputArr);
     });
-
-
-
-    var userinfo=$(".js_orderUserInforBox" ).Validform({
-        tiptype:3,
-        label:".label",
-        showAllError:true,
-        ajaxPost:true,
-        btnSubmit:'.js_orderConfirmGetUpData',
-        //btnReset:'.js_memberAddressBtn',
-        //btnReset:'.js_memberAddressBtn',
-        callback:function(from){
-            console.log(1);
-            return false;
-        }
-    });
-
-
-
-    //    修改地址
+    //修改地址
     $('.js_addressListSetBtn').click(function(){
         var objparents =  $(this).parents('li');
-         var userinfo = $(this).siblings('.js_orderAddressCont');
+        var userinfo = $(this).siblings('.js_orderAddressCont');
         var userinfoName = userinfo.children('.product-address-list-name').html();
         var userinfoPhone = userinfo.children('.product-address-list-phone').html();
         var userinfoAddress = userinfo.children('.product-address-list-address').html();
@@ -101,7 +156,7 @@ $(function(){
 
         $('.js_addressListCont').show();
         objparents.children('.js_addressListCont').hide();
-        objparents.append($('.js_orderUserInforBox'));
+        objparents.append($('.js_addressAddForm'));
         $('.js_orderconBox').show();
         userinfo.resetForm();
         $('.Validform_checktip').html('');
@@ -110,7 +165,7 @@ $(function(){
 
     //初始化方法
     function resetInput(obj,input){
-        obj .resetForm();
+        obj.resetForm();
         for(var i =0; i <input.length;i++){
             input[i].blur();
         }
