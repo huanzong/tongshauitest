@@ -5,10 +5,9 @@ function isEmpty(value) {
     }
     return false;
 }
-
+var screenWidth = document.body.offsetWidth;
 //搜索历史
 $('.js_searchHistory').bind('input propertychange', function () {
-    var screenWidth = document.body.offsetWidth;
     if ($(this).val()) {
         if (screenWidth > 1199) {
             $('.js_searchBox_xl').show();
