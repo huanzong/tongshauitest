@@ -36,7 +36,7 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_searchBox_lg').show();
     }
     $('.js_searchBoxQuick_lg').hide();
-    if ($(this).val()) {
+    if ($(this).val() && $(this).val() != "搜索产品、服务、帮助...") {
         searchBoxWord($(this).val());
     } else {
         var staSearchBoxHtml = '<li><a href = "">在线保修<a/></li>' +
@@ -116,7 +116,7 @@ function searchBoxWord(word) {
             dataType: "html",
             async: true,
             success: function (data) {
-                $('.js_searchBox_listShow').after(data);
+                $('.js_searchBox_listShow').html(data);
             },
             error: function (data) {
             }
