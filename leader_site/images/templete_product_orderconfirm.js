@@ -113,35 +113,35 @@ $(function(){
         $('.js_addressListCont').show();
         // resetInput(userinfo,inputArr);
         
-// var userinfo=$(".js_addressAddForm" ).Validform({
-$(".js_addressAddForm" ).Validform({
-    tiptype:3,
-    // label:".label",
-    showAllError:true,
-    ajaxPost:true,
-    btnSubmit:'.js_addressAddSubmit',
-    btnReset:'.js_addressAddCancel',
-    callback:function(form){
-        console.log('0000');
-        var addressData = {
-            customerName:$('.js_customerName').val(),
-            mobilePhone:$('.js_mobilePhone').val(),
-            telPhone:$('.js_telPhone').val(),
-            regionDetail:$('.js_regionDetail').val(),
-            // provinceId:provinceId,
-            // cityId:cityId,
-            // regionId:regionId,
-            // streetId:streetId,
-            provinceName:$('.js_provinceName').val(),
-            cityName:$('.js_cityName').val(),
-            areaName:$('.js_areaName').val(),
-            streetName:$('.js_streetName').val(),
-            regionName:$('.js_regionName').val()
-        };
+        // var userinfo=$(".js_addressAddForm" ).Validform({
+        $(".js_addressAddForm" ).Validform({
+            tiptype:3,
+            // label:".label",
+            showAllError:true,
+            ajaxPost:true,
+            btnSubmit:'.js_addressAddSubmit',
+            btnReset:'.js_addressAddCancel',
+            callback:function(form){
+                console.log('0000');
+                var addressData = {
+                    customerName:$('.js_customerName').val(),
+                    mobilePhone:$('.js_mobilePhone').val(),
+                    telPhone:$('.js_telPhone').val(),
+                    regionDetail:$('.js_regionDetail').val(),
+                    // provinceId:provinceId,
+                    // cityId:cityId,
+                    // regionId:regionId,
+                    // streetId:streetId,
+                    provinceName:$('.js_provinceName').val(),
+                    cityName:$('.js_cityName').val(),
+                    areaName:$('.js_areaName').val(),
+                    streetName:$('.js_streetName').val(),
+                    regionName:$('.js_regionName').val()
+                };
 
-        return false;
-    }
-});
+                return false;
+            }
+        });
 
     });
     //修改地址
