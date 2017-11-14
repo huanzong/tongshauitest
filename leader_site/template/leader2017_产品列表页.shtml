@@ -346,7 +346,7 @@
 										<trs_viewdata field="modelno"/>
 									</div>
 									<div class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>
-									  ¥<span></span>
+									  ¥<span><trs_viewdata field="price"/></span>
 									</div>
 									<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
 									<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
@@ -440,7 +440,7 @@
 									<div class="recommend-pro-info">
 										<span class="pro-info-title"><trs_viewdata field="pname"/></span>
 										<span class="pro-info-type"><trs_viewdata field="modelno"/></span>
-										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span></span></span>
+										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
 									</div>
 								</a>
 								</TRS_CONDITION>
@@ -461,7 +461,7 @@
 									<div class="recommend-pro-info">
 										<span class="pro-info-title"><trs_viewdata field="pname"/></span>
 										<span class="pro-info-type"><trs_viewdata field="modelno"/></span>
-										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span></span></span>
+										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
 									</div>
 								</a>
 								</TRS_CONDITION>
