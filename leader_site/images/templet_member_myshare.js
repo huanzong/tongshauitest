@@ -63,6 +63,9 @@ $(function(){
                                 for(var i=0;i<templet_count;i++) {
                                     for (var k = 0; k < data.data.length; k++) {
                                         if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
+                                            var templet_picUrl=data.data[k].proUrl;
+                                            var templet_comment=templet_picUrl.substring(0,templet_picUrl.length-6)+'_comment.shtml';
+
                                             templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
                                             templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
                                             templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
@@ -84,7 +87,7 @@ $(function(){
                                             }
                                             templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
                                             templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';
-                                            templet_addhtml+=' <div class="member-myshare-more"><a href="">查看详情<i class="iconfont icon-arrow-line-right"></i></a></div></div></div></div>';
+                                            templet_addhtml+=' <div class="member-myshare-more"><a href="'+templet_comment+'">查看详情<i class="iconfont icon-arrow-line-right"></i></a></div></div></div></div>';
                                         }
                                     }
                                 }
