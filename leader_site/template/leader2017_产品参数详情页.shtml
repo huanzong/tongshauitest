@@ -25,7 +25,7 @@
 			<div class="o_u o_df_10-12">
 				<div class="param-struct">
 					<div class="param-struct-img">
-						<img src="<TRS_VIEWDATA FIELD='productsize' />" class="js_structbg"/>
+						<img src="<TRS_VIEWDATA FIELD='productsize' UrlIsAbs='TRUE'/>" class="js_structbg"/>
 					</div>
 					<div class="param-attachment js_appendixText">
 						<TRS_VIEWDATA field="fjxx">
