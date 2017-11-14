@@ -1,7 +1,7 @@
 {
    "curCategoryComparing_CustomizedParameters":[
    <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  num="1">
-    <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
+    <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数">
       {
       
          "parameterCategoryName":"<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>",
