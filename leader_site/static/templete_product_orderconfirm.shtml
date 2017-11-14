@@ -103,15 +103,12 @@
                             <div class="o_u o_df_1-12 o_md_2-12  o_sm_11-12  o_xs_11-12  product-ordercon-list-title">
                                 <p class=" "><span>*</span><i>详细地址</i></p>
                             </div>
-                            <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input" >
+                            <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-input product-ordercon-list-input">
                                 <div class="o_u o_df_11-12 ">
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
                                         <div class="selectbox">
                                             <div class="">
-                                                <select name="" id="js_orderConfirmSave"  autotext="省">
-                                                    <option value="0">--山东--</option>
-                                                    <option value="1">北京</option>
-                                                    <option value="2">上海</option>
+                                                <select datatype="*" class="js_addressProvince" autotext="省">
                                                 </select>
                                             </div>
                                         </div>
@@ -119,35 +116,23 @@
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
                                         <div class="selectbox">
                                             <div class="">
-                                                <select name="" id="js_orderConfirmCity"  autotext="市">
-                                                    <option value="0">--青岛--</option>
-                                                    <option value="1">北京</option>
-                                                    <option value="2">上海</option>
+                                                <select datatype="*" class="js_addressCity"  autotext="市">
                                                 </select>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
                                         <div class="selectbox">
                                             <div class="">
-                                                <select name="" id="js_orderConfirmArea"  autotext="区">
-                                                    <option value="0">--市南--</option>
-                                                    <option value="1">市南</option>
-                                                    <option value="2">市南</option>
+                                                <select datatype="*" class ="js_addressArea"  autotext="区">
                                                 </select>
-
-
                                             </div>
                                         </div>
                                     </div>
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
                                         <div class="selectbox">
                                             <div class="">
-                                                <select name="" id="js_orderConfirmRode"  autotext="街道">
-                                                    <option value="0">--湛山街道--</option>
-                                                    <option value="1">某某街道</option>
-                                                    <option value="2">某某街道</option>
+                                                <select datatype="*" class ="js_addressStreet"  autotext="街道">
                                                 </select>
                                             </div>
                                         </div>
