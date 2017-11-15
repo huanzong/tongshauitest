@@ -15,6 +15,9 @@ $(function () {
             showCompareFlowLayout();
         }
     });
+    //对比初始化函数
+    setTimeout(initCookie(), 1000);
+    setTimeout(initLoadCookie(), 1000);
 })
 //对比互斥标志
 var noCompareChannel = "";
