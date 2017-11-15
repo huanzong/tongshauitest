@@ -465,7 +465,36 @@
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
                     <div class="detail-display">
-                        <img class="o_picture" src="" df="images/ignore_prodetail5.jpg" xs="images/ignore_prodetail6.jpg" sm="images/ignore_prodetail6.jpg" md="images/ignore_prodetail6.jpg" alt="">
+                        <!--<img class="o_picture" src="" df="images/ignore_prodetail5.jpg" xs="images/ignore_prodetail6.jpg" sm="images/ignore_prodetail6.jpg" md="images/ignore_prodetail6.jpg" alt="">-->
+                        <div label="Title left" name="tl" style="margin:0;font-size: 0;">
+                            <div class="picbox" style="display: inline-block;width: 50%;padding-bottom: 30px;">
+                                <div class="pr_0" style="display: inline-block;padding-right: 15px;">
+                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_1.jpg" style="width: 100%;">
+                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_2.jpg" style="display: inline-block;padding-top: 30px;width: 100%;">
+                                </div>
+                            </div>
+                            <div class="picbox" style="display: inline-block;width: 50%;padding-bottom: 30px;">
+                                <div class="pl_0" style="display: inline-block;padding-left: 15px;">
+                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_3.jpg" style="width: 100%;">
+                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_4.jpg" style="display: inline-block;width: 100%;padding-top: 30px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div label="Title left" name="tl" style="margin:0;font-size:0;width: 100%;padding-bottom: 30px;">
+                            <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_5.jpg" style="width: 100%;">
+                        </div>
+                        <div label="Title left" name="tl" style="margin:0;font-size: 0;">
+                            <div class="picbox" style="display: inline-block;width: 50%;padding-bottom: 30px;">
+                                <div class="pr_0" style="display: inline-block;padding-right: 15px;">
+                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_6.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="picbox" style="display: inline-block;width: 50%;padding-bottom: 30px;">
+                                <div class="pl_0" style="display: inline-block;padding-left: 15px;">
+                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_7.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12"></div>
@@ -654,7 +683,10 @@
                                 <br/>
                             </p>
                         </div>-->
-                        <div class='view TRS_UEDITOR trs_paper_default'><div style='margin:0;font-size: 0;'><div style='display: inline-block;width: 50%;padding-bottom: 30px;'><div style='display: inline-block;padding-right: 15px;'><img src='http://image.haier.com/cn/xbsy_37860/sybanner_27044/201709/P020170922667543883140.jpg'/></div></div><div style='display: inline-block;width: 50%;padding-bottom: 30px;'><div style='display: inline-block;padding-left: 15px;'><img src='http://image.haier.com/cn/xbsy_37860/sybanner_27044/201709/P020170922667543883140.jpg'/></div></div></div><div class='box js_box' style='margin:0;font-size: 0;'><p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>锚点名称</p><p><img src='http://image.haier.com/cn/business/central_air_conditioning/home_central/201411/P020141129794546555117.jpg'/></p></div><p><br/></p></div>
+                        <div class='box js_box' label='Title left' name='tl' id='' style='margin:0;font-size: 0;'>
+                            <p class='js_tag o_df-hide ue_t' style='width: 100%;font-size: 16px;color:#333;display: inline-block;'>[此处键入锚点名称]</p>
+                            <p><img class='ue_t' src='http://test.tongshuai.com/images/template_detail_8.jpg' style='width: 100%;display: inline-block;'></p>
+                        </div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12"></div>

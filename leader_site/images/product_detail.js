@@ -391,6 +391,7 @@ $(function() {
 
     $(window).resize(function() {
         init();
+        foldlsit();
     });
 
 
