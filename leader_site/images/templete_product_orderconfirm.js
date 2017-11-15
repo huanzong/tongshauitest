@@ -5,8 +5,7 @@
     //新增收货地址
     save: function(data){
         $.ajax({
-            url: siteConfig.userUrl+"/front/userRegion/save",
-            type: 'get',
+            url: siteConfig.userUrl+"/hshop-user/front/userRegion/save",
             data: data, 
             success_cb:function(data){
                 console.log(data);
@@ -18,6 +17,46 @@
             }
         });
     },
+    //获取收货地址列表
+    list: function(){
+        $.ajax({
+            url: siteConfig.userUrl+"/hshop-user/front/userRegion/list",
+            login:true,
+            success_cb:function(data){
+                var addressData = data.data.entities;
+                console.log(addressData);
+                $(".js_addressList").setTemplateElement("template-address-list");
+                $(".js_addressList").processTemplate(addressData);
+                addressListData();
+            },
+            error_cb:function(jqXHR, textStatus, errorThrown){
+                if(jqXHR.status==401){
+                    console.log('用户未登录');
+                }
+            }
+        });
+    },
+    //修改收货地址
+    update: function(params){
+        $.ajax({
+            url: siteConfig.userUrl+"/hshop-user/front/userRegion/update",
+            data: params,
+            login:true,
+            success_cb:function(data){
+                var addressData = data.data.entities;
+                console.log(addressData);
+                // $(".js_addressList").setTemplateElement("template-address-list");
+                // $(".js_addressList").processTemplate(addressData);
+                // addressListData();
+            },
+            error_cb:function(jqXHR, textStatus, errorThrown){
+                if(jqXHR.status==401){
+                    console.log('用户未登录');
+                }
+            }
+        });
+    },
+    //获取省市信息
     regionList: function(params,callbackFun,errorFun){
         $.ajax({
             type:'GET',
@@ -34,6 +73,65 @@
         })
     }
 }
+function addressListData(){
+    //避免checkbox重复初始化
+    $(".js_radio").each(function(i,n){
+        $(this).siblings('.c_ipt_cr ').size()<1&&$(this).jq_qvote();
+    });
+    //修改地址
+    $('.js_addressListSetBtn').click(function(){
+        var objparents =  $(this).parents('li');
+        var userinfo = $(this).siblings('.js_orderAddressCont');
+        var userinfoName = userinfo.children('.product-address-list-name').html();
+        var userinfoPhone = userinfo.children('.product-address-list-phone').html();
+        var userinfoAddress = userinfo.children('.product-address-list-address').html();
+        $('.Validform_wrong').removeClass('Validform_wrong').addClass('Validform_right');
+        $('.Validform_error').removeClass('Validform_error');
+
+        $('.js_order_username').val(userinfoName);
+        $('.js_order_userphone').val(userinfoPhone);
+        $('.js_order_usertell').val(userinfoAddress);
+
+        $('.js_addressListCont').show();
+        objparents.children('.js_addressListCont').hide();
+        objparents.append($('.js_addressAddForm'));
+        $('.js_orderconBox').show();
+        // userinfo.resetForm();
+        $('.Validform_checktip').html('');
+
+        $(".js_addressAddForm" ).Validform({
+            tiptype:3,
+            // label:".label",
+            showAllError:true,
+            ajaxPost:true,
+            btnSubmit:'.js_addressAddSubmit',
+            btnReset:'.js_addressAddCancel',
+            callback:function(form){
+                var addressData = {
+                    customerName:$('.js_customerName').val(),
+                    mobilePhone:$('.js_mobilePhone').val(),
+                    telPhone:$('.js_telPhone').val(),
+
+                    regionDetail:$('.js_regionDetail').val(),
+
+                    provinceId:$('.js_addressProvince').val(),
+                    cityId:$('.js_addressCity').val(),
+                    regionId:$('.js_addressRegion').val(),
+                    streetId:$('.js_addressStreet').val(),
+
+                    provinceName:$('.js_addressProvince').find("option:selected").text(),
+                    cityName:$('.js_addressCity').find("option:selected").text(),
+                    regionName:$('.js_addressRegion').find("option:selected").text(),
+                    streetName:$('.js_addressStreet').find("option:selected").text()
+                };
+
+                addressServer.save(addressData);
+
+                return false;
+            }
+        });
+    });
+}
 $(function(){
     $('#js_GiftboxSolid1').oSelect().init();
     $('#js_GiftboxSolid2').oSelect().init();
@@ -44,7 +142,7 @@ $(function(){
     var addressOselete = [
         $('.js_addressProvince').oSelect(),
         $('.js_addressCity').oSelect(),
-        $('.js_addressArea').oSelect(),
+        $('.js_addressRegion').oSelect(),
         $('.js_addressStreet').oSelect()
     ]
     //省市区联动
@@ -67,12 +165,14 @@ $(function(){
             fun&&fun(listData[0].regionCode);
         });
     }
+    //获取收货地址列表
+    addressServer.list();
     //省
     regionListHtml(0,$('.js_addressProvince'),function(parentId){
         //市
         regionListHtml(parentId,$('.js_addressCity'),function(parentId){
             //区
-            regionListHtml(parentId,$('.js_addressArea'),function(parentId){
+            regionListHtml(parentId,$('.js_addressRegion'),function(parentId){
                 //街道
                 regionListHtml(parentId,$('.js_addressStreet'));
             });
@@ -140,45 +240,11 @@ $(function(){
                     streetName:$('.js_addressStreet').find("option:selected").text()
                 };
 
-                $.ajax({
-                    type:'GET',
-                    url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
-                    data: params,
-                    login:true,
-                    success_cb:function(data){
-                        if(data.isSuccess){
-                            callbackFun&&callbackFun(data);
-                        }else{
-                            errorFun&&errorFun();
-                        }
-                    } 
-                });
+                addressServer.save(addressData);
 
                 return false;
             }
         });
-
-    });
-    //修改地址
-    $('.js_addressListSetBtn').click(function(){
-        var objparents =  $(this).parents('li');
-        var userinfo = $(this).siblings('.js_orderAddressCont');
-        var userinfoName = userinfo.children('.product-address-list-name').html();
-        var userinfoPhone = userinfo.children('.product-address-list-phone').html();
-        var userinfoAddress = userinfo.children('.product-address-list-address').html();
-        $('.Validform_wrong').removeClass('Validform_wrong').addClass('Validform_right');
-        $('.Validform_error').removeClass('Validform_error');
-
-        $('.js_order_username').val(userinfoName);
-        $('.js_order_userphone').val(userinfoPhone);
-        $('.js_order_usertell').val(userinfoAddress);
-
-        $('.js_addressListCont').show();
-        objparents.children('.js_addressListCont').hide();
-        objparents.append($('.js_addressAddForm'));
-        $('.js_orderconBox').show();
-        // userinfo.resetForm();
-        $('.Validform_checktip').html('');
 
     });
 
