@@ -234,5 +234,6 @@
 <script type="text/javascript" src="../site5/member_nav.js"></script>
 <script type="text/javascript" src="../site5/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="../site5/templet_member_nav.js"></script>
+<script type="text/javascript" src="images/templet_member_home.js"></script>
 </body>
 </html>
