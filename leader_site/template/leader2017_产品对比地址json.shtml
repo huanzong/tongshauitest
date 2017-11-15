@@ -18,12 +18,12 @@
         "name":"<TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" />",
         "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data_57.json"
         
-    }<TRS_IsNotLastRecord>,</TRS_IsNotLastRecord>
+    },
     </trs_channels>
     </TRS_CONDITION>
 
     </TRS_CONDITION>
     </trs_channels>
-
+    {}
     
 ]
