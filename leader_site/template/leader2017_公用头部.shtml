@@ -176,7 +176,7 @@
 			<li class="second-column o_df-center">
 				<a href="<trs_viewdata field='link'/>">
 				<div class="second-column-i">
-					<img src="<TRS_VIEWDATAAPPENDIXS FIELD='productsize'><TRS_VIEWDATAAPPENDIX  FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" />
+					<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic'><TRS_VIEWDATAAPPENDIX  FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" />
 				</div>
 				<div class="second-column-name"><trs_viewdata field="title"/></div>
 				</a>
