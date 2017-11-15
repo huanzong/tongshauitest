@@ -8,7 +8,7 @@
         "name":"<TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" />",
         "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data_57.json"
         
-    }<TRS_IsNotLastRecord>,</TRS_IsNotLastRecord>
+    },
     </TRS_CONDITION>
 
     <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="contain">
