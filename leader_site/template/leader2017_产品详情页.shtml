@@ -871,7 +871,7 @@
                             <TRS_RELNEWS id="mdjs_gw" num="5">
                             <div class="js_sellpointFont">
                                 <div class="describe1"><trs_viewdata field='title2'/></div>
-                                <div class="describe2"><trs_viewdata field='title'/></div>
+                                <div class="describe2"><trs_viewdata field='doctitle'/></div>
                                 <div class="describe3"><trs_viewdata field='mdjs'/></div>
                             </div>
                             </TRS_RELNEWS>
