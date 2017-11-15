@@ -19,6 +19,7 @@ $(function () {
 //对比互斥标志
 var noCompareChannel = "";
 //当前路径
+var currentUrl = window.location.href;
 var currentUrlName = "";
 //产品集合
 var proObjList = "";
@@ -79,33 +80,6 @@ function addContrastClick() {
                     if (pType != pType_ && pType != "") {
                         $(this).addClass("lose");
                         $(this).removeClass("js_contrast");
-                    }
-                    //智慧家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == smart_product) {
-
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
-                    //育婴家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == maternal_and_child) {
-
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                        //测试让空调可以比较
-                        if (pType == guisair || pType == gsair) {
-                            if (pType_ == guisair || pType_ == gsair) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
                     }
 
                 });
@@ -174,33 +148,7 @@ function initCookie() {
                         $(this).addClass("lose");
                         $(this).removeClass("js_contrast");
                     }
-                    //智慧家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == smart_product) {
 
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
-                    //育婴家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == maternal_and_child) {
-                        //生产
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                        //测试让空调可以比较
-                        if (pType == guisair || pType == gsair) {
-                            if (pType_ == guisair || pType_ == gsair) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
                 });
             }
         } else {
@@ -261,7 +209,7 @@ window.unchecked = function ($obj) {
 //将添加对比的产品绘制在浮层上
 window.add_compare_flyOut_item = function ($obj) {
 
-    if (currentUrlName.indexOf("product_compare") == -1) {
+    if (currentUrlName.indexOf("compare") == -1) {
 
         var $list = $('.js_compareBox');
         var count = $list.find('.compare-product-img').length;
