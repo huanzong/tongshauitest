@@ -34,33 +34,6 @@
         })
     }
 }
-var userinfo=$(".js_addressAddForm" ).Validform({
-    tiptype:3,
-    label:".label",
-    showAllError:true,
-    ajaxPost:true,
-    btnSubmit:'.js_addressAddSubmit',
-    btnReset:'.js_addressAddCancel',
-    callback:function(form){
-        var addressData = {
-            customerName:$('.js_customerName').val(),
-            mobilePhone:$('.js_mobilePhone').val(),
-            telPhone:$('.js_telPhone').val(),
-            regionDetail:$('.js_regionDetail').val(),
-            // provinceId:provinceId,
-            // cityId:cityId,
-            // regionId:regionId,
-            // streetId:streetId,
-            provinceName:$('.js_provinceName').val(),
-            cityName:$('.js_cityName').val(),
-            areaName:$('.js_areaName').val(),
-            streetName:$('.js_streetName').val(),
-            regionName:$('.js_regionName').val()
-        };
-
-        return false;
-    }
-});
 $(function(){
     $('#js_GiftboxSolid1').oSelect().init();
     $('#js_GiftboxSolid2').oSelect().init();
@@ -68,40 +41,40 @@ $(function(){
     $('#js_orderDate').oSelect().init();
     $('#js_orderTime').oSelect().init();
 
-    // $('#js_orderConfirmSave').oSelect().init();
-    // $('#js_orderConfirmCity').oSelect().init();
-    // $('#js_orderConfirmArea').oSelect().init();
-    // $('#js_orderConfirmRode').oSelect().init();
-
+    var addressOselete = [
+        $('.js_addressProvince').oSelect(),
+        $('.js_addressCity').oSelect(),
+        $('.js_addressArea').oSelect(),
+        $('.js_addressStreet').oSelect()
+    ]
     //省市区联动
-    addressServer.regionList({
-        parentId: 0
-    },function(data){
-        var listData = data.data;
-            str = '';
-        for(i in listData){
-            str += '<option value="'+listData[i].id+'">'+listData[i].regionName+'</option>';
-        }
-        $('#js_orderConfirmSave').html(str).oSelect().init();
-        //获取市
+    function regionListHtml(parentId,$ele,fun){
         addressServer.regionList({
-            parentId: listData[0].id
+            parentId: parentId
         },function(data){
             var listData = data.data;
-                str = '';
+                str = '<option value="">请选择</option>';
             for(i in listData){
-                str += '<option value="'+listData[i].id+'">'+listData[i].regionName+'</option>';
+                str += '<option value="'+listData[i].regionCode+'">'+listData[i].regionName+'</option>';
             }
-            $('#js_orderConfirmCity').html(str).oSelect().init();
-            addressServer.regionList({
-                parentId: listData[0].id
-            },function(data){
-                var listData = data.data;
-                    str = '';
-                for(i in listData){
-                    str += '<option value="'+listData[i].id+'">'+listData[i].regionName+'</option>';
-                }
-                $('#js_orderConfirmArea').html(str).oSelect().init();
+            $ele.html(str);
+            for (var i in addressOselete){
+                addressOselete[i].init();
+            }
+            $ele.on('change',function(){
+                fun&&fun($ele.val());
+            });
+            fun&&fun(listData[0].regionCode);
+        });
+    }
+    //省
+    regionListHtml(0,$('.js_addressProvince'),function(parentId){
+        //市
+        regionListHtml(parentId,$('.js_addressCity'),function(parentId){
+            //区
+            regionListHtml(parentId,$('.js_addressArea'),function(parentId){
+                //街道
+                regionListHtml(parentId,$('.js_addressStreet'));
             });
         });
     });
@@ -138,7 +111,38 @@ $(function(){
         $('.js_productOrderTitle').after($('.js_addressAddForm'));
         $('.js_orderconBox').show();
         $('.js_addressListCont').show();
-        resetInput(userinfo,inputArr);
+        // resetInput(userinfo,inputArr);
+        
+        // var userinfo=$(".js_addressAddForm" ).Validform({
+        $(".js_addressAddForm" ).Validform({
+            tiptype:3,
+            // label:".label",
+            showAllError:true,
+            ajaxPost:true,
+            btnSubmit:'.js_addressAddSubmit',
+            btnReset:'.js_addressAddCancel',
+            callback:function(form){
+                console.log('0000');
+                var addressData = {
+                    customerName:$('.js_customerName').val(),
+                    mobilePhone:$('.js_mobilePhone').val(),
+                    telPhone:$('.js_telPhone').val(),
+                    regionDetail:$('.js_regionDetail').val(),
+                    // provinceId:provinceId,
+                    // cityId:cityId,
+                    // regionId:regionId,
+                    // streetId:streetId,
+                    provinceName:$('.js_provinceName').val(),
+                    cityName:$('.js_cityName').val(),
+                    areaName:$('.js_areaName').val(),
+                    streetName:$('.js_streetName').val(),
+                    regionName:$('.js_regionName').val()
+                };
+
+                return false;
+            }
+        });
+
     });
     //修改地址
     $('.js_addressListSetBtn').click(function(){
@@ -158,7 +162,7 @@ $(function(){
         objparents.children('.js_addressListCont').hide();
         objparents.append($('.js_addressAddForm'));
         $('.js_orderconBox').show();
-        userinfo.resetForm();
+        // userinfo.resetForm();
         $('.Validform_checktip').html('');
 
     });
