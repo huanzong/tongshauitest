@@ -55,6 +55,7 @@ jQuery(function () {
     $.ajax({
         url: "../../compareurl_56.json",
         dataType: "text",
+        type:"get",
         async: false,
         success: function (data) {
             //解析多个数值
