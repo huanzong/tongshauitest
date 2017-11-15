@@ -956,7 +956,7 @@
                     <div class="o_u o_df_10-12">
                         <div class="param-struct">
                             <div class="param-struct-img">
-                                <img src="<TRS_VIEWDATAAPPENDIXS startpos='0' num='1' FIELD='productsize'><TRS_VIEWDATAAPPENDIX  FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="js_structbg" />
+                                <img src="<TRS_VIEWDATAAPPENDIXS startpos='0' num='1' FIELD='productsize'><TRS_VIEWDATAAPPENDIX InWidth='639'   FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="js_structbg" />
                             </div>
                             <div class="param-attachment js_appendixText">
                                 <trs_viewdata field="fjxx">
