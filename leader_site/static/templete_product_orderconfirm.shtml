@@ -61,7 +61,7 @@
             <div class="o_u o_df_10-12">
                 <!-- 收获地址 -->
                 <div class="product-ordercon-title js_productOrderTitle o_u o_df_2-2">
-                    <h4 class="o_u">收获地址</h4><a href="javascript:;"  class="o_u js_orderconBoxBtn"><span class=" iconfont icon-plus-solid"></span>新增地址</a>
+                    <h4 class="o_u">收获地址</h4><a href="javascript:;"  class="o_u js_addressAddBtn"><span class=" iconfont icon-plus-solid"></span>新增地址</a>
                 </div>
                 <div class="js_addressAddForm">
                     <ul class="product-ordercon-box js_orderconBox o_u o_df_2-2">
@@ -124,7 +124,7 @@
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
                                         <div class="selectbox">
                                             <div class="">
-                                                <select datatype="*" class ="js_addressArea"  autotext="区">
+                                                <select datatype="*" class ="js_addressRegion"  autotext="区">
                                                 </select>
                                             </div>
                                         </div>

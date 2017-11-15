@@ -107,7 +107,7 @@ $(function(){
     var inputArr=[$('.js_order_username'),$('.js_order_userphone'), $('.js_order_usertell')];
 
     //地址新增
-    $('.js_orderconBoxBtn').click(function(){
+    $('.js_addressAddBtn').click(function(){
         $('.js_productOrderTitle').after($('.js_addressAddForm'));
         $('.js_orderconBox').show();
         $('.js_addressListCont').show();
@@ -122,22 +122,37 @@ $(function(){
             btnSubmit:'.js_addressAddSubmit',
             btnReset:'.js_addressAddCancel',
             callback:function(form){
-                console.log('0000');
                 var addressData = {
                     customerName:$('.js_customerName').val(),
                     mobilePhone:$('.js_mobilePhone').val(),
                     telPhone:$('.js_telPhone').val(),
+
                     regionDetail:$('.js_regionDetail').val(),
-                    // provinceId:provinceId,
-                    // cityId:cityId,
-                    // regionId:regionId,
-                    // streetId:streetId,
-                    provinceName:$('.js_provinceName').val(),
-                    cityName:$('.js_cityName').val(),
-                    areaName:$('.js_areaName').val(),
-                    streetName:$('.js_streetName').val(),
-                    regionName:$('.js_regionName').val()
+
+                    provinceId:$('.js_addressProvince').val(),
+                    cityId:$('.js_addressCity').val(),
+                    regionId:$('.js_addressRegion').val(),
+                    streetId:$('.js_addressStreet').val(),
+
+                    provinceName:$('.js_addressProvince').find("option:selected").text(),
+                    cityName:$('.js_addressCity').find("option:selected").text(),
+                    regionName:$('.js_addressRegion').find("option:selected").text(),
+                    streetName:$('.js_addressStreet').find("option:selected").text()
                 };
+
+                $.ajax({
+                    type:'GET',
+                    url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
+                    data: params,
+                    login:true,
+                    success_cb:function(data){
+                        if(data.isSuccess){
+                            callbackFun&&callbackFun(data);
+                        }else{
+                            errorFun&&errorFun();
+                        }
+                    } 
+                });
 
                 return false;
             }
