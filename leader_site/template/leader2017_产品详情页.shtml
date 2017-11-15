@@ -166,7 +166,7 @@
                                     </div>
                                     <!-- JiaThis Button END -->
                                 </div>
-                                <div class="activity-icon activity-icon-compare">
+                                <div class="activity-icon activity-icon-compare js_compareAddProduct">
                                     <div class="icon-font">
                                         <i class="iconfont icon-contrast-solid"></i>
                                     </div>
