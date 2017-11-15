@@ -5,6 +5,16 @@
 $(function () {
     //添加对比产品监听事件
     addCompareOnclick();
+    /**
+     * 产品对比   //对比栏显示隐藏
+     */
+    $('.js_compareBoxShow').on('click', function () {
+        if (parseInt($(this).attr('data-show'))) {
+            hideCompareFlowLayout();
+        } else {
+            showCompareFlowLayout();
+        }
+    });
 })
 //对比互斥标志
 var noCompareChannel = "";
@@ -117,7 +127,7 @@ function initCookie() {
     //获取url
     currentUrlName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
     //如果不是产品详情对比页
-    if (currentUrlName.indexOf("product_compare") == -1) {
+    if (currentUrlName.indexOf("compare") == -1) {
         //读取产品品类表名
         var proTypeTable = $.cookie('leaderProTypeTable');
         if (proTypeTable != null) {
