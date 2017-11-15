@@ -13,535 +13,537 @@
 </head>
 
 <body>
-<div class="o_body">
-    <div class="o_main">
-        <!-- 首屏动画 -->
-        <div class="o_g js_animateLine">
-            <div class="index_animate">
-                <div class="index_animateBox">
-                    <span></span>
+    <div class="o_body">
+        <div class="o_main">
+            <!-- 首屏动画 -->
+            <div class="o_g js_animateLine">
+                <div class="index_animate">
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox"></div>
                 </div>
-                <div class="index_animateBox">
-                    <span></span>
-                </div>
-                <div class="index_animateBox">
-                    <span></span>
-                </div>
-                <div class="index_animateBox">
-                    <span></span>
-                </div>
-                <div class="index_animateBox">
-                    <span></span>
-                </div>
-                <div class="index_animateBox"></div>
             </div>
-        </div>
-        <!-- 首屏动画 -->
+            <!-- 首屏动画 -->
 
-        <!-- 头部 -->
-        <div class="o_g trolley-head">
-            <div class="o_u o_df_1-12"></div>
-            <div class="o_u o_df_10-12">
-                <div class="trolley-logo">
-                    <img src="images/l_logo.png">
+            <!-- 头部 -->
+            <div class="o_g trolley-head">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <div class="trolley-logo">
+                        <img src="images/l_logo.png">
+                    </div>
+                    <div class="trolley-title">
+                        确认订单
+                    </div>
+                    <a class="trolley-username">
+                        胖大海
+                    </a>
                 </div>
-                <div class="trolley-title">
-                    确认订单
-                </div>
-                <a class="trolley-username">
-                    胖大海
-                </a>
             </div>
-        </div>
-        <!-- 头部 END -->
+            <!-- 头部 END -->
 
-        <div class="o_g">
-
-            <div class="o_u o_df_1-12"></div>
-            <div class="o_u o_df_10-12">
-                <!-- 收获地址 -->
-                <div class="product-ordercon-title js_productOrderTitle o_u o_df_2-2">
-                    <h4 class="o_u">收获地址</h4><a href="javascript:;"  class="o_u js_orderconBoxBtn"><span class=" iconfont icon-plus-solid"></span>新增地址</a>
-                </div>
-                <div class="js_addressAddForm">
-                    <ul class="product-ordercon-box js_orderconBox o_u o_df_2-2">
-                        <li>
-                            <div class="o_u o_df_2-12"></div>
-                            <div class="o_u o_df_1-12 o_md_2-12 o_sm_11-12 o_xs_11-12 product-ordercon-list-title">
-                                <p><span>*</span><i>联系人姓名</i></p>
-                            </div>
-                            <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12 js_customerName" name="" ph="请输入联系人姓名" value="" data-normal="1" datatype="*"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
-                                <p class="Validform_checktip"></p>
-                            </div>
-                            <!--<div class="o_u o_df_3-12"></div>-->
-                        </li>
-                        <li>
-                            <div class="o_u o_df_2-12"></div>
-                            <div class="o_u o_df_1-12 o_md_2-12 o_sm_11-12 o_xs_11-12 product-ordercon-list-title">
-                                <p><span>*</span><i>手机</i></p>
-                            </div>
-                            <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12 js_mobilePhone" name=""  ph="请输入手机号" value="" data-normal="1" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
-                                <p class="Validform_checktip"></p>
-                            </div>
-                            <div class="o_u o_df_3-12"></div>
-                        </li>
-                        <li>
-                            <div class="o_u o_df_2-12"></div>
-                            <div class="o_u o_df_1-12  o_md_2-12  o_sm_11-12  o_xs_11-12 product-ordercon-list-title">
-                                <p class="  "><span>*</span><i>电话</i></p>
-                            </div>
-                            <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12 js_telPhone" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="*"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
-                                <p class="Validform_checktip"></p>
-                            </div>
-                            <!--<div class="o_u o_df_3-12"></div>-->
-                        </li>
-                        <li>
-                            <div class="o_u o_df_2-12"></div>
-                            <div class="o_u o_df_1-12 o_md_2-12  o_sm_11-12  o_xs_11-12  product-ordercon-list-title">
-                                <p class=" "><span>*</span><i>详细地址</i></p>
-                            </div>
-                            <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-input product-ordercon-list-input">
-                                <div class="o_u o_df_11-12 ">
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
-                                        <div class="selectbox">
-                                            <div class="">
-                                                <select datatype="*" class="js_addressProvince" autotext="省">
-                                                </select>
+            <div class="o_g">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12">
+                    <!-- 收获地址 -->
+                    <div class="product-ordercon-title js_productOrderTitle o_u o_df_2-2">
+                        <h4 class="o_u">收获地址</h4><a href="javascript:;"  class="o_u js_addressAddBtn"><span class=" iconfont icon-plus-solid"></span>新增地址</a>
+                    </div>
+                    <div class="js_addressAddForm">
+                        <ul class="product-ordercon-box js_orderconBox o_u o_df_2-2">
+                            <li>
+                                <div class="o_u o_df_2-12"></div>
+                                <div class="o_u o_df_1-12 o_md_2-12 o_sm_11-12 o_xs_11-12 product-ordercon-list-title">
+                                    <p><span>*</span><i>联系人姓名</i></p>
+                                </div>
+                                <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-input product-ordercon-list-input">
+                                    <input type="text" class="o_u o_df_11-12 js_customerName" name="" ph="请输入联系人姓名" value="" data-normal="1" datatype="*"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                    <p class="Validform_checktip"></p>
+                                </div>
+                                <!--<div class="o_u o_df_3-12"></div>-->
+                            </li>
+                            <li>
+                                <div class="o_u o_df_2-12"></div>
+                                <div class="o_u o_df_1-12 o_md_2-12 o_sm_11-12 o_xs_11-12 product-ordercon-list-title">
+                                    <p><span>*</span><i>手机</i></p>
+                                </div>
+                                <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
+                                    <input type="text" class="o_u o_df_11-12 js_mobilePhone" name=""  ph="请输入手机号" value="" data-normal="1" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                    <p class="Validform_checktip"></p>
+                                </div>
+                                <div class="o_u o_df_3-12"></div>
+                            </li>
+                            <li>
+                                <div class="o_u o_df_2-12"></div>
+                                <div class="o_u o_df_1-12  o_md_2-12  o_sm_11-12  o_xs_11-12 product-ordercon-list-title">
+                                    <p class="  "><span>*</span><i>电话</i></p>
+                                </div>
+                                <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
+                                    <input type="text" class="o_u o_df_11-12 js_telPhone" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="*"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                    <p class="Validform_checktip"></p>
+                                </div>
+                                <!--<div class="o_u o_df_3-12"></div>-->
+                            </li>
+                            <li>
+                                <div class="o_u o_df_2-12"></div>
+                                <div class="o_u o_df_1-12 o_md_2-12  o_sm_11-12  o_xs_11-12  product-ordercon-list-title">
+                                    <p class=" "><span>*</span><i>详细地址</i></p>
+                                </div>
+                                <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-input product-ordercon-list-input">
+                                    <div class="o_u o_df_11-12 ">
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
+                                            <div class="selectbox">
+                                                <div class="">
+                                                    <select datatype="*" class="js_addressProvince" autotext="省">
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
-                                        <div class="selectbox">
-                                            <div class="">
-                                                <select datatype="*" class="js_addressCity"  autotext="市">
-                                                </select>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
+                                            <div class="selectbox">
+                                                <div class="">
+                                                    <select datatype="*" class="js_addressCity"  autotext="市">
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
-                                        <div class="selectbox">
-                                            <div class="">
-                                                <select datatype="*" class ="js_addressArea"  autotext="区">
-                                                </select>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
+                                            <div class="selectbox">
+                                                <div class="">
+                                                    <select datatype="*" class ="js_addressRegion"  autotext="区">
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
-                                        <div class="selectbox">
-                                            <div class="">
-                                                <select datatype="*" class ="js_addressStreet"  autotext="街道">
-                                                </select>
+                                        <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
+                                            <div class="selectbox">
+                                                <div class="">
+                                                    <select datatype="*" class ="js_addressStreet"  autotext="街道">
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--<div class="o_u o_df_3-12"></div>-->
-                        </li>
-                        <li>
-                            <div class="o_u o_df_3-12 o_md_4-12 o_md_4-12"></div>
-                            <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-textarea product-ordercon-list-input">
-                                <textarea type="text" class="o_u o_df_11-12 js_regionDetail" name=""  ph="请输入详细地址" value="" data-normal="1" datatype="*"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请输入详细地址"></textarea>
-                                <p class="Validform_checktip"></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="o_u o_df_3-12 o_md_4-12"></div>
-                            <div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 l-input product-ordercon-list-input">
-                                <div class="o_u o_df_11-12">
-                                    <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-2 ">
-                                        <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red js_addressAddSubmit">保存</a>
-                                    </div>
-                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_2-2 ">
-                                        <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消收藏？')">取消</a>
-                                    </div>
-                                    <input type="hidden" class="js_addressAddCancel">
+                                <!--<div class="o_u o_df_3-12"></div>-->
+                            </li>
+                            <li>
+                                <div class="o_u o_df_3-12 o_md_4-12 o_md_4-12"></div>
+                                <div class="o_u o_df_6-12 o_sm_11-12 o_xs_11-12 l-textarea product-ordercon-list-input">
+                                    <textarea type="text" class="o_u o_df_11-12 js_regionDetail" name=""  ph="请输入详细地址" value="" data-normal="1" datatype="*"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请输入详细地址"></textarea>
+                                    <p class="Validform_checktip"></p>
                                 </div>
-
-                            </div>
-                            <!--<div class="o_u o_df_3-12"></div>-->
-                        </li>
-                    </ul>
-                </div>
-                <ul class="product-address-list-box">
-                    <li>
-                        <div class="product-address-list o_g js_addressListCont">
-                            <div class="l-radio">
-                                <input  type="radio" class="js_radio" name="cc" value="">
-                            </div>
-                            <p class="o_u o_sm_9-12 o_xs_9-12 js_orderAddressCont">
-                                <i class="product-address-list-name">王柯科</i>
-                                <i class="product-address-list-phone">13884973771</i>
-                                <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
-                            </p>
-                            <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-address-list o_g js_addressListCont">
-                            <div class="l-radio">
-                                <input  type="radio" class="js_radio" name="cc" value="">
-                            </div>
-                            <!--<div class="o_u o_df_1-12"></div>-->
-                            <!--<span class="c_ipt_cr c_ipt_cr_cus"></span>-->
-                            <p class="o_u o_sm_9-12 o_xs_9-12 js_orderAddressCont">
-                                <i class="product-address-list-name">王柯科111</i>
-                                <i class="product-address-list-phone">13884973771</i>
-                                <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
-                            </p>
-                            <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
-                        </div>
-                    </li>
-                </ul>
-                <!-- 收获地址 END -->
-
-                <!-- 支付方式 -->
-                <div class="product-ordercon-title o_u o_df_2-2">
-                    <h4 class="o_u">支付方式</h4>
-                </div>
-                <div class="product-ordercon-payment">
-                    <p>在线支付（支持支付宝）</p>
-                </div>
-                <!-- 支付方式 END -->
-
-                <!-- 配送时间 -->
-                <div class="product-ordercon-title o_u o_df_2-2">
-                    <h4 class="o_u">配送时间</h4>
-                </div>
-                <div class="product-ordercon-time-box js_orderconTime">
-                    <div class="o_u o_df_11-12">
-                        <a href="javascript:;" class="l-btn-normal    l-btn-orange js_standardTime">标准配送</a>
-                        <a href="javascript:;" class="l-btn-normal l-btn-line2 js_appointment">预约配送</a>
-                        <p>您订购的产品将于 08月07日(周一)22:00 送达，请保持手机畅通</p>
-                        <div class=" product-ordercon-time-cont js_orderconTimeBox" data-alt="1" style="display: none">
-                            <p>请选择配送时间</p>
-                            <div class="selectbox o_u">
-                                <div class="">
-                                    <select name="" id="js_orderDate"  autotext="预约日期">
-                                        <option value="0">--请点击下拉菜单--</option>
-                                        <option value="1">我是下拉菜单1</option>
-                                        <option value="2">我是下拉菜单2</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="selectbox o_u">
-                                <div class="">
-                                    <select name="" id="js_orderTime"  autotext="预约时段">
-                                        <option value="0">--请点击下拉菜单--</option>
-                                        <option value="1">我是下拉菜单1</option>
-                                        <option value="2">我是下拉菜单2</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="o_g product-ordercon-time-btn">
-                                <div class=" o_u o_df_5-12 o_xs_2-2">
+                            </li>
+                            <li>
+                                <div class="o_u o_df_3-12 o_md_4-12"></div>
+                                <div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 l-input product-ordercon-list-input">
                                     <div class="o_u o_df_11-12">
                                         <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-2 ">
-                                            <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red">保存</a>
+                                            <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red js_addressAddSubmit">保存</a>
                                         </div>
                                         <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_2-2 ">
-                                            <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_appointmentClose " onclick="globalShade('确定取消收藏？')">取消</a>
+                                            <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消收藏？')">取消</a>
                                         </div>
+                                        <input type="hidden" class="js_addressAddCancel">
+                                    </div>
+
+                                </div>
+                                <!--<div class="o_u o_df_3-12"></div>-->
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="product-address-list-box js_addressList">
+                        <!-- <li>
+                            <div class="product-address-list o_g js_addressListCont">
+                                <div class="l-radio">
+                                    <input  type="radio" class="js_radio" name="cc" value="">
+                                </div>
+                                <p class="o_u o_sm_9-12 o_xs_9-12 js_orderAddressCont">
+                                    <i class="product-address-list-name">王柯科</i>
+                                    <i class="product-address-list-phone">13884973771</i>
+                                    <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
+                                </p>
+                                <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <!-- 收获地址 END -->
+
+                    <!-- 支付方式 -->
+                    <div class="product-ordercon-title o_u o_df_2-2">
+                        <h4 class="o_u">支付方式</h4>
+                    </div>
+                    <div class="product-ordercon-payment">
+                        <p>在线支付（支持支付宝）</p>
+                    </div>
+                    <!-- 支付方式 END -->
+
+                    <!-- 配送时间 -->
+                    <div class="product-ordercon-title o_u o_df_2-2">
+                        <h4 class="o_u">配送时间</h4>
+                    </div>
+                    <div class="product-ordercon-time-box js_orderconTime">
+                        <div class="o_u o_df_11-12">
+                            <a href="javascript:;" class="l-btn-normal    l-btn-orange js_standardTime">标准配送</a>
+                            <a href="javascript:;" class="l-btn-normal l-btn-line2 js_appointment">预约配送</a>
+                            <p>您订购的产品将于 08月07日(周一)22:00 送达，请保持手机畅通</p>
+                            <div class=" product-ordercon-time-cont js_orderconTimeBox" data-alt="1" style="display: none">
+                                <p>请选择配送时间</p>
+                                <div class="selectbox o_u">
+                                    <div class="">
+                                        <select name="" id="js_orderDate"  autotext="预约日期">
+                                            <option value="0">--请点击下拉菜单--</option>
+                                            <option value="1">我是下拉菜单1</option>
+                                            <option value="2">我是下拉菜单2</option>
+                                        </select>
                                     </div>
                                 </div>
+                                <div class="selectbox o_u">
+                                    <div class="">
+                                        <select name="" id="js_orderTime"  autotext="预约时段">
+                                            <option value="0">--请点击下拉菜单--</option>
+                                            <option value="1">我是下拉菜单1</option>
+                                            <option value="2">我是下拉菜单2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="o_g product-ordercon-time-btn">
+                                    <div class=" o_u o_df_5-12 o_xs_2-2">
+                                        <div class="o_u o_df_11-12">
+                                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-2 ">
+                                                <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red">保存</a>
+                                            </div>
+                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_2-2 ">
+                                                <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_appointmentClose " onclick="globalShade('确定取消收藏？')">取消</a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- 配送时间 END -->
-
-                <!-- 发票信息 -->
-                <div class="product-ordercon-title o_u o_df_2-2">
-                    <h4 class="o_u">发票信息</h4>
-                </div>
-
-                <div class="product-ordercon-invoice-box js_orderconInvoiceBox ">
-                    <div class="o_u o_sm_2-3 o_xs_2-3 ">
-                        <p class="o_u">发票类型：<span>电子发票（个人）</span></p>
-                        <p class="o_u">发票抬头: <span>王柯科</span></p>
-                        <p class="o_u">发票内容: <span>商品明细</span></p>
-                    </div>
-                    <a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>
-                </div>
-                <ul class="product-ordercon-setInvoice js_orderconInvoiceSet" style="display: none">
-                    <li>
-                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票类型</p>
-                        <div class="ordercon-setInvoice-list-cont o_u o_df_1-2">
-                            <span><input  type="radio" checked  class="js_radio" name="invoice" value="电子发票"></span>
-                            <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span>
-                            <p>1. 电子发票是国家税务局机关认可的有效凭证，与纸质发票具有同等法律效力</p>
-                            <p>2. 电子发票开具后，将不可更改发票信息及更其他种类发票</p>
-                            <p>3. 如需纸质发票，可在“个人中心-我的订单”中下载后打印</p>
-                            <a href="javascript:;">了解细则</a>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票抬头类型</p>
-                        <div class=" o_u o_df_1-2">
-                            <span><input  type="radio" checked   class="js_radio" name="invoicetop" value="个人"></span>
-                            <span><input  type="radio" class="js_radio" name="invoicetop" value="公司" ></span>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票抬头</p>
-                        <div class="l-input o_u o_df_1-2">
-                            <input  type="text" class="o_u o_df_11-12" name="" ph="请填写发票抬头" value="">
-                        </div>
-                    </li>
-                    <li>
-                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票内容</p>
-                        <div class="l-input o_u o_df_1-2">
-                            <input type="text" class="o_u o_df_11-12" name="" ph="商品明细"   value="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="o_u o_df_1-3"></div>
-                        <div class="o_u o_df_4-10 o_xs_11-12 ordercon-setInvoice-list-btn">
-                            <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_11-12 ">
-                                <a href="javascript:;" class=" o_u o_df_11-12 o_xs_11-12 l-btn-normal l-btn-red l-btn-red">保存</a>
-                            </div>
-                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_11-12 ">
-                                <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderconSetBtnClose " onclick="globalShade('确定取消设定吗？')">取消</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <!-- 发票信息 END -->
-                <!--商品清单及优惠-->
-                <div class="product-ordercon-title o_u o_df_2-2">
-                    <h4 class="o_u">商品清单及优惠</h4><a href=""  class="o_u"><span class=" iconfont icon-arrow-line-left"></span>返回购物车</a>
-                </div>
-                <div class="product-orderconfirm-prolist-box">
-                    <div class="product-orderconfirm-prolist-title">
-                        <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
-                    </div>
-                    <div class="product-orderconfirm-prolist-cont">
-                        <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
-                            <img src="images/compare_goods.PNG" alt="">
-                        </div>
-                        <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
-                            <p>对开双门大容量浅薄静音节能冰箱</p>
-                            <span>BCD-455WLDPC</span>
-                        </div>
-                        <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
-                            <span>¥ 1799</span>x<span>1</span>
-                        </div>
-                        <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
-                        <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
-                            <i>¥ 1799 </i>
-                        </div>
-
-                    </div>
-                    <!--无货商品添加 class product-nogoods -->
-                    <div class="product-orderconfirm-prolist-cont product-nogoods">
-                        <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12  order-prolist-cont-img">
-                            <img src="images/compare_goods.PNG" alt="">
-                        </div>
-                        <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
-                            <p>对开双门大容量浅薄静音节能冰箱</p>
-                            <span>BCD-455WLDPC</span>
-                        </div>
-                        <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
-                            <span>¥ 1799</span>x<span>1</span>
-                        </div>
-                        <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
-                        <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
-                            <i>¥ 1799 </i>
-                        </div>
-
-                    </div>
-                    <div class="product-orderconfirm-prolist-title">
-                        <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
-                    </div>
-                    <div class="product-orderconfirm-prolist-cont">
-                        <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
-                            <img src="images/compare_goods.PNG" alt="">
-                        </div>
-                        <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
-                            <p>对开双门大容量浅薄静音节能冰箱</p>
-                            <span>BCD-455WLDPC</span>
-                        </div>
-                        <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
-                            <span>¥ 1799</span>x<span>1</span>
-                        </div>
-                        <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
-                        <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
-                            <i>¥ 1799 </i>
-                        </div>
-
-                    </div>
-                    <div class="product-orderconfirm-prolist-cont">
-                        <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
-                            <img src="images/compare_goods.PNG" alt="">
-                        </div>
-                        <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
-                            <p>对开双门大容量浅薄静音节能冰箱</p>
-                            <span>BCD-455WLDPC</span>
-                        </div>
-                        <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
-                            <span>¥ 1799</span>x<span>1</span>
-                        </div>
-                        <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
-                        <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
-                            <i>¥ 1799 </i>
-                        </div>
-
-                    </div>
-                    <div class="product-orderconfirm-prolist-title">
-                        <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
-                    </div>
-                    <div class="product-orderconfirm-prolist-cont">
-                        <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
-                            <img src="images/compare_goods.PNG" alt="">
-                        </div>
-                        <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
-                            <p>对开双门大容量浅薄静音节能冰箱</p>
-                            <span>BCD-455WLDPC</span>
-                        </div>
-                        <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
-                            <span>¥ 1799</span>x<span>1</span>
-                        </div>
-                        <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
-                        <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
-                            <i>¥ 1799 </i>
-                        </div>
-
-                    </div>
-                    <div class="product-orderconfirm-prolist-title">
-                        <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
-
-                    </div>
-                    <div class="product-orderconfirm-prolist-cont">
-                        <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
-                            <img src="images/compare_goods.PNG" alt="">
-                        </div>
-                        <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
-                            <p>对开双门大容量浅薄静音节能冰箱</p>
-                            <span>BCD-455WLDPC</span>
-                        </div>
-                        <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
-                            <span>¥ 1799</span>x<span>1</span>
-                        </div>
-                        <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
-                        <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
-                            <i>¥ 1799 </i>
-                        </div>
-
-                    </div>
-                    <div class="product-orderconfirm-prolist-title">
-                        <i>【套餐】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC</i>
-                    </div>
-                </div>
-
-                <!--商品清单及优惠 END-->
-                <!--赠品-->
-                <div class="product-orderconfirm-give-box">
-                    <div class="o_u  o_df_11-12 product-orderconfirm-give-list">
-                        <div class="orderconfirm-give-list-left">
-                            <i class="iconfont icon-giftbox-solid give-img"></i>
-                            <p>金岁月扫地机器人 x<span>3</span></p>
-                        </div>
-                        <div class="orderconfirm-give-list-right o_u o_md_9-12">赠品将在您确认收货，并上传相关资料后发出 <a href="#">了解详细规则</a></div>
-                    </div>
-                    <div class="o_u  o_df_11-12 product-orderconfirm-give-list">
-                        <i class="iconfont icon-giftbox-solid give-img"></i>
-                        <div class="o_u o_df_5-12  o_xs_10-12">净爽大作战，统帅小清新
-                            <span>净爽大作战，统帅小清新</span>
-                            <div class="selectbox o_u o_sm_11-12 o_xs_10-12" >
-                                <div class="">
-                                    <select name="" id="js_GiftboxSolid1"  autotext="请点击下拉菜单">
-                                        <option value="0">--请点击下拉菜单--</option>
-                                        <option value="1">我是下拉菜单1</option>
-                                        <option value="2">我是下拉菜单2</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="o_u o_sm_1-12"></div>-->
-                        <div class="o_u  o_df_5-12 o_xs_10-12">
-                            <span>净爽大作战，统帅小清新</span>
-                            <div class="selectbox o_u o_sm_11-12 o_xs_10-12" >
-                                <div class="">
-                                    <select name="" id="js_GiftboxSolid2"  autotext="请点击下拉菜单">
-                                        <option value="0">--请点击下拉菜单--</option>
-                                        <option value="1">我是下拉菜单1</option>
-                                        <option value="2">我是下拉菜单2</option>
-                                    </select>
+
+                    </div>
+                    <!-- 配送时间 END -->
+
+                    <!-- 发票信息 -->
+                    <div class="product-ordercon-title o_u o_df_2-2">
+                        <h4 class="o_u">发票信息</h4>
+                    </div>
+
+                    <div class="product-ordercon-invoice-box js_orderconInvoiceBox ">
+                        <div class="o_u o_sm_2-3 o_xs_2-3 ">
+                            <p class="o_u">发票类型：<span>电子发票（个人）</span></p>
+                            <p class="o_u">发票抬头: <span>王柯科</span></p>
+                            <p class="o_u">发票内容: <span>商品明细</span></p>
+                        </div>
+                        <a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>
+                    </div>
+                    <ul class="product-ordercon-setInvoice js_orderconInvoiceSet" style="display: none">
+                        <li>
+                            <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票类型</p>
+                            <div class="ordercon-setInvoice-list-cont o_u o_df_1-2">
+                                <span><input  type="radio" checked  class="js_radio" name="invoice" value="电子发票"></span>
+                                <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span>
+                                <p>1. 电子发票是国家税务局机关认可的有效凭证，与纸质发票具有同等法律效力</p>
+                                <p>2. 电子发票开具后，将不可更改发票信息及更其他种类发票</p>
+                                <p>3. 如需纸质发票，可在“个人中心-我的订单”中下载后打印</p>
+                                <a href="javascript:;">了解细则</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票抬头类型</p>
+                            <div class=" o_u o_df_1-2">
+                                <span><input  type="radio" checked   class="js_radio" name="invoicetop" value="个人"></span>
+                                <span><input  type="radio" class="js_radio" name="invoicetop" value="公司" ></span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票抬头</p>
+                            <div class="l-input o_u o_df_1-2">
+                                <input  type="text" class="o_u o_df_11-12" name="" ph="请填写发票抬头" value="">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票内容</p>
+                            <div class="l-input o_u o_df_1-2">
+                                <input type="text" class="o_u o_df_11-12" name="" ph="商品明细"   value="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="o_u o_df_1-3"></div>
+                            <div class="o_u o_df_4-10 o_xs_11-12 ordercon-setInvoice-list-btn">
+                                <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_11-12 ">
+                                    <a href="javascript:;" class=" o_u o_df_11-12 o_xs_11-12 l-btn-normal l-btn-red l-btn-red">保存</a>
+                                </div>
+                                <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_11-12 ">
+                                    <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderconSetBtnClose " onclick="globalShade('确定取消设定吗？')">取消</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!--赠品 END-->
-                <!--计算商品价格-->
-                <div class="product-orderconfirm-price">
-                    <ul class="orderconfirm-price-list o_u o_df_2-2 ">
-                       <li>
-                           <p><span>5</span>件商品，合计：</p><i>&yen;6198</i>
-                       </li>
-                        <li>
-                            <p>套餐优惠：</p><i>&yen;6198</i>
-                        </li>
-                        <li>
-                            <p>优惠券优惠：</p><i>&yen;6198</i>
-                        </li>
-                        <li>
-                            <p>运费：</p><i>&yen;6198</i>
                         </li>
                     </ul>
+                    <!-- 发票信息 END -->
+                    <!--商品清单及优惠-->
+                    <div class="product-ordercon-title o_u o_df_2-2">
+                        <h4 class="o_u">商品清单及优惠</h4><a href=""  class="o_u"><span class=" iconfont icon-arrow-line-left"></span>返回购物车</a>
+                    </div>
+                    <div class="product-orderconfirm-prolist-box">
+                        <div class="product-orderconfirm-prolist-title">
+                            <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+                        </div>
+                        <div class="product-orderconfirm-prolist-cont">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
 
+                        </div>
+                        <!--无货商品添加 class product-nogoods -->
+                        <div class="product-orderconfirm-prolist-cont product-nogoods">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12  order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
+
+                        </div>
+                        <div class="product-orderconfirm-prolist-title">
+                            <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+                        </div>
+                        <div class="product-orderconfirm-prolist-cont">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
+
+                        </div>
+                        <div class="product-orderconfirm-prolist-cont">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
+
+                        </div>
+                        <div class="product-orderconfirm-prolist-title">
+                            <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+                        </div>
+                        <div class="product-orderconfirm-prolist-cont">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
+
+                        </div>
+                        <div class="product-orderconfirm-prolist-title">
+                            <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
+
+                        </div>
+                        <div class="product-orderconfirm-prolist-cont">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
+
+                        </div>
+                        <div class="product-orderconfirm-prolist-title">
+                            <i>【套餐】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC</i>
+                        </div>
+                    </div>
+
+                    <!--商品清单及优惠 END-->
+                    <!--赠品-->
+                    <div class="product-orderconfirm-give-box">
+                        <div class="o_u  o_df_11-12 product-orderconfirm-give-list">
+                            <div class="orderconfirm-give-list-left">
+                                <i class="iconfont icon-giftbox-solid give-img"></i>
+                                <p>金岁月扫地机器人 x<span>3</span></p>
+                            </div>
+                            <div class="orderconfirm-give-list-right o_u o_md_9-12">赠品将在您确认收货，并上传相关资料后发出 <a href="#">了解详细规则</a></div>
+                        </div>
+                        <div class="o_u  o_df_11-12 product-orderconfirm-give-list">
+                            <i class="iconfont icon-giftbox-solid give-img"></i>
+                            <div class="o_u o_df_5-12  o_xs_10-12">净爽大作战，统帅小清新
+                                <span>净爽大作战，统帅小清新</span>
+                                <div class="selectbox o_u o_sm_11-12 o_xs_10-12" >
+                                    <div class="">
+                                        <select name="" id="js_GiftboxSolid1"  autotext="请点击下拉菜单">
+                                            <option value="0">--请点击下拉菜单--</option>
+                                            <option value="1">我是下拉菜单1</option>
+                                            <option value="2">我是下拉菜单2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="o_u o_sm_1-12"></div>-->
+                            <div class="o_u  o_df_5-12 o_xs_10-12">
+                                <span>净爽大作战，统帅小清新</span>
+                                <div class="selectbox o_u o_sm_11-12 o_xs_10-12" >
+                                    <div class="">
+                                        <select name="" id="js_GiftboxSolid2"  autotext="请点击下拉菜单">
+                                            <option value="0">--请点击下拉菜单--</option>
+                                            <option value="1">我是下拉菜单1</option>
+                                            <option value="2">我是下拉菜单2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--赠品 END-->
+                    <!--计算商品价格-->
+                    <div class="product-orderconfirm-price">
+                        <ul class="orderconfirm-price-list o_u o_df_2-2 ">
+                           <li>
+                               <p><span>5</span>件商品，合计：</p><i>&yen;6198</i>
+                           </li>
+                            <li>
+                                <p>套餐优惠：</p><i>&yen;6198</i>
+                            </li>
+                            <li>
+                                <p>优惠券优惠：</p><i>&yen;6198</i>
+                            </li>
+                            <li>
+                                <p>运费：</p><i>&yen;6198</i>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--计算商品价格 END-->
+                    <div class="product-orderconfirm-total">
+                        <span>应付总额:</span><i>&yen;2299</i>
+                    </div>
+                    <div class="product-orderconfirm-address">
+                        <p><span>寄送至：</span> 山东省 青岛市 黄岛区 长江中路2号9907室</p>
+                        <p><span>收件人：</span>王柯科  157****3370</p>
+                    </div>
+                    <div class="product-orderconfirm-btn">
+                        <a href="javascript:;" class="l-btn-lg l-btn-red o_u o_xs_2-2">提交订单</a>
+                    </div>
                 </div>
-                <!--计算商品价格 END-->
-                <div class="product-orderconfirm-total">
-                    <span>应付总额:</span><i>&yen;2299</i>
-                </div>
-                <div class="product-orderconfirm-address">
-                    <p><span>寄送至：</span> 山东省 青岛市 黄岛区 长江中路2号9907室</p>
-                    <p><span>收件人：</span>王柯科  157****3370</p>
-                </div>
-                <div class="product-orderconfirm-btn">
-                    <a href="javascript:;" class="l-btn-lg l-btn-red o_u o_xs_2-2">提交订单</a>
-                </div>
+
             </div>
-
         </div>
+
     </div>
-
-</div>
-<!--弹窗1-->
-<div class="o_g land-shade js_landShade">
-    <div class="land-box js_landContBox">
-        <div class="land-cont-title alert-cont-title o_u">
-            <a href="" class="o_u iconfont icon-close js_landClose"></a>
-        </div>
-        <div class="js_landInputBox">
-            <div class="land-cont-normal-input o_g">
-                <div class="o_g member-bingmob-list">
-                    <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
-                        <p class="js-landText"></p>
+    <!--弹窗1-->
+    <div class="o_g land-shade js_landShade">
+        <div class="land-box js_landContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <a href="" class="o_u iconfont icon-close js_landClose"></a>
+            </div>
+            <div class="js_landInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <div class="o_g member-bingmob-list">
+                        <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
+                            <p class="js-landText"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="member-alert-btn o_g">
-            <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
-            <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
-
+            <div class="member-alert-btn o_g">
+                <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
+                <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
+            </div>
         </div>
     </div>
-</div>
-<!--弹窗1 END-->
+    <!--弹窗1 END-->
+    <!-- Templates -->
+    <p style="display:none">
+        <textarea id="template-address-list">
+            {#foreach $T as item}
+            <li>
+                <div class="product-address-list o_g js_addressListCont">
+                    <div class="l-radio">
+                        <input  type="radio" class="js_radio" name="cc" value="">
+                    </div>
+                    <p class="o_u o_sm_9-12 o_xs_9-12 js_orderAddressCont">
+                        <i class="product-address-list-name">{$T.item.customerName || '暂无'}</i>
+                        <i class="product-address-list-phone">{$T.item.mobilePhone || '暂无'}</i>
+                        <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">{$T.item.regionDetail || '暂无'}</i>
+                    </p>
+                    <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
+                </div>
+            </li>
+            {#/for}
+        </textarea>
+    </p>
+    <!-- Templates END -->
     <!--#include virtual="public/foot.shtml"-->
-
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
     <!-- <script type="text/javascript" src="images/product_orderconfirm.js"></script> -->
+    <script type="text/javascript" src="images/jquery-jtemplates.js"></script>
     <script type="text/javascript" src="images/templete_product_orderconfirm.js"></script>
-
 </body>
 </html>

@@ -237,7 +237,7 @@
     <!-- <script type="text/javascript" src="images/test.js"></script> -->
     <!-- Templates -->
     <p style="display:none">
-         <textarea id="template-items">
+        <textarea id="template-items">
             {#foreach $T as item}
             <div class="trolley-prolist">
                 <div class="o_g trolley-product">
