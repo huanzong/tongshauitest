@@ -21,7 +21,7 @@
             <!-- 右侧内容 START-->
             <!--o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2-->
             <div class="o_u o_df_10-12 o_lg_11-12 o_md_11-12  o_sm_10-12 o_xs_2-2  ">
-                <div class="memeber-homenav-top" >
+                <div class="memeber-homenav-top">
                     <p>My Account</p>
                     <h2>统帅用户中心</h2>memeber-homenav-top
                     <div class="iconfont icon-icon "></div>
@@ -47,13 +47,15 @@
                             <!--<li><a href="/invoice" class="o_u ">增票资质</a></li>-->
                         </ul>
                     </div>
-                    <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn" data-alt="1">
+                    <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn"
+                         data-alt="1">
                         <span class="iconfont icon-menu1"></span>
                     </div>
                 </div>
 
-                <div class="o_u o_df_10-12  o_xs_2-2 js-membercontboxs js-membercontboxs-2" style="position: relative;z-index: 14">
-                    <div class="memeber-homenav-top-md" >
+                <div class="o_u o_df_10-12  o_xs_2-2 js-membercontboxs js-membercontboxs-2"
+                     style="position: relative;z-index: 14">
+                    <div class="memeber-homenav-top-md">
                         <p>My Account</p>
                         <h2>统帅用户中心</h2>
                         <div class="iconfont icon-icon "></div>
@@ -144,52 +146,54 @@
                                                 <!--</div>-->
                                                 <!--</div>-->
                                                 <!--</div>-->
-                                                <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df">
-                                                    <div class="o_g member-home-down-table">
-                                                        <div class="o_u o_df_11-12">
-                                                            <span>精选推荐</span>
-                                                            <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df js-recommendation">
+                                                    <!--<div class="o_g member-home-down-table">-->
+                                                    <!--<div class="o_u o_df_11-12">-->
+                                                    <!--<span>精选推荐</span>-->
+                                                    <!--<a href="javascript:;"-->
+                                                    <!--class="iconfont icon-refresh-solid"></a>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2">-->
 
-                                                        <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
-                                                                <img src="../site5/compare_goods.PNG" />
-                                                            </a>
-                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                                <strong>￥2999.00</strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                    <!--<div class="member-home-down-cont">-->
+                                                    <!--<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">-->
+                                                    <!--<img src="../site5/compare_goods.PNG"/>-->
+                                                    <!--</a>-->
+                                                    <!--<a><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">-->
+                                                    <!--<p class="pro-info-title">统帅就给个洗衣机</p>-->
+                                                    <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
+                                                    <!--<strong>￥2999.00</strong>-->
+                                                    <!--</div></a>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2">-->
 
-                                                        <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
-                                                                <img src="../site5/compare_goods.PNG" />
-                                                            </a>
-                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                                <strong>￥2999.00</strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    <!--<div class="member-home-down-cont">-->
+                                                    <!--<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">-->
+                                                    <!--<img src="../site5/compare_goods.PNG"/>-->
+                                                    <!--</a>-->
+                                                    <!--<div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">-->
+                                                    <!--<p class="pro-info-title">统帅就给个洗衣机</p>-->
+                                                    <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
+                                                    <!--<strong>￥2999.00</strong>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
                                                 </div>
                                                 <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right member-home-down-xs ">
                                                     <div class="o_g member-home-down-table">
                                                         <div class="o_u o_df_11-12">
                                                             <span>精选收藏</span>
-                                                            <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
+                                                            <a href="javascript:;"
+                                                               class="iconfont icon-refresh-solid "></a>
                                                         </div>
                                                     </div>
                                                     <div class="o_u o_df_2-2  ">
 
                                                         <div class="member-home-down-cont">
                                                             <a class="o_u o_df_1-3 ">
-                                                                <img src="../site5/compare_goods.PNG" />
+                                                                <img src="../site5/compare_goods.PNG"/>
                                                             </a>
                                                             <div class="member-home-down-info o_u o_df_2-3 ">
                                                                 <p class="pro-info-title">统帅就给个洗衣机</p>
@@ -197,6 +201,7 @@
                                                                 <strong>￥2999.00</strong>
                                                             </div>
                                                         </div>
+
                                                     </div>
 
                                                 </div>
@@ -209,8 +214,6 @@
                                         <!-- 精品推荐 END -->
 
                                         <!--全部订单 END-->
-
-
                                     </div>
                                 </div>
                                 <!-- 个人信息 End-->
@@ -220,8 +223,6 @@
                     </div>
                 </div>
             </div>
-
-
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
