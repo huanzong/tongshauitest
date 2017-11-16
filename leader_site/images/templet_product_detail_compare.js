@@ -227,6 +227,8 @@ window.add_compare_flyOut_item = function ($obj) {
     if (currentUrlName.indexOf("compare") == -1) {
         //获取当前页cookie
         proCookie = $.cookie('leaderProCookie');
+        var $list = $('.js_compareBox');
+        var count = $list.find('.compare-product-img').length;
         //如果数据cookie中数据
         if (proCookie != null) {
             //解析，其实里边有最多4个的数据详情
@@ -238,6 +240,15 @@ window.add_compare_flyOut_item = function ($obj) {
                 proId = product.channelid;
                 var id = $obj.attr('id');
                 if(id!=proId){
+                    if (count >= 4) {
+                        alert("最多只能选择4款产品！");
+                        return false;
+                    }
+
+                    if (proObjList.length >= 4) {
+                        alert("最多只能选择4款产品！");
+                        return false;
+                    }
                     var proImg = $obj.attr('data-thumb');
                     var proTitle = $obj.attr('data-name');
                     var proDesc = $obj.attr('data-type');
@@ -272,11 +283,29 @@ window.add_compare_flyOut_item = function ($obj) {
                     $.cookie('leaderProCookie', objString, {path: '/'});
                     $(".js_compareAddProduct").find("span").html("已对比");
                 }else{
+                    if (count >= 4) {
+                        alert("最多只能选择4款产品！");
+                        return false;
+                    }
+
+                    if (proObjList.length >= 4) {
+                        alert("最多只能选择4款产品！");
+                        return false;
+                    }
                     $(".js_compareAddProduct").find("span").html("已对比");
                 }
 
             }
         }else {//无数据
+            if (count >= 4) {
+                alert("最多只能选择4款产品！");
+                return false;
+            }
+
+            if (proObjList.length >= 4) {
+                alert("最多只能选择4款产品！");
+                return false;
+            }
             var id = $obj.attr('id');
             var proImg = $obj.attr('data-thumb');
             var proTitle = $obj.attr('data-name');
