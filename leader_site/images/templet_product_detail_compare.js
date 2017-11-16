@@ -19,10 +19,12 @@ $(function () {
     setTimeout(initCookie(), 1000);
     setTimeout(initLoadCookie(), 1000);
 })
-//对比互斥标志
-var noCompareChannel = "";
+var _tableName = "";
+var url = "filter.xml";
 //当前路径
 var currentUrl = window.location.href;
+//对比互斥标志
+var noCompareChannel = "";
 var currentUrlName = "";
 //产品集合
 var proObjList = "";
@@ -34,6 +36,17 @@ var proObjListSideBar = "";
 var arrayMetaDataId = new Array();
 //总对比按钮
 compareButtonOnclick();
+
+//xml中获取tableName
+$.ajax({
+    type: 'get',
+    dataType: 'xml',
+    url: url,
+    success: function (xml) {
+        var viewName = $(xml).find("Filter").attr("viewName");
+        _tableName = viewName;
+    }
+});
 //添加对比的点击事件
 function addContrastClick() {
 
