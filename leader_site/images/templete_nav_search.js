@@ -27,7 +27,6 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_quick_search').remove();
         searchBoxWord($(this).val());
     } else {
-        //$('.js_searchBox').hide();
         $('.js_searchBoxQuick_lg').show();
 
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
