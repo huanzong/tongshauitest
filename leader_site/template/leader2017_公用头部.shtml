@@ -36,7 +36,7 @@
 			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory" />
 			<i class="iconfont icon-search js_jumpto_product_search"></i>
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
-				<div class="search-quick">快速链接</div>
+				<div class="search-quick js_quick_search">快速链接</div>
 				<ul class="search-list js_searchBox_listShow">
 					<!--
                         <li>我是搜索结果</li>
