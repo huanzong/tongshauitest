@@ -325,6 +325,7 @@ window.add_compare_flyOut_item = function ($obj) {
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
             $(".js_compareAddProduct").find("span").html("已对比");
+
         }
         //添加侧边栏绘制数据
         /* initSideBarCookie();
