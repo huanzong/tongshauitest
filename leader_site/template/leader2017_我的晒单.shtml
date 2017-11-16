@@ -39,7 +39,6 @@
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
-
     </div>
 </div>
 <!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
