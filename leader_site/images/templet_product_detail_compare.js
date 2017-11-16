@@ -133,7 +133,6 @@ function initCookie() {
         proCookie = $.cookie('leaderProCookie');
         //如果数据cookie中数据
         if (proCookie != null) {
-
             //解析，其实里边有最多4个的数据详情
             proObjList = JSON.parse(proCookie);
             var pType = "";
@@ -224,56 +223,109 @@ window.unchecked = function ($obj) {
 
 //将添加对比的产品绘制在浮层上
 window.add_compare_flyOut_item = function ($obj) {
-
+    $(".js_compareAddProduct").attr("auto","1");
     if (currentUrlName.indexOf("compare") == -1) {
+        //获取当前页cookie
+        proCookie = $.cookie('leaderProCookie');
+        //如果数据cookie中数据
+        if (proCookie != null) {
+            //解析，其实里边有最多4个的数据详情
+            proObjList = JSON.parse(proCookie);
+            var proId = "";
+            for (var i = 0; i < proObjList.length; i++) {
+                //进页面以后循环将cookie里边保存的产品添加到页面上
+                var product = proObjList[i];
+                proId = product.channelid;
+                var id = $obj.attr('id');
+                if(id!=proId){
+                    var proImg = $obj.attr('data-thumb');
+                    var proTitle = $obj.attr('data-name');
+                    var proDesc = $obj.attr('data-type');
+                    var proUrl = $obj.attr('data-link');
+                    var channelId = $obj.attr('data-chnid');
+                    var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
 
-        var $list = $('.js_compareBox');
-        var count = $list.find('.compare-product-img').length;
-        if (count >= 4) {
-            alert("最多只能选择4款产品！");
-            return false;
+                    var compareHtml = '<li>' +
+                        '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
+                        '<img src="' + proImg + '">' +
+                        '</div>' +
+                        '<div class="compare-product-info">' +
+                        ' <p>' + proTitle + '</p>' +
+                        '<p class="leaveout">' + proDesc + '</p>' +
+                        '<span>' + price + '</span>' +
+                        '</div>' +
+                        ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
+                        '</li>';
+                    //$('.js_compareBox').prepend(compareHtml);
+                    $list.prepend(compareHtml);
+                    //把选择的对比产品存入cookie
+                    var proObj = new Object();
+                    proObj.id = id;
+                    proObj.img = proImg;
+                    proObj.title = proTitle;
+                    proObj.url = proUrl;
+                    proObj.desc = proDesc;
+                    proObj.channelid = channelId;
+                    proObj.price = price;
+                    proObjList.push(proObj);
+                    var objString = JSON.stringify(proObjList);
+                    $.cookie('leaderProCookie', objString, {path: '/'});
+                    $(".js_compareAddProduct").find("span").html("已对比");
+                }else{
+                    $(".js_compareAddProduct").find("span").html("已对比");
+                }
+
+            }
+        }else {//无数据
+            var $list = $('.js_compareBox');
+            var count = $list.find('.compare-product-img').length;
+            if (count >= 4) {
+                alert("最多只能选择4款产品！");
+                return false;
+            }
+
+            if (proObjList.length >= 4) {
+                alert("最多只能选择4款产品！");
+                return false;
+            }
+
+            var id = $obj.attr('id');
+            var proImg = $obj.attr('data-thumb');
+            var proTitle = $obj.attr('data-name');
+            var proDesc = $obj.attr('data-type');
+            var proUrl = $obj.attr('data-link');
+            var channelId = $obj.attr('data-chnid');
+            var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
+
+            var compareHtml = '<li>' +
+                '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
+                '<img src="' + proImg + '">' +
+                '</div>' +
+                '<div class="compare-product-info">' +
+                ' <p>' + proTitle + '</p>' +
+                '<p class="leaveout">' + proDesc + '</p>' +
+                '<span>' + price + '</span>' +
+                '</div>' +
+                ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
+                '</li>';
+
+
+            //$('.js_compareBox').prepend(compareHtml);
+            $list.prepend(compareHtml);
+            //把选择的对比产品存入cookie
+            var proObj = new Object();
+            proObj.id = id;
+            proObj.img = proImg;
+            proObj.title = proTitle;
+            proObj.url = proUrl;
+            proObj.desc = proDesc;
+            proObj.channelid = channelId;
+            proObj.price = price;
+            proObjList.push(proObj);
+            var objString = JSON.stringify(proObjList);
+            $.cookie('leaderProCookie', objString, {path: '/'});
+            $(".js_compareAddProduct").find("span").html("已对比");
         }
-
-        if (proObjList.length >= 4) {
-            alert("最多只能选择4款产品！");
-            return false;
-        }
-
-        var id = $obj.attr('id');
-        var proImg = $obj.attr('data-thumb');
-        var proTitle = $obj.attr('data-name');
-        var proDesc = $obj.attr('data-type');
-        var proUrl = $obj.attr('data-link');
-        var channelId = $obj.attr('data-chnid');
-        var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
-
-        var compareHtml = '<li>' +
-            '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
-            '<img src="' + proImg + '">' +
-            '</div>' +
-            '<div class="compare-product-info">' +
-            ' <p>' + proTitle + '</p>' +
-            '<p class="leaveout">' + proDesc + '</p>' +
-            '<span>' + price + '</span>' +
-            '</div>' +
-            ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
-            '</li>';
-
-
-        //$('.js_compareBox').prepend(compareHtml);
-        $list.prepend(compareHtml);
-        //把选择的对比产品存入cookie
-        var proObj = new Object();
-        proObj.id = id;
-        proObj.img = proImg;
-        proObj.title = proTitle;
-        proObj.url = proUrl;
-        proObj.desc = proDesc;
-        proObj.channelid = channelId;
-        proObj.price = price;
-        proObjList.push(proObj);
-        var objString = JSON.stringify(proObjList);
-        $.cookie('leaderProCookie', objString, {path: '/'});
         //添加侧边栏绘制数据
         /* initSideBarCookie();
          initSideBarLoadCookie();*/
@@ -289,7 +341,7 @@ window.add_compare_flyOut_item = function ($obj) {
 
 //移除对比
 window.remove_compare_fLayout_item = function ($obj) {
-
+    $(".js_compareAddProduct").attr("auto","0");
     var $list = $('.js_compareBox');
     var id = $obj.siblings(".compare-product-img").attr('id');
 
@@ -492,12 +544,18 @@ function addCompareOnclick() {
 
     //添加对比商品监听事件
     $('.js_compareAddProduct').on('click', function () {
-        //显示对比栏
-        showCompareFlowLayout();
+        var isCompare=$(this).attr("auto");
+        if(isCompare==0){
+            //显示对比栏
+            showCompareFlowLayout();
+            //加入商品对比列表的模板,
+            $thisObj = $(this);
+            add_compare_flyOut_item($thisObj);
+        }else if(isCompare==1){//已对比
+            remove_compare_fLayout_item($thisObj);
+        }
 
-        //加入商品对比列表的模板,
-        $thisObj = $(this);
-        add_compare_flyOut_item($thisObj);
+
 
     });
 }
