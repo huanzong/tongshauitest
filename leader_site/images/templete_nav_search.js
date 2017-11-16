@@ -6,6 +6,14 @@ function isEmpty(value) {
     return false;
 }
 
+//过滤掉无法检索的符号
+function filterSymbol(word) {
+    if (word != null || word != undefined) {
+        word = word.replace(/<[^>]+>/g, "");
+    }
+    return word;
+}
+
 var screenWidth = document.body.offsetWidth;
 //搜索历史
 $('.js_searchHistory').bind('input propertychange', function () {
@@ -16,15 +24,14 @@ $('.js_searchHistory').bind('input propertychange', function () {
             $('.js_searchBox_lg').show();
         }
         $('.js_searchBoxQuick_lg').hide();
+        $('.js_quick_search').remove();
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBox').hide();
         $('.js_searchBoxQuick_lg').show();
-        var staSearchBoxHtml = '<li><a href = "">在线保修<a/></li>' +
-            '<li><a href = "">产品注册<a/></li>' +
-            '<li><a href = "">帮助中心<a/></li>' +
-            '<li><a href = "">联系我们<a/></li>'
-        $('.js_searchBox_listShow').html(staSearchBoxHtml);
+
+        $('.js_searchBox_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
     }
 }).on('blur', function () {
     $('.js_searchBox').hide();
@@ -37,13 +44,11 @@ $('.js_searchHistory').bind('input propertychange', function () {
     }
     $('.js_searchBoxQuick_lg').hide();
     if ($(this).val() && $(this).val() != "搜索产品、服务、帮助...") {
+        $('.js_quick_search').remove();
         searchBoxWord($(this).val());
     } else {
-        var staSearchBoxHtml = '<li><a href = "">在线保修<a/></li>' +
-            '<li><a href = "">产品注册<a/></li>' +
-            '<li><a href = "">帮助中心<a/></li>' +
-            '<li><a href = "">联系我们<a/></li>'
-        $('.js_searchBox_listShow').html(staSearchBoxHtml);
+        $('.js_searchBox_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
     }
 });
 
@@ -94,20 +99,45 @@ $('.js_menuShow').on('click', function () {
     }
 });
 
-//点击搜索按钮
+//点击搜索按钮全文搜索
 $('.js_jumpto_product_search').on('click', function () {
     var channelId = '273690';
+    var historyCookie = $.cookie('historyCookie');
     var searchWord = $.trim($('.js_searchHistory').val());
     if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
+        if (isEmpty(historyCookie)) {
+            $.cookie('historyCookie', searchWord, {path: '/'});
+        } else {
+            if (historyCookie.indexOf(",") == -1) {
+                if (historyCookie != searchWord) {
+                    historyCookie += "," + searchWord;
+                }
+            } else {
+                var historyCookieAll = historyCookie.split(",");
+                if (historyCookieAll.length < 5) {
+                    historyCookie += "," + searchWord;
+                } else {
+                    historyCookieAll.shift();
+                    historyCookieAll.push(searchWord);
+                    historyCookie = "";
+                    for (var i = 0; i < historyCookieAll.length; i++) {
+                        historyCookie += "," + historyCookieAll[i];
+                    }
+                    historyCookie = historyCookie.substring(1);
+                }
+            }
+            $.cookie('historyCookie', historyCookie, {path: '/'})
+        }
         searchWord = encodeURIComponent(searchWord);
         window.location.href = "/was5/web/search?channelid=" + channelId + "&searchword=" + searchWord;
     }
 });
 
-//搜索框提示浮层
+//搜索框浮层检索
 function searchBoxWord(word) {
     var channelId = '285710';
-    var searchWord = $.trim(word);
+    var searchWord = filterSymbol(word);
+    searchWord = $.trim(searchWord);
     if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
         searchWord = encodeURIComponent(searchWord);
         $.ajax({
@@ -122,8 +152,39 @@ function searchBoxWord(word) {
             }
         });
     }
-
 }
 
+//搜索框浮层展示
+function searchBoxInput(webSize) {
+    var historyCookie = $.cookie("historyCookie");
+    historyCookie = filterSymbol(historyCookie);
+    var searchBoxHtml = "";
+    if (!isEmpty(historyCookie)) {
+        if (historyCookie.indexOf(",") != -1) {
+            var historyCookieArr = historyCookie.split(",");
+            for (var i = 0; i < historyCookieArr.length; i++) {
+                if (historyCookieArr[i].indexOf("&nbsp") != 0) {
+                    searchBoxHtml += '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyarray[i] + '">' + historyarray[i] + '</a></li>';
+                }
+            }
+        } else {
+            searchBoxHtml = '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookie + '">' + historyCookie + '</a></li>';
+        }
+        if (webSize == "xl") {
+            searchBoxHtml = '<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" onclick="delCookie()">清空历史</a></div>' +
+                '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
+        }
+    } else {
+        searchBoxHtml = '<li><a href = "">在线保修<a/></li>' +
+            '<li><a href = "">产品注册<a/></li>' +
+            '<li><a href = "">帮助中心<a/></li>' +
+            '<li><a href = "">联系我们<a/></li>';
+    }
+    return searchBoxHtml;
+}
 
-
+//清空搜索历史
+function delCookie() {
+    $.cookie('historyCookie', null, {path: '/'});
+    $('.js_searchHistory').focus();
+}
