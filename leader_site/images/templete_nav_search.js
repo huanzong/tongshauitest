@@ -179,6 +179,10 @@ function searchBoxInput(webSize) {
             '<li><a href = "">产品注册<a/></li>' +
             '<li><a href = "">帮助中心<a/></li>' +
             '<li><a href = "">联系我们<a/></li>';
+        if (webSize == "xl") {
+            searchBoxHtml = '<div class="search-quick js_quick_search">快速链接</div>' +
+                '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
+        }
     }
     return searchBoxHtml;
 }
