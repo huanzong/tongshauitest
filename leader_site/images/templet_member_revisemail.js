@@ -40,7 +40,7 @@ $(function(){
         }
     });
 
-//通过点击不同的下拉列表框 转换手机和邮箱
+//通过点击不同的下拉列表框,转换手机和邮箱
     $("#js_revisemail").change(function() { SelectChange(); });
     function SelectChange(){
 
@@ -88,6 +88,26 @@ $(function(){
         }
     })
     $('.js_emailCodeYz').keyup(function(){
+        if($(this).val().length==6){
+            $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+        }else{
+            $('.js_subimGetUp').addClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
+
+        }
+    })
+    $('.js_phoneCodeYz').blur(function(){
+        if($(this).val().length==6){
+            $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+        }else{
+            $('.js_subimGetUp').addClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
+            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+        }
+    })
+    $('.js_phoneCodeYz').keyup(function(){
         if($(this).val().length==6){
             $('.js_subimGetUp').removeClass('l-btn-disable');
             $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
