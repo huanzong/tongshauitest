@@ -903,6 +903,7 @@
             <!-- 电商拉页 -->
              <div class="o_g detail-foldover js_detail-foldover">
                  <!--<trs_viewdata field="mdjs_ds"/>-->
+                 <trs_viewdata field="mdjs_ds">
                  <TRS_CONDITION  CONDITION='@mdjs_ds' OPERATOR="blank" NOT='TRUE'>
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
                     <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
@@ -925,6 +926,7 @@
                 </div>
                 <div class="o_u o_df_1-12"></div>
                  </TRS_CONDITION>
+                 </trs_viewdata>
             </div>
             <!-- 电商拉页 END -->   
             <!-- 产品口碑-->
