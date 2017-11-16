@@ -97,6 +97,26 @@ $(function(){
 
         }
     })
+    $('.js_phoneCodeYz').blur(function(){
+        if($(this).val().length==6){
+            $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+        }else{
+            $('.js_subimGetUp').addClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
+            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+        }
+    })
+    $('.js_phoneCodeYz').keyup(function(){
+        if($(this).val().length==6){
+            $('.js_subimGetUp').removeClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
+        }else{
+            $('.js_subimGetUp').addClass('l-btn-disable');
+            $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
+
+        }
+    })
 
 //点击发送短信验证码
     $(".js-sendmobile").click(function(){
