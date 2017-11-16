@@ -848,7 +848,7 @@
             <!-- 核心卖点-->
             <div class="o_g">
                 <!--<TRS_ViewData Field="mdjs_gw">确保 Outline 字段被载入</TRS_ViewData>-->
-                <TRS_CONDITION  CONDITION='@mdjs_gw' NOT='TRUE' OPERATOR="blank" not="true">
+                <TRS_CONDITION  CONDITION='@mdjs_gw' OPERATOR="blank" NOT='TRUE'>
                 <div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
                 <div class="o_u o_df_4-12 bg-f8">
                     <div class="detail-sellpoint js_oHerlSize">
@@ -903,7 +903,7 @@
             <!-- 电商拉页 -->
              <div class="o_g detail-foldover js_detail-foldover">
                  <!--<trs_viewdata field="mdjs_ds"/>-->
-                 <TRS_CONDITION  CONDITION='@mdjs_ds' NOT='TRUE' OPERATOR="blank" not="true">
+                 <TRS_CONDITION  CONDITION='@mdjs_ds' OPERATOR="blank" NOT='TRUE'>
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
                     <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
 
