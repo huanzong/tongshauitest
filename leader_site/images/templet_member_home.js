@@ -9,7 +9,7 @@ $(function () {
 
     $('.js-recommendation').attr('freshen', 'A');
 
-    //精选推荐
+    //精选推荐 4个按时间倒序
     var data = {
         "orderBy": "-shangshishijian",
         "pageNo": 1,
@@ -37,7 +37,7 @@ $(function () {
         }
     });
 })
-
+//第一第二个产品
 function freshenA() {
     $('.js-recommendation').attr('freshen','A');
     templet_addhtml='';
@@ -45,6 +45,7 @@ function freshenA() {
     templet_addhtml+='<a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>';
     templet_addhtml+='</div></div>';
     templet_branches=2;
+    //如果产品总数小于2
     if(templet_branches>templet_entities.length){
         templet_branches=templet_entities.length;
     }
@@ -64,6 +65,10 @@ function freshenA() {
 
 }
 function freshenB() {
+    //如果产品总数小于2就不执行B方法
+    if(2>templet_entities.length){
+        return;
+    }
     $('.js-recommendation').attr('freshen','B');
     templet_addhtml='';
     templet_addhtml+='<div class="o_g member-home-down-table"><div class="o_u o_df_11-12"> <span>精选推荐</span>';
