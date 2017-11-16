@@ -15,7 +15,7 @@ function filterSymbol(word) {
 }
 
 var screenWidth = document.body.offsetWidth;
-//搜索历史
+//搜索历史-ceshi
 $('.js_searchHistory').bind('input propertychange', function () {
     if ($(this).val() && $(this).val() != "搜索产品、服务、帮助...") {
         if (screenWidth > 1199) {
