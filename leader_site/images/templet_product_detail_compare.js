@@ -8,7 +8,7 @@ $(function () {
     //xml中获取tableName
 
 //对比初始化函数
-    getFilter();
+
     setTimeout(initCookie(), 1000);
     setTimeout(initLoadCookie(), 1000);
     /**
@@ -117,6 +117,7 @@ function addContrastClick() {
 
 //加载页面或者检索完毕以后初始化cookie
 function initCookie() {
+    getFilter();//获取tableName
     //获取url
     currentUrlName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
     //如果不是产品详情对比页
