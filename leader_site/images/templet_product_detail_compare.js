@@ -5,6 +5,19 @@
 $(function () {
     //添加对比产品监听事件
     addCompareOnclick();
+    //xml中获取tableName
+    $.ajax({
+        type: 'get',
+        dataType: 'xml',
+        url: url,
+        success: function (xml) {
+            var viewName = $(xml).find("Filter").attr("viewName");
+            _tableName = viewName;
+        }
+    });
+//对比初始化函数
+    setTimeout(initCookie(), 1000);
+    setTimeout(initLoadCookie(), 1000);
     /**
      * 产品对比   //对比栏显示隐藏
      */
@@ -15,9 +28,6 @@ $(function () {
             showCompareFlowLayout();
         }
     });
-    //对比初始化函数
-    setTimeout(initCookie(), 1000);
-    setTimeout(initLoadCookie(), 1000);
 })
 var _tableName = "";
 var url = "filter.xml";
@@ -37,19 +47,8 @@ var arrayMetaDataId = new Array();
 //总对比按钮
 compareButtonOnclick();
 
-//xml中获取tableName
-$.ajax({
-    type: 'get',
-    dataType: 'xml',
-    url: url,
-    success: function (xml) {
-        var viewName = $(xml).find("Filter").attr("viewName");
-        _tableName = viewName;
-    }
-});
 //添加对比的点击事件
 function addContrastClick() {
-
     //$(".js_compareAddProduct").live("click",function(){
     //是否选中标志
     var auto = $(this).attr("auto");
@@ -128,7 +127,7 @@ function initCookie() {
             }
         }
         //初始化存产品品类表名cookie
-        $.cookie('leaderProTypeTable', _tableName, {expires: 30,path: '/'});
+        $.cookie('leaderProTypeTable', _tableName, {path: '/'});
         //获取数据cookie
         proCookie = $.cookie('leaderProCookie');
         //如果数据cookie中数据
@@ -282,7 +281,7 @@ window.add_compare_flyOut_item = function ($obj) {
                 proObj.price = price;
                 proObjList.push(proObj);
                 var objString = JSON.stringify(proObjList);
-                $.cookie('leaderProCookie', objString, {expires: 30,path: '/'});
+                $.cookie('leaderProCookie', objString, {path: '/'});
                 $(".js_compareAddProduct").find("span").html("已对比");
             }else{
                 if (count >= 4) {
@@ -342,7 +341,7 @@ window.add_compare_flyOut_item = function ($obj) {
             proObj.price = price;
             proObjList.push(proObj);
             var objString = JSON.stringify(proObjList);
-            $.cookie('leaderProCookie', objString, {expires: 30,path: '/'});
+            $.cookie('leaderProCookie', objString, {path: '/'});
             $(".js_compareAddProduct").find("span").html("已对比");
 
         }
@@ -511,7 +510,7 @@ function compareButtonOnclick() {
             /* 生成跳转链接并跳转到对比页 $(this).attr("data-backUrl")*/
             var backUrl = currentUrl ;
             //存返回路径cookie
-            $.cookie('backUrl', backUrl, {expires: 30,path: '/'});
+            $.cookie('backUrl', backUrl, {path: '/'});
             var vURL = '';
             var vStr = '';
             vURL = backUrl;
