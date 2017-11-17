@@ -128,7 +128,7 @@ function initCookie() {
             }
         }
         //初始化存产品品类表名cookie
-        $.cookie('leaderProTypeTable', _tableName, {path: '/'});
+        $.cookie('leaderProTypeTable', _tableName, {expires: 30,path: '/'});
         //获取数据cookie
         proCookie = $.cookie('leaderProCookie');
         //如果数据cookie中数据
@@ -282,7 +282,7 @@ window.add_compare_flyOut_item = function ($obj) {
                 proObj.price = price;
                 proObjList.push(proObj);
                 var objString = JSON.stringify(proObjList);
-                $.cookie('leaderProCookie', objString, {path: '/'});
+                $.cookie('leaderProCookie', objString, {expires: 30,path: '/'});
                 $(".js_compareAddProduct").find("span").html("已对比");
             }else{
                 if (count >= 4) {
@@ -342,7 +342,7 @@ window.add_compare_flyOut_item = function ($obj) {
             proObj.price = price;
             proObjList.push(proObj);
             var objString = JSON.stringify(proObjList);
-            $.cookie('leaderProCookie', objString, {path: '/'});
+            $.cookie('leaderProCookie', objString, {expires: 30,path: '/'});
             $(".js_compareAddProduct").find("span").html("已对比");
 
         }
@@ -511,7 +511,7 @@ function compareButtonOnclick() {
             /* 生成跳转链接并跳转到对比页 $(this).attr("data-backUrl")*/
             var backUrl = currentUrl ;
             //存返回路径cookie
-            $.cookie('backUrl', backUrl, {path: '/'});
+            $.cookie('backUrl', backUrl, {expires: 30,path: '/'});
             var vURL = '';
             var vStr = '';
             vURL = backUrl;
