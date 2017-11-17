@@ -7,13 +7,11 @@ $(function () {
     addCompareOnclick();
     //xml中获取tableName
 
-//对比初始化函数
-
+    //对比初始化函数
     setTimeout(initCookie(), 1000);
     setTimeout(initLoadCookie(), 1000);
-    /**
-     * 产品对比   //对比栏显示隐藏
-     */
+
+    //对比栏显示隐藏
     $('.js_compareBoxShow').on('click', function () {
         if (parseInt($(this).attr('data-show'))) {
             hideCompareFlowLayout();
@@ -44,6 +42,7 @@ function getFilter(){
         type: 'get',
         dataType: 'xml',
         url: url,
+        async:false,
         success: function (xml) {
             var viewName = $(xml).find("Filter").attr("viewName");
             _tableName = viewName;
