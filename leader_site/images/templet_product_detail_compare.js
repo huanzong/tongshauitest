@@ -363,7 +363,7 @@ window.remove_compare_fLayout_item = function ($obj) {
     $(".js_compareAddProduct").attr("auto","0");
     $(".js_compareAddProduct").find("span").html("对比");
     var $list = $('.js_compareBox');
-    var id = $obj.siblings(".compare-product-img").attr('id');
+    var id = $obj.(".compare-product-img").attr('id');
 
     $list.find('li').each(function () {
         var $this_col = jQuery(this);
@@ -574,9 +574,6 @@ function addCompareOnclick() {
         }else if(isCompare==1){//已对比
             remove_compare_fLayout_item($thisObj);
         }
-
-
-
     });
 }
 
