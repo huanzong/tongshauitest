@@ -40,7 +40,7 @@ $(function(){
         }
     });
 
-//通过点击不同的下拉列表框 转换手机和邮箱
+//通过点击不同的下拉列表框,转换手机和邮箱
     $("#js_revisemail").change(function() { SelectChange(); });
     function SelectChange(){
 

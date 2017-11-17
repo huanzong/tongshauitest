@@ -24,7 +24,6 @@ $('.js_searchHistory').bind('input propertychange', function () {
             $('.js_searchBox_lg').show();
         }
         $('.js_searchBoxQuick_lg').hide();
-        $('.js_quick_search').remove();
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBoxQuick_lg').show();
@@ -145,6 +144,7 @@ function searchBoxWord(word) {
             dataType: "html",
             async: true,
             success: function (data) {
+                $('.js_quick_search').remove();
                 $('.js_searchBox_listShow').html(data);
             },
             error: function (data) {
@@ -163,7 +163,7 @@ function searchBoxInput(webSize) {
             var historyCookieArr = historyCookie.split(",");
             for (var i = 0; i < historyCookieArr.length; i++) {
                 if (historyCookieArr[i].indexOf("&nbsp") != 0) {
-                    searchBoxHtml += '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyarray[i] + '">' + historyarray[i] + '</a></li>';
+                    searchBoxHtml += '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookieArr[i] + '">' + historyCookieArr[i] + '</a></li>';
                 }
             }
         } else {
