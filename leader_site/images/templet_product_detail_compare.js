@@ -5,19 +5,6 @@
 $(function () {
     //添加对比产品监听事件
     addCompareOnclick();
-    //xml中获取tableName
-    $.ajax({
-        type: 'get',
-        dataType: 'xml',
-        url: url,
-        success: function (xml) {
-            var viewName = $(xml).find("Filter").attr("viewName");
-            _tableName = viewName;
-        }
-    });
-//对比初始化函数
-    setTimeout(initCookie(), 1000);
-    setTimeout(initLoadCookie(), 1000);
     /**
      * 产品对比   //对比栏显示隐藏
      */
@@ -46,6 +33,20 @@ var proObjListSideBar = "";
 var arrayMetaDataId = new Array();
 //总对比按钮
 compareButtonOnclick();
+
+//xml中获取tableName
+$.ajax({
+    type: 'get',
+    dataType: 'xml',
+    url: url,
+    success: function (xml) {
+        var viewName = $(xml).find("Filter").attr("viewName");
+        _tableName = viewName;
+    }
+});
+//对比初始化函数
+setTimeout(initCookie(), 1000);
+setTimeout(initLoadCookie(), 1000);
 
 //添加对比的点击事件
 function addContrastClick() {
