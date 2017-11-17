@@ -9,7 +9,6 @@ $("#js_city").oSelect().init();
 $("#js_area").oSelect().init();
 $("#js_road").oSelect().init();*/
 
-
 //地址管理初始化
 var address=$(".js_memberNewAddress" ).Validform({
     tiptype:3,
