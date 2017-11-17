@@ -240,10 +240,10 @@ window.add_compare_flyOut_item = function ($obj) {
             for (var i = 0; i < proObjList.length; i++) {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
-                proId = product.channelid;
+                proId = product.id;
             }
-            var channelId = $obj.attr('data-chnid');
-            if(channelId!=proId){
+            var id = $obj.attr('id');
+            if(id!=proId){
                 if (count >= 4) {
                     alert("最多只能选择4款产品！");
                     return false;
@@ -253,7 +253,7 @@ window.add_compare_flyOut_item = function ($obj) {
                     alert("最多只能选择4款产品！");
                     return false;
                 }
-                var id = $obj.attr('id');
+                var channelId = $obj.attr('data-chnid');
                 var proImg = $obj.attr('data-thumb');
                 var proTitle = $obj.attr('data-name');
                 var proDesc = $obj.attr('data-type');
