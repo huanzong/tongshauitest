@@ -111,17 +111,19 @@ $('.js_jumpto_product_search').on('click', function () {
                     historyCookie += "," + searchWord;
                 }
             } else {
-                var historyCookieAll = historyCookie.split(",");
-                if (historyCookieAll.length < 5) {
-                    historyCookie += "," + searchWord;
-                } else {
-                    historyCookieAll.shift();
-                    historyCookieAll.push(searchWord);
-                    historyCookie = "";
-                    for (var i = 0; i < historyCookieAll.length; i++) {
-                        historyCookie += "," + historyCookieAll[i];
+                var historyCookieArr = historyCookie.split(",");
+                if($.inArray(searchWord,historyCookieArr) == -1){
+                    if (historyCookieArr.length < 5) {
+                        historyCookie += "," + searchWord;
+                    } else {
+                        historyCookieArr.shift();
+                        historyCookieArr.push(searchWord);
+                        historyCookie = "";
+                        for (var i = 0; i < historyCookieArr.length; i++) {
+                            historyCookie += "," + historyCookieArr[i];
+                        }
+                        historyCookie = historyCookie.substring(1);
                     }
-                    historyCookie = historyCookie.substring(1);
                 }
             }
             $.cookie('historyCookie', historyCookie, {path: '/'})
