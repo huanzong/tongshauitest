@@ -8,6 +8,7 @@ $(function () {
 
     //根据订单传的orderId 查询商品信息
     var templet_orderId=getQueryString("orderId");
+    var templet_orderType=getQueryString("orderType");
     //var templet_XXX=getQueryString("");入口2需要传给我产品注册码
     var templet_modelNo=getQueryString("modelNo");
     if(templet_modelNo==null){
@@ -18,10 +19,22 @@ $(function () {
     if(templet_orderId==null){
 
     }else{
+        var templet_data;
+        if('orderSubId'==templet_orderType){
+            templet_data={"orderSubId":templet_orderId};
+        }
+        else{
+            if('orderId'==templet_orderType){
+                templet_data={"orderId":templet_orderId};
+            }
+            else{
+                window.location.href ='/order';
+            }
+        }
         $.ajax({
             type: "get",
             url: siteConfig.userUrl+"/buy/order/order-front/show/",
-            data: {"orderId":templet_orderId},
+            data: templet_data,
             login:true,
             error_cb : function(){
                 window.location.href ='/order';
