@@ -96,11 +96,11 @@
                             <div class="particulars-detail">
                                 <!-- <div class="old-price">￥98034</div> -->
                                 <div class="corrent-price js_price"><sub>￥</sub><span><trs_viewdata field="price"/></span></div>
-                                <div class="particulars-capacity">
+                                <!--<div class="particulars-capacity">
                                     <span class="capacity-tit">容量：</span>
                                     <span class="capacity-box active">798L</span>
                                     <span class="capacity-box">798L</span>
-                                </div>
+                                </div>-->
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
                                         <span class="address-tit">配送至:</span>
