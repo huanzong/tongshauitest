@@ -50,10 +50,10 @@ $('.js_searchHistory').bind('input propertychange', function () {
     }
 });
 
-$('body').on('click', function () {
-    $('.js_searchBox').hide();
-    $('.js_searchBoxQuick_lg').show();
-});
+// $('body').on('click', function () {
+//     $('.js_searchBox').hide();
+//     $('.js_searchBoxQuick_lg').show();
+// });
 
 //搜索--lg
 $('.js_search_lg').on('click', function () {
