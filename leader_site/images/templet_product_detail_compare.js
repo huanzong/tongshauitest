@@ -510,7 +510,7 @@ function deleteCompareItem() {
         $(".js_compareAddProduct").attr("auto","0");
         $(".js_compareAddProduct").find("span").html("对比");
         var $list = $('.js_compareBox');
-        var id = $obj.siblings(".compare-product-img").attr('id');
+        var id = $(this).siblings(".compare-product-img").attr('id');
         $list.find('li').each(function () {
             var $this_col = jQuery(this);
             var col_id = $this_col.children('.compare-product-img').attr('id');
