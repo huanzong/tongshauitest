@@ -131,7 +131,7 @@ function getCommentData(){
                         var isHavePic=data.data.entities[i].isHavePic;//判断有误图片 1有 0无
                         var paths=data.data.entities[i].paths;//图片集合
                         var loginAccountName=data.data.entities[i].loginAccountName;//用户名
-                        var channelSource=data.data.entities[i].channelSource;//1.官方 2.天猫 3.京东 4.苏宁 5.国美
+                        var channelSource=data.data.entities[i].channelSourceStr;//1.官方 2.天猫 3.京东 4.苏宁 5.国美
 
                         temple_ConHtml+='<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">';
                         temple_ConHtml+='<div class="praise-con">';
