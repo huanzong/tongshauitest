@@ -525,13 +525,13 @@ function deleteAllCompareItem() {
 
 //显示对比浮层
 function showCompareFlowLayout(){
-    $('.js_compareBox').show();
+    $('.prolist-compare').show();
     $('.js_compareBoxShow').attr('data-show', 1);
     $('.js_compareBoxShow').html('隐藏<i class="iconfont icon-arrow-line-down"></i>');
 }
 //隐藏对比浮层
 function hideCompareFlowLayout(){
-    $('.js_compareBox').hide();
+    $('.prolist-compare').hide();
     $('.js_compareBoxShow').attr('data-show', 0);
     $('.js_compareBoxShow').html('展开<i class="iconfont icon-arrow-line-up"></i>');
 }
