@@ -489,7 +489,7 @@ function compareButtonOnclick() {
 function addCompareOnclick() {
 
     //添加对比商品监听事件
-    $('.js_compareAddProduct').live("click",function(){
+    $('.js_compareAddProduct').on("click",function(){
         var isCompare=$(this).attr("auto");
         if(isCompare==0){
             //显示对比栏
