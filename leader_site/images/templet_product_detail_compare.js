@@ -37,6 +37,7 @@ var proObjListSideBar = "";
 var arrayMetaDataId = new Array();
 //总对比按钮
 compareButtonOnclick();
+
 function getFilter(){
     $.ajax({
         type: 'get',
@@ -49,12 +50,9 @@ function getFilter(){
         }
     });
 }
-
 //添加对比的点击事件
 function addContrastClick() {
-    //$(".js_compareAddProduct").live("click",function(){
-    //是否选中标志
-    var auto = $(this).attr("auto");
+    var auto = $(this).attr("auto");//是否选中标志
     if (auto == "0") {
         //如果是没有对比的对比
         $(this).addClass("uncontrast");
@@ -171,12 +169,6 @@ function initCookie() {
             }
         } else {
             proObjList = [];
-            //对比按钮样式
-            /*$(".uncontrast").find("span").html("对比");
-             $(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
-             $(".uncontrast").attr("auto","0");
-             $(".uncontrast").removeClass("uncontrast");*/
-
         }
     }
 }
@@ -348,10 +340,7 @@ window.add_compare_flyOut_item = function ($obj) {
             $.cookie('leaderProCookie', objString, {path: '/'});
             $(".js_compareAddProduct").find("span").html("已对比");
         }
-        //添加侧边栏绘制数据
-        /* initSideBarCookie();
-         initSideBarLoadCookie();*/
-        //总对比按钮
+
         //删除对比选项监听
         deleteCompareItem();
         deleteAllCompareItem();
@@ -382,21 +371,11 @@ window.remove_compare_fLayout_item = function ($obj) {
             }
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
-            /* if (noCompareChannel != "") {
-             if (objString == "[]") {
-             //恢复互斥项
-             $(".js_proList .lose").each(function () {
-             $(this).addClass("js_contrast");
-             $(this).removeClass("lose");
-             });
-             }
-             }*/
             return false;
         }
-        ;
     });
 
-    if ($list.find('.row').length <= 0) {
+    if ($list.find('li').length <= 0) {
         hideCompareFlowLayout();
         //删除cookie里面的相应数据,未点比较按钮时删除cookie
         for (var i = 0; i < proObjList.length; i++) {
@@ -417,10 +396,8 @@ window.remove_compare_fLayout_item = function ($obj) {
             }
         }
     }
-    //添加侧边栏绘制数据
-    initSideBarCookie();
-    initSideBarLoadCookie();
 };
+
 //移除
 function remove(arrPerson, objPropery, objValue) {
     return $.grep(arrPerson, function (cur, i) {
@@ -441,60 +418,6 @@ function initSideBarCookie() {
             proObjListSideBar = JSON.parse(proCookie);
         } else {
             proObjListSideBar = [];
-        }
-    }
-}
-//初始化绘制侧边栏对比浮层数据
-function initSideBarLoadCookie() {
-    //读取侧边栏浮层里边内容应该是没有
-    var compareHtml = "";
-    //因为初始化cookie中将proObjlist这个添加 所以在这直接使用
-    if (proObjListSideBar != null) {
-        //如果不是产品列表页或者详情页那么就不要显示对比
-        if (proObjListSideBar.length > 0) {
-            //URL里边有product这个字符串 就不显示侧边栏的对比
-            if (currentUrl.indexOf("product") >= 1) {
-                //在这获取页面产品id为了修改按钮样式
-                var productId = $(".prodetial_tool .js_btn_addcompare").attr('id');
-                //有数据显示侧边 添加数量
-                $(".js_compare_door").show();
-                $(".js_compare_door .num span").html(proObjListSideBar.length);
-                //添加里边的
-                $(".js_side_mycompare span").eq(1).html(proObjListSideBar.length);
-                //如果两个以上显示比较按钮
-                if (proObjListSideBar.length > 1) {
-                    $(".js_side_mycompare .tool a").removeClass("o_lose");
-                }
-                for (var i = 0; i < proObjListSideBar.length; i++) {
-                    var product = proObjListSideBar[i];
-                    compareHtml += '<li>';
-                    compareHtml += '<div class="box" id="' + product.id + '" data-chanid="' + product.channelid + '">';
-                    compareHtml += '<a href="' + product.url + '" class="img"><img src="' + product.img + '" alt=""></a>';
-                    compareHtml += '<a href="' + product.url + '" class="link cui_c333">' + product.title + '</a>';
-                    compareHtml += '<p class="cui_c999 font_sub">' + product.desc + '</p>';
-                    compareHtml += '<p class="jg font_sub cui_cyellow">' + product.price + '</p>';
-                    compareHtml += '<span class="o_icofont o-close"></span>';
-                    compareHtml += '</div>';
-                    compareHtml += '</li>';
-
-                    //修改详情侧边栏的对比按钮样式
-                    if (productId == product.id) {
-                        //如果是同一个型号
-                        if (!$(".js_sbtn_compare").hasClass("light")) {
-                            //没有样式 加上样式
-                            $(".js_sbtn_compare").addClass("light");
-                            $(".js_sbtn_compare").find("b").html("取消对比");
-                        }
-                    }
-                }
-                $(".js_side_mycompare ul").html(compareHtml);
-            }
-        } else {
-            //没有数据侧边隐藏
-            $(".js_compare_door").hide();
-            //清空侧边栏
-            $(".js_side_mycompare ul").empty();
-
         }
     }
 }
