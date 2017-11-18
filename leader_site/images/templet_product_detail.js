@@ -156,18 +156,6 @@ function getCommentData(){
 
                         commentTime=commentTime.replace(/-/g, "/");//时间处理
                         temple_ConHtml+='<span class="time">'+commentTime+'</span>';
-
-                        if(channelSource==1){//来源
-                            channelSource="官方";
-                        }else if(channelSource==2){
-                            channelSource="天猫";
-                        }else if(channelSource==3){
-                            channelSource="京东";
-                        }else if(channelSource==4){
-                            channelSource="苏宁";
-                        }else if(channelSource==5){
-                            channelSource="国美";
-                        }
                         temple_ConHtml+='<span class="from">来自&nbsp;'+channelSource+'</span>';
                         temple_ConHtml+='</div></div></div>';
                     }
