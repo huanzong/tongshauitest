@@ -508,8 +508,49 @@ function deleteCompareItem() {
     //删除单个对比产品
     $('.js_compareClose.compare-close.icon-close').on('click', function () {
         //商品对象,
-        $thisObj = $(this);
-        remove_compare_fLayout_item($thisObj);
+        $(".js_compareAddProduct").attr("auto","0");
+        $(".js_compareAddProduct").find("span").html("对比");
+        var $list = $('.js_compareBox');
+        var id = $obj.siblings(".compare-product-img").attr('id');
+        $list.find('li').each(function () {
+            var $this_col = jQuery(this);
+            var col_id = $this_col.children('.compare-product-img').attr('id');
+            if (col_id == id && id != undefined) {
+                $this_col.remove();
+                //删除cookie里面的相应数据
+                for (var i = 0; i < proObjList.length; i++) {
+                    var obj = proObjList[i];
+                    if (obj.id == id) {
+                        proObjList = remove(proObjList, "id", id);
+                    }
+                }
+                var objString = JSON.stringify(proObjList);
+                $.cookie('leaderProCookie', objString, {path: '/'});
+                return false;
+            }
+        });
+
+        if ($list.find('li').length <= 0) {
+            hideCompareFlowLayout();
+            //删除cookie里面的相应数据,未点比较按钮时删除cookie
+            for (var i = 0; i < proObjList.length; i++) {
+                var obj = proObjList[i];
+                if (obj.id == id) {
+                    proObjList = remove(proObjList, "id", id);
+                }
+            }
+            var objString = JSON.stringify(proObjList);
+            $.cookie('leaderProCookie', objString, {path: '/'});
+            if (noCompareChannel != "") {
+                if (objString == "[]") {
+                    //恢复互斥项
+                    $(".js_proList .lose").each(function () {
+                        $(this).addClass("js_contrast");
+                        $(this).removeClass("lose");
+                    });
+                }
+            }
+        }
     });
 }
 //删除所有个对比产品监听事件
