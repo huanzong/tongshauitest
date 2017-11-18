@@ -206,7 +206,7 @@ $(function () {
     });*/
     
     //关闭搜索
-    $('.js_navSearchClose').on('click', function () {
+    /*$('.js_navSearchClose').on('click', function () {
     
         $('.js_navSearchLg')
             .removeClass('o_lg-show')
@@ -234,7 +234,7 @@ $(function () {
             $(this).removeClass('icon-close').addClass('icon-menu');
             $('.js_navMdShow').hide();
         }
-    });
+    });*/
 
     userLoginStatus();
 
