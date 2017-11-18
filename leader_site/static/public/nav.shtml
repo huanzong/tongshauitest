@@ -39,9 +39,9 @@
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
 				<div class="search-quick">快速链接</div>
 				<ul class="search-list">
+					<li><a href="http://www.baidu.com/">我是搜索结果</a></li>
 					<li>我是搜索结果</li>
-					<li>我是搜索结果</li>
-					<li>我是搜索结果</li>
+					<li><a>我是搜索结果</a></li>
 				</ul>
 			</div>
 		</div>
@@ -157,11 +157,11 @@
 				<a href="javascript:;">联系我们</a>
 			</div>
 			<ul class="searchresult-result js_searchBox js_searchBox_lg">
-				<li>搜索结果</li>
-				<li>搜索结果</li>
-				<li>搜索结果</li>
-				<li>搜索结果</li>
-				<li>搜索结果</li>
+				<li><a>搜索结果</a></li>
+				<li><a>搜索结果</a></li>
+				<li><a>搜索结果</a></li>
+				<li><a>搜索结果</a></li>
+				<li><a>搜索结果</a></li>
 			</ul>
 		</div>
 		<div class="o_u o_df_2-12"></div>
