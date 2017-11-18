@@ -19,6 +19,20 @@ $(function () {
             showCompareFlowLayout();
         }
     });
+    //显示对比浮层
+    function showCompareFlowLayout(){
+        $('.prolist-compare').show();
+        $('.js_compareBox').show();
+        $('.js_compareBoxShow').attr('data-show', 1);
+        $('.js_compareBoxShow').html('隐藏<i class="iconfont icon-arrow-line-down"></i>');
+    }
+//隐藏对比浮层
+    function hideCompareFlowLayout(){
+        $('.prolist-compare').hide();
+        $('.js_compareBox').hide();
+        $('.js_compareBoxShow').attr('data-show', 0);
+        $('.js_compareBoxShow').html('展开<i class="iconfont icon-arrow-line-up"></i>');
+    }
 })
 var _tableName = "";
 var url = "filter.xml";
