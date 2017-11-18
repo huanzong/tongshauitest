@@ -22,7 +22,7 @@ function initContent(data,curPage,pageSize){
     $(".product-prise-body .o_df_10-12").html("");
     for (var j = 0; j<data.data.entities.length;j++) {
       //append每个entity
-      $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSource+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
+      $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSourceStr+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
       //插入图片
       for(var i=0;i<data.data.entities[j].paths.length;i++){
         //修改图片class
@@ -60,7 +60,7 @@ function getContentData1(curPage,pageSize){
         $(".product-prise-body .o_df_10-12").html("");
         for (var j = 0; j<data.data.entities.length;j++) {
           //append每个entity
-          $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSource+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
+          $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSourceStr+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
           //插入图片
           for(var i=0;i<data.data.entities[j].paths.length;i++){
             //修改图片class
@@ -129,7 +129,7 @@ function getContentDataByTag(curPage,pageSize){
           $(".product-prise-body .o_df_10-12").html("");
           for (var j = 0; j<data.data.entities.length;j++) {
             //append每个entity
-            $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSource+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
+            $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSourceStr+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
             //插入图片
             for(var i=0;i<data.data.entities[j].paths.length;i++){
               //修改图片class
@@ -159,7 +159,7 @@ function getContentDataByTag1(curPage,pageSize,tagName){
         $(".product-prise-body .o_df_10-12").html("");
         for (var j = 0; j<data.data.entities.length;j++) {
           //append每个entity
-          $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSource+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
+          $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSourceStr+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
           //插入图片
           for(var i=0;i<data.data.entities[j].paths.length;i++){
             //修改图片class
