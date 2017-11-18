@@ -1341,6 +1341,7 @@
     <script type="text/javascript" src="../site5/product_detail.js"></script>
     <script type="text/javascript" src="../site5/templet_product_detail_compare.js"></script>
     <script>
+        var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="parent"></TRS_CHANNEL>';
         var templet_price='<trs_viewdata field="sku_values"/>';//价格字符串
         var point='<trs_viewdata field="gnld"/>';//功能亮点
         var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>';//附件信息

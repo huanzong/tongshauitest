@@ -176,7 +176,7 @@
                                     <i class="product-address-list-phone">13884973771</i>
                                     <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">山东 青岛 黄岛区 长江中路2号9907室</i>
                                 </p>
-                                <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
+                                <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressUpdate">修改</a>
                             </div>
                         </li> -->
                     </ul>
@@ -198,7 +198,7 @@
                     <div class="product-ordercon-time-box js_orderconTime">
                         <div class="o_u o_df_11-12">
                             <a href="javascript:;" class="l-btn-normal    l-btn-orange js_standardTime">标准配送</a>
-                            <a href="javascript:;" class="l-btn-normal l-btn-line2 js_appointment">预约配送</a>
+                            <!-- <a href="javascript:;" class="l-btn-normal l-btn-line2 js_appointment">预约配送</a> -->
                             <p>您订购的产品将于 08月07日(周一)22:00 送达，请保持手机畅通</p>
                             <div class=" product-ordercon-time-cont js_orderconTimeBox" data-alt="1" style="display: none">
                                 <p>请选择配送时间</p>
@@ -257,7 +257,7 @@
                             <p class="ordercon-setInvoice-list-title o_u o_df_1-3"><span>*</span>发票类型</p>
                             <div class="ordercon-setInvoice-list-cont o_u o_df_1-2">
                                 <span><input  type="radio" checked  class="js_radio" name="invoice" value="电子发票"></span>
-                                <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span>
+                                <!-- <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span> -->
                                 <p>1. 电子发票是国家税务局机关认可的有效凭证，与纸质发票具有同等法律效力</p>
                                 <p>2. 电子发票开具后，将不可更改发票信息及更其他种类发票</p>
                                 <p>3. 如需纸质发票，可在“个人中心-我的订单”中下载后打印</p>
@@ -300,8 +300,26 @@
                     <div class="product-ordercon-title o_u o_df_2-2">
                         <h4 class="o_u">商品清单及优惠</h4><a href=""  class="o_u"><span class=" iconfont icon-arrow-line-left"></span>返回购物车</a>
                     </div>
-                    <div class="product-orderconfirm-prolist-box">
-                        <div class="product-orderconfirm-prolist-title">
+                    <div class="product-orderconfirm-prolist-box">   
+                        <div class="product-orderconfirm-prolist-cont">
+                            <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
+                                <img src="images/compare_goods.PNG" alt="">
+                            </div>
+                            <div class="o_u o_df_4-10 o_lg_3-10 o_md_3-12 o_sm_3-12 o_xs_3-12  order-prolist-cont-title">
+                                <p>对开双门大容量浅薄静音节能冰箱</p>
+                                <span>BCD-455WLDPC</span>
+                            </div>
+                            <div class="o_u o_df_2-10  o_lg_2-10 o_md_3-12 o_sm_3-12 o_xs_3-12 order-prolist-cont-nub">
+                                <span>¥ 1799</span>x<span>1</span>
+                            </div>
+                            <div class="o_u o_df_1-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-productno">地区无货</div>
+                            <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
+                                <i>¥ 1799 </i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="product-orderconfirm-prolist-box"> -->
+                        <!-- <div class="product-orderconfirm-prolist-title">
                             <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
                         </div>
                         <div class="product-orderconfirm-prolist-cont">
@@ -319,10 +337,9 @@
                             <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
                                 <i>¥ 1799 </i>
                             </div>
-
-                        </div>
+                        </div> -->
                         <!--无货商品添加 class product-nogoods -->
-                        <div class="product-orderconfirm-prolist-cont product-nogoods">
+                        <!-- <div class="product-orderconfirm-prolist-cont product-nogoods">
                             <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12  order-prolist-cont-img">
                                 <img src="images/compare_goods.PNG" alt="">
                             </div>
@@ -337,7 +354,6 @@
                             <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
                                 <i>¥ 1799 </i>
                             </div>
-
                         </div>
                         <div class="product-orderconfirm-prolist-title">
                             <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
@@ -357,7 +373,6 @@
                             <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
                                 <i>¥ 1799 </i>
                             </div>
-
                         </div>
                         <div class="product-orderconfirm-prolist-cont">
                             <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
@@ -374,7 +389,6 @@
                             <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
                                 <i>¥ 1799 </i>
                             </div>
-
                         </div>
                         <div class="product-orderconfirm-prolist-title">
                             <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
@@ -394,11 +408,9 @@
                             <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
                                 <i>¥ 1799 </i>
                             </div>
-
                         </div>
                         <div class="product-orderconfirm-prolist-title">
                             <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
-
                         </div>
                         <div class="product-orderconfirm-prolist-cont">
                             <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-img">
@@ -415,16 +427,14 @@
                             <div class="o_u o_df_2-10  o_lg_1-10 o_md_2-12 o_sm_2-12 o_xs_2-12 order-prolist-cont-total">
                                 <i>¥ 1799 </i>
                             </div>
-
                         </div>
                         <div class="product-orderconfirm-prolist-title">
                             <i>【套餐】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC</i>
-                        </div>
-                    </div>
-
+                        </div> -->
+                    <!-- </div> -->
                     <!--商品清单及优惠 END-->
                     <!--赠品-->
-                    <div class="product-orderconfirm-give-box">
+                    <!-- <div class="product-orderconfirm-give-box">
                         <div class="o_u  o_df_11-12 product-orderconfirm-give-list">
                             <div class="orderconfirm-give-list-left">
                                 <i class="iconfont icon-giftbox-solid give-img"></i>
@@ -446,7 +456,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="o_u o_sm_1-12"></div>-->
                             <div class="o_u  o_df_5-12 o_xs_10-12">
                                 <span>净爽大作战，统帅小清新</span>
                                 <div class="selectbox o_u o_sm_11-12 o_xs_10-12" >
@@ -460,7 +469,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!--赠品 END-->
                     <!--计算商品价格-->
                     <div class="product-orderconfirm-price">
@@ -478,7 +487,6 @@
                                 <p>运费：</p><i>&yen;6198</i>
                             </li>
                         </ul>
-
                     </div>
                     <!--计算商品价格 END-->
                     <div class="product-orderconfirm-total">
@@ -513,8 +521,8 @@
                 </div>
             </div>
             <div class="member-alert-btn o_g">
-                <a href="javascript:;" class="o_u o_df_6-12   js-alertTrue cur">确定</a>
-                <a href="javascript:;" class="o_u o_df_6-12   js-alertClose">取消</a>
+                <a href="javascript:;" class="o_u o_df_6-12 js-alertTrue cur">确定</a>
+                <a href="javascript:;" class="o_u o_df_6-12 js-alertClose">取消</a>
             </div>
         </div>
     </div>
@@ -533,7 +541,7 @@
                         <i class="product-address-list-phone">{$T.item.mobilePhone || '暂无'}</i>
                         <i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">{$T.item.regionDetail || '暂无'}</i>
                     </p>
-                    <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn">修改</a>
+                    <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressUpdate" data-addressid="{$T.item.id}">修改</a>
                 </div>
             </li>
             {#/for}

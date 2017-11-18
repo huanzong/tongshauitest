@@ -4,11 +4,10 @@
 
 
 // 下拉菜单初始化
-$("#js_save").oSelect().init();
+/*$("#js_save").oSelect().init();
 $("#js_city").oSelect().init();
 $("#js_area").oSelect().init();
-$("#js_road").oSelect().init();
-
+$("#js_road").oSelect().init();*/
 
 //地址管理初始化
 var address=$(".js_memberNewAddress" ).Validform({
