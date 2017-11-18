@@ -31,9 +31,9 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_listShow').html(searchBoxInput("lg"));
     }
-}).on('blur', function () {
-    $('.js_searchBox').hide();
-    $('.js_searchBoxQuick_lg').show();
+// }).on('blur', function () {
+//     $('.js_searchBox').hide();
+//     $('.js_searchBoxQuick_lg').show();
 }).on('focus', function () {
     if (screenWidth > 1199) {
         $('.js_searchBox_xl').show();
@@ -48,6 +48,11 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_listShow').html(searchBoxInput("lg"));
     }
+});
+
+$('body').on('click', function () {
+    $('.js_searchBox').hide();
+    $('.js_searchBoxQuick_lg').show();
 });
 
 //搜索--lg
@@ -112,7 +117,7 @@ $('.js_jumpto_product_search').on('click', function () {
                 }
             } else {
                 var historyCookieArr = historyCookie.split(",");
-                if($.inArray(searchWord,historyCookieArr) == -1){
+                if ($.inArray(searchWord, historyCookieArr) == -1) {
                     if (historyCookieArr.length < 5) {
                         historyCookie += "," + searchWord;
                     } else {
@@ -172,7 +177,7 @@ function searchBoxInput(webSize) {
             searchBoxHtml = '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookie + '">' + historyCookie + '</a></li>';
         }
         if (webSize == "xl") {
-            searchBoxHtml = '<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" onclick="delCookie()">清空历史</a></div>' +
+            searchBoxHtml = '<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>' +
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
         }
     } else {
@@ -189,7 +194,7 @@ function searchBoxInput(webSize) {
 }
 
 //清空搜索历史
-function delCookie() {
+$(".js_delete_history").on('click', function () {
     $.cookie('historyCookie', null, {path: '/'});
     $('.js_searchHistory').focus();
-}
+});
