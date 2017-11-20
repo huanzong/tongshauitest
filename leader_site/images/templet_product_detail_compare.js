@@ -250,8 +250,8 @@ window.add_compare_flyOut_item = function ($obj) {
                 var proTitle = $obj.attr('data-name');
                 var proDesc = $obj.attr('data-type');
                 var proUrl = $obj.attr('data-link');
-
-                var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
+                var price = $obj.attr('data-price');
+               /* var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");*/
 
                 var compareHtml = '<li class="js_compareLi">' +
                     '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
@@ -309,7 +309,8 @@ window.add_compare_flyOut_item = function ($obj) {
             var proDesc = $obj.attr('data-type');
             var proUrl = $obj.attr('data-link');
             var channelId = $obj.attr('data-chnid');
-            var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
+            var price = $obj.attr('data-price');
+            /*var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");*/
 
             var compareHtml = '<li class="js_compareLi">' +
                 '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
