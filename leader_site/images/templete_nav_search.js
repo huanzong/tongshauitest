@@ -31,9 +31,9 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_listShow').html(searchBoxInput("lg"));
     }
-// }).on('blur', function () {
-//     $('.js_searchBox').hide();
-//     $('.js_searchBoxQuick_lg').show();
+}).on('blur', function () {
+    $('.js_searchBox').hide();
+    $('.js_searchBoxQuick_lg').show();
 }).on('focus', function () {
     if (screenWidth > 1199) {
         $('.js_searchBox_xl').show();
@@ -50,10 +50,10 @@ $('.js_searchHistory').bind('input propertychange', function () {
     }
 });
 
-$('body').on('click', function () {
-    $('.js_searchBox').hide();
-    $('.js_searchBoxQuick_lg').show();
-});
+// $('body').on('click', function () {
+//     $('.js_searchBox').hide();
+//     $('.js_searchBoxQuick_lg').show();
+// });
 
 //搜索--lg
 $('.js_search_lg').on('click', function () {
