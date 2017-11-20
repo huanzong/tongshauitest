@@ -76,6 +76,7 @@ function initCookie() {
             proObjList = JSON.parse(proCookie);
             var pType = "";
             var pId = "";
+            var curProId=$(".js_compareAddProduct").attr("id");
             for (var i = 0; i < proObjList.length; i++) {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
@@ -86,10 +87,9 @@ function initCookie() {
                  $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");*/
                 pType = product.channelid;
                 pId=product.id;
-            }
-            var curProId=$(".js_compareAddProduct").attr("id");
-            if(pId==curProId){
-                $(".js_compareAddProduct").find("span").html("已对比");//详情页按钮显示已对比
+                if(pId==curProId){
+                    $(".js_compareAddProduct").find("span").html("已对比");//详情页按钮显示已对比
+                }
             }
 
             //互斥不同类别的 找到所有的对比框
