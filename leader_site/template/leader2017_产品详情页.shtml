@@ -173,6 +173,7 @@
                                      data-thumb="<TRS_VIEWAPPENDIX INDEX='0' MODE='PIC'  FIELD= '_RECURL' UrlIsAbs='TRUE'></TRS_VIEWAPPENDIX>"
                                      data-name="<TRS_VIEWDATA  FIELD='pname' AUTOLINK='false'/>"
                                      data-type="<TRS_VIEWDATA  FIELD='modelno' AUTOLINK='false'/>"
+                                     data-price="<TRS_VIEWDATA  FIELD='price'/>"
                                      data-chnid="<TRS_VIEWDATA field='CHANNELID' />">
                                     <div class="icon-font">
                                         <i class="iconfont icon-contrast-solid"></i>
