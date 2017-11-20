@@ -181,7 +181,7 @@ function initLoadCookie() {
         if (proObjList.length > 0) {
             for (var i = 0; i < proObjList.length; i++) {
                 var product = proObjList[i];
-                compareHtml += '<li>' +
+                compareHtml += '<li class="js_compareLi">' +
                     '<div class="compare-product-img" id="' + product.id + '" data-chanid="' + product.channelid + '">' +
                     '<img src="' + product.img + '">' +
                     '</div>' +
@@ -557,7 +557,7 @@ function deleteAllCompareItem() {
     //清空对比栏
     $('.link-clear.js_compareClose').on('click', function () {
         $('.js_compareBox').find("li").find(".compare-product-img").each(function (i, n) {
-            $(this).parent().remove();
+            $(this).parents(".prolist-compare").remove();
         });
         $.cookie('leaderProCookie', null, {path: '/'});
     });
