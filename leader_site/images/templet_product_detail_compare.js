@@ -559,7 +559,7 @@ function deleteAllCompareItem() {
     $('.link-clear.js_compareClose').on('click', function () {
         $('.js_compareBox').find("li").find(".compare-product-img").each(function (i, n) {
             $(this).parent().remove();
-            $(this).parents(".prolist-compare").hide();
+            $(".prolist-compare").hide();
             $(".js_compareAddProduct").find("span").html("对比");
         });
         $.cookie('leaderProCookie', null, {path: '/'});
