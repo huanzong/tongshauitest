@@ -558,7 +558,9 @@ function deleteAllCompareItem() {
     //清空对比栏
     $('.link-clear.js_compareClose').on('click', function () {
         $('.js_compareBox').find("li").find(".compare-product-img").each(function (i, n) {
-            $(this).parents(".prolist-compare").remove();
+            $(this).parent().remove();
+            $(this).parents(".prolist-compare").hide();
+            $(".js_compareAddProduct").find("span").html("对比");
         });
         $.cookie('leaderProCookie', null, {path: '/'});
     });
