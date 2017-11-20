@@ -253,7 +253,7 @@ window.add_compare_flyOut_item = function ($obj) {
 
                 var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
 
-                var compareHtml = '<li>' +
+                var compareHtml = '<li class="js_compareLi">' +
                     '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
                     '<img src="' + proImg + '">' +
                     '</div>' +
@@ -311,7 +311,7 @@ window.add_compare_flyOut_item = function ($obj) {
             var channelId = $obj.attr('data-chnid');
             var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
 
-            var compareHtml = '<li>' +
+            var compareHtml = '<li class="js_compareLi">' +
                 '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
                 '<img src="' + proImg + '">' +
                 '</div>' +
@@ -374,7 +374,7 @@ window.remove_compare_fLayout_item = function ($obj) {
         }
     });
 
-    if ($list.find('li').length <= 0) {
+    if ($list.find('.js_compareLi').length <= 0) {
         hideCompareFlowLayout();
         //删除cookie里面的相应数据,未点比较按钮时删除cookie
         for (var i = 0; i < proObjList.length; i++) {
@@ -491,11 +491,11 @@ function addCompareOnclick() {
     $('.js_compareAddProduct').on("click",function(){
         var isCompare=$(this).attr("auto");
         if(isCompare==0){
-            //显示对比栏
-            showCompareFlowLayout();
             //加入商品对比列表的模板,
             $thisObj = $(this);
             add_compare_flyOut_item($thisObj);
+            //显示对比栏
+            showCompareFlowLayout();
         }else if(isCompare==1){//已对比
             remove_compare_fLayout_item($thisObj);
         }
@@ -529,7 +529,7 @@ function deleteCompareItem() {
             }
         });
 
-        if ($list.find('li').length <= 0) {
+        if ($list.find('.js_compareLi').length <= 0) {
             hideCompareFlowLayout();
             //删除cookie里面的相应数据,未点比较按钮时删除cookie
             for (var i = 0; i < proObjList.length; i++) {
