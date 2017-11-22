@@ -9,7 +9,6 @@
         <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
         <link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">
         <link rel="stylesheet" type="text/css" href="../site5/product_detail.css">
-        <link rel="stylesheet" type="text/css" href="../site5/product_list.css">
 </head>
 
 <body>
