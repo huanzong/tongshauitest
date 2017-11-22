@@ -138,7 +138,7 @@
 							</ul>
 						</div>
 						<div class="list-type o_md-hide o_sm-hide o_xs-hide js_proNameBox">
-						    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+						    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==" >
 							<a class="nav-link active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>">全部</a>
                             <TRS_CHANNELS ID="owner" STARTPOS="3">
 							<a class="nav-link"  channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
@@ -151,21 +151,22 @@
 							<a class="nav-link"  channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
 							</TRS_CHANNELS>
 							</TRS_CONDITION>
-						</div> 
+						</div>
 						<a class="more js_listNavShowMore" data-flag=0>
 							<span class="o_df-hide o_xs-show">展开筛选项</span><span class="o_xs-hide">展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
 						</a>
 					</div>
 					<div class="list-categray o_df-hide o_md-show o_sm-show o_xs-show js_proNameBox2">
+						<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==" >
+							<a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL FIELD='_RECURL' URLISABS='true'/>">全部</a>
+							<TRS_CHANNELS ID="owner" STARTPOS="3">
+								<a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
+							</TRS_CHANNELS>
+						</TRS_CONDITION>
+
 						<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" >
 						<a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='parent'/>" href="<TRS_CHANNEL id='parent' FIELD='_RECURL' URLISABS='true'/>">全部</a>
 						<TRS_CHANNELS ID="parent" STARTPOS="3">
-						<a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
-						</TRS_CHANNELS>
-						</TRS_CONDITION>
-						<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-						<a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL FIELD='_RECURL' URLISABS='true'/>">全部</a>
-						<TRS_CHANNELS ID="owner" STARTPOS="3">
 						<a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
 						</TRS_CHANNELS>
 						</TRS_CONDITION>

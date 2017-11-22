@@ -8,7 +8,8 @@
             url: siteConfig.userUrl+"/hshop-user/front/userRegion/save",
             data: data, 
             success_cb:function(data){
-                console.log(data);
+                //获取收货地址列表
+                addressServer.list();
             },
             error_cb:function(jqXHR, textStatus, errorThrown){
                 if(jqXHR.status==401){
@@ -44,10 +45,8 @@
             login:true,
             success_cb:function(data){
                 var addressData = data.data.entities;
-                console.log(addressData);
-                // $(".js_addressList").setTemplateElement("template-address-list");
-                // $(".js_addressList").processTemplate(addressData);
-                // addressListData();
+                //获取收货地址列表
+                addressServer.list();
             },
             error_cb:function(jqXHR, textStatus, errorThrown){
                 if(jqXHR.status==401){
@@ -79,7 +78,8 @@ function addressListData(){
         $(this).siblings('.c_ipt_cr ').size()<1&&$(this).jq_qvote();
     });
     //修改地址
-    $('.js_addressListSetBtn').click(function(){
+    $('.js_addressUpdate').click(function(){
+        var addressId = $(this).attr('data-addressid');
         var objparents =  $(this).parents('li');
         var userinfo = $(this).siblings('.js_orderAddressCont');
         var userinfoName = userinfo.children('.product-address-list-name').html();
@@ -108,6 +108,7 @@ function addressListData(){
             btnReset:'.js_addressAddCancel',
             callback:function(form){
                 var addressData = {
+                    id:addressId,
                     customerName:$('.js_customerName').val(),
                     mobilePhone:$('.js_mobilePhone').val(),
                     telPhone:$('.js_telPhone').val(),
@@ -125,7 +126,7 @@ function addressListData(){
                     streetName:$('.js_addressStreet').find("option:selected").text()
                 };
 
-                addressServer.save(addressData);
+                addressServer.update(addressData);
 
                 return false;
             }
@@ -133,6 +134,28 @@ function addressListData(){
     });
 }
 $(function(){
+
+    //模拟cookie值-获取商品信息
+    var orderCookie = {
+        cartIds: "14",
+        clientRemark: "皇上测试数据，慎重操作-用户留言",
+        goods: [{
+            activityId: 1,
+            buyNum: 1,
+            inSkuCode: "635000"
+        }],
+        invoiceId: 1,
+        orderRemark: "皇上测试数据，慎重操作-订单留言",
+        orderTerminal: 2,
+        payType: 1,
+        recipientsId: 112
+    };
+    $.cookie('orderCookie', orderCookie);
+
+    //获取订单信息
+    var prderInfo = $.cookie('orderCookie');
+    console.log(prderInfo);
+
     $('#js_GiftboxSolid1').oSelect().init();
     $('#js_GiftboxSolid2').oSelect().init();
 

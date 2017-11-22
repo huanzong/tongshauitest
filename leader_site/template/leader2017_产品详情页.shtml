@@ -96,11 +96,11 @@
                             <div class="particulars-detail">
                                 <!-- <div class="old-price">￥98034</div> -->
                                 <div class="corrent-price js_price"><sub>￥</sub><span><trs_viewdata field="price"/></span></div>
-                                <div class="particulars-capacity">
+                                <!--<div class="particulars-capacity">
                                     <span class="capacity-tit">容量：</span>
                                     <span class="capacity-box active">798L</span>
                                     <span class="capacity-box">798L</span>
-                                </div>
+                                </div>-->
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
                                         <span class="address-tit">配送至:</span>
@@ -166,13 +166,14 @@
                                     </div>
                                     <!-- JiaThis Button END -->
                                 </div>
-                                <div class="activity-icon activity-icon-compare js_compareAddProduct" auto="0"
+                                <div class="activity-icon activity-icon-compare js_compareAddProduct" auto=""
                                      id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top"
                                      data-id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top"
                                      data-link="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>"
                                      data-thumb="<TRS_VIEWAPPENDIX INDEX='0' MODE='PIC'  FIELD= '_RECURL' UrlIsAbs='TRUE'></TRS_VIEWAPPENDIX>"
                                      data-name="<TRS_VIEWDATA  FIELD='pname' AUTOLINK='false'/>"
                                      data-type="<TRS_VIEWDATA  FIELD='modelno' AUTOLINK='false'/>"
+                                     data-price="<TRS_VIEWDATA  FIELD='price'/>"
                                      data-chnid="<TRS_VIEWDATA field='CHANNELID' />">
                                     <div class="icon-font">
                                         <i class="iconfont icon-contrast-solid"></i>

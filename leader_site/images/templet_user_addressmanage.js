@@ -20,6 +20,13 @@ $(".js-alertTrue").click(function(){
     $(".js_form_addAddrManagement").hide();
     $(".js_memberAddressBtn").show();
 });
+$(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
+    templet_text = '确定取消添加？';
+    resetForm();
+    $(".js_btnSubmit").attr("type",1);
+    $(".js_form_addAddrManagement").show();
+    $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
+})
 var templet_pageNo=1;
 var templet_pageSize=10;
 
@@ -266,13 +273,6 @@ function loadUserInfoList(){
                 var count = addlist.length;
                 if(count != 0){
                     $(".js_memberAddressBtn").show();//显示"新增地址"按钮
-                    $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
-                        templet_text = '确定取消添加？';
-                        resetForm();
-                        $(".js_btnSubmit").attr("type",1);
-                        $(".js_form_addAddrManagement").show();
-                        $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
-                    })
                     $(".js_lineInfo").html("");
                     var addhtml="";
                     for(var i=0;i<count;i++){
