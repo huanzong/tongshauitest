@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>激活账号</title>
+
+<%=base%>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<!--#include virtual="public/head.shtml"-->
+<link rel="stylesheet" type="text/css" href="images/login.css">
+</head>
+
+<body>
+    <div class="o_body">
+        <div class="o_main">
+            <div class="o_g">
+                <div class="login">
+                    <div class="login-conbox">
+                        <div class="o_u o_df_2-3 o_lg_5-6 o_md_5-6 o_sm_2-2 o_xs_2-2">
+                            <div class="login-box js_center">
+                                <div class="o_g">
+                                    <div class="o_u o_df_1-2 o_md-hide o_sm-hide o_xs-hide"></div>
+                                    <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 login-con">
+                                        <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
+                                            <a class="login-shade" data-login=1></a>
+                                            <i class="iconfont icon-computer"></i>
+                                        </div>
+                                        <div class="login-logo"></div>
+                                        <div class="login-tit">账号激活</div>
+                                        <div class="login-form">
+                                            <div class="l-input login-input">
+                                                 <div class="selectbox">
+                                                    <div class="activate-input">
+                                                        <select name="" id="js_select"  autotext="请点击下拉菜单">
+                                                            <option value="0">--请点击激活方式--</option>
+                                                            <option value="1">手机（176****6879）</option>
+                                                            <option value="2">邮箱（39**87@qq.com）</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <p class="Validform_checktip"></p>
+                                            </div>
+                                            <div class="l-input login-input">
+                                                <input type="text" name="password" ph="动态密码" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写动态密码">
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                                <p class="Validform_checktip"></p>
+                                            </div>
+                                            <!-- <div class="l-input login-input o_borderbox">
+                                                <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
+                                                <a href="javascript:;" class="exchange">换一换</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
+                                            </div> -->
+                                            <div class="login-role active-float">
+                                                <a class="forget-psw">手机/邮箱不可用</a>
+                                                <i class="iconfont icon-problem-solid">
+                                                </i>                                                
+                                                <div class="l-float-tops">
+                                                    <div class="float_content">
+                                                        统帅官网全新改版，原用户资料暂不保留，您可以<a href="javascript:;">重新注册</a>，体验全新官网！
+                                                    </div>
+                                                    <p>
+                                                        <i></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable login-btn">完成</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_2-2 login_footer">
+                    <!--#include virtual="public/login_footer.shtml"-->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="images/accountActivate.js"></script>
+</body>
+</html>
