@@ -13,6 +13,14 @@ jQuery.ajaxSetup({
             request.abort();
             jumpToLoginPage();
         }
+	
+	    //csrf校验
+        if(this.csrf){
+            var crm = Math.random();
+            $.cookie('crm', crm);
+            this.url = this.url+'?cch='+crm;
+        }
+	
         //contentType: "application/json; charset=utf-8",
         if (this.applicationType){
             request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
@@ -27,6 +35,12 @@ jQuery.ajaxSetup({
 
         if (this.success_cb) {
             this.success_cb(data);
+        }
+    },
+    complete:function(XMLHttpRequest, textStatus){
+        //csrf校验-删除cookie
+        if(this.csrf){
+            $.cookie('crm', null);
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
