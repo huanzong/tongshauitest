@@ -40,7 +40,8 @@ jQuery.ajaxSetup({
     complete:function(XMLHttpRequest, textStatus){
         //csrf校验-删除cookie
         if(this.csrf){
-            $.cookie('crm', null);
+            console.log('csrf');
+            // $.cookie('crm', null);
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
