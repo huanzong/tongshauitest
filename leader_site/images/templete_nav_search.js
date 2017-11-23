@@ -51,7 +51,6 @@ $('.js_searchHistory').bind('input propertychange', function () {
 });
 
 $('body').on('click', function (e) {
-    console.log(e.target);
     if($(e.target).hasClass('js_searchHistory')){
         return false;
     }
