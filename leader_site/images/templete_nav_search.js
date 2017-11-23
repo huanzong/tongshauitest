@@ -55,6 +55,8 @@ $('body').on('click', function () {
     $('.js_searchBoxQuick_lg').show();
 });
 
+$(".js_searchHistory").off( "click", "**" );//没有值时，xl搜索栏闪现bug
+
 //搜索--lg
 $('.js_search_lg').on('click', function () {
     $('.js_navSearchLgHide')
