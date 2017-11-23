@@ -17,7 +17,10 @@ jQuery.ajaxSetup({
 	    //csrf校验
         if(this.csrf){
             var crm = Math.random();
-            $.cookie('crm', crm);
+            $.cookie('crm', crm,{
+                'path':'/',
+                'domain':'.tongshuai.com'
+            });
             this.url = this.url+'?cch='+crm;
         }
 	
