@@ -17,7 +17,7 @@ jQuery.ajaxSetup({
 	    //csrf校验
         if(this.csrf){
             var crm = Math.random();
-            $.cookie('crm', crm);
+            $.cookie('crm', crm,{'path':'/'});
             this.url = this.url+'?cch='+crm;
         }
 	
