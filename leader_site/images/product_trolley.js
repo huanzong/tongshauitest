@@ -100,6 +100,7 @@ $(function() {
         save:function(data){
             $.ajax({
                 url: siteConfig.apiUrl+"/order/cartGoods/save/",
+                csrf: true,
                 data: JSON.stringify(data),
                 applicationType:true,
                 success_cb: function(data){
@@ -192,11 +193,16 @@ $(function() {
                     var inskucode = $(ele).attr('data-inskucode'),
                         quantity = parseInt($(ele).find('input').val())+1;
 
-                    var trolleyData = {
+                    // var trolleyData = {
+                    //     inSkuCode: inskucode,
+                    //     quantity: quantity,
+                    //     regionCode: 2450
+                    // }
+                    var trolleyData = [{
                         inSkuCode: inskucode,
                         quantity: quantity,
                         regionCode: 2450
-                    }
+                    }];
                     return trolleyServer.save(trolleyData);
                 }
             }
