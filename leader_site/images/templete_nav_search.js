@@ -50,7 +50,9 @@ $('.js_searchHistory').bind('input propertychange', function () {
     }
 });
 
-$('body').not($(".js_searchHistory")).on('click', function () {
+$('body').on('click', function (e) {
+    console.log(e);
+    console.log(e.event);
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
 });
