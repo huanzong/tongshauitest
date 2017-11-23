@@ -51,8 +51,10 @@ $('.js_searchHistory').bind('input propertychange', function () {
 });
 
 $('body').on('click', function (e) {
-    console.log(e);
-    console.log(e.event);
+    console.log(e.target);
+    if($(e.target).hasClass('js_searchHistory')){
+        return false;
+    }
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
 });
