@@ -43,7 +43,10 @@ jQuery.ajaxSetup({
     complete:function(XMLHttpRequest, textStatus){
         //csrf校验-删除cookie
         if(this.csrf){
-            $.cookie('crm', null);
+            $.cookie('crm', null,{
+                'path':'/',
+                'domain':'.tongshuai.com'
+            });
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
