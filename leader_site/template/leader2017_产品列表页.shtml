@@ -451,7 +451,7 @@
 							    </TRS_DOCUMENTS>
 							    </trs_channel>
 							    </TRS_CONDITION>
-							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="==" not='true'>
 								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
 								<trs_viewdata field="xinpin">
 								<TRS_CONDITION REFERENCE="是" CONDITION="@xinpin" OPERATOR="contain">
