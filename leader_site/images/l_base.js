@@ -17,6 +17,11 @@ jQuery.ajaxSetup({
 	    //csrf校验
         if(this.csrf){
             var crm = Math.random();
+            //判断语句，用于本地测试，请勿提交测试或生产
+            if(window.location.host.indexOf('localhost')>=0){
+                crm = '123';
+            }
+            // var urlDomain = this.url.
             $.cookie('crm', crm,{
                 'path':'/',
                 'domain':'.tongshuai.com'
@@ -46,7 +51,7 @@ jQuery.ajaxSetup({
             $.cookie('crm', null,{
                 'path':'/',
                 'domain':'.tongshuai.com'
-            });
+            });;
         }
     },
     error: function(jqXHR, textStatus, errorThrown) {
