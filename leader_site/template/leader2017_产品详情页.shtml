@@ -34,9 +34,96 @@
                     <div class="index_animateBox"></div>
                 </div>
             </div>
+            <!-- 导航锚点定位-顶部 -->
+            <div class="js_top"></div>
+            <!-- 导航锚点定位-顶部 End -->
             <!-- 导航 -->
             <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
             <!-- 导航 End-->
+            <!-- 导航锚点定位-导航 -->
+            <div class="js_navPos"></div>
+            <!-- 导航锚点定位-导航 End -->
+            <!-- 详情页导航 -->
+            <div class="detail-nav-height">
+                <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-nav js_detailNav">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_5-6">
+                        <div class="detail-nav-head">
+                            <div class="nav-head-con">
+                                <img src="images/icon_01.png">
+                                <div class="nav-head-info">
+                                    <div class="head-info-titcn">
+                                        <div class="head-info-box">
+                                            冰箱
+                                            <i class="iconfont icon-arrow-line-down"></i>
+                                        </div>
+                                        <!-- <div class="head-info-hover">
+                                            <div class="l-float-tops">
+                                                <div class="float_content">
+                                                    <a href="javascript:;">特性</a>
+                                                    <a href="javascript:;">设计</a>
+                                                    <a href="javascript:;">参数</a>
+                                                    <a href="javascript:;">口碑(888)</a>
+                                                    <a href="javascript:;">优惠组合</a>
+                                                    <a href="javascript:;">配送与服务</a>
+                                                </div>
+                                                <p>
+                                                    <i></i>
+                                                </p>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="head-info-titen">JIGEJOJ-12800</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_u detail-nav-info">
+                            <div class="nav-info-box js_navLink">
+                                <a class="nav-type active" data-nav="js_features">特性<div class="line"></div></a>
+                                <a class="nav-type" data-nav="js_design">设计<div class="line"></div></a>
+                                <a class="nav-type" data-nav="js_params">参数<div class="line"></div></a>
+                                <a class="nav-type" data-nav="js_praise" href="javascript:;">口碑(888)<div class="line"></div></a>
+                                <a class="nav-type" data-nav="js_favourable">优惠组合<div class="line"></div></a>
+                                <a class="nav-type" href="javascript:;">配送与服务<div class="line"></div></a>
+                                <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top">立即购买</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_df_1-12"></div>
+                </div>
+                <div class="o_g o_df-hide o_md-show o_sm-show o_xs-show detail-nav js_detailNav">
+                    <div class="o_u o_df_2-2">
+                        <div class="detail-nav-head">
+                            <div class="nav-head-list">
+                                <i class="iconfont icon-menu-solid nav-head-icon"></i>
+                                <a class="head-list-type">JGOEJGEJ-879</a>
+                                <div class="head-info-hover">
+                                    <div class="l-float-tops">
+                                        <div class="float_content js_navLink">
+                                            <a href="javascript:;" data-nav="js_features">特性</a>
+                                            <a href="javascript:;" data-nav="js_design">设计</a>
+                                            <a href="javascript:;" data-nav="js_params">参数</a>
+                                            <a href="javascript:;" data-nav="js_praise">口碑(888)</a>
+                                            <a href="javascript:;" data-nav="js_favourable">优惠组合</a>
+                                            <a href="javascript:;">配送与服务</a>
+                                        </div>
+                                        <p>
+                                            <i></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="o_u detail-nav-info">
+                            <div class="nav-info-box">
+                                <a class="l-btn-sm l-btn-red nav-btn" class="" href="javascript:;">立即购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 详情页导航 END -->
             <!-- 首屏展示 -->
             <div class="o_g">
                 <div class="detail-first">
@@ -299,6 +386,9 @@
                 </div>
             </div>
             <!-- 首屏展示 END -->
+            <!-- 导航锚点定位-特性 -->
+            <div class="js_features"></div>
+            <!-- 导航锚点定位-特性 End -->
             <!-- 文字卖点 -->
             <div class="detail-fontpoint-index">
                 <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-fontpoint-top">
@@ -845,6 +935,9 @@
                 </div>
             </div>
             <!-- 场景展示 -->
+            <!-- 导航锚点定位-设计 -->
+            <div class="js_design"></div>
+            <!-- 导航锚点定位-设计 End -->
             <!-- 核心卖点-->
             <div class="o_g">
                 <!--<TRS_ViewData Field="mdjs_gw">确保 Outline 字段被载入</TRS_ViewData>-->
@@ -928,21 +1021,10 @@
                  </TRS_CONDITION>
                  </trs_viewdata>
             </div>
-            <!-- 电商拉页 END -->   
-            <!-- 产品口碑-->
-            <div class="detail-title js_commentTitle">产品口碑</div>
-            <div class="o_g js_commentContent">
-                <div class="o_u o_df_1-12"></div>
-                <div class="o_u o_df_10-12 detail-praise">
-                    <div class="praise-box">
-                    </div>
-                    <div class="prise-btn">
-                        <a href="javascript:;" class="l-btn-normal l-btn-red js_commentUrl">查看更多</a>
-                    </div>
-                </div>
-                <div class="o_u o_df_1-12"></div>
-            </div>
-            <!-- 产品口碑 End -->
+            <!-- 电商拉页 END -->
+            <!-- 导航锚点定位-参数 -->
+            <div class="js_params"></div>
+            <!-- 导航锚点定位-参数 End -->
             <!-- 产品参数 -->
             <div class="o_g product-param">
                 <div class="o_g param-bg">
@@ -994,6 +1076,20 @@
                 </div>
             </div>
             <!-- 产品参数 END -->
+            <!-- 产品口碑-->
+            <div class="detail-title js_commentTitle">产品口碑</div>
+            <div class="o_g js_commentContent">
+                <div class="o_u o_df_1-12"></div>
+                <div class="o_u o_df_10-12 detail-praise">
+                    <div class="praise-box">
+                    </div>
+                    <div class="prise-btn">
+                        <a href="javascript:;" class="l-btn-normal l-btn-red js_commentUrl">查看更多</a>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12"></div>
+            </div>
+            <!-- 产品口碑 End -->
             <!-- 更多选择 -->
             <div class="detail-title">更多选择</div>
             <div class="o_g">
@@ -1069,6 +1165,9 @@
                 <div class="o_u o_df_1-6"></div>
             </div>
             <!-- 更多选择 END -->
+            <!-- 导航锚点定位-优惠组合 -->
+            <div class="js_favourable"></div>
+            <!-- 导航锚点定位-优惠组合 End -->
             <!-- 优惠组合 -->
            <!-- <div class="o_g">
                 <div class="o_u o_df_1-12"></div>
