@@ -16,9 +16,9 @@ $('.js_addressCancel').click(function(){
     $('.js-alertTrue').off();
     $('.js-alertTrue').click(function(){
         $('.js_landClose').click();
-        $(".js_memberAddressBtn").show();
         if($('.js_memberAddressList').find('.js_member-addresslistbox').length>0){
             $(".js_form_addAddrManagement").hide();
+            $(".js_memberAddressBtn").show();
         }
     })
     globalShade(templet_text);
