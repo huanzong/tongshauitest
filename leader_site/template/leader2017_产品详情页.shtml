@@ -51,19 +51,11 @@
                     <div class="o_u o_df_5-6">
                         <div class="detail-nav-head">
                             <div class="nav-head-con">
-                                <trs_channels id="parent" startpos="0" num="1">
-                                <trs_viewdatas id="owner" num="1">
-                                <img src="<trs_viewdata field='icon'/>">
-                                </trs_viewdatas>
-                                </trs_channels>
+                                <TRS_CHANNELLOGO id='parent' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
                                 <div class="nav-head-info">
                                     <div class="head-info-titcn">
                                         <div class="head-info-box">
-                                            <trs_channels id="parent" startpos="0" num="1">
-                                                <trs_viewdatas id="owner" num="1">
-                                                    <trs_viewdata field='proname'/>
-                                                </trs_viewdatas>
-                                            </trs_channels>
+                                            <TRS_CHANNEL id="parent" FIELD="CHNLDESC" AUTOLINK='FALSE'/>
                                             <i class="iconfont icon-arrow-line-down"></i>
                                         </div>
                                         <!-- <div class="head-info-hover">
