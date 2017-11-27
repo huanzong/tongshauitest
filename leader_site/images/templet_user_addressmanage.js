@@ -439,7 +439,6 @@ $(document).on("click",".deleteAddress",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     globalShade("确定要删除吗？");
-    $('.js-alertTrue').off();
     $(".js-alertTrue").click(function(){//确定删除按钮
         $.ajax({
             url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
