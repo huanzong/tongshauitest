@@ -167,6 +167,7 @@ $(function () {
                 data:  JSON.stringify(data),
                 applicationType:true,
                 login:true,
+                csrf: true,
                 success_cb: function(data){
                     if(data.isSuccess){
                         $('.js_popUpBox3').show();
