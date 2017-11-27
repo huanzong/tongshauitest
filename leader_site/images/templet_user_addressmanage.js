@@ -13,8 +13,17 @@ loadUserInfoList();//获取用户地址列表
 //取消弹框提示
 var templet_text="确定取消添加吗？";
 $('.js_addressCancel').click(function(){
+    $('.js-alertTrue').off();
+    $('.js-alertTrue').click(function(){
+        $('.js_landClose').click();
+        $(".js_memberAddressBtn").show();
+        if($('.js_memberAddressList').find('.js_member-addresslistbox').length>0){
+            $(".js_form_addAddrManagement").hide();
+        }
+    })
     globalShade(templet_text);
 });
+
 //弹框点击事件
 $(".js-alertTrue").click(function(){
     $(".js_form_addAddrManagement").hide();
@@ -222,6 +231,7 @@ function saveUserAddress(){
         dataType:"json",
         data:data,
         login:true,
+        csrf: true,
         success_cb:function(responseT){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
@@ -292,7 +302,7 @@ function loadUserInfoList(){
                         if(isDefault==1){
                             addhtml+='<div class="member-addresslistbox member-address-setdefault">';
                         }else{
-                            addhtml+='<div class="member-addresslistbox">';
+                            addhtml+='<div class="member-addresslistbox js_member-addresslistbox">';
                         }
                         addhtml+='<div class="member-address-name">'+customerName+'</div>';
                         addhtml+='<div class="member-address-mobnumber">'+mobilePhone+'</div>';
@@ -319,8 +329,7 @@ function loadUserInfoList(){
 
                 }else{
                     $(".js_form_addAddrManagement").show();//显示"新增地址"表单
-
-
+                    $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
                 }
 
             }
@@ -363,6 +372,7 @@ $(".js_addressSetDefault").live("click",function(){
             "isDefault":1,
         },
         login:true,
+        csrf: true,
         success_cb:function(responseT){
             if(responseT.isSuccess){
                 //loadUserInfoList();//获取列表
@@ -436,6 +446,7 @@ $(document).on("click",".deleteAddress",function(){
             dataType: "json",
             data:{"id": addressId},
             login:true,
+            csrf: true,
             success_cb:function(responseT){
                 if(responseT.isSuccess){
                     loadUserInfoList();
@@ -466,6 +477,7 @@ function getAddressInfo(id){
         data:data,
         dataType: "json",
         login:true,
+        csrf: true,
         success_cb:function(data){
             if(data.isSuccess){
                 var info = data.data;
@@ -722,6 +734,7 @@ function updateUserAddress(){
         dataType: "json",
         data: data,
         login:true,
+        csrf: true,
         success_cb: function (data) {
             if (data.isSuccess) {
                 loadUserInfoList();
