@@ -51,7 +51,7 @@
                     <div class="o_u o_df_5-6">
                         <div class="detail-nav-head">
                             <div class="nav-head-con">
-                                <TRS_CHANNELLOGO id='parent' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
+                                <TRS_CHANNELLOGO id='parent' INDEX=1 SHOWPIC='true' URLISABS="true" SHOWMODE='SHOWPIC'/>
                                 <div class="nav-head-info">
                                     <div class="head-info-titcn">
                                         <div class="head-info-box">
@@ -83,7 +83,7 @@
                                 <a class="nav-type active" data-nav="js_features">特性<div class="line"></div></a>
                                 <a class="nav-type" data-nav="js_design">设计<div class="line"></div></a>
                                 <a class="nav-type" data-nav="js_params">参数<div class="line"></div></a>
-                                <a class="nav-type" data-nav="js_praise" href="javascript:;">口碑(888)<div class="line"></div></a>
+                                <a class="nav-type js_comment" data-nav="js_praise" href="javascript:;">口碑(<span>888</span>)<div class="line"></div></a>
                                 <a class="nav-type" data-nav="js_favourable">优惠组合<div class="line"></div></a>
                                <!-- <a class="nav-type" href="javascript:;">配送与服务<div class="line"></div></a>-->
                                 <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top">立即购买</a>
@@ -104,7 +104,7 @@
                                             <a href="javascript:;" data-nav="js_features">特性</a>
                                             <a href="javascript:;" data-nav="js_design">设计</a>
                                             <a href="javascript:;" data-nav="js_params">参数</a>
-                                            <a href="javascript:;" data-nav="js_praise">口碑(888)</a>
+                                            <a class="js_comment" href="javascript:;" data-nav="js_praise">口碑(<span>888</span>)</a>
                                             <a href="javascript:;" data-nav="js_favourable">优惠组合</a>
                                             <!--<a href="javascript:;">配送与服务</a>-->
                                         </div>
@@ -1458,6 +1458,7 @@
         $(".js_parameterUrl").prop("href",templet_parameterUrl);//参数
         templet_commentUrl=templet_detailUrl+'_comment.shtml';
         $(".js_commentUrl").prop("href",templet_commentUrl);//口碑
+        $(".js_comment").prop("href",templet_commentUrl);//口碑
         
 
     </script> 
