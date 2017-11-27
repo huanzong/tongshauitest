@@ -160,6 +160,61 @@ $(function() {
 
     });*/
 
+    /**
+     * 详情页导航
+     */
+    //锚点定位
+    var scrollPosEl = new Object();//用于存放各个模块的位置
+    var navHeight = 68;//导航条高度
+    $('.js_buyNow').hide();
+    function scrollPosFun($ele,PosTop){
+        $('.js_navLink').find('a[data-nav]').each(function(i,n){
+            $(this).off().on('click',function(){
+                var href = $(this).attr('data-nav');
+                var jshref = '.' + href;
+                scrollPosEl[href] = $(jshref).offset().top - navHeight;
+                $("html,body").animate({scrollTop: scrollPosEl[href]}, 100); 
+            });
+        });
+    }
+    scrollPosFun();
+    //滚动高亮
+    $(window).scroll(function(){
+        var currentPos = $(document).scrollTop();
+
+        $('.js_navLink').find('a[data-nav]').each(function(i,n){
+            var href = $(this).attr('data-nav');
+            var jshref = '.' + href;
+            scrollPosEl[href] = $(jshref).offset().top - navHeight;
+        });
+        //导航定位
+        if(currentPos>$('.js_navPos').offset().top){
+            $('.js_detailNav').hasClass('detail-nav-fixed')||$('.js_detailNav').addClass('detail-nav-fixed');
+            $('.js_buyNow').show();
+        }else{
+            $('.js_detailNav').hasClass('detail-nav-fixed')&&$('.js_detailNav').removeClass('detail-nav-fixed');
+            $('.js_buyNow').hide();
+        }
+        //导航高亮
+        $('.js_navLink').find('a[data-nav]').removeClass('active');
+        var navName;//高亮导航位置
+        var navHigh;
+        jQuery.each(scrollPosEl,function(i,n){
+            if(parseInt(n)<=currentPos){
+                if(navName){
+                    if(currentPos-parseInt(n)<=navHigh){
+                        navName = i;
+                        navHigh = currentPos - parseInt(n);
+                    }
+                }else{
+                    navName = i;
+                    navHigh = currentPos - parseInt(n); 
+                }
+            }
+        });
+        $('.js_navLink').find('a[data-nav='+navName+']').addClass('active');
+    });
+
     /********电商拉页*******/
     //电商拉页
     $('.js_foldPlus').on('click', function() {
