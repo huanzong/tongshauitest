@@ -50,11 +50,19 @@
                     <div class="o_u o_df_5-6">
                         <div class="detail-nav-head">
                             <div class="nav-head-con">
-                                <img src="images/icon_01.png">
+                                <trs_channels id="parent" startpos="0" num="1">
+                                <trs_viewdatas id="owner" num="1">
+                                <img src="<trs_viewdata field='icon'/>">
+                                </trs_viewdatas>
+                                </trs_channels>
                                 <div class="nav-head-info">
                                     <div class="head-info-titcn">
                                         <div class="head-info-box">
-                                            冰箱
+                                            <trs_channels id="parent" startpos="0" num="1">
+                                                <trs_viewdatas id="owner" num="1">
+                                                    <trs_viewdata field='proname'/>
+                                                </trs_viewdatas>
+                                            </trs_channels>
                                             <i class="iconfont icon-arrow-line-down"></i>
                                         </div>
                                         <!-- <div class="head-info-hover">
@@ -73,7 +81,7 @@
                                             </div>
                                         </div> -->
                                     </div>
-                                    <div class="head-info-titen">JIGEJOJ-12800</div>
+                                    <div class="head-info-titen"><trs_viewdata field='modelno'/></div>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +92,7 @@
                                 <a class="nav-type" data-nav="js_params">参数<div class="line"></div></a>
                                 <a class="nav-type" data-nav="js_praise" href="javascript:;">口碑(888)<div class="line"></div></a>
                                 <a class="nav-type" data-nav="js_favourable">优惠组合<div class="line"></div></a>
-                                <a class="nav-type" href="javascript:;">配送与服务<div class="line"></div></a>
+                               <!-- <a class="nav-type" href="javascript:;">配送与服务<div class="line"></div></a>-->
                                 <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top">立即购买</a>
                             </div>
                         </div>
@@ -96,7 +104,7 @@
                         <div class="detail-nav-head">
                             <div class="nav-head-list">
                                 <i class="iconfont icon-menu-solid nav-head-icon"></i>
-                                <a class="head-list-type">JGOEJGEJ-879</a>
+                                <a class="head-list-type"><trs_viewdata field='modelno'/></a>
                                 <div class="head-info-hover">
                                     <div class="l-float-tops">
                                         <div class="float_content js_navLink">
@@ -105,7 +113,7 @@
                                             <a href="javascript:;" data-nav="js_params">参数</a>
                                             <a href="javascript:;" data-nav="js_praise">口碑(888)</a>
                                             <a href="javascript:;" data-nav="js_favourable">优惠组合</a>
-                                            <a href="javascript:;">配送与服务</a>
+                                            <!--<a href="javascript:;">配送与服务</a>-->
                                         </div>
                                         <p>
                                             <i></i>
