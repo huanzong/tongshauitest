@@ -357,6 +357,9 @@ function resetForm(){
     templet_select_qu.lose();
     templet_select_road.lose();
     $("#address").blur();
+    $("#phonequhao").blur();
+    $("#phone").blur();
+    $("#phonefenjihao").blur();
 };
 
 
