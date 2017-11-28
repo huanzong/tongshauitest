@@ -447,6 +447,7 @@ function addCompareOnclick() {
             $(this).find(".pro-read-font").html("已对比");
             //$(this).find("i").removeClass("o-plus").addClass("o-close");
             //显示对比栏
+            showCompareFlow();
             showCompareFlowLayout();
             //加入商品对比列表的模板,
             $thisObj = $(this);
