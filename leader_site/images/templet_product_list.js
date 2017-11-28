@@ -261,9 +261,9 @@ $(".font").each(function () {
         if ($(this).text() == "上市时间") {
             order = "-shangshishijian"
         }
-        // if($(this).text()=="人气"){
-        // 	order=""
-        // }
+        if($(this).text()=="人气"){
+        	order="+cprq"
+        }
         if ($(this).text() == "价格") {
             order = "+price"
         }
@@ -275,9 +275,9 @@ $(".font").each(function () {
         if ($(this).text() == "上市时间") {
             order = "+shangshishijian"
         }
-        // if($(this).text()=="人气"){
-        // 	order=""
-        // }
+        if($(this).text()=="人气"){
+        	order="-cprq"
+        }
         if ($(this).text() == "价格") {
             order = "-price"
         }
