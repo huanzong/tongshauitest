@@ -63,11 +63,13 @@
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox">
                                                     <input type="text" name="" ph="区号" value="" id="phonequhao" datatype="n3-4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位区号" nullmsg="<i class='iconfont icon-information-solid'></i>区号"/>
+                                                    <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox">
                                                     <input type="text" name="" ph="电话号" value="" id="phone" datatype="n8-8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位电话号" nullmsg="<i class='iconfont icon-information-solid'></i>电话号"/>
+                                                    <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
