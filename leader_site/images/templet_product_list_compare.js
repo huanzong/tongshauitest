@@ -1,5 +1,3 @@
-
-
 //对比============================================开始
 
 $(function () {
@@ -30,7 +28,7 @@ function addContrastClick() {
         //如果是没有对比的对比
         $(this).addClass("uncontrast");
         $(this).attr("auto", "1");
-        $(this).find("span").html("取消对比");
+        $(this).find("span").html("已对比");
         $(this).find("i").removeClass("o-plus").addClass("o-close");
     } else if (auto == "1") {
         //如果是已经对比的取消对比
@@ -70,33 +68,7 @@ function addContrastClick() {
                         $(this).addClass("lose");
                         $(this).removeClass("js_contrast");
                     }
-                    //智慧家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == smart_product) {
 
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
-                    //育婴家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == maternal_and_child) {
-
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                        //测试让空调可以比较
-                        if (pType == guisair || pType == gsair) {
-                            if (pType_ == guisair || pType_ == gsair) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
 
                 });
             }
@@ -141,65 +113,20 @@ function initCookie() {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
                 //修改对比样式 todo -----------------样式处理------------------------------------------------
-                /* $("#" + product.id).attr("auto", "1");
+                 $("#" + product.id).attr("auto", "1");
                  $("#" + product.id).addClass("uncontrast");
-                 $("#" + product.id).find("span").html("取消对比");
-                 $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");*/
+                 $("#" + product.id).find(".pro-read-font").html("已对比");
+                 // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
                 pType = product.channelid;
             }
-            //互斥不同类别的 找到所有的对比框
-            if (noCompareChannel != "") {
-                $(".o_u.o_df_1-2.o_xs-hide.btn").each(function () {
-                    var pType_ = $(this).attr("data-chnid");
-                    var isChecked_ = $(this).hasClass("uncontrast");
-                    if (isChecked_) {
-                        if (pType != pType_) {
-                            $(this).removeClass("uncontrast");
-                            $(this).attr("auto", "0");
-                            $(this).find("span").html("对比");
-                            $(this).find("i").removeClass("o-close").addClass("o-plus");
-                        }
-                    }
-                    if (pType != pType_ && pType != "") {
-                        $(this).addClass("lose");
-                        $(this).removeClass("js_contrast");
-                    }
-                    //智慧家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == smart_product) {
 
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
-                    //育婴家电特殊处理 让冰箱可以比较
-                    if (noCompareChannel == maternal_and_child) {
-                        //生产
-                        if (pType == fscooling || pType == yscooling || pType == dmcooling || pType == dkcooling || pType == txcooling || pType == qrcooling) {
-                            if (pType_ == fscooling || pType_ == yscooling || pType_ == dmcooling || pType_ == dkcooling || pType_ == txcooling || pType_ == qrcooling) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                        //测试让空调可以比较
-                        if (pType == guisair || pType == gsair) {
-                            if (pType_ == guisair || pType_ == gsair) {
-                                $(this).addClass("js_contrast");
-                                $(this).removeClass("lose");
-                            }
-                        }
-                    }
-                });
-            }
         } else {
             proObjList = [];
             //对比按钮样式
-            /*$(".uncontrast").find("span").html("对比");
-             $(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
+            $(".uncontrast").find(".pro-read-font").html("对比");
+             //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
              $(".uncontrast").attr("auto","0");
-             $(".uncontrast").removeClass("uncontrast");*/
+             $(".uncontrast").removeClass("uncontrast");
 
         }
     }
@@ -226,13 +153,14 @@ function initLoadCookie() {
                     '</li>';
             }
             //$('.js_compareBox').remove("li");
+            showCompareFlow();
             showCompareFlowLayout();
             $('.js_compareBox').prepend(compareHtml);
             //删除对比选项监听
             deleteCompareItem();
             deleteAllCompareItem();
         } else {
-            hideCompareFlowLayout();
+            hideCompareFlow();
             //删除对比选项监听
             deleteCompareItem();
             deleteAllCompareItem();
@@ -244,7 +172,7 @@ window.unchecked = function ($obj) {
     //对比按钮样式
     $obj.attr("auto", "0");
     $obj.removeClass("uncontrast");
-    $obj.find("span").html("对比");
+    $obj.find(".pro-read-font").html("对比");
     $obj.find("i").removeClass("o-close").addClass("o-plus");
 }
 
@@ -333,18 +261,9 @@ window.remove_compare_fLayout_item = function ($obj) {
             }
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
-            /* if (noCompareChannel != "") {
-             if (objString == "[]") {
-             //恢复互斥项
-             $(".js_proList .lose").each(function () {
-             $(this).addClass("js_contrast");
-             $(this).removeClass("lose");
-             });
-             }
-             }*/
             return false;
         }
-        ;
+
     });
 
     if ($list.find('.row').length <= 0) {
@@ -369,8 +288,8 @@ window.remove_compare_fLayout_item = function ($obj) {
         }
     }
     //添加侧边栏绘制数据
-    initSideBarCookie();
-    initSideBarLoadCookie();
+    //initSideBarCookie();
+    //initSideBarLoadCookie();
 };
 //移除
 function remove(arrPerson, objPropery, objValue) {
@@ -518,12 +437,37 @@ function addCompareOnclick() {
 
     //添加对比商品监听事件
     $('.js_compareAddProduct').on('click', function () {
-        //显示对比栏
-        showCompareFlowLayout();
-
-        //加入商品对比列表的模板,
         $thisObj = $(this);
-        add_compare_flyOut_item($thisObj);
+        var auto = $thisObj.attr("auto");
+        if (auto == "0") {
+            //如果是没有对比的对比
+            $thisObj.addClass("uncontrast");
+            $thisObj.attr("auto", "1");
+            $thisObj.find(".pro-read-font").html("已对比");
+            //$(this).find("i").removeClass("o-plus").addClass("o-close");
+            //显示对比栏
+            showCompareFlow();
+            showCompareFlowLayout();
+            //加入商品对比列表的模板,
+
+            add_compare_flyOut_item($thisObj);
+            return;
+        } else if (auto == "1") {
+            $(".js_compareBox").find("li").each(function(){
+
+                if($thisObj.attr("data-chanid")==$(this).find(".compare-product-img").attr("data-chanid")){
+                    remove_compare_fLayout_item($(this));
+                    //return;
+                }
+            });
+
+            $(this).removeClass("uncontrast");
+            $(this).attr("auto", "0");
+            $(this).find(".pro-read-font").html("对比");
+            //$(this).find("i").removeClass("o-close").addClass("o-plus");
+            //如果是已经对比的取消对比
+
+        }
 
     });
 }
@@ -559,4 +503,14 @@ function hideCompareFlowLayout(){
     $('.js_compareBox').hide();
     $('.js_compareBoxShow').attr('data-show', 0);
     $('.js_compareBoxShow').html('展开<i class="iconfont icon-arrow-line-up"></i>');
+}
+
+
+//总显示对比浮层
+function showCompareFlow(){
+    $('.prolist-compare').show();
+}
+//总隐藏对比浮层
+function hideCompareFlow(){
+    $('.prolist-compare').hide();
 }
