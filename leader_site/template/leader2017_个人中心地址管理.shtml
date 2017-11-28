@@ -72,7 +72,7 @@
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <div class="l-input member-address-inputbox">
-                                                    <input type="text" name="" ph="分机号" value="" id="phonefenjihao" datatype="" errormsg="<i class='iconfont icon-information-solid'></i>请输入分机号" nullmsg="<i class='iconfont icon-information-solid'></i>分机号"/>
+                                                    <input type="text" name="" ph="分机号" value="" id="phonefenjihao" />
                                                 </div>
                                             </div>
                                         </div>
