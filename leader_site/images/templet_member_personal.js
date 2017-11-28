@@ -403,6 +403,7 @@ $(function(){
             url: siteConfig.userUrl+"/hshop-user/front/user/updateUserInfo/",
             data:templet_data,
             login:true,
+            csrf:true,
             error_cb: function (data) {
                 templet_isSubmiting=false;
             },
