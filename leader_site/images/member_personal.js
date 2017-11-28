@@ -302,6 +302,7 @@ $('.js-personalinfotab').click( function () {
                      "userHeadPic": imgs.src
             },
             login:true,
+            csrf:true,
             success_cb: function (data) {
                 if (data.isSuccess) {
                     globalShade2('保存成功','1');

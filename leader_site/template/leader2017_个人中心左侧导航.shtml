@@ -19,7 +19,7 @@
                 <a href="/security" class="iconfont icon-protect-solid"><span>账号安全</span><i></i></a><i class="js-securitysetting"></i>
             </li>
             <li class="js-cart">
-                <a href="/cart" class="iconfont icon-shoppingcart"><span>购物车</span></a>
+                <a href="http://test.tongshuai.com/cart/" class="iconfont icon-shoppingcart"><span>购物车</span></a>
                 <!--<i class="member-nub-round">9</i>-->
             </li>
             <!--<li class="">-->
