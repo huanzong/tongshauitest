@@ -37,10 +37,29 @@
 		margin-top: 25px;
 	}
 }
+.compare_pro_box{
+	width: 100%;
+	min-height: 260px;
+}
 .compare_pro{
 	width: 100%;
 	background: #fff;
 	border-bottom: 1px solid #eee;
+	&.detail-nav-fixed{
+		position:fixed;
+		top:0;
+		z-index:10
+	}
+	&.detail-nav-fixed .compare_info{
+		padding-top: 40px;
+		color:#919191;
+	}
+	&.detail-nav-fixed .compare_addgoods,&.detail-nav-fixed .compare_goods{
+		min-height: 130px;
+	}
+	&.detail-nav-fixed .goods_name{
+		padding-top: 20px;
+	}
 	.compare_info{
 		padding-top: 100px;
 		font-size: 14px;
