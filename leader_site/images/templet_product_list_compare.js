@@ -115,7 +115,7 @@ function initCookie() {
                 //修改对比样式 todo -----------------样式处理------------------------------------------------
                  $("#" + product.id).attr("auto", "1");
                  $("#" + product.id).addClass("uncontrast");
-                 $("#" + product.id).find("span").html("已对比");
+                 $("#" + product.id).find(".pro-read-font").html("已对比");
                  // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
                 pType = product.channelid;
             }
@@ -123,7 +123,7 @@ function initCookie() {
         } else {
             proObjList = [];
             //对比按钮样式
-            $(".uncontrast").find("span").html("对比");
+            $(".uncontrast").find(".pro-read-font").html("对比");
              //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
              $(".uncontrast").attr("auto","0");
              $(".uncontrast").removeClass("uncontrast");
@@ -172,7 +172,7 @@ window.unchecked = function ($obj) {
     //对比按钮样式
     $obj.attr("auto", "0");
     $obj.removeClass("uncontrast");
-    $obj.find("span").html("对比");
+    $obj.find(".pro-read-font").html("对比");
     $obj.find("i").removeClass("o-close").addClass("o-plus");
 }
 
@@ -444,9 +444,10 @@ function addCompareOnclick() {
             //如果是没有对比的对比
             $(this).addClass("uncontrast");
             $(this).attr("auto", "1");
-            $(this).find("span").html("已对比");
-            $(this).find("i").removeClass("o-plus").addClass("o-close");
+            $(this).find(".pro-read-font").html("已对比");
+            //$(this).find("i").removeClass("o-plus").addClass("o-close");
             //显示对比栏
+            showCompareFlow();
             showCompareFlowLayout();
             //加入商品对比列表的模板,
             $thisObj = $(this);
@@ -456,7 +457,7 @@ function addCompareOnclick() {
             remove_compare_fLayout_item($(this));
             $(this).removeClass("uncontrast");
             $(this).attr("auto", "0");
-            $(this).find("span").html("对比");
+            $(this).find(".pro-read-font").html("对比");
             //$(this).find("i").removeClass("o-close").addClass("o-plus");
             //如果是已经对比的取消对比
 
