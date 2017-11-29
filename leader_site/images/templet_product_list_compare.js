@@ -455,7 +455,7 @@ function addCompareOnclick() {
         } else if (auto == "1") {
             $(".js_compareBox").find("li").each(function(){
 
-                if($thisObj.attr("data-chanid")==$(this).find(".compare-product-img").attr("data-chanid")){
+                if($thisObj.attr("data-chnid")==$(this).find(".compare-product-img").attr("data-chnid")){
                     remove_compare_fLayout_item($(this));
                     //return;
                 }
