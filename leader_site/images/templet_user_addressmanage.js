@@ -437,13 +437,13 @@ $(".js_addressSetDefault").live("click",function(){
     })
 
 }*/
-
 //删除地址2
 $(document).on("click",".deleteAddress",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     globalShade("确定要删除吗？");
-    $(".js-alertTrue").click(function(){//确定删除按钮
+    // $(".js-alertTrue").click(function(){//确定删除按钮
+    $(".js-alertTrue").off().on('click',function(){//确定删除按钮
         $.ajax({
             url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
             type:"get",
@@ -452,6 +452,7 @@ $(document).on("click",".deleteAddress",function(){
             login:true,
             csrf: true,
             success_cb:function(responseT){
+                $('.js_landClose').click();
                 if(responseT.isSuccess){
                     loadUserInfoList();
                     //删除成功之后进行前端元素操作
