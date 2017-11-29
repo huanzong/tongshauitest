@@ -84,7 +84,7 @@
                                 <a class="nav-type" data-nav="js_design">设计<div class="line"></div></a>
                                 <a class="nav-type" data-nav="js_params">参数<div class="line"></div></a>
                                 <a class="nav-type js_comment" data-nav="js_praise" href="javascript:;">口碑(<span></span>)<div class="line"></div></a>
-                                <a class="nav-type" data-nav="js_favourable">优惠组合<div class="line"></div></a>
+                                <!--<a class="nav-type" data-nav="js_favourable">优惠组合<div class="line"></div></a>-->
                                <!-- <a class="nav-type" href="javascript:;">配送与服务<div class="line"></div></a>-->
                                 <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top">立即购买</a>
                             </div>
@@ -105,7 +105,7 @@
                                             <a href="javascript:;" data-nav="js_design">设计</a>
                                             <a href="javascript:;" data-nav="js_params">参数</a>
                                             <a class="js_comment" href="javascript:;" data-nav="js_praise">口碑(<span></span>)</a>
-                                            <a href="javascript:;" data-nav="js_favourable">优惠组合</a>
+                                            <!--<a href="javascript:;" data-nav="js_favourable">优惠组合</a>-->
                                             <!--<a href="javascript:;">配送与服务</a>-->
                                         </div>
                                         <p>
