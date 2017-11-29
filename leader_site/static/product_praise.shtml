@@ -46,16 +46,16 @@
 	    				</div>
 	    				<div class="prise-tips">
 	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">全部</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2 active">质量超好</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">有图评价</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2 active">质量超好(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">有图评价(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
 	    				</div>
 	    				<div class="clear"></div>
 	    			</div>
@@ -94,7 +94,7 @@
 	    				</div>
 	    				<div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>
 	    				<div class="o_u o_df_4-12 o_lg_9-12 o_md_10-12 o_sm_10-12 o_xs_10-12 prise-reply">
-	    					<span class="prise-form">官方回复</span>
+	    					<span class="prise-form">官方回复：</span>
 	    					<div class="prise-column">
 	    						经核实，有过之而无不及。
 	    					</div>
@@ -116,7 +116,7 @@
 	    				</div>
 	    				<div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>
 	    				<div class="o_u o_df_4-12 o_lg_9-12 o_md_10-12 o_sm_10-12 o_xs_10-12 prise-reply">
-	    					<span class="prise-form">官方回复</span>
+	    					<span class="prise-form">官方回复：</span>
 	    					<div class="prise-column">
 	    						经核实，有过之而无不及。
 	    					</div>
@@ -124,16 +124,16 @@
 	    			</div>
 	    		</div>
 	    	</div>
-	    	<div class="o_g product-prise-page " >
+	    	<div class="o_g product-prise-page" >
                 <a  class="l-pagination-prew">上一页</a>
                 <a  class="l-pagination-pagenumber active">1</a>
                 <a  class="l-pagination-pagenumber">2</a>
                 <a  class="l-pagination-pagenumber">3</a>
-                <a  class="l-pagination-pagenumber">4</a>
-                <a  class="l-pagination-pagenumber">5</a>
-                <a  class="l-pagination-pagenumber">6</a>
-                <a  class="l-pagination-pagenumber">7</a>
-                <a  class="l-pagination-pagenumber">8</a>
+                <a  class="l-pagination-pagenumber o_xs-hide">4</a>
+                <a  class="l-pagination-pagenumber o_xs-hide">5</a>
+                <a  class="l-pagination-pagenumber o_xs-hide">6</a>
+                <a  class="l-pagination-pagenumber o_sm-hide o_xs-hide">7</a>
+                <a  class="l-pagination-pagenumber o_sm-hide o_xs-hide">8</a>
                 <a  class="l-pagination-next ">下一页</a>
 	    	</div>
         </div>
