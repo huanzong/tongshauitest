@@ -452,6 +452,7 @@ $(document).on("click",".deleteAddress",function(){
             login:true,
             csrf: true,
             success_cb:function(responseT){
+                $('.js_landClose').click();
                 if(responseT.isSuccess){
                     loadUserInfoList();
                     //删除成功之后进行前端元素操作
