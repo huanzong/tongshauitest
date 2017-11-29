@@ -68,7 +68,6 @@ $(function() {
         centeredSlides: true,
         slidesPerGroup: 1,//每次滑动移动个数
         // calculateHeight : true,//Swiper根据slides内容计算容器高度。
-
     });
 
     $('.js_swiperMore_prev').click(function(){
