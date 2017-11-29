@@ -437,7 +437,6 @@ $(".js_addressSetDefault").live("click",function(){
     })
 
 }*/
-
 //删除地址2
 $(document).on("click",".deleteAddress",function(){
     var addressId=$(this).attr("addid");
