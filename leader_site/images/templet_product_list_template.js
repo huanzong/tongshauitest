@@ -58,7 +58,7 @@ function readJsonString(templet_price){
 }
 
 //精选推荐手机端添加class
-$(".js_recommend").find('a').eq(2).addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
+$(".js_recommend").find('a').eq(2).addClass("o_md-hide o_sm-hide o_xs-hide");
 $(".js_recommend").find('a').eq(3).addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
 //精选推荐切换
 
