@@ -15,10 +15,10 @@ $(function() {
 
 	$(".js_checkbox,.js_radio").jq_qvote();
 
-	//滚动浮层
+	//????
     $(window).scroll(function(){
         var currentPos = $(document).scrollTop()-100;
-        //导航定位
+        //????
         if(currentPos>$('.js_navPos').offset().top){
         	if(!$('.js_compareList').hasClass('detail-nav-fixed')){
 				$('.js_compareList').addClass('detail-nav-fixed').find('img').hide();
