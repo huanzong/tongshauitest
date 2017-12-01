@@ -996,11 +996,6 @@
             <!-- 详情展示 -->
             <!-- 电商拉页 -->
              <div class="o_g detail-foldover js_detail-foldover">
-
-                 <!--<TRS_VIEWDATAAPPENDIXS  FIELD=”dsly”>
-                     <TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>
-                 </TRS_VIEWDATAAPPENDIXS>-->
-                 <TRS_CONDITION  CONDITION='@dsly' OPERATOR="blank" NOT='TRUE'>
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
                     <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
 
@@ -1017,13 +1012,12 @@
                 </div>
                 <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                     <div class="foldover-img js_oHerlSizeFoldover js_foldimg js_buyhtml">
-                        <TRS_VIEWDATAAPPENDIXS  FIELD=”dsly”>
-                        <div class='box js_box' label='Title left' name='tl' id='' style='margin:0;font-size: 0;'><p class='js_tag o_df-hide ue_t' style='width: 100%;font-size: 16px;color:#333;display: inline-block;'><TRS_VIEWDATAAPPENDIX  FIELD="DESC"/></p><p><img class='ue_t' src='<TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>' style='width: 100%;display: inline-block;'></p></div>
+                        <TRS_VIEWDATAAPPENDIXS FIELD="dsly">
+                        <div class='box js_box' label='Title left' name='tl' id='' style='margin:0;font-size: 0;'><p class='js_tag o_df-hide ue_t' style='width: 100%;font-size: 16px;color:#333;display: inline-block;'><TRS_VIEWDATAAPPENDIX FIELD="DESC"/></p><p><img class='ue_t' src='<TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>' style='width: 100%;display: inline-block;'></p></div>
                         </TRS_VIEWDATAAPPENDIXS>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12"></div>
-                 </TRS_CONDITION>
             </div>
             <!-- 电商拉页 END -->
             <!-- 导航锚点定位-参数 -->
@@ -1454,6 +1448,7 @@
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
         var templet_commentUrl='';//参数页面
+        var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
@@ -1462,6 +1457,9 @@
         templet_commentUrl=templet_detailUrl+'_comment.shtml';
         $(".js_commentUrl").prop("href",templet_commentUrl);//口碑
         $(".js_comment").prop("href",templet_commentUrl);//口碑
+        if(templet_dsly ==""||templet_dsly ==null){
+            $(".js_detail-foldover").hide();//电商拉页隐藏
+        }
         
 
     </script> 
