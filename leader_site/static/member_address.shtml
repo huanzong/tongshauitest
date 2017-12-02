@@ -49,7 +49,7 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressMobile">
                                                 <form class="ui_validForm js_ui_validForm">
-                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请输入需要绑定的手机号" id="mobile"/>
+                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请输入手机号" id="mobile"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </form>
                                             </div>
@@ -80,7 +80,7 @@
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">详细地址<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
+                                            <div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-1">
                                                 <div class="selectbox">
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_save"  autotext="省">
@@ -90,7 +90,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
+                                            <div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-textarea3-2">
                                                 <div class="selectbox">
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_city"  autotext="市">
@@ -101,7 +101,7 @@
                                                 </div>
 
                                             </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
+                                            <div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-3">
                                                 <div class="selectbox">
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_area"  autotext="区">
@@ -111,7 +111,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="o_u o_df_1-2 o_lg_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
+                                            <div class="o_u o_df_1-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 member-address-textarea3-4">
                                                 <div class="selectbox">
                                                     <div class="member-address-inputbox">
                                                         <select name="" id="js_road"  autotext="街道">
@@ -131,7 +131,7 @@
                                         <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
                                             <div class="l-textarea member-address-textareabox">
-                                                <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详解地填写街道、楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
+                                                <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
                                                 <p class="Validform_checktip Validform_wrong member-address-error js-addressMobError"></p>
                                             </div>
                                         </div>

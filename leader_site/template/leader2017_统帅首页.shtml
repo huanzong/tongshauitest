@@ -365,10 +365,10 @@
 		</div>
 		<!-- 关于统帅 END -->
 
-		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+		<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 	</div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
 <script type="text/javascript" src="../site5/index.js"></script>
 </body>
