@@ -61,9 +61,6 @@
     padding: 60px 0 40px 0;
     border-bottom: 1px solid #eee;
     display: block !important;
-    >a{
-      color: #666;
-    }
     img{
       height: 80px;
       width: 80px;
@@ -132,7 +129,7 @@
       display: inline-block !important;
       border: none;
     padding: 15px 0 15px 0;
-      text-align: right;
+      text-align: center;
       img{
         height: 31px;
         width: 31px;
@@ -157,6 +154,19 @@
         color: #cccccc;
         font-size: 17px;
         position: relative;
+        @media (min-width: 992px) and (max-width: 1199px) {
+  /* lg*/
+  color: #999;
+        }
+        @media (min-width: 701px) and (max-width: 991px) {
+  color: #999;
+          /* md*/
+        }
+        @media (min-width: 576px) and (max-width: 700px) {
+          /* sm*/
+  color: #999;
+        }
+
         span{
           color: #666;
           font-size: 12px;
@@ -343,12 +353,18 @@
   background: #fff;
   z-index: 25;
   //padding-bottom: 60px;
+  @media (min-width: 1200px) {
+  max-width: 240px;
+ 
+}
   vertical-align: top;
   min-height: 762px;
   .memeber-nav-middle-listbox{
     text-align: center;
+    position: relative;
     ul{
       padding-top: 10px;
+
       .memeber-nav-middle-title{
         font-size: 16px;color: #999;
         margin: 30px 0 10px 0;
@@ -381,7 +397,22 @@
     }
     @media (max-width: 575px) {
       /* xs*/
+      // overflow-x:auto; 
+      height: 100vh;
+      overflow: auto;
+      .member-nav-list-right{
+        height: 100vh;
+        width: 30px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9;
 
+      }
+      ul{
+          padding: 10px 0 200px 0;
+      }
     }
   }
 
@@ -454,7 +485,7 @@
   }
   p{
     font-size: 16px;
-    color: #666;
+    color: #ccc;
     padding: 35px 0 0 60px;
   }
   h2{
@@ -544,3 +575,14 @@
     }
   }
 }
+    .personal_footer_copy >p{text-align: center; width:445px;display: block;margin:  0 auto;font-size: 12px;line-height: 18px;color: #999;padding: 20px 0}
+
+    @media (max-width:575px){/* xs*/
+        .personal_footer_copy> p{width: 235px}
+    }
+    .footer-bottom{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;  
+    }
