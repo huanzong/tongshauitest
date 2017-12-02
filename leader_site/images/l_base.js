@@ -1,93 +1,3 @@
-/**
- * ajax初始化
- */
-jQuery.ajaxSetup({
-    type: "post",
-    dataType: "json",
-    cache: false,
-    box_obj: null,
-    scroll: null,
-    beforeSend: function(request) {
-        //需要登录校验，且用户未登录
-        if (this.login && !istrsidssdssotoken()) {
-            request.abort();
-            jumpToLoginPage();
-        }
-	
-	    //csrf校验
-        if(this.csrf){
-            var crm = Math.random();
-            //判断语句，用于本地测试，请勿提交测试或生产
-            if(window.location.host.indexOf('localhost')>=0){
-                crm = '123';
-            }
-            // var urlDomain = this.url.
-            $.cookie('crm', crm,{
-                'path':'/',
-                'domain':'.tongshuai.com'
-            });
-            this.url = this.url+'?cch='+crm;
-        }
-	
-        //contentType: "application/json; charset=utf-8",
-        if (this.applicationType){
-            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
-        }
-    },
-    success: function(data) {
-        if (data.isSuccess != undefined && istrsidssdssotoken()) {
-            if (!data.isSuccess) {
-
-            }
-        }
-
-        if (this.success_cb) {
-            this.success_cb(data);
-        }
-    },
-    complete:function(XMLHttpRequest, textStatus){
-        //csrf校验-删除cookie
-        if(this.csrf){
-            $.cookie('crm', null,{
-                'path':'/',
-                'domain':'.tongshuai.com'
-            });;
-        }
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-        if(this.login && jqXHR.status==401){
-            jumpToLoginPage();
-        }
-        if (this.error_cb) {
-            this.error_cb(jqXHR, textStatus, errorThrown);
-        }
-    }
-});
-/**
- *  公共服务
- */
-var leaderServer = {
-    //根据ip地址获取用户地址
-    getIpAddress: function(){
-        $.ajax({
-            url:'http://api.map.baidu.com/location/ip?ak=qT3FXMgALhVQia2XiGKhmeAQ',
-            type:'get',
-            success_cb:function(data){
-                if(data.status==0){
-                    return data.content.address;
-                }else{
-                    return false;
-                }
-                
-            },
-            error_cb:function(data){
-                return false;
-            }
-        });
-    }
-};
-
-
 $(function () {
 
     /**
@@ -181,7 +91,7 @@ $(function () {
     });
 
     //搜索历史
-    /*$('.js_searchHistory').bind('input propertychange', function () {
+    $('.js_searchHistory').bind('input propertychange', function () {
         var screenWidth = document.body.offsetWidth;
         if ($(this).val()) {
             if (screenWidth > 1199) {
@@ -194,11 +104,10 @@ $(function () {
             $('.js_searchBox').hide();
             $('.js_searchBoxQuick_lg').show();
         }
-    // }).on('blur', function () {
-    //     $('.js_searchBox').hide();
-    //     $('.js_searchBoxQuick_lg').show();
+    }).on('blur', function () {
+        $('.js_searchBox').hide();
+        $('.js_searchBoxQuick_lg').show();
     }).on('focus', function () {
-        var screenWidth = document.body.offsetWidth;
         if ($(this).val()) {
             if (screenWidth > 1199) {
                 $('.js_searchBox_xl').show();
@@ -209,19 +118,6 @@ $(function () {
         }
     });
 
-    //隐藏搜索历史浮层-隐藏用户消息浮层xs
-    $('body').on('click', function (e) {
-        if(!$(e.target).hasClass('js_userMsgXs')){
-            $('.js_usermsg_xs').hide();
-        }
-        //搜索历史浮层点击按钮确认
-        if($(e.target).hasClass('js_searchHistory')){
-            return false;
-        }
-        $('.js_searchBox').hide();
-        $('.js_searchBoxQuick_lg').show();
-    });
-    
     //搜索--lg
     $('.js_search_lg').on('click', function () {
         $('.js_navSearchLgHide')
@@ -236,18 +132,18 @@ $(function () {
             .addClass('o_sm-show')
             .addClass('o_xs-show');
         $('.js_navSearchLg').show();
-    });*/
-    
+    });
+
     //关闭搜索
-    /*$('.js_navSearchClose').on('click', function () {
-    
+    $('.js_navSearchClose').on('click', function () {
+
         $('.js_navSearchLg')
             .removeClass('o_lg-show')
             .removeClass('o_md-show')
             .removeClass('o_sm-show')
             .removeClass('o_xs-show');
         $('.js_navSearchLg').hide();
-    
+
         $('.js_navSearchLgHide')
             .addClass('o_lg-show')
             .addClass('o_md-show')
@@ -255,9 +151,9 @@ $(function () {
             .addClass('o_xs-show');
         $('.js_navSearchLgHide').show();
         $('.js_navSearchLgHide.js_ignore').removeClass('o_lg-show').hide();
-    
+
     });
-    
+
     //展示导航菜单
     $('.js_menuShow').on('click', function () {
         if ($(this).hasClass('icon-menu')) {
@@ -267,31 +163,56 @@ $(function () {
             $(this).removeClass('icon-close').addClass('icon-menu');
             $('.js_navMdShow').hide();
         }
-    });*/
-
-    //移动端，点击轻产品，展示二级菜单 ms sm xs
-    $('.js_nav-md').on('click',function(){
-        if($(this).attr('data-show')==1){
-            $(this).siblings('.js_navMdboxSecond').show();
-            $(this).attr('data-show',0).find('i').removeClass('icon-plus').addClass('icon-minus');
-        }else{
-            $(this).siblings('.js_navMdboxSecond').hide();
-            $(this).attr('data-show',1).find('i').removeClass('icon-minus').addClass('icon-plus');
-        }
-        
-    });
-
-    //xs分辨率，展示用户消息列表
-    $('.js_userMsgXs').on('click',function(){
-        if(document.body.offsetWidth<=575){
-            $('.js_usermsg_xs').show();
-        }
     });
 
     userLoginStatus();
 
 });
+/**
+ * ajax初始化
+ */
+jQuery.ajaxSetup({
+    type: "post",
+    dataType: "json",
+    cache: false,
+    box_obj: null,
+    scroll: null,
+    beforeSend: function(request) {
+        //需要登录校验，且用户未登录
+        if (this.login && !istrsidssdssotoken()) {
+            request.abort();
+        }
+        //csrf校验
+        if(this.csrf){
+            var crm = Math.random();
+            $.cookie('crm', crm);
+            this.url = this.url+'?cch='+crm;
+        }
 
+        //contentType: "application/json; charset=utf-8",
+        if (this.applicationType){
+            console.log('888');
+            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+        }
+    },
+    success: function(data) {
+        if (data.isSuccess != undefined && istrsidssdssotoken()) {
+            if (!data.isSuccess) {
+
+            }
+        }
+
+        if (this.success_cb) {
+            this.success_cb(data);
+        }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+
+        if (this.error_cb) {
+            this.error_cb(jqXHR, textStatus, errorThrown);
+        }
+    }
+});
 
 //加载导航头的登录状态
 function userLoginStatus() {
