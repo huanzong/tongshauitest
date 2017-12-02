@@ -209,7 +209,15 @@ $(function () {
         }
     });
 
-    $('body').on('click',function(){
+    //隐藏搜索历史浮层-隐藏用户消息浮层xs
+    $('body').on('click', function (e) {
+        if(!$(e.target).hasClass('js_userMsgXs')){
+            $('.js_usermsg_xs').hide();
+        }
+        //搜索历史浮层点击按钮确认
+        if($(e.target).hasClass('js_searchHistory')){
+            return false;
+        }
         $('.js_searchBox').hide();
         $('.js_searchBoxQuick_lg').show();
     });
@@ -260,6 +268,25 @@ $(function () {
             $('.js_navMdShow').hide();
         }
     });*/
+
+    //移动端，点击轻产品，展示二级菜单 ms sm xs
+    $('.js_nav-md').on('click',function(){
+        if($(this).attr('data-show')==1){
+            $(this).siblings('.js_navMdboxSecond').show();
+            $(this).attr('data-show',0).find('i').removeClass('icon-plus').addClass('icon-minus');
+        }else{
+            $(this).siblings('.js_navMdboxSecond').hide();
+            $(this).attr('data-show',1).find('i').removeClass('icon-minus').addClass('icon-plus');
+        }
+        
+    });
+
+    //xs分辨率，展示用户消息列表
+    $('.js_userMsgXs').on('click',function(){
+        if(document.body.offsetWidth<=575){
+            $('.js_usermsg_xs').show();
+        }
+    });
 
     userLoginStatus();
 

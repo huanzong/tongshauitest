@@ -1,8 +1,10 @@
 <div class="o_g l-nav">
 	<!-- 一级导航 -->
 	<!-- logo -->
-	<div class="o_u o_df_2-12 o_xs_3-12 nav-logo">
-		<img src="images/logo.png">
+	<div class="o_u o_df_2-12 o_xs_3-12">
+		<div class="nav-logo">
+			<img src="images/logo.png">
+		</div>
 	</div>
 	<!-- logo END -->
 	<!-- 导航栏目 轻产品/悠生活、服务、会员-->
@@ -34,7 +36,7 @@
 	<!-- 用户信息栏 sf/xl分辨率 -->
 	<div class="o_u o_df_2-12 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
 		<div class="nav-search">
-			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory">
+			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory" maxlength="25">
 			<i class="iconfont icon-search"></i>
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
 				<div class="search-quick">快速链接</div>
@@ -59,7 +61,7 @@
 				<i class="iconfont icon-arrow-sanjiao-up-s nav-userup"></i>
 				<ul class="nav-user-column">
 					<li><a href="javascript:;">个人中心</a></li>
-					<li><a href="javascript:;">消息</a></li>
+					<li><a href="javascript:;">消息<i class="point"></i></a></li>
 					<li><a href="javascript:;">我的订单</a></li>
 					<li><a href="javascript:;">我的优惠券</a></li>
 					<li><a href="javascript:;">收藏与订阅</a></li>
@@ -87,11 +89,11 @@
 
 				<!-- 已登录展示 -->
 				<div class="user-headimg">
-					<img src="images/user_img.jpg" class="user-img">
+					<img src="images/user_img.jpg" class="user-img js_userMsgXs">
 					<span></span>
 					<ul class="nav-user-column">
 						<li><a href="javascript:;">个人中心</a></li>
-						<li><a href="javascript:;">消息</a></li>
+						<li><a href="javascript:;">消息<i class="point"></i></a></li>
 						<li><a href="javascript:;">我的订单</a></li>
 						<li><a href="javascript:;">我的优惠券</a></li>
 						<li><a href="javascript:;">收藏与订阅</a></li>
@@ -127,10 +129,56 @@
 		<div class="o_u o_df_1-12"></div>
 		<ul class="o_u o_df_10-12 nav-mdbox">
 			<!-- <li>轻产品<i class="iconfont icon-plus"></i></li> -->
-			<li>轻产品<i class="iconfont icon-arrow-line-right"></i></li>
-			<li>优生活<i class="iconfont icon-arrow-line-right"></i></li>
-			<li>会员<i class="iconfont icon-arrow-line-right"></i></li>
-			<li>服务<i class="iconfont icon-arrow-line-right"></i></li>
+			<li>
+				<a href="javascript:;" class="js_nav-md" data-show=1>轻产品<i class="iconfont icon-plus"></i></a>
+				<ul class="nav-mdbox-second js_navMdboxSecond">
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon1"></div>
+							<div class="nav-mdbox-name">冰箱</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon2"></div>
+							<div class="nav-mdbox-name">洗衣机</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon3"></div>
+							<div class="nav-mdbox-name">冰箱</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon4"></div>
+							<div class="nav-mdbox-name">冰箱</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon5"></div>
+							<div class="nav-mdbox-name">冰箱</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon6"></div>
+							<div class="nav-mdbox-name">冰箱</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="nav-mdbox-icon icon7"></div>
+							<div class="nav-mdbox-name">冰箱</div>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">优生活<i class="iconfont icon-arrow-line-right"></i></a></li>
+			<li><a href="javascript:;">会员<i class="iconfont icon-arrow-line-right"></i></a></li>
+			<li><a href="javascript:;">服务<i class="iconfont icon-arrow-line-right"></i></a></li>
 		</ul>
 	</div>
 	<!-- 导航 md End -->
@@ -238,4 +286,30 @@
 		</li>
 	</ul>
 	<!-- 二级导航 End -->
+
+	<!-- xs下，用户信息展示 -->
+	<ul class="o_u o_df_2-2 nav-usermsg-xs js_usermsg_xs">
+		<li>
+			<a href="javascript:;"><span>个人中心</span><i class="iconfont icon-arrow-line-right"></i></a>
+		</li>
+		<li>
+			<a href="javascript:;"><span>消息<em></em></span><i class="iconfont icon-arrow-line-right"></i></a>
+		</li>
+		<li>
+			<a href="javascript:;"><span>我的订单</span><i class="iconfont icon-arrow-line-right"></i></a>
+		</li>
+		<li>
+			<a href="javascript:;"><span>我的优惠券</span><i class="iconfont icon-arrow-line-right"></i></a>
+		</li>
+		<li>
+			<a href="javascript:;"><span>收藏与订阅</span><i class="iconfont icon-arrow-line-right"></i></a>
+		</li>
+		<li>
+			<a href="javascript:;"><span>我的产品</span><i class="iconfont icon-arrow-line-right"></i></a>
+		</li>
+		<li class="nav-quip">
+			<a href="javascript:;">退出登录</a>
+		</li>
+	</ul>
+	<!-- xs下，用户信息展示 END -->
 </div>
