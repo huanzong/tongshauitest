@@ -14,6 +14,7 @@
     @media (max-width: 575px) {
       /* xs*/
       font-size: 16px;
+      line-height: 50px;
 
     }
   }
@@ -25,6 +26,11 @@
   border-radius: 7px;
   //overflow: hidden;
   margin: 30px 0 0 0 ;
+      @media (max-width: 575px) {
+            /* xs*/
+             border: none;
+             box-shadow:none;
+          }
 }
 .detail_cont_title_box{
   padding: 17px 0;
@@ -39,6 +45,11 @@
     i{
       color: #333;  font-size: 16px;
 
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+     /* sm*/
+      text-align: left;
+     
     }
     @media (max-width: 575px) {
       /* xs*/
@@ -58,9 +69,15 @@
     :first-child{
       margin: 0;
     }
+    @media (min-width: 576px) and (max-width: 700px) {
+     /* sm*/
+      text-align: left;
+
+    }
 
     @media (max-width: 575px) {
       /* xs*/
+      text-align: left;
       text-align: left;
       padding: 10px 0 0 0;
       a{
@@ -146,6 +163,7 @@
   .order_content_price{
     font-size: 12px;
     color: #666;
+        vertical-align: middle;
     span{
       display: none;
 
@@ -209,62 +227,62 @@
     background: #fff;
   }
 }
-.order_content2_box{
-  padding: 25px 0 ;
-  background: #f8f8f8;
-  .order_content2_img{
-    vertical-align: middle;
+ .order_content2_box {
+    padding: 25px 0;
+    background: #f8f8f8;
+    .order_content2_img {
+        vertical-align: middle;
 
-    >i{
-      height: 30px;
-      width: 30px;
-      line-height: 30px;
-      border-radius: 15px;
-      text-align: center;
-      background: @l-red;
-      font-size: 17px;
-      color: #fff;
+        >i {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            border-radius: 15px;
+            text-align: center;
+            background: @l-red;
+            font-size: 17px;
+            color: #fff;
+        }
     }
-
-  }
-  .order_content2_name{
-    text-align: left;
-    vertical-align: middle;
-    >h4{
-      font-size: 12px;
-      >span{
-        display: none;
+    .order_content2_name {
+        text-align: left;
+        vertical-align: middle;
+        >h4 {
+            font-size: 12px;
+            >span {
+                display: none;
+                @media (min-width: 576px) and (max-width: 700px) {
+                    /* sm*/
+                    display: inline-block;
+                }
+                @media (max-width: 575px) {
+                    /* xs*/
+                    display: inline-block;
+                }
+            }
+        }
+        >p {
+            font-size: 12px;
+            color: #666;
+            line-height: 20px;
+            >a {
+                display: inline-block;
+            }
+        }
+    }
+    .order_content_nub {
+        vertical-align: middle;
+        font-size: 12px;
+        color: #999;
         @media (min-width: 576px) and (max-width: 700px) {
-          /* sm*/
-          display: inline-block;
+            /* sm*/
+            display: none;
         }
         @media (max-width: 575px) {
-          /* xs*/
-          display: inline-block;
-
+            /* xs*/
+            display: none;
         }
-      }
     }
-    >p{
-      font-size: 12px;
-      color: #666;
-      line-height: 20px;
-    }
-  }
-  .order_content_nub{
-    vertical-align: middle;
-    font-size: 12px;
-    color: #999;
-    @media (min-width: 576px) and (max-width: 700px) {
-      /* sm*/
-      display: none;
-    }
-    @media (max-width: 575px) {
-      /* xs*/
-      display: none;
-
-    }
-  }
 }
 .datail_product_state{
 
@@ -324,6 +342,8 @@
     line-height: 28px;
     span{
       color: #999;
+      display: inline-block;
+      width: 70px;
       font-size: 14px;
     }
     i{
@@ -353,11 +373,16 @@
     }
     @media (min-width: 576px) and (max-width: 700px) {
       /* sm*/
-      padding: 30px 30px 0 0  ;
+      padding: 10px 30px 0 0  ;
+      font-size: 14px;
     }
     @media (max-width: 575px) {
       /* xs*/
       padding:0;
+      span{
+        display: inline-block;
+        width: 90px;
+      }
     }
   }
   span{
@@ -387,7 +412,7 @@
     }
     @media (min-width: 576px) and (max-width: 700px) {
       /* sm*/
-      padding: 5px 0 30px 0;
+    padding: 10px 30px 30px 0  ;
 
     }
     @media (max-width: 575px) {

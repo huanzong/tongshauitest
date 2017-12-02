@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>会员中心</title>
+    <%=base%>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <!--#include virtual="public/head.shtml"-->
+        <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="images/index.css"> -->
+        <link rel="stylesheet" type="text/css" href="images/member-center.css">
+</head>
+
+<body class=" ">
+    <div class="o_main">
+            <!-- 首屏动画 -->
+          <!-- 导航 -->
+            <!--#include virtual="public/nav.shtml"-->
+            
+            <!-- 导航 End-->
+            <div class="o_g js_animateLine">
+                <div class="index_animate">
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox">
+                        <span></span>
+                    </div>
+                    <div class="index_animateBox"></div>
+                </div>
+            </div>
+            <!-- 首屏动画 End -->
+        <div class="o_g">
+            <div class="membercenter-top">
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner">
+                    <div class="o_u o_df_1-8"></div>
+                    <div class="o_u o_df_7-8 membercenter-banner-cont">
+                        <h2>加入统帅，<span>慢享悠悠生活</span></h2>
+                        <p>完成注册产品即可成为会员</p>
+                        <a href="javascript:;" class="l-btn-normal l-btn-red">常规按钮</a>
+                    </div>
+                </div>
+                <ul class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
+                    <li class="list-share o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                        <div class="membercenter-list-cont">
+                            <h4>乐分享</h4>
+                            <p>晒单分享，最多得550积分</p>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
+                        </div>
+                    </li>
+                    <li class="list-endorsement o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                        <div class="membercenter-list-cont">
+                            <h4>悦代言</h4>
+                            <p>成为代言人，得100积分</p>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">统帅代言人</a>
+                        </div>
+                    </li>
+                    <li class="list-interact o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                        <div class="membercenter-list-cont">
+                            <h4>惬互动</h4>
+                            <p>交流与活动，互动拿积分</p>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">会员互动</a>
+                        </div>
+                    </li>
+                    <li class="list-present o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                        <div class="membercenter-list-cont">
+                            <h4>兑好礼</h4>
+                            <p>积分兑换诸多会员好礼</p>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">权益商城</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="member-center o_g">
+                <div class="o_u o_df_4-12 member-center-left"></div>
+                <div class="o_u o_df_2-12 member-center-border"></div>
+                <div class="o_u o_df_2-12 member-center-border"></div>
+                <div class="o_u o_df_2-12 member-center-border">
+                    <div class="member-center-border-red"></div>
+                </div>
+                <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
+                <div class="member-center-box o_u o_df_8-12 o_lg_10-12 o_md_11-12 o_sm_11-12 o_xs_12-12" >
+                               <div class="member-center-title">
+                       
+                             了解会员权益 
+                        </div>
+                    <div class="o_u o_df_6-12 o_xs_10-12  member-center-boxleft">
+                        <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                            <img class="member-content-md" src="images/member-content-1min.png" alt="">
+                            <div class="member-conter-text">
+                                <div class=" o_u o_df_11-12">
+                                    <h5>会员关怀</h5>
+                                    <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
+                                    <div class="member-conter-text-down">
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>普通会员</span></div><i>|</i>
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>金卡会员</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 ">
+                            <img class="member-content-md" src="images/member-content-3min.png" alt="">
+                            <div class="member-conter-text">
+                                <div class=" o_u o_df_11-12">
+                                    <h5>会员关怀</h5>
+                                    <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
+                                    <div class="member-conter-text-down">
+                                          <div class="o_u"><span class="iconfont icon-level-solid"></span><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>金卡会员</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_u o_df_6-12 o_xs_10-12 member-center-boxright">
+                        <div class="member-center-title">
+                            <h3>LEADER</h3>
+                            <p>了解会员权益</p>
+                        </div>
+                        <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                            <img class="member-content-md" src="images/member-content-2min.png" alt="">
+                            <div class="member-conter-text o_u o_df_11-12">
+                                <h5>会员关怀</h5>
+                                <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
+                                <div class="member-conter-text-down">
+                                    <div class="o_u"><span class="iconfont icon-level-solid"></span><span>银卡会员</span></div><i>|</i>
+                                    <div class="o_u"><span class="iconfont icon-level-solid"></span><span>金卡会员</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                            <!-- <div class="member-content-4md"></div> -->
+                            <img class="member-content-md" src="images/member-content-4min.png" alt="">
+                            <div class="member-conter-text  ">
+                                <div class=" o_u o_df_11-12">
+                                    <h5>会员关怀</h5>
+                                    <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
+                                    <div class="member-conter-text-down">
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>普通会员</span></div><i>|</i>
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u"><span class="iconfont icon-level-solid"></span><span>金卡会员</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="memeber-bottom o_g">
+                <div class="o_u o_df_11-12">
+                    <h3>会员等级规则</h3>
+                    <ul class="o_u o_df_10-12">
+                        <li class=" o_u o_df_3-12 o_xs_6-12">
+                            <span class="iconfont icon-level-solid"></span>
+                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                                <h5>粉丝</h5>
+                                <p>注册网站会员</p>
+                            </div>
+                        </li>
+                        <li class=" o_u o_df_3-12 o_xs_6-12">
+                            <span class="iconfont icon-level-solid"></span>
+                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                                <h5>粉丝</h5>
+                                <p>注册网站会员注册网站会员注</p>
+                            </div>
+                        </li>
+                        <li class=" o_u o_df_3-12 o_xs_6-12">
+                            <span class="iconfont icon-level-solid"></span>
+                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                                <h5>粉丝</h5>
+                                <p>注册网站会员</p>
+                            </div>
+                        </li>
+                        <li class=" o_u o_df_3-12 o_xs_6-12">
+                            <span class="iconfont icon-level-solid"></span>
+                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                                <h5>粉丝</h5>
+                                <p>注册网站会员</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--#include virtual="public/footer.shtml"-->
+        </div>
+        <!--#include virtual="public/foot.shtml"-->
+</body>
+
+</html>

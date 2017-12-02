@@ -1367,7 +1367,7 @@
                 </ul>
             </div>
             <!-- 产品对比 END -->
-            <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+            <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
                     <div class="land-cont-title o_u">
@@ -1428,7 +1428,7 @@
             </div>
         </div>
     </div>
-    <!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+    <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品对比详情页json" EXT="json" ></TRS_PAGEGENERATE>-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品口碑详情页" EXT="comment" ></TRS_PAGEGENERATE>-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品参数详情页" EXT="parameter" ></TRS_PAGEGENERATE>-->  
@@ -1443,8 +1443,8 @@
         var point='<trs_viewdata field="gnld"/>';//功能亮点
         var appendix='<trs_viewdata field="fjxx"><TRS_CONDITION  CONDITION="@fjxx" NOT="TRUE" OPERATOR="blank"><trs_viewdata field="fjxx"/></TRS_CONDITION></trs_viewdata>';//附件信息
         var templet_channelName="<trs_channel id='parent' field='_recurl' URLISABS='true'/>";//栏目链接
-        //var templet_businessId="<trs_viewdata field='modelno'/>"
-        var templet_businessId="BCD-557WDGSU1"
+        var templet_businessId="<trs_viewdata field='modelno'/>";
+        //var templet_businessId="BCD-557WDGSU1"
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
         var templet_commentUrl='';//参数页面
