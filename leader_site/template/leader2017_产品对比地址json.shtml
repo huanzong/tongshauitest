@@ -6,7 +6,7 @@
     {
         "id":"<TRS_CHANNEL FIELD="CHANNELID" />",
         "name":"<TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" />",
-        "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data_57.json"
+        "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data.json"
         
     },
     </TRS_CONDITION>
@@ -16,7 +16,7 @@
     {
         "id":"<TRS_CHANNEL FIELD="CHANNELID" />",
         "name":"<TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" />",
-        "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data_57.json"
+        "url":"<TRS_CHANNEL FIELD="_RECURL"  UrlIsAbs="TRUE"/>product_compare_data.json"
         
     },
     </trs_channels>
