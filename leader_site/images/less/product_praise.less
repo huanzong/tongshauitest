@@ -19,12 +19,17 @@
 		min-height: 70px;
 		.prise-percent{
 			margin-right: 60px;
-			@media (min-width: 701px) {
-				position: absolute;
+			position: absolute;
+			left: 0;
+			top: 30px;
+			border-right: 1px solid #f8f8f8;
+			width: 175px;
+			@media (max-width: 700px) {
+				position: relative;
 				left: 0;
-				top: 30px;
-				border-right: 1px solid #f8f8f8;
-				width: 175px;
+				top: 0;
+				border:none;
+				width: auto;
 			}
 			@media (min-width: 701px) and (max-width: 991px){
 				width: 158px;
@@ -67,11 +72,12 @@
 			}
 		}
 		.prise-tips{
-			@media (min-width: 992px){
-				padding-left: 235px;
-			}
+			padding-left: 235px;
 			@media (min-width: 701px) and (max-width: 991px){
 				padding-left: 218px;
+			}
+			@media (max-width: 700px){
+				padding-left: 0;
 			}
 			a{
 				font-size: 12px;
@@ -90,11 +96,14 @@
 	padding-top: 43px;
 	border-top: 1px solid #f8f8f8;
 	.prise-box{
-		border: #eee;
+		border: 1px solid #eee;
 		box-shadow: 0 0 5px #eee;
 		background: #fff;
 		margin-bottom: 30px;
 		padding: 40px 0;
+		@media(max-width: 575px){
+			padding: 15px 0;
+		}
 		.prise-user-name{
 			display: inline-block;
 			padding-left: 45px;

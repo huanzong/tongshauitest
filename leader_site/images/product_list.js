@@ -70,10 +70,18 @@ function initNavClick() {
     var flag = parseInt($('.js_listNavShowMore').attr('data-flag'));
 
     if (flag) {
-        $('.js_listNavShowMore').find('span').text('展开全部筛选项');
+        if(document.body.offsetWidth>575){
+            $('.js_listNavShowMore').find('span').text('展开全部筛选项');
+        }else{
+            $('.js_listNavShowMore').find('span').text('展开筛选项');
+        }
         $('.js_listNavShowMore').find('i').removeClass('icon-close').addClass('icon-plus');
     } else {
-        $('.js_listNavShowMore').find('span').text('收起全部筛选项');
+        if(document.body.offsetWidth>575){
+            $('.js_listNavShowMore').find('span').text('收起全部筛选项');
+        }else{
+            $('.js_listNavShowMore').find('span').text('收起筛选项');
+        }
         $('.js_listNavShowMore').find('i').removeClass('icon-plus').addClass('icon-close');
     }
 
