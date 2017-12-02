@@ -102,8 +102,7 @@ table {
 
 
 img {
-    border: 0;
-    overflow: hidden;
+    border: 0
 }
 /* 公共自定义样式 */
 .clear {
@@ -523,9 +522,6 @@ img {
             padding-top: 5px;
             li{
                 line-height: 40px;
-                a{
-                    color: #333;
-                }
             }
         }
     }
@@ -555,7 +551,7 @@ img {
                 &:hover{
                    .nav-user-column{
                         display: block;
-                   }
+                   } 
                 }
                 .nav-user-column{
                     display: none;
@@ -939,8 +935,6 @@ img {
         }
     }
 }
-
-
 // 首屏动画
 .index_animate{
     position: fixed;
@@ -964,8 +958,13 @@ img {
     }
 }
 .l-opacity0{
-    filter:alpha(opacity=0);
-    -moz-opacity:0;
-    -khtml-opacity: 0;
-    opacity: 0;
+    filter:alpha(opacity=0);   
+    -moz-opacity:0;   
+    -khtml-opacity: 0;   
+    opacity: 0; 
 }
+    .personal_footer_copy >p{text-align: center; width:445px;display: block;margin:  0 auto;font-size: 12px;line-height: 18px;color: #999;padding: 20px 0}
+
+    @media (max-width:575px){/* xs*/
+        .personal_footer_copy> p{width: 235px}
+    }

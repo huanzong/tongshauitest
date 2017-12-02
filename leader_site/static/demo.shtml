@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DEMO</title>
-
 <%=base%>
-
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 <meta name="format-detection" content="telephone=no, email=no" />
 <!--#include virtual="public/head.shtml"-->

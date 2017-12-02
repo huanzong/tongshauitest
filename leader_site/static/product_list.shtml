@@ -18,7 +18,7 @@
 	<div class="o_body">
         <div class="o_main">
         <!-- 首屏动画 -->
-	        <!-- <div class="o_g js_animateLine">
+	        <div class="o_g js_animateLine">
 	        	<div class="index_animate">
 					<div class="index_animateBox">
 						<span></span>
@@ -37,7 +37,7 @@
 					</div>
 					<div class="index_animateBox"></div>
 				</div>
-	        </div> -->
+	        </div>
 	    <!-- 首屏动画 END -->
 	    <!-- 导航 -->
 	    	<!--#include virtual="public/nav.shtml"-->
@@ -981,5 +981,6 @@
 	<!--#include virtual="public/foot.shtml"-->
 	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 	<script type="text/javascript" src="images/product_list.js"></script>
+	<script type="text/javascript" src="images/templet_product_list.js"></script>
 </body>
 </html>
