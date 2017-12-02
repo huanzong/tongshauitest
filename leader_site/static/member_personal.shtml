@@ -55,6 +55,7 @@
                                                         <input id="js_loginName" type="text" name="" ph="" value="" />
                                                     </div>
                                                     <div class="l-input member-personalinfo-namefixed js_personalinfo-namefixed">
+                                                        <p>asdasdasdasd</p>
                                                     </div>
                                                 </div>
                                                 <div class=" personalist-right js_personalistwrongbox_user ">
@@ -65,28 +66,28 @@
                                             </div>
                                             <div class="og member-personalinfo-list">
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                    <span>*</span>性别
+                                                   性别
                                                 </div>
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
-                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男" data="1" /></span>
-                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2" /></span>
+                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男"  data="1"></span>
+                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2"></span>
                                                 </div>
 
 
                                             </div>
                                             <div class="o_g member-personalinfo-list">
-                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                    <span>*</span>生日
+                                                <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname ">
+                                                    生日
                                                 </div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g" style="text-align: left">
-                                                    <div class="o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
-                                                        <input type="text" name="" class="js_Date o_u o_df_2-2 l-btn-normal l-btn-line2" data-date="1" /> <span class="iconfont icon-events "></span>
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g info-date-input" style="text-align: left">
+                                                    <div class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
+                                                        <input type="text" name="" class="js_Date o_u  o_df_2-2 l-btn-normal l-btn-line2" data-date="1"> <span class="iconfont icon-events "></span>
                                                     </div>
                                                     <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">-->
                                                     <!--<div class="selectbox">-->
                                                     <!--<div class="member-personalinfo-inputbox">-->
                                                     <!--<select name="" id="js_percity"  autotext="月">-->
-                                                    <!--<option value="0">--月--</option>-->
+                                                    <!--<option value="0">&#45;&#45;月&#45;&#45;</option>-->
                                                     <!--</select>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
@@ -96,7 +97,7 @@
                                                     <!--<div class="selectbox">-->
                                                     <!--<div class="member-personalinfo-inputbox">-->
                                                     <!--<select name="" id="js_perarea"  autotext="日">-->
-                                                    <!--<option value="0">--日--</option>-->
+                                                    <!--<option value="0">&#45;&#45;日&#45;&#45;</option>-->
                                                     <!--</select>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
@@ -105,16 +106,16 @@
                                                 <div class=" js_personalistwrongbox_data personalist-right">
                                                     <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
                                                     <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
-                                                    </p>
+                                                        用户名不可为空！</p>
                                                 </div>
                                             </div>
 
                                             <div class="o_g member-personalinfo-list member-personalinfo-list-adds">
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
-                                                    <span>*</span>居住地
+                                                    居住地
                                                 </div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
-                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
+                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox  o_g">
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 info-address-input">
                                                         <div class="selectbox">
                                                             <div class="member-personalinfo-inputbox">
                                                                 <select name="" id="js_save" autotext="省">
@@ -123,8 +124,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">
-                                                        <div class="selectbox">
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-2 info-address-input">
+                                                        <div class="selectbox  info-address-selectbox2">
                                                             <div class="member-personalinfo-inputbox">
                                                                 <select name="" id="js_city" autotext="市">
 
@@ -133,8 +134,8 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                                        <div class="selectbox">
+                                                    <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2 member-personalinfo-textarea3-3 info-address-input">
+                                                        <div class="selectbox info-address-selectbox3">
                                                             <div class="member-personalinfo-inputbox">
                                                                 <select name="" id="js_area" autotext="区">
 
@@ -147,7 +148,7 @@
 
                                                     <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
                                                     <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_address">
-                                                    </p>
+                                                        用户名不可为空！</p>
                                                 </div>
                                             </div>
 
@@ -197,6 +198,7 @@
                                         <ul class=" o_g  member-personalinfo-table2 meber-personalinfo-photo js-modifyPhoto">
                                             <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 ">
                                                 <div class="membe-personalinfo-photo-left">
+
                                                     <div id="preview-pane">
                                                         <div class="preview-container " style="width: 180px;height: 180px;">
                                                             <img src="" class="jcrop-preview" alt="Preview" id="js-imgsplit" />

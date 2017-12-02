@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                             </div>
-                                
+
                         </div>
                         <div class="o_u detail-nav-info">
                             <div class="nav-info-box">
@@ -331,18 +331,18 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide swiper-slide-active">
                                         <a href="javascript:;">
-																        	<img src="images/compare_goods.PNG">
-																        </a>
+                                            <img src="images/compare_goods.PNG">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-															        	<img src="images/icon_03.PNG">
-															        </a>
+                                            <img src="images/icon_03.PNG">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-															        	<img src="images/icon_01.png">
-															        </a>
+                                            <img src="images/icon_01.png">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -545,8 +545,8 @@
                 </div>
                 <div class="o_u o_df_1-12 js_oHerl">
                     <a class="js_swiperSellPointNext js_center">
-		    			<img src="images/detail_icon.PNG">
-		    		</a>
+                        <img src="images/detail_icon.PNG">
+                    </a>
                 </div>
             </div>
             <!-- 核心卖点 -->
@@ -604,22 +604,22 @@
                         <a href="product_detail.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
                         <a href="product_detail.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
                     </div> -->
-                    <!-- <a class="iconfont icon-bg-solid js_foldPlus"> -->
-                    <!-- <i class="iconfont icon-plus"></i> -->
-                    <!-- <i class="iconfont icon-close"></i> -->
-                    <!-- </a> -->
-                    <!-- <div class=""> -->
-                        <!-- <a class="iconfont icon-bg-solid js_foldPlus">
+            <!-- <a class="iconfont icon-bg-solid js_foldPlus"> -->
+            <!-- <i class="iconfont icon-plus"></i> -->
+            <!-- <i class="iconfont icon-close"></i> -->
+            <!-- </a> -->
+            <!-- <div class=""> -->
+            <!-- <a class="iconfont icon-bg-solid js_foldPlus">
                             <i class="iconfont icon-plus"></i> -->
-                            <!-- <i class="iconfont icon-close"></i> -->
-                        <!-- </a> -->
-                    <!-- </div> -->
-                    <!-- <div class="o_df-hide o_md-show o_sm-show o_xs-show">
+            <!-- <i class="iconfont icon-close"></i> -->
+            <!-- </a> -->
+            <!-- </div> -->
+            <!-- <div class="o_df-hide o_md-show o_sm-show o_xs-show">
                         <a class="iconfont icon-bg-solid js_foldPlus_sm icon-md-solid">
                             <i class="iconfont icon-plus"></i>
                         </a>
                     </div> -->
-                    <!-- <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav">
+            <!-- <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="product_detail.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
@@ -683,13 +683,13 @@
                 </div>
                 <div class="o_u o_df_7-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                     <div class="foldover-img js_oHerlSizeFoldover js_foldimg js_buyhtml">
-                        <!--<div class='view TRS_UEDITOR trs_paper_default'>
+                        <div class='view TRS_UEDITOR trs_paper_default'>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
                                 <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
                                     锚点名称
                                 </p>
                                 <p>
-                                    <img src='images/login_bg.JPG' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/login_bg.JPG' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -697,7 +697,7 @@
                                     锚点名称1
                                 </p>
                                 <p>
-                                    <img src='images/share_cur.png' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/share_cur.png' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -705,7 +705,7 @@
                                     锚点名称2
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -713,7 +713,7 @@
                                     锚点名称3
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo2.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo2.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -721,7 +721,7 @@
                                     锚点名称4
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo3.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo3.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -729,7 +729,7 @@
                                     锚点名称5
                                 </p>
                                 <p>
-                                    <img src='images/index_entrance01.JPG' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/index_entrance01.JPG' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -737,7 +737,7 @@
                                     锚点名称6
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -745,7 +745,7 @@
                                     锚点名称7
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -753,7 +753,7 @@
                                     锚点名称8
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -761,7 +761,7 @@
                                     锚点名称9
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
@@ -769,16 +769,12 @@
                                     锚点名称10
                                 </p>
                                 <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;'/>
+                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
                                 </p>
                             </div>
                             <p>
                                 <br/>
                             </p>
-                        </div>-->
-                        <div class='box js_box' label='Title left' name='tl' id='' style='margin:0;font-size: 0;'>
-                            <p class='js_tag o_df-hide ue_t' style='width: 100%;font-size: 16px;color:#333;display: inline-block;'>[此处键入锚点名称]</p>
-                            <p><img class='ue_t' src='http://test.tongshuai.com/images/template_detail_8.jpg' style='width: 100%;display: inline-block;'></p>
                         </div>
                     </div>
                 </div>
@@ -1050,7 +1046,7 @@
                                 ￥79008
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
                 <div class="o_u o_df_1-6"></div>
             </div>
@@ -1255,7 +1251,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landUserId">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                     </form>
                                 </div>
@@ -1263,7 +1260,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPassWord">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <p class="Validform_checktip Validform_wrong"></p>
                                     </form>
                                 </div>
@@ -1273,7 +1271,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landPhone">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                     </form>
                                 </div>
@@ -1281,7 +1280,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPhoneYanzheng">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
                                         <p class="Validform_checktip Validform_wrong"></p>
                                     </form>
