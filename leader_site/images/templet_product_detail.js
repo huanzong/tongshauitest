@@ -38,7 +38,7 @@ var morePro=$(".js_moreProA").find("a").length;
 if(morePro==0||morePro<3){
     $.ajax({
         type: "get",
-        url:templet_channelName+"/morePro_101.json",
+        url:templet_channelName+"/morePro.json",
         dataType:"json",
         data: "",
         success_cb: function(data){

@@ -19,6 +19,9 @@
 <div class="o_body">
 	<div class="o_main">
 		<!--搜索框 START-->
+		   <!-- 导航 -->
+		    <!--#include virtual="public/nav.shtml"-->
+		    <!-- 导航 End-->
 		<div class="o_g product-search-head">
 			<div class="o_u o_df_10-12  product-search-head-cont">
 				<div class="l-input o_u o_lg_1-2 o_md_4-12 o_sm_12-12 o_xs_12-12">
@@ -48,7 +51,7 @@
 			<div class="o_u o_df_1-12"></div>
 			<div class="o_u o_df_10-12">
 				<div class="prolist-con">
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
 							<div class="pro-opporate">
@@ -56,7 +59,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -77,16 +80,14 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
-							<div class="pro-activity">
-								<i class="iconfont icon-arrow-line-left l-fl"></i>
-								<span>唤醒初夏</span>
-								<i class="iconfont icon-arrow-line-right l-fr"></i>
+							<div class="pro-activity-spend">
+						 
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
 							<div class="pro-opporate">
@@ -94,7 +95,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -115,16 +116,14 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
-							<div class="pro-activity">
-								<i class="iconfont icon-arrow-line-left l-fl"></i>
-								<span>唤醒初夏</span>
-								<i class="iconfont icon-arrow-line-right l-fr"></i>
+			<div class="pro-activity-spend">
+						 
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
 							<div class="pro-opporate">
@@ -132,7 +131,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -153,16 +152,14 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
-							<div class="pro-activity">
-								<i class="iconfont icon-arrow-line-left l-fl"></i>
-								<span>唤醒初夏</span>
-								<i class="iconfont icon-arrow-line-right l-fr"></i>
+			<div class="pro-activity-spend">
+						 
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
 							<div class="pro-opporate">
@@ -170,7 +167,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -191,7 +188,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -200,7 +197,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
 							<div class="pro-opporate">
@@ -208,7 +205,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -229,7 +226,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -238,7 +235,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
 							<div class="pro-opporate">
@@ -246,7 +243,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -267,7 +264,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -276,7 +273,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
 							<div class="pro-opporate">
@@ -284,7 +281,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -305,7 +302,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -314,7 +311,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
 							<div class="pro-opporate">
@@ -322,7 +319,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -343,7 +340,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -352,7 +349,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
 							<div class="pro-opporate">
@@ -360,7 +357,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -381,7 +378,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -390,7 +387,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
 							<div class="pro-opporate">
@@ -398,7 +395,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -419,7 +416,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -428,7 +425,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-green pro-tag">人气</span>
 							<div class="pro-opporate">
@@ -436,7 +433,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -457,7 +454,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -466,7 +463,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+					<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_2-2">
 						<div class="prolist-box">
 							<span class="l-tag-radius l-tag-blue pro-tag">标签</span>
 							<div class="pro-opporate">
@@ -474,7 +471,7 @@
 										<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
 										</span>
-									<span class="pro-read-font">订阅</span>
+									<!-- <span class="pro-read-font">订阅</span> -->
 								</a>
 								<a class="pro-read l-fr js_compareAddProduct">
 									<span class="pro-read-font">对比</span>
@@ -495,7 +492,7 @@
 									￥19889
 								</div>
 								<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-								<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+								<!-- <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span> -->
 							</a>
 							<div class="pro-activity">
 								<i class="iconfont icon-arrow-line-left l-fl"></i>
@@ -585,7 +582,7 @@
 					<div class="o_u product-search-downleft">
 						<div class="recommend-box">
 							<div class="recommend-title">
-								热门活动
+								精选推荐
 								<i class="iconfont icon-refresh-solid recommend-reload"></i>
 							</div>
 							<div class="recommend-pro">
@@ -617,7 +614,7 @@
 					<div class="o_u product-search-downright" >
 						<div class="recommend-box">
 							<div class="recommend-title">
-								精选推荐
+								热门活动
 								<i class="iconfont icon-refresh-solid recommend-reload"></i>
 							</div>
 							<div class="recommend-activity">

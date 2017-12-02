@@ -229,6 +229,12 @@
                 </li>
             
                 <li>
+                <i class="icon iconfont icon-menu-solid"></i>
+                    <div class="name">menu-solid</div>
+                    <div class="fontclass">.icon-menu-solid</div>
+                </li>
+            
+                <li>
                 <i class="icon iconfont icon-pencil-solid"></i>
                     <div class="name">pencil-solid</div>
                     <div class="fontclass">.icon-pencil-solid</div>
