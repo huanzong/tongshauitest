@@ -4,9 +4,6 @@
 * @date        2017.11.07
 * ---------------------------------------------------------------------------*/
 
-//获取产品个数
-var template_dataNum=$("div.prolist-box").length;
-$(".js_dataNum").text(template_dataNum);
 //判断当前tab标签
 function cur(){
     $(".js_proNameBox").find("a").each(function(){//pc
@@ -28,7 +25,7 @@ function cur(){
 }
 
 //重新绘制价格
-$(".js_minPrice").each(function(){
+/*$(".js_minPrice").each(function(){
     var templet_price=$(this).attr("sku_value");
     if(templet_price==''||templet_price==null){
         $(this).css('display','none');//没有价格隐藏
@@ -36,10 +33,10 @@ $(".js_minPrice").each(function(){
         $(this).find("span").text(readJsonString(templet_price));
     }
 
-})
+})*/
 
 //价格转化获取最小值
-function readJsonString(templet_price){
+/*function readJsonString(templet_price){
     var minPrice = 0;
     var jsonObj = eval('(' + templet_price + ')');
     if(jsonObj != null && jsonObj!="" && jsonObj.length>0){
@@ -55,6 +52,11 @@ function readJsonString(templet_price){
         }
     }
     return minPrice;
+}*/
+//判断精选推荐有无数据
+var templet_recommend=$(".js_recommend").find("a").length;
+if(templet_recommend==0){
+    $(".product-recommend").hide();
 }
 
 //精选推荐手机端添加class
@@ -86,7 +88,8 @@ $('.js_recomChange').click(function(){
                     var dochref = data[random].dochref;
                     var pic = data[random].pic;
                     var sku_value = data[random].sku_value;
-                    var minPrice = 0;
+                    var price = data[random].price;
+                    /*var minPrice = 0;
                     if (sku_value != null && sku_value != "" && sku_value.length > 0) {
                         var currentPrice = 0;
                         for (var i = 0; i < sku_value.length; i++) {
@@ -98,13 +101,13 @@ $('.js_recomChange').click(function(){
                                 minPrice = currentPrice;
                             }
                         }
-                    }
+                    }*/
                     recommendData += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + dochref + '">';
                     recommendData += '<img src="' + pic + '"/>';
                     recommendData += '<div class="recommend-pro-info">';
                     recommendData += '<span class="pro-info-title">' + pname + '</span>';
                     recommendData += '<span class="pro-info-type">' + modelno + '</span>';
-                    recommendData += '<span class="pro-info-price js_minPrice">￥<span>' + minPrice + '</span></span>';
+                    recommendData += '<span class="pro-info-price js_minPrice">￥<span>' + price + '</span></span>';
                     recommendData += '</div></a>';
 
                 }
