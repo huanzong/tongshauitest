@@ -2,19 +2,20 @@
  * Created by 15610 on 2017/11/6.
  */
 $(function(){
+            //静态页面测试添加，正常后隐藏
+        $("#js_unbindmob").attr('autotext',"邮箱（"+'1511***@163.com'+"）");
+        $("#js_unbindmob").append("<option value='1'>邮箱（1511***@163.com）</option>");
+        $("#js_unbindmob").append("<option value='2'>手机（"+"186****1616"+"）</option>");
+        $("#js_unbindmob").oSelect().init();
+
     $('.js_truerevisebtn').click(function(){
         $('.js_validateMobTrue').hide();
         $('.js_validateMob').show();
 
 
+ 
 
 
-
-        //静态页面测试添加，正常后隐藏
-        $("#js_unbindmob").attr('autotext',"手机（"+'15115151515'+"）");
-        $("#js_unbindmob").append("<option value='1'>手机（"+15115151515+"）</option>");
-        $("#js_unbindmob").append("<option value='2'>手机（"+18616161616+"）</option>");
-        $("#js_unbindmob").oSelect().init();
 
     });
 
@@ -41,7 +42,27 @@ $(function(){
     });
 
 
+     $("#js_unbindmob").change(function() { SelectChange(); });
+    function SelectChange(){
+        var val=$("#js_unbindmob").val();
+        if(val==1)
+        {
+            $('.js-send').html('邮箱验证');
+            $('.js-sendemailcode').html('发送验证邮件');
+            $('.js_emailCodeYz').show();
+            $('.js_phoneCodeYz').hide();
+            
+        }   
+        if(val==2)
+        {
+            $('.js-send').html('短信验证');
+            $('.js-sendemailcode').html('发送验证短信');
+            $('.js_emailCodeYz').hide();
+            $('.js_phoneCodeYz').show();
 
+           
+        }
+    }
 
 
 

@@ -273,7 +273,7 @@ $(function(){
     });
 })
 
-//解绑手机号码验证
+//解绑手机号验证
 
 $('.js_phoneCodeYz').blur(function(){
     if($.trim($(this).val()).length==6){

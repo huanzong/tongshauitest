@@ -55,7 +55,6 @@ jQuery(function () {
     $.ajax({
         url: "../../compareurl_56.json",
         dataType: "text",
-        type:"get",
         async: false,
         success: function (data) {
             //解析多个数值
@@ -167,7 +166,7 @@ jQuery(function () {
                         var productID = mold_for_this_subcat[j].productID;//产品ID
                         var json_url = mold_for_this_subcat[j].productJsonUrl;//产品url
                         if (json_url != undefined) {
-                            json_url = json_url.replace(".shtml", "_json.json");
+                            json_url = json_url.replace(".json", "_json.json");
                         }
                         ;
                         if (userChannelId == productID) {
