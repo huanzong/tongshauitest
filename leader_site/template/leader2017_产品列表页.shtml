@@ -271,7 +271,7 @@
 							共<span class="red js_dataNum">
 </span>款冰箱产品
 						</span>
-						<div class="pro-group">
+						<!--<div class="pro-group">
 							<div class="group-style">
 								<span>
 					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠" />
@@ -285,7 +285,7 @@
 					            <span class="group-info o_xs-hide"> | </span>
 					            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right o_xs-hide"></i></a>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 				<div class="o_u o_df_1-12"></div>
@@ -315,10 +315,10 @@
 								</trs_viewdata>
 								<div class="pro-opporate">
 									<a class="pro-read">
-										<span class="pro-read-i">
+										<!--<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
-										</span>
-										<span class="pro-read-font">订阅</span>
+										</span>-->
+										<!--<span class="pro-read-font">订阅</span>-->
 									</a>
 									<a class="pro-read l-fr js_compareAddProduct" auto="0" 
 									id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top" 
@@ -501,9 +501,7 @@
 			</div>
 		<!-- 产品对比 END -->
 
-			
-	    	
-		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+		<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 		<div class="product-footer-height o_lg-hide o_md-hide o_sm-hide o_xs-hide"></div>
 	    <!-- 弹层-筛选项 -->
 	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
@@ -525,7 +523,7 @@
 	    <!-- 弹层-筛选项 END -->
 		</div>
 	</div>
-	<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+	<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 	<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
     <script type="text/javascript" src="../site5/templet_pagination.js"></script>
     <script type="text/javascript" src="../site5/templet_product_list_template.js"></script>

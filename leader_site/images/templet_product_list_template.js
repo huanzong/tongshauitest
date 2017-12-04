@@ -66,7 +66,7 @@ $('.js_recomChange').click(function(){
     $.ajax({
         type: "get",
         dataType:"json",
-        url: template_url+"recommend_116.json",
+        url: template_url+"recommend.json",
         data: "",
         success_cb: function(data){
             if(data.length>4) {

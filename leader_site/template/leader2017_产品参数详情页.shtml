@@ -47,10 +47,10 @@
 			</div>
 		</div>
 	</div>
-	<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+	<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="swiper-3.4.2.jquery.min.js"></script>
 <script type="text/javascript" src="product_param.js"></script>
 <script type="text/javascript">
