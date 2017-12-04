@@ -184,10 +184,9 @@
                                                 <!--<canvas id="js_imgCut"></canvas>-->
                                                 <div class="member-personalinfo-modifyimg">
                                                     <div class="membe-personalinfo-photo-right">
-                                                        <img src="" alt="" />
+                                                        <img src="../images/ignore_prodetail3.JPG" alt="">
                                                     </div>
-                                                    <a href="javascript:;" id="js_imgUpload"
-                                                       class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
+                                                    <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
                                                     <p>支持jpg、jpeg、png，大小不超过2M</p>
                                                 </div>
 
