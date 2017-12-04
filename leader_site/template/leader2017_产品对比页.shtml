@@ -107,10 +107,10 @@
 		    	
 	    	</div>
 			<div class="compare_bot_height"></div>
-	    	<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+			<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
         </div>
 	</div>
-	<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+	<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 	<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
 	<script type="text/javascript" src="../site5/product_compare.js"></script>
         <script type="text/javascript" src="../site5/templet_product_compare.js"></script>

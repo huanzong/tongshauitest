@@ -120,7 +120,7 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
         <!--弹窗2-->
         <div class="pop-up2 js_popUpBox2">
             <span class="iconfont icon-check-mark-solid pop-up2_true js_popUpTrue"></span>
@@ -130,7 +130,7 @@
         </div>
     </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <!--<script type="text/javascript" src="../site5/member.js"></script>-->
 <script type="text/javascript" src="../site5/member_nav.js"></script>

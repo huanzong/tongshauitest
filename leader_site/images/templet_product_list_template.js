@@ -4,9 +4,6 @@
 * @date        2017.11.07
 * ---------------------------------------------------------------------------*/
 
-//获取产品个数
-var template_dataNum=$("div.prolist-box").length;
-$(".js_dataNum").text(template_dataNum);
 //判断当前tab标签
 function cur(){
     $(".js_proNameBox").find("a").each(function(){//pc
@@ -39,7 +36,7 @@ function cur(){
 })*/
 
 //价格转化获取最小值
-function readJsonString(templet_price){
+/*function readJsonString(templet_price){
     var minPrice = 0;
     var jsonObj = eval('(' + templet_price + ')');
     if(jsonObj != null && jsonObj!="" && jsonObj.length>0){
@@ -55,6 +52,11 @@ function readJsonString(templet_price){
         }
     }
     return minPrice;
+}*/
+//判断精选推荐有无数据
+var templet_recommend=$(".js_recommend").find("a").length;
+if(templet_recommend==0){
+    $(".product-recommend").hide();
 }
 
 //精选推荐手机端添加class
@@ -66,7 +68,7 @@ $('.js_recomChange').click(function(){
     $.ajax({
         type: "get",
         dataType:"json",
-        url: template_url+"recommend_116.json",
+        url: template_url+"recommend.json",
         data: "",
         success_cb: function(data){
             if(data.length>4) {
@@ -85,10 +87,9 @@ $('.js_recomChange').click(function(){
                     var modelno = data[random].modelno;
                     var dochref = data[random].dochref;
                     var pic = data[random].pic;
+                    var sku_value = data[random].sku_value;
                     var price = data[random].price;
-
-                   /* var sku_value = data[random].sku_value;
-                    var minPrice = 0;
+                    /*var minPrice = 0;
                     if (sku_value != null && sku_value != "" && sku_value.length > 0) {
                         var currentPrice = 0;
                         for (var i = 0; i < sku_value.length; i++) {

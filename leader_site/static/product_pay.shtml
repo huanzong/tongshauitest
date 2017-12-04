@@ -50,10 +50,10 @@
                        </div>
                     </div>
                     <div class="success-tip-address">
-                       <span class="tip-address-tit">收货地址：</span>
+                       <span class="tip-address-tit">收货信息：</span>
                        <span>海尔统帅</span>
                        <span>山东省青岛市市南区费金额哦根据9900金额</span>
-                       <span class="tip-address-price">应付金额：<em>￥9900</em></span>
+                       <span class="tip-address-price">应付总额：<em>￥9900</em></span>
                     </div>
                     <!-- 订单提交成功 END -->
                     <!-- 支付方式 XL -->
@@ -95,7 +95,7 @@
                             <!-- 分期付款 -->
                             <div class="pay-system-instalments l-none js_paySystemBox">
                                 <ul class="instalments-select">
-                                    <li>
+                                    <li class="active">
                                         <img src="images/pay_system1.jpg">
                                     </li>
                                     <li>

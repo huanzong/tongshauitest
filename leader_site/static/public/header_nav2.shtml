@@ -3,10 +3,10 @@
                         <div class="memeber-nav-logo o_u o_xs_2-12">
                             <img src="images/l_logo.png" alt="">
                         </div>
-                        <div class=" o_u o_xs_2-12 memeber-nav-logo-text">
+                        <div class=" o_u o_xs_3-12 memeber-nav-logo-text">
                             个人中心
                         </div>
-                        <div class="o_u o_xs_2-12"></div>
+                        <div class="o_u o_xs_1-12"></div>
 
                         <div class="memeber-nav-userinfo o_u o_xs_2-12">
                             <img src="images/member_navhd_img.jpg" alt="">
@@ -21,7 +21,7 @@
                                 <a href="javascript:;" class="iconfont icon-shoppingcart"><span>购物车</span></a><i class="member-nub-round">9</i>
                             </li>
                             <li class="">
-                                <a href="javascript:;" class="iconfont icon-price-tag-solid1"><span>优惠卷</span></a><i class="member-nub-round">9</i>
+                                <a href="javascript:;" class="iconfont icon-price-tag-solid1"><span>优惠券</span></a><i class="member-nub-round">9</i>
                             </li>
                         </ul>
                         <div class="o_u o_xs_2-12 iconfont icon-menu memeber-nav-top-btn js_navxsbtn" data-alt="1"></div>

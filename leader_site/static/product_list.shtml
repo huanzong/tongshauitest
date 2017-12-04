@@ -18,7 +18,7 @@
 	<div class="o_body">
         <div class="o_main">
         <!-- 首屏动画 -->
-	        <!-- <div class="o_g js_animateLine">
+	        <div class="o_g js_animateLine">
 	        	<div class="index_animate">
 					<div class="index_animateBox">
 						<span></span>
@@ -37,7 +37,7 @@
 					</div>
 					<div class="index_animateBox"></div>
 				</div>
-	        </div> -->
+	        </div>
 	    <!-- 首屏动画 END -->
 	    <!-- 导航 -->
 	    	<!--#include virtual="public/nav.shtml"-->
@@ -274,7 +274,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -312,7 +312,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -350,7 +350,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -388,7 +388,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -426,7 +426,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -464,7 +464,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -502,7 +502,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -540,7 +540,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -578,7 +578,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -616,7 +616,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -654,7 +654,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -692,7 +692,7 @@
 									<a class="pro-read l-fr js_compareAddProduct">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -723,7 +723,7 @@
 			</div>
 		<!-- 产品列表 END -->
 		<!-- 分页 -->
-			<div class="o_g product-listpage pageMax">
+			<div class="o_g product-listpage pageMax o_sm-hide o_xs-hide">
                 <a  class="l-pagination-prew">上一页</a>
                 <a  class="l-pagination-pagenumber active">1</a>
                 <a  class="l-pagination-pagenumber">2</a>
@@ -735,7 +735,7 @@
                 <a  class="l-pagination-pagenumber">8</a>
                 <a  class="l-pagination-next ">下一页</a>
             </div>
-			<div class="o_g product-listpage pageMiddle">
+			<div class="o_g product-listpage pageMiddle o_df-hide o_sm-show">
                 <a  class="l-pagination-prew">上一页</a>
                 <a  class="l-pagination-pagenumber active">1</a>
                 <a  class="l-pagination-pagenumber">2</a>
@@ -744,7 +744,7 @@
                 <a  class="l-pagination-pagenumber">5</a>
                 <a  class="l-pagination-next ">下一页</a>
             </div>
-			<div class="o_g product-listpage pageMobile">
+			<div class="o_g product-listpage pageMobile o_df-hide o_xs-show">
                 <a  class="l-pagination-prew">上一页</a>
                 <a  class="l-pagination-pagenumber active">1</a>
                 <a  class="l-pagination-pagenumber">2</a>
@@ -782,7 +782,7 @@
 										<span class="pro-info-price">￥633</span>
 									</div>
 								</a>
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide">
 									<img src="images/compare_goods.PNG">
 									<div class="recommend-pro-info">
 										<span class="pro-info-title">统帅就给个</span>
@@ -791,7 +791,7 @@
 										<span class="pro-info-price">￥633</span>
 									</div>
 								</a>
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
 									<img src="images/compare_goods.PNG">
 									<div class="recommend-pro-info">
 										<span class="pro-info-title">统帅就给个</span>
@@ -875,6 +875,7 @@
 		<!-- 产品对比 END -->
 
 	    	<!--#include virtual="public/footer.shtml"-->
+	    	<div class="product-footer-height o_lg-hide o_md-hide o_sm-hide o_xs-hide"></div>
 
 	    <!-- 弹层-筛选项 -->
 	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate" data-flag="0">
@@ -980,5 +981,6 @@
 	<!--#include virtual="public/foot.shtml"-->
 	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 	<script type="text/javascript" src="images/product_list.js"></script>
+	<script type="text/javascript" src="images/templet_product_list.js"></script>
 </body>
 </html>

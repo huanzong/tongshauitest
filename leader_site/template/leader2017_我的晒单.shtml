@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-我的晒单</title>
+    <title>个人中心-我的评价</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div id="js-leftredlight" style="display: none;">我的晒单</div>
+<div id="js-leftredlight" style="display: none;">我的评价</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g js-contBox">
@@ -38,10 +38,10 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
     </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="../site5/member_nav.js"></script>
 <script type="text/javascript" src="../site5/jquery.jUploader-1.01.min.js"></script>

@@ -15,10 +15,10 @@ $(function() {
 
 	$(".js_checkbox,.js_radio").jq_qvote();
 
-	//¹ö¶¯¸¡²ã
+	//æ»šåŠ¨æµ®å±‚
     $(window).scroll(function(){
         var currentPos = $(document).scrollTop()-100;
-        //µ¼º½¶¨Î»
+        //å¯¼èˆªå®šä½
         if(currentPos>$('.js_navPos').offset().top){
         	if(!$('.js_compareList').hasClass('detail-nav-fixed')){
 				$('.js_compareList').addClass('detail-nav-fixed').find('img').hide();

@@ -90,7 +90,7 @@
 							<trs_viewdatas id="首页banner" num="5">
 								<div class="swiper-slide">
 									<a href="<trs_viewdata field='link'/>">
-										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" sm="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" sm="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 									</a>
 								</div>
 							</trs_viewdatas>
@@ -365,10 +365,10 @@
 		</div>
 		<!-- 关于统帅 END -->
 
-		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+		<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 	</div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
 <script type="text/javascript" src="../site5/index.js"></script>
 </body>

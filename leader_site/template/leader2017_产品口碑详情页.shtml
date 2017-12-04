@@ -13,8 +13,8 @@
       // 口碑常量配置
       var reputationConfig= {
         //产品型号
-        //templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
-        templet_businessId: "BCD-557WDGSU1",
+        templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
+        //templet_businessId: "BCD-557WDGSU1",
         templet_pageSize:2
       };
     </script>
@@ -76,11 +76,11 @@
         </div>
         <div class="o_g product-prise-page pageMobile o_df-hide o_sm-hide o_xs-show">
         </div>
-        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 
     </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
 <script type="text/javascript" src="../site5/product_praise.js"></script>
 <script type="text/javascript" src="../site5/templet_product_reputation.js"></script>

@@ -152,7 +152,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                         //产品型号
                         var modelNo = returnData[i].modelno;
                         //价格
-                        var price = returnData[i].price; //readJsonString(returnData[i].sku_values);
+                        var price = readJsonString(returnData[i].sku_values);//returnData[i].price;
                         //产品类型
                         var cplx = returnData[i].cplx;
                         //当前时间

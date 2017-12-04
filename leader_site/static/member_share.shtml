@@ -40,8 +40,8 @@
                                 <div class="member-share-rightbox o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2">
                                     <div class="member-share-right-cont">
                                         <div class="member-share-score">
-                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
-                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title  o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">整体评分<i>*</i></p>
+                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <li>
                                                     <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
                                                 </li>
@@ -62,8 +62,8 @@
 
                                         </div>
                                         <div class="member-share-evaluate ">
-                                            <p class="member-share-right-title o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
-                                            <div class="member-share-evaluate-val o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">详细评价<i>*</i></p>
+                                            <div class="member-share-evaluate-val o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <textarea class="js_EvaluateVal o_u o_df_5-6 o_lg_5-6 o_md_5-6 o_sm_5-6 o_xs_5-6"></textarea>
                                                 <div class="member-share-evaluate-vallength">
                                                     <span class="js_EvaluateValLength">0</span><span>/500</span>
@@ -74,21 +74,23 @@
 
                                         </div>
                                         <div class="member-share-photo ">
-                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>&nbsp;&nbsp;</span>照片分享<i>*</i></p>
-                                            <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title  o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">照片分享<i>*</i></p>
+                                            <div class="member-share-photo-btn o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <ul class="member-share-right-photo js_sharephotobox">
 
                                                 </ul>
                                                 <a href="javascript:;"  id="js_shareimgUpload" class="js_share_getup_img l-btn-sm l-btn-line1">本地上传</a>
                                                 <a href="javascript:;"  class="js_share_getup_false l-btn-sm l-btn-line1 l-btn-disable share_getup_false">本地上传</a>
                                             </div>
-                                            <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
-                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持JPG、JPGE、PNG，大小不超过2MB</p>
+                                            <div class="o_u  o_df_2-6"></div>
+                                            <p class="member-share-photo-btn-down o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持JPG、JPGE、PNG，大小不超过2MB</p>
                                         </div>
-                                        <div class="member-share-right-getup o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                         <div class="o_u  o_df_2-6"></div>
+                                        <div class="member-share-right-getup o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                             <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -119,7 +121,6 @@
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_share.js"></script>
-<script type="text/javascript" src="images/templet_member_share.js"></script>
 <!-- <script type="text/javascript" src="images/templet_member_share.js"></script> -->
 </body>
 </html>

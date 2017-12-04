@@ -268,10 +268,9 @@
 						<span class="line"></span>
 						<a class="font">价格<i class="iconfont l-none"></i></a>
 						<span class="info">
-							共<span class="red js_dataNum">
-</span>款冰箱产品
+							共<span class="red js_dataNum"><TRS_CHANNEL ID="OWNER" FIELD="_DataCount" COUNTWHERE="WCMDocument.dockeywords='否' and WCMDocument.docstatus in (10,27)" /></span>款冰箱产品
 						</span>
-						<div class="pro-group">
+						<!--<div class="pro-group">
 							<div class="group-style">
 								<span>
 					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠" />
@@ -285,7 +284,7 @@
 					            <span class="group-info o_xs-hide"> | </span>
 					            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right o_xs-hide"></i></a>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 				<div class="o_u o_df_1-12"></div>
@@ -298,7 +297,7 @@
 				<div class="o_u o_df_1-12"></div>
 				<div class="o_u o_df_10-12">
 					<div class="prolist-con"> 
-						<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  PAGESIZE="1" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc">
+						<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  PAGESIZE="24" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc">
 						<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
 							<div class="prolist-box">
 								<trs_viewdata field="rqcp">
@@ -315,10 +314,10 @@
 								</trs_viewdata>
 								<div class="pro-opporate">
 									<a class="pro-read">
-										<span class="pro-read-i">
+										<!--<span class="pro-read-i">
 											<i class="iconfont icon-price-tag-solid1"></i>
-										</span>
-										<span class="pro-read-font">订阅</span>
+										</span>-->
+										<!--<span class="pro-read-font">订阅</span>-->
 									</a>
 									<a class="pro-read l-fr js_compareAddProduct" auto="0" 
 									id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top" 
@@ -330,7 +329,7 @@
 									data-chnid="<TRS_VIEWDATA field='CHANNELID' />">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -374,7 +373,7 @@
 									<a class="pro-read l-fr">
 										<span class="pro-read-font">对比</span>
 										<span class="pro-read-i">
-											<i class="iconfont icon-d-solid"></i>
+											<i class="iconfont icon-contrast-solid"></i>
 										</span>
 									</a>
 								</div>
@@ -406,13 +405,13 @@
 			</div>
 		<!-- 产品列表 END -->
 		<!-- 分页 -->
-			<div class="o_g product-listpage pageMax o_df-show o_sm-hide o_xs-hide">
+			<div class="o_g product-listpage pageMax o_sm-hide o_xs-hide">
                 
             </div>
-			<div class="o_g product-listpage pageMiddle o_df-hide o_sm-show o_xs-hide">
+			<div class="o_g product-listpage pageMiddle o_df-hide o_sm-show">
                 
             </div>
-			<div class="o_g product-listpage pageMobile o_df-hide o_sm-hide o_xs-show">
+			<div class="o_g product-listpage pageMobile o_df-hide o_xs-show">
                 
             </div>
 
@@ -432,10 +431,8 @@
 							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
 							    <trs_channel id="parent" AUTOLINK='false'>
 								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
-								<trs_viewdata field="xinpin">
-								<TRS_CONDITION REFERENCE="是" CONDITION="@xinpin" OPERATOR="contain">
-								<trs_viewdata field="xpbqyxq">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='>='>
+								<trs_viewdata field="shangshishijian">
+								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
 									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
@@ -445,18 +442,14 @@
 									</div>
 								</a>
 								</TRS_CONDITION>
-							    </trs_viewdata> 
-							    </TRS_CONDITION>
-							    </trs_viewdata> 
+							    </trs_viewdata>
 							    </TRS_DOCUMENTS>
 							    </trs_channel>
 							    </TRS_CONDITION>
 							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
 								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
-								<trs_viewdata field="xinpin">
-								<TRS_CONDITION REFERENCE="是" CONDITION="@xinpin" OPERATOR="contain">
-								<trs_viewdata field="xpbqyxq">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='>='>
+								<trs_viewdata field="shangshishijian">
+								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
 									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
@@ -466,9 +459,7 @@
 									</div>
 								</a>
 								</TRS_CONDITION>
-							    </trs_viewdata> 
-							    </TRS_CONDITION>
-							    </trs_viewdata> 
+							    </trs_viewdata>
 							    </TRS_DOCUMENTS>
 							    </TRS_CONDITION>
 							</div>
@@ -501,9 +492,8 @@
 			</div>
 		<!-- 产品对比 END -->
 
-			
-	    	
-		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+		<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+		<div class="product-footer-height o_lg-hide o_md-hide o_sm-hide o_xs-hide"></div>
 	    <!-- 弹层-筛选项 -->
 	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
 	    		<div class="o_u o_df_5-12 o_md_4-12 o_sm_3-12 o_xs_2-12 layer-bg"></div>
@@ -524,7 +514,7 @@
 	    <!-- 弹层-筛选项 END -->
 		</div>
 	</div>
-	<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+	<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 	<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
     <script type="text/javascript" src="../site5/templet_pagination.js"></script>
     <script type="text/javascript" src="../site5/templet_product_list_template.js"></script>
@@ -534,7 +524,8 @@
     <script type="text/javascript" src="../site5/query_product_price.js"></script>
     <script>
     	var template_url="<TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain'><trs_channel id='parent' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION><TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain' not='true'><trs_channel id='owner' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION>"
-    	var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';   
+    	var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';
+
     	cur();
 		//var pagehtml = createPageHTMLS(${PAGE_COUNT}, "${PAGE_NAME}", "${PAGE_EXT}",${RECORD_COUNT},7);
 		//if(undefined != pagehtml ){$(".leader_pager").html(pagehtml);}
