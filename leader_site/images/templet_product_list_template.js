@@ -55,7 +55,7 @@ function cur(){
 }*/
 //判断精选推荐有无数据
 var templet_recommend=$(".js_recommend").find("a").length;
-if(templet_recommend<0){
+if(templet_recommend==0){
     $(".product-recommend").hide();
 }
 
