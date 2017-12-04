@@ -5,12 +5,8 @@
 * ---------------------------------------------------------------------------*/
 $(function(){
 
-    // 前台判断是否登陆
-    if(!istrsidssdssotoken()){
-       jumpToLoginPage();
-    }
     if($.cookie('isAlterBind') == null ){
-      document.cookie="isAlterBind=0;path=/";
+        document.cookie="isAlterBind=0;path=/";
     }
 
     //页面加载时调个人信息
@@ -18,6 +14,7 @@ $(function(){
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
         data: "",
+        login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
                 //有没有邮箱
@@ -81,6 +78,7 @@ $(function(){
                 $.ajax({
                     url: siteConfig.userUrl+'/ids/ts/userInfoManager.jsp',
                     data:"editOperation=getPwdLevel",
+                    login:true,
                     success_cb: function (data) {
                         if(data.isSuccess){
                             if(data.pwdType=="STRONG")
@@ -121,17 +119,4 @@ $(function(){
             }
         }
     });
-
-    $('.js-emailsuccesslast').click(function(){//修改邮箱
-        window.location.href ='/security/revisemail_96.shtml'
-    })
-    $('.js-emailfalselast').click(function(){//绑定邮箱
-        window.location.href ='/security/bindemial_69.shtml'
-    })
-    $('.js-mobilesuccesslast').click(function(){//解绑手机
-        window.location.href ='/security/unbindmob_51.shtml'
-    })
-    $('.js-mobilefalselast').click(function(){//绑定手机
-        window.location.href ='/security/bindmob_68.shtml'
-    })
 })

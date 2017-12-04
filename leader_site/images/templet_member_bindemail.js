@@ -4,10 +4,6 @@
 * @date        2017.10.19
 * ---------------------------------------------------------------------------*/
 $(function(){
-    //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage();
-    }
 
     //页面加载时调个人信息
     $.ajax({
@@ -65,6 +61,7 @@ $(function(){
             data: {
                 'editOperation':'beforeBindEmailSendMobileCode'
             },
+            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -88,6 +85,7 @@ $(function(){
                     'param':'mobile',
                     'code':templet_code
                 },
+                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -170,6 +168,7 @@ $(function(){
                     'editOperation':'sendBindEmailCode',
                     'newEmail':templet_newEmail
                 },
+                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -251,6 +250,7 @@ $(function(){
                     'newEmail':templet_newEmail,
                     'emailCode':templet_emailCode
                 },
+                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -310,7 +310,6 @@ $(function(){
                                 $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
                             }
                         }
-
                     }
                 }
             });

@@ -49,7 +49,7 @@
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functioninfo"></div>
                                         <div class="o_u o_df_1-3 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">用于保护帐号信息和登录安全</div></div></div></div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox">
-                                            <a href="/security/resetpassword_103.shtml" class="l-btn-sm l-btn-line2 member-security-revisebtn">修改</a>
+                                            <a href="/security/resetpassword.shtml" class="l-btn-sm l-btn-line2 member-security-revisebtn">修改</a>
                                         </div>
                                     </li>
 
@@ -65,10 +65,10 @@
                                         </div>
                                         <div class="o_u o_df_1-3 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">可用于账号登录，密码重置或其他安全验证</div></div></div></div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox js-emailsuccesslast" style="display:none">
-                                            <a href="javascript:;" class="l-btn-sm l-btn-line2 member-security-revisebtn">修改</a>
+                                            <a href="/security/revisemail.shtml" class="l-btn-sm l-btn-line2 member-security-revisebtn">修改</a>
                                         </div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox js-emailfalselast">
-                                            <a href="javascript:;" class="l-btn-sm l-btn-orange member-security-bindbtn">立即绑定</a>
+                                            <a href="/security/bindemial.shtml" class="l-btn-sm l-btn-orange member-security-bindbtn">立即绑定</a>
                                         </div>
 
                                     </li>
@@ -85,10 +85,10 @@
                                         </div>
                                         <div class="o_u o_df_1-3 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">可用于账号登录，密码重置或其他安全验证</div></div></div></div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox js-mobilefalselast">
-                                            <a href="javascript:;" class="l-btn-sm l-btn-orange member-security-bindbtn ">立即绑定</a>
+                                            <a href="/security/bindmob.shtml" class="l-btn-sm l-btn-orange member-security-bindbtn ">立即绑定</a>
                                         </div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox js-mobilesuccesslast" style="display:none">
-                                            <a href="javascript:;" class="l-btn-sm l-btn-line2 member-security-revisebtn">解绑</a>
+                                            <a href="/security/unbindmob.shtml" class="l-btn-sm l-btn-line2 member-security-revisebtn">解绑</a>
                                         </div>
                                     </li>
 
@@ -114,10 +114,10 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
     </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/templet_member_securitySetting.js"></script>
