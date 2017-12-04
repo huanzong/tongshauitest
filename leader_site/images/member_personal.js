@@ -7,88 +7,54 @@ $(function(){
 
 
 //    用户名判定
+    var nubreg =/^[0-9]*$/;
+    var stringOnereg = /^[a-zA-Z]{1}/;
+    var regEn = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+    var  regCn = /[·！#￥（——）：；“”‘、，|《。》？、【】[\]]/im;
     var templet_pic;
     var imgX,imgY,imgW;
 
     $('.js_member input').blur(function(){
-        var loginAccountName = $.trim($('.js_member input').val());
-        if ("" == loginAccountName) {
-            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'请填写用户名');
-            return;
-        }
-        //把全部符合\x00-\xff条件的字符用**替换，然后计算长度，即遇到一个中文就用**替换，计算为两位
-        var _sUserName_length = loginAccountName.replace(/[^\x00-\xff]/g, "**").length;
-        if (_sUserName_length <= 3) {
-            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'还不足4个字符哦！');
-            return;
-        }
-        if (_sUserName_length >= 19) {
-            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'已经超过18个字符啦！');
-            return;
-        }
-
-        var pattern2 = "\\·[+《》\"`~!@#$^&*()%=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？] ";
-        var rs = "";
-        var rsArray = new Array();
-        var j = 0;
-        for (var i = 0; i < loginAccountName.length; i++) {
-            var special_index = pattern2.indexOf(loginAccountName.substr(i, 1));
-            if (special_index > 0) {
-                rs += "\"" + loginAccountName.substr(i, 1) + "\"、";
-                rsArray[j] = loginAccountName.substr(i, 1);
-                j++;
-            }
-        }
-        if (rs.length == 0) {
-            //验证用户名是否全部由数字组成
-            var number = /^\d{4,}$/;
-            if (number.test(loginAccountName)) {
-                //用户名不能以数字开头，这样避免了userNmae 和 mobile 区分不开的问题
-                wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不能全为数字');
-            } else {
-                if (loginAccountName.indexOf("trs_") > -1 || loginAccountName.indexOf("TRS_") > -1) {
-                    wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不能包含trs_等关键字');
-                }else {
+        var username =  $('.js_member input').val();
+        if(username.length>3&&username.length<21){
+            $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+            if(!nubreg.test(username)){
+                $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                if(stringOnereg.test(username)){
                     $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                    if(!regEn.test(username)&& !regCn.test(username)){
+                        $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                    }else{
+                        wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'不可以使用特殊字符');
+                    }
+                }else{
+                    wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'第一个字符必须为字母');
                 }
+            }else{
+                wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不可以全部是数字');
             }
-        }else {
-            $.unique(rsArray);
-            var special = "";
-            if (3 < rsArray.length) {
-                special = "\"" + rsArray[0] + "\"、\"" + rsArray[1] + "\"、\"" + rsArray[2] + "\" 等";
-            } else if (1 == rsArray.length) {
-                special = "\"" + rsArray[0] + "\"";
-            } else {
-                for (var i = 0; i < rsArray.length; i++) {
-                    special += "\"" + rsArray[i] + "\"、";
-                }
-                special = special.substr(0, special.length - 1);
-
-                //如果是对的就
-            }
-            //用户名中含有特殊字符
-            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),"用户名中含有特殊字符" + special);
+        }else{
+            wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名长度不合格');
         }
     });
 
 
             // Create variables (in this scope) to hold the API and image size
-    var jcrop_api,
-        boundx,
-        boundy,
-    // Grab some information about the preview pane
-        $preview = $('#preview-pane'),
-        $pcnt = $('#preview-pane .preview-container'),
-        $pimg = $('#preview-pane .preview-container img'),
-        xsize = $pcnt.width(),
-        ysize = $pcnt.height();
+            var jcrop_api,
+                boundx,
+                boundy,
+            // Grab some information about the preview pane
+                $preview = $('#preview-pane'),
+                $pcnt = $('#preview-pane .preview-container'),
+                $pimg = $('#preview-pane .preview-container img'),
+                xsize = $pcnt.width(),
+                ysize = $pcnt.height();
     var imgs = new Image();
     var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
             $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
-                    aspectRatio: xsize / ysize,
+                    aspectRatio: 1,
                     boxWidth:300,
                     boxHeight:300,
                     setSelect: [ 60, 60, 260, 260 ]
@@ -106,10 +72,10 @@ $(function(){
 
                 }
             );
-            function updatePreview(c){
-                if (parseInt(c.w) > 0) {
-                    var rx = 180 / c.w;
-                    var ry = 180 / c.h;
+            function updatePreview(coords){
+                if (parseInt(coords.w) > 0) {
+                    var rx = 180 / coords.w;
+                    var ry = 180 / coords.h;
                     $('#js-imgsplit').css({
                         //width: Math.round(rx * boundx) + 'px',
                         //height: Math.round(ry * boundy) + 'px',
@@ -122,10 +88,17 @@ $(function(){
                         ////height: Math.round($('.js-rightimg').height()) + 'px',
                         //    marginLeft: '-' + Math.round(rx * c.x) + 'px',
                         //    marginTop: '-' + Math.round(ry * c.y) + 'px'
-                        width:Math.round(rx *imgsW) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
-                        height:Math.round(rx * imgsH) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
-                        marginLeft:"-" + Math.round(rx * c.w) + "px",
-                        marginTop:"-" + Math.round(ry *c.y) + "px"
+                        width:Math.round(rx *300) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
+                        height:Math.round(rx * 300) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
+                        marginLeft:"-" + Math.round(rx * coords.x)+ "px",
+                        marginTop:"-" + Math.round(ry *coords.y) + "px"
+               
+
+
+        //                 width: Math.round(rx * 500) + 'px',
+        //                  height: Math.round(ry * 370) + 'px',
+        // marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+        // marginTop: '-' + Math.round(ry * coords.y) + 'px'
                         }
                     );
                 }
@@ -166,7 +139,7 @@ $(function(){
 
 //   用户名状态切换
     //$('.js_member').hide();
-    //$('.js_personalinfo-namefixed').hide();
+    $('.js_personalinfo-namefixed').hide();
 
 
 //    上传组件
@@ -191,6 +164,7 @@ $.jUploader({
     // 开始上传事件
 
     onUpload: function(data) {
+        console.log(data,111);
         if(data){
             globalShade2('图片上传中，请耐心等待....',4,'forever');
         }
@@ -203,7 +177,7 @@ $.jUploader({
 
 //      隐藏永恒显示弹窗
             $('.js_popUpBox2').hide();
-            $("body").css({overflow:"js_popUpBox2uto"});
+            $("body").css({overflow:"auto"});
 
             $('.js-uploadPhoto').hide();
             $('.js-modifyPhoto').show();
@@ -291,21 +265,30 @@ $('.js-personalinfotab').click( function () {
     $('#getupimg').unbind().click( function () {
 
         var imgSize = jcrop_api.tellSelect();
+        console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
             type: "get",
             data: {
                     "picX": parseInt(imgSize.x),
                     "picY": parseInt(imgSize.y),
-                     "width": parseInt(imgSize.w),
-                     "height": parseInt(imgSize.h),
+                     "width": parseInt(imgSize.w*(imgsW/300)),
+                     "height": parseInt(imgSize.h*(imgsH/300)),                     
+            
                      "userHeadPic": imgs.src
             },
-            login:true,
-            csrf:true,
             success_cb: function (data) {
                 if (data.isSuccess) {
-                    globalShade2('保存成功','1');
+
+                    var tabNmu =$('.js-personalPicuure').index();
+                    $('.js-personalinfotabcont').hide();
+                    $('.js-personalinfotabcont').eq(tabNmu).show()
+                    $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
+                    $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
+                    $('.js-uploadPhoto').show();
+                    $('.js-modifyPhoto').hide();
+                    $('.js-modifyPhotoBtn').hide();
+                    $("#js-imgleft").attr("src",data.data);
                     location.reload();
                 }
                 else{
@@ -321,7 +304,5 @@ function wrongInfo(obj,obj2,text){
     obj.addClass('personalist-wrong-box').removeClass('personalist-right');
     obj2.html(text);
 }
-
-
 
 

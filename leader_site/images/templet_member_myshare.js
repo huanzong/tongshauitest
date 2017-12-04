@@ -5,11 +5,6 @@
 * ---------------------------------------------------------------------------*/
 
 $(function(){
-    //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage()
-    }
-
     var templat_pagesize='10';
 
     $.ajax({

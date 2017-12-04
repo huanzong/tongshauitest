@@ -69,7 +69,7 @@
                                                     <input type="text" name="" ph="电话号" value="" id="phone">
                                                 </div>
                                             </div>
-                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2" style='padding-right: 2px'>
                                                 <div class="l-input member-address-inputbox">
                                                     <input type="text" name="" ph="分机号" value="" id="phonefenjihao">
                                                 </div>
@@ -222,7 +222,7 @@
             <div class="land-cont-normal-input o_g">
                 <div class="o_g member-bingmob-list">
                     <div class="o_u o_df_11-12  l-input member-bingmob-listipt ">
-                        <p class="js-landText"></p>
+                        <p class="js-landText">确定取消添加？</p>
                     </div>
                 </div>
             </div>

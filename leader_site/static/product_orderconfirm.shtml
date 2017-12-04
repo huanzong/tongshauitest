@@ -177,7 +177,7 @@
                                         <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red   js_orderConfirmGetUpData">保存</a>
                                     </div>
                                     <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_2-2 ">
-                                        <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消收藏？')">取消</a>
+                                        <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消设置？')">取消</a>
                                     </div>
                                    </div>
                                 </div>
