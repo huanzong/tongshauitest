@@ -502,7 +502,7 @@ function compareButtonOnclick() {
                     vURL = vURL.substring(0, vURL.lastIndexOf("/"));
                 }
                 //todo channelId先暂时固定
-                vURL = vURL + '/compare_59.shtml?productId=' + vStr + '&channelId=' + chnlid_owner;
+                vURL = vURL + '/compare.shtml?productId=' + vStr + '&channelId=' + chnlid_owner;
             } else {
                 vURL = window.location.href;
             }
