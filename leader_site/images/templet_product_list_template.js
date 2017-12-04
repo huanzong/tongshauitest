@@ -54,7 +54,7 @@ function cur(){
     return minPrice;
 }*/
 //判断精选推荐有无数据
-var templet_recommend=$(".js_recommend").find(a).length;
+var templet_recommend=$(".js_recommend").find("a").length;
 if(templet_recommend<0){
     $(".product-recommend").hide();
 }
