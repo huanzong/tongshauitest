@@ -268,8 +268,7 @@
 						<span class="line"></span>
 						<a class="font">价格<i class="iconfont l-none"></i></a>
 						<span class="info">
-							共<span class="red js_dataNum">
-</span>款冰箱产品
+							共<span class="red js_dataNum"><TRS_CHANNEL ID="OWNER" FIELD="_DataCount" COUNTWHERE="WCMDocument.dockeywords='否' and WCMDocument.docstatus in (10,27)" /></span>款冰箱产品
 						</span>
 						<!--<div class="pro-group">
 							<div class="group-style">
@@ -298,7 +297,7 @@
 				<div class="o_u o_df_1-12"></div>
 				<div class="o_u o_df_10-12">
 					<div class="prolist-con"> 
-						<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  PAGESIZE="1" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc">
+						<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  PAGESIZE="24" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc">
 						<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
 							<div class="prolist-box">
 								<trs_viewdata field="rqcp">
@@ -432,10 +431,8 @@
 							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
 							    <trs_channel id="parent" AUTOLINK='false'>
 								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
-								<trs_viewdata field="xinpin">
-								<TRS_CONDITION REFERENCE="是" CONDITION="@xinpin" OPERATOR="contain">
-								<trs_viewdata field="xpbqyxq">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='>='>
+								<trs_viewdata field="shangshishijian">
+								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
 									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
@@ -445,18 +442,14 @@
 									</div>
 								</a>
 								</TRS_CONDITION>
-							    </trs_viewdata> 
-							    </TRS_CONDITION>
-							    </trs_viewdata> 
+							    </trs_viewdata>
 							    </TRS_DOCUMENTS>
 							    </trs_channel>
 							    </TRS_CONDITION>
 							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
 								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
-								<trs_viewdata field="xinpin">
-								<TRS_CONDITION REFERENCE="是" CONDITION="@xinpin" OPERATOR="contain">
-								<trs_viewdata field="xpbqyxq">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@xpbqyxq" OPERATOR='>='>
+								<trs_viewdata field="shangshishijian">
+								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
 									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
@@ -466,9 +459,7 @@
 									</div>
 								</a>
 								</TRS_CONDITION>
-							    </trs_viewdata> 
-							    </TRS_CONDITION>
-							    </trs_viewdata> 
+							    </trs_viewdata>
 							    </TRS_DOCUMENTS>
 							    </TRS_CONDITION>
 							</div>
@@ -533,7 +524,8 @@
     <script type="text/javascript" src="../site5/query_product_price.js"></script>
     <script>
     	var template_url="<TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain'><trs_channel id='parent' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION><TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain' not='true'><trs_channel id='owner' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION>"
-    	var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';   
+    	var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';
+
     	cur();
 		//var pagehtml = createPageHTMLS(${PAGE_COUNT}, "${PAGE_NAME}", "${PAGE_EXT}",${RECORD_COUNT},7);
 		//if(undefined != pagehtml ){$(".leader_pager").html(pagehtml);}

@@ -1,8 +1,7 @@
 @import "l_variable";
 .membercenter-banner {
     height: 640px;
-    background: url("member-center-banner.jpg") no-repeat top center;
-    background-size: 100% 100%;
+    background-size: 100% 100% !important;
     position: relative;
     @media (min-width: 992px) and (max-width: 1199px) {
   /* lg*/
@@ -19,7 +18,7 @@
   /* sm*/
   height: 480px;
     background: url("member-center-bannermin.jpg") no-repeat top right;
-        background-size:auto 100% ;
+        background-size:100% auto ;
 
 }
 @media (max-width: 575px) {
@@ -41,8 +40,8 @@
     a {
         font-size: 16px;
         color: #fff;
-        width: 130px;
-        text-align: center;
+        // width: 130px;
+
     }
 }
 
@@ -54,6 +53,18 @@
     right: 0;
     margin: auto;
     height: 165px;
+    a{
+               text-align: center;
+        display: inline-block;
+        height: 50px;
+        width: 215px;
+        background:red;
+        border-radius: 50px;
+        text-align: center;
+        line-height: 50px;
+        cursor: not-allowed;
+
+    }
     @media (min-width: 701px) and (max-width: 991px) {
   /* md*/
   h2{
@@ -105,23 +116,26 @@
     }
 
     .list-share {
-        background: url("member-center-share.png") no-repeat center right;
-    background-size: 100% 100%;
+      
+    background-size: auto 100%;
+    // background-size: 100% 100%;
 
     }
     .list-endorsement {
-        background: url("member-center-endorsement.png") no-repeat center right;
-    background-size: 100% 100%;
+       
+    background-size: auto 100%;
 
     }
     .list-interact {
-        background: url("member-center-interact.png") no-repeat center right;
-    background-size: 100% 100%;
+       
+    background-size: auto 100%;
+    // background-size: 100% 100%;
 
     }
     .list-present {
-        background: url("member-center-present.png") no-repeat center right;
-    background-size: 100% 100%;
+       
+    background-size: auto 100%;
+    // background-size: 100% 100%;
 
     }
 
@@ -223,7 +237,7 @@
             box-shadow: 2px 1px 17px 0 #eee;
             margin: 0 15px 26px 0;
             .member-conter-text {
-                margin-top: 155px;
+                margin-top: 145px;
             }
         }
         .member-content-2 {
@@ -248,7 +262,7 @@
             box-shadow: 2px 1px 17px 0 #eee;
             margin: 0 0 26px 15px;
             .member-conter-text {
-                margin-top: 100px;
+                margin-top: 80px;
             }
         }
 
@@ -281,7 +295,7 @@
         }
         .member-conter-text {
             text-align: center;
-            margin: 90px 0 0 0;
+            margin: 80px 0 0 0;
             .member-conter-text-down {
                 text-align: left;
                 >div {
@@ -479,40 +493,71 @@
     background: url(member-bottombk.png) no-repeat center;
     text-align: center;
     height: 475px;
-
+        @media (max-width: 575px) {
+          /* xs*/
+          height: 530px;
+          background-size: auto 100%;
+        }
     h3 {
         font-size: 32px;
         text-align: center;
         margin: 90px 0 60px 0;
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* lg*/
-  font-size: 24px;
-}
-@media (min-width: 701px) and (max-width: 991px) {
-  /* md*/
-}
-@media (min-width: 576px) and (max-width: 700px) {
-  /* sm*/
-    font-size: 32px;
-}
-@media (max-width: 575px) {
-  /* xs*/
-    font-size: 24px;
-      margin: 55px 0 45px 0;
+        @media (min-width: 992px) and (max-width: 1199px) {
+          /* lg*/
+          font-size: 24px;
+        }
+        @media (min-width: 701px) and (max-width: 991px) {
+          /* md*/
+        }
+        @media (min-width: 576px) and (max-width: 700px) {
+          /* sm*/
+            font-size: 32px;
+        }
+        @media (max-width: 575px) {
+          /* xs*/
 
-}
-
-
-
-
+            font-size: 24px;
+              margin: 55px 0 45px 0;
+        }
     }
     ul {
         font-size: 0px;
         >li {
             text-align: center;
+            h5{
+                text-align: left;
+            }
+            p{
+                text-align: left;
+            }
+            @media (min-width: 701px) and (max-width: 991px) {
+              /* md*/
+               h5{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+              /* sm*/
+                h5{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+               
+            }
             @media (max-width: 575px) {
                 /* xs*/
                 margin: 30px 0 0 0;
+                    h5{
+                         text-align: center;
+                    }
+                    p{
+                        text-align: center;
+                    }
             }
         }
     }
@@ -579,4 +624,102 @@
         }
         }
     }
+}
+.member-ordinary-vip-min,.member-silvery-vip-min,.member-golden-vip-min{
+    strong{
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        background: url(member_center_logo.png) no-repeat top center;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+    span{
+         vertical-align: middle; 
+    }
+
+}
+.member-ordinary-vip-min{
+    strong{
+        background-position: 0 0;
+    }
+}
+.member-silvery-vip-min{
+    strong{
+        background-position: 0 -15px;
+    }
+}
+.member-golden-vip-min{
+    strong{
+         background-position: 0 -30px;
+    }
+}
+.member-no-vip,.member-ordinary-vip,.member-silvery-vip,.member-golden-vip{
+   .log{
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    background: #fff;
+    border-radius: 65px;
+    text-align: center;
+
+
+   }
+    span{  
+        margin-top:16px;
+        display: inline-block;
+        width: 25px;
+        height: 28px;
+        background: url(member_center_logo.png) no-repeat top center;
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+            /* sm*/
+        // text-align: center;
+            .log{
+                width: 50px;
+                height: 50px; 
+            }
+            span{
+                margin-top:11px;
+            }
+                  
+        }
+        @media (max-width: 575px) {
+            /* xs*/
+
+            .log{
+                width: 50px;
+                height: 50px; 
+            }
+            span{
+                margin-top:11px;
+            }
+        }
+}
+.member-ordinary-vip{
+    span{
+         background-position: 0 -45px;
+
+    }
+}
+.member-no-vip{
+    span{
+         background-position: 0 -73px;
+
+    }
+}
+.member-golden-vip{
+    span{
+         background-position: 0 -101px;
+
+    }
+
+}
+.member-silvery-vip{
+    span{
+         background-position: 0 -129px;
+
+    }
+
 }
