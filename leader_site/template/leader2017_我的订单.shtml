@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<div id="js-leftredlight" style="display: none;">我的订单</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g " >
@@ -436,6 +437,7 @@
 <script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_order_new.js"></script>
+<script type="text/javascript" src="images/templet_member_home.js"></script>
 
 </body>
 </html>

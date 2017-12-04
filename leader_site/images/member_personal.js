@@ -92,13 +92,6 @@ $(function(){
                         height:Math.round(rx * 300) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
                         marginLeft:"-" + Math.round(rx * coords.x)+ "px",
                         marginTop:"-" + Math.round(ry *coords.y) + "px"
-               
-
-
-        //                 width: Math.round(rx * 500) + 'px',
-        //                  height: Math.round(ry * 370) + 'px',
-        // marginLeft: '-' + Math.round(rx * coords.x) + 'px',
-        // marginTop: '-' + Math.round(ry * coords.y) + 'px'
                         }
                     );
                 }
@@ -196,7 +189,7 @@ $.jUploader({
                     imgsHnow = imgsH*imgsWb;
 //      初始化更改选择框内图片
                     jcrop_api.setImage(templet_pic, function(){
-                        this.setOptions({
+                         jcrop_api.setOptions({
                             outerImage: templet_pic,
                             setSelect: [ 60, 60, 260, 260 ]
                         })
@@ -209,7 +202,7 @@ $.jUploader({
                     imgsWnow = imgsW*imgsWb;
 //      初始化更改选择框内图片
                     jcrop_api.setImage(templet_pic, function(){
-                        this.setOptions({
+                         jcrop_api.setOptions({
                             outerImage: templet_pic,
                             setSelect: [ 60, 60, 260, 260 ]
                         })
