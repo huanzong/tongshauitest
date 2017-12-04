@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-晒单分享</title>
+    <title>个人中心-评价</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -26,7 +26,7 @@
                     <div class="land-shade js_navshade"></div>
 
                     <div class="member-security-width js-securityheight">
-                        <div class="member-security-tit"><p>晒单分享</p></div>
+                        <div class="member-security-tit"><p>评价</p></div>
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
                             <div class="member-security-table o_g">

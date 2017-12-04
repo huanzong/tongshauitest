@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-我的晒单</title>
+    <title>个人中心-我的评价</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div id="js-leftredlight" style="display: none;">我的晒单</div>
+<div id="js-leftredlight" style="display: none;">我的评价</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g js-contBox">
