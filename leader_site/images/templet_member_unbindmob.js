@@ -6,10 +6,15 @@
 //option value:1--手机号 2——邮箱
 
 $(function(){
+    //前台判断是否登陆
+    if(!istrsidssdssotoken()){
+       jumpToLoginPage()
+    }
 
     $.ajax({
         type: "get",
-        url: siteConfig.userUrl+"/hshop-user//front/user/userInfo/",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
+        data: "",
         login:true,
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
@@ -84,7 +89,6 @@ $(function(){
             data: {
                 'editOperation':'unbindMobileSendMobileCode'
             },
-            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -113,7 +117,6 @@ $(function(){
             data: {
                 'editOperation':'unbindMobileSendEmailCode'
             },
-            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -159,7 +162,6 @@ $(function(){
                     'param':templet_param,
                     'code':templet_code
                 },
-                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -205,7 +207,6 @@ $(function(){
                     'param': templet_param ,
                     'code':templet_code
                 },
-                login:true,
                 success: function (data) {
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -258,7 +259,6 @@ $(function(){
                 'editOperation': 'cancelUnbind',
                 'param': templet_param
             },
-            login:true,
             success_cb: function (data) {
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {

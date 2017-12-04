@@ -65,7 +65,6 @@ $(function(){
             data: {
                 'editOperation':'beforeBindEmailSendMobileCode'
             },
-            login:true,
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -89,7 +88,6 @@ $(function(){
                     'param':'mobile',
                     'code':templet_code
                 },
-                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
@@ -172,7 +170,6 @@ $(function(){
                     'editOperation':'sendBindEmailCode',
                     'newEmail':templet_newEmail
                 },
-                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {}
@@ -254,7 +251,6 @@ $(function(){
                     'newEmail':templet_newEmail,
                     'emailCode':templet_emailCode
                 },
-                login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
