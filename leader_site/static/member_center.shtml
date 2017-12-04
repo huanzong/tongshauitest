@@ -43,7 +43,7 @@
             <!-- 首屏动画 End -->
         <div class="o_g">
             <div class="membercenter-top">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner">
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>加入统帅，<span>慢享悠悠生活</span></h2>
@@ -52,28 +52,28 @@
                     </div>
                 </div>
                 <ul class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
-                    <li class="list-share o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                    <li class="list-share o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style='  background: url("images/member-center-share.png") no-repeat center right;'>
                         <div class="membercenter-list-cont">
                             <h4>乐分享</h4>
                             <p>晒单分享，最多得550积分</p>
                             <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
                         </div>
                     </li>
-                    <li class="list-endorsement o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                    <li class="list-endorsement o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("images/member-center-endorsement.png") no-repeat center right;'>
                         <div class="membercenter-list-cont">
                             <h4>悦代言</h4>
                             <p>成为代言人，得100积分</p>
                             <a href="javascript:;" class="l-btn-sm l-btn-line1">统帅代言人</a>
                         </div>
                     </li>
-                    <li class="list-interact o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                    <li class="list-interact o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("images/member-center-interact.png") no-repeat center right;'>
                         <div class="membercenter-list-cont">
                             <h4>惬互动</h4>
                             <p>交流与活动，互动拿积分</p>
                             <a href="javascript:;" class="l-btn-sm l-btn-line1">会员互动</a>
                         </div>
                     </li>
-                    <li class="list-present o_u o_df_12-12 o_sm_6-12 o_xs_6-6 ">
+                    <li class="list-present o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("images/member-center-present.png") no-repeat center right;'>
                         <div class="membercenter-list-cont">
                             <h4>兑好礼</h4>
                             <p>积分兑换诸多会员好礼</p>
