@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </trs_viewdatas>
-            <ul class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
+            <ul id="memberqybanner" class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
                 <trs_viewdatas id="会员权益banner" num="4" startpos="1">
                     <li class="o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("<trs_viewdata field="picture"/>") no-repeat center right;'>
                         <div class="membercenter-list-cont">
@@ -100,7 +100,7 @@
                                     <p>
                                         <trs_viewdata field='Subtitle'/>
                                     </p>
-                                    <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
+                                    <div class="member-conter-text-down member_1" pic="<trs_viewdata field='qymember'/>">
 
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                     <p>
                                         <trs_viewdata field='Subtitle'/>
                                     </p>
-                                    <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
+                                    <div class="member-conter-text-down member_2" pic="<trs_viewdata field='qymember'/>">
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
                                 <p>
                                     <trs_viewdata field='Subtitle'/>
                                 </p>
-                                <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
+                                <div class="member-conter-text-down member_3" pic="<trs_viewdata field='qymember'/>">
 
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                                     <p>
                                         <trs_viewdata field='Subtitle'/>
                                     </p>
-                                    <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
+                                    <div class="member-conter-text-down member_4" pic="<trs_viewdata field='qymember'/>">
 
                                     </div>
                                 </div>
@@ -213,25 +213,24 @@
         }, 2000)
 
 
-        $(".membercenter-list li").eq(0).css({"class": "list-share"});  //第一个li
-        $(".membercenter-list li").eq(1).css({"class": "list-endorsement"});  //第二个li
-        $(".membercenter-list li").eq(2).css({"class": "list-interact"});  //第三个li
-        $(".membercenter-list li").eq(3).css({"class": "list-present"});  //第四个li
+        $("#memberqybanner li").eq(0).addClass("list-share");  //第一个li
+        $("#memberqybanner li").eq(1).addClass("list-endorsement");//第二个li
+        $("#memberqybanner li").eq(2).addClass("list-interact");  //第三个li
+        $("#memberqybanner li").eq(3).addClass("list-present");  //第四个li
 
         selectmember();
 
     })
 
     function selectmember() {
-        var memberName = $(".member-conter-text-down").attr("pic");
-        for(var i=0;i<4;i++){
-            if (memberName[i].indexOf("普通") > -1) {
+        for(var i=1;i<=4;i++){
+            if ($(".member_"+i).attr("pic").indexOf("普通") > -1) {
                 $(this).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
             }
-            if (memberName[i].indexOf("银卡") > -1) {
+            if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
                 $(this).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
             }
-            if (memberName[i].indexOf("金卡") > -1) {
+            if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
                 $(this).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
             }
         }
