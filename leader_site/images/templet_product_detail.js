@@ -88,6 +88,8 @@ if(morePro==0||morePro<3){
                     mroeproB+='<div class="detail-more-price">￥<span>'+price+'</span></div></div>';
 
                 }
+            }else{
+                $(".js_moreTitle").hide();
             }
             $(".js_moreProA").html(mroeproA);
             $(".js_moreProB").html(mroeproB);
