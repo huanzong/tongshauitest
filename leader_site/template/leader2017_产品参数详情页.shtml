@@ -81,8 +81,7 @@
 
   }
   var templet_Arry=[
-      <TRS_XVIEWFIELDGROUPS STARTPOS="0"  NUM='1'>
-      <TRS_XVIEWFIELDGROUPS STARTPOS="2" >
+      <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
       [
       <TRS_VIEWFIELDS>
       <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">
@@ -91,7 +90,6 @@
   </TRS_VIEWFIELDS>
   ["GroupName","<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>"]
   ]<TRS_IsNotLastRecord>,</TRS_IsNotLastRecord>
-  </TRS_XVIEWFIELDGROUPS>
   </TRS_XVIEWFIELDGROUPS>
   ];
 
