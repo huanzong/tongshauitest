@@ -992,12 +992,19 @@
   @media (max-width: 575px) {
     .picbox{
       width: 100%!important;
+      padding-bottom: 10px!important;
     }
     .pr_0{
       padding-right: 0!important;
     }
     .pl_0{
       padding-left: 0!important;
+    }
+    .pt_10{
+      padding-top: 10px!important;
+    }
+    .pb_10{
+      padding-bottom: 10px!important;
     }
   }
 }
@@ -1091,7 +1098,7 @@
     display: none;
     position: absolute;
     left: 25%;
-    top: 60px;
+    top: 80px;
     margin-bottom: 25px;
     width: 50%;
     a{
@@ -1104,6 +1111,11 @@
       color: #666;
       background: #fff;
       &:hover{
+        background: @l-red;
+        color: #fff;
+        border: 1px solid @l-red;
+      }
+      &.alive{
         background: @l-red;
         color: #fff;
         border: 1px solid @l-red;
@@ -1133,6 +1145,52 @@
       height: 40px;
     }
 
+  }
+
+  //锚点
+  .anchor-box.fixed{
+    display: block;
+    width: 33.33333333%;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    height: 100%;
+    @media(max-width: 991px){
+      &:before{
+        content: "\e73c";
+        font-family: iconfont!important;
+        position: absolute;
+        font-size: 40px;
+        top: -20px;
+        color: #fff;
+      }
+      width: 100%;
+      top:auto;
+      bottom:0px;
+      height: 70px;
+      background: #fff;
+      border-top:1px solid #edecec;
+      .icon-bg-solid{
+        font-size: 32px;
+        top:-16px;
+        left:4px;
+        i{
+          font-size: 24px;
+          left:4px;
+          top:4px;
+        }
+      }
+      .swiper-container{
+        width: 100%;
+        top:-31px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        a{
+          width: 200px;
+          margin:0 10px;
+        }
+      }
+    }
   }
 }
 
