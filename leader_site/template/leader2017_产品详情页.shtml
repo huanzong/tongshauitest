@@ -190,7 +190,7 @@
                                 </div>-->
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
-                                        <span class="address-tit">配送至:</span>
+                                        <span class="address-tit">配送至：</span>
                                         <span>浙江 杭州市 西湖区</span>
                                     </div>
                                     <div class="delivery-time">
@@ -202,7 +202,7 @@
                                 <div class="particulars-btn">
                                     <a href="javascript:;" class="l-btn-normal l-btn-red">加入购物车</a>
                                 </div>
-                                <div class="particulars-buy-tit">品牌旗舰店购买:</div>
+                                <div class="particulars-buy-tit">品牌旗舰店购买：</div>
                                 <div class="particulars-buy-con">
                                     <div class="particulars-buybox">
                                         <div class="buy-img tianmao"></div>
