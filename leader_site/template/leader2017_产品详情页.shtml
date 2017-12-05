@@ -1091,8 +1091,8 @@
             </div>
             <!-- 产品口碑 End -->
             <!-- 更多选择 -->
-            <div class="detail-title">更多选择</div>
-            <div class="o_g">
+            <div class="detail-title js_moreTitle">更多选择</div>
+            <div class="o_g js_moreTitle">
                 <div class="o_u o_df_1-6"></div>
                 <div class="o_u o_df_2-3">
                     <div class="detail-more o_xs-hide">
