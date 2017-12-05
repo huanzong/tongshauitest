@@ -220,6 +220,9 @@ $(function() {
     $('.js_foldPlus').on('click', function() {
         //电商拉页-点击加号，展示锚点定位
         var eleI = $(this).find('i').eq(0);
+        var url = window.location.href.split("/")[window.location.href.split("/").length - 1]
+        url = url.split("/")[0];
+        var anchor = window.location.hash; //获取当前链接是否有锚点
         if (eleI.hasClass('icon-plus')) {
             //文字列表
             $('.js_foldlist').slideDown(300);
@@ -239,16 +242,23 @@ $(function() {
                 $(this).parent(".js_foldoverNav").append(html);
             }else{
                 $(this).find('span').html("收起产品介绍");
+                var btnNum = $(".js_foldlsit_btn").find("a").length;
+                var foldPlus = (btnNum * 52) + 80;
+                if (document.body.offsetWidth > 991) {
+                    $(".js_foldPlus").css("top", foldPlus + 'px');
+                    console.log(foldPlus);
+                }
             }
-            if(document.body.offsetWidth <= 991) {
-                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
-            }else{
-                location.href = $('.js_foldlist').find('a').eq(0).attr('href');
-            }
+            // if (document.body.offsetWidth <= 991) {
+            //     location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href').replace(anchor, '');
+            // } else {
+            //     location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+            // }
         } else {
 
             //文字列表
             $('.js_foldlist').slideUp(300);
+            $(".js_anchor").removeClass("fixed");
             eleI.removeClass('icon-close').addClass('icon-plus');
             eleI.parent().css('color', '#e60012');
 
@@ -269,32 +279,27 @@ $(function() {
             //$('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
             $('.js_center').oBoxCenter().init();
             $(this).find('span').html("详细产品介绍");
-            if(document.body.offsetWidth <= 991) {
+            var htmlImgH = $(".js_buyhtml").find(".js_box").eq(0).find("img").height();
+            if (document.body.offsetWidth > 991) {
+                $(".js_foldPlus").css("top", htmlImgH / 2 - 44 + 'px');
+                $('.js_foldoverNav').css('height', htmlImgH);
+            }
+        }
+        if (anchor == '') {
+            if (document.body.offsetWidth <= 991) {
                 location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
             }else{
                 location.href = $('.js_foldlist').find('a').eq(0).attr('href');
             }
+        } else {
+            if (document.body.offsetWidth <= 991) {
+                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href').replace(anchor, '#0F');
+            } else {
+                location.href = $('.js_foldlist').find('a').eq(0).attr('href').replace(anchor, '#0F');
+            }
         }
 
     });
-
-    if($(".js_detail-foldover").length){
-        $(window).scroll(function () {
-            var $winTop = $(window).scrollTop();
-            var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 200;
-            var $foldT = $(".js_detail-foldover").offset().top;
-            if($(".js_foldoverNav").hasClass("cur")){
-                if($winTop > $foldH){
-                    $(".js_oHerlFoldover").removeClass("fixed");
-                }else if($winTop < $foldT){
-                    $(".js_oHerlFoldover").removeClass("fixed");
-                }else{
-                    $(".js_oHerlFoldover").addClass("fixed");
-                }
-            }
-
-        });
-    }
 
     foldlsit();
     //电商拉页重新绘制拉页锚点
@@ -305,8 +310,12 @@ $(function() {
         var btnhtml = '';
         var url=window.location.href.split("/")[window.location.href.split("/").length-1]
         url = url.split("/")[0];
-        for(var i=0;i<num;i++){
-            $(".js_buyhtml .js_box").eq(i).attr("id",i+'F').addClass("o_df-hide");
+        var anchor = window.location.hash; //获取当前链接是否有锚点
+        if (anchor != '') {
+            url = url.replace(anchor, '');
+        }
+        for (var i = 0; i < num; i++) {
+            $(".js_buyhtml .js_box").eq(i).attr("id", i + 'F').addClass("o_df-hide");
             $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
             var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
             if(document.body.offsetWidth>991){
@@ -329,10 +338,15 @@ $(function() {
         }
 
         //初始化左侧按钮定位
-        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        /*var btnNum = $(".js_foldlsit_btn").find("a").length;
         var foldPlus = (btnNum * 52) + 60;
         if(document.body.offsetWidth>991){
             $(".js_foldPlus").css("top",foldPlus+'px');
+        }*/
+
+        var htmlImgH = $(".js_buyhtml").find(".js_box").eq(0).find("img").height();
+        if (document.body.offsetWidth > 991) {
+            $(".js_foldPlus").css("top", htmlImgH / 2 - 44 + 'px');
         }
 
 
@@ -341,20 +355,95 @@ $(function() {
             var index = parseInt($(this).attr('data-index'));
             //点击当前锚点，添加选中状态，同类去掉选中状态
             $(this).addClass("alive").siblings().removeClass("alive");
+            var indexName = $(this).attr("name");
+            $('html,body').animate({ scrollTop: $("#" + indexName).offset().top - 68 });
             var btnNum = $(".js_foldlsit_btn").find("a").length;
-            var top = (btnNum * 52) + 60;
-            for(var i=0 ; i<index ; i++){
+            var top = (btnNum * 52) + 130;
+            for (var i = 0; i < index; i++) {
                 top += $('.js_foldimg').find('img').eq(i).height();
             }
-            if(document.body.offsetWidth>991){
-                $('.js_foldPlus').css('top',top);
-                $('.js_foldoverNav').css('height',$('.js_oHerlSizeFoldover').height());
-                $('.js_foldlist').css('top',top-(btnNum * 52));
-            }else{
-                $('.js_foldoverNav').css('height',0);
+            if (document.body.offsetWidth > 991) {
+                // $('.js_foldPlus').css('top', top);
+                // $('.js_foldoverNav').css('height', $('.js_oHerlSizeFoldover').height());
+                // $('.js_foldlist').css('top', top - (btnNum * 52));
+            } else {
+                $('.js_foldoverNav').css('height', 0);
             }
         });
+        $(".js_foldoverNav_btn").find('a').on('click', function() {
+            var index = parseInt($(this).attr('data-index'));
+            //点击当前锚点，添加选中状态，同类去掉选中状态
+            $(this).addClass("alive").siblings().removeClass("alive");
+        });
     }
+
+    // if ($(".js_detail-foldover").length) {
+    //     $(window).scroll(function() {
+    //         var $winTop = $(window).scrollTop();
+    //         var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height();
+    //         var $foldT = $(".js_detail-foldover").offset().top;
+    //         if ($(".js_oHerlFoldover").hasClass("cur")) {
+    //             if ($winTop > $foldH) {
+    //                 $(".js_oHerlFoldover").removeClass("fixed");
+    //             } else if ($winTop < $foldT) {
+    //                 $(".js_oHerlFoldover").removeClass("fixed");
+    //             } else {
+    //                 $(".js_oHerlFoldover").addClass("fixed");
+    //             }
+    //         }
+
+    //     });
+    // }
+    var scrollAnchor = new Object(); //用于存放各个模块的位置
+    //左侧锚点跟着右侧滚动
+    $(window).scroll(function() {
+        var $close = $(".js_foldPlus i").hasClass("icon-close");
+        var $winTop = $(window).scrollTop();
+        var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height();
+        var $foldT = $(".js_detail-foldover").offset().top;
+        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        var top = (btnNum * 52) + 160;
+        if ($close == true) {
+            if (document.body.offsetWidth > 991) {
+                if ($winTop > $foldH - top - 38) {
+                    $(".js_anchor").removeClass("fixed");
+                } else if ($winTop < $foldT) {
+                    $(".js_anchor").removeClass("fixed");
+                } else {
+                    $(".js_anchor").addClass("fixed");
+                }
+            } else {
+                if ($winTop > $foldH - 350) {
+                    $(".js_anchor").removeClass("fixed").addClass("o_df-hide");
+                } else if ($winTop < $foldT - 200) {
+                    $(".js_anchor").removeClass("fixed");
+                } else {
+                    $(".js_anchor").addClass("fixed").removeClass("o_df-hide");
+                }
+            }
+        }
+        $('.js_anchor').find('a[data-index]').each(function(i, n) {
+            var name = $(this).attr('name');
+            var jshref = '#' + name;
+            scrollAnchor[name] = $(jshref).offset().top - navHeight;
+        });
+        var navName; //高亮导航位置
+        var navHigh;
+        jQuery.each(scrollAnchor, function(i, n) {
+            if (parseInt(n) <= $winTop) {
+                if (navName) {
+                    if ($winTop - parseInt(n) <= navHigh) {
+                        navName = i;
+                        navHigh = $winTop - parseInt(n);
+                    }
+                } else {
+                    navName = i;
+                    navHigh = $winTop - parseInt(n);
+                }
+            }
+        });
+        $('.js_anchor').find('a[name=' + navName + ']').addClass('alive').siblings().removeClass("alive");
+    });
 
 
     /********电商拉页*********/
