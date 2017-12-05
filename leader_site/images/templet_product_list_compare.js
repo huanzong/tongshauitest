@@ -77,7 +77,7 @@ function initCookie() {
                 var product = proObjList[i];
                 //修改对比样式 todo -----------------样式处理------------------------------------------------
                 $("#" + product.id).attr("auto", "1");
-                $("#" + product.id).addClass("uncontrast");
+                //$("#" + product.id).addClass("uncontrast");
                 $("#" + product.id).find(".pro-read-font").html("已对比");
                 // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
                 pType = product.channelid;
@@ -89,7 +89,7 @@ function initCookie() {
             $(".uncontrast").find(".pro-read-font").html("对比");
             //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
             $(".uncontrast").attr("auto","0");
-            $(".uncontrast").removeClass("uncontrast");
+            //$(".uncontrast").removeClass("uncontrast");
 
         }
     }
@@ -134,9 +134,9 @@ function initLoadCookie() {
 window.unchecked = function ($obj) {
     //对比按钮样式
     $obj.attr("auto", "0");
-    $obj.removeClass("uncontrast");
+    //$obj.removeClass("uncontrast");
     $obj.find(".pro-read-font").html("对比");
-    $obj.find("i").removeClass("o-close").addClass("o-plus");
+    //$obj.find("i").removeClass("o-close").addClass("o-plus");
 }
 
 //将添加对比的产品绘制在浮层上
@@ -186,8 +186,6 @@ window.add_compare_flyOut_item = function ($obj) {
             ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
             '</li>';
 
-
-        //$('.js_compareBox').prepend(compareHtml);
         $list.prepend(compareHtml);
         //把选择的对比产品存入cookie
         var proObj = new Object();
@@ -201,9 +199,7 @@ window.add_compare_flyOut_item = function ($obj) {
         proObjList.push(proObj);
         var objString = JSON.stringify(proObjList);
         $.cookie('leaderProCookie', objString, {path: '/'});
-        //添加侧边栏绘制数据
-        /* initSideBarCookie();
-         initSideBarLoadCookie();*/
+
         //总对比按钮
         //删除对比选项监听
         deleteCompareItem();
@@ -221,10 +217,11 @@ window.remove_compare_fLayout_item = function (id) {
 
 
     $list.find('li').each(function () {
-        var $this_col = jQuery(this);
+        var $this_col = $(this);
         var col_id = $this_col.children('.compare-product-img').attr('id');
         if (col_id == id && id != undefined) {
             $this_col.remove();
+            unchecked($("#"+col_id));
             //删除cookie里面的相应数据
             for (var i = 0; i < proObjList.length; i++) {
                 var obj = proObjList[i];
