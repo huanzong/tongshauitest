@@ -78,3 +78,21 @@ $('.js_addressSetDefault').click(function(){
     $(this).parents('.member-addresslistbox').addClass('member-address-setdefault');
 
 })
+
+$(function(){
+    $('.js_inputCheck').focus(function(){
+    $(this).css('border-color','#ccc')
+    // alert(1);
+    // console.log(1)
+})
+
+
+    // 点击修改和新增按钮标题更换
+    $('.js_memberAddressBtn').click(function(){
+        $('.js_addressTitle').html('添加新地址');
+    })
+    $('js_amendBtn').click(function(){
+        $('.js_addressTitle').html('修改地址');
+
+    })
+})

@@ -63,8 +63,8 @@
                                 </div>
                                 <div class="datail_product_state_box">
                                     <ul class="o_u o_df_11-12 datail_product_state">
-                                        <li class="o_u cur"><div class="cur_border"></div>提交订单<p>2017-06-14 08:23:42</p></li>
-                                        <li class="o_u"><div class="cur_border"></div>等待付款<p>2017-06-14 08:23:42</p></li>
+                                        <li class="o_u cur_after"><div class="cur_border"></div>提交订单<p>2017-06-14 08:23:42</p></li>
+                                        <li class="o_u cur"><div class="cur_border"></div>等待付款<p>2017-06-14 08:23:42</p></li>
                                         <li class="o_u"><div class="cur_border"></div>订单确认<p>2017-06-14 08:23:42</p></li>
                                         <li class="o_u"><div class="cur_border"></div>商品出库<p>2017-06-14 08:23:42</p></li>
                                         <li class="o_u"><div class="cur_border"></div>送货到家<p>2017-06-14 08:23:42</p></li>
