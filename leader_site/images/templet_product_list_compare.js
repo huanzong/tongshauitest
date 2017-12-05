@@ -36,12 +36,12 @@ function addCompareOnclick() {
 
             remove_compare_fLayout_item($thisObj.attr("id"));
             //return;
-            $(this).removeClass("uncontrast");
+            //$(this).removeClass("uncontrast");
             $(this).attr("auto", "0");
             $(this).find(".pro-read-font").html("对比");
             //$(this).find("i").removeClass("o-close").addClass("o-plus");
             //如果是已经对比的取消对比
-
+            isLastCompareProduct();
         }
 
     });
@@ -231,33 +231,15 @@ window.remove_compare_fLayout_item = function (id) {
             }
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
+            /**
+             * 是否最后一个对比产品
+             */
+            isLastCompareProduct();
             return false;
         }
 
     });
 
-    if ($list.find('li').length <= 0) {
-        hideCompareFlow();
-        //删除cookie里面的相应数据,未点比较按钮时删除cookie
-        /*for (var i = 0; i < proObjList.length; i++) {
-            var obj = proObjList[i];
-            if (obj.id == id) {
-                proObjList = remove(proObjList, "id", id);
-            }
-        }
-        var objString = JSON.stringify(proObjList);
-        $.cookie('leaderProCookie', objString, {path: '/'});
-        if (noCompareChannel != "") {
-            if (objString == "[]") {
-                //恢复互斥项
-                $(".js_proList .lose").each(function () {
-                    $(this).addClass("js_contrast");
-                    $(this).removeClass("lose");
-                });
-            }
-        }*/
-    }
-    //添加侧边栏绘制数据
 };
 //移除
 function remove(arrPerson, objPropery, objValue) {
@@ -443,4 +425,15 @@ function showCompareFlow(){
 //总隐藏对比浮层
 function hideCompareFlow(){
     $('.prolist-compare').hide();
+}
+
+/**
+ * 判断是否最后一个对比产品
+ *
+ */
+function isLastCompareProduct(){
+    var $list = $('.js_compareBox');
+    if ($list.find('li').length <= 0) {
+        hideCompareFlow();
+    }
 }
