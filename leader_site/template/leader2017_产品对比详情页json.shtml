@@ -1,7 +1,5 @@
 {
          "productID":"<TRS_DOCUMENT FIELD="DOCID" />",
-         "new":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="xinpin">新品</TRS_VIEWDATA>",
-         "rm":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="remaipin">热卖</TRS_VIEWDATA>",
          "mainCategoryName":"<TRS_CHANNEL ID="OWNER" AUTOLINK="false" />",
          "subCategoryName":"<TRS_CHANNEL ID="PARENT" AUTOLINK="false" />",
          "mold":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="modelno">产品型号</TRS_VIEWDATA>",

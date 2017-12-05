@@ -7,6 +7,7 @@ $(function(){
 
     $('#js_orderDate').oSelect().init();
     $('#js_orderTime').oSelect().init();
+    $('#js_order_address').oSelect().init();
 
     $('#js_orderConfirmSave').oSelect().init();
     $('#js_orderConfirmCity').oSelect().init();
@@ -48,6 +49,16 @@ $(function(){
         resetInput(userinfo,inputArr);
     });
 
+    $('.c_ipt_cr').click(function(){
+            // console.log(1);
+        var select = $(this).hasClass('c_ipt_cr_rs');
+        if(select){
+            console.log(1);
+            $(this).parents('.js_addressListCont').addClass('product-address-list-select');
+            $(this).parents('li').siblings().find('.js_addressListCont').removeClass('product-address-list-select');
+        }
+    
+    })
 
 
     var userinfo=$(".js_orderUserInforBox" ).Validform({
@@ -78,7 +89,7 @@ $(function(){
 
         $('.js_order_username').val(userinfoName);
         $('.js_order_userphone').val(userinfoPhone);
-        $('.js_order_usertell').val(userinfoAddress);
+        $('.js_order_address').val(userinfoAddress);
 
         $('.js_addressListCont').show();
         objparents.children('.js_addressListCont').hide();

@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>个人中心-我的订单</title>
-
-    <%=base%>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
-    <!--#include virtual="public/head.shtml"-->
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <!--<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">-->
     <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="images/member_nav.css">
@@ -17,11 +14,12 @@
 </head>
 
 <body>
+<div id="js-leftredlight" style="display: none;">我的订单</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g " >
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/header_nav.shtml"-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
@@ -355,7 +353,7 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/personal_footer.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 
 
     </div>
@@ -431,14 +429,15 @@
 </div>
 <!-- Swiper -->
 
-<!--#include virtual="public/foot.shtml"-->
-<!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
 
 <script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_order_new.js"></script>
-<script type="text/javascript" src="images/templet_member_order_new.js"></script>
+<script type="text/javascript" src="images/templet_member_nav.js"></script>
+
 </body>
 </html>

@@ -4,10 +4,11 @@
 
 
 // 下拉菜单初始化
-/*$("#js_save").oSelect().init();
+$("#js_save").oSelect().init();
 $("#js_city").oSelect().init();
 $("#js_area").oSelect().init();
-$("#js_road").oSelect().init();*/
+$("#js_road").oSelect().init();
+
 
 //地址管理初始化
 var address=$(".js_memberNewAddress" ).Validform({
@@ -76,4 +77,22 @@ $('.js_addressSetDefault').click(function(){
    //$(this).parents('.member-addressrightbox').find('.member-addresslistbox').siblings().removeClass('member-address-setdefault');
     $(this).parents('.member-addresslistbox').addClass('member-address-setdefault');
 
+})
+
+$(function(){
+    $('.js_inputCheck').focus(function(){
+    $(this).css('border-color','#ccc')
+    // alert(1);
+    // console.log(1)
+})
+
+
+    // 点击修改和新增按钮标题更换
+    $('.js_memberAddressBtn').click(function(){
+        $('.js_addressTitle').html('添加新地址');
+    })
+    $('js_amendBtn').click(function(){
+        $('.js_addressTitle').html('修改地址');
+
+    })
 })
