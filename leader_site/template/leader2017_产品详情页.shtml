@@ -1369,7 +1369,7 @@
                 </ul>
             </div>
             <!-- 产品对比 END -->
-            <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+            <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
                     <div class="land-cont-title o_u">

@@ -491,8 +491,7 @@
 				</ul>
 			</div>
 		<!-- 产品对比 END -->
-
-		<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 		<div class="product-footer-height o_lg-hide o_md-hide o_sm-hide o_xs-hide"></div>
 	    <!-- 弹层-筛选项 -->
 	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
