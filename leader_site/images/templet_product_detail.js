@@ -128,6 +128,11 @@ function getCommentData(){
         dataType:"json",
         success_cb:	function (data){
             if(data.isSuccess==true){
+                if(data.entityCount==0){
+                    $(".js_comment").hide();
+                }else{
+                    $(".js_comment").find("span").text(data.entityCount);
+                }
                 if(data.data.entities.length>0){
                     $('.js_commentContent .praise-box').html("");
                     var temple_ConHtml='';
