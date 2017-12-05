@@ -246,7 +246,7 @@ $(function() {
                 var foldPlus = (btnNum * 52) + 80;
                 if (document.body.offsetWidth > 991) {
                     $(".js_foldPlus").css("top", foldPlus + 'px');
-                    console.log(foldPlus);
+                    // console.log(foldPlus);
                 }
             }
             // if (document.body.offsetWidth <= 991) {
