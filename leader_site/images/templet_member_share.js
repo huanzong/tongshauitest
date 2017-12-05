@@ -11,7 +11,7 @@ $(function () {
     //var templet_XXX=getQueryString("");入口2需要传给我产品注册码
     var templet_modelNo=getQueryString("modelNo");
     if(templet_modelNo==null){
-        // window.location.href ='/order';
+        window.location.href ='/order';
     }
 
     //如果订单获取为空，去查询注册产品
@@ -24,7 +24,7 @@ $(function () {
             data: {"orderId":templet_orderId},
             login:true,
             error_cb : function(){
-                // window.location.href ='/order';
+                window.location.href ='/order';
             },
             success: function(data){
                 if(data.isSuccess){
@@ -41,7 +41,7 @@ $(function () {
                         }
                     }
                     if(templet_validate){
-                        // window.location.href ='/order';
+                        window.location.href ='/order';
                     }
                 }
                 else{
@@ -147,10 +147,10 @@ $(function () {
                 'star':templet_star,
                 'content':templet_content,
                 'devSource':templet_devSource,
-                'businessId':templet_modelNo,
+                'businessId':'150',
                 'channelSource':'1',
                 'categoryId':'2',
-                'orderId':templet_orderId
+                'orderId':'123'
             };
             $.ajax({
                 url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",

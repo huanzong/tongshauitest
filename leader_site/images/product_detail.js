@@ -1,23 +1,23 @@
-$(function () {
-
+$(function() {
+    
     //用来存放所有轮播
     var swiper = {};
 
     //文字卖点
-    swiper.fontSwiper = new Swiper('.js_fontSwiper', {
-        slidesPerView: 'auto',
+    swiper.fontSwiper = new Swiper('.js_fontSwiper',{
+        slidesPerView : 'auto',
     });
 
     //场景展示
-    $(".js_scenePicture").each(function () {
+    $(".js_scenePicture").each(function() {
         $(this).oPicture({}).init();
     });
-    swiper.sceneSwiper = new Swiper('.js_sceneSwiper', {
+    swiper.sceneSwiper = new Swiper('.js_sceneSwiper',{
         loop: true,
         autoplay: 1000,
-        slidesPerView: 1, //滑动展示个数
+        slidesPerView: 1,//滑动展示个数
         centeredSlides: true,
-        slidesPerGroup: 1, //每次滑动移动个数
+        slidesPerGroup: 1,//每次滑动移动个数
         // calculateHeight : true,//Swiper根据slides内容计算容器高度。
     });
 
@@ -26,17 +26,17 @@ $(function () {
         grabCursor: true,
         // loop: true,
         // autoplay: 1000,
-        onFirstInit: function (swiper) {
+        onFirstInit: function(swiper){
             $('.js_sellpointFont').hide();
             $('.js_sellpointFont').eq(0).show();
         },
-        onSlideChangeEnd: function (swiper) {
+        onSlideChangeEnd:function(swiper){
             var index = swiper.activeIndex;
             $('.js_sellpointFont').hide();
             $('.js_sellpointFont').eq(index).show();
         }
     });
-    $('.js_swiperSellPointNext').on('click', function () {
+    $('.js_swiperSellPointNext').on('click',function(){
         swiper.sellPointSwiper.swipeNext();
     });
 
@@ -64,18 +64,18 @@ $(function () {
         loop: true,
         autoplay: 1000,
 
-        slidesPerView: 3, //滑动展示个数
+        slidesPerView: 3,//滑动展示个数
         centeredSlides: true,
-        slidesPerGroup: 1, //每次滑动移动个数
+        slidesPerGroup: 1,//每次滑动移动个数
         // calculateHeight : true,//Swiper根据slides内容计算容器高度。
 
     });
 
-    $('.js_swiperMore_prev').click(function () {
-        swiper.moreSwiper.swipePrev();
+    $('.js_swiperMore_prev').click(function(){
+        swiper.moreSwiper.swipePrev(); 
     });
-    $('.js_swiperMore_next').click(function () {
-        swiper.moreSwiper.swipeNext();
+    $('.js_swiperMore_next').click(function(){
+        swiper.moreSwiper.swipeNext(); 
     });
 
     init();
@@ -163,66 +163,66 @@ $(function () {
     /**
      * 详情页导航
      */
-        //锚点定位
-    var scrollPosEl = new Object(); //用于存放各个模块的位置
-    var navHeight = 68; //导航条高度
+    //锚点定位
+    var scrollPosEl = new Object();//用于存放各个模块的位置
+    var navHeight = 68;//导航条高度
     $('.js_buyNow').hide();
-
-    function scrollPosFun($ele, PosTop) {
-        $('.js_navLink').find('a[data-nav]').each(function (i, n) {
-            $(this).off().on('click', function () {
+    function scrollPosFun($ele,PosTop){
+        $('.js_navLink').find('a[data-nav]').each(function(i,n){
+            $(this).off().on('click',function(){
                 var href = $(this).attr('data-nav');
                 var jshref = '.' + href;
                 scrollPosEl[href] = $(jshref).offset().top - navHeight;
-                $("html,body").animate({scrollTop: scrollPosEl[href]}, 100);
+                $("html,body").animate({scrollTop: scrollPosEl[href]}, 100); 
             });
         });
     }
-
     scrollPosFun();
     //滚动高亮
-    $(window).scroll(function () {
+    $(window).scroll(function(){
         var currentPos = $(document).scrollTop();
 
-        $('.js_navLink').find('a[data-nav]').each(function (i, n) {
+        $('.js_navLink').find('a[data-nav]').each(function(i,n){
             var href = $(this).attr('data-nav');
             var jshref = '.' + href;
             scrollPosEl[href] = $(jshref).offset().top - navHeight;
         });
         //导航定位
-        if (currentPos > $('.js_navPos').offset().top) {
-            $('.js_detailNav').hasClass('detail-nav-fixed') || $('.js_detailNav').addClass('detail-nav-fixed');
+        if(currentPos>$('.js_navPos').offset().top){
+            $('.js_detailNav').hasClass('detail-nav-fixed')||$('.js_detailNav').addClass('detail-nav-fixed');
             $('.js_buyNow').show();
-        } else {
-            $('.js_detailNav').hasClass('detail-nav-fixed') && $('.js_detailNav').removeClass('detail-nav-fixed');
+        }else{
+            $('.js_detailNav').hasClass('detail-nav-fixed')&&$('.js_detailNav').removeClass('detail-nav-fixed');
             $('.js_buyNow').hide();
         }
         //导航高亮
         $('.js_navLink').find('a[data-nav]').removeClass('active');
-        var navName; //高亮导航位置
+        var navName;//高亮导航位置
         var navHigh;
-        jQuery.each(scrollPosEl, function (i, n) {
-            if (parseInt(n) <= currentPos) {
-                if (navName) {
-                    if (currentPos - parseInt(n) <= navHigh) {
+        jQuery.each(scrollPosEl,function(i,n){
+            if(parseInt(n)<=currentPos){
+                if(navName){
+                    if(currentPos-parseInt(n)<=navHigh){
                         navName = i;
                         navHigh = currentPos - parseInt(n);
                     }
-                } else {
+                }else{
                     navName = i;
-                    navHigh = currentPos - parseInt(n);
+                    navHigh = currentPos - parseInt(n); 
                 }
             }
         });
-        $('.js_navLink').find('a[data-nav=' + navName + ']').addClass('active');
+        $('.js_navLink').find('a[data-nav='+navName+']').addClass('active');
     });
 
     /********电商拉页*******/
     //电商拉页
-    $('.js_foldPlus').on('click', function () {
+    $('.js_foldPlus').on('click', function() {
         //电商拉页-点击加号，展示锚点定位
         var eleI = $(this).find('i').eq(0);
-        var anchor = window.location.hash; //获取锚点id
+        var url = window.location.href.split("/")[window.location.href.split("/").length - 1]
+        url = url.split("/")[0];
+        var anchor = window.location.hash; //获取当前链接是否有锚点
         if (eleI.hasClass('icon-plus')) {
             //文字列表
             $('.js_foldlist').slideDown(300);
@@ -234,34 +234,36 @@ $(function () {
                 $(this).removeClass("o_df-hide");
             })
             //小屏幕文字列表-轮播
-            if (document.body.offsetWidth <= 991) {
+            if(document.body.offsetWidth <= 991){
                 $('.js_foldoverSwiper').show();
                 $(this).find('span').html("");
                 $(this).parent(".js_oHerlFoldover").addClass("cur").addClass("fixed");
                 var html = '<a class="iconfont icon-bg-solid round js_round"></a>'
                 $(this).parent(".js_foldoverNav").append(html);
-            } else {
+            }else{
                 $(this).find('span').html("收起产品介绍");
                 var btnNum = $(".js_foldlsit_btn").find("a").length;
-                var foldPlus = (btnNum * 52) + 60;
+                var foldPlus = (btnNum * 52) + 80;
                 if (document.body.offsetWidth > 991) {
                     $(".js_foldPlus").css("top", foldPlus + 'px');
+                    // console.log(foldPlus);
                 }
             }
-            if (anchor == '') {
-                if (document.body.offsetWidth <= 991) {
-                    location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
-                } else {
-                    location.href = $('.js_foldlist').find('a').eq(0).attr('href');
-                }
-            }
+            // if (document.body.offsetWidth <= 991) {
+            //     location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href').replace(anchor, '');
+            // } else {
+            //     location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+            // }
         } else {
+
             //文字列表
             $('.js_foldlist').slideUp(300);
+            $(".js_anchor").removeClass("fixed");
             eleI.removeClass('icon-close').addClass('icon-plus');
             eleI.parent().css('color', '#e60012');
+
             //小屏幕文字列表-轮播
-            if (document.body.offsetWidth <= 991) {
+            if(document.body.offsetWidth <= 991){
                 $('.js_foldoverSwiper').hide();
                 $(this).parent(".js_oHerlFoldover").removeClass("cur").removeClass("fixed");
                 $(".js_round").remove();
@@ -280,61 +282,54 @@ $(function () {
             var htmlImgH = $(".js_buyhtml").find(".js_box").eq(0).find("img").height();
             if (document.body.offsetWidth > 991) {
                 $(".js_foldPlus").css("top", htmlImgH / 2 - 44 + 'px');
-            }
-            if (anchor == '') {
-                if (document.body.offsetWidth <= 991) {
-                    location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
-                } else {
-                    location.href = $('.js_foldlist').find('a').eq(0).attr('href');
-                }
+                $('.js_foldoverNav').css('height', htmlImgH);
             }
         }
+        if (anchor == '') {
+            if (document.body.offsetWidth <= 991) {
+                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
+            }else{
+                location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+            }
+        } else {
+            if (document.body.offsetWidth <= 991) {
+                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href').replace(anchor, '#0F');
+            } else {
+                location.href = $('.js_foldlist').find('a').eq(0).attr('href').replace(anchor, '#0F');
+            }
+        }
+
     });
 
-    if ($(".js_detail-foldover").length) {
-        $(window).scroll(function () {
-            var $winTop = $(window).scrollTop();
-            var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height() - 200;
-            var $foldT = $(".js_detail-foldover").offset().top;
-            if ($(".js_foldoverNav").hasClass("cur")) {
-                if ($winTop > $foldH) {
-                    $(".js_oHerlFoldover").removeClass("fixed");
-                } else if ($winTop < $foldT) {
-                    $(".js_oHerlFoldover").removeClass("fixed");
-                } else {
-                    $(".js_oHerlFoldover").addClass("fixed");
-                }
-            }
-
-        });
-    }
-
     foldlsit();
-
     //电商拉页重新绘制拉页锚点
     function foldlsit() {
         $(".js_foldlsit_btn").html("");
         $(".js_foldoverNav_btn").html("");
-        var num = $(".js_buyhtml .js_box").length;
+        var num =$(".js_buyhtml .js_box").length;
         var btnhtml = '';
-        var url = window.location.href.split("/")[window.location.href.split("/").length - 1]
+        var url=window.location.href.split("/")[window.location.href.split("/").length-1]
         url = url.split("/")[0];
+        var anchor = window.location.hash; //获取当前链接是否有锚点
+        if (anchor != '') {
+            url = url.replace(anchor, '');
+        }
         for (var i = 0; i < num; i++) {
             $(".js_buyhtml .js_box").eq(i).attr("id", i + 'F').addClass("o_df-hide");
             $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
             var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
-            if (document.body.offsetWidth > 991) {
-                if (i == 0) {
-                    btnhtml += '<a href="' + url + '#' + i + 'F" name="' + i + 'F" class="l-btn-normal alive" data-index=' + i + '>' + text + '</a>';
-                } else {
-                    btnhtml += '<a href="' + url + '#' + i + 'F" name="' + i + 'F" class="l-btn-normal" data-index=' + i + '>' + text + '</a>';
+            if(document.body.offsetWidth>991){
+                if(i == 0){
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
+                }else{
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
                 }
                 $(".js_foldlsit_btn").html(btnhtml);
-            } else {
-                if (i == 0) {
-                    btnhtml += '<a href="' + url + '#' + i + 'F" name="' + i + 'F" class="l-btn-sm l-btn-line2 alive" data-index=' + i + '>' + text + '</a>';
-                } else {
-                    btnhtml += '<a href="' + url + '#' + i + 'F" name="' + i + 'F" class="l-btn-sm l-btn-line2" data-index=' + i + '>' + text + '</a>';
+            }else{
+                if(i == 0){
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2 alive" data-index='+i+'>'+text+'</a>';
+                }else{
+                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2" data-index='+i+'>'+text+'</a>';
                 }
                 $(".js_foldoverNav_btn").html(btnhtml);
             }
@@ -348,34 +343,107 @@ $(function () {
         if(document.body.offsetWidth>991){
             $(".js_foldPlus").css("top",foldPlus+'px');
         }*/
-        initAnchor();
 
-        function initAnchor() {
-            var htmlImgH = $(".js_buyhtml").find(".js_box").eq(0).find("img").height();
-            if (document.body.offsetWidth > 991) {
-                $(".js_foldPlus").css("top", htmlImgH / 2 - 44 + 'px');
-            }
+        var htmlImgH = $(".js_buyhtml").find(".js_box").eq(0).find("img").height();
+        if (document.body.offsetWidth > 991) {
+            $(".js_foldPlus").css("top", htmlImgH / 2 - 44 + 'px');
         }
 
+
         //锚点定位后，左侧按钮定位
-        $('.js_foldoverNav .js_foldlist').find('a').on('click', function () {
+        $('.js_foldoverNav .js_foldlist').find('a').on('click',function(){
             var index = parseInt($(this).attr('data-index'));
             //点击当前锚点，添加选中状态，同类去掉选中状态
             $(this).addClass("alive").siblings().removeClass("alive");
+            var indexName = $(this).attr("name");
+            $('html,body').animate({ scrollTop: $("#" + indexName).offset().top - 68 });
             var btnNum = $(".js_foldlsit_btn").find("a").length;
             var top = (btnNum * 52) + 130;
             for (var i = 0; i < index; i++) {
                 top += $('.js_foldimg').find('img').eq(i).height();
             }
             if (document.body.offsetWidth > 991) {
-                $('.js_foldPlus').css('top', top);
-                $('.js_foldoverNav').css('height', $('.js_oHerlSizeFoldover').height());
-                $('.js_foldlist').css('top', top - (btnNum * 52));
+                // $('.js_foldPlus').css('top', top);
+                // $('.js_foldoverNav').css('height', $('.js_oHerlSizeFoldover').height());
+                // $('.js_foldlist').css('top', top - (btnNum * 52));
             } else {
                 $('.js_foldoverNav').css('height', 0);
             }
         });
+        $(".js_foldoverNav_btn").find('a').on('click', function() {
+            var index = parseInt($(this).attr('data-index'));
+            //点击当前锚点，添加选中状态，同类去掉选中状态
+            $(this).addClass("alive").siblings().removeClass("alive");
+        });
     }
+
+    // if ($(".js_detail-foldover").length) {
+    //     $(window).scroll(function() {
+    //         var $winTop = $(window).scrollTop();
+    //         var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height();
+    //         var $foldT = $(".js_detail-foldover").offset().top;
+    //         if ($(".js_oHerlFoldover").hasClass("cur")) {
+    //             if ($winTop > $foldH) {
+    //                 $(".js_oHerlFoldover").removeClass("fixed");
+    //             } else if ($winTop < $foldT) {
+    //                 $(".js_oHerlFoldover").removeClass("fixed");
+    //             } else {
+    //                 $(".js_oHerlFoldover").addClass("fixed");
+    //             }
+    //         }
+
+    //     });
+    // }
+    var scrollAnchor = new Object(); //用于存放各个模块的位置
+    //左侧锚点跟着右侧滚动
+    $(window).scroll(function() {
+        var $close = $(".js_foldPlus i").hasClass("icon-close");
+        var $winTop = $(window).scrollTop();
+        var $foldH = $(".js_detail-foldover").offset().top + $(".js_detail-foldover").height();
+        var $foldT = $(".js_detail-foldover").offset().top;
+        var btnNum = $(".js_foldlsit_btn").find("a").length;
+        var top = (btnNum * 52) + 160;
+        if ($close == true) {
+            if (document.body.offsetWidth > 991) {
+                if ($winTop > $foldH - top - 38) {
+                    $(".js_anchor").removeClass("fixed");
+                } else if ($winTop < $foldT) {
+                    $(".js_anchor").removeClass("fixed");
+                } else {
+                    $(".js_anchor").addClass("fixed");
+                }
+            } else {
+                if ($winTop > $foldH - 350) {
+                    $(".js_anchor").removeClass("fixed").addClass("o_df-hide");
+                } else if ($winTop < $foldT - 200) {
+                    $(".js_anchor").removeClass("fixed");
+                } else {
+                    $(".js_anchor").addClass("fixed").removeClass("o_df-hide");
+                }
+            }
+        }
+        $('.js_anchor').find('a[data-index]').each(function(i, n) {
+            var name = $(this).attr('name');
+            var jshref = '#' + name;
+            scrollAnchor[name] = $(jshref).offset().top - navHeight;
+        });
+        var navName; //高亮导航位置
+        var navHigh;
+        jQuery.each(scrollAnchor, function(i, n) {
+            if (parseInt(n) <= $winTop) {
+                if (navName) {
+                    if ($winTop - parseInt(n) <= navHigh) {
+                        navName = i;
+                        navHigh = $winTop - parseInt(n);
+                    }
+                } else {
+                    navName = i;
+                    navHigh = $winTop - parseInt(n);
+                }
+            }
+        });
+        $('.js_anchor').find('a[name=' + navName + ']').addClass('alive').siblings().removeClass("alive");
+    });
 
 
     /********电商拉页*********/
@@ -388,10 +456,10 @@ $(function () {
     $(".js_swiperPreferential .js_checkbox").jq_qvote();
 
     //浏览产品细节图
-    $('.js_bannerSwiperClose').on('click', function () {
+    $('.js_bannerSwiperClose').on('click', function() {
         $('.js_specificsBoxShow').fadeOut(1000);
     });
-    $('.js_specificsShow').on('click', function () {
+    $('.js_specificsShow').on('click', function() {
         $('.js_specificsBoxShow').fadeIn(1000);
         swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
             // loop: true,
@@ -400,7 +468,7 @@ $(function () {
             centeredSlides: true,
             slidesPerView: 3,
             watchActiveIndex: true,
-            onFirstInit: function (swiper) {
+            onFirstInit: function(swiper) {
 
 
                 $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
@@ -419,7 +487,7 @@ $(function () {
                 });
 
             },
-            onSlideChangeEnd: function (swiper) {
+            onSlideChangeEnd: function(swiper) {
                 var index = swiper.activeLoopIndex;
 
                 $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
@@ -438,7 +506,7 @@ $(function () {
             }
         });
         //分页
-        $('.js_bannerSwiperPage .pagination-box').click(function () {
+        $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
 
             swiper.bannerSwiper.swipeTo(parseInt(index), 1000, false);
@@ -456,16 +524,16 @@ $(function () {
             $(this).addClass('active');
         });
         // 上一页 下一页
-        $('.js_bannerSwiperPrev').on('click', function () {
+        $('.js_bannerSwiperPrev').on('click', function() {
             swiper.bannerSwiper.swipePrev();
         });
-        $('.js_bannerSwiperNext').on('click', function () {
+        $('.js_bannerSwiperNext').on('click', function() {
             swiper.bannerSwiper.swipeNext();
         });
     });
 
 
-    $(window).resize(function () {
+    $(window).resize(function() {
         init();
         foldlsit();
     });
@@ -485,17 +553,17 @@ $(function () {
             slidesPerView = 2;
         }
 
-        if ($(".js_swiperPreferential").length) {
+        if($(".js_swiperPreferential").length){
             swiper.preferentialSwiper.params.slidesPerView = slidesPerView;
         }
-        setTimeout(function () {
+        setTimeout(function() {
             $('.js_oHerl').css('height', $('.js_oHerlSize').outerHeight());
             $('.js_center').oBoxCenter().init();
         }, 1000);
 
         //延迟加载图片
-        setTimeout(function () {
-            $(".o_picture").each(function () {
+        setTimeout(function() {
+            $(".o_picture").each(function() {
                 $(this).oPicture({
                     //自定义节点宽度
                     //sm:544,md:700,lg:992,xl:1200,
@@ -504,13 +572,13 @@ $(function () {
         }, 300);
 
 
-        setTimeout(function () {
+        setTimeout(function() {
 
             // 更多选择
             $('.js_oHerlMore').css('height', $('.js_oHerlSizeMore').outerHeight());
             $('.js_center').oBoxCenter().init();
             //电商拉页
-            if (screenWidth > 991) {
+            if(screenWidth>991){
                 $('.js_oHerlFoldover').css('height', $('.js_oHerlSizeFoldover').outerHeight());
             }
 
@@ -518,7 +586,7 @@ $(function () {
         }, 1000);
 
         //更多选择
-        if (screenWidth > 575) {
+        if(screenWidth>575){
             swiper.moreSwiper.reInit();
         }
 
@@ -526,10 +594,10 @@ $(function () {
 
 
     //手机验证
-    $('.js-bindmobinput').blur(function () {
+    $('.js-bindmobinput').blur(function() {
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if (yanzhengtrue) {
-            $('.js-getinfo').removeClass('l-btn-disable').click(function () {
+            $('.js-getinfo').removeClass('l-btn-disable').click(function() {
 
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
                 if (yanzhengtrue) {
@@ -546,13 +614,13 @@ $(function () {
     });
 
     //验证码成功后可点击提交
-    $('.js-mobileCode').blur(function () {
+    $('.js-mobileCode').blur(function() {
 
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
 
         if (yanzhengtrue) { //点击确定 个人中心绑定手机号接口
             $('.js-submintData').removeClass('l-btn-disable');
-            $('.js-submintData').unbind().bind('click', function () {
+            $('.js-submintData').unbind().bind('click', function() {
                 var newMobile = $('.js-newMobile').val();
                 var mobileCode = $('.js-mobileCode').val();
 
@@ -562,7 +630,7 @@ $(function () {
             //    提示错误信息 验证码错误
 
             //禁止点击
-            $('.js-submintData').unbind().bind('click', function () {
+            $('.js-submintData').unbind().bind('click', function() {
                 $(this).addClass('l-btn-disable');
                 return false;
             });
@@ -570,38 +638,38 @@ $(function () {
 
     });
     //密码验证
-    $('.js-landUserIdInput').blur(function () {
+    $('.js-landUserIdInput').blur(function() {
         var yanzhengtrue = $(this).parents('.land-cont-normal-input').find('.Validform_right');
         if (yanzhengtrue.length == 2) { //点击确定 个人中心绑定手机号接口
 
             $('.js-submintData').removeClass('l-btn-disable');
-            $('.js-submintData').unbind().bind('click', function () {
+            $('.js-submintData').unbind().bind('click', function() {
 
             })
         } else {
             //    提示错误信息 验证码错误
             $('.js-submintData').addClass('l-btn-disable');
             //禁止点击
-            $('.js-submintData').unbind().bind('click', function () {
+            $('.js-submintData').unbind().bind('click', function() {
 
                 return false;
             })
         }
     });
     //密码验证
-    $('.js-landPassWordInput').blur(function () {
+    $('.js-landPassWordInput').blur(function() {
         var yanzhengtrue = $(this).parents('.land-cont-normal-input').find('.Validform_right');
         if (yanzhengtrue.length == 2) { //点击确定 个人中心绑定手机号接口
 
             $('.js-submintData').removeClass('l-btn-disable');
-            $('.js-submintData').unbind().bind('click', function () {
+            $('.js-submintData').unbind().bind('click', function() {
 
             })
         } else {
             //    提示错误信息 验证码错误
             $('.js-submintData').addClass('l-btn-disable');
             //禁止点击
-            $('.js-submintData').unbind().bind('click', function () {
+            $('.js-submintData').unbind().bind('click', function() {
 
                 return false;
             })
@@ -610,10 +678,10 @@ $(function () {
     });
 
     //账号验证
-    $('.js-landUserIdInput').blur(function () {
+    $('.js-landUserIdInput').blur(function() {
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if (yanzhengtrue) {
-            $('.js-getinfo').removeClass('l-btn-disable').click(function () {
+            $('.js-getinfo').removeClass('l-btn-disable').click(function() {
 
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
                 if (yanzhengtrue) {
@@ -629,10 +697,10 @@ $(function () {
 
     });
     //手机验证
-    $('.js-bindmobinput').blur(function () {
+    $('.js-bindmobinput').blur(function() {
         var yanzhengtrue = $(this).siblings('.Validform_checktip').hasClass('Validform_right');
         if (yanzhengtrue) {
-            $('.js-getinfo').removeClass('l-btn-disable').click(function () {
+            $('.js-getinfo').removeClass('l-btn-disable').click(function() {
 
                 yanzhengtrue = $('.js-newMobile').siblings('.Validform_checktip').hasClass('Validform_right');
                 if (yanzhengtrue) {

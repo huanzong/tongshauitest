@@ -53,7 +53,7 @@ jQuery(function () {
     var compare_channel_url = "";
     //通过url的channel获取第一个json------得到数据集合json的路径
     $.ajax({
-        url: "../../compareurl_56.json",
+        url: "../../compareurl.json",
         dataType: "text",
         async: false,
         success: function (data) {

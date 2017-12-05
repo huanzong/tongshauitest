@@ -563,17 +563,17 @@
                             <div class="picbox" style="display: inline-block;width: 50%;padding-bottom: 30px;">
                                 <div class="pr_0" style="display: inline-block;padding-right: 15px;">
                                     <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_1.jpg" style="width: 100%;">
-                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_2.jpg" style="display: inline-block;padding-top: 30px;width: 100%;">
+                                    <img class="ue_t pt_10" src="http://test.tongshuai.com/images/template_detail_2.jpg" style="display: inline-block;padding-top: 30px;width: 100%;">
                                 </div>
                             </div>
                             <div class="picbox" style="display: inline-block;width: 50%;padding-bottom: 30px;">
                                 <div class="pl_0" style="display: inline-block;padding-left: 15px;">
                                     <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_3.jpg" style="width: 100%;">
-                                    <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_4.jpg" style="display: inline-block;width: 100%;padding-top: 30px;">
+                                    <img class="ue_t pt_10" src="http://test.tongshuai.com/images/template_detail_4.jpg" style="display: inline-block;width: 100%;padding-top: 30px;">
                                 </div>
                             </div>
                         </div>
-                        <div label="Title left" name="tl" style="margin:0;font-size:0;width: 100%;padding-bottom: 30px;">
+                        <div label="Title left pb_10" name="tl" style="margin:0;font-size:0;width: 100%;padding-bottom: 30px;">
                             <img class="ue_t" src="http://test.tongshuai.com/images/template_detail_5.jpg" style="width: 100%;">
                         </div>
                         <div label="Title left" name="tl" style="margin:0;font-size: 0;">
@@ -658,25 +658,27 @@
             </div> -->
             <div class="o_g detail-foldover js_detail-foldover">
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
-                    <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#2F" name="2F" class="l-btn-normal" data-index=2>如此境界，怎忙不爱</a>
-                        <a href="product_detail_new.shtml#3F" name="3F" class="l-btn-normal" data-index=3>三挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#4F" name="4F" class="l-btn-normal" data-index=4>四台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
-                    </div>
-                    <a class="iconfont icon-bg-solid js_foldPlus">
-                        <i class="iconfont icon-plus"></i>
-                        <span>详细产品介绍</span>
-                    </a>
-                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
-                        <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
+                    <div class="anchor-box js_anchor ">
+                        <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-normal alive" data-index=1>一台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#2F" name="2F" class="l-btn-normal" data-index=2>如此境界，怎忙不爱</a>
+                            <a href="product_detail_new.shtml#3F" name="3F" class="l-btn-normal" data-index=3>三挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#4F" name="4F" class="l-btn-normal" data-index=4>四台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#5F" name="5F" class="l-btn-normal" data-index=5>五台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#6F" name="6F" class="l-btn-normal" data-index=6>六台挂在墙上的机柜</a>
+                        </div>
+                        <a class="iconfont icon-bg-solid js_foldPlus">
+                            <i class="iconfont icon-plus"></i>
+                            <span>详细产品介绍</span>
+                        </a>
+                        <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=1>1台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=2>2台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=3>3台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=4>4台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=5>5台挂在墙上的机柜</a>
+                            <a href="product_detail_new.shtml#1F" name="1F" class="l-btn-sm l-btn-line2 alive" data-index=6>6台挂在墙上的机柜</a>
+                        </div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
@@ -743,30 +745,6 @@
                             <div class='box js_box' id='' style='margin:0;font-size: 0;'>
                                 <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
                                     锚点名称7
-                                </p>
-                                <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
-                                </p>
-                            </div>
-                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
-                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
-                                    锚点名称8
-                                </p>
-                                <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
-                                </p>
-                            </div>
-                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
-                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
-                                    锚点名称9
-                                </p>
-                                <p>
-                                    <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
-                                </p>
-                            </div>
-                            <div class='box js_box' id='' style='margin:0;font-size: 0;'>
-                                <p class='js_tag o_df-hide' style='width: 100%;font-size: 16px;color#333;display: inline-block;'>
-                                    锚点名称10
                                 </p>
                                 <p>
                                     <img src='images/footer_logo1.jpg' style='width: 100%;display: inline-block;' />
