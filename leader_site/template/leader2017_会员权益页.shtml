@@ -224,13 +224,13 @@
     function selectmember() {
         for(var i=1;i<=4;i++){
             if ($(".member_"+i).attr("pic").indexOf("普通") > -1) {
-                $(this).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
+                $(".member_"+i).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
-                $(this).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
+                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
-                $(this).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
+                $(".member_"+i).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
             }
         }
     }
