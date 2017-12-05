@@ -365,7 +365,7 @@
 		</div>
 		<!-- 关于统帅 END -->
 
-		<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 	</div>
 </div>
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->

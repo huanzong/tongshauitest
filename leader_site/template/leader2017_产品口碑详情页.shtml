@@ -76,7 +76,7 @@
         </div>
         <div class="o_g product-prise-page pageMobile o_df-hide o_sm-hide o_xs-show">
         </div>
-        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 
     </div>
 </div>

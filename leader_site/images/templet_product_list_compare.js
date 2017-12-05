@@ -18,71 +18,7 @@ var proObjListSideBar = "";
 var arrayMetaDataId = new Array();
 //总对比按钮
 compareButtonOnclick();
-//添加对比的点击事件
-function addContrastClick() {
 
-    //$(".js_compareAddProduct").live("click",function(){
-    //是否选中标志
-    var auto = $(this).attr("auto");
-    if (auto == "0") {
-        //如果是没有对比的对比
-        $(this).addClass("uncontrast");
-        $(this).attr("auto", "1");
-        $(this).find("span").html("已对比");
-        $(this).find("i").removeClass("o-plus").addClass("o-close");
-    } else if (auto == "1") {
-        //如果是已经对比的取消对比
-        $(this).removeClass("uncontrast");
-        $(this).attr("auto", "0");
-        $(this).find("span").html("对比");
-        $(this).find("i").removeClass("o-close").addClass("o-plus");
-    }
-
-    var cla = $(this).attr("class");
-    $this = $(this);
-    var $flyout = jQuery('.pro_compare_flyout');
-    var $list = $flyout.find('.compare_col');
-    var count = $list.find('.row').length;
-
-    if (cla.indexOf("uncontrast") > 0) {
-        if (!add_compare_flyOut_item($this)) {
-            alert("您最多能添加4个产品！");
-            unchecked($(this));
-            show_compare_flyout();
-        } else {
-            if (noCompareChannel != "") {
-                var pType = $(this).attr("data-chnid");
-                //互斥不同类别的
-                $(".o_u.o_df_1-2.o_xs-hide.btn").each(function () {
-                    var pType_ = $(this).attr("data-chnid");
-                    var isChecked_ = $(this).hasClass("uncontrast");
-                    if (isChecked_) {
-                        if (pType != pType_) {
-                            $(this).removeClass("uncontrast");
-                            $(this).attr("auto", "0");
-                            $(this).find("span").html("对比");
-                            $(this).find("i").removeClass("o-close").addClass("o-plus");
-                        }
-                    }
-                    if (pType != pType_ && pType != "") {
-                        $(this).addClass("lose");
-                        $(this).removeClass("js_contrast");
-                    }
-
-
-                });
-            }
-        }
-    } else {
-        remove_compare_fLayout_item($this);
-        $(this).removeClass("uncontrast");
-        $(this).attr("auto", "0");
-        $(this).find("span").html("对比");
-        $(this).find("i").removeClass("o-close").addClass("o-plus");
-    }
-    //});
-
-}
 
 
 //添加对比按钮监听事件
@@ -93,15 +29,6 @@ function addCompareOnclick() {
         $thisObj = $(this);
         var auto = $thisObj.attr("auto");
         if (auto == "0") {
-            //如果是没有对比的对比
-            $thisObj.addClass("uncontrast");
-            $thisObj.attr("auto", "1");
-            $thisObj.find(".pro-read-font").html("已对比");
-            //$(this).find("i").removeClass("o-plus").addClass("o-close");
-            //显示对比栏
-            showCompareFlow();
-            showCompareFlowLayout();
-            //加入商品对比列表的模板,
 
             add_compare_flyOut_item($thisObj);
             return;
@@ -109,12 +36,12 @@ function addCompareOnclick() {
 
             remove_compare_fLayout_item($thisObj.attr("id"));
             //return;
-            $(this).removeClass("uncontrast");
+            //$(this).removeClass("uncontrast");
             $(this).attr("auto", "0");
             $(this).find(".pro-read-font").html("对比");
             //$(this).find("i").removeClass("o-close").addClass("o-plus");
             //如果是已经对比的取消对比
-
+            isLastCompareProduct();
         }
 
     });
@@ -150,7 +77,7 @@ function initCookie() {
                 var product = proObjList[i];
                 //修改对比样式 todo -----------------样式处理------------------------------------------------
                 $("#" + product.id).attr("auto", "1");
-                $("#" + product.id).addClass("uncontrast");
+                //$("#" + product.id).addClass("uncontrast");
                 $("#" + product.id).find(".pro-read-font").html("已对比");
                 // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
                 pType = product.channelid;
@@ -162,7 +89,7 @@ function initCookie() {
             $(".uncontrast").find(".pro-read-font").html("对比");
             //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
             $(".uncontrast").attr("auto","0");
-            $(".uncontrast").removeClass("uncontrast");
+            //$(".uncontrast").removeClass("uncontrast");
 
         }
     }
@@ -207,9 +134,9 @@ function initLoadCookie() {
 window.unchecked = function ($obj) {
     //对比按钮样式
     $obj.attr("auto", "0");
-    $obj.removeClass("uncontrast");
+    //$obj.removeClass("uncontrast");
     $obj.find(".pro-read-font").html("对比");
-    $obj.find("i").removeClass("o-close").addClass("o-plus");
+    //$obj.find("i").removeClass("o-close").addClass("o-plus");
 }
 
 //将添加对比的产品绘制在浮层上
@@ -229,6 +156,16 @@ window.add_compare_flyOut_item = function ($obj) {
             return false;
         }
 
+        //如果是没有对比的对比
+        $obj.addClass("uncontrast");
+        $obj.attr("auto", "1");
+        $obj.find(".pro-read-font").html("已对比");
+        //$(this).find("i").removeClass("o-plus").addClass("o-close");
+        //显示对比栏
+        showCompareFlow();
+        showCompareFlowLayout();
+
+        //加入商品对比列表的模板,
         var id = $obj.attr('id');
         var proImg = $obj.attr('data-thumb');
         var proTitle = $obj.attr('data-name');
@@ -249,8 +186,6 @@ window.add_compare_flyOut_item = function ($obj) {
             ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
             '</li>';
 
-
-        //$('.js_compareBox').prepend(compareHtml);
         $list.prepend(compareHtml);
         //把选择的对比产品存入cookie
         var proObj = new Object();
@@ -264,9 +199,7 @@ window.add_compare_flyOut_item = function ($obj) {
         proObjList.push(proObj);
         var objString = JSON.stringify(proObjList);
         $.cookie('leaderProCookie', objString, {path: '/'});
-        //添加侧边栏绘制数据
-        /* initSideBarCookie();
-         initSideBarLoadCookie();*/
+
         //总对比按钮
         //删除对比选项监听
         deleteCompareItem();
@@ -284,10 +217,11 @@ window.remove_compare_fLayout_item = function (id) {
 
 
     $list.find('li').each(function () {
-        var $this_col = jQuery(this);
+        var $this_col = $(this);
         var col_id = $this_col.children('.compare-product-img').attr('id');
         if (col_id == id && id != undefined) {
             $this_col.remove();
+            unchecked($("#"+col_id));
             //删除cookie里面的相应数据
             for (var i = 0; i < proObjList.length; i++) {
                 var obj = proObjList[i];
@@ -297,35 +231,15 @@ window.remove_compare_fLayout_item = function (id) {
             }
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
+            /**
+             * 是否最后一个对比产品
+             */
+            isLastCompareProduct();
             return false;
         }
 
     });
 
-    if ($list.find('.row').length <= 0) {
-        hideCompareFlowLayout();
-        //删除cookie里面的相应数据,未点比较按钮时删除cookie
-        for (var i = 0; i < proObjList.length; i++) {
-            var obj = proObjList[i];
-            if (obj.id == id) {
-                proObjList = remove(proObjList, "id", id);
-            }
-        }
-        var objString = JSON.stringify(proObjList);
-        $.cookie('leaderProCookie', objString, {path: '/'});
-        if (noCompareChannel != "") {
-            if (objString == "[]") {
-                //恢复互斥项
-                $(".js_proList .lose").each(function () {
-                    $(this).addClass("js_contrast");
-                    $(this).removeClass("lose");
-                });
-            }
-        }
-    }
-    //添加侧边栏绘制数据
-    //initSideBarCookie();
-    //initSideBarLoadCookie();
 };
 //移除
 function remove(arrPerson, objPropery, objValue) {
@@ -511,4 +425,15 @@ function showCompareFlow(){
 //总隐藏对比浮层
 function hideCompareFlow(){
     $('.prolist-compare').hide();
+}
+
+/**
+ * 判断是否最后一个对比产品
+ *
+ */
+function isLastCompareProduct(){
+    var $list = $('.js_compareBox');
+    if ($list.find('li').length <= 0) {
+        hideCompareFlow();
+    }
 }
