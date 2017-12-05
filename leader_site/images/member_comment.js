@@ -63,30 +63,7 @@ $(function(){
 
         }
     })
-    //添加自定义标签
-    $('.js_commentImpressAddBtn').click(function(){
-        var btnCont  =  $('.js_EvaluateVal5').val();
-        var selectLengt = $('.js_commentImpressBtns').children('.select').length;
-        if(btnCont=='最大长度5'){
-            alert(1);
-            //TODO 添加内容不能为空的弹窗
-        }else{
-            if(btnCont>5){
-                alert('字符长度错误');
-            }else{
 
-                if(selectLengt>5){
-                    var newBtn = '<a href="javascript:;" class="l-btn-sm l-btn-line2">'+btnCont+'</a>';
-                    $('.js_commentImpressAddShow').before(newBtn);
-                }else{
-                    var newBtnSelect = '<a href="javascript:;" class="l-btn-sm l-btn-line2 select">'+btnCont+'</a>';
-                    $('.js_commentImpressAddShow').before(newBtnSelect);
-                }
-            }
-        }
-
-
-    })
 
 //    自定义按钮显示开关
 
@@ -139,3 +116,29 @@ $(function(){
 
 })
 
+    //添加自定义标签
+    $('.js_commentImpressAddBtn').click(function(){
+        var btnCont  =  $('.js_EvaluateVal5').val();
+        var selectLengt = $('.js_commentImpressBtns').children('.select').length;
+        if(btnCont=='最大长度5'){
+            // alert(1);
+            //TODO 添加内容不能为空的弹窗
+            globalShade2('内容不能为空',2,2000);
+        }else{
+            if(btnCont>5){
+            globalShade2('字符长度错误',2,2000);
+                
+            }else{
+
+                if(selectLengt>5){
+                    var newBtn = '<a href="javascript:;" class="l-btn-sm l-btn-line2">'+btnCont+'</a>';
+                    $('.js_commentImpressAddShow').before(newBtn);
+                }else{
+                    var newBtnSelect = '<a href="javascript:;" class="l-btn-sm l-btn-line2 select">'+btnCont+'</a>';
+                    $('.js_commentImpressAddShow').before(newBtnSelect);
+                }
+            }
+        }
+
+
+    })

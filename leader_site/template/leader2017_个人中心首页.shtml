@@ -16,7 +16,7 @@
     <div class="o_main">
         <div class="o_g js-contBox">
             <!-- 左侧导航 START-->
-            <!--#include virtual="${ROOT_PATH}ucenter/left2_140.shtml"-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left2.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <!--o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2-->
@@ -39,7 +39,7 @@
                             <!--<li><a href="javascript:;" class="o_u ">收藏与订阅</a></li>-->
                             <!--<li><a href="javascript:;" class="o_u ">我的产品</a></li>-->
                             <!--<li><a href="javascript:;" class="o_u ">售后服务</a></li>-->
-                            <li><a href="/product_share" class="o_u ">我的晒单</a></li>
+                            <li><a href="/product_share" class="o_u ">我的评价</a></li>
                             <li class="memeber-nav-middle-title">账户管理</li>
                             <li><a href="/security" class="o_u ">安全设置</a></li>
                             <li><a href="/address" class="o_u ">地址管理</a></li>
@@ -225,11 +225,11 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="${ROOT_PATH}ucenter/footer_62.shtml"-->
 
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
     </div>
 </div>
-<!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="../site5/member_nav.js"></script>
 <script type="text/javascript" src="../site5/jquery.jUploader-1.01.min.js"></script>

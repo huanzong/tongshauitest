@@ -81,7 +81,7 @@
                                                 </div>
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g info-date-input" style="text-align: left">
                                                     <div class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
-                                                        <input type="text" name="" class="js_Date o_u  o_df_2-2 l-btn-normal l-btn-line2" data-date="1"> <span class="iconfont icon-events "></span>
+                                                        <input type="text" name="" class="js_Date o_u personalinfo-date o_df_2-2 l-btn-normal l-btn-line2" data-date="1"> <span class="iconfont icon-events "></span>
                                                     </div>
                                                     <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">-->
                                                     <!--<div class="selectbox">-->
@@ -184,10 +184,9 @@
                                                 <!--<canvas id="js_imgCut"></canvas>-->
                                                 <div class="member-personalinfo-modifyimg">
                                                     <div class="membe-personalinfo-photo-right">
-                                                        <img src="" alt="" />
+                                                        <img src="../images/ignore_prodetail3.JPG" alt="">
                                                     </div>
-                                                    <a href="javascript:;" id="js_imgUpload"
-                                                       class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
+                                                    <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
                                                     <p>支持jpg、jpeg、png，大小不超过2M</p>
                                                 </div>
 

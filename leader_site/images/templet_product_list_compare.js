@@ -149,10 +149,10 @@ function initCookie() {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
                 //修改对比样式 todo -----------------样式处理------------------------------------------------
-                 $("#" + product.id).attr("auto", "1");
-                 $("#" + product.id).addClass("uncontrast");
-                 $("#" + product.id).find(".pro-read-font").html("已对比");
-                 // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
+                $("#" + product.id).attr("auto", "1");
+                $("#" + product.id).addClass("uncontrast");
+                $("#" + product.id).find(".pro-read-font").html("已对比");
+                // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
                 pType = product.channelid;
             }
 
@@ -160,9 +160,9 @@ function initCookie() {
             proObjList = [];
             //对比按钮样式
             $(".uncontrast").find(".pro-read-font").html("对比");
-             //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
-             $(".uncontrast").attr("auto","0");
-             $(".uncontrast").removeClass("uncontrast");
+            //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
+            $(".uncontrast").attr("auto","0");
+            $(".uncontrast").removeClass("uncontrast");
 
         }
     }
@@ -457,7 +457,7 @@ function compareButtonOnclick() {
                     vURL = vURL.substring(0, vURL.lastIndexOf("/"));
                 }
                 //todo channelId先暂时固定
-                vURL = vURL + '/compare_59.shtml?productId=' + vStr + '&channelId=' + chnlid_owner;
+                vURL = vURL + '/compare.shtml?productId=' + vStr + '&channelId=' + chnlid_owner;
             } else {
                 vURL = window.location.href;
             }

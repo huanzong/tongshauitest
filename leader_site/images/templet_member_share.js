@@ -8,7 +8,6 @@ $(function () {
 
     //根据订单传的orderId 查询商品信息
     var templet_orderId=getQueryString("orderId");
-    var templet_orderType=getQueryString("orderType");
     //var templet_XXX=getQueryString("");入口2需要传给我产品注册码
     var templet_modelNo=getQueryString("modelNo");
     if(templet_modelNo==null){
@@ -19,28 +18,18 @@ $(function () {
     if(templet_orderId==null){
 
     }else{
-        var templet_data;
-        if('orderSubId'==templet_orderType){
-            templet_data={"orderSubId":templet_orderId};
-        }
-        else{
-            if('orderId'==templet_orderType){
-                templet_data={"orderId":templet_orderId};
-            }
-            else{
-                window.location.href ='/order';
-            }
-        }
         $.ajax({
             type: "get",
             url: siteConfig.userUrl+"/buy/order/order-front/show/",
-            data: templet_data,
+            data: {"orderId":templet_orderId},
             login:true,
             error_cb : function(){
                 window.location.href ='/order';
             },
             success: function(data){
                 if(data.isSuccess){
+                   //TODO 1.如果不是收货状态 直接返回到订单页面 2.判断有没有评价过
+
                     var templet_productgoods=data.data.goods;
                     //如果没在订单里查到对应的产品，返回订单页面
                     var templet_validate=true;
@@ -132,6 +121,13 @@ $(function () {
             templet_devSource=2;
         }
 
+        var photoNub=$('.js_sharephotobox').children('li').length;
+        if(photoNub==0){
+            $('.js-pic').removeClass('member-share-evaluate-right');
+            return;
+        }
+        $('.js-pic').addClass('member-share-evaluate-right');
+
         var commentpics='';
         $(".js_sharephotobox").find('li:not(.empty)').each(function(){
             var imgurl=$(this).find("img").attr("src");
@@ -145,29 +141,22 @@ $(function () {
         });
         commentpics=commentpics.replace(/\/tongshuaifile/g,"");
 
-        var templet_isHavePic=0;
-        if(commentpics!=''){
-            templet_isHavePic=1;
-        }
-
         if(templet_orderId!=null){
             var data={
                 'pathsStr':commentpics,
                 'star':templet_star,
                 'content':templet_content,
-                'isHavePic':templet_isHavePic,
                 'devSource':templet_devSource,
-                'businessId':templet_modelNo,
+                'businessId':'150',
                 'channelSource':'1',
                 'categoryId':'2',
-                'orderId':templet_orderId
+                'orderId':'123'
             };
             $.ajax({
                 url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
                 data:  JSON.stringify(data),
                 applicationType:true,
                 login:true,
-                csrf: true,
                 success_cb: function(data){
                     if(data.isSuccess){
                         $('.js_popUpBox3').show();

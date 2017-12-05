@@ -4,10 +4,6 @@
 * @date        2017.10.19
 * ---------------------------------------------------------------------------*/
 $(function(){
-    //前台判断是否登陆
-    if(!istrsidssdssotoken()){
-        jumpToLoginPage();
-    }
 
     //页面加载时调个人信息
     $.ajax({
@@ -314,7 +310,6 @@ $(function(){
                                 $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
                             }
                         }
-
                     }
                 }
             });
