@@ -201,8 +201,7 @@
 </div>
 <!--#include virtual="${ROOT_PATH}ucenter/foot.shtml"-->
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-</body>
-<script>
+<script type="text/javascript">
     $(function () {
 
         var windowWidth = $(window).width();
@@ -222,7 +221,11 @@
         $(".membercenter-list li").eq(2).css({"class": "list-interact"});  //第三个li
         $(".membercenter-list li").eq(3).css({"class": "list-present"});  //第四个li
 
+        selectmember();
 
+    })
+
+    function selectmember() {
         var memberName = $(".member-conter-text-down").Attr("pic");
         if (memberName.indexOf("普通") > -1) {
             $(".member-conter-text-down").append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
@@ -234,7 +237,7 @@
             $(".member-conter-text-down").append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
         }
 
-
-    })
+    }
 </script>
+</body>
 </html>
