@@ -472,7 +472,7 @@
 			<div class="o_g prolist-bg"></div>
 		<!-- 背景间隔 END -->
 		<!-- 产品对比 -->
-			<div class="prolist-compare">
+			<div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide">
 				<div class="compare-title">
 					产品对比
 					<div class="compare-spread js_compareBoxShow" data-show=0>

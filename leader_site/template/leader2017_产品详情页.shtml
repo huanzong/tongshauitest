@@ -1350,7 +1350,7 @@
             <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
             <!--激活登陆弹窗按钮添加class js_landBtn -->
             <!-- 产品对比 -->
-            <div class="prolist-compare">
+            <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide">
                 <div class="compare-title">
                     产品对比
                     <div class="compare-spread js_compareBoxShow" data-show=0>
