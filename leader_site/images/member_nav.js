@@ -11,7 +11,7 @@ $(function(){
         $('.js_memberNavMiddle').css({'height':documenHeight});
         $('.js_memberNavMiddleBtn').css({height:documenHeight});
     } else{
-        $('.js_memberNavLeft').height(documenHeight+180);
+        $('.js_memberNavLeft').height(documenHeight+120);
         $('.js_memberNavMiddle').css({'height':documenHeight});
         $('.js_memberNavMiddleBtn').css({height:documenHeight});
     }
@@ -33,7 +33,7 @@ $(function(){
                         $('.js_memberNavLeft').height(documenHeight);
                     }else{
                         if(windowW>990){
-                            $('.js_memberNavLeft').height(documenHeight+180);
+                            $('.js_memberNavLeft').height(documenHeight+120);
                         }else{
                             $('.js_memberNavLeft').height(documenHeight);
                         }
@@ -46,7 +46,7 @@ $(function(){
                         $('.js_memberNavLeft').height(762);
                     }else{
                         if(windowW>990){
-                            $('.js_memberNavLeft').height(762+180);
+                            $('.js_memberNavLeft').height(762+120);
                         }else{
                             $('.js_memberNavLeft').height(762);
                         }

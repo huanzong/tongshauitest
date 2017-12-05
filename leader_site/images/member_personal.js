@@ -116,7 +116,7 @@ $(function(){
             forceParse: true,       //解析输入值
             format: "yyyy-mm-dd",   // 日期格式
             pickerPosition: "bottom-left",
-            // startDate: new Date()     // 开始时间
+            startDate: new Date()     // 开始时间
         });
     }else{
         $('.js_Date').mobiscroll().date({
