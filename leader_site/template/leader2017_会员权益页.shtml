@@ -9,10 +9,9 @@
     <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" type="text/css" href="member-center.css" OLDSRC="member-center.css" OLDID="600" RELATED="1">
-
+    <script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
     <script type="text/javascript">
         $(function () {
-
             var windowWidth = $(window).width();
 
             setTimeout(function () {
