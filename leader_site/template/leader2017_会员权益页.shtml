@@ -223,7 +223,7 @@
     //
     //     selectmember();
     //
-    // })
+    })
     //
     // function selectmember() {
     //     var memberName = $(".member-conter-text-down").attr("pic");
