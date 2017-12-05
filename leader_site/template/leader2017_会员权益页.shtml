@@ -18,7 +18,6 @@
             <!-- 首屏动画 -->
           <!-- 导航 -->
             <!--#include virtual="${ROOT_PATH}public/header/nav.shtml"-->
-            
             <!-- 导航 End-->
             <div class="o_g js_animateLine">
                 <div class="index_animate">
