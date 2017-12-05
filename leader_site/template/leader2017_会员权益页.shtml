@@ -7,7 +7,7 @@
     <%=base%>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
-        <!--#include virtual="public/head.shtml"-->
+        <!--#include virtual="${ROOT_PATH}public/header/header.shtml"-->
         <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
         <!-- <link rel="stylesheet" type="text/css" href="images/index.css"> -->
         <link rel="stylesheet" type="text/css" href="images/member-center.css">
@@ -17,7 +17,7 @@
     <div class="o_main">
             <!-- 首屏动画 -->
           <!-- 导航 -->
-            <!--#include virtual="public/nav.shtml"-->
+            <!--#include virtual="${ROOT_PATH}public/header/nav.shtml"-->
             
             <!-- 导航 End-->
             <div class="o_g js_animateLine">
@@ -55,7 +55,7 @@
                 </trs_viewdatas>
                 <ul class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
                     <trs_viewdatas id="会员权益banner" num="4" startpos="1">
-                    <li class="o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style='  background: url("<trs_viewdata field='picture'/>") no-repeat center right;'>
+                    <li class="o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("<trs_viewdata field='picture'/>") no-repeat center right;'>
                         <div class="membercenter-list-cont">
                             <h4><trs_viewdata field='maintitle'/></h4>
                             <p><trs_viewdata field='Subtitle'/></p>
@@ -159,9 +159,9 @@
 
                 </div>
             </div>
-            <!--#include virtual="public/footer.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
         </div>
-        <!--#include virtual="public/foot.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/foot.shtml"-->
 </body>
 <script>
     $(function(){
