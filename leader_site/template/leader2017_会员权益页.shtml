@@ -99,7 +99,6 @@
                                     <h5><trs_viewdata field='maintitle'/></h5>
                                     <p><trs_viewdata field='Subtitle'/></p>
                                     <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
-
                                     </div>
                                 </div>
                             </div>
