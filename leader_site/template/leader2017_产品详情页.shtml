@@ -1052,7 +1052,7 @@
                             <div class="o_g">
                                 <div class="o_u o_df_1-5 o_df-hide o_lg-show o_md-show param-basic-bg"></div>
                                 <div class="o_u o_df_2-2 o_lg_4-5 o_md_4-5 param-basic-con">
-                                    <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数" NUM='1'>
+                                    <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数" NUM='1'>
                                     <div class="param-basic-title"><TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP></div>
                                     <div class="o_u o_df_2-2">
                                         <div class="param-basic-box">
