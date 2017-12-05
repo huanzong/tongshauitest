@@ -7,11 +7,11 @@
     <%=base%>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
     <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-    <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="images/index.css"> -->
-    <link rel="stylesheet" type="text/css" href="images/member-center.css">
-    <!--#include file="${ROOT_PATH}public/style/member-center.shtml"-->
+    <!-- <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+    <link rel="stylesheet" type="text/css" href="member-center.css">
 </head>
 
 <body class=" ">
@@ -197,11 +197,11 @@
 
         </div>
     </div>
-    <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+    <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 </div>
-<!--#include file="${ROOT_PATH}public/footer/foot.shtml"-->
-</body>
-<script>
+<!--#include virtual="${ROOT_PATH}ucenter/foot.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<script type="text/javascript">
     $(function () {
 
         var windowWidth = $(window).width();
@@ -221,7 +221,11 @@
         $(".membercenter-list li").eq(2).css({"class": "list-interact"});  //第三个li
         $(".membercenter-list li").eq(3).css({"class": "list-present"});  //第四个li
 
+        selectmember();
 
+    })
+
+    function selectmember() {
         var memberName = $(".member-conter-text-down").Attr("pic");
         if (memberName.indexOf("普通") > -1) {
             $(".member-conter-text-down").append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
@@ -233,7 +237,7 @@
             $(".member-conter-text-down").append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
         }
 
-
-    })
+    }
 </script>
+</body>
 </html>
