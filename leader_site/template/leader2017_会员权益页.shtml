@@ -219,7 +219,6 @@
         $("#memberqybanner li").eq(3).addClass("list-present");  //第四个li
 
         selectmember();
-
     })
 
     function selectmember() {
