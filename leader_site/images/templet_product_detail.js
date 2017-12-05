@@ -48,44 +48,46 @@ if(morePro==0||morePro<3){
             $(".js_moreProB").html("");
             var mroeproA="";
             var mroeproB="";
-            for(var j=0; j<data.length-1; j++){
-                var pname=data[j].pname;
-                var modelno=data[j].modelno;
-                var cpms=data[j].cpms;
-                var dochref=data[j].dochref;
-                var pic=data[j].pic;
-                var price=data[j].price;
-                /*var sku_value=data[j].sku_value;
-                var minPrice = 0;
-                if(sku_value != null && sku_value!="" && sku_value.length>0){
-                    var currentPrice = 0;
-                    for(var i=0;i<sku_value.length;i++){
+            if(data.length>3){
+                for(var j=0; j<data.length-1; j++){
+                    var pname=data[j].pname;
+                    var modelno=data[j].modelno;
+                    var cpms=data[j].cpms;
+                    var dochref=data[j].dochref;
+                    var pic=data[j].pic;
+                    var price=data[j].price;
+                    /*var sku_value=data[j].sku_value;
+                    var minPrice = 0;
+                    if(sku_value != null && sku_value!="" && sku_value.length>0){
+                        var currentPrice = 0;
+                        for(var i=0;i<sku_value.length;i++){
 
-                        currentPrice = sku_value[i].salePrice;
-                        if(i==0){
-                            minPrice=currentPrice;
-                        }else if(parseInt(minPrice)>parseInt(currentPrice)){
-                            minPrice = currentPrice;
+                            currentPrice = sku_value[i].salePrice;
+                            if(i==0){
+                                minPrice=currentPrice;
+                            }else if(parseInt(minPrice)>parseInt(currentPrice)){
+                                minPrice = currentPrice;
+                            }
                         }
-                    }
-                }*/
+                    }*/
 
-                mroeproA+='<a class="swiper-slide" href="'+dochref+'">';
-                mroeproA+='<div class="detail-scene1-img">';
-                mroeproA+='<img src='+pic+' /></div>';
-                mroeproA+='<div class="detail-more-info">';
-                mroeproA+='<div class="detail-more-tit">'+pname+'</div>';
-                mroeproA+='<div class="detail-more-titinfo">'+modelno+'</div>';
-                mroeproA+='<div class="detail-more-special">'+cpms+'</div>';
-                mroeproA+='<div class="detail-more-price" >￥<span>'+price+'</span></div></div></a>';
+                    mroeproA+='<a class="swiper-slide" href="'+dochref+'">';
+                    mroeproA+='<div class="detail-scene1-img">';
+                    mroeproA+='<img src='+pic+' /></div>';
+                    mroeproA+='<div class="detail-more-info">';
+                    mroeproA+='<div class="detail-more-tit">'+pname+'</div>';
+                    mroeproA+='<div class="detail-more-titinfo">'+modelno+'</div>';
+                    mroeproA+='<div class="detail-more-special">'+cpms+'</div>';
+                    mroeproA+='<div class="detail-more-price" >￥<span>'+price+'</span></div></div></a>';
 
-                mroeproB+='<a class="detail-scene1-img" href="'+dochref+'">';
-                mroeproB+=' <img src="'+pic+'" /></a>';
-                mroeproB+='<div class="detail-more-info"><div class="detail-more-tit">'+pname+'</div>';
-                mroeproB+='<div class="detail-more-titinfo">'+modelno+'</div>';
-                mroeproB+='<div class="detail-more-special">'+cpms+'</div>';
-                mroeproB+='<div class="detail-more-price">￥<span>'+price+'</span></div></div>';
+                    mroeproB+='<a class="detail-scene1-img" href="'+dochref+'">';
+                    mroeproB+=' <img src="'+pic+'" /></a>';
+                    mroeproB+='<div class="detail-more-info"><div class="detail-more-tit">'+pname+'</div>';
+                    mroeproB+='<div class="detail-more-titinfo">'+modelno+'</div>';
+                    mroeproB+='<div class="detail-more-special">'+cpms+'</div>';
+                    mroeproB+='<div class="detail-more-price">￥<span>'+price+'</span></div></div>';
 
+                }
             }
             $(".js_moreProA").html(mroeproA);
             $(".js_moreProB").html(mroeproB);
@@ -96,7 +98,7 @@ if(morePro==0||morePro<3){
 }
 
 array(point,"span","js_pointText",'');//功能亮点
-array(appendix,"a","js_appendixText","param-attachment-other");//附件信息
+array(appendix,"span","js_appendixText","param-attachment-other");//附件信息
 function array(str,tab,name,className){
     if(str!=''){
         var text=str.split("~");
