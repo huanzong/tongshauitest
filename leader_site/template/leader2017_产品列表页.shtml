@@ -268,7 +268,7 @@
 						<span class="line"></span>
 						<a class="font">价格<i class="iconfont l-none"></i></a>
 						<span class="info">
-							共<span class="red js_dataNum"><TRS_CHANNEL ID="OWNER" FIELD="_DataCount" COUNTWHERE="WCMDocument.dockeywords='否' and WCMDocument.docstatus in (10,27)" /></span>款冰箱产品
+							共<span class="red js_dataNum"><TRS_CHANNEL ID="OWNER" FIELD="_DataCount" COUNTWHERE="WCMDocument.dockeywords='否' and WCMDocument.docstatus in (10,27)" /></span>款<trs_channel field="chnlname" autolink="false"/>产品
 						</span>
 						<!--<div class="pro-group">
 							<div class="group-style">

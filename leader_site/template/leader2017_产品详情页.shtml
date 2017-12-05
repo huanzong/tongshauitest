@@ -997,15 +997,17 @@
             <!-- 电商拉页 -->
              <div class="o_g detail-foldover js_detail-foldover">
                 <div class="o_u o_df_4-12 foldover-icon js_oHerlFoldover js_foldoverNav o_md_2-2 o_sm_2-2 o_xs_2-2">
-                    <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
+                    <div class="anchor-box js_anchor ">
+                        <div class="foldover-con js_foldlist o_md-hide o_sm-hide o_xs-hide js_foldlsit_btn">
 
-                    </div>
-                    <a class="iconfont icon-bg-solid js_foldPlus">
-                        <i class="iconfont icon-plus"></i>
-                        <span>详细产品介绍</span>
-                    </a>
-                    <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
+                        </div>
+                        <a class="iconfont icon-bg-solid js_foldPlus">
+                            <i class="iconfont icon-plus"></i>
+                            <span>详细产品介绍</span>
+                        </a>
+                        <div class="swiper-container l-none js_foldoverSwiper js_foldoverNav js_foldoverNav_btn">
 
+                        </div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12 o_df-hide o_md-show o_sm-show o_xs-show">
@@ -1050,7 +1052,7 @@
                             <div class="o_g">
                                 <div class="o_u o_df_1-5 o_df-hide o_lg-show o_md-show param-basic-bg"></div>
                                 <div class="o_u o_df_2-2 o_lg_4-5 o_md_4-5 param-basic-con">
-                                    <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数" NUM='1'>
+                                    <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数" NUM='1'>
                                     <div class="param-basic-title"><TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP></div>
                                     <div class="o_u o_df_2-2">
                                         <div class="param-basic-box">
