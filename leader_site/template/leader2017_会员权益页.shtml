@@ -199,7 +199,7 @@
     </div>
     <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
 </div>
-<!--#include virtual="${ROOT_PATH}ucenter/foot.shtml"-->
+
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript">
     $(function () {
@@ -226,7 +226,7 @@
     })
 
     function selectmember() {
-        var memberName = $(".member-conter-text-down").Attr("pic");
+        var memberName = $(".member-conter-text-down").attr("pic");
         if (memberName.indexOf("普通") > -1) {
             $(".member-conter-text-down").append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
         }
