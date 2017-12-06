@@ -6,6 +6,37 @@
 //====================初始化筛选器===================================
 
 $(function () {
+
+    //筛选项-全部删除
+    $('.js_deleteAll').on('click', function () {
+        //删除筛选头部选项
+        $('.js_filter').empty();
+        $(".list-filter-select").css('display','none');
+        /**
+         * 全部删除筛选子项的代码写在这里
+         */
+        $(".sole-type.active").each(function (e,n) {
+            $(this).removeClass("active");
+        });
+        searchWord="";
+        order="";
+        isSelectItemStr="";
+        //重新查询
+        search(searchWord, _tableName, _xmlPath, curPage, pageSize, order, isSelectItemStr);
+    });
+
+
+    /**
+     * 产品对比   //对比栏显示隐藏
+     */
+    $('.js_compareBoxShow').on('click', function () {
+        if (parseInt($(this).attr('data-show'))) {
+            hideCompareFlowLayout();
+        } else {
+            showCompareFlowLayout();
+        }
+    });
+
     //初始化筛选器,读取xml文件
     readXmlFile(url);
 
@@ -88,21 +119,33 @@ function readXmlFile(url) {
 
             //移动端筛选项初始化
             $(".layer-list").html(mobileHtml);
-            
             //if (document.body.offsetWidth >= 1200 ) {
-                setTimeout(noneShaiXuan(".sole-type"), 1000);
-                //pc端监听事件
-                filterItemOnclick(".sole-type");
-                //对比初始化函数
-                setTimeout(initCookie(), 1000);
-                setTimeout(initLoadCookie(), 1000);
-           // }else{
-                setTimeout(noneShaiXuan(".list-btn"), 1000);
-                //移动端监听事件
-                filterItemOnclick(".list-btn");
-                //重置选择
-                mobileResetButtonOnclick();
+            setTimeout(noneShaiXuan(".sole-type"), 1000);
+            //pc端监听事件
+            filterItemOnclick(".sole-type");
+            //对比初始化函数
+            setTimeout(initCookie(), 1000);
+            setTimeout(initLoadCookie(), 1000);
+            // }else{
+            setTimeout(noneShaiXuan(".list-btn"), 1000);
+            //移动端监听事件
+            filterItemOnclick(".list-btn");
+            //重置选择
+            mobileResetButtonOnclick();
             //}
+        },
+        error:function(){
+            noneShaiXuan(".sole-type");
+            //pc端监听事件
+            filterItemOnclick(".sole-type");
+            //对比初始化函数
+            setTimeout(initCookie(), 1000);
+            setTimeout(initLoadCookie(), 1000);
+            noneShaiXuan(".list-btn");
+            //移动端监听事件
+            filterItemOnclick(".list-btn");
+            //重置选择
+            mobileResetButtonOnclick();
         }
     });
 }
@@ -205,7 +248,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     $(".red").html(returnData.length);
                     $(".prolist-con").html(searchHtml);
                     //PC
-                    if (document.body.offsetWidth >= 1200 ) {
+                    if (document.body.offsetWidth >= 1200) {
                         //添加对比产品监听事件
                         addCompareOnclick();
                         //是否最后筛选项
@@ -228,6 +271,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
     })
 
 }
+
 //分页初始化
 function paginationInit(curPage, pageCount, pageSize, currentClass, showPageNo) {
     var type;
@@ -239,9 +283,9 @@ function paginationInit(curPage, pageCount, pageSize, currentClass, showPageNo) 
     pager.render();
     //重写click方法  ajax取数据
     pager.onclick = function (currPageT) {
-        if (document.body.offsetWidth >= 1200 ) {
+        if (document.body.offsetWidth >= 1200) {
             search(searchWord, _tableName, _xmlPath, currPageT, pageSize, order, isSelectItemStr);
-        }else{
+        } else {
             search(mobileSearchWord, _tableName, _xmlPath, currPageT, pageSize, order, mobileIsSelectItemStr);
         }
         pager.totalPage = pageCount;
@@ -251,18 +295,18 @@ function paginationInit(curPage, pageCount, pageSize, currentClass, showPageNo) 
         pager.render();
     };
 }
+
 //产品列表上市时间人气价格排序
 $(".font").each(function () {
     var $icon = $(this).find("i");
     $(this).toggle(function () {
         $(this).parent().find("a").find("i").css("display", "inline-block").removeClass("icon-arrow-refresh-down").removeClass("icon-arrow-refresh-up");
         $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-down").addClass("icon-arrow-refresh-up");
-
         if ($(this).text() == "上市时间") {
             order = "-shangshishijian"
         }
-        if($(this).text()=="人气"){
-        	order="+cprq"
+        if ($(this).text() == "人气") {
+            order = "+cprq"
         }
         if ($(this).text() == "价格") {
             order = "+price"
@@ -275,8 +319,8 @@ $(".font").each(function () {
         if ($(this).text() == "上市时间") {
             order = "+shangshishijian"
         }
-        if($(this).text()=="人气"){
-        	order="-cprq"
+        if ($(this).text() == "人气") {
+            order = "-cprq"
         }
         if ($(this).text() == "价格") {
             order = "-price"
@@ -288,9 +332,9 @@ $(".font").each(function () {
 //没有筛选器的隐藏展开按钮
 function noneShaiXuan(currentClass) {
     var noneShaiXuan;
-    if(currentClass == ".sole-type"){
+    if (currentClass == ".sole-type") {
         noneShaiXuan = $(".js_screenClick").find(".filter-line");
-    }else{
+    } else {
         noneShaiXuan = $(".layer-list").find("li");
     }
 
@@ -307,7 +351,7 @@ function filterItemOnclick(onclickClass) {
 
     $(onclickClass).click(function () {
 
-        if($(this).hasClass("disable")){
+        if ($(this).hasClass("disable")) {
             return;
         }
         //每组筛选项都是单选  =====取消选中筛选项
@@ -367,7 +411,7 @@ function filterItemOnclick(onclickClass) {
                     appendFilterItemShowBar($(this).text(), $(this).attr("inputName"), $(this).attr("query"), $(this).attr("id"));
                     deleteFilterItemShowBarClick();
 
-                 //手机端操作
+                    //手机端操作
                 } else {
                     mobileIsSelectItemStr = mobileIsSelectItemStr + $(this).attr("inputName") + ";";
                     if ($.trim(mobileSearchWord) == "") {
@@ -423,6 +467,7 @@ function appendFilterItemShowBar(showName, inputName, query, id) {
     itemShowBar += '   </div>';
     $(".list-select-bgbox").prepend(itemShowBar);
 }
+
 /**
  * 筛选项-单个删除
  */
@@ -450,14 +495,17 @@ function deleteFilterItemShowBarClick() {
         search(searchWord, _tableName, _xmlPath, curPage, pageSize, order, isSelectItemStr);
     });
 }
+
 //顶部隐藏筛选选中头部
 function hideFilterItemHeadShow() {
     $(".list-filter-select").css('display', 'none');
 }
+
 //顶部显示筛选选中头部
 function showFilterItemHeadShow() {
     $(".list-filter-select").css('display', 'none');
 }
+
 //判断是否是最后一个选中标签
 function isLastFilterItemHead() {
     //判断是否是最后一个选中标签
@@ -466,12 +514,13 @@ function isLastFilterItemHead() {
         hideFilterItemHeadShow();
     }
 }
+
 //判断是否是最后一个筛选项
 function isLastFilterItemSelect(currentClass) {
-    var filterItemSelectLength = $(currentClass+".active");
+    var filterItemSelectLength = $(currentClass + ".active");
     //如果选中的
     if (filterItemSelectLength.length <= 0) {
-        var filterItemDisableLength = $(currentClass+".disable");
+        var filterItemDisableLength = $(currentClass + ".disable");
         filterItemDisableLength.each(function (e, n) {
             $(this).removeClass("disable");
         });
@@ -480,6 +529,7 @@ function isLastFilterItemSelect(currentClass) {
         //filterItemOnclick(".list-btn");
     }
 }
+
 //移动端筛选器确定按钮事件
 function mobileFilterButtonOnclick() {
     $(".mobileFilterButton").on('click', function () {
@@ -488,6 +538,7 @@ function mobileFilterButtonOnclick() {
         $('.js_layerShowMore').hide();
     });
 }
+
 //移动端筛选器确定按钮事件
 function mobileResetButtonOnclick() {
     $(".list-btn-reset").on('click', function () {
@@ -499,4 +550,5 @@ function mobileResetButtonOnclick() {
         });
     });
 }
+
 //初始化筛选器===================================结束
