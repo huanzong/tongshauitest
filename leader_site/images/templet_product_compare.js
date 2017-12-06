@@ -54,13 +54,14 @@ jQuery(function () {
     //通过url的channel获取第一个json------得到数据集合json的路径
     $.ajax({
         url: "../../compareurl.json",
-        dataType: "text",
+        type:'get',
+        dataType: "json",
         async: false,
         success: function (data) {
             //解析多个数值
-            var obj = eval("(" + data + ")");
-            for (var i = 0; i < obj.length; i++) {
-                var d = obj[i];
+            //var obj = eval("(" + data + ")");
+            for (var i = 0; i < data.length; i++) {
+                var d = data[i];
                 if (d.id == undefined) {
                     return;
                 } else {

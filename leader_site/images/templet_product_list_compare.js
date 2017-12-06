@@ -395,7 +395,7 @@ function deleteAllCompareItem() {
     $('.link-clear.js_compareClose').on('click', function () {
         $('.js_compareBox').find("li").find(".compare-product-img").each(function (i, n) {
             $(this).parent().remove();
-            unchecked($("#"+$(this).children('.compare-product-img').attr('id')));
+            unchecked($("#"+$(this).attr('id')));
         });
         proObjList=[];
         $.cookie('leaderProCookie', null, {path : '/'});
@@ -433,7 +433,7 @@ function hideCompareFlow(){
  */
 function isLastCompareProduct(){
     var $list = $('.js_compareBox');
-    if ($list.find('li').length <= 0) {
+    if ($list.find('li').length <= 1) {
         hideCompareFlow();
     }
 }
