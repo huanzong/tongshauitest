@@ -53,7 +53,7 @@ function search(currPageT, pageSize){
             var templet_addhtml = '';
             for (var i = 0; i < templet_orderlist.length; i++) {
                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_9-12 o_sm_7-12 o_xs_7-12"> ';
-                if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
+                if (templet_orderlist[i].statusDesc.indexOf("支付") > -1) {
                     templet_addhtml += ' <h3>待付款</h3> ';
                 }
                 if (templet_orderlist[i].statusDesc.indexOf("待发货") > -1) {
