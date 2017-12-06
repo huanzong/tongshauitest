@@ -6,6 +6,37 @@
 //====================初始化筛选器===================================
 
 $(function () {
+
+    //筛选项-全部删除
+    $('.js_deleteAll').on('click', function () {
+        //删除筛选头部选项
+        $('.js_filter').empty();
+        $(".list-filter-select").css('display','none');
+        /**
+         * 全部删除筛选子项的代码写在这里
+         */
+        $(".sole-type.active").each(function (e,n) {
+            $(this).removeClass("active");
+        });
+        searchWord="";
+        order="";
+        isSelectItemStr="";
+        //重新查询
+        search(searchWord, _tableName, _xmlPath, curPage, pageSize, order, isSelectItemStr);
+    });
+
+
+    /**
+     * 产品对比   //对比栏显示隐藏
+     */
+    $('.js_compareBoxShow').on('click', function () {
+        if (parseInt($(this).attr('data-show'))) {
+            hideCompareFlowLayout();
+        } else {
+            showCompareFlowLayout();
+        }
+    });
+
     //初始化筛选器,读取xml文件
     readXmlFile(url);
 

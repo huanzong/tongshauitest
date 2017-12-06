@@ -1,7 +1,13 @@
 $(function () {
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
-    var navHeight = $('l-opacity0').height();
+
+    if(windowWidth>1199){
+        var navHeight = 120;
+    }else if(windowWidth>700){
+        var navHeight = 100;
+
+    }
     var styleVideoHeight = $('.js_styleVideoCont').height();
     var styleVudeoPading = (windowHeight - navHeight - styleVideoHeight) / 2;
     var lifeCasePhotoH = windowWidth / 3 / 0.75;
