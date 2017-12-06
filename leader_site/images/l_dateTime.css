@@ -31,6 +31,6 @@
 
 
 
-.today{
+tbody>tr>.today{
 	background: #f39800 !important;
 }
