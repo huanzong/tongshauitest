@@ -66,8 +66,8 @@ $(function(){
 
                                             var templet_ordergoods = data.data[k].goodsPic;
                                             var templet_docpuburl = data.data[k].proUrl;
-                                            var templet_location = templet_docpuburl.lastIndexOf("\/");
-                                            var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_ordergoods.goodsPic;
+                                            var templet_picUrl=goodsPicCut(templet_docpuburl,templet_ordergoods);
+                                            console.log(templet_picUrl);
 
                                             templet_addhtml+='<img src="'+templet_picUrl+'" alt=""></div>';
                                             templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
@@ -180,8 +180,7 @@ function search(currPageT, pageSize){
 
                                         var templet_ordergoods = data.data[k].goodsPic;
                                         var templet_docpuburl = data.data[k].proUrl;
-                                        var templet_location = templet_docpuburl.lastIndexOf("\/");
-                                        var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_ordergoods.goodsPic;
+                                        var templet_picUrl=goodsPicCut(templet_docpuburl,templet_ordergoods);
 
                                         templet_addhtml+='<img src="'+templet_picUrl+'" alt=""></div>';
 
@@ -222,4 +221,20 @@ function search(currPageT, pageSize){
             }
         }
     });
+}
+
+function goodsPicCut(templet_docpuburl,templet_ordergoods){
+    var templet_semicolon=templet_ordergoods.indexOf(';');
+    if(templet_semicolon>-1){
+        templet_ordergoods=templet_ordergoods.substring(0, templet_semicolon)
+    }
+    templet_semicolon=templet_ordergoods.indexOf('|');
+    if(templet_semicolon>-1){
+        templet_ordergoods=templet_ordergoods.substring(0, templet_semicolon)
+    }
+
+    var templet_location = templet_docpuburl.lastIndexOf("\/");
+    var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_ordergoods;
+
+    return templet_picUrl;
 }
