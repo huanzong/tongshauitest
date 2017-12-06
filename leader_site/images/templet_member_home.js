@@ -51,7 +51,8 @@ function freshenA() {
     }
     for(var i=0;i<templet_branches;i++){
         var templet_docpuburl=templet_entities[i].docpuburl;
-        var templet_picUrl=templet_docpuburl.substring(0,templet_docpuburl.length-6)+"/"+templet_entities[i].appfile;
+        var templet_location=templet_docpuburl.lastIndexOf("\/");
+        var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[i].appfile;
         templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2">';
         templet_addhtml+='<div class="member-home-down-cont">';
         templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3" href="'+templet_docpuburl+'">';
@@ -59,7 +60,7 @@ function freshenA() {
         templet_addhtml+='<a href="'+templet_docpuburl+'"><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2"> ';
         templet_addhtml+='<p class="pro-info-title">'+templet_entities[i].pname+'</p>';
         templet_addhtml+='<span class="pro-info-type">'+templet_entities[i].modelno+'</span>';
-        templet_addhtml+='<strong>'+templet_entities[i].price+'</strong></div></a></div></div> ';
+        templet_addhtml+='<strong>￥'+templet_entities[i].price+'.00</strong></div></a></div></div> ';
     }
     $('.js-recommendation').html(templet_addhtml);
 
@@ -76,7 +77,8 @@ function freshenB() {
     templet_addhtml+='</div></div>';
     for(var i=2;i<templet_entities.length;i++){
         var templet_docpuburl=templet_entities[i].docpuburl;
-        var templet_picUrl=templet_docpuburl.substring(0,templet_docpuburl.length-6)+"/"+templet_entities[i].appfile;
+        var templet_location=templet_docpuburl.lastIndexOf("\/");
+        var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[i].appfile;
         templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2">';
         templet_addhtml+='<div class="member-home-down-cont">';
         templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3" href="'+templet_docpuburl+'">';

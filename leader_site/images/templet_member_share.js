@@ -37,7 +37,10 @@ $(function () {
                         if(templet_productgoods[i].modelNo==templet_modelNo){
                             templet_validate=false;
                             $('.js-productName').html(templet_productgoods[i].goodsName+ '<br><span>'+templet_productgoods[i].modelNo+'</span>');
-                            $('.js-productimg').attr('src',templet_productgoods[i].goodsPic);
+                            var templet_docpuburl=templet_productgoods[i].proUrl;
+                            var templet_location=templet_docpuburl.lastIndexOf("\/");
+                            var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_productgoods[i].goodsPic;
+                            $('.js-productimg').attr('src',templet_picUrl);
                         }
                     }
                     if(templet_validate){
