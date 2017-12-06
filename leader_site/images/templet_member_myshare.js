@@ -78,7 +78,7 @@ $(function(){
                                             templet_addhtml+=templet_mysharelist[i].content;
                                             templet_addhtml+='</p><ul class="member-myshare-listcont-right-photo o_g">';
                                             for(var j=0;j<templet_mysharelist[i].paths.length;j++){
-                                                templet_addhtml+='<li class="member-share-photo-cur"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
+                                                templet_addhtml+='<li class="member-share-photo-cur js_memberSharePhotoMax"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
                                             }
                                             templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
                                             templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';
@@ -186,7 +186,7 @@ function search(currPageT, pageSize){
                                         templet_addhtml+=templet_mysharelist[i].content;
                                         templet_addhtml+='</p><ul class="member-myshare-listcont-right-photo o_g">';
                                         for(var j=0;j<templet_mysharelist[i].paths.length;j++){
-                                            templet_addhtml+='<li class="member-share-photo-cur"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
+                                            templet_addhtml+='<li class="member-share-photo-cur js_memberSharePhotoMax"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
                                         }
                                         templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
                                         templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';

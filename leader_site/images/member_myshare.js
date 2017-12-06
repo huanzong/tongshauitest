@@ -4,15 +4,11 @@ $(function(){
    $('.js_alertWindowLeft').css({'height':windowHeight,'line-height':windowHeight+'px'});
    $('.js_alertWindowRight').css({'height':windowHeight,'line-height':windowHeight+'px'});
 	$('.js_memberSharePhotoMax').live('click',function(){
-		console.log(1111222);
 
 		var index = $(this).index();
 		// var liArr=[];
 		var  liArr = $(this).parent().html();
-		  console.log(liArr);
 		$('.js_myshareAlertWindow').show();
-		console.log(1111);
-
 		$('.js_myshareAlertWindowPhotoBox').html(liArr);
 		$('.js_myshareAlertWindow  li').addClass('swiper-slide');
  		$('.js_myshareAlertWindow li').css("max-height",windowHeight-100);
