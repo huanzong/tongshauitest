@@ -129,6 +129,7 @@
 <script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
 
 <script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="images/templet_pagination.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/member_order_new.js"></script>
 <script type="text/javascript" src="images/templet_member_nav.js"></script>
