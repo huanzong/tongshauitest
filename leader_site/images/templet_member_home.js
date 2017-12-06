@@ -86,7 +86,7 @@ function freshenB() {
         templet_addhtml+='<a href="'+templet_docpuburl+'"><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2"> ';
         templet_addhtml+='<p class="pro-info-title">'+templet_entities[i].pname+'</p>';
         templet_addhtml+='<span class="pro-info-type">'+templet_entities[i].modelno+'</span>';
-        templet_addhtml+='<strong>'+templet_entities[i].price+'</strong></div></a></div></div> ';
+        templet_addhtml+='<strong>￥'+templet_entities[i].price+'.00</strong></div></a></div></div> ';
     }
     $('.js-recommendation').html(templet_addhtml);
 }
