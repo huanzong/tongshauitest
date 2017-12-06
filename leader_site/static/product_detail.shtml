@@ -199,18 +199,18 @@
                                 </div>
                                 <div class="particulars-buy-tit">品牌旗舰店购买:</div>
                                 <div class="particulars-buy-con">
-                                    <div class="particulars-buybox">
+                                    <a class="particulars-buybox">
                                         <div class="buy-img tianmao"></div>
                                         <div class="buy-tit">天猫旗舰店</div>
-                                    </div>
-                                    <div class="particulars-buybox">
+                                    </a>
+                                    <a class="particulars-buybox">
                                         <div class="buy-img jingdong"></div>
                                         <div class="buy-tit">京东旗舰店</div>
-                                    </div>
-                                    <div class="particulars-buybox">
+                                    </a>
+                                    <a class="particulars-buybox">
                                         <div class="buy-img suning"></div>
                                         <div class="buy-tit">苏宁旗舰店</div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
