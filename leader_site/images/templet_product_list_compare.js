@@ -77,7 +77,7 @@ function initCookie() {
                 var product = proObjList[i];
                 //修改对比样式 todo -----------------样式处理------------------------------------------------
                 $("#" + product.id).attr("auto", "1");
-                //$("#" + product.id).addClass("uncontrast");
+                $("#" + product.id).addClass("uncontrast");
                 $("#" + product.id).find(".pro-read-font").html("已对比");
                 // $("#" + product.id).find("i").removeClass("o-plus").addClass("o-close");
                 pType = product.channelid;
@@ -89,7 +89,7 @@ function initCookie() {
             $(".uncontrast").find(".pro-read-font").html("对比");
             //$(".uncontrast").find("i").removeClass("o-close").addClass("o-plus");
             $(".uncontrast").attr("auto","0");
-            //$(".uncontrast").removeClass("uncontrast");
+            $(".uncontrast").removeClass("uncontrast");
 
         }
     }
@@ -115,7 +115,6 @@ function initLoadCookie() {
                     ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
                     '</li>';
             }
-            //$('.js_compareBox').remove("li");
             showCompareFlow();
             showCompareFlowLayout();
             $('.js_compareBox').prepend(compareHtml);
@@ -134,7 +133,7 @@ function initLoadCookie() {
 window.unchecked = function ($obj) {
     //对比按钮样式
     $obj.attr("auto", "0");
-    //$obj.removeClass("uncontrast");
+    $obj.removeClass("uncontrast");
     $obj.find(".pro-read-font").html("对比");
     //$obj.find("i").removeClass("o-close").addClass("o-plus");
 }
@@ -402,8 +401,12 @@ function deleteAllCompareItem() {
     $('.link-clear.js_compareClose').on('click', function () {
         $('.js_compareBox').find("li").find(".compare-product-img").each(function (i, n) {
             $(this).parent().remove();
+            unchecked($("#"+$(this).children('.compare-product-img').attr('id')));
         });
-        $.cookie('leaderProCookie', null, {path: '/'});
+        proObjList=[];
+        $.cookie('leaderProCookie', null, {path : '/'});
+        //判断是否最后一个对比产品
+        isLastCompareProduct();
     });
 }
 
