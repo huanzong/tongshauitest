@@ -96,7 +96,7 @@
                              了解会员权益 
                         </div>
                     <div class="o_u o_df_6-12 o_xs_10-12  member-center-boxleft js_centerBoxLeft">
-                        <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                        <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12"  style="background: url(member-content-1.png) no-repeat center;">
                             <img class="member-content-md" src="images/member-content-1min.png" alt="">
                             <div class="member-conter-text">
                                 <div class=" o_u o_df_11-12">
@@ -110,7 +110,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 ">
+                        <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 "  style="background: url(member-content-3.png) no-repeat center;">
                             <img class="member-content-md" src="images/member-content-3min.png" alt="">
                             <div class="member-conter-text">
                                 <div class=" o_u o_df_11-12">
@@ -129,7 +129,7 @@
                             <h3>LEADER</h3>
                             <p>了解会员权益</p>
                         </div>
-                        <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                        <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12"  style="background: url(member-content-2.png) no-repeat center;">
                             <img class="member-content-md" src="images/member-content-2min.png" alt="">
                             <div class="member-conter-text o_u o_df_11-12">
                                 <h5>会员关怀</h5>
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                        <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12"  style="background: url(member-content-4.png) no-repeat center;">
                             <!-- <div class="member-content-4md"></div> -->
                             <img class="member-content-md" src="images/member-content-4min.png" alt="">
                             <div class="member-conter-text  ">
