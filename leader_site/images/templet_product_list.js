@@ -104,13 +104,13 @@ function readXmlFile(url) {
             //}
         },
         error:function(){
-            setTimeout(noneShaiXuan(".sole-type"), 1000);
+            noneShaiXuan(".sole-type");
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
             setTimeout(initCookie(), 1000);
             setTimeout(initLoadCookie(), 1000);
-            setTimeout(noneShaiXuan(".list-btn"), 1000);
+            noneShaiXuan(".list-btn");
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
