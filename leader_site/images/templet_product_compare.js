@@ -54,13 +54,14 @@ jQuery(function () {
     //通过url的channel获取第一个json------得到数据集合json的路径
     $.ajax({
         url: "../../compareurl.json",
-        dataType: "text",
+        type:'get',
+        dataType: "json",
         async: false,
         success: function (data) {
             //解析多个数值
-            var obj = eval("(" + data + ")");
-            for (var i = 0; i < obj.length; i++) {
-                var d = obj[i];
+            //var obj = eval("(" + data + ")");
+            for (var i = 0; i < data.length; i++) {
+                var d = data[i];
                 if (d.id == undefined) {
                     return;
                 } else {
@@ -167,6 +168,7 @@ jQuery(function () {
                         var json_url = mold_for_this_subcat[j].productJsonUrl;//产品url
                         if (json_url != undefined) {
                             json_url = json_url.replace(".json", "_json.json");
+                            json_url = json_url.replace(".shtml", "_json.json");
                         }
                         ;
                         if (userChannelId == productID) {
@@ -197,9 +199,10 @@ jQuery(function () {
                     curCompareList.push(pid_not_in_local_json[curCompareList.length]);
                     cur_compare_pObj_array.push(p_obj);
                 },//end success function
-                error: function () {
+                error: function (data) {
+                    alert("请求失败，"+data)
                 },
-                complete: function () {
+                complete: function (data) {
                     // START 初始化：将用户选定的比较产品的数据写入页面
                     reDrawCompArea(cur_compare_pObj_array);
                     //END 初始化：将用户选定的比较产品的数据写入页面
