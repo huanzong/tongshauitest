@@ -77,7 +77,8 @@ function search(currPageT, pageSize){
                 for (var j = 0; j < templet_orderlist[i].orderGoods.length; j++) {
                     var templet_ordergoods = templet_orderlist[i].orderGoods[j];
                     var templet_docpuburl = templet_ordergoods.proUrl;
-                    var templet_picUrl=goodsPicCut(templet_docpuburl,templet_ordergoods);
+                    var templet_docgoodsPic = templet_ordergoods.goodsPic;
+                    var templet_picUrl=goodsPicCut(templet_docpuburl,templet_docgoodsPic);
 
                     templet_addhtml += ' <div class="o_u o_df_11-12 order_content_box" > <div class="o_u o_df_2-12 order_content_img"> ';
                     templet_addhtml += ' <img src="' + templet_picUrl + '" alt="" width="80px" height="80px;"></div> ';
@@ -96,7 +97,7 @@ function search(currPageT, pageSize){
 }
 
 function goodsPicCut(templet_docpuburl,templet_ordergoods){
-    var templet_semicolon=templet_ordergoods.indexOf(';');
+    var templet_semicolon=templet_ordergoods.indexOf(";");
     if(templet_semicolon>-1){
         templet_ordergoods=templet_ordergoods.substring(0, templet_semicolon)
     }
