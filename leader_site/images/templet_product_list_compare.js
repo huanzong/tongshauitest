@@ -4,8 +4,6 @@ $(function () {
     //添加对比产品监听事件
     addCompareOnclick();
 })
-//对比互斥标志
-var noCompareChannel = "";
 //当前路径
 var currentUrlName = "";
 //产品集合
@@ -16,10 +14,9 @@ var proCookie = "";
 var proObjListSideBar = "";
 //创建一个数组
 var arrayMetaDataId = new Array();
+
 //总对比按钮
 compareButtonOnclick();
-
-
 
 //添加对比按钮监听事件
 function addCompareOnclick() {
@@ -29,19 +26,16 @@ function addCompareOnclick() {
         $thisObj = $(this);
         var auto = $thisObj.attr("auto");
         if (auto == "0") {
-
             add_compare_flyOut_item($thisObj);
             return;
         } else if (auto == "1") {
-
             remove_compare_fLayout_item($thisObj.attr("id"));
             //return;
-            //$(this).removeClass("uncontrast");
+            $(this).removeClass("uncontrast");
             $(this).attr("auto", "0");
             $(this).find(".pro-read-font").html("对比");
             //$(this).find("i").removeClass("o-close").addClass("o-plus");
             //如果是已经对比的取消对比
-
         }
 
     });
@@ -126,10 +120,10 @@ function initLoadCookie() {
             //删除对比选项监听
             deleteCompareItem();
             deleteAllCompareItem();
-
         }
     }
 }
+
 window.unchecked = function ($obj) {
     //对比按钮样式
     $obj.attr("auto", "0");
@@ -147,12 +141,12 @@ window.add_compare_flyOut_item = function ($obj) {
         var count = $list.find('.compare-product-img').length;
         if (count >= 4) {
             alert("最多只能选择4款产品！");
-            return false;
+            return ;
         }
 
         if (proObjList.length >= 4) {
             alert("最多只能选择4款产品！");
-            return false;
+            return ;
         }
 
         //如果是没有对比的对比
