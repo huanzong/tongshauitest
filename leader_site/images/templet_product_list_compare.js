@@ -41,7 +41,7 @@ function addCompareOnclick() {
             $(this).find(".pro-read-font").html("对比");
             //$(this).find("i").removeClass("o-close").addClass("o-plus");
             //如果是已经对比的取消对比
-            isLastCompareProduct();
+
         }
 
     });
@@ -234,6 +234,9 @@ window.remove_compare_fLayout_item = function (id) {
             /**
              * 是否最后一个对比产品
              */
+            if(proObjList.length<=0){
+                hideCompareFlow();
+            }
             isLastCompareProduct();
             return false;
         }
