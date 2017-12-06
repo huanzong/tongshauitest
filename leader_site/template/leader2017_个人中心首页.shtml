@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心</title>
+    <title>个人中心-统帅用户中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -21,8 +21,8 @@
             <!-- 右侧内容 START-->
             <!--o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2-->
             <div class="o_u o_df_10-12 o_lg_11-12 o_md_11-12  o_sm_10-12 o_xs_2-2  ">
-                <div class="memeber-homenav-top">
-                    <p>My Account</p>
+                <div class="memeber-homenav-top" >
+                    <p>MY ACCOUNT</p>
                     <h2>统帅用户中心</h2>memeber-homenav-top
                     <div class="iconfont icon-icon "></div>
                 </div>
@@ -47,16 +47,14 @@
                             <!--<li><a href="/invoice" class="o_u ">增票资质</a></li>-->
                         </ul>
                     </div>
-                    <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn"
-                         data-alt="1">
+                    <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn" data-alt="1">
                         <span class="iconfont icon-menu1"></span>
                     </div>
                 </div>
 
-                <div class="o_u o_df_10-12  o_xs_2-2 js-membercontboxs js-membercontboxs-2"
-                     style="position: relative;z-index: 14">
-                    <div class="memeber-homenav-top-md">
-                        <p>My Account</p>
+                <div class="o_u o_df_10-12  o_xs_2-2 js-membercontboxs js-membercontboxs-2" style="position: relative;z-index: 14">
+                    <div class="memeber-homenav-top-md" >
+                        <p>MY ACCOUNT</p>
                         <h2>统帅用户中心</h2>
                         <div class="iconfont icon-icon "></div>
                     </div>

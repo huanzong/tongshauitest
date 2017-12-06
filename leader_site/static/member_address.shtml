@@ -213,7 +213,7 @@
 <!--#include virtual="public/foot.shtml"-->
 
 <!--弹出层1-->
-<div class="o_g land-shade js_landShade">
+<div class="o_g land-shade js_landShade land-shade-md">
     <div class="land-box js_landContBox">
         <div class="land-cont-title alert-cont-title o_u">
             <a href="" class="o_u iconfont icon-close js_landClose"></a>

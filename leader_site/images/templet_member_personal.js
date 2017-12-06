@@ -5,7 +5,6 @@
 * ---------------------------------------------------------------------------*/
 
 $(function(){
-
     var templet_orderId=getQueryString("to");
     if('header'==templet_orderId){
         var tabNmu =$('.js-personalPicuure').index();
@@ -339,8 +338,6 @@ $(function(){
             globalShade2('正在提交，请稍后','3');
             return;
         }
-        $('.js_personalistwrongbox_address').addClass('personalist-right').removeClass('personalist-wrong-box');
-        $('.js_personalistwrongbox_data').addClass('personalist-right').removeClass('personalist-wrong-box');
 
         var templet_loginName=$.trim($('#js_loginName').val());
         var templet_sex=$.trim($('input[name="cc"]:checked').attr("data"));
@@ -356,10 +353,6 @@ $(function(){
             return;
         }
 
-        if(templet_birthday=='' ){
-            wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'生日不能为空');
-            return;
-        }
         //判断生日是否超出现在日期
         var myDate = new Date();
         var birthdayArr=templet_birthday.split("-");
@@ -378,11 +371,6 @@ $(function(){
         }
         if(templet_yearU==myDate.getFullYear() && templet_monthU==templet_monthT && templet_dayU>myDate.getDate()){
             wrongInfo($('.js_personalistwrongbox_data'),$('.js_personawrong_data'),'请填写正确日期');
-            return;
-        }
-
-        if(templet_provinceId=='' ||templet_cityId=='' ||templet_areaId==''){
-            wrongInfo($('.js_personalistwrongbox_address'),$('.js_personawrong_address'),'居住地不能为空');
             return;
         }
 
