@@ -52,12 +52,12 @@
 
                                                     <div class="member-orderdetail-status-box">
                                                         <ul class="member-orderdetail-status o_g">
-                                                            <li class="member-orderdetail-status-now o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <li class="member-orderdetail-status-after o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
                                                                 <div class="member-orderdetail-status-strip "></div>
                                                                 <p class="member-orderdetail-status-text">提交订单</p>
                                                                 <div  class="member-orderdetail-status-data">2017-06-14 08:23:42</div>
                                                             </li>
-                                                            <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <li class=" member-orderdetail-status-now  o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
                                                                 <div class="member-orderdetail-status-strip "></div>
                                                                 <p class="member-orderdetail-status-text">等待付款</p>
                                                                 <div  class="member-orderdetail-status-data"></div>

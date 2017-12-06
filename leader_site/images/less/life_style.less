@@ -147,9 +147,9 @@
 
     .photo-list-img {
         // height: 50%;
-        background: url(style_photo_2.png) no-repeat;
+        background: url(style_photo_2.png) no-repeat ;
         background-position: left top;
-        background-size: 100% auto; // position: absolute;
+        background-size:  auto 100% !important; // position: absolute;
         // margin: auto;
         // top: 0;
         // left: 0;
@@ -246,26 +246,12 @@
 }
 
 .life-style-photo-list-left{
-    .photo-list-img-1,.photo-list-img-2,.photo-list-img-3{
+    .photo-list-img{
         background-position:  top right!important;
+        //background-size:  100% auto !important;
     }
 }
-.photo-list-img-1 {
-    background: url(style_photo_1.png) no-repeat;
-   
-    background-size: auto 100%;
-}
 
-.photo-list-img-2 {
-    background: url(style_photo_2.png) no-repeat;
-  
-    background-size: auto 100%;
-}
-.photo-list-img-3 {
-    background: url(style_photo_3.png) no-repeat;
- 
-    background-size: auto 100%;
-}
 .life-style-superiority {
     position: relative;
     height: 750px;
@@ -1102,6 +1088,8 @@
     @media (min-width: 701px) and (max-width: 991px) {
         /* md*/
         height: 500px;
+        background-size: auto 100% ;
+
     }
     @media (min-width: 576px) and (max-width: 700px) {
         /* sm*/
