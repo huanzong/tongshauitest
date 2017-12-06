@@ -63,7 +63,13 @@ $(function(){
 
                                             templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
                                             templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
-                                            templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
+
+                                            var templet_ordergoods = data.data[k].goodsPic;
+                                            var templet_docpuburl = data.data[k].proUrl;
+                                            var templet_location = templet_docpuburl.lastIndexOf("\/");
+                                            var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_ordergoods.goodsPic;
+
+                                            templet_addhtml+='<img src="'+templet_picUrl+'" alt=""></div>';
                                             templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
                                             templet_addhtml+='<p>'+data.data[k].goodsName+'</p><span>'+data.data[k].modelNo+'</span> </div>';
                                             templet_addhtml+='<ul>';
@@ -171,7 +177,14 @@ function search(currPageT, pageSize){
                                     if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
                                         templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
                                         templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
-                                        templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
+
+                                        var templet_ordergoods = data.data[k].goodsPic;
+                                        var templet_docpuburl = data.data[k].proUrl;
+                                        var templet_location = templet_docpuburl.lastIndexOf("\/");
+                                        var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_ordergoods.goodsPic;
+
+                                        templet_addhtml+='<img src="'+templet_picUrl+'" alt=""></div>';
+
                                         templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
                                         templet_addhtml+='<p>'+data.data[k].goodsName+'</p><span>'+data.data[k].modelNo+'</span> </div>';
                                         templet_addhtml+='<ul>';
