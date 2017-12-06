@@ -1,3 +1,4 @@
+<!--
 <div class="o_g footer">
     <div class="line-red"></div>
     <div class="line"></div>
@@ -95,4 +96,28 @@
     	</div>
     </div>
     <div class="o_u o_df_1-12"></div>
+</div>-->
+
+<div>
+    <div class="o_g footer"><div class="personal_footer_copy">
+        <p>Copyright © 2016 Haier Group Leader.All rights reserved 鲁ICP备09096283</p>
+
+    </div></div>
 </div>
+
+
+<script>
+    //判断当前是否存在同域cookie
+    function istrsidssdssotoken(){
+        var trsidssdssotoken = "ssotoken";//同域Cookie
+        var sdssotoken = $.cookie(trsidssdssotoken);
+        if(sdssotoken!=null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+</script>
+

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-评价</title>
+    <title>个人中心-晒单分享</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div id="js-leftredlight" style="display: none;">我的订单</div>
+<div id="js-leftredlight" style="display: none;">我的评价</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g js-contBox">
@@ -26,21 +26,21 @@
                     <div class="land-shade js_navshade"></div>
 
                     <div class="member-security-width js-securityheight">
-                        <div class="member-security-tit"><p>评价</p></div>
+                        <div class="member-security-tit"><p>晒单分享</p></div>
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
                             <div class="member-security-table o_g">
                                 <div class="member-share-leftbox o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_2-2 o_xs_2-2 ">
                                     <div class="member-share-leftcont ">
-                                        <img id="" src="" alt="" class="js-productimg" />
+                                        <img id="" src="" alt="" class="js-productimg">
                                         <p class="o_u o_sm_2-3 o_xs_2-3 js-productName"> </p>
                                     </div>
                                 </div>
                                 <div class="member-share-rightbox o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2">
                                     <div class="member-share-right-cont">
                                         <div class="member-share-score">
-                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评分<i>*</i></p>
-                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title  o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">整体评分<i>*</i></p>
+                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <li>
                                                     <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
                                                 </li>
@@ -61,8 +61,8 @@
 
                                         </div>
                                         <div class="member-share-evaluate ">
-                                            <p class="member-share-right-title o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>*</span>整体评价<i>*</i></p>
-                                            <div class="member-share-evaluate-val o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">详细评价<i>*</i></p>
+                                            <div class="member-share-evaluate-val o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <textarea class="js_EvaluateVal o_u o_df_5-6 o_lg_5-6 o_md_5-6 o_sm_5-6 o_xs_5-6"></textarea>
                                                 <div class="member-share-evaluate-vallength">
                                                     <span class="js_EvaluateValLength">0</span><span>/500</span>
@@ -73,18 +73,19 @@
 
                                         </div>
                                         <div class="member-share-photo ">
-                                            <p class="member-share-right-title  o_u o_df_1-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span>&nbsp;&nbsp;</span>照片分享<i>*</i></p>
-                                            <div class="member-share-photo-btn o_u o_df_4-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title  o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">照片分享<i>*</i></p>
+                                            <div class="member-share-photo-btn o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <ul class="member-share-right-photo js_sharephotobox">
 
                                                 </ul>
                                                 <a href="javascript:;"  id="js_shareimgUpload" class="js_share_getup_img l-btn-sm l-btn-line1">本地上传</a>
                                                 <a href="javascript:;"  class="js_share_getup_false l-btn-sm l-btn-line1 l-btn-disable share_getup_false">本地上传</a>
                                             </div>
-                                            <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
-                                            <p class="member-share-photo-btn-down o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持JPG、JPGE、PNG，大小不超过2MB</p>
+                                            <div class="o_u  o_df_2-6"></div>
+                                            <p class="member-share-photo-btn-down o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="js_sharephotoNub">0</span>/10  支持JPG、JPGE、PNG，大小不超过2MB</p>
                                         </div>
-                                        <div class="member-share-right-getup o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                         <div class="o_u  o_df_2-6"></div>
+                                        <div class="member-share-right-getup o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                             <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>
                                         </div>
                                     </div>

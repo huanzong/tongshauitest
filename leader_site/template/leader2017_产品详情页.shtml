@@ -190,7 +190,7 @@
                                 </div>-->
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
-                                        <span class="address-tit">配送至:</span>
+                                        <span class="address-tit">配送至：</span>
                                         <span>浙江 杭州市 西湖区</span>
                                     </div>
                                     <div class="delivery-time">
@@ -202,7 +202,7 @@
                                 <div class="particulars-btn">
                                     <a href="javascript:;" class="l-btn-normal l-btn-red">加入购物车</a>
                                 </div>
-                                <div class="particulars-buy-tit">品牌旗舰店购买:</div>
+                                <div class="particulars-buy-tit">品牌旗舰店购买：</div>
                                 <div class="particulars-buy-con">
                                     <div class="particulars-buybox">
                                         <div class="buy-img tianmao"></div>
@@ -1052,7 +1052,7 @@
                             <div class="o_g">
                                 <div class="o_u o_df_1-5 o_df-hide o_lg-show o_md-show param-basic-bg"></div>
                                 <div class="o_u o_df_2-2 o_lg_4-5 o_md_4-5 param-basic-con">
-                                    <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数" NUM='1'>
+                                    <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数" NUM='1'>
                                     <div class="param-basic-title"><TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP></div>
                                     <div class="o_u o_df_2-2">
                                         <div class="param-basic-box">
@@ -1091,8 +1091,8 @@
             </div>
             <!-- 产品口碑 End -->
             <!-- 更多选择 -->
-            <div class="detail-title">更多选择</div>
-            <div class="o_g">
+            <div class="detail-title js_moreTitle">更多选择</div>
+            <div class="o_g js_moreTitle">
                 <div class="o_u o_df_1-6"></div>
                 <div class="o_u o_df_2-3">
                     <div class="detail-more o_xs-hide">
@@ -1350,7 +1350,7 @@
             <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
             <!--激活登陆弹窗按钮添加class js_landBtn -->
             <!-- 产品对比 -->
-            <div class="prolist-compare">
+            <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide">
                 <div class="compare-title">
                     产品对比
                     <div class="compare-spread js_compareBoxShow" data-show=0>
@@ -1369,7 +1369,7 @@
                 </ul>
             </div>
             <!-- 产品对比 END -->
-            <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+            <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
                     <div class="land-cont-title o_u">

@@ -87,7 +87,10 @@ $(function(){
 })
 
 
-    // 点击修改和新增按钮标题更换
+
+
+
+    // 点击修改和新增按钮标题更换  添加到  getAddressInfo()内
     $('.js_memberAddressBtn').click(function(){
         $('.js_addressTitle').html('添加新地址');
     })
@@ -95,4 +98,7 @@ $(function(){
         $('.js_addressTitle').html('修改地址');
 
     })
+
+            //点击修改按钮屏幕滚到到顶部
+            $(window).scrollTop($('.member-security-tit').height())
 })

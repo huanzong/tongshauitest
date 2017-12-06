@@ -30,21 +30,21 @@
                     <div class="o_u o_df_6-10 o_xs_2-3 memeber-nav-middle-listbox">
                         <ul>
                             <li class="memeber-nav-middle-title">个人信息</li>
-                            <li><a href="javascript:;" class=" cur o_u">个人中心</a><i class="member-nub-round">9</i></li>
-                            <li><a href="javascript:;" class="o_u ">我的优惠券</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的礼品卡</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的消息</a></li>
+                            <li><a href="/user" class=" cur o_u">个人中心</a></li>
+                            <!--<li><a href="javascript:;" class="o_u ">我的优惠券</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">我的礼品卡</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">我的消息</a><i class="member-nub-round">9</i></li>-->
                             <li class="memeber-nav-middle-title">订单与产品</li>
-                            <li><a href="javascript:;" class="o_u ">我的订单</a><i class="member-nub-round">9</i></li>
-                            <li><a href="javascript:;" class="o_u ">收藏与订阅</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的产品</a></li>
-                            <li><a href="javascript:;" class="o_u ">售后服务</a></li>
-                            <li><a href="javascript:;" class="o_u ">我的晒单</a></li>
+                            <li><a href="/order" class="o_u ">我的订单</a></li>
+                            <!--<li><a href="javascript:;" class="o_u ">收藏与订阅</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">我的产品</a></li>-->
+                            <!--<li><a href="javascript:;" class="o_u ">售后服务</a></li>-->
+                            <li><a href="/product_share" class="o_u ">我的评价</a></li>
                             <li class="memeber-nav-middle-title">账户管理</li>
-                            <li><a href="javascript:;" class="o_u ">安全设置</a><i class="member-nub-round">9</i></li>
-                            <li><a href="javascript:;" class="o_u ">地址管理</a></li>
-                            <li><a href="javascript:;" class="o_u ">个人信息</a></li>
-                            <li><a href="javascript:;" class="o_u ">增票资质</a></li>
+                            <li><a href="/security" class="o_u ">安全设置</a></li>
+                            <li><a href="/address" class="o_u ">地址管理</a></li>
+                            <li><a href="/info" class="o_u ">个人信息</a></li>
+                            <!--<li><a href="/invoice" class="o_u ">增票资质</a></li>-->
                         </ul>
                     </div>
                     <div class="o_u o_df_4-10 o_md_2-12  o_sm_2-12 memeber-nav-middle-btn js_memberNavMiddleBtn" data-alt="1">
@@ -54,7 +54,7 @@
 
                 <div class="o_u o_df_10-12  o_xs_2-2 js-membercontboxs js-membercontboxs-2" style="position: relative;z-index: 14">
                     <div class="memeber-homenav-top-md" >
-                        <p>My Account</p>
+                        <p>MY ACCOUNT</p>
                         <h2>统帅用户中心</h2>
                         <div class="iconfont icon-icon "></div>
                     </div>
@@ -151,26 +151,26 @@
                                                             <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
                                                         </div>
                                                     </div>
-                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 ">
 
                                                         <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3">
                                                                 <img src="images/compare_goods.PNG">
                                                             </a>
-                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3">
                                                                 <p class="pro-info-title">统帅就给个洗衣机</p>
                                                                 <span class="pro-info-type">JGEJJGEJ-988</span>
                                                                 <strong>￥2999.00</strong>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 ">
 
                                                         <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3">
                                                                 <img src="images/compare_goods.PNG">
                                                             </a>
-                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3">
                                                                 <p class="pro-info-title">统帅就给个洗衣机</p>
                                                                 <span class="pro-info-type">JGEJJGEJ-988</span>
                                                                 <strong>￥2999.00</strong>
@@ -178,29 +178,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right member-home-down-xs ">
-                                                    <div class="o_g member-home-down-table">
-                                                        <div class="o_u o_df_11-12">
-                                                            <span>精选收藏</span>
-                                                            <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="o_u o_df_2-2  ">
-
-                                                        <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-3 ">
-                                                                <img src="images/compare_goods.PNG">
-                                                            </a>
-                                                            <div class="member-home-down-info o_u o_df_2-3 ">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                                <strong>￥2999.00</strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
                                             </div>
                                             <!--<div class="o_u o_df_1-12"></div>-->
 

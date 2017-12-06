@@ -47,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-	<!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+	<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 </div>
 </div>
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
@@ -57,7 +57,7 @@
   $(function(){
     //初始化
     templet_init();
-    array(appendix,"a","js_appendixText","param-attachment-other");
+    array(appendix,"span","js_appendixText","param-attachment-other");
   });
   //定义附件信息展示数据
   var appendix ="<TRS_VIEWDATA field="fjxx"/>";
@@ -81,7 +81,7 @@
 
   }
   var templet_Arry=[
-      <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
+      <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数">
       [
       <TRS_VIEWFIELDS>
       <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">

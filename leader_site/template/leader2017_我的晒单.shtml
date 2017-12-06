@@ -41,6 +41,17 @@
         <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
     </div>
 </div>
+
+<!-- 图片放大弹层 -->
+<div class="myshare-alert-window js_myshareAlertWindow">
+    <a class="js_alertWindowLeft alert-window-left-btn iconfont icon-arrow-jiantou-left
+" ></a>
+    <ul class="alert-window-photobox js_myshareAlertWindowPhotoBox  swiper-wrapper">
+        <li></li>
+    </ul>
+    <a class="js_alertWindowRight alert-window-right-btn iconfont icon-arrow-jiantou-right"></a>
+    <a href="javascript:;" class="js_alertWindowClose alert-window-close-btn iconfont icon-close"></a>
+</div>
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <!--<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="../site5/member_nav.js"></script>
