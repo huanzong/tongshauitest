@@ -198,9 +198,10 @@ jQuery(function () {
                     curCompareList.push(pid_not_in_local_json[curCompareList.length]);
                     cur_compare_pObj_array.push(p_obj);
                 },//end success function
-                error: function () {
+                error: function (data) {
+                    alert("请求失败，"+data)
                 },
-                complete: function () {
+                complete: function (data) {
                     // START 初始化：将用户选定的比较产品的数据写入页面
                     reDrawCompArea(cur_compare_pObj_array);
                     //END 初始化：将用户选定的比较产品的数据写入页面
