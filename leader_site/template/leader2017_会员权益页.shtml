@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>会员中心</title>
-    <%=base%>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
     <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
-    <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-    <!-- <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
-    <link rel="stylesheet" type="text/css" href="member-center.css">
+    <link rel="stylesheet" type="text/css" href="member-center.css" OLDSRC="member-center.css" OLDID="600" RELATED="1">
+
 </head>
 
-<body class=" ">
+<body class="">
 <div class="o_main">
     <!-- 首屏动画 -->
     <!-- 导航 -->
-    <!--#include file="${ROOT_PATH}public/header/nav.shtml"-->
+    <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
     <!-- 导航 End-->
     <div class="o_g js_animateLine">
         <div class="index_animate">
@@ -45,165 +43,164 @@
         <div class="membercenter-top">
             <trs_viewdatas id="会员权益banner" num="1" startpos="0">
                 <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner"
-                     style='background: url("<trs_viewdata field=' picture
-                '/>") no-repeat top center;'>
-                <div class="o_u o_df_1-8"></div>
-                <div class="o_u o_df_7-8 membercenter-banner-cont">
-                    <h2>
-                        <trs_viewdata field='maintitle'/>
-                        ，<span><trs_viewdata field='maintitle_n'/></span></h2>
-                    <p>
-                        <trs_viewdata field='Subtitle'/>
-                    </p>
-                    <a href="javascript:;">
-                        <trs_viewdata field='linktext'/>
-                    </a>
+                     style='background: url("<trs_viewdata field="picture"/>") no-repeat top center;'>
+                    <div class="o_u o_df_1-8"></div>
+                    <div class="o_u o_df_7-8 membercenter-banner-cont">
+                        <h2>
+                            <trs_viewdata field='maintitle'/>
+                            ，<span><trs_viewdata field='maintitle_n'/></span></h2>
+                        <p>
+                            <trs_viewdata field='Subtitle'/>
+                        </p>
+                        <a href="javascript:;">
+                            <trs_viewdata field='linktext'/>
+                        </a>
+                    </div>
                 </div>
-        </div>
-        </trs_viewdatas>
-        <ul class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
-            <trs_viewdatas id="会员权益banner" num="4" startpos="1">
-                <li class="o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("<trs_viewdata field=' picture
-                '/>") no-repeat center right;'>
-                <div class="membercenter-list-cont">
-                    <h4>
-                        <trs_viewdata field='maintitle'/>
-                    </h4>
-                    <p>
-                        <trs_viewdata field='Subtitle'/>
-                    </p>
-                    <a href="javascript:;" class="l-btn-sm l-btn-line1">
-                        <trs_viewdata field='linktext'/>
-                    </a>
-                </div>
-                </li>
             </trs_viewdatas>
-        </ul>
-    </div>
-    <div class="member-center js_memberCenterBox o_g">
-        <div class="o_u o_df_4-12 member-center-left"></div>
-        <div class="o_u o_df_2-12 member-center-border"></div>
-        <div class="o_u o_df_2-12 member-center-border"></div>
-        <div class="o_u o_df_2-12 member-center-border">
-            <div class="member-center-border-red"></div>
-        </div>
-        <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
-        <div class="member-center-box o_u o_df_8-12 o_lg_10-12 o_md_11-12 o_sm_11-12 o_xs_12-12">
-            <div class="member-center-title">
-                <trs_channel id='了解会员权益'/>
-            </div>
-            <div class="o_u o_df_6-12 o_xs_10-12  member-center-boxleft js_centerBoxLeft">
-                <trs_viewdatas id="了解会员权益" num="1" startpos="0">
-                    <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
-                        <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="">
-                        <div class="member-conter-text">
-                            <div class=" o_u o_df_11-12">
-                                <h5>
-                                    <trs_viewdata field='maintitle'/>
-                                </h5>
-                                <p>
-                                    <trs_viewdata field='Subtitle'/>
-                                </p>
-                                <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </trs_viewdatas>
-                <trs_viewdatas id="了解会员权益" num="1" startpos="1">
-                    <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 ">
-                        <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="">
-                        <div class="member-conter-text">
-                            <div class=" o_u o_df_11-12">
-                                <h5>
-                                    <trs_viewdata field='maintitle'/>
-                                </h5>
-                                <p>
-                                    <trs_viewdata field='Subtitle'/>
-                                </p>
-                                <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </trs_viewdatas>
-            </div>
-            <div class="o_u o_df_6-12 o_xs_10-12 member-center-boxright  js_centerBoxRight">
-                <div class="member-center-title">
-                    <h3>LEADER</h3>
-                    <p>
-                        <trs_channel id='了解会员权益'/>
-                    </p>
-                </div>
-                <trs_viewdatas id="了解会员权益" num="1" startpos="2">
-                    <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
-                        <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="">
-                        <div class="member-conter-text o_u o_df_11-12">
-                            <h5>
+            <ul id="memberqybanner" class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
+                <trs_viewdatas id="会员权益banner" num="4" startpos="1">
+                    <li class="o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("<trs_viewdata field="picture"/>") no-repeat center right;'>
+                        <div class="membercenter-list-cont">
+                            <h4>
                                 <trs_viewdata field='maintitle'/>
-                            </h5>
+                            </h4>
                             <p>
                                 <trs_viewdata field='Subtitle'/>
                             </p>
-                            <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
-
-                            </div>
-                        </div>
-                    </div>
-                </trs_viewdatas>
-                <trs_viewdatas id="了解会员权益" num="1" startpos="3">
-                    <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
-                        <!-- <div class="member-content-4md"></div> -->
-                        <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="">
-                        <div class="member-conter-text  ">
-                            <div class=" o_u o_df_11-12">
-                                <h5>
-                                    <trs_viewdata field='maintitle'/>
-                                </h5>
-                                <p>
-                                    <trs_viewdata field='Subtitle'/>
-                                </p>
-                                <div class="member-conter-text-down" pic="<trs_viewdata field='qymember'/>">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </trs_viewdatas>
-            </div>
-        </div>
-    </div>
-    <div class="memeber-bottom o_g">
-        <div class="o_u o_df_11-12">
-            <h3>
-                <trs_channel id='会员等级规则'/>
-            </h3>
-            <ul class="o_u o_df_10-12">
-                <trs_viewdatas id="了解会员权益" num="4">
-                    <li class=" o_u o_df_3-12 o_xs_6-12 <trs_viewdata field='icon_name'/>">
-                        <span class="iconfont icon-level-solid"></span>
-                        <div class="o_u o_sm_12-12 o_xs_12-12">
-                            <h5>
-                                <trs_viewdata field='memberdj_name2'/>
-                            </h5>
-                            <p>
-                                <trs_viewdata field='memberdj_txt'/>
-                            </p>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">
+                                <trs_viewdata field='linktext'/>
+                            </a>
                         </div>
                     </li>
                 </trs_viewdatas>
             </ul>
-
         </div>
-    </div>
-    <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
-</div>
+        <div class="member-center js_memberCenterBox o_g">
+            <div class="o_u o_df_4-12 member-center-left"></div>
+            <div class="o_u o_df_2-12 member-center-border"></div>
+            <div class="o_u o_df_2-12 member-center-border"></div>
+            <div class="o_u o_df_2-12 member-center-border">
+                <div class="member-center-border-red"></div>
+            </div>
+            <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
+            <div class="member-center-box o_u o_df_8-12 o_lg_10-12 o_md_11-12 o_sm_11-12 o_xs_12-12">
+                <div class="member-center-title">
+                    <trs_channel id='了解会员权益'/>
+                </div>
+                <div class="o_u o_df_6-12 o_xs_10-12  member-center-boxleft js_centerBoxLeft">
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="0">
+                        <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                            <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="" />
+                            <div class="member-conter-text">
+                                <div class=" o_u o_df_11-12">
+                                    <h5>
+                                        <trs_viewdata field='maintitle'/>
+                                    </h5>
+                                    <p>
+                                        <trs_viewdata field='Subtitle'/>
+                                    </p>
+                                    <div class="member-conter-text-down member_1" pic="<trs_viewdata field='qymember'/>">
 
-<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </trs_viewdatas>
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="1">
+                        <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 ">
+                            <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="" />
+                            <div class="member-conter-text">
+                                <div class=" o_u o_df_11-12">
+                                    <h5>
+                                        <trs_viewdata field='maintitle'/>
+                                    </h5>
+                                    <p>
+                                        <trs_viewdata field='Subtitle'/>
+                                    </p>
+                                    <div class="member-conter-text-down member_2" pic="<trs_viewdata field='qymember'/>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </trs_viewdatas>
+                </div>
+                <div class="o_u o_df_6-12 o_xs_10-12 member-center-boxright  js_centerBoxRight">
+                    <div class="member-center-title">
+                        <h3>LEADER</h3>
+                        <p>
+                            <trs_channel id='了解会员权益'/>
+                        </p>
+                    </div>
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="2">
+                        <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                            <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="" />
+                            <div class="member-conter-text o_u o_df_11-12">
+                                <h5>
+                                    <trs_viewdata field='maintitle'/>
+                                </h5>
+                                <p>
+                                    <trs_viewdata field='Subtitle'/>
+                                </p>
+                                <div class="member-conter-text-down member_3" pic="<trs_viewdata field='qymember'/>">
+
+                                </div>
+                            </div>
+                        </div>
+                    </trs_viewdatas>
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="3">
+                        <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12">
+                            <!-- <div class="member-content-4md"></div> -->
+                            <img class="member-content-md" src="<trs_viewdata field='picture'/>" alt="" />
+                            <div class="member-conter-text  ">
+                                <div class=" o_u o_df_11-12">
+                                    <h5>
+                                        <trs_viewdata field='maintitle'/>
+                                    </h5>
+                                    <p>
+                                        <trs_viewdata field='Subtitle'/>
+                                    </p>
+                                    <div class="member-conter-text-down member_4" pic="<trs_viewdata field='qymember'/>">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </trs_viewdatas>
+                </div>
+            </div>
+        </div>
+        <div class="memeber-bottom o_g">
+            <div class="o_u o_df_11-12">
+                <h3>
+                    <trs_channel id='会员等级规则'/>
+                </h3>
+                <ul class="o_u o_df_10-12">
+                    <trs_viewdatas id="会员等级规则" num="4">
+                        <li class=" o_u o_df_3-12 o_xs_6-12 <trs_viewdata field='icon_name'/>">
+                            <span class="iconfont icon-level-solid"></span>
+                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                                <h5>
+                                    <trs_viewdata field='memberdj_name2'/>
+                                </h5>
+                                <p>
+                                    <trs_viewdata field='memberdj_txt'/>
+                                </p>
+                            </div>
+                        </li>
+                    </trs_viewdatas>
+                </ul>
+
+            </div>
+        </div>
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+    </div>
+
+    <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+
+</body>
 <script type="text/javascript">
     $(function () {
-
         var windowWidth = $(window).width();
 
         setTimeout(function () {
@@ -215,29 +212,27 @@
             }
         }, 2000)
 
-    //
-    //     $(".membercenter-list li").eq(0).css({"class": "list-share"});  //第一个li
-    //     $(".membercenter-list li").eq(1).css({"class": "list-endorsement"});  //第二个li
-    //     $(".membercenter-list li").eq(2).css({"class": "list-interact"});  //第三个li
-    //     $(".membercenter-list li").eq(3).css({"class": "list-present"});  //第四个li
-    //
-    //     selectmember();
-    //
+
+        $("#memberqybanner li").eq(0).addClass("list-share");  //第一个li
+        $("#memberqybanner li").eq(1).addClass("list-endorsement");//第二个li
+        $("#memberqybanner li").eq(2).addClass("list-interact");  //第三个li
+        $("#memberqybanner li").eq(3).addClass("list-present");  //第四个li
+
+        selectmember();
     })
-    //
-    // function selectmember() {
-    //     var memberName = $(".member-conter-text-down").attr("pic");
-    //     if (memberName.indexOf("普通") > -1) {
-    //         $(".member-conter-text-down").append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
-    //     }
-    //     if (memberName.indexOf("银卡") > -1) {
-    //         $(".member-conter-text-down").append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
-    //     }
-    //     if (memberName.indexOf("金卡") > -1) {
-    //         $(".member-conter-text-down").append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
-    //     }
-    //
-    // }
+
+    function selectmember() {
+        for(var i=1;i<=4;i++){
+            if ($(".member_"+i).attr("pic").indexOf("普通") > -1) {
+                $(".member_"+i).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
+            }
+            if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
+                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
+            }
+            if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
+                $(".member_"+i).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
+            }
+        }
+    }
 </script>
-</body>
 </html>
