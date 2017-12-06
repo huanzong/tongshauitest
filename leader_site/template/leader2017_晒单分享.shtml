@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div id="js-leftredlight" style="display: none;">我的订单</div>
+<div id="js-leftredlight" style="display: none;">我的评价</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g js-contBox">
