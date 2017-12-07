@@ -202,15 +202,8 @@
                                 <div class="particulars-btn">
                                     <a href="javascript:;" class="l-btn-normal l-btn-red">加入购物车</a>
                                 </div>
-                                <TRS_CONDITION CONDITION="@tmall" OPERATOR="blank" NOT="not">
+
                                 <div class="particulars-buy-tit">品牌旗舰店购买：</div>
-                                </TRS_CONDITION>
-                                <TRS_CONDITION CONDITION="@jd" OPERATOR="blank" NOT="not">
-                                    <div class="particulars-buy-tit">品牌旗舰店购买：</div>
-                                </TRS_CONDITION>
-                                <TRS_CONDITION CONDITION="@suning" OPERATOR="blank" NOT="not">
-                                    <div class="particulars-buy-tit">品牌旗舰店购买：</div>
-                                </TRS_CONDITION>
                                 <div class="particulars-buy-con">
                                     <TRS_CONDITION CONDITION="@tmall" OPERATOR="blank" NOT="not">
                                     <a class="particulars-buybox">
@@ -1476,7 +1469,11 @@
         if(templet_dsly ==""||templet_dsly ==null){
             $(".js_detail-foldover").hide();//电商拉页隐藏
         }
-        
+        var templet_buy=$(".particulars-buy-con").find("a").lenght;
+        if(templet_buy==0){
+            $(".particulars-buy-tit").hide();
+        }
+
 
     </script> 
     <script type="text/javascript" src="../site5/templet_product_detail.js"></script> 
