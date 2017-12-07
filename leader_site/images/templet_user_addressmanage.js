@@ -247,7 +247,7 @@ function saveUserAddress(){
             templet_isSubmiting=false;
         },
         error_cb:function(responseT){
-            var responseT = JSON.parse(responseT); //由JSON字符串转换为JSON对象
+            var responseT = JSON.parse(responseT.responseText); //由JSON字符串转换为JSON对象
             globalShade2(responseT.resultMsg,2,2000);
             templet_isSubmiting=false;
         }
