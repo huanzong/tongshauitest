@@ -61,20 +61,20 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput" data-type="1">
-                                                    <input type="text" name="" ph="区号" data-normal="1" value="" datatype="n2-4"  id="phonequhao"    maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位的区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
+                                                    <input type="text" name="" ph="区号" data-normal="1" value="" datatype="n2-4"  id="phonequhao" ignore="ignore"   maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位的区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput"  data-type="2">
-                                                    <input type="text" name="" ph="电话号" data-normal="1" value="" id="phone" datatype="n8-8"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位的号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
+                                                    <input type="text" name="" ph="电话号" data-normal="1" value="" id="phone" datatype="n8-8" ignore="ignore"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位的号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
 
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2" style='padding-right: 2px'>
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput"  data-type="3">
-                                                    <input type="text" name="" ph="分机号" data-normal="1" value="" datatype="n1-8" id="phonefenjihao" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
+                                                    <input type="text" name="" ph="分机号" data-normal="1" value="" datatype="n1-8" ignore="ignore" id="phonefenjihao" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
