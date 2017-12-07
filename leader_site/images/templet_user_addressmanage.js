@@ -332,7 +332,7 @@ function deleteAddress(addId) {
             success:function(responseT){
 
                 if(responseT.isSuccess){
-                    loadUserInfoList();
+                    //loadUserInfoList();
                     //删除成功之后进行前端元素操作
                     $(this).parents(".js_addressBox").remove();
 
