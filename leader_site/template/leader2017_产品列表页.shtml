@@ -430,9 +430,7 @@
 							<div class="o_g js_recommend">
 							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
 							    <trs_channel id="parent" AUTOLINK='false'>
-								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
-								<trs_viewdata field="shangshishijian">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
+								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
 									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
@@ -441,15 +439,11 @@
 										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
 									</div>
 								</a>
-								</TRS_CONDITION>
-							    </trs_viewdata>
 							    </TRS_DOCUMENTS>
 							    </trs_channel>
 							    </TRS_CONDITION>
 							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="4">
-								<trs_viewdata field="shangshishijian">
-								<TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
+								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
 								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
 									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
 									<div class="recommend-pro-info">
@@ -458,8 +452,6 @@
 										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
 									</div>
 								</a>
-								</TRS_CONDITION>
-							    </trs_viewdata>
 							    </TRS_DOCUMENTS>
 							    </TRS_CONDITION>
 							</div>
