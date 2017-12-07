@@ -353,26 +353,9 @@ function deleteAddress(addId) {
 
 }
 
-var saveId="";
-var infotell=[];
-
-//固定电话号码错误显示逻辑
-$('.js_addressPhoneInput').find('input').blur(function(){
-    var inputVal = $.trim($(this).val());
-    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
-    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
-        $(this).removeClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_wrong').length!=0){
-        $(this).addClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_right').length!=0){
-        infotell[nubName-1] = inputVal;
-    }
-})
-
 
 //修改地址获取信息
+var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
@@ -600,7 +583,21 @@ function getAddressInfo(id){
     });
 }
 
-
+var infotell=[];
+//固定电话号码错误显示逻辑
+$('.js_addressPhoneInput').find('input').blur(function(){
+    var inputVal = $.trim($(this).val());
+    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
+    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+        $(this).removeClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_wrong').length!=0){
+        $(this).addClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_right').length!=0){
+        infotell[nubName-1] = inputVal;
+    }
+})
 //保存修改地址
 function updateUserAddress(){
     var bool = false;
