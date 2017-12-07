@@ -5,6 +5,8 @@
 
 $(function(){
 
+    $('.lose').css('background-color','#ccc');
+
 
 //    用户名判定
     var nubreg =/^[0-9]*$/;
@@ -72,6 +74,7 @@ $(function(){
 
                 }
             );
+    $(".js_sex").jq_qvote();
             function updatePreview(coords){
                 if (parseInt(coords.w) > 0) {
                     var rx = 180 / coords.w;
