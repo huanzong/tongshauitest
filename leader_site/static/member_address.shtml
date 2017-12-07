@@ -173,7 +173,7 @@
 
                                 <div class="member-address-name">王可可</div>
                                  <div class="member-address-mobnumber">155****5555</div>
-                                  <div class="member-address-addtext">山东省青岛市黄岛区长江中路</div>
+                                  <div class="member-address-addtext1">山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路</div>
                                  <div class="member-address-btnbox">
                                      <i class="iconfont icon-pencil-solid"></i>
                                      <a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>

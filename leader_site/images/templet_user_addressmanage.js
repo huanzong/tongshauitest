@@ -354,9 +354,30 @@ function deleteAddress(addId) {
 }
 
 var saveId="";
+var infotell=[];
+
+//固定电话号码错误显示逻辑
+$('.js_addressPhoneInput').find('input').blur(function(){
+    var inputVal = $.trim($(this).val());
+    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
+    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+        $(this).removeClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_wrong').length!=0){
+        $(this).addClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_right').length!=0){
+        infotell[nubName-1] = inputVal;
+    }
+})
+
+
 //修改地址获取信息
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
+    $('.js_addressTitle').html('修改地址');
+    $('.lose').css('background-color','#ccc');
+    $(window).scrollTop($('.member-security-tit').height())
     $(".js_btnSubmit").attr("type",2);
     saveId=id;
     var data = {id:id};
@@ -585,9 +606,9 @@ function updateUserAddress(){
     var bool = false;
     var realnameVal=$.trim($("#realName").val());//联系人
     var mobileVal=$.trim($("#mobile").val());//手机号
-    var phoneVal=$.trim($("#phone").val());//电话号
-    var phonequhaoVal=$.trim($("#phonequhao").val());//区号
-    var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    //var phoneVal=$.trim($("#phone").val());//电话号
+    //var phonequhaoVal=$.trim($("#phonequhao").val());//区号
+    //var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
     var provinceVal=$.trim($("#js_save").val());//省
     var cityVal=$.trim($("#js_city").val());//市
     var areaVal=$.trim($("#js_area").val());//区
@@ -597,7 +618,12 @@ function updateUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
-    var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
+    if(infotell[0]&&infotell[1]){
+        var telPhoneVal=infotell[0]+";"+infotell[1]+";"+infotell[2];
+
+    }else{
+        var telPhoneVal='';
+    }
     if (addressVal == "尽可能详解地填写街道、楼号、楼层、门牌号") {
         addressVal = "";
     }
@@ -660,6 +686,9 @@ function loadUserInfoList(){
                     $(".js_memberAddressBtn").show();//显示"新增地址"按钮
                     $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
                         templet_text = '确定取消添加？';
+                        $('.js_addressTitle').html('添加新地址');
+                        $('.lose').css('background-color','#ccc');
+
                         resetForm();
                         $(".js_btnSubmit").attr("type",1);
                         $(".js_form_addAddrManagement").show();
