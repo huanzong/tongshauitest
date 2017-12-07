@@ -232,7 +232,7 @@ function saveUserAddress(){
 
     templet_isSubmiting=true;
     $.ajax({
-        url:siteConfig.userUrl+"/user/front/userRegion/save",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/save",
         type:"post",
         dataType:"json",
         data:data,
@@ -284,7 +284,7 @@ $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
     var $this=$(this);
     $.ajax({
-        url:siteConfig.userUrl+"/user/front/userRegion/defaultRegion",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/defaultRegion",
         type:"post",
         dataType: "json",
         data:{
@@ -325,7 +325,7 @@ function deleteAddress(addId) {
         var data = {id: addId};
         //是否删除提示****
         $.ajax({
-            url:siteConfig.userUrl+"/user/front/userRegion/deleteRegion",
+            url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
             type:"get",
             dataType: "json",
             data:data,
@@ -364,7 +364,7 @@ function getAddressInfo(id){
     saveId=id;
     var data = {id:id};
     $.ajax({
-        url:siteConfig.userUrl+"/user/front/userRegion/show",
+        url:siteConfig.userUrl+"/hshop-user/front/userRegion/show",
         type:"get",
         data:data,
         dataType: "json",
@@ -640,7 +640,7 @@ function updateUserAddress(){
     }
     templet_isSubmiting = true;
     $.ajax({
-        url:siteConfig.userUrl+ "/user/front/userRegion/update",
+        url:siteConfig.userUrl+ "/hshop-user/front/userRegion/update",
         type: "post",
         dataType: "json",
         data: data,
@@ -667,7 +667,7 @@ function updateUserAddress(){
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
-        url: siteConfig.userUrl+"/user/front/userRegion/list",
+        url: siteConfig.userUrl+"/hshop-user/front/userRegion/list",
         type: "post",
         dataType: "json",
         data:{
