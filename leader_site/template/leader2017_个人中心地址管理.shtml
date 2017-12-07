@@ -32,7 +32,7 @@
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
                             <!-- 地址管理 START-->
-                            <form class="js_memberNewAddress"  action="/user/front/userRegion/save">
+                            <form class=""  action="/user/front/userRegion/save">
                                 <div class="member-address js_newAddress js_form_addAddrManagement" style="display: none;">
                                     <div class="member-address-title js_addressTitle">添加新地址</div>
                                     <div class="o_g member-address-list">
