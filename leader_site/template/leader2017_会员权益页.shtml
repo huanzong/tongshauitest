@@ -90,7 +90,7 @@
                 </div>
                 <div class="o_u o_df_6-12 o_xs_10-12  member-center-boxleft js_centerBoxLeft">
                     <trs_viewdatas id="了解会员权益" num="1" startpos="0">
-                        <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<trs_viewdata field="picture"/>") no-repeat center;'>
+                        <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style='background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text">
                                 <div class=" o_u o_df_11-12">
@@ -108,7 +108,7 @@
                         </div>
                     </trs_viewdatas>
                     <trs_viewdatas id="了解会员权益" num="1" startpos="1">
-                        <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 " style=' background: url("<trs_viewdata field="picture"/>") no-repeat center;'>
+                        <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 " style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text">
                                 <div class=" o_u o_df_11-12">
@@ -133,7 +133,7 @@
                         </p>
                     </div>
                     <trs_viewdatas id="了解会员权益" num="1" startpos="2">
-                        <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<trs_viewdata field="picture"/>") no-repeat center;'>
+                        <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text o_u o_df_11-12">
                                 <h5>
@@ -149,7 +149,7 @@
                         </div>
                     </trs_viewdatas>
                     <trs_viewdatas id="了解会员权益" num="1" startpos="3">
-                        <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<trs_viewdata field="picture"/>") no-repeat center;'>
+                        <div class="member-content-4 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <!-- <div class="member-content-4md"></div> -->
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text  ">
