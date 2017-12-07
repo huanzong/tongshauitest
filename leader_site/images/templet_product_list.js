@@ -7,20 +7,22 @@
 
 $(function () {
 
-    //筛选项-全部删除
+    //筛选项-全部删除按钮事件
     $('.js_deleteAll').on('click', function () {
         //删除筛选头部选项
         $('.js_filter').empty();
-        $(".list-filter-select").css('display','none');
+        $(".list-filter-select").css('display', 'none');
         /**
          * 全部删除筛选子项的代码写在这里
          */
-        $(".sole-type.active").each(function (e,n) {
+        $(".sole-type.active").each(function (e, n) {
             $(this).removeClass("active");
         });
-        searchWord="";
-        order="";
-        isSelectItemStr="";
+        searchWord = "";
+        order = "";
+        isSelectItemStr = "";
+        //最后一个筛选下，去掉置灰
+        isLastFilterItemSelect(".sole-type");
         //重新查询
         search(searchWord, _tableName, _xmlPath, curPage, pageSize, order, isSelectItemStr);
     });
@@ -64,7 +66,7 @@ var currentUrl = window.location.href;
 //xml路径
 var _xmlPath = currentUrl.substring(0, currentUrl.lastIndexOf("/")) + "/" + url;
 
-//pc端读取配置文件
+//读取配置文件
 function readXmlFile(url) {
     var filterItemName = "";
     var filterItemQuery = "";
@@ -134,7 +136,7 @@ function readXmlFile(url) {
             mobileResetButtonOnclick();
             //}
         },
-        error:function(){
+        error: function () {
             noneShaiXuan(".sole-type");
             //pc端监听事件
             filterItemOnclick(".sole-type");
@@ -180,93 +182,94 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                 var allPageCount = data.data.productList.pageCount;
                 var currentPageNo = data.data.productList.pageNo;
                 //var currentPageNo = data.data.productList.pageS;
-                if (returnData.length >= 1) {
-                    for (var i = 0; i < returnData.length; i++) {
-                        //产品图片
-                        var picUrl = returnData[i].appfile;
-                        //产品链接
-                        var docPubUrl = returnData[i].docpuburl;
-                        //是否人气
-                        var rqcp = returnData[i].rqcp;
-                        //上市时间
-                        var sssj = returnData[i].shangshishijian;
-                        //产品名称
-                        var pName = returnData[i].pname;
-                        //产品型号
-                        var modelNo = returnData[i].modelno;
-                        //价格
-                        var price = returnData[i].price;//readJsonString(returnData[i].sku_values);//returnData[i].price;
-                        //产品类型
-                        var cplx = returnData[i].cplx;
-                        //当前时间
-                        var curDate = new Date().getTime();
-                        //上市时间处理
-                        var newsssj = new Date(sssj).getTime();
-                        var bdate = 180 * 24 * 3600 * 1000;
-                        //图片处理
-                        if (picUrl == "" || picUrl == null) {
-                        } else {
-                            picUrl = docPubUrl.substring(0, docPubUrl.lastIndexOf("/")) + "/" + picUrl;
-                        }
-                        searchHtml += '<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">';
-                        searchHtml += '<div class="prolist-box">';
-                        if (rqcp == "是") {
-                            searchHtml += '<span class="l-tag-radius l-tag-green pro-tag">人气</span>'
-                        }
-                        if ((curDate - newsssj) <= bdate) {
-                            searchHtml += '<span class="l-tag-radius l-tag-blue pro-tag">新品</span>';
-                        }
-                        searchHtml += '<div class="pro-opporate">';
-                        searchHtml += '<a class="pro-read">';
-                        searchHtml += '<span class="pro-read-i">';
-                        searchHtml += '<i class="iconfont icon-price-tag-solid1"></i>';
-                        searchHtml += '</span>';
-                        searchHtml += '<span class="pro-read-font">订阅</span>';
-                        searchHtml += '</a>';
-                        searchHtml += '<a class="pro-read l-fr js_compareAddProduct" auto="0" id="compare_' + returnData[i].MetaDataId + '_top" data-id="compare_' + returnData[i].MetaDataId + '_top" data-link="' + returnData[i].docpuburl + '" data-thumb="' + picUrl + '" data-name="' + cplx + '" data-type="' + returnData[i].modelno + '" data-chnid="' + returnData[i].ChannelId + '">';
-                        searchHtml += '<span class="pro-read-font">对比</span>';
-                        searchHtml += '<span class="pro-read-i">';
-                        searchHtml += '<i class="iconfont icon-d-solid"></i>';
-                        searchHtml += '</span>';
-                        searchHtml += '</a>';
-                        searchHtml += '</div>';
-                        searchHtml += '<a href="' + docPubUrl + '" class="pro-info-box">';
-                        searchHtml += '<img src="' + picUrl + '">';
-                        searchHtml += '<div class="pro-info-title">' + pName + '</div>';
-                        searchHtml += '<div class="pro-info-mark">' + modelNo + '</div>';
-                        if (price != 0 || price != "") {//价格处理
-                            searchHtml += '<div class="pro-info-price">￥' + price + '</div>';
-                        } else {
-                            searchHtml += '<div class="pro-info-price"></div>';
-                        }
-                        searchHtml += '<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>';
-                        searchHtml += '<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span></a>';
-                        searchHtml += '</div>';
-                        searchHtml += '</div>';
-                    }
-                    //设置总数
-                    $(".red").html(returnData.length);
-                    $(".prolist-con").html(searchHtml);
-                    //PC
-                    if (document.body.offsetWidth >= 1200) {
-                        //添加对比产品监听事件
-                        addCompareOnclick();
-                        //是否最后筛选项
-                        isLastFilterItemSelect(".sole-type");
+                //if (returnData.length >= 1) {
+                for (var i = 0; i < returnData.length; i++) {
+                    //产品图片
+                    var picUrl = returnData[i].appfile;
+                    //产品链接
+                    var docPubUrl = returnData[i].docpuburl;
+                    //是否人气
+                    var rqcp = returnData[i].rqcp;
+                    //上市时间
+                    var sssj = returnData[i].shangshishijian;
+                    //产品名称
+                    var pName = returnData[i].pname;
+                    //产品型号
+                    var modelNo = returnData[i].modelno;
+                    //价格
+                    var price = returnData[i].price;//readJsonString(returnData[i].sku_values);//returnData[i].price;
+                    //产品类型
+                    var cplx = returnData[i].cplx;
+                    //当前时间
+                    var curDate = new Date().getTime();
+                    //上市时间处理
+                    var newsssj = new Date(sssj).getTime();
+                    var bdate = 180 * 24 * 3600 * 1000;
+                    //图片处理
+                    if (picUrl == "" || picUrl == null) {
                     } else {
-                        isLastFilterItemSelect(".list-btn");
-                        paginationInit(currentPageNo, allPageCount, pageSize, ".product-listpage.pageMobile", mobileShowPageNo);
+                        picUrl = docPubUrl.substring(0, docPubUrl.lastIndexOf("/")) + "/" + picUrl;
                     }
-                    //-------------------分页
-                    paginationInit(currentPageNo, allPageCount, pageSize, ".product-listpage.pageMax", maxShowPageNo);
-                    paginationInit(currentPageNo, allPageCount, pageSize, ".product-listpage.pageMiddle", midlleShowPageNo);
-                    //分页结束1
+                    searchHtml += '<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">';
+                    searchHtml += '<div class="prolist-box">';
+                    if (rqcp == "是") {
+                        searchHtml += '<span class="l-tag-radius l-tag-green pro-tag">人气</span>'
+                    }
+                    if ((curDate - newsssj) <= bdate) {
+                        searchHtml += '<span class="l-tag-radius l-tag-blue pro-tag">新品</span>';
+                    }
+                    searchHtml += '<div class="pro-opporate">';
+                    searchHtml += '<a class="pro-read">';
+                    searchHtml += '<span class="pro-read-i">';
+                    searchHtml += '<i class="iconfont icon-price-tag-solid1"></i>';
+                    searchHtml += '</span>';
+                    searchHtml += '<span class="pro-read-font">订阅</span>';
+                    searchHtml += '</a>';
+                    searchHtml += '<a class="pro-read l-fr js_compareAddProduct" auto="0" id="compare_' + returnData[i].MetaDataId + '_top" data-id="compare_' + returnData[i].MetaDataId + '_top" data-link="' + returnData[i].docpuburl + '" data-thumb="' + picUrl + '" data-name="' + cplx + '" data-type="' + returnData[i].modelno + '" data-chnid="' + returnData[i].ChannelId + '">';
+                    searchHtml += '<span class="pro-read-font">对比</span>';
+                    searchHtml += '<span class="pro-read-i">';
+                    searchHtml += '<i class="iconfont icon-d-solid"></i>';
+                    searchHtml += '</span>';
+                    searchHtml += '</a>';
+                    searchHtml += '</div>';
+                    searchHtml += '<a href="' + docPubUrl + '" class="pro-info-box">';
+                    searchHtml += '<img src="' + picUrl + '">';
+                    searchHtml += '<div class="pro-info-title">' + pName + '</div>';
+                    searchHtml += '<div class="pro-info-mark">' + modelNo + '</div>';
+                    if (price != 0 || price != "") {//价格处理
+                        searchHtml += '<div class="pro-info-price">￥' + price + '</div>';
+                    } else {
+                        searchHtml += '<div class="pro-info-price"></div>';
+                    }
+                    searchHtml += '<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>';
+                    searchHtml += '<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span></a>';
+                    searchHtml += '</div>';
+                    searchHtml += '</div>';
                 }
-
+                //设置总数
+                $(".red").html(returnData.length);
+                $(".prolist-con").html(searchHtml);
+                //PC
+                if (document.body.offsetWidth >= 1200) {
+                    //添加对比产品监听事件
+                    addCompareOnclick();
+                    //是否最后筛选项
+                    isLastFilterItemSelect(".sole-type");
+                } else {
+                    isLastFilterItemSelect(".list-btn");
+                    paginationInit(currentPageNo, allPageCount, pageSize, ".product-listpage.pageMobile", mobileShowPageNo);
+                }
+                //-------------------分页
+                paginationInit(currentPageNo, allPageCount, pageSize, ".product-listpage.pageMax", maxShowPageNo);
+                paginationInit(currentPageNo, allPageCount, pageSize, ".product-listpage.pageMiddle", midlleShowPageNo);
+                //分页结束1
             } else {
-                $(".red").html(0);
+                //设置总数
+                $(".red").html(returnData.length);
                 $(".prolist-con").html(searchHtml);
             }
+
+            // }
         }
     })
 
@@ -427,7 +430,7 @@ function filterItemOnclick(onclickClass) {
     });
 }
 
-//筛选项灰化
+//筛选项置灰
 function displayFilterItem(filterItemList, currentClass) {
     var itemId = "";
     for (var i = 0; i < filterItemList.length; i++) {
@@ -512,6 +515,8 @@ function isLastFilterItemHead() {
     var filterItemHeadLength = $(".list-select-bgbox").children();
     if (filterItemHeadLength.length <= 0) {
         hideFilterItemHeadShow();
+        //去掉置灰操作
+        isLastFilterItemSelect(".sole-type");
     }
 }
 
