@@ -178,7 +178,7 @@
                 <ul class="o_u o_df_10-12">
                     <trs_viewdatas id="会员等级规则" num="4">
                         <li class=" o_u o_df_3-12 o_xs_6-12 <trs_viewdata field='icon_name'/>">
-                            <span class="iconfont icon-level-solid"></span>
+                            <div class="log"><span></span></div>
                             <div class="o_u o_sm_12-12 o_xs_12-12">
                                 <h5>
                                     <trs_viewdata field='memberdj_name2'/>
