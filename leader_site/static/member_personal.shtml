@@ -68,8 +68,8 @@
                                                     性别
                                                 </div>
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
-                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男" data="1" /></span>
-                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2" /></span>
+                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男"  data="1"></span>
+                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2"></span>
                                                 </div>
 
 
@@ -86,7 +86,7 @@
                                                     <!--<div class="selectbox">-->
                                                     <!--<div class="member-personalinfo-inputbox">-->
                                                     <!--<select name="" id="js_percity"  autotext="月">-->
-                                                    <!--<option value="0">--月--</option>-->
+                                                    <!--<option value="0">&#45;&#45;月&#45;&#45;</option>-->
                                                     <!--</select>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
@@ -96,7 +96,7 @@
                                                     <!--<div class="selectbox">-->
                                                     <!--<div class="member-personalinfo-inputbox">-->
                                                     <!--<select name="" id="js_perarea"  autotext="日">-->
-                                                    <!--<option value="0">--日--</option>-->
+                                                    <!--<option value="0">&#45;&#45;日&#45;&#45;</option>-->
                                                     <!--</select>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
