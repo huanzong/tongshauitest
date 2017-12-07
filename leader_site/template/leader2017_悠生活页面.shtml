@@ -642,7 +642,6 @@
                 $("#lifepic div").eq(0).attr("data-index","1");  //第一个div
                 $("#lifepic div").eq(1).attr("data-index","2");//第二个div
                 $("#lifepic div").eq(2).attr("data-index","3");  //第三个div
-
             })
         </script>
         <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
