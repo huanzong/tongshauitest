@@ -17,6 +17,7 @@ var arrayMetaDataId = new Array();
 
 //总对比按钮
 compareButtonOnclick();
+deleteAllCompareItem();
 
 //添加对比按钮监听事件
 function addCompareOnclick() {
@@ -69,7 +70,6 @@ function initCookie() {
             for (var i = 0; i < proObjList.length; i++) {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
-                //修改对比样式 todo -----------------样式处理------------------------------------------------
                 $("#" + product.id).attr("auto", "1");
                 $("#" + product.id).addClass("uncontrast");
                 $("#" + product.id).find(".pro-read-font").html("已对比");
@@ -114,12 +114,12 @@ function initLoadCookie() {
             $('.js_compareBox').prepend(compareHtml);
             //删除对比选项监听
             deleteCompareItem();
-            deleteAllCompareItem();
+            //deleteAllCompareItem();
         } else {
             hideCompareFlow();
             //删除对比选项监听
             deleteCompareItem();
-            deleteAllCompareItem();
+            //deleteAllCompareItem();
         }
     }
 }
@@ -196,9 +196,9 @@ window.add_compare_flyOut_item = function ($obj) {
         //总对比按钮
         //删除对比选项监听
         deleteCompareItem();
-        deleteAllCompareItem();
+        //deleteAllCompareItem();
         //总对比按钮
-        compareButtonOnclick();
+        //compareButtonOnclick();
         return true;
     }
 }

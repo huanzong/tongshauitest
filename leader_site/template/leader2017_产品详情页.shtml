@@ -133,7 +133,7 @@
                         <!-- 中间 -->
                         <div class="banner-pro">
                             <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img" />
+                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img js_specificsShow" />
                             </TRS_XAPPENDIXS>
                             <div class="banner-pro-oppo o_df-hide o_xs-show">
                                 <!-- <div class="activity-icon active">
@@ -202,20 +202,30 @@
                                 <div class="particulars-btn">
                                     <a href="javascript:;" class="l-btn-normal l-btn-red">加入购物车</a>
                                 </div>
+
                                 <div class="particulars-buy-tit">品牌旗舰店购买：</div>
                                 <div class="particulars-buy-con">
-                                    <div class="particulars-buybox">
+                                    <!--<trs_viewdata field="tmall"/>-->
+                                    <TRS_CONDITION CONDITION="@tmall" OPERATOR="blank" NOT="true">
+                                    <a class="particulars-buybox">
                                         <div class="buy-img tianmao"></div>
                                         <div class="buy-tit">天猫旗舰店</div>
-                                    </div>
-                                    <div class="particulars-buybox">
+                                    </a>
+                                    </TRS_CONDITION>
+                                    <!--<trs_viewdata field="jd"/>-->
+                                    <TRS_CONDITION CONDITION="@jd" OPERATOR="blank" NOT="true">
+                                    <a class="particulars-buybox">
                                         <div class="buy-img jingdong"></div>
                                         <div class="buy-tit">京东旗舰店</div>
-                                    </div>
-                                    <div class="particulars-buybox">
+                                    </a>
+                                    </TRS_CONDITION>
+                                    <!--<trs_viewdata field="suning"/>-->
+                                    <TRS_CONDITION CONDITION="@suning" OPERATOR="blank" NOT="true">
+                                    <a class="particulars-buybox">
                                         <div class="buy-img suning"></div>
                                         <div class="buy-tit">苏宁旗舰店</div>
-                                    </div>
+                                    </a>
+                                    </TRS_CONDITION>
                                 </div>
                             </div>
                         </div>
@@ -1462,7 +1472,11 @@
         if(templet_dsly ==""||templet_dsly ==null){
             $(".js_detail-foldover").hide();//电商拉页隐藏
         }
-        
+        var templet_buy=$(".particulars-buy-con").find("a").lenght;
+        if(templet_buy==""||templet_buy==null){
+            $(".particulars-buy-tit").hide();
+        }
+
 
     </script> 
     <script type="text/javascript" src="../site5/templet_product_detail.js"></script> 

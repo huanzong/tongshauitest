@@ -1073,7 +1073,7 @@
 
 			display: inline-block;
 			padding: 20px 0;
-			// border-top: 1px solid #eee;
+			border-top: 1px solid #eee;
 			a{
 				display: inline-block;
 				border-radius: 8px;
@@ -1105,7 +1105,7 @@
 						border: 2px solid #fff;
 						position: absolute;
 						top: -4px;
-						right: -13px;
+						right: -10px;
 						border-radius: 16px;
 					}
 					@media (min-width: 992px) and (max-width: 1199px) {
@@ -2498,6 +2498,7 @@
 				margin-top: 44px;
 				display: inline-block;
 				border-bottom: 1px solid #eee;
+				padding-bottom: 55px;
 				.member-address-title {
 					width: 100%;
 					text-align: center;
@@ -3139,6 +3140,7 @@
 								padding: 0 15px;
 								text-align: left;
 								color: #ccc;
+								font-size: 14px;
 							}
 							.member-personalinfo-listiptbox {
 								height: 40px;
@@ -3177,10 +3179,16 @@
 								}
 								@media (max-width: 575px) {
 									/* xs*/
-										padding: 0  0 0 15px;
 
 									height: auto;
 									padding: 0;
+
+									.info-address-input{
+										width: 100%;
+										.selectbox{
+											width: 100%;
+										}
+									}
 								}
 
 								.member-personalinfo-allinput {
@@ -3630,7 +3638,7 @@
 	border: 1px solid #eee;
 	box-shadow: 0 0 10px #eee;
 	border-radius: 7px;
-	margin: 35px 0 0 0;
+	margin: 35px 0 0  0;
 
 	.member-order-title {
 		font-size: 12px;
@@ -4097,11 +4105,13 @@
 			color: #333;
 			font-size: 16px;
 			float: left;
+			padding-left: 30px;
 		}
 		a{
 			color: #ccc;
 			font-size: 20px;
 			float: right;
+			padding-right: 20px;
 		}
 	}
 	.table-title{
@@ -4131,7 +4141,7 @@
 		}
 	}
 	.member-home-down-right{
-		text-align: left;
+		text-align: right;
 		.member-home-down-cont{
 			img{
 				width: 180px;
@@ -5117,24 +5127,28 @@
 }
 @media (min-width: 576px) and (max-width: 700px) {
 	/* sm*/
-	.land-shade-md{
-		>.land-box{
-	width: 80%;
-	margin: 10% auto;
-	position: relative;
-
-		}
-}
+//	.land-shade-md{
+//		>.land-box{
+//	width: 80%;
+//	margin: 10% auto;
+//	position: relative;
+//
+//		}
+//}
 }
 @media (max-width: 575px) {
-	/* xs*/	.land-shade-md{
-		>.land-box{
-	width: 80%;
-	margin: 30% auto;
-	position: relative;
-
-		}
+//	/* xs*/	.land-shade-md{
+//		>.land-box{
+//	width: 80%;
+//	margin: 30% auto;
+//	position: relative;
+//
+//		}
+//}
 }
+.Validform_right{
+	font-size: 0px!important;
+	line-height: 0!important;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	/* lg*/

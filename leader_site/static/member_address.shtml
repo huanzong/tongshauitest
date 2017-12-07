@@ -31,14 +31,14 @@
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
                             <!-- 地址管理 START-->
-                            <form action="/user/front/userRegion/save">
+                            <form class="js_memberNewAddress" action="/user/front/userRegion/save">
                                 <div class="member-address js_newAddress js_form_addAddrManagement"  >
                                     <div class="member-address-title js_addressTitle">添加新地址</div>
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressUserName">
-                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入联系人的姓名"  value=""  datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" id="realName"/>
+                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入联系人的姓名"  value=""   maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" id="realName"/>
                                                 <p class="Validform_checktip Validform_wrong js-addressUserError"></p>
                                             </div>
                                         </div>
@@ -49,7 +49,7 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressMobile">
                                                 <form class="ui_validForm js_ui_validForm">
-                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入手机号"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请输入手机号" id="mobile"/>
+                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请输入手机号" id="mobile"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </form>
                                             </div>
@@ -60,18 +60,22 @@
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">电话</div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
-                                                <div class="l-input member-address-inputbox">
-                                                    <input type="text" name="" ph="区号" value="" id="phonequhao">
+                                                <div class="l-input member-address-inputbox js_addressPhoneInput" data-type="1">
+                                                    <input type="text" name="" ph="区号" data-normal="1" value="" datatype="n2-4"  id="phonequhao" ignore="ignore"   maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位的区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
+                                                    <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
-                                                <div class="l-input member-address-inputbox">
-                                                    <input type="text" name="" ph="电话号" value="" id="phone">
+                                                <div class="l-input member-address-inputbox js_addressPhoneInput"  data-type="2">
+                                                    <input type="text" name="" ph="电话号" data-normal="1" value="" id="phone" datatype="n8-8" ignore="ignore"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位的号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
+                                                    <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
+
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2" style='padding-right: 2px'>
-                                                <div class="l-input member-address-inputbox">
-                                                    <input type="text" name="" ph="分机号" value="" id="phonefenjihao">
+                                                <div class="l-input member-address-inputbox js_addressPhoneInput"  data-type="3">
+                                                    <input type="text" name="" ph="分机号" data-normal="1" value="" datatype="n1-8" ignore="ignore" id="phonefenjihao" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
+                                                    <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -131,8 +135,8 @@
                                         <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
                                             <div class="l-textarea member-address-textareabox">
-                                                <textarea class="js_addressDetailedCont js_inputCheck" name="" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
-                                                <p class="Validform_checktip Validform_wrong member-address-error js-addressMobError"></p>
+                                                <textarea  class="js_addressDetailedCont js_inputCheck"  data-normal="1" name="" maxlength="100" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
+                                                <p class="Validform_checktip Validform_wrong   js-addressMobError" style=" line-height: 35px;font-size: 12px;color: #f39800;"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +173,7 @@
 
                                 <div class="member-address-name">王可可</div>
                                  <div class="member-address-mobnumber">155****5555</div>
-                                  <div class="member-address-addtext">山东省青岛市黄岛区长江中路</div>
+                                  <div class="member-address-addtext1">山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路</div>
                                  <div class="member-address-btnbox">
                                      <i class="iconfont icon-pencil-solid"></i>
                                      <a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>
@@ -213,7 +217,7 @@
 <!--#include virtual="public/foot.shtml"-->
 
 <!--弹出层1-->
-<div class="o_g land-shade js_landShade land-shade-md">
+<div class="o_g land-shade js_landShade land-shade-md alert-window-2">
     <div class="land-box js_landContBox">
         <div class="land-cont-title alert-cont-title o_u">
             <a href="" class="o_u iconfont icon-close js_landClose"></a>

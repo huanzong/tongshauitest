@@ -68,8 +68,8 @@
                                                     性别
                                                 </div>
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
-                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男" data="1" /></span>
-                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2" /></span>
+                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男"  data="1"></span>
+                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2"></span>
                                                 </div>
 
 
@@ -80,13 +80,13 @@
                                                 </div>
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g info-date-input" style="text-align: left">
                                                     <div class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
-                                                        <input type="text" name="" class="js_Date o_u personalinfo-date o_df_2-2 l-btn-normal l-btn-line2" data-date="1"> <span class="iconfont icon-events "></span>
+                                                        <input type="text" name="" class="js_Date o_u personalinfo-date o_df_2-2 l-btn-normal l-btn-line2" readonly="readonly"  data-date="1" style="cursor: pointer;"> <span class="iconfont icon-events "></span>
                                                     </div>
                                                     <!--<div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1">-->
                                                     <!--<div class="selectbox">-->
                                                     <!--<div class="member-personalinfo-inputbox">-->
                                                     <!--<select name="" id="js_percity"  autotext="月">-->
-                                                    <!--<option value="0">--月--</option>-->
+                                                    <!--<option value="0">&#45;&#45;月&#45;&#45;</option>-->
                                                     <!--</select>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
@@ -96,17 +96,17 @@
                                                     <!--<div class="selectbox">-->
                                                     <!--<div class="member-personalinfo-inputbox">-->
                                                     <!--<select name="" id="js_perarea"  autotext="日">-->
-                                                    <!--<option value="0">--日--</option>-->
+                                                    <!--<option value="0">&#45;&#45;日&#45;&#45;</option>-->
                                                     <!--</select>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
                                                     <!--</div>-->
                                                 </div>
-                                                <!--           <div class=" js_personalistwrongbox_data personalist-right">
-                                                              <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                              <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
-                                                                  用户名不可为空！</p>
-                                                          </div> -->
+                                      <!--           <div class=" js_personalistwrongbox_data personalist-right">
+                                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
+                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
+                                                        用户名不可为空！</p>
+                                                </div> -->
                                             </div>
 
                                             <div class="o_g member-personalinfo-list member-personalinfo-list-adds">
@@ -143,12 +143,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--                 <div class=" js_personalistwrongbox_address personalist-right">
+                                <!--                 <div class=" js_personalistwrongbox_address personalist-right">
 
-                                                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_address">
-                                                                        用户名不可为空！</p>
-                                                                </div> -->
+                                                    <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
+                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_address">
+                                                        用户名不可为空！</p>
+                                                </div> -->
                                             </div>
 
                                             <div class="o_g member-personalinfo-list">
@@ -186,7 +186,7 @@
                                                         <img src="" alt="" />
                                                     </div>
                                                     <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
-                                                    <p>支持jpg、jpeg、png，大小不超过2M</p>
+                                                    <p>支持JPG、JPEG、PNG，大小不超过2M</p>
                                                 </div>
 
 

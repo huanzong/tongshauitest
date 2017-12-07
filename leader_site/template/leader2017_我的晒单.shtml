@@ -26,7 +26,6 @@
                     <div class="land-shade js_navshade"></div>
 
                     <div class="member-security-width js-securityheight js-myshare">
-
                         <!-- 内容区域 START-->
 
 
@@ -57,7 +56,9 @@
 <script type="text/javascript" src="../site5/member_nav.js"></script>
 <script type="text/javascript" src="../site5/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="../site5/templet_pagination.js"></script>
+<script type="text/javascript" src="../site5/member_myshare.js"></script>
 <script type="text/javascript" src="../site5/templet_member_myshare.js"></script>
 <script type="text/javascript" src="../site5/templet_member_nav.js"></script>
+<script type="text/javascript" src="images/templet_pagination.js"></script>
 </body>
 </html>

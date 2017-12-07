@@ -63,7 +63,13 @@ $(function(){
 
                                             templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
                                             templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
-                                            templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
+
+                                            var templet_ordergoods = data.data[k].goodsPic;
+                                            var templet_docpuburl = data.data[k].proUrl;
+                                            var templet_picUrl=goodsPicCut(templet_docpuburl,templet_ordergoods);
+                                            console.log(templet_picUrl);
+
+                                            templet_addhtml+='<img src="'+templet_picUrl+'" alt=""></div>';
                                             templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
                                             templet_addhtml+='<p>'+data.data[k].goodsName+'</p><span>'+data.data[k].modelNo+'</span> </div>';
                                             templet_addhtml+='<ul>';
@@ -78,7 +84,7 @@ $(function(){
                                             templet_addhtml+=templet_mysharelist[i].content;
                                             templet_addhtml+='</p><ul class="member-myshare-listcont-right-photo o_g">';
                                             for(var j=0;j<templet_mysharelist[i].paths.length;j++){
-                                                templet_addhtml+='<li class="member-share-photo-cur"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
+                                                templet_addhtml+='<li class="member-share-photo-cur js_memberSharePhotoMax"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
                                             }
                                             templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
                                             templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';
@@ -171,7 +177,13 @@ function search(currPageT, pageSize){
                                     if (data.data[k].modelNo == templet_mysharelist[i].businessId) {
                                         templet_addhtml += '<div class="member-myshare-list-cont o_u  o_df_9-10 o_lg_9-10 o_md_9-10 o_sm_9-10 o_xs_9-10">';
                                         templet_addhtml += '<div class=" member-myshare-listcont-left o_u  o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_12-12">';
-                                        templet_addhtml+='<img src="'+data.data[k].goodsPic+'" alt=""></div>';
+
+                                        var templet_ordergoods = data.data[k].goodsPic;
+                                        var templet_docpuburl = data.data[k].proUrl;
+                                        var templet_picUrl=goodsPicCut(templet_docpuburl,templet_ordergoods);
+
+                                        templet_addhtml+='<img src="'+templet_picUrl+'" alt=""></div>';
+
                                         templet_addhtml+='<div class=" member-myshare-listcont-right o_u  o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_12-12"><div class="member-myshare-listcont-righttop"><div>';
                                         templet_addhtml+='<p>'+data.data[k].goodsName+'</p><span>'+data.data[k].modelNo+'</span> </div>';
                                         templet_addhtml+='<ul>';
@@ -186,7 +198,7 @@ function search(currPageT, pageSize){
                                         templet_addhtml+=templet_mysharelist[i].content;
                                         templet_addhtml+='</p><ul class="member-myshare-listcont-right-photo o_g">';
                                         for(var j=0;j<templet_mysharelist[i].paths.length;j++){
-                                            templet_addhtml+='<li class="member-share-photo-cur"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
+                                            templet_addhtml+='<li class="member-share-photo-cur js_memberSharePhotoMax"><img src=http://test.tongshuai.com/tongshuaifile'+templet_mysharelist[i].paths[j]+' alt=""></li> ';
                                         }
                                         templet_addhtml+='</ul><div class="member-myshare-listcont-rightdown"> <div class="member-myshare-data">发表于 <span>'+templet_mysharelist[i].commentTime+'</span></div><span>|</span>';
                                         templet_addhtml+=' <div class="member-myshare-comment" ><i class="iconfont icon-comment-solid"></i><i>评论</i><span>'+templet_mysharelist[i].commentsTotal+'</span></div><span>|</span>';
@@ -209,4 +221,20 @@ function search(currPageT, pageSize){
             }
         }
     });
+}
+
+function goodsPicCut(templet_docpuburl,templet_ordergoods){
+    var templet_semicolon=templet_ordergoods.indexOf(';');
+    if(templet_semicolon>-1){
+        templet_ordergoods=templet_ordergoods.substring(0, templet_semicolon)
+    }
+    templet_semicolon=templet_ordergoods.indexOf('|');
+    if(templet_semicolon>-1){
+        templet_ordergoods=templet_ordergoods.substring(0, templet_semicolon)
+    }
+
+    var templet_location = templet_docpuburl.lastIndexOf("\/");
+    var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_ordergoods;
+
+    return templet_picUrl;
 }

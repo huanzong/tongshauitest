@@ -199,18 +199,18 @@
                                 </div>
                                 <div class="particulars-buy-tit">品牌旗舰店购买:</div>
                                 <div class="particulars-buy-con">
-                                    <div class="particulars-buybox">
+                                    <a class="particulars-buybox">
                                         <div class="buy-img tianmao"></div>
                                         <div class="buy-tit">天猫旗舰店</div>
-                                    </div>
-                                    <div class="particulars-buybox">
+                                    </a>
+                                    <a class="particulars-buybox">
                                         <div class="buy-img jingdong"></div>
                                         <div class="buy-tit">京东旗舰店</div>
-                                    </div>
-                                    <div class="particulars-buybox">
+                                    </a>
+                                    <a class="particulars-buybox">
                                         <div class="buy-img suning"></div>
                                         <div class="buy-tit">苏宁旗舰店</div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1229,8 +1229,7 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landUserId">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
-                                        />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
                                         <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                     </form>
                                 </div>
@@ -1238,8 +1237,7 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPassWord">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
-                                        />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
                                         <p class="Validform_checktip Validform_wrong"></p>
                                     </form>
                                 </div>
@@ -1249,8 +1247,7 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landPhone">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
-                                        />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
                                         <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                     </form>
                                 </div>
@@ -1258,8 +1255,7 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPhoneYanzheng">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
-                                        />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
                                         <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
                                         <p class="Validform_checktip Validform_wrong"></p>
                                     </form>

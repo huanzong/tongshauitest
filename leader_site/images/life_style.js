@@ -1,7 +1,13 @@
 $(function () {
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
-    var navHeight = $('l-opacity0').height();
+
+    if(windowWidth>1199){
+        var navHeight = 120;
+    }else if(windowWidth>700){
+        var navHeight = 100;
+
+    }
     var styleVideoHeight = $('.js_styleVideoCont').height();
     var styleVudeoPading = (windowHeight - navHeight - styleVideoHeight) / 2;
     var lifeCasePhotoH = windowWidth / 3 / 0.75;
@@ -158,11 +164,13 @@ $(function () {
     if (windowWidth > 991) {
         $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
-
+        //$('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+        //$('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
     } else {
-        $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px'})
-        $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px'})
-
+        $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
+        $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
+        $('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+        $('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
     }
     $('.js_lifeStyleCaseText').css({'height': lifeCasePhotoH});
 

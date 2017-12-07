@@ -33,9 +33,9 @@
                         <div class="member_order_title">
                             <ul class="o_u o_df_11-12 member_order_title_cont js_orderList">
                                 <li class="o_u cur"><a href="javascript:;">全部订单</a></li>
-                                <li class="o_u"><a href="javascript:;">待付款</a></li>
-                                <li class="o_u"><a href="javascript:;">待收货<i class="member-nub-round">9</i></a></li>
-                                <li class="o_u"><a href="javascript:;">待评价</a></li>
+                                <li class="o_u"><a href="javascript:;">待付款<i class="js-notPay"></i></a></li>
+                                <li class="o_u"><a href="javascript:;">待收货<i class="js-notReceived"></i></a></li>
+                                <li class="o_u"><a href="javascript:;">待评价<i class="js-evaluate"></i></a></li>
 
                             </ul>
                             <div class="o_u o_df_2-2 oder_shelter_scroll">
@@ -301,6 +301,7 @@
                             <!--</div>-->
                         <!--</div>-->
                         <!-- 内容区域 End-->
+
                     </div>
                 </div>
             </div>
@@ -386,8 +387,9 @@
 <script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
 
 <script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="images/templet_pagination.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
-<script type="text/javascript" src="images/member_order_new.js"></script>
+<!--<script type="text/javascript" src="images/member_order_new.js"></script>-->
 <script type="text/javascript" src="images/templet_member_order_new.js"></script>
 </body>
 </html>

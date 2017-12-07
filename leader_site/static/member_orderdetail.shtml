@@ -52,12 +52,12 @@
 
                                                     <div class="member-orderdetail-status-box">
                                                         <ul class="member-orderdetail-status o_g">
-                                                            <li class="member-orderdetail-status-now o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <li class="member-orderdetail-status-after o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
                                                                 <div class="member-orderdetail-status-strip "></div>
                                                                 <p class="member-orderdetail-status-text">提交订单</p>
                                                                 <div  class="member-orderdetail-status-data">2017-06-14 08:23:42</div>
                                                             </li>
-                                                            <li class="o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
+                                                            <li class=" member-orderdetail-status-now  o_u o_df_1-6 o_lg_1-6 o_md_1-6 o_sm_1-4 o_xs_1-3 ">
                                                                 <div class="member-orderdetail-status-strip "></div>
                                                                 <p class="member-orderdetail-status-text">等待付款</p>
                                                                 <div  class="member-orderdetail-status-data"></div>
@@ -86,7 +86,7 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="o_g member-orderdetail-infobox">
+                                                <div class="o_g member-orderdetail-infobox ">
                                                     <div class="member-orderdetail-infocont o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2" >
                                                         <h4>收货人信息</h4>
                                                         <p><span>姓名：</span><i>某某某</i></p>
