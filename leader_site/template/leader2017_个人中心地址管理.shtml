@@ -27,7 +27,7 @@
                     <div class="member-security-width js-securityheight">
                         <div class="member-security-tit">
                             <p>地址管理</p>
-                            <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn" >新增地址</a>
+                            <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn" style="display: none;">新增地址</a>
                         </div>
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
