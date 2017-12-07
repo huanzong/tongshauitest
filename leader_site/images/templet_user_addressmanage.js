@@ -434,7 +434,7 @@ $(".js_addressSetDefault").live("click",function(){
             },
             error:function(){
                 //删除失败提示****
-                /*globalShade2(responseT.resultMsg,2,2000);*/
+                //globalShade2(responseT.resultMsg,2,2000);
             }
         })
     })
