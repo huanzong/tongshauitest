@@ -180,7 +180,7 @@
 				<div class="recommend-img-small">
 					<!-- <img src="../site5/index_rec_next1.JPG" class="" /> -->
 					<trs_viewdatas id="产品推荐" num="1">
-						<img class="recommend-img-next js_recImgSmall js_recPic" src="" df="<trs_viewdata field='banner'/>" md="<trs_viewdata field='banner'/>" />
+						<img class="recommend-img-next js_recImgSmall js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 					</trs_viewdatas>
 				</div>
 			</div>
@@ -211,7 +211,7 @@
 							<trs_viewdatas id="产品推荐" num="5">
 								<div class="swiper-slide">
 									<a href="<trs_viewdata field='link'/>">
-										<img class="js_recPic" src="" df="<trs_viewdata field='banner'/>" md="<trs_viewdata field='banner'/>" />
+										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 									</a>
 								</div>
 							</trs_viewdatas>
@@ -252,7 +252,7 @@
 										<div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
 											<div class="l-padding">
 												<a href="<trs_viewdata field='link'/>">
-													<img src="<trs_viewdata field='pic1'/>" />
+													<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic1'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 												</a>
 												<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
 													<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true'/></h3>
@@ -280,7 +280,7 @@
 											<div class="l-padding">
 												<div class="o_u entrance-img2">
 													<a href="<trs_viewdata field='link'/>">
-														<img src="<trs_viewdata field='pic2'/>" style="width: 100%" />
+														<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic2'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%" />
 													</a>
 												</div>
 												<br>
@@ -298,7 +298,7 @@
 													</div>
 													<div class="o_u entrance-img3">
 														<a href="<trs_viewdata field='link'/>">
-															<img src="<trs_viewdata field='pic3'/>" style="width: 100%" />
+															<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic3'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%" />
 														</a>
 													</div>
 													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
