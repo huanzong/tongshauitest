@@ -27,9 +27,9 @@ $('.js_searchHistory').bind('input propertychange', function () {
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBoxQuick_lg').show();
-
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        deleteHistory();
     }
 // }).on('blur', function () {
 //     $('.js_searchBox').hide();
@@ -47,6 +47,7 @@ $('.js_searchHistory').bind('input propertychange', function () {
     } else {
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        deleteHistory();
     }
 });
 
@@ -209,7 +210,9 @@ function searchBoxInput(webSize) {
 }
 
 //清空搜索历史
-$(".js_delete_history").on('click', function () {
-    $.cookie('historyCookie', null, {path: '/'});
-    $('.js_searchHistory').focus();
-});
+function deleteHistory() {
+    $(".js_delete_history").off().on('click', function () {
+        $.cookie('historyCookie', null, {path: '/'});
+        $('.js_searchHistory').focus();
+    });
+}
