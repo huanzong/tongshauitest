@@ -35,9 +35,10 @@ $('.js_addressCancel').click(function(){
     $('.js_landClose').click(function(){
         $('.js_landContBox').hide();
         $('.js_landShade').hide();
-        $("body").css({overflow:"auto"});
+       $("body").css({overflow:"auto"});
         return false;
     })
+    globalShade()
 })
 
 
@@ -83,7 +84,14 @@ $('.js_addressSetDefault').click(function(){
 
 $(function(){
     $('.js_inputCheck').focus(function(){
-    $(this).css('border-color','#ccc')
+    $(this).css('border-color','#f39800');
+        $(this).blur(function(){
+            if ($(this).siblings('.Validform_wrong').length!=0){
+                $(this).css('border-color','#f39800');
+            }else{
+                $(this).css('border-color','#ccc');
+            }
+        })
     // alert(1);
     // console.log(1)
 })
@@ -102,10 +110,31 @@ $(function(){
         $('.js_addressTitle').html('修改地址');
         //点击修改按钮时省市区选项变灰色hover后取消的BUG
         $('.lose').css('background-color','#ccc');
-
-
     })
 
             //点击修改按钮屏幕滚到到顶部
             $(window).scrollTop($('.member-security-tit').height())
+
+
+
+
+
+
+
+//该数组获取电话号码 tellArr[0]:区号 tellArr[1]:电话  tellArr[2]:分机号
+    var tellArr = [];
+    //固定电话号码错误显示逻辑
+    $('.js_addressPhoneInput').find('input').blur(function(){
+        var inputVal = $.trim($(this).val());
+        var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
+        if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+           $(this).removeClass('Validform_error');
+            tellArr[nubName-1] = '';
+        }else if($(this).siblings('.Validform_wrong').length!=0){
+            $(this).addClass('Validform_error');
+            tellArr[nubName-1] = '';
+        }else if($(this).siblings('.Validform_right').length!=0){
+            tellArr[nubName-1] = inputVal;
+        }
+    })
 })

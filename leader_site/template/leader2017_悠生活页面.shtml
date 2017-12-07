@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>会员中心</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
-    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+        <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
         <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
         <link rel="stylesheet" type="text/css" href="life_style.css">
         <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
@@ -49,17 +48,17 @@
                     <div class="video-cont-md o_g">
                         <div class="js_lifeStyleVideoSwipe o_u o_df_11-12" style="overflow: hidden;">
                             <ul class="o_u o_df_12-12 swiper-wrapper">
-                                <li class= "o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide" data-index = "1">
-                                    <img src="<trs_viewdata field='picture_left'/>" class="" width="100%" alt="">
+                                <li class= "o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide" data-index = "1" data-gif="">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" width="100%" alt="">
                                 </li>
-                                <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide" data-index = "2">
-                                    <img src="<trs_viewdata field='picture_right'/>" class=""  width="100%" alt="">
+                                <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide" data-index = "2" data-gif="">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class=""  width="100%" alt="">
                                 </li>
                             </ul>
                         </div>
                        
                         <div class=" video-cont-md-imgmin  o_u o_df_1-12 js_videoMdImgMin">
-                            <img src="<trs_viewdata field='picture_left'/>" class="" alt="">
+                            <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" alt="">
 
                             
                         </div>
@@ -69,7 +68,7 @@
                         <img src="images/style_life_title.png" alt="">
                         <p><trs_viewdata field='textdescription'/></p>
                         <div>
-                            我们崇尚时尚、简约、悠闲、舒适的生活方式将简约时尚的自然美学和返璞归真的生活哲学相融合，提出“轻时尚悠生活”的主张希望所有人都可以从生活琐事的束缚中解放，享受生活的惬意
+                            <trs_viewdata field='textdescription'/>
                         </div>
                         <a href="javascript:;" class="js_lifeStylePlay" data-src = "<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png" alt=""></a>
                     </div>
@@ -87,7 +86,7 @@
             <!-- 优生活 start-->
             <div class="life-style-photo-box  ">
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
-                    <div class="photo-list-img-3 js_lifeStylePhotoCentent"></div>
+                    <div class="photo-list-img  js_lifeStylePhotoCentent" ></div>
                     <div class="life-style-photo-cur-text">
                         <img src="images/style_photo_1_text.png" alt="">
                     </div>
@@ -96,30 +95,15 @@
                 <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_8-12  life-style-photo-list-center ">
                     <div class="swiper-container js_lifeStyleGoodLifeSwipe">
                         <div class="swiper-wrapper">
+                            <trs_viewdatas id="悠生活轮播">
                             <div class="swiper-slide">
-                                <div class="photo-list-img-1 js_lifeStylePhotoCentent">1</div>
+                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url('<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>') no-repeat ;"></div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
-                                    <p>111我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
-                                        希望家电这一长久陪伴于你的生活物品，可以与你完美契合，给你悠然惬意的生活</p>
+                                    <p><trs_viewdata field='text_description'/></p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="photo-list-img-2 js_lifeStylePhotoCentent">2</div>
-                                <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
-                                    <img src="images/style_photo_1_text.png" alt="">
-                                    <p>222我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
-                                        希望家电这一长久陪伴于你的生活物品，可以与你完美契合，给你悠然惬意的生活</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="photo-list-img-3 js_lifeStylePhotoCentent">3</div>
-                                <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
-                                    <img src="images/style_photo_1_text.png" alt="">
-                                    <p>333我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
-                                        希望家电这一长久陪伴于你的生活物品，可以与你完美契合，给你悠然惬意的生活</p>
-                                </div>
-                            </div>
+                            </trs_viewdatas>
                         </div>
                     </div>
                 </div>
@@ -130,9 +114,10 @@
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12"></div>
                 <div class="o_u o_df_8-12 o_lg_10-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                     <div class="life-style-photo-cur-text js_lifeStyelGoodLifeDown">
+                        <trs_viewdatas id="悠生活轮播" num="1" startpos="0">
                         <img src="images/style_photo_1_text.png" alt="">
-                        <p class="js_lifeStyelGoodLifeText">111我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
-                            希望家电这一长久陪伴于你的生活物品，可以与你完美契合，给你悠然惬意的生活</p>
+                        <p class="js_lifeStyelGoodLifeText"><trs_viewdata field='text_description'/></p>
+                        </trs_viewdatas>
                     </div>
                 </div>
             </div>
@@ -390,27 +375,22 @@
            
                 <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_8-12 life-style-case-photo ">
                     <div class="js_lifeStyleCasePhoto life-case-photo-swiper" style="overflow: hidden;">
-                        <div class="swiper-wrapper"  >
-                            <div class="swiper-slide" data-index="1">
-                                 <img src="images/life-style-case-photo.png" width="100%" alt="">
-
+                        <div class="swiper-wrapper" id="lifepic" >
+                            <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
+                            <div class="swiper-slide" data-index="">
+                                 <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" width="100%" alt="">
                             </div>
-                            <div class="swiper-slide" data-index="2">
-                                 <img src="images/life-style-case-photo.png" width="100%" alt="">
-                            </div>
-                            <div class="swiper-slide" data-index="3">
-                                 <img src="images/life-style-case-photo.png"  width="100%" alt="">
-                            </div>
+                            </trs_viewdatas>
                         </div>
                     </div>
          
                
                     <!-- <img src="images/life-style-case-photo.png" alt=""> -->
                     <div class="o_u o_df_9-12 life-style-case-photo-min js_casePhotoMinLeft">
-                        <img src="images/life-style-case-photo.png" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="o_u o_df_9-12 case-photo-min-left  js_casePhotoMinRight ">
-                        <img src="images/life-style-case-photo.png" alt="">
+                        <img src="" alt="">
                     </div>
                 </div>
 
@@ -424,30 +404,16 @@
                 </div>
                 <div class="o_u o_df_1-12 o_md_2-12  o_sm_2-12  o_xs_2-12"></div>
                 <ul class="o_u o_df_4-12 o_md_8-12  o_sm_8-12  o_xs_8-12 life-case-text-box js_lifeStyleCaseText">
+                    <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
                     <li class="cur">
                         <img src="images/life-style-case-title.png" alt="">
-                        <div class="life-case-text"> <img src="images/life-style-case-titleleft.png" class="left" alt="">111小巧的外观，干净利落的线条，素素的银灰色显得非常简约，直接摆放在客厅，放水果、饮料、冰淇淋、零食随用随取，不知不觉地让生活多了几分惬意<img src="images/life-style-case-titleright.png" class="right" alt=""></div>
+                        <div class="life-case-text"> <img src="images/life-style-case-titleleft.png" class="left" alt=""><trs_viewdata field='textdescription_right'/><img src="images/life-style-case-titleright.png" class="right" alt=""></div>
                         <div class="life-case-text-down">
-                            <p>大海海帅</p>
-                            <span>统帅单门小冰箱 BC-93LTMPA</span>
+                            <p><trs_viewdata field='prod_txt'/></p>
+                            <span><trs_viewdata field='prod_model'/></span>
                         </div>
                     </li>
-                    <li>
-                        <img src="images/life-style-case-title.png" alt="">
-                        <div class="life-case-text"> <img src="images/life-style-case-titleleft.png" class="left" alt="">222小巧的外观，干净利落的线条，素素的银灰色显得非常简约，直接摆放在客厅，放水果、饮料、冰淇淋、零食随用随取，不知不觉地让生活多了几分惬意<img src="images/life-style-case-titleright.png" class="right" alt=""></div>
-                        <div class="life-case-text-down">
-                            <p>大海海帅</p>
-                            <span>统帅单门小冰箱 BC-93LTMPA</span>
-                        </div>
-                    </li>
-                                        <li>
-                        <img src="images/life-style-case-title.png" alt="">
-                        <div class="life-case-text"> <img src="images/life-style-case-titleleft.png" class="left" alt="">333小巧的外观，干净利落的线条，素素的银灰色显得非常简约，直接摆放在客厅，放水果、饮料、冰淇淋、零食随用随取，不知不觉地让生活多了几分惬意<img src="images/life-style-case-titleright.png" class="right" alt=""></div>
-                        <div class="life-case-text-down">
-                            <p>大海海帅</p>
-                            <span>统帅单门小冰箱 BC-93LTMPA</span>
-                        </div>
-                    </li>
+                    </trs_viewdatas>
                 </ul>
                 <div class="o_u o_df_1-12  o_md_2-12"></div>
             </div>
@@ -671,10 +637,16 @@
             <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
         </div>
         <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-
-        <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#lifepic div").eq(0).attr("data-index","1");  //第一个div
+                $("#lifepic div").eq(1).attr("data-index","2");//第二个div
+                $("#lifepic div").eq(2).attr("data-index","3");  //第三个div
+            })
+        </script>
+        <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
         <script src="http://www.casarte.com/images/mediaelement-and-player.min.js"></script>
-        <script src="images/life_style.js"></script>
+        <script src="life_style.js"></script>
 </body>
 
 </html>

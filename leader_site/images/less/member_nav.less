@@ -477,6 +477,7 @@
   height: 120px;
   background-size: 100% 100%;
   position: relative;
+
   >div{
     color: @l-red;
     font-size: 35px;
@@ -551,11 +552,18 @@
   @media (min-width: 576px) and (max-width: 700px) {
     /* sm*/
     display: block;
+    height: 100px;
+    background: url(member_home_title_min.png) no-repeat left center ;
+    background-size: 100% auto;
     >p{
       padding: 32px 0 0 45px ;
+      font-size: 12px;
+
     }
     >h2{
       padding: 0 0 0 45px;
+      font-size: 20px;
+
     }
     >div{
       right: 15px;
@@ -564,12 +572,19 @@
   }
   @media (max-width: 575px) {
     /* xs*/
+    height: 100px;
+
     display: block;
+    background: url(member_home_title_min.png) no-repeat center center ;
+    background-size: 575px auto;
     >p{
       padding: 32px 0 0 45px ;
+      font-size: 12px;
+
     }
     >h2{
       padding: 0 0 0 45px;
+      font-size: 20px;
     }
     >div{
       display: none;

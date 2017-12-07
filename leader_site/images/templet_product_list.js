@@ -7,7 +7,7 @@
 
 $(function () {
 
-    //筛选项-全部删除
+    //筛选项-全部删除按钮事件
     $('.js_deleteAll').on('click', function () {
         //删除筛选头部选项
         $('.js_filter').empty();
@@ -21,6 +21,8 @@ $(function () {
         searchWord = "";
         order = "";
         isSelectItemStr = "";
+        //最后一个筛选下，去掉置灰
+        isLastFilterItemSelect(".sole-type");
         //重新查询
         search(searchWord, _tableName, _xmlPath, curPage, pageSize, order, isSelectItemStr);
     });
@@ -64,7 +66,7 @@ var currentUrl = window.location.href;
 //xml路径
 var _xmlPath = currentUrl.substring(0, currentUrl.lastIndexOf("/")) + "/" + url;
 
-//pc端读取配置文件
+//读取配置文件
 function readXmlFile(url) {
     var filterItemName = "";
     var filterItemQuery = "";
@@ -428,7 +430,7 @@ function filterItemOnclick(onclickClass) {
     });
 }
 
-//筛选项灰化
+//筛选项置灰
 function displayFilterItem(filterItemList, currentClass) {
     var itemId = "";
     for (var i = 0; i < filterItemList.length; i++) {
@@ -513,6 +515,8 @@ function isLastFilterItemHead() {
     var filterItemHeadLength = $(".list-select-bgbox").children();
     if (filterItemHeadLength.length <= 0) {
         hideFilterItemHeadShow();
+        //去掉置灰操作
+        isLastFilterItemSelect(".sole-type");
     }
 }
 

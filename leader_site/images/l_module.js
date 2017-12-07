@@ -499,6 +499,12 @@ function globalShade(alerttext){
     $('.js_landShade').show();
     $('.js_landContBox').show();
     $("body").css({overflow:"hidden"});
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+    var alertHeight = $('.js_landContBox').height();
+    var alertWidth = $('.js_landContBox').width();
+    $('.js_landContBox').css({'top':(windowHeight-alertHeight)/2+'px','left':(windowWidth-alertWidth)/2+'px'})
+
     $('.js-landText').html(alerttext);
     $('.js_landClose').click(function(){
         $('.js_landContBox').hide();
