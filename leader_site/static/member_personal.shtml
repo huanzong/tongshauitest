@@ -186,7 +186,7 @@
                                                         <img src="" alt="" />
                                                     </div>
                                                     <a href="javascript:;" id="js_imgUpload" class="l-btn-normal l-btn-line1 js_modify">修改头像</a>
-                                                    <p>支持jpg、jpeg、png，大小不超过2M</p>
+                                                    <p>支持JPG、JPEG、PNG，大小不超过2M</p>
                                                 </div>
 
 
