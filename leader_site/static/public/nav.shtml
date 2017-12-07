@@ -39,11 +39,16 @@
 			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory" maxlength="25">
 			<i class="iconfont icon-search"></i>
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
-				<div class="search-quick">快速链接</div>
+				<div class="search-quick">快速链接<a href="javascript:;" class="l-fr">清空历史</a></div>
 				<ul class="search-list">
-					<li><a href="http://www.baidu.com/">我是搜索结果</a></li>
-					<li>我是搜索结果</li>
 					<li><a>我是搜索结果</a></li>
+					<li><a>我是搜索结果</a></li>
+					<li><a>我是搜索结果</a></li>
+				</ul>
+				<ul class="search-list-key">
+					<li><a>我是搜索<span>结果</span></a></li>
+					<li><a>我是搜索<span>结果</span></a></li>
+					<li><a>我是搜索<span>结果</span></a></li>
 				</ul>
 			</div>
 		</div>
