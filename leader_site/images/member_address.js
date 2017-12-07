@@ -63,11 +63,11 @@ $('.js-alertTrue').click(function(){
 
 
 
-//清空数据函数
-function emptyInput(obj){
-    obj.val('');
-    //obj.blur().removeClass('Validform_error').siblings('p').addClass('Validform_right');
-}
+////清空数据函数
+//function emptyInput(obj){
+//    obj.val('');
+//    //obj.blur().removeClass('Validform_error').siblings('p').addClass('Validform_right');
+//}
 
 
 //点击新增地址按钮时 清空输入框内的值
@@ -106,23 +106,23 @@ $(function(){
 
 
 
-
-    // 点击修改和新增按钮标题更换  添加到  getAddressInfo()内
-    $('.js_memberAddressBtn').click(function(){
-        $('.js_addressTitle').html('添加新地址');
-        //点击新增按钮时省市区选项变灰色hover后取消的BUG
-        $('.lose').css('background-color','#ccc');
-    })
-    $('js_amendBtn').click(function(){
-        $('.js_addressTitle').html('修改地址');
-        //点击修改按钮时省市区选项变灰色hover后取消的BUG
-        $('.lose').css('background-color','#ccc');
-    })
-
-            //点击修改按钮屏幕滚到到顶部
-            $(window).scrollTop($('.member-security-tit').height())
-
-
+    //
+    //// 点击修改和新增按钮标题更换  添加到  getAddressInfo()内
+    //$('.js_memberAddressBtn').click(function(){
+    //    $('.js_addressTitle').html('添加新地址');
+    //    //点击新增按钮时省市区选项变灰色hover后取消的BUG
+    //    $('.lose').css('background-color','#ccc');
+    //})
+    //$('js_amendBtn').click(function(){
+    //    $('.js_addressTitle').html('修改地址');
+    //    //点击修改按钮时省市区选项变灰色hover后取消的BUG
+    //    $('.lose').css('background-color','#ccc');
+    //})
+    //
+    //        //点击修改按钮屏幕滚到到顶部
+    //        $(window).scrollTop($('.member-security-tit').height())
+    //
+    //
 
 
 
