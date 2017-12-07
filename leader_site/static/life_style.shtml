@@ -42,6 +42,7 @@
             <!--#include virtual="public/nav.shtml"-->
         <!-- 导航 End-->
         <div class="o_g">
+
             <div class="life-style-video-box js_styleVideoBox">
                 <div class="life-style-video-cont js_styleVideoCont">
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft" data-alt="false">
@@ -80,6 +81,10 @@
                 <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
+
+
+
+
             <!-- 优生活 start-->
             <div class="life-style-photo-box  ">
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
