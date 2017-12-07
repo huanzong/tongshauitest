@@ -434,8 +434,14 @@ img {
         .link{
             display: block;
             float: right;
-            @media (min-width: 992px){
+            padding-top:9px;
+            @media (min-width: 1199px){
+            float:right;
+            padding-top:9px;
+            }
+            @media (min-width: 992px) and (max-width:1199px){
                 float: right;
+                padding-top:16px;
             }
             @media (max-width: 991px){
                 text-align: center;
