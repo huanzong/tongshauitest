@@ -135,7 +135,7 @@ $(function () {
             $('.js_usermsg_xs').hide();
         }
         //搜索历史浮层点击按钮确认
-        if($(e.target).hasClass('js_searchHistory')){
+        if($(e.target).hasClass('js_searchHistory') || $(e.target).hasClass('js_delete_history')){
             return false;
         }
         $('.js_searchBox').hide();
