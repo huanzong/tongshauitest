@@ -1,7 +1,6 @@
 [
-    <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" num="12">
-    <trs_viewdata field="shangshishijian">
-    <TRS_CONDITION REFERENCE="@System.NowDate" CONDITION="@shangshishijian" OPERATOR='>='>
+    <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="8">
+
     {
         "pname":"<TRS_VIEWDATA FIELD="pname" />",
         "modelno":"<TRS_VIEWDATA FIELD="modelno" />",
@@ -10,8 +9,7 @@
         "price":"<TRS_VIEWDATA AUTOFORMATTYPE="HTML" AUTOFORMAT="true" FIELD="price">产品价格</TRS_VIEWDATA>",
         "sku_value":<trs_viewdata field="sku_values"><TRS_CONDITION CONDITION='@sku_values' OPERATOR="blank" not="true"><trs_viewdata field="sku_values"/></TRS_CONDITION><TRS_CONDITION CONDITION='@sku_values' OPERATOR="blank">""</TRS_CONDITION></trs_viewdata>
     }, 
-    </TRS_CONDITION>
-    </trs_viewdata>
+
     </TRS_DOCUMENTS>
                       
     {}  
