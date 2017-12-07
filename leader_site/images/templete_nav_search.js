@@ -51,12 +51,22 @@ $('.js_searchHistory').bind('input propertychange', function () {
 });
 
 $('body').on('click', function (e) {
+    // if($(e.target).hasClass('js_searchHistory')){
+    //     return false;
+    // }
+    // $('.js_searchBox').hide();
+    // $('.js_searchBoxQuick_lg').show();
+    if(!$(e.target).hasClass('js_userMsgXs')){
+        $('.js_usermsg_xs').hide();
+    }
+    //搜索历史浮层点击按钮确认
     if($(e.target).hasClass('js_searchHistory')){
         return false;
     }
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
 });
+
 
 // $(".js_searchHistory").off( "click", "**" );//没有值时，xl搜索栏闪现bug
 
