@@ -1,3 +1,93 @@
+/**
+ * ajax初始化
+ */
+jQuery.ajaxSetup({
+    type: "post",
+    dataType: "json",
+    cache: false,
+    box_obj: null,
+    scroll: null,
+    beforeSend: function(request) {
+        //需要登录校验，且用户未登录
+        if (this.login && !istrsidssdssotoken()) {
+            request.abort();
+            jumpToLoginPage();
+        }
+	
+	    //csrf校验
+        if(this.csrf){
+            var crm = Math.random();
+            //判断语句，用于本地测试，请勿提交测试或生产
+            if(window.location.host.indexOf('localhost')>=0){
+                crm = '123';
+            }
+            // var urlDomain = this.url.
+            $.cookie('crm', crm,{
+                'path':'/',
+                'domain':'.tongshuai.com'
+            });
+            this.url = this.url+'?cch='+crm;
+        }
+	
+        //contentType: "application/json; charset=utf-8",
+        if (this.applicationType){
+            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+        }
+    },
+    success: function(data) {
+        if (data.isSuccess != undefined && istrsidssdssotoken()) {
+            if (!data.isSuccess) {
+
+            }
+        }
+
+        if (this.success_cb) {
+            this.success_cb(data);
+        }
+    },
+    complete:function(XMLHttpRequest, textStatus){
+        //csrf校验-删除cookie
+        if(this.csrf){
+            $.cookie('crm', null,{
+                'path':'/',
+                'domain':'.tongshuai.com'
+            });;
+        }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        if(this.login && jqXHR.status==401){
+            jumpToLoginPage();
+        }
+        if (this.error_cb) {
+            this.error_cb(jqXHR, textStatus, errorThrown);
+        }
+    }
+});
+/**
+ *  公共服务
+ */
+var leaderServer = {
+    //根据ip地址获取用户地址
+    getIpAddress: function(){
+        $.ajax({
+            url:'http://api.map.baidu.com/location/ip?ak=qT3FXMgALhVQia2XiGKhmeAQ',
+            type:'get',
+            success_cb:function(data){
+                if(data.status==0){
+                    return data.content.address;
+                }else{
+                    return false;
+                }
+                
+            },
+            error_cb:function(data){
+                return false;
+            }
+        });
+    }
+};
+
+
 $(function () {
 
     /**
@@ -212,51 +302,7 @@ $(function () {
     userLoginStatus();
 
 });
-/**
- * ajax初始化
- */
-jQuery.ajaxSetup({
-    type: "post",
-    dataType: "json",
-    cache: false,
-    box_obj: null,
-    scroll: null,
-    beforeSend: function(request) {
-        //需要登录校验，且用户未登录
-        if (this.login && !istrsidssdssotoken()) {
-            request.abort();
-        }
-        //csrf校验
-        if(this.csrf){
-            var crm = Math.random();
-            $.cookie('crm', crm);
-            this.url = this.url+'?cch='+crm;
-        }
 
-        //contentType: "application/json; charset=utf-8",
-        if (this.applicationType){
-            console.log('888');
-            request.setRequestHeader("Content-Type", "application/json; charset=utf-8")
-        }
-    },
-    success: function(data) {
-        if (data.isSuccess != undefined && istrsidssdssotoken()) {
-            if (!data.isSuccess) {
-
-            }
-        }
-
-        if (this.success_cb) {
-            this.success_cb(data);
-        }
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-
-        if (this.error_cb) {
-            this.error_cb(jqXHR, textStatus, errorThrown);
-        }
-    }
-});
 
 //加载导航头的登录状态
 function userLoginStatus() {
