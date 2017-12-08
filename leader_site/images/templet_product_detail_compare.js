@@ -88,9 +88,7 @@ function initCookie() {
                 if(pId==curProId){
                     $(".js_compareAddProduct").attr("auto","1");
                     $(".js_compareAddProduct").find("span").html("已对比");//详情页按钮显示已对比
-                }else{
-                    $(".js_compareAddProduct").attr("auto","0");
-                    $(".js_compareAddProduct").find("span").html("对比");//详情页按钮显示已对比
+                    break;
                 }
             }
 
