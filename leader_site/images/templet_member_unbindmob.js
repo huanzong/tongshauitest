@@ -210,7 +210,7 @@ $(function(){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
                             $('.js-memberRevRateLine').css('width','100%');
-                            $('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('.member-revisemob-line-finishpoint');
+                            $('.js-memberRevRateTree').addClass('member-revisemob-No3').children('.member-revisemob-line-point03').children('div').addClass('member-revisemob-line-finishpoint');
 
                             $('.js_validateMob').hide();
                             $('.js-unbingsuccess').show();
