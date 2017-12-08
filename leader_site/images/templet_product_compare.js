@@ -18,11 +18,7 @@ jQuery(function () {
     var cur_compare_pObj_array = [];
     //容器:当前已经比较产品数量
     var $js_compare_pro_total = $("#js_compare_pro_total");
-    //比较容器中的比较单元
-    var $compare_items = $('.productCompareShowDiv .productInfo');
 
-    //比较容器中的比较单元未添加内容
-    var $pre_compare_items = $('.js_compareBoxR .productInfo .isAdd');
     var $btn_reset = $('.compare_clear');//清空所有产品按钮
     var pid_not_in_local_json = [];
     var pro_total = 0;
@@ -172,8 +168,6 @@ jQuery(function () {
                         }
                         ;
                         if (userChannelId == productID) {
-                            //请求第三个json todo 临时写死
-                            //json_url = "http://test.tongshuai.com/cooling/bxcp/201710/t20171011_453.shtml";
                             _load_INIT_pro_data_from_server(json_url);
                             break;
                         }
@@ -293,8 +287,6 @@ jQuery(function () {
             //注册各种按钮事件
             registerOnclickFunction();
             //重新绘制样式
-            //parameterH();
-
             //高亮
             if ($('.compare_choose span span').eq(0).hasClass('c_ipt_cr_cs')) {
                 if (curCompareList.length > 1) {
@@ -382,7 +374,8 @@ jQuery(function () {
                         $this_tr.find(".table_compareBoxR").find("div").addClass('font-orange');
                     }
                     ;//end if
-                });//end $cp_parameter_table_area.find('.js_cptr').each
+                });
+                //end $cp_parameter_table_area.find('.js_cptr').each
             }
             ;//end if
         }
@@ -480,7 +473,8 @@ jQuery(function () {
                 //删除cookie
                 $.cookie('leaderProCookie', null, {path: "/"});
                 $.cookie('leaderProCookie', null);
-            });//end reg reset click
+            });
+            //end reg reset click
 
             //高亮选项
             $('.compare_choose span span').eq(0).on("click", function () {
@@ -493,7 +487,8 @@ jQuery(function () {
                     ;//end if
                 }
                 ;//end if else
-            });//end $btn_highlight.click
+            });
+            //end $btn_highlight.click
 
             //去除重复项选项
             $('.compare_choose span span').eq(1).on("click", function () {
