@@ -33,10 +33,10 @@ $(".js-alertTrue").click(function(){
 });
 $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
     templet_text = '确定取消添加？';
-    resetForm();
     $(".js_btnSubmit").attr("type",1);
     $(".js_form_addAddrManagement").show();
-    $('.lose').css('background-color','#ccc');
+    resetForm();
+    $('.lose').css('background-color','#fff');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
 })
 var templet_pageNo=1;
@@ -374,6 +374,7 @@ function resetForm(){
     $("#phone").blur();
     $("#phonefenjihao").blur();
      $('.js-addressMobError').html(' ');
+    $('.Validform_error').removeClass('Validform_error');
 };
 
 
@@ -488,7 +489,7 @@ var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
-    $('.lose').css('background-color','#ccc');
+    $('.lose').css('background-color','#fff');
     $(window).scrollTop($('.member-security-tit').height())
     $(".js_btnSubmit").attr("type",2);
     saveId=id;
