@@ -244,7 +244,8 @@ jQuery(function () {
             //html+=' <div class="o_u o_df_1-5 productInfo isAdd">';
             $draw_area.attr('data-pid', productID);
             html += ' <div class="compare_goods" isAdd="0">';
-            html += '<a class="iconfont icon-close" href ="' + p_link + '"></a>';
+            //href ="' + p_link + '"
+            html += '<a class="iconfont icon-close" ></a>';
             html += '  <img src="' + p_imgSrc + '">';
             html += ' <span class="goods_name">' + p_title + '</span>';
             html += '  <span class="goods_type">' + p_mold + '</span>';
