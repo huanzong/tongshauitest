@@ -447,210 +447,76 @@
         <div class="life-style-create">
             <div class="life-style-create-cont-box">
                 <div class="o_u o_df_1-12 create-left-btn">
-                    <a href="javascript:;" class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
+                    <a href="javascript:;"
+                       class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
                 </div>
                 <div class="o_u o_df_5-12 o_lg_6-12 o_md_8-12 o_sm_10-12 o_xs_10-12">
                     <div>
-                        <div class="create-title-img " >
-                            <img src="images/life-style-create-cont-title.png" width="100%"  alt="">
+                        <div class="create-title-img ">
+                            <img src="images/life-style-create-cont-title.png" width="100%" alt="">
                         </div>
 
                         <div class="product-list-title">
-                            <span class="o_u o_sm_12-12 o_xs_12-12">系列产品推荐：</span>
-                            <ul class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
-                                <li class="cur o_u o_sm_4-12 o_xs_4-12">至享系列</li>
-                                <li class="o_u o_sm_4-12 o_xs_4-12">至美系列</li>
-                                <li class="o_u o_sm_4-12 o_xs_4-12">至尚系列</li>
+                            <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐' AUTOLINK="false"/>：</span>
+                            <ul id="series_name" class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
+                                <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
+                                    <li class="o_u o_sm_4-12 o_xs_4-12">
+                                        <trs_viewdata field='series_title'/>
+                                    </li>
+                                </trs_viewdatas>
                             </ul>
                         </div>
-                        <div class="product-list-cont">
-                            <p class="js_lifeStyleCreateTitle">111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-                            <p class="js_lifeStyleCreateTitle" style="display: none;">222简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-                            <p class="js_lifeStyleCreateTitle" style="display: none;">333简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
+                        <div id="series_txt" class="product-list-cont">
+                            <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
+                                <p class="js_lifeStyleCreateTitle">
+                                    <trs_viewdata field='series_txt'/>
+                                </p>
 
-
-                            <!-- 至尊系列轮播 start -->
-                            <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
+                                <!-- 产品推荐轮播 start -->
+                                <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_12-12 swiper-slide">
+                                            <trs_viewdata field='prod_content1'/>
+                                            <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">
+                                            <div class="o_u o_df_6-12">
+                                                <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
+                                                    <p><trs_viewdata field='xmjg'/></p>
+                                                    <p><trs_viewdata field='cpms'/></p>
+                                                    <span><trs_viewdata field='modelno'/></span>
+                                                    <i>¥<trs_viewdata field='price'/></i>
+                                                </div>
                                             </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                <p>双开门11</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                                <p>双开门11</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                <p>双开门22</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                                <p>双开门222</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <!-- 至尊系列轮播 end -->
-
-
-                            <!-- 至美系列轮播 start -->
-                            <div class="js_lifeStyleCreateSwipe_2 js_lifeStyleCreateSwipe" >
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                <p>双开门333</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                                <p>双开门333</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                <p>双开门444</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                                <p>双开门444</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <!-- 至美系列轮播 end -->
-
-
-
-                            <!-- 至尚系列轮播 start -->
-                            <div class="js_lifeStyleCreateSwipe_3 js_lifeStyleCreateSwipe" >
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                <p>双开门555</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                                <p>双开门555</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                <p>双开门666</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12">
-                                            <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                <img src="images/detail_prd01.png" alt="">
-                                            </div>
-                                            <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                                <p>双开门666</p>
-                                                <p>大容量静音节能冰箱</p>
-                                                <span>BCD-455WLDPC</span>
-                                                <i>¥1799</i>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <!-- 至尚系列轮播 end -->
+                                            </TRS_RELNEWS>
+                                        </li>
+                                        <li class="o_u o_df_12-12 swiper-slide">
+                                            <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="2">
+                                                <div class="o_u o_df_6-12">
+                                                    <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
+                                                        <img src="images/detail_prd01.png" alt="">
+                                                    </div>
+                                                    <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
+                                                        <p><trs_viewdata field='xmjg'/></p>
+                                                        <p><trs_viewdata field='cpms'/></p>
+                                                        <span><trs_viewdata field='modelno'/></span>
+                                                        <i>¥<trs_viewdata field='price'/></i>
+                                                    </div>
+                                                </div>
+                                            </TRS_RELNEWS>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </trs_viewdatas>
+                            <!-- 产品推荐轮播 end -->
 
                         </div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12 create-right-btn">
-                    <a href="javascript:;" class="iconfont js_lifeStyleCreateRightBtn icon-arrow-jiantou-right life-style-create-btn"></a>
+                    <a href="javascript:;"
+                       class="iconfont js_lifeStyleCreateRightBtn icon-arrow-jiantou-right life-style-create-btn"></a>
                 </div>
             </div>
             <div class="o_u o_df_5-12 o_sm_12-12 o_xs_12-12 create-bottom-img">
@@ -658,90 +524,6 @@
             </div>
 
         </div>
-
-
-
-
-        <!--<div class="life-style-create">-->
-            <!--<div class="life-style-create-cont-box">-->
-                <!--<div class="o_u o_df_1-12 create-left-btn">-->
-                    <!--<a href="javascript:;"-->
-                       <!--class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>-->
-                <!--</div>-->
-                <!--<div class="o_u o_df_5-12 o_lg_6-12 o_md_8-12 o_sm_10-12 o_xs_10-12">-->
-                    <!--<div>-->
-                        <!--<div class="create-title-img ">-->
-                            <!--<img src="images/life-style-create-cont-title.png" width="100%" alt="">-->
-                        <!--</div>-->
-
-                        <!--<div class="product-list-title">-->
-                            <!--<span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐' AUTOLINK="false"/>：</span>-->
-                            <!--<ul id="series_name" class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">-->
-                                <!--<trs_viewdatas id="系列产品推荐" num="3" startpos="0">-->
-                                    <!--<li class="o_u o_sm_4-12 o_xs_4-12">-->
-                                        <!--<trs_viewdata field='series_title'/>-->
-                                    <!--</li>-->
-                                <!--</trs_viewdatas>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                        <!--<div id="series_txt" class="product-list-cont">-->
-                            <!--<trs_viewdatas id="系列产品推荐" num="3" startpos="0">-->
-                                <!--<p class="js_lifeStyleCreateTitle">-->
-                                    <!--<trs_viewdata field='series_txt'/>-->
-                                <!--</p>-->
-
-                                <!--&lt;!&ndash; 产品推荐轮播 start &ndash;&gt;-->
-                                <!--<div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">-->
-                                    <!--<ul class="swiper-wrapper">-->
-                                        <!--<li class="o_u o_df_12-12 swiper-slide">-->
-                                            <!--<trs_viewdata field='prod_content1'/>-->
-                                            <!--<TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">-->
-                                            <!--<div class="o_u o_df_6-12">-->
-                                                <!--<div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">-->
-                                                    <!--<img src="images/detail_prd01.png" alt="">-->
-                                                <!--</div>-->
-                                                <!--<div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">-->
-                                                    <!--<p><trs_viewdata field='xmjg'/></p>-->
-                                                    <!--<p><trs_viewdata field='cpms'/></p>-->
-                                                    <!--<span><trs_viewdata field='modelno'/></span>-->
-                                                    <!--<i>¥<trs_viewdata field='price'/></i>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--</TRS_RELNEWS>-->
-                                        <!--</li>-->
-                                        <!--<li class="o_u o_df_12-12 swiper-slide">-->
-                                            <!--<TRS_RELNEWS id="prod_content1" num="2" STARTPOS="2">-->
-                                                <!--<div class="o_u o_df_6-12">-->
-                                                    <!--<div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">-->
-                                                        <!--<img src="images/detail_prd01.png" alt="">-->
-                                                    <!--</div>-->
-                                                    <!--<div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">-->
-                                                        <!--<p><trs_viewdata field='xmjg'/></p>-->
-                                                        <!--<p><trs_viewdata field='cpms'/></p>-->
-                                                        <!--<span><trs_viewdata field='modelno'/></span>-->
-                                                        <!--<i>¥<trs_viewdata field='price'/></i>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</TRS_RELNEWS>-->
-                                        <!--</li>-->
-                                    <!--</ul>-->
-                                <!--</div>-->
-                            <!--</trs_viewdatas>-->
-                            <!--&lt;!&ndash; 产品推荐轮播 end &ndash;&gt;-->
-
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="o_u o_df_1-12 create-right-btn">-->
-                    <!--<a href="javascript:;"-->
-                       <!--class="iconfont js_lifeStyleCreateRightBtn icon-arrow-jiantou-right life-style-create-btn"></a>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="o_u o_df_5-12 o_sm_12-12 o_xs_12-12 create-bottom-img">-->
-                <!--<img src="images/create-bottom-img.jpg" width="100%" alt="">-->
-            <!--</div>-->
-
-        <!--</div>-->
         <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
     </div>
     <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
