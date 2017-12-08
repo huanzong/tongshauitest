@@ -36,7 +36,7 @@
                                         <div class="member-security-safeline"><i id="js-slip"></i><!--危险用 peril, 普通用 plain, 良好用fine, 优秀用excellent--></div>
                                         <div id="js-securitysetting"></div><!--危险用 member-security-safeperiltext, 普通用 member-security-safeplaintext, 良好用 member-security-safefinetext, 优秀用 member-security-safeexcellenttext-->
                                     </div>
-                                    <div class="o_u o_df_6-12 o_lg_8-12 o_md_8-12 o_sm_12-12 o_xs_12-12 member-security-safeinfo"><span id="js-lastlogindate"></span>    <span>如不是本人登录，请立即  <a href="/security/resetpassword_103.shtml">修改密码</a></span></div>
+                                    <div class="o_u o_df_6-12 o_lg_8-12 o_md_8-12 o_sm_12-12 o_xs_12-12 member-security-safeinfo"><span id="js-lastlogindate"></span>    <span>如不是本人登录，请立即  <a href="/security/resetpassword.shtml">修改密码</a></span></div>
                                 </div>
                                 <!-- 安全栏 End-->
                                 <ul class="member-security-functionbox">
