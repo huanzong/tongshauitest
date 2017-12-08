@@ -493,12 +493,12 @@ $(function () {
 
     $('.js_lifeStyleCaseLeftBtn').on('click', function (e) {
         e.preventDefault();
-        caseSwiper.swipeNext()
+        caseSwiper.swipeNext();
     })
     $('.js_lifeStyleCaseRightBtn').on('click', function (e) {
 
         e.preventDefault();
-        caseSwiper.swipePrev()
+        caseSwiper.swipePrev();
     })
 
 
@@ -538,17 +538,17 @@ $(function () {
 
     $('.js_lifeStyleCreateLeftBtn').on('click', function (e) {
         e.preventDefault();
-        CreateSwipe_1.swipeNext()
-        CreateSwipe_2.swipeNext()
-        CreateSwipe_3.swipeNext()
+        CreateSwipe_1.swipeNext();
+        CreateSwipe_2.swipeNext();
+        CreateSwipe_3.swipeNext();
     })
 
     $('.js_lifeStyleCreateRightBtn').on('click', function (e) {
 
         e.preventDefault();
-        CreateSwipe_1.swipePrev()
-        CreateSwipe_2.swipePrev()
-        CreateSwipe_3.swipePrev()
+        CreateSwipe_1.swipePrev();
+        CreateSwipe_2.swipePrev();
+        CreateSwipe_3.swipePrev();
     })
 
 
