@@ -491,6 +491,7 @@ function deleteAllCompareItem() {
             $(".js_compareAddProduct").find("span").html("对比");
         });
         $.cookie('leaderProCookie', null, {path: '/'});
+        proObjList = [];
     });
 }
 
