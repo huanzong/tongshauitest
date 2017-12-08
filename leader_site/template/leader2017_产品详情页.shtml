@@ -407,7 +407,7 @@
                     <div class="o_u o_df_10-12">
                         <div class="o_u o_df_2-2 detail-fontpoint">
                             <div class="o_u o_df_1-12"></div>
-                            <div class="o_u o_df_10-12">
+                            <div class="o_u o_df_10-12 o_df-center">
                                 <!--冰箱-->
                                 <TRS_CONDITION REFERENCE='冰箱产品' CONDITION='@parent.chnldesc' OPERATOR="contain">
                                 <div class="o_u o_df_1-5">

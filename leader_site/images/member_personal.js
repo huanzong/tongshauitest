@@ -218,7 +218,7 @@ $.jUploader({
         } else {
 //      上传头像失败出现弹窗
 //            alert(111);
-            globalShade2(data.resultMsg,2);
+            globalShade2('图片上传失败，请稍后再试',2);
         }
 
     },

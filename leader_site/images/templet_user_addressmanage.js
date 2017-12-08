@@ -35,6 +35,7 @@ $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地
     templet_text = '确定取消添加？';
     resetForm();
     $(".js_btnSubmit").attr("type",1);
+    $('.lose').css('background-color','#ccc');
     $(".js_form_addAddrManagement").show();
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
 })
@@ -256,9 +257,12 @@ function saveUserAddress(){
 }
 
 //校验表单验证，成功后保存地址
-$(".js_form_addAddrManagement").Validform({
+var address=$(".js_form_addAddrManagement").Validform({
     tiptype:3,
     btnSubmit:".js_btnSubmit",//提交按钮
+    showAllError:false,
+    ignoreHidden:false,
+    dragonfly:false,
     callback:function(form){//验证后保存地址
         var templet_type=$(".js_btnSubmit").attr("type");//判断保存和修改
         if(templet_type==1){
@@ -270,6 +274,9 @@ $(".js_form_addAddrManagement").Validform({
     }
 });
 
+$(function(){
+    address.ignore('#phonequhao,#phone,#phonefenjihao');
+})
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
@@ -364,6 +371,7 @@ function resetForm(){
     $("#phonequhao").blur();
     $("#phone").blur();
     $("#phonefenjihao").blur();
+     $('.js-addressMobError').html(' ');
 };
 
 

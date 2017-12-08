@@ -14,9 +14,12 @@
 var address=$(".js_memberNewAddress" ).Validform({
     tiptype:3,
     label:".label",
-    showAllError:true,
-    ajaxPost:true,
-    //btnSubmit:'.',
+    showAllError:false,
+    //showAllError:true
+    ignoreHidden:false,
+    dragonfly:false,
+    //ajaxPost:true,
+    btnSubmit:'.js_btnSubmit',
     //btnReset:'.js_addressGetUpData',
     //btnReset:'.js_memberAddressBtn',
     callback:function(from){
@@ -24,22 +27,28 @@ var address=$(".js_memberNewAddress" ).Validform({
         return false;
     }
 });
-//$('.js_memberAddressBtn').click(function(){
-//    address.resetForm()
-//})
-////点击取消按钮
-//$('.js_addressCancel').click(function(){
-//    $('.js_landShade').show();
-//    $('.js_landContBox').show();
-//    $("body").css({overflow:"hidden"});
-//    $('.js_landClose').click(function(){
-//        $('.js_landContBox').hide();
-//        $('.js_landShade').hide();
-//       $("body").css({overflow:"auto"});
-//        return false;
-//    })
-//    //globalShade()
-//})
+$(function(){
+    address.ignore('#phonequhao,#phone,#phonefenjihao');
+
+})
+
+
+$('.js_memberAddressBtn').click(function(){
+    address.resetForm()
+})
+//点击取消按钮
+$('.js_addressCancel').click(function(){
+    $('.js_landShade').show();
+    $('.js_landContBox').show();
+    $("body").css({overflow:"hidden"});
+    $('.js_landClose').click(function(){
+        $('.js_landContBox').hide();
+        $('.js_landShade').hide();
+       $("body").css({overflow:"auto"});
+        return false;
+    })
+    globalShade()
+})
 
 
 //点击弹窗的确认与取消按钮
@@ -57,7 +66,7 @@ $('.js-alertTrue').click(function(){
 ////清空数据函数
 //function emptyInput(obj){
 //    obj.val('');
-//    obj.blur().removeClass('Validform_error').siblings('p').addClass('Validform_right');
+//    //obj.blur().removeClass('Validform_error').siblings('p').addClass('Validform_right');
 //}
 
 
@@ -97,14 +106,14 @@ $(function(){
 
 
 
-
-    // 点击修改和新增按钮标题更换  添加到  getAddressInfo()内
+    //
+    //// 点击修改和新增按钮标题更换  添加到  getAddressInfo()内
     //$('.js_memberAddressBtn').click(function(){
     //    $('.js_addressTitle').html('添加新地址');
     //    //点击新增按钮时省市区选项变灰色hover后取消的BUG
     //    $('.lose').css('background-color','#ccc');
     //})
-    //$('.js_amendBtn').click(function(){
+    //$('js_amendBtn').click(function(){
     //    $('.js_addressTitle').html('修改地址');
     //    //点击修改按钮时省市区选项变灰色hover后取消的BUG
     //    $('.lose').css('background-color','#ccc');
@@ -112,8 +121,8 @@ $(function(){
     //
     //        //点击修改按钮屏幕滚到到顶部
     //        $(window).scrollTop($('.member-security-tit').height())
-
-
+    //
+    //
 
 
 
