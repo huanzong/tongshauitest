@@ -472,7 +472,7 @@
                                 </p>
 
                                 <!-- 产品推荐轮播 start -->
-                                <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
+                                <div class="js_lifeStyleCreateSwipe lbindex">
                                     <ul class="swiper-wrapper">
                                         <li class="o_u o_df_12-12 swiper-slide">
                                             <trs_viewdata field='prod_content1'/>
@@ -536,6 +536,10 @@
             $("#series_name li").eq(0).addClass("cur");  //系列产品推荐中系列列表第一个li
             $("#series_txt p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
             $("#series_txt p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
+
+            $(".lbindex").eq(0).addClass("js_lifeStyleCreateSwipe_1");
+            $(".lbindex").eq(1).addClass("js_lifeStyleCreateSwipe_2");
+            $(".lbindex").eq(2).addClass("js_lifeStyleCreateSwipe_3");
         })
     </script>
     <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
