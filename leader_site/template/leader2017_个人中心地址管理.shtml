@@ -32,15 +32,15 @@
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
                             <!-- 地址管理 START-->
-                            <form class="js_memberNewAddress"  action="/user/front/userRegion/save">
-                                <div class="member-address js_newAddress js_form_addAddrManagement" style="display: none;">
+                            <form class="js_form_addAddrManagement"  action="/user/front/userRegion/save" style="display: none">
+                                <div class="member-address js_newAddress ">
                                     <div class="member-address-title js_addressTitle">添加新地址</div>
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressUserName">
                                                 <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入联系人的姓名"  value=""   maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" id="realName"/>
-                                                <p class="Validform_checktip Validform_wrong js-addressUserError"></p>
+                                                <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                             </div>
                                         </div>
                                     </div>

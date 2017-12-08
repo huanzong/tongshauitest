@@ -349,7 +349,7 @@
 									  ¥<span><trs_viewdata field="price"/></span>
 									</div>
 									<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-									<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+									<!--<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>-->
 								</a>
 								<!--活动暂时隐藏-->
 								<!-- <div class="pro-activity">

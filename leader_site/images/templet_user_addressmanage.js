@@ -33,9 +33,10 @@ $(".js-alertTrue").click(function(){
 });
 $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
     templet_text = '确定取消添加？';
-    resetForm();
     $(".js_btnSubmit").attr("type",1);
     $(".js_form_addAddrManagement").show();
+    resetForm();
+    $('.lose').css('background-color','#fff');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
 })
 var templet_pageNo=1;
@@ -239,7 +240,7 @@ function saveUserAddress(){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
                 resetForm();//重置表单
-                $(".js_newAddress").hide();
+                $(".js_form_addAddrManagement").hide();
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2("添加地址失败，请稍后重试...",2,2000);
@@ -247,6 +248,7 @@ function saveUserAddress(){
             templet_isSubmiting=false;
         },
         error_cb:function(responseT){
+            var responseT = JSON.parse(responseT.responseText); //由JSON字符串转换为JSON对象
             globalShade2(responseT.resultMsg,2,2000);
             templet_isSubmiting=false;
         }
@@ -255,9 +257,12 @@ function saveUserAddress(){
 }
 
 //校验表单验证，成功后保存地址
-$(".js_form_addAddrManagement").Validform({
+var address=$(".js_form_addAddrManagement").Validform({
     tiptype:3,
     btnSubmit:".js_btnSubmit",//提交按钮
+    showAllError:false,
+    ignoreHidden:false,
+    dragonfly:false,
     callback:function(form){//验证后保存地址
         var templet_type=$(".js_btnSubmit").attr("type");//判断保存和修改
         if(templet_type==1){
@@ -269,6 +274,9 @@ $(".js_form_addAddrManagement").Validform({
     }
 });
 
+$(function(){
+    address.ignore('#phonequhao,#phone,#phonefenjihao');
+})
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
@@ -359,10 +367,14 @@ function resetForm(){
     templet_select_shi.lose();
     templet_select_qu.lose();
     templet_select_road.lose();
+    $("#realName").blur();
+    $("#mobile").blur();
     $("#address").blur();
     $("#phonequhao").blur();
     $("#phone").blur();
     $("#phonefenjihao").blur();
+     $('.js-addressMobError').html(' ');
+    $('.Validform_error').removeClass('Validform_error');
 };
 
 
@@ -434,7 +446,7 @@ $(".js_addressSetDefault").live("click",function(){
             },
             error:function(){
                 //删除失败提示****
-                /*globalShade2(responseT.resultMsg,2,2000);*/
+                //globalShade2(responseT.resultMsg,2,2000);
             }
         })
     })
@@ -477,7 +489,7 @@ var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
-    $('.lose').css('background-color','#ccc');
+    $('.lose').css('background-color','#fff');
     $(window).scrollTop($('.member-security-tit').height())
     $(".js_btnSubmit").attr("type",2);
     saveId=id;
