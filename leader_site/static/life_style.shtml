@@ -45,7 +45,7 @@
             <div class="life-style-video-box js_styleVideoBox">
                 <div class="life-style-video-cont js_styleVideoCont">
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft" data-alt="false">
-                        <!-- <img src="" alt=""> --></a>
+                        <img src="images/style_life_video_left.png" alt=""></a>
                     <div class="video-cont-md o_g">
                         <div class="js_lifeStyleVideoSwipe o_u o_df_11-12" style="overflow: hidden;">
                             <ul class="o_u o_df_12-12 swiper-wrapper">
@@ -73,7 +73,7 @@
                         </div>
                         <a href="javascript:;" class="js_lifeStylePlay" data-src = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"><img src="images/style_life_play.png" alt=""></a>
                     </div>
-                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"></a>
+                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"><img src="images/style_life_video_right.png" alt=""></a>
                 </div>
             </div>
             <div class="life-style-player js_playerBox">
