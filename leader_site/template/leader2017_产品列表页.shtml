@@ -152,7 +152,7 @@
 							</TRS_CHANNELS>
 							</TRS_CONDITION>
 						</div>
-						<a class="more js_listNavShowMore" data-flag=0>
+						<a class="more js_listNavShowMore js_listMobileNavhide" data-flag=0>
 							<span class="o_df-hide o_xs-show">展开筛选项</span><span class="o_xs-hide">展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
 						</a>
 					</div>

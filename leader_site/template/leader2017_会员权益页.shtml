@@ -86,7 +86,7 @@
             <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
             <div class="member-center-box o_u o_df_8-12 o_lg_10-12 o_md_11-12 o_sm_11-12 o_xs_12-12">
                 <div class="member-center-title">
-                    <trs_channel id='了解会员权益'/>
+                    <trs_channel id='了解会员权益' AUTOLINK="false"/>
                 </div>
                 <div class="o_u o_df_6-12 o_xs_10-12  member-center-boxleft js_centerBoxLeft">
                     <trs_viewdatas id="了解会员权益" num="1" startpos="0">
@@ -129,7 +129,7 @@
                     <div class="member-center-title">
                         <h3>LEADER</h3>
                         <p>
-                            <trs_channel id='了解会员权益'/>
+                            <trs_channel id='了解会员权益' AUTOLINK="false"/>
                         </p>
                     </div>
                     <trs_viewdatas id="了解会员权益" num="1" startpos="2">
@@ -173,7 +173,7 @@
         <div class="memeber-bottom o_g">
             <div class="o_u o_df_11-12">
                 <h3>
-                    <trs_channel id='会员等级规则'/>
+                    <trs_channel id='会员等级规则' AUTOLINK="false"/>
                 </h3>
                 <ul class="o_u o_df_10-12">
                     <trs_viewdatas id="会员等级规则" num="4">

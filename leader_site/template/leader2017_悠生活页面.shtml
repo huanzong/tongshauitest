@@ -4,156 +4,222 @@
 <head>
     <meta charset="UTF-8">
     <title>会员中心</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-        <meta name="format-detection" content="telephone=no, email=no" />
-        <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
-        <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
-        <link rel="stylesheet" type="text/css" href="life_style.css">
-        <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="life_style.css">
+    <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
 </head>
 
 <body class=" ">
-    <div class="o_main">
-                <!-- 首屏动画 -->
-            <div class="o_g js_animateLine">
-                <div class="index_animate">
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox"></div>
-                </div>
+<div class="o_main">
+    <!-- 首屏动画 -->
+    <div class="o_g js_animateLine">
+        <div class="index_animate">
+            <div class="index_animateBox">
+                <span></span>
             </div>
-        <!-- 首屏动画 END -->
-        <!-- 导航 -->
-        <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-        <!-- 导航 End-->
-        <div class="o_g">
-            <trs_viewdatas id="悠生活banner" num="1" startpos="0">
+            <div class="index_animateBox">
+                <span></span>
+            </div>
+            <div class="index_animateBox">
+                <span></span>
+            </div>
+            <div class="index_animateBox">
+                <span></span>
+            </div>
+            <div class="index_animateBox">
+                <span></span>
+            </div>
+            <div class="index_animateBox"></div>
+        </div>
+    </div>
+    <!-- 首屏动画 END -->
+    <!-- 导航 -->
+    <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+    <!-- 导航 End-->
+    <div class="o_g">
+        <trs_viewdatas id="悠生活banner" num="1" startpos="0">
             <div class="life-style-video-box js_styleVideoBox">
                 <div class="life-style-video-cont js_styleVideoCont">
-                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft" data-alt="false">
-                        <!-- <img src="" alt=""> --></a>
+                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft"
+                       data-alt="false">
+                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                             alt=""></a>
                     <div class="video-cont-md o_g">
                         <div class="js_lifeStyleVideoSwipe o_u o_df_11-12" style="overflow: hidden;">
                             <ul class="o_u o_df_12-12 swiper-wrapper">
-                                <li class= "o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide" data-index = "1" data-gif="">
-                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" width="100%" alt="">
+                                <li class="o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide"
+                                    data-index="1" data-gif="">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                                         class="" width="100%" alt="">
                                 </li>
-                                <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide" data-index = "2" data-gif="">
-                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class=""  width="100%" alt="">
+                                <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide"
+                                    data-index="2" data-gif="">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                                         class="" width="100%" alt="">
                                 </li>
                             </ul>
                         </div>
-                       
                         <div class=" video-cont-md-imgmin  o_u o_df_1-12 js_videoMdImgMin">
-                            <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" alt="">
+                            <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                                 class="" alt="">
 
-                            
+
                         </div>
                     </div>
-          
+
                     <div class="o_u o_df_6-12 o_lg_8-12  o_md_12-12 o_sm_12-12 o_xs_12-12 video-cont-center">
-                        <img src="style_life_title.png" alt="">
-                        <p><trs_viewdata field='textdescription'/></p>
+                        <img src="images/style_life_title.png" alt="">
+                        <p>
+                            <trs_viewdata field='textdescription'/>
+                        </p>
                         <div>
                             <trs_viewdata field='textdescription'/>
                         </div>
-                        <a href="javascript:;" class="js_lifeStylePlay" data-src = "<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png" alt=""></a>
+                        <a href="javascript:;" class="js_lifeStylePlay"
+                           data-src="<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png"
+                                                                              alt=""></a>
                     </div>
-                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"></a>
+                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight"
+                       data-alt="false">
+                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                             alt=""></a>
                 </div>
             </div>
             <div class="life-style-player js_playerBox">
-                <video  id="player" class="o_df-hide js_jchg_video player" src="<trs_viewdata field='link_video'/>" type="video/mp4" controls preload="auto"></video>
+                <video id="player" class="o_df-hide js_jchg_video player" src="<trs_viewdata field='link_video'/>"
+                       type="video/mp4" controls preload="auto"></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
-            </trs_viewdatas>
+        </trs_viewdatas>
 
 
-
-            <!-- 优生活 start-->
-            <div class="life-style-photo-box  ">
-                <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
-                    <div class="photo-list-img  js_lifeStylePhotoCentent" ></div>
-                    <div class="life-style-photo-cur-text">
-                        <img src="style_photo_1_text.png" alt="">
-                    </div>
+        <!-- 优生活 start-->
+        <div class="life-style-photo-box  ">
+            <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
+                <div class="photo-list-img  js_lifeStylePhotoCentent"></div>
+                <div class="life-style-photo-cur-text">
+                    <img src="images/style_photo_1_text.png" alt="">
                 </div>
-                <a href="javascript:;" class="o_u iconfont icon-arrow-jiantou-left js_photoLeftBtn o_df_1-12"></a>
-                <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_8-12  life-style-photo-list-center ">
-                    <div class="swiper-container js_lifeStyleGoodLifeSwipe">
-                        <div class="swiper-wrapper">
-                            <trs_viewdatas id="悠生活轮播">
+            </div>
+            <a href="javascript:;" class="o_u iconfont icon-arrow-jiantou-left js_photoLeftBtn o_df_1-12"></a>
+            <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_8-12  life-style-photo-list-center ">
+                <div class="swiper-container js_lifeStyleGoodLifeSwipe">
+                    <div class="swiper-wrapper">
+                        <trs_viewdatas id="悠生活轮播">
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url('<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>') no-repeat ;"></div>
+                                <div class="photo-list-img js_lifeStylePhotoCentent"
+                                     style=" background: url('<TRS_VIEWDATAAPPENDIXS FIELD='picture_lb'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>') no-repeat ;"></div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
-                                    <img src="style_photo_1_text.png" alt="">
-                                    <p><trs_viewdata field='text_description'/></p>
+                                    <img src="images/style_photo_1_text.png" alt="">
+                                    <p>
+                                        <trs_viewdata field='text_description'/>
+                                    </p>
                                 </div>
                             </div>
-                            </trs_viewdatas>
-                        </div>
-                    </div>
-                </div>
-                <a href="javascript:;" class="o_u o_df_1-12 iconfont icon-arrow-jiantou-right js_photoRightBtn"></a>
-                <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12  life-style-photo-list-right js_lifeStylePhotoRight">
-                    <div class="photo-list-img-2 js_lifeStylePhotoCentent"></div>
-                </div>
-                <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12"></div>
-                <div class="o_u o_df_8-12 o_lg_10-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
-                    <div class="life-style-photo-cur-text js_lifeStyelGoodLifeDown">
-                        <trs_viewdatas id="悠生活轮播" num="1" startpos="0">
-                        <img src="style_photo_1_text.png" alt="">
-                        <p class="js_lifeStyelGoodLifeText"><trs_viewdata field='text_description'/></p>
                         </trs_viewdatas>
                     </div>
                 </div>
             </div>
-            <!-- 优生活 END-->
-            <!-- 核心优势 -->
-            <div class="life-style-superiority js_superiorityBox " data-type="1">
-                <div class="o_u o_df_4-12 superiority-imgblank-md ">
-                    <div>
+            <a href="javascript:;" class="o_u o_df_1-12 iconfont icon-arrow-jiantou-right js_photoRightBtn"></a>
+            <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12  life-style-photo-list-right js_lifeStylePhotoRight">
+                <div class="photo-list-img-2 js_lifeStylePhotoCentent"></div>
+            </div>
+            <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12"></div>
+            <div class="o_u o_df_8-12 o_lg_10-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
+                <div class="life-style-photo-cur-text js_lifeStyelGoodLifeDown">
+                    <trs_viewdatas id="悠生活轮播" num="1" startpos="0">
+                        <img src="images/style_photo_1_text.png" alt="">
+                        <p class="js_lifeStyelGoodLifeText">
+                            <trs_viewdata field='text_description'/>
+                        </p>
+                    </trs_viewdatas>
+                </div>
+            </div>
+        </div>
+        <!-- 优生活 END-->
+        <!-- 核心优势 -->
+        <div class="life-style-superiority js_superiorityBox " data-type="1">
+            <div class="o_u o_df_4-12 superiority-imgblank-md ">
+                <div>
+                </div>
+            </div>
+            <ul class="o_u o_df_4-12 o_md_12-12 o_sm_12-12 o_xs_12-12 js_superiorityCenter">
+                <li class="o_u o_df_12-12  ">
+                    <p>享用海尔全球设计研发资源</br>确保统帅独特的品牌个性</p>
+                </li>
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
+                    <h4>10</h4>
+                    <span>大综合研发中心</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
+                    <h4>6</h4>
+                    <span>大设计分部</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
+                    <h4>18</h4>
+                    <span>大设计中心</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                    <h4>28</h4>
+                    <span>个国际研发机构</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                    <h4>300<sup>+</sup></h4>
+                    <span>位国际设计师</span>
+                </li>
+            </ul>
+            <ul class="o_u o_df_4-12 o_md_12-12 o_sm_12-12 o_xs_12-12 js_superiorityCenter" style="display: none;">
+                <li class="o_u o_df_12-12  ">
+                    <p>完全承接海尔售后服务体系</br>保障统帅全方位服务体系</p>
+                </li>
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
+                    <h4>36</h4>
+                    <span>个设备中心</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
+                    <h4>83</h4>
+                    <span>个物流配送中心</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
+                    <h4>300<sup>+</sup></h4>
+                    <span>万㎡仓储资源</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                    <h4>6000<sup>+</sup></h4>
+                    <span>家服务售后网点</span>
+                </li>
+                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                    <h4>24<sup>+</sup></h4>
+                    <span>小时响应</span>
+                </li>
+            </ul>
+            <div class="superiority-xs-modile">
+                <div class="superiority-left-text-xs o_u o_xs_12-12">
+                    <div class="o_u o_df_4-12">
+                        <img src="images/style_life_superiority_1min.jpg" width="100%" alt="">
                     </div>
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
+                        <h3>简约是不会褪色的时尚</h3>
+                        <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
+                    </div>
+                    <div class="o_u o_df_1-12"></div>
+                </div>
+                <div class="superiority-right-text-xs o_u o_xs_12-12">
+                    <div class="o_u o_df_4-12">
+                        <img src="images/style_life_superiority_1min.jpg" width="100%" alt="">
+                    </div>
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
+                        <h3>简约是不会褪色的时尚</h3>
+                        <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
+                    </div>
+                    <div class="o_u o_df_1-12"></div>
                 </div>
                 <ul class="o_u o_df_4-12 o_md_12-12 o_sm_12-12 o_xs_12-12 js_superiorityCenter">
-                    <li class="o_u o_df_12-12  ">
-                        <p>享用海尔全球设计研发资源</br>确保统帅独特的品牌个性</p>
-                    </li>
-                    <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                        <h4>10</h4>
-                        <span>大综合研发中心</span>
-                    </li>
-                    <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                        <h4>6</h4>
-                        <span>大设计分部</span>
-                    </li>
-                    <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                        <h4>18</h4>
-                        <span>大设计中心</span>
-                    </li>
-                    <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
-                        <h4>28</h4>
-                        <span>个国际研发机构</span>
-                    </li>
-                    <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
-                        <h4>300<sup>+</sup></h4>
-                        <span>位国际设计师</span>
-                    </li>
-                </ul>
-                <ul class="o_u o_df_4-12 o_md_12-12 o_sm_12-12 o_xs_12-12 js_superiorityCenter" style="display: none;">
                     <li class="o_u o_df_12-12  ">
                         <p>完全承接海尔售后服务体系</br>保障统帅全方位服务体系</p>
                     </li>
@@ -178,146 +244,105 @@
                         <span>小时响应</span>
                     </li>
                 </ul>
-                <div class="superiority-xs-modile">
-                    <div class="superiority-left-text-xs o_u o_xs_12-12">
-                        <div class="o_u o_df_4-12">
-                            <img src="style_life_superiority_1min.jpg" width="100%" alt="">
-                        </div>
-                        <div class="o_u o_df_1-12"></div>
-                        <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
-                            <h3>简约是不会褪色的时尚</h3>
-                            <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
-                        </div>
-                        <div class="o_u o_df_1-12"></div>
+                <div class="superiority-left-text-xs o_u o_xs_12-12">
+                    <div class="o_u o_df_4-12">
+                        <img src="images/style_life_superiority_1min.jpg" width="100%" alt="">
                     </div>
-                    <div class="superiority-right-text-xs o_u o_xs_12-12">
-                        <div class="o_u o_df_4-12">
-                            <img src="style_life_superiority_1min.jpg" width="100%" alt="">
-                        </div>
-                        <div class="o_u o_df_1-12"></div>
-                        <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
-                            <h3>简约是不会褪色的时尚</h3>
-                            <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
-                        </div>
-                        <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
+                        <h3>简约是不会褪色的时尚</h3>
+                        <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
                     </div>
-                    <ul class="o_u o_df_4-12 o_md_12-12 o_sm_12-12 o_xs_12-12 js_superiorityCenter">
-                        <li class="o_u o_df_12-12  ">
-                            <p>完全承接海尔售后服务体系</br>保障统帅全方位服务体系</p>
-                        </li>
-                        <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                            <h4>36</h4>
-                            <span>个设备中心</span>
-                        </li>
-                        <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                            <h4>83</h4>
-                            <span>个物流配送中心</span>
-                        </li>
-                        <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                            <h4>300<sup>+</sup></h4>
-                            <span>万㎡仓储资源</span>
-                        </li>
-                        <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
-                            <h4>6000<sup>+</sup></h4>
-                            <span>家服务售后网点</span>
-                        </li>
-                        <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
-                            <h4>24<sup>+</sup></h4>
-                            <span>小时响应</span>
-                        </li>
-                    </ul>
-                    <div class="superiority-left-text-xs o_u o_xs_12-12">
-                        <div class="o_u o_df_4-12">
-                            <img src="style_life_superiority_1min.jpg" width="100%" alt="">
-                        </div>
-                        <div class="o_u o_df_1-12"></div>
-                        <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
-                            <h3>简约是不会褪色的时尚</h3>
-                            <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
-                        </div>
-                        <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_1-12"></div>
+                </div>
+                <div class="superiority-right-text-xs o_u o_xs_12-12">
+                    <div class="o_u o_df_4-12">
+                        <img src="images/style_life_superiority_1min.jpg" width="100%" alt="">
                     </div>
-                    <div class="superiority-right-text-xs o_u o_xs_12-12">
-                        <div class="o_u o_df_4-12">
-                            <img src="style_life_superiority_1min.jpg" width="100%" alt="">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
+                        <h3>简约是不会褪色的时尚</h3>
+                        <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
+                    </div>
+                    <div class="o_u o_df_1-12"></div>
+                </div>
+            </div>
+            <div class="o_u o_df_4-12 superiority-imgblank-md"></div>
+            <div class="superiority-imgbox js_superiorityImgBox ">
+
+                <div class="o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12 superiority-left-box js_superioritySwiperLeft">
+                    <div class="swiper-wrapper">
+                        <div class="superiority-left js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_12-12">
+                            <a href="javascript:;"
+                               class="superiority-img-btn 1111 iconfont icon-arrow-jiantou-left js_superiorityRightBtn "></a>
+                            <div class="superiority-left-cont ">
+                                <img src="images/superiority-left-cont1.png" alt="">
+                                <h3>是不会褪色的时尚</h3>
+                                <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
+                            </div>
                         </div>
-                        <div class="o_u o_df_1-12"></div>
-                        <div class="superiority-left-down o_u o_df_10-12 o_xs_6-12">
-                            <h3>简约是不会褪色的时尚</h3>
-                            <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
+                        <div class="superiority-left superiority-left2 js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_12-12">
+                            <a href="javascript:;"
+                               class=" js_superiorityRightBtn superiority-img-btn iconfont icon-arrow-jiantou-left"></a>
+                            <div class="superiority-left-cont ">
+                                <img src="images/superiority-left-cont2.png" alt="">
+                                <h3>是亘古不变的追求</h3>
+                                <p>完善流程制造体系，实现全流程的质量预防，同时建立管控体系、改善等体系，锻造产品卓越品质，只为给用户可陪伴一生的产品</p>
+                            </div>
                         </div>
-                        <div class="o_u o_df_1-12"></div>
+
+                        <a href="javascript:;"
+                           class="js_liftSuperiorityLeft superiority-left-btn iconfont icon-arrow-jiantou-left"></a>
                     </div>
                 </div>
-                <div class="o_u o_df_4-12 superiority-imgblank-md"></div>
-                <div class="superiority-imgbox js_superiorityImgBox ">
-   
-                    <div class="o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12 superiority-left-box js_superioritySwiperLeft">
-                        <div class="swiper-wrapper">
-                            <div class="superiority-left js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_12-12">
-                                <a href="javascript:;" class="superiority-img-btn 1111 iconfont icon-arrow-jiantou-left js_superiorityRightBtn "></a>
-                                <div class="superiority-left-cont ">
-                                    <img src="superiority-left-cont1.png" alt="">
-                                    <h3>是不会褪色的时尚</h3>
-                                    <p>来自国际顶级设计大咖倾心打造的产品，重新诠释时尚简约，干净简洁的设计摒除一切多余繁杂，与环境自然相融，用至简元素勾勒出时尚家居格调</p>
-                                </div>
-                            </div>
-                            <div class="superiority-left superiority-left2 js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_12-12">
-                                <a href="javascript:;" class=" js_superiorityRightBtn superiority-img-btn iconfont icon-arrow-jiantou-left"></a>
-                                <div class="superiority-left-cont ">
-                                    <img src="superiority-left-cont2.png" alt="">
-                                    <h3>是亘古不变的追求</h3>
-                                    <p>完善流程制造体系，实现全流程的质量预防，同时建立管控体系、改善等体系，锻造产品卓越品质，只为给用户可陪伴一生的产品</p>
-                                </div>
-                            </div>
-           
-                            <a href="javascript:;" class="js_liftSuperiorityLeft superiority-left-btn iconfont icon-arrow-jiantou-left"></a>
-                        </div>
+                <div class="o_u o_df_4-12 o_md_2-12  o_sm_2-12 o_xs_2-12 superiority-minbox js_superiorityJt"
+                     style="display: none">
+                    <div class="superiority-left-min js_superiorityLeftMin">
+                        <img src="images/style_life_superiority_3min.jpg" height="100%" alt="">
+                        <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-left"></a>
                     </div>
-                    <div class="o_u o_df_4-12 o_md_2-12  o_sm_2-12 o_xs_2-12 superiority-minbox js_superiorityJt" style="display: none">
-                        <div class="superiority-left-min js_superiorityLeftMin">
-                            <img src="style_life_superiority_3min.jpg" height="100%" alt="">
-                            <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-left"></a>
-                        </div>
-                        <div class="superiority-right-min js_superiorityLeftMin">
-                            <img src="style_life_superiority_4min.jpg" height="100%" alt="">
-                            <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-right"></a>
-                        </div>
+                    <div class="superiority-right-min js_superiorityLeftMin">
+                        <img src="images/style_life_superiority_4min.jpg" height="100%" alt="">
+                        <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-right"></a>
                     </div>
-                    <div class="o_u o_df_4-12 o_md_2-12  o_sm_2-12 o_xs_2-12 superiority-minbox js_superiorityJt">
-                        <div class="superiority-left-min js_superiorityLeftMin">
-                            <img src="style_life_superiority_1min.jpg" height="100%" alt="">
-                            <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-left"></a>
-                        </div>
-                        <div class="superiority-right-min js_superiorityLeftMin">
-                            <img src="style_life_superiority_2min.jpg" height="100%" alt="">
-                            <a href="javascript:;" class="iconfont  js_superiorityRightBtn icon-arrow-jiantou-right "></a>
-                        </div>
+                </div>
+                <div class="o_u o_df_4-12 o_md_2-12  o_sm_2-12 o_xs_2-12 superiority-minbox js_superiorityJt">
+                    <div class="superiority-left-min js_superiorityLeftMin">
+                        <img src="images/style_life_superiority_1min.jpg" height="100%" alt="">
+                        <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-left"></a>
                     </div>
-                    <div class="o_u o_df_4-12  o_md_5-12  o_sm_5-12 o_xs_12-12 superiority-left-box js_superioritySwiperRight">
-                        <div class="swiper-wrapper">
-                            <a href="javascript:;" class="superiority-right-btn js_liftSuperiorityRight iconfont icon-arrow-jiantou-right "></a>
-                            <div class="superiority-right js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_4-12">
-                                <a href="javascript:;" class="superiority-img-btn iconfont icon-arrow-jiantou-right js_superiorityLeftBtn"></a>
-                                <div class="superiority-left-cont ">
-                                    <img src="superiority-left-cont3.png" alt="">
-                                    <h3>的体验是恰到好处</h3>
-                                    <p>返璞归真，追求家电基础功能的精益求精，用心锻造高品质、不花哨的全系产品，为用户提供恰到好处的功能满足，让用户从生活琐事中解放</p>
-                                </div>
+                    <div class="superiority-right-min js_superiorityLeftMin">
+                        <img src="images/style_life_superiority_2min.jpg" height="100%" alt="">
+                        <a href="javascript:;" class="iconfont  js_superiorityRightBtn icon-arrow-jiantou-right "></a>
+                    </div>
+                </div>
+                <div class="o_u o_df_4-12  o_md_5-12  o_sm_5-12 o_xs_12-12 superiority-left-box js_superioritySwiperRight">
+                    <div class="swiper-wrapper">
+                        <a href="javascript:;"
+                           class="superiority-right-btn js_liftSuperiorityRight iconfont icon-arrow-jiantou-right "></a>
+                        <div class="superiority-right js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_4-12">
+                            <a href="javascript:;"
+                               class="superiority-img-btn iconfont icon-arrow-jiantou-right js_superiorityLeftBtn"></a>
+                            <div class="superiority-left-cont ">
+                                <img src="images/superiority-left-cont3.png" alt="">
+                                <h3>的体验是恰到好处</h3>
+                                <p>返璞归真，追求家电基础功能的精益求精，用心锻造高品质、不花哨的全系产品，为用户提供恰到好处的功能满足，让用户从生活琐事中解放</p>
                             </div>
-                            <div class="superiority-right superiority-right2 js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_4-12">
-                                <a href="javascript:;" class="superiority-img-btn iconfont icon-arrow-jiantou-right js_superiorityLeftBtn"></a>
-                                <div class="superiority-left-cont ">
-                                    <img src="superiority-left-cont4.png" alt="">
-                                    <h3>的体验是恰到好处</h3>
-                                    <p>返璞归真，追求家电基础功能的精益求精，用心锻造高品质、不花哨的全系产品，为用户提供恰到好处的功能满足，让用户从生活琐事中解放</p>
-                                </div>
+                        </div>
+                        <div class="superiority-right superiority-right2 js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_4-12">
+                            <a href="javascript:;"
+                               class="superiority-img-btn iconfont icon-arrow-jiantou-right js_superiorityLeftBtn"></a>
+                            <div class="superiority-left-cont ">
+                                <img src="images/superiority-left-cont4.png" alt="">
+                                <h3>的体验是恰到好处</h3>
+                                <p>返璞归真，追求家电基础功能的精益求精，用心锻造高品质、不花哨的全系产品，为用户提供恰到好处的功能满足，让用户从生活琐事中解放</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
                 <div class="js_superiorityDownText">
-                     <div class="superiority-left-down-lg o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12">
+                    <div class="superiority-left-down-lg o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12">
                         <div class="o_u o_df_1-12"></div>
                         <div class="superiority-left-down o_u o_df_10-12 o_xs_4-12">
                             <h3>简约是不会褪色的时尚</h3>
@@ -337,8 +362,8 @@
                 </div>
 
 
-                 <div class="js_superiorityDownText" style="display: none;"> 
-                     <div class="superiority-left-down-lg o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12">
+                <div class="js_superiorityDownText" style="display: none;">
+                    <div class="superiority-left-down-lg o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12">
                         <div class="o_u o_df_1-12"></div>
                         <div class="superiority-left-down o_u o_df_10-12 o_xs_4-12">
                             <h3>品质是亘古不变的追求</h3>
@@ -355,298 +380,167 @@
                         </div>
                         <div class="o_u o_df_1-12"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 真实案例 -->
+        <div class="life-style-case">
+            <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-left js_lifeStyleCaseLeft">
+                <a href="javascript:;" class=" iconfont icon-arrow-jiantou-left js_lifeStyleCaseLeftBtn"></a>
+            </div>
+
+            <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_8-12 life-style-case-photo ">
+                <div class="js_lifeStyleCasePhoto life-case-photo-swiper" style="overflow: hidden;">
+                    <div class="swiper-wrapper" id="lifepic">
+                        <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
+                            <div class="swiper-slide" data-index="">
+                                <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_lb'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                                     width="100%" alt="">
+                            </div>
+                        </trs_viewdatas>
                     </div>
+                </div>
+
+
+                <!-- <img src="images/life-style-case-photo.png" alt=""> -->
+                <div class="o_u o_df_9-12 life-style-case-photo-min js_casePhotoMinLeft">
+                    <img src="" alt="">
+                </div>
+                <div class="o_u o_df_9-12 case-photo-min-left  js_casePhotoMinRight ">
+                    <img src="" alt="">
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-            <!-- 真实案例 -->
-            <div class="life-style-case">
-                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-left js_lifeStyleCaseLeft">
-                    <a href="javascript:;" class=" iconfont icon-arrow-jiantou-left js_lifeStyleCaseLeftBtn"></a>
-                </div>
-           
-                <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_8-12 life-style-case-photo ">
-                    <div class="js_lifeStyleCasePhoto life-case-photo-swiper" style="overflow: hidden;">
-                        <div class="swiper-wrapper" id="lifepic" >
-                            <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
-                            <div class="swiper-slide" data-index="">
-                                 <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" width="100%" alt="">
-                            </div>
-                            </trs_viewdatas>
-                        </div>
-                    </div>
-         
-               
-                    <!-- <img src="life-style-case-photo.png" alt=""> -->
-                    <div class="o_u o_df_9-12 life-style-case-photo-min js_casePhotoMinLeft">
-                        <img src="" alt="">
-                    </div>
-                    <div class="o_u o_df_9-12 case-photo-min-left  js_casePhotoMinRight ">
-                        <img src="" alt="">
-                    </div>
-                </div>
-
-                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-right js_lifeStyleCaseRight">
-                    <a href="javascript:;" class=" iconfont icon-arrow-jiantou-right js_lifeStyleCaseRightBtn"></a>
-                    <ul class="case-photo-nub-btn js_casePhotoNub">
-                        <li>03</li>
-                        <li>02</li>
-                        <li class="cur">01</li>
-                    </ul>
-                </div>
-                <div class="o_u o_df_1-12 o_md_2-12  o_sm_2-12  o_xs_2-12"></div>
-                <ul class="o_u o_df_4-12 o_md_8-12  o_sm_8-12  o_xs_8-12 life-case-text-box js_lifeStyleCaseText">
-                    <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
+            <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-right js_lifeStyleCaseRight">
+                <a href="javascript:;" class=" iconfont icon-arrow-jiantou-right js_lifeStyleCaseRightBtn"></a>
+                <ul class="case-photo-nub-btn js_casePhotoNub">
+                    <li>03</li>
+                    <li>02</li>
+                    <li class="cur">01</li>
+                </ul>
+            </div>
+            <div class="o_u o_df_1-12 o_md_2-12  o_sm_2-12  o_xs_2-12"></div>
+            <ul class="o_u o_df_4-12 o_md_8-12  o_sm_8-12  o_xs_8-12 life-case-text-box js_lifeStyleCaseText">
+                <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
                     <li class="cur">
-                        <img src="life-style-case-title.png" alt="">
-                        <div class="life-case-text"> <img src="life-style-case-titleleft.png" class="left" alt=""><trs_viewdata field='textdescription_right'/><img src="images/life-style-case-titleright.png" class="right" alt=""></div>
+                        <img src="images/life-style-case-title.png" alt="">
+                        <div class="life-case-text"><img src="images/life-style-case-titleleft.png" class="left" alt="">
+                            <trs_viewdata field='textdescription_right'/>
+                            <img src="images/life-style-case-titleright.png" class="right" alt=""></div>
                         <div class="life-case-text-down">
-                            <p><trs_viewdata field='prod_txt'/></p>
+                            <p>
+                                <trs_viewdata field='prod_txt'/>
+                            </p>
                             <span><trs_viewdata field='prod_model'/></span>
                         </div>
                     </li>
-                    </trs_viewdatas>
-                </ul>
-                <div class="o_u o_df_1-12  o_md_2-12"></div>
-            </div>
+                </trs_viewdatas>
+            </ul>
+            <div class="o_u o_df_1-12  o_md_2-12"></div>
+        </div>
 
 
-            <!-- 创造优生活 -->
-            <div class="life-style-create">
-                <div class="life-style-create-cont-box">
-                    <div class="o_u o_df_1-12 create-left-btn">
-                        <a href="javascript:;" class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
-                    </div>
-                    <div class="o_u o_df_5-12 o_lg_6-12 o_md_8-12 o_sm_10-12 o_xs_10-12">
-                        <div>
-                            <div class="create-title-img " >
-                                <img src="life-style-create-cont-title.png" width="100%"  alt="">
-                            </div>
-                            
-                            <div class="product-list-title">
-                                <span class="o_u o_sm_12-12 o_xs_12-12">系列产品推荐：</span>
-                                <ul class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
-                                    <li class="cur o_u o_sm_4-12 o_xs_4-12">至享系列</li>
-                                    <li class="o_u o_sm_4-12 o_xs_4-12">至美系列</li>
-                                    <li class="o_u o_sm_4-12 o_xs_4-12">至尚系列</li>
-                                </ul>
-                            </div>
-                            <div class="product-list-cont">
-                                <p class="js_lifeStyleCreateTitle">111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-                                <p class="js_lifeStyleCreateTitle" style="display: none;">222简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-                                <p class="js_lifeStyleCreateTitle" style="display: none;">333简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
+        <!-- 创造优生活 -->
+        <div class="life-style-create">
+            <div class="life-style-create-cont-box">
+                <div class="o_u o_df_1-12 create-left-btn">
+                    <a href="javascript:;"
+                       class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
+                </div>
+                <div class="o_u o_df_5-12 o_lg_6-12 o_md_8-12 o_sm_10-12 o_xs_10-12">
+                    <div>
+                        <div class="create-title-img ">
+                            <img src="images/life-style-create-cont-title.png" width="100%" alt="">
+                        </div>
 
+                        <div class="product-list-title">
+                            <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐' AUTOLINK="false"/>：</span>
+                            <ul id="series_name" class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
+                                <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
+                                    <li class="o_u o_sm_4-12 o_xs_4-12">
+                                        <trs_viewdata field='series_title'/>
+                                    </li>
+                                </trs_viewdatas>
+                            </ul>
+                        </div>
+                        <div id="series_txt" class="product-list-cont">
+                            <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
+                                <p class="js_lifeStyleCreateTitle">
+                                    <trs_viewdata field='series_txt'/>
+                                </p>
 
-                                <!-- 至尊系列轮播 start -->
+                                <!-- 产品推荐轮播 start -->
                                 <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门11</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门11</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门22</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门222</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                             
-                                </ul>
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_12-12 swiper-slide">
+                                            <trs_viewdata field='prod_content1'/>
+                                            <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">
+                                            <div class="o_u o_df_6-12">
+                                                <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
+                                                    <p><trs_viewdata field='xmjg'/></p>
+                                                    <p><trs_viewdata field='cpms'/></p>
+                                                    <span><trs_viewdata field='modelno'/></span>
+                                                    <i>¥<trs_viewdata field='price'/></i>
+                                                </div>
+                                            </div>
+                                            </TRS_RELNEWS>
+                                        </li>
+                                        <li class="o_u o_df_12-12 swiper-slide">
+                                            <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="2">
+                                                <div class="o_u o_df_6-12">
+                                                    <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
+                                                        <img src="images/detail_prd01.png" alt="">
+                                                    </div>
+                                                    <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
+                                                        <p><trs_viewdata field='xmjg'/></p>
+                                                        <p><trs_viewdata field='cpms'/></p>
+                                                        <span><trs_viewdata field='modelno'/></span>
+                                                        <i>¥<trs_viewdata field='price'/></i>
+                                                    </div>
+                                                </div>
+                                            </TRS_RELNEWS>
+                                        </li>
+
+                                    </ul>
                                 </div>
-                                <!-- 至尊系列轮播 end -->
-                              
+                            </trs_viewdatas>
+                            <!-- 产品推荐轮播 end -->
 
-                                <!-- 至美系列轮播 start -->
-                                <div class="js_lifeStyleCreateSwipe_2 js_lifeStyleCreateSwipe" >
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门333</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门333</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门444</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门444</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                             
-                                </ul>
-                                </div>
-                                <!-- 至美系列轮播 end -->
-
-
-
-                                <!-- 至尚系列轮播 start -->
-                                <div class="js_lifeStyleCreateSwipe_3 js_lifeStyleCreateSwipe" >
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门555</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门555</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门666</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门666</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                             
-                                </ul>
-                                </div>
-                                <!-- 至尚系列轮播 end -->
-
-                            </div>
                         </div>
                     </div>
-                    <div class="o_u o_df_1-12 create-right-btn">
-                        <a href="javascript:;" class="iconfont js_lifeStyleCreateRightBtn icon-arrow-jiantou-right life-style-create-btn"></a>
-                    </div>
                 </div>
-                <div class="o_u o_df_5-12 o_sm_12-12 o_xs_12-12 create-bottom-img">
-                    <img src="create-bottom-img.jpg" width="100%" alt="">
+                <div class="o_u o_df_1-12 create-right-btn">
+                    <a href="javascript:;"
+                       class="iconfont js_lifeStyleCreateRightBtn icon-arrow-jiantou-right life-style-create-btn"></a>
                 </div>
-
             </div>
-            <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+            <div class="o_u o_df_5-12 o_sm_12-12 o_xs_12-12 create-bottom-img">
+                <img src="images/create-bottom-img.jpg" width="100%" alt="">
+            </div>
+
         </div>
-        <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-        <script type="text/javascript">
-            $(function () {
-                $("#lifepic div").eq(0).attr("data-index","1");  //第一个div
-                $("#lifepic div").eq(1).attr("data-index","2");//第二个div
-                $("#lifepic div").eq(2).attr("data-index","3");  //第三个div
-            })
-        </script>
-        <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
-        <script src="http://www.casarte.com/images/mediaelement-and-player.min.js"></script>
-        <script src="life_style.js"></script>
+        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+    </div>
+    <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+    <script type="text/javascript">
+        $(function () {
+            $("#lifepic div").eq(0).attr("data-index", "1");  //第一个div
+            $("#lifepic div").eq(1).attr("data-index", "2");//第二个div
+            $("#lifepic div").eq(2).attr("data-index", "3");  //第三个div
+
+            $("#series_name li").eq(0).addClass("cur");  //系列产品推荐中系列列表第一个li
+            $("#series_txt p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
+            $("#series_txt p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
+        })
+    </script>
+    <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
+    <script src="http://www.casarte.com/images/mediaelement-and-player.min.js"></script>
+    <script src="life_style.js"></script>
 </body>
 
 </html>
