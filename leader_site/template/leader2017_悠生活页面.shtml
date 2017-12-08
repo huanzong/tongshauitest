@@ -456,7 +456,7 @@
                         </div>
 
                         <div class="product-list-title">
-                            <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐'/>：</span>
+                            <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐' AUTOLINK="false"/>：</span>
                             <ul id="series_name" class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
                                 <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
                                     <li class="o_u o_sm_4-12 o_xs_4-12">
