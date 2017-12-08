@@ -240,7 +240,7 @@ function saveUserAddress(){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
                 resetForm();//重置表单
-                $(".js_newAddress").hide();
+                $(".js_form_addAddrManagement").hide();
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2("添加地址失败，请稍后重试...",2,2000);
