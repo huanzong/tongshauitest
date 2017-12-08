@@ -35,7 +35,7 @@ if($('.js_moreProA').find("a").length>3){
 }*/
 
 
-
+//更多选择
 var morePro=$(".js_moreProA").find("a").length;
 if(morePro==0||morePro<3){
     $.ajax({
@@ -128,7 +128,9 @@ function getCommentData(){
         dataType:"json",
         success_cb:	function (data){
             if(data.isSuccess==true){
-                if(data.data.entities.length>0){
+                var commentNum=data.data.entityCount;
+                $(".js_comment").find("span").html(commentNum);
+                if(data.data.entities.length>=3){
                     $('.js_commentContent .praise-box').html("");
                     var temple_ConHtml='';
                     for (var i = 0; i<3; i++) {
@@ -137,7 +139,7 @@ function getCommentData(){
                         var isHavePic=data.data.entities[i].isHavePic;//判断有误图片 1有 0无
                         var paths=data.data.entities[i].paths;//图片集合
                         var loginAccountName=data.data.entities[i].loginAccountName;//用户名
-                        var channelSource=data.data.entities[i].channelSource;//1.官方 2.天猫 3.京东 4.苏宁 5.国美
+                        var channelSource=data.data.entities[i].channelSourceStr;//1.官方 2.天猫 3.京东 4.苏宁 5.国美
 
                         temple_ConHtml+='<div class="o_u o_df_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2">';
                         temple_ConHtml+='<div class="praise-con">';
@@ -162,7 +164,6 @@ function getCommentData(){
 
                         commentTime=commentTime.replace(/-/g, "/");//时间处理
                         temple_ConHtml+='<span class="time">'+commentTime+'</span>';
-
                         temple_ConHtml+='<span class="from">来自&nbsp;'+channelSource+'</span>';
                         temple_ConHtml+='</div></div></div>';
                     }

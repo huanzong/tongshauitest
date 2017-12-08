@@ -150,16 +150,17 @@ $(function () {
                 'star':templet_star,
                 'content':templet_content,
                 'devSource':templet_devSource,
-                'businessId':'150',
+                'businessId':templet_modelNo,
                 'channelSource':'1',
                 'categoryId':'2',
-                'orderId':'123'
+                'orderId':templet_orderId
             };
             $.ajax({
                 url: siteConfig.userUrl+"/interaction-comment/comment/myComment/myCommentOn/",
                 data:  JSON.stringify(data),
                 applicationType:true,
                 login:true,
+                csrf: true,
                 success_cb: function(data){
                     if(data.isSuccess){
                         $('.js_popUpBox3').show();
