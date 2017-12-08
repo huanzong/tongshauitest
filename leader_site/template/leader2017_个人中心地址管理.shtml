@@ -33,7 +33,7 @@
                         <div class="member-security-contbox js-contRightContBox">
                             <!-- 地址管理 START-->
                             <form class="js_form_addAddrManagement"  action="/user/front/userRegion/save">
-                                <div class="member-address js_newAddress " style="display: none;">
+                                <div class="member-address js_newAddress ">
                                     <div class="member-address-title js_addressTitle">添加新地址</div>
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
