@@ -12,6 +12,23 @@ var templet_pageNo=1;
 var templet_pageSize=10;
 loadUserInfoList();//获取用户地址列表
 
+
+
+var infotell=[];
+//固定电话号码错误显示逻辑
+$('.js_addressPhoneInput').find('input').blur(function(){
+    var inputVal = $.trim($(this).val());
+    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
+    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+        $(this).removeClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_wrong').length!=0){
+        $(this).addClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_right').length!=0){
+        infotell[nubName-1] = inputVal;
+    }
+})
 //取消弹框提示
 var templet_text="确定取消添加吗？";
 $('.js_addressCancel').click(function(){
@@ -202,9 +219,13 @@ function saveUserAddress(){
     var bool = false;
     var realnameVal=$.trim($("#realName").val());//联系人
     var mobileVal=$.trim($("#mobile").val());//手机号
-    var phoneVal=$.trim($("#phone").val());//电话号
-    var phonequhaoVal=$.trim($("#phonequhao").val());//区号
-    var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    // var phoneVal=$.trim($("#phone").val());//电话号
+    // var phonequhaoVal=$.trim($("#phonequhao").val());//区号
+    // var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    var phonequhaoVal=infotell[0];//区号
+    var phoneVal= infotell[1];//电话号
+    var phonefenjihaoVal=infotell[2];//分机号
+
     var provinceVal=$.trim($("#js_save").val());//省
     var cityVal=$.trim($("#js_city").val());//市
     var areaVal=$.trim($("#js_area").val());//区
@@ -213,7 +234,14 @@ function saveUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
-    var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
+
+    if(phonequhaoVal&&phoneVal){
+        var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
+    }else{
+        var telPhoneVal='';
+    }
+
+
 
     var data = {
         "customerName":realnameVal,
@@ -715,21 +743,7 @@ function getAddressInfo(id){
     });
 }
 
-var infotell=[];
-//固定电话号码错误显示逻辑
-$('.js_addressPhoneInput').find('input').blur(function(){
-    var inputVal = $.trim($(this).val());
-    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
-    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
-        $(this).removeClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_wrong').length!=0){
-        $(this).addClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_right').length!=0){
-        infotell[nubName-1] = inputVal;
-    }
-})
+
 //保存修改地址
 function updateUserAddress(){
     var bool = false;
@@ -738,6 +752,10 @@ function updateUserAddress(){
     //var phoneVal=$.trim($("#phone").val());//电话号
     //var phonequhaoVal=$.trim($("#phonequhao").val());//区号
     //var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    var phonequhaoVal=infotell[0];//区号
+    var phoneVal= infotell[1];//电话号
+    var phonefenjihaoVal=infotell[2];//分机号
+    var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
     var provinceVal=$.trim($("#js_save").val());//省
     var cityVal=$.trim($("#js_city").val());//市
     var areaVal=$.trim($("#js_area").val());//区
@@ -747,9 +765,8 @@ function updateUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
-    if(infotell[0]&&infotell[1]){
-        var telPhoneVal=infotell[0]+";"+infotell[1]+";"+infotell[2];
-
+    if(phonequhaoVal&&phoneVal){
+        var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
     }else{
         var telPhoneVal='';
     }
