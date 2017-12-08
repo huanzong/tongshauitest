@@ -367,6 +367,8 @@ function resetForm(){
     templet_select_shi.lose();
     templet_select_qu.lose();
     templet_select_road.lose();
+    $("#realName").blur();
+    $("#mobile").blur();
     $("#address").blur();
     $("#phonequhao").blur();
     $("#phone").blur();
