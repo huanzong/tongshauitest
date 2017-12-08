@@ -51,16 +51,7 @@ $(function () {
     //checkbox初始化
     $(".js_proGroup,.js_radio").jq_qvote();
 
-    /**
-     * 产品对比   //对比栏显示隐藏
-     */
-    $('.js_compareBoxShow').on('click', function () {
-        if (parseInt($(this).attr('data-show'))) {
-            hideCompareFlowLayout();
-        } else {
-            showCompareFlowLayout();
-        }
-    });
+
 });
 
 //导航-展开全部筛选项
