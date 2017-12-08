@@ -294,6 +294,7 @@ function loadUserInfoList(){
                 var count = addlist.length;
                 if(count != 0){
                     $(".js_memberAddressBtn").show();//显示"新增地址"按钮
+                    $(".js_form_addAddrManagement").hide();//隐藏"新增地址"表单
                     $(".js_lineInfo").html("");
                     var addhtml="";
                     for(var i=0;i<count;i++){
