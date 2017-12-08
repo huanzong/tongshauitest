@@ -24,7 +24,7 @@ $(function(){
                     templet_addhtml +='<div class="member-security-tit"><p>我的评价</p></div>';
                     templet_addhtml +='<div class="member-security-contbox js-contRightContBox">';
                     templet_addhtml +='<div class="member-security-bingsuccess o_g">';
-                    templet_addhtml += '<div><img src="images/share_nothing.png" alt=""></div>';
+                    templet_addhtml += '<div><img src="../images/share_nothing.png" alt=""></div>';
                     templet_addhtml += '<div class="member-security-bingsuccess-txtbox">';
                     templet_addhtml += '<div class="member-security-bingsuccess-bigtext"><span>还没有任何评价记录</span></div>';
                     templet_addhtml += '</div></div></div>';

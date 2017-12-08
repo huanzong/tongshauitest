@@ -419,9 +419,9 @@ function addCompareOnclick() {
     //添加对比商品监听事件
     $('.js_compareAddProduct').on("click",function(){
         var isCompare=$(this).attr("auto");
+        $thisObj = $(this);
         if(isCompare==0){
             //加入商品对比列表的模板,
-            $thisObj = $(this);
             add_compare_flyOut_item($thisObj);
             //显示对比栏
             showCompareFlowLayout();
@@ -491,6 +491,7 @@ function deleteAllCompareItem() {
             $(".js_compareAddProduct").find("span").html("对比");
         });
         $.cookie('leaderProCookie', null, {path: '/'});
+        proObjList = [];
     });
 }
 
