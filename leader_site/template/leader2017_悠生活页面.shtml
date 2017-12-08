@@ -475,6 +475,7 @@
                                 <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
                                     <ul class="swiper-wrapper">
                                         <li class="o_u o_df_12-12 swiper-slide">
+                                            <trs_viewdata field='prod_content1'/>
                                             <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">
                                             <div class="o_u o_df_6-12">
                                                 <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
