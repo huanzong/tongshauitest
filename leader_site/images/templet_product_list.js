@@ -214,8 +214,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     searchHtml += '<div class="prolist-box">';
                     if (rqcp == "是") {
                         searchHtml += '<span class="l-tag-radius l-tag-green pro-tag">人气</span>'
-                    }
-                    if ((curDate - newsssj) <= bdate) {
+                    }else if ((curDate - newsssj) <= bdate) {
                         searchHtml += '<span class="l-tag-radius l-tag-blue pro-tag">新品</span>';
                     }
                     searchHtml += '<div class="pro-opporate">';
