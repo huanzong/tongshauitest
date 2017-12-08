@@ -35,8 +35,8 @@ $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地
     templet_text = '确定取消添加？';
     resetForm();
     $(".js_btnSubmit").attr("type",1);
-    $('.lose').css('background-color','#ccc');
     $(".js_form_addAddrManagement").show();
+    $('.lose').css('background-color','#ccc');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
 })
 var templet_pageNo=1;
