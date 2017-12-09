@@ -316,8 +316,7 @@
     //项目完成提交任务
     gulp.task('build', ['clean-build'], function(a) {
         gulp.run('contenttask');
-        gulp.run('imagemin');
-
+        // gulp.run('imagemin');
     });
 
     gulp.task('preview', ['clean-preview'], function(a) {
