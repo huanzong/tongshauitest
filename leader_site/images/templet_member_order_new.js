@@ -279,7 +279,7 @@ function memberOrderNot(way){
         templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot" >';
         templet_addhtml+='<img src="../images/share_nothing.png"  alt="">';
         templet_addhtml+='<p>还没有任何订单，去寻找心仪的产品吧</p>';
-        templet_addhtml+='<div> <a  href="javascript:;"  class="">去晒单 <i class="iconfont icon-arrow-line-right"></i> </a></div></div>';
+        templet_addhtml+='<div> <a  href="http://test.tongshuai.com/cooling/"  class="">轻产品 <i class="iconfont icon-arrow-line-right"></i> </a></div></div>';
     }else{
         templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot"  >';
         templet_addhtml+='<img src="../images/share_nothing.png"  alt="">';
