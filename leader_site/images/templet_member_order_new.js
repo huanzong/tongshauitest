@@ -6,40 +6,9 @@
 $(function(){
     var templat_pagesize='10';
 
-    var templet_datePay={
-        "orderStatus":1
-    };
-
-    var templet_dateReceived={
-        "orderStatus":3
-    };
-
-    $.ajax({
-        url: siteConfig.userUrl + "/buy/order/order-front/list/",
-        data: JSON.stringify(templet_datePay),
-        applicationType: true,
-        login: true,
-        success_cb: function (data) {
-            if(!data.data.entityCount==0){
-                $(".js-notPay").addClass('member-nub-round');
-                $(".js-notPay").html(data.data.entityCount);
-            }
-        }
-    })
-
-    $.ajax({
-        url: siteConfig.userUrl + "/buy/order/order-front/list/",
-        data: JSON.stringify(templet_dateReceived),
-        applicationType: true,
-        login: true,
-        success_cb: function (data) {
-            if(!data.data.entityCount==0){
-                $(".js-notReceived").addClass('member-nub-round');
-                $(".js-notReceived").html(data.data.entityCount);
-            }
-        }
-    })
-
+    //绘制标题栏数字
+    orderListCount('付款');
+    orderListCount('收货');
     //全部订单第一页
     searchAllList(1,templat_pagesize);
 })
@@ -99,6 +68,10 @@ function searchAllList(currPageT, pageSize){
             var allPageCount = data.data.pageCount;
             var currentPageNo = data.data.pageNo;
             var templet_addhtml = '';
+            if(templet_orderlist.length==0){
+                memberOrderNot();
+                return;
+            }
             for (var i = 0; i < templet_orderlist.length; i++) {
 
                 if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
@@ -175,31 +148,39 @@ function searchStateList(currPageT, pageSize,orderlist){
             var allPageCount = data.data.pageCount;
             var currentPageNo = data.data.pageNo;
             var templet_addhtml = '';
+
+            if('待付款'==orderlist){
+                if(!data.data.entityCount==0){
+                    $(".js-notPay").addClass('member-nub-round');
+                    $(".js-notPay").html(data.data.entityCount);
+                }else{
+                    $(".js-notPay").removeClass('member-nub-round');
+                    $(".js-notPay").html("");
+                    memberOrderNot();
+                    return;
+                }
+            }
+            if('待收货'==orderlist){
+                if(!data.data.entityCount==0){
+                    $(".js-notReceived").addClass('member-nub-round');
+                    $(".js-notReceived").html(data.data.entityCount);
+                }else{
+                    $(".js-notReceived").removeClass('member-nub-round');
+                    $(".js-notReceived").html("");
+                    memberOrderNot();
+                    return;
+                }
+            }
+
             for (var i = 0; i < templet_orderlist.length; i++) {
 
                 if('待付款'==orderlist){
                     templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_10-12 o_sm_7-12 o_xs_7-12"> ';
                     templet_addhtml += ' <h3>待付款</h3> ';
-
-                    if(!data.data.entityCount==0){
-                        $(".js-notPay").addClass('member-nub-round');
-                        $(".js-notPay").html(data.data.entityCount);
-                    }else{
-                        $(".js-notPay").removeClass('member-nub-round');
-                        $(".js-notPay").html("");
-                    }
                 }
                 if('待收货'==orderlist){
                     templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
                     templet_addhtml += ' <h3>待收货</h3> ';
-
-                    if(!data.data.entityCount==0){
-                        $(".js-notReceived").addClass('member-nub-round');
-                        $(".js-notReceived").html(data.data.entityCount);
-                    }else{
-                        $(".js-notReceived").removeClass('member-nub-round');
-                        $(".js-notReceived").html("");
-                    }
                 }
 
                 templet_addhtml += ' <div class="o_u"><p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>' + templet_orderlist[i].orderTime + '</span></p>';
@@ -289,4 +270,61 @@ function removeMsec(time){
     var templet_time=time.substring(0, templet_timeIndex);
     return templet_time;
 
+}
+
+//无订单页面
+function memberOrderNot(){
+    var templet_addhtml;
+    templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot"  >';
+    templet_addhtml+='<img src="images/share_nothing.png"  alt="">';
+    templet_addhtml+='<p>暂无相关订单</p> </div>';
+    $(".js-orderAllList").html(templet_addhtml);
+    $('.js_memberOrderNot').show();
+
+}
+
+//绘制标题栏数字
+function orderListCount(way){
+    if('付款'==way){
+        var templet_datePay={
+            "orderStatus":1
+        };
+
+        $.ajax({
+            url: siteConfig.userUrl + "/buy/order/order-front/list/",
+            data: JSON.stringify(templet_datePay),
+            applicationType: true,
+            login: true,
+            success_cb: function (data) {
+                if(!data.data.entityCount==0){
+                    $(".js-notPay").addClass('member-nub-round');
+                    $(".js-notPay").html(data.data.entityCount);
+                }
+                else{
+                    $(".js-notPay").removeClass('member-nub-round');
+                    $(".js-notPay").html('');
+                }
+            }
+        })
+    }
+    if('收货'==way){
+        var templet_dateReceived={
+            "orderStatus":3
+        };
+        $.ajax({
+            url: siteConfig.userUrl + "/buy/order/order-front/list/",
+            data: JSON.stringify(templet_dateReceived),
+            applicationType: true,
+            login: true,
+            success_cb: function (data) {
+                if(!data.data.entityCount==0){
+                    $(".js-notReceived").addClass('member-nub-round');
+                    $(".js-notReceived").html(data.data.entityCount);
+                }else{
+                    $(".js-notReceived").removeClass('member-nub-round');
+                    $(".js-notReceived").html('');
+                }
+            }
+        })
+    }
 }
