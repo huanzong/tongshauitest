@@ -44,211 +44,276 @@
 
                      </div>
                         <!-- 内容区域 START-->
-                    <div class="member_cont o_g  js-orderAllList">
+                    <div class="member_cont o_g js-orderAllList">
+                        <div class="member_contborder_box  o_u  o_df_11-12">
+                                <div class="o_g">
+                                    <div class="  order_cont_title_box">
+                                        <div class="o_u o_df_11-12">
+                                            <div class=" order_cont_title o_u o_df_9-12 o_sm_7-12 o_xs_7-12">
+                                                <h3>待付款</h3>
+                                                <div class="o_u">
+                                                    <p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>
+                                                    <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>
+                                                    <p class="o_u o_md_1-2  o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>
+                                                </div>
+                                                <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>
+                                            </div>
+                                            <div class=" order_cont_title_btn o_u o_df_3-12 o_sm_5-12 o_xs_5-12">
+                                                <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2">取消</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_11-12 order_content_box"  style="padding-top: 30px">
+                                        <div class="order-title-in-orange">
+                                            <!--<h3 >待付款</h3>-->
+                                        </div>
+                                        <div class="o_u o_df_2-12 order_content_img">
+                                            <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                        </div>
+                                        <div class="o_u o_df_8-12 o_xs_10-12 order_content_name">
+                                            <h4>统帅323L大容量无霜冰箱</h4>
+                                            <span>BCD-323WLDPN</span>
+                                        </div>
+                                        <div class="o_u o_df_2-12 order_content_nub">
+                                            x1
+                                        </div>
+                                    </div>
+                                    <div class="o_g order_content2_box">
+                                        <div class="o_u  o_df_11-12">
+                                            <div class="o_u o_df_2-12 order_content2_img">
+                                                <i class=" o_u iconfont icon-giftbox-solid"></i>
+                                            </div>
+                                            <div class="o_u o_df_8-12 o_md_9-12 o_sm_10-12 o_xs_10-12 order_content2_name">
+                                                <h4>金岁月扫地机器人<span>&nbsp;x1</span></h4>
+                                                <p>赠品将在您确认收货，并上传相关资料后发出 <a href="javascript:;">了解详细规则</a></p>
+                                            </div>
+                                            <div class="o_u o_df_2-12 o_md_1-12 order_content_nub">
+                                                x1
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <!--<div class="member_contborder_box  o_u  o_df_11-12">-->
-                            <!--<div class="o_g">-->
-                                <!--<div class="  order_cont_title_box">-->
-                                    <!--<div class="o_u o_df_11-12">-->
-                                        <!--<div class=" order_cont_title o_u o_df_2-2">-->
+                            </div>
+                        <div class="member_contborder_box  o_u  o_df_11-12">
+                            <div class="o_g">
+                                <div class="  order_cont_title_box">
+                                    <div class="o_u o_df_11-12">
+                                        <div class=" order_cont_title o_u o_df_2-2">
                                             <!--<h3>待评价</h3>-->
-                                            <!--<div class="o_u">-->
-                                                <!--<p class="o_u o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time "><span>2017-06-14 08:23:42</span></p>-->
-                                                <!--<p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>-->
-                                            <!--</div>-->
-                                            <!--<a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
+                                            <div class="o_u">
+                                                <p class="o_u o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time "><span>2017-06-14 08:23:42</span></p>
+                                                <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>
+                                            </div>
+                                            <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <!--<div class="o_u o_df_11-12 order_content3_box" >-->
-                                    <!--<div class="o_u o_df_2-12 order_content_img">-->
-                                        <!--<img src="../images/compare_goods.PNG" alt=""  >-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">-->
-                                        <!--<h4>统帅323L大容量无霜冰箱</h4>-->
-                                        <!--<span>BCD-323WLDPN</span>-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                        <!--x1-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">-->
-                                        <!--<ul class="o_u o_df_2-2">-->
-                                            <!--<li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12">-->
-                                                <!--<a href="javascript:;" class="l-btn-sm l-btn-orange  o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="o_u o_df_4-2  sm-hide">-->
-                                                <!--<a href="javascript:;" >查看物流</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="o_u o_df_2-2 sm-hide "><a href="javascript:;">下载发票</a></li>-->
+                                <div class="o_u o_df_11-12 order_content3_box" >
+                                    <div class="order-title-in-orange">
+                                        <h3 >待评价</h3>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_img">
+                                        <img src="../images/compare_goods.PNG" alt=""  >
+                                    </div>
+                                    <div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">
+                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                        <span>BCD-323WLDPN</span>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_nub">
+                                        x1
+                                    </div>
+                                    <div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">
+                                        <ul class="o_u o_df_2-2">
+                                            <li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12">
+                                                <a href="javascript:;" class="l-btn-sm l-btn-orange  o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a>
+                                            </li>
+                                            <li class="o_u o_df_4-2  sm-hide">
+                                                <a href="javascript:;" >查看物流</a>
+                                            </li>
+                                            <li class="o_u o_df_2-2 sm-hide "><a href="javascript:;">下载发票</a></li>
 
-                                            <!--<li class=" o_u o_df_2-2 o_sm_4-12 o_xs_4-12 ">-->
-                                                <!--<a href="javascript:;" class="sm-hide">申请售后</a>-->
-                                                <!--<a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_service">申请售后</a>-->
-                                            <!--</li>-->
+                                            <li class=" o_u o_df_2-2 o_sm_4-12 o_xs_4-12 ">
+                                                <a href="javascript:;" class="sm-hide">申请售后</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_service">申请售后</a>
+                                            </li>
 
-                                            <!--<li class="o_u o_df_2-2 o_sm_5-12 o_xs_3-12 order_list_more"   data-click='1'><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>-->
-                                                <!--<div class="l-float-tops">-->
-                                                    <!--<div class="float_content">-->
-                                                        <!--<a href="" class="o_u o_df_11-12">下载发票</a>-->
-                                                        <!--<a href="" class="o_u o_df_11-12">查看物流</a>-->
-                                                    <!--</div>-->
-                                                    <!--<p>-->
-                                                        <!--<i></i>-->
-                                                    <!--</p>-->
-                                                <!--</div>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="o_u o_df_11-12 order_content3_box" >-->
-                                    <!--<div class="o_u o_df_2-12 order_content_img">-->
-                                        <!--<img src="../images/compare_goods.PNG" alt=""  >-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">-->
-                                        <!--<h4>统帅323L大容量无霜冰箱</h4>-->
-                                        <!--<span>BCD-323WLDPN</span>-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                        <!--x1-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">-->
-                                        <!--<ul class="o_u o_df_2-2">-->
-                                            <!--<li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12">-->
-                                                <!--<a href="javascript:;" class="l-btn-sm l-btn-orange  o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="o_u o_df_4-2  sm-hide">-->
-                                                <!--<a href="javascript:;" >查看物流</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="o_u o_df_2-2 sm-hide "><a href="javascript:;">下载发票</a></li>-->
+                                            <li class="o_u o_df_2-2 o_sm_5-12 o_xs_3-12 order_list_more"   data-click='1'><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>
+                                                <div class="l-float-tops">
+                                                    <div class="float_content">
+                                                        <a href="" class="o_u o_df_11-12">下载发票</a>
+                                                        <a href="" class="o_u o_df_11-12">查看物流</a>
+                                                    </div>
+                                                    <p>
+                                                        <i></i>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_11-12 order_content3_box" >
+                                    <div class="order-title-in-orange">
+                                        <h3 >待评价</h3>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_img">
+                                        <img src="../images/compare_goods.PNG" alt=""  >
+                                    </div>
+                                    <div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">
+                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                        <span>BCD-323WLDPN</span>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_nub">
+                                        x1
+                                    </div>
+                                    <div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">
+                                        <ul class="o_u o_df_2-2">
+                                            <li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12">
+                                                <a href="javascript:;" class="l-btn-sm l-btn-orange  o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a>
+                                            </li>
+                                            <li class="o_u o_df_4-2  sm-hide">
+                                                <a href="javascript:;" >查看物流</a>
+                                            </li>
+                                            <li class="o_u o_df_2-2 sm-hide "><a href="javascript:;">下载发票</a></li>
 
-                                            <!--<li class=" o_u o_df_2-2 o_sm_4-12 o_xs_4-12 ">-->
-                                                <!--<a href="javascript:;" class="sm-hide">申请售后</a>-->
-                                                <!--<a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_service">申请售后</a>-->
-                                            <!--</li>-->
+                                            <li class=" o_u o_df_2-2 o_sm_4-12 o_xs_4-12 ">
+                                                <a href="javascript:;" class="sm-hide">申请售后</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_service">申请售后</a>
+                                            </li>
 
-                                            <!--<li class="o_u o_df_2-2 o_sm_5-12 o_xs_3-12 order_list_more"   data-click='1'><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>-->
-                                                <!--<div class="l-float-tops">-->
-                                                    <!--<div class="float_content">-->
-                                                        <!--<a href="" class="o_u o_df_11-12">下载发票</a>-->
-                                                        <!--<a href="" class="o_u o_df_11-12">查看物流</a>-->
-                                                    <!--</div>-->
-                                                    <!--<p>-->
-                                                        <!--<i></i>-->
-                                                    <!--</p>-->
-                                                <!--</div>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                <!--</div>-->
+                                            <li class="o_u o_df_2-2 o_sm_5-12 o_xs_3-12 order_list_more"   data-click='1'><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>
+                                                <div class="l-float-tops">
+                                                    <div class="float_content">
+                                                        <a href="" class="o_u o_df_11-12">下载发票</a>
+                                                        <a href="" class="o_u o_df_11-12">查看物流</a>
+                                                    </div>
+                                                    <p>
+                                                        <i></i>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                                <!--<div class="o_g order_content2_box">-->
-                                    <!--<div class="o_u  o_df_11-12">-->
-                                        <!--<div class="o_u o_df_2-12 order_content2_img">-->
-                                            <!--<i class=" o_u iconfont icon-giftbox-solid"></i>-->
-                                        <!--</div>-->
-                                        <!--<div class="o_u o_df_8-12 o_sm_10-12 o_xs_10-12 order_content2_name">-->
-                                            <!--<h4>金岁月扫地机器人<span>&nbsp;x1</span></h4>-->
-                                            <!--<p>赠品将在您确认收货，并上传相关资料后发出 <a href="javascript:;">了解详细规则</a></p>-->
-                                        <!--</div>-->
-                                        <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                            <!--x1-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
+                                <div class="o_g order_content2_box">
+                                    <div class="o_u  o_df_11-12">
+                                        <div class="o_u o_df_2-12 order_content2_img">
+                                            <i class=" o_u iconfont icon-giftbox-solid"></i>
+                                        </div>
+                                        <div class="o_u o_df_8-12 o_sm_10-12 o_xs_10-12 order_content2_name">
+                                            <h4>金岁月扫地机器人<span>&nbsp;x1</span></h4>
+                                            <p>赠品将在您确认收货，并上传相关资料后发出 <a href="javascript:;">了解详细规则</a></p>
+                                        </div>
+                                        <div class="o_u o_df_2-12 order_content_nub">
+                                            x1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <!--</div>-->
-                        <!--<div class="member_contborder_box  o_u  o_df_11-12">-->
-                            <!--<div class="o_g">-->
-                                <!--<div class="  order_cont_title_box">-->
-                                    <!--<div class="o_u o_df_11-12">-->
-                                        <!--<div class=" order_cont_title o_u o_df_2-2">-->
+                        </div>
+                        <div class="member_contborder_box  o_u  o_df_11-12">
+                            <div class="o_g">
+                                <div class="  order_cont_title_box">
+                                    <div class="o_u o_df_11-12">
+                                        <div class=" order_cont_title o_u o_df_2-2">
                                             <!--<h3>待发货</h3>-->
-                                            <!--<div class="o_u">-->
-                                                <!--<p class="o_u o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time" ><span>2017-06-14 08:23:42</span></p>-->
-                                                <!--<p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>-->
-                                            <!--</div>-->
-                                            <!--<a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="o_u o_df_11-12 order_content_box" >-->
-                                    <!--<div class="o_u o_df_2-12 order_content_img">-->
-                                        <!--<img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_8-12 o_xs_10-12 order_content_name">-->
-                                        <!--<h4>统帅323L大容量无霜冰箱</h4>-->
-                                        <!--<span>BCD-323WLDPN</span>-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                        <!--x1-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
+                                            <div class="o_u">
+                                                <p class="o_u o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time" ><span>2017-06-14 08:23:42</span></p>
+                                                <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>
+                                            </div>
+                                            <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <!--</div>-->
-                        <!--<div class="member_contborder_box  o_u  o_df_11-12">-->
-                            <!--<div class="o_g">-->
-                                <!--<div class="  order_cont_title_box">-->
-                                    <!--<div class="o_u o_df_11-12">-->
-                                        <!--<div class=" order_cont_title o_u o_df_2-2">-->
+                                <div class="o_u o_df_11-12 order_content_box" >
+                                    <div class="order-title-in-orange">
+                                        <h3 >待发货</h3>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_img">
+                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                    </div>
+                                    <div class="o_u o_df_8-12 o_xs_10-12 order_content_name">
+                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                        <span>BCD-323WLDPN</span>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_nub">
+                                        x1
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="member_contborder_box  o_u  o_df_11-12">
+                            <div class="o_g">
+                                <div class="  order_cont_title_box">
+                                    <div class="o_u o_df_11-12">
+                                        <div class=" order_cont_title o_u o_df_2-2">
                                             <!--<h3>待收货</h3>-->
-                                            <!--<div class="o_u">-->
-                                                <!--<p class="o_u  o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>-->
-                                            <!--</div>-->
-                                            <!--<a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="o_u o_df_11-12 order_content_box" >-->
-                                    <!--<div class="o_u o_df_2-12 order_content_img">-->
-                                        <!--<img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_8-12 o_xs_10-12 order_content_name">-->
-                                        <!--<h4>统帅323L大容量无霜冰箱</h4>-->
-                                        <!--<span>BCD-323WLDPN</span>-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                        <!--x1-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
+                                            <div class="o_u">
+                                                <p class="o_u  o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>
+                                            </div>
+                                            <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_11-12 order_content_box" >
+                                    <div class="order-title-in-orange">
+                                        <h3 >待收货</h3>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_img">
+                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                    </div>
+                                    <div class="o_u o_df_8-12 o_xs_10-12 order_content_name">
+                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                        <span>BCD-323WLDPN</span>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_nub">
+                                        x1
+                                    </div>
+                                </div>
+                            </div>
 
-                        <!--</div>-->
-                        <!--<div class="member_contborder_box  o_u  o_df_11-12">-->
-                            <!--<div class="o_g">-->
-                                <!--<div class="  order_cont_title_box">-->
-                                    <!--<div class="o_u o_df_11-12">-->
-                                        <!--<div class=" order_cont_title o_u o_df_2-2">-->
+                        </div>
+                        <div class="member_contborder_box  o_u  o_df_11-12">
+                            <div class="o_g">
+                                <div class="  order_cont_title_box">
+                                    <div class="o_u o_df_11-12">
+                                        <div class=" order_cont_title o_u o_df_2-2">
                                             <!--<h3 class="title_green">已完成</h3>-->
-                                            <!--<div class="o_u">-->
-                                                <!--<p class="o_u  o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>-->
-                                            <!--</div>-->
-                                            <!--<a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
+                                            <div class="o_u">
+                                                <p class="o_u  o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>
+                                            </div>
+                                            <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                                <!--<div class="o_u o_df_11-12 order_content3_box" >-->
-                                    <!--<div class="o_u o_df_2-12 order_content_img">-->
-                                        <!--<img src="../images/compare_goods.PNG" alt=""  >-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">-->
-                                        <!--<h4>统帅323L大容量无霜冰箱</h4>-->
-                                        <!--<span>BCD-323WLDPN</span>-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                        <!--x1-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">-->
+                                <div class="o_u o_df_11-12 order_content3_box" >
+                                    <div class="order-title-in-green">
+                                        <h3 >已完成</h3>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_img">
+                                        <img src="../images/compare_goods.PNG" alt=""  >
+                                    </div>
+                                    <div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name">
+                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                        <span>BCD-323WLDPN</span>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_nub">
+                                        x1
+                                    </div>
+                                    <div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns">
                                         <!--<ul class="o_u o_df_2-2">-->
                                             <!--<li class="o_u o_df_2-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;" class="btn_df_show">查看评价</a><a href="javascript:;" class="l-btn-sm l-btn-line2  btn_sm_show  o_u o_df_2-2 o_sm_11-12 o_xs_11-12">查看评价</a></li>-->
                                             <!--<li class="o_u o_df_4-2 o_sm_4-12 o_xs_4-12"><a href="javascript:;" class="check_service">查看物流</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_sm_11-12 o_xs_11-12 check_service">查看物流</a></li>-->
@@ -266,44 +331,82 @@
                                                 <!--</div>-->
                                             <!--</li>-->
                                         <!--</ul>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
 
-                        <!--</div>-->
-                        <!--<div class="member_contborder_box  o_u  o_df_11-12">-->
-                            <!--<div class="o_g">-->
-                                <!--<div class="  order_cont_title_box">-->
-                                    <!--<div class="o_u o_df_11-12">-->
-                                        <!--<div class=" order_cont_title o_u o_df_2-2">-->
-                                            <!--<h3 class="title_disable">已关闭</h3>-->
-                                            <!--<div class="o_u">-->
-                                                <!--<p class="o_u  o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>-->
-                                                <!--<p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>-->
-                                            <!--</div>-->
-                                            <!--<a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="o_u o_df_11-12 order_content_box" >-->
-                                    <!--<div class="o_u o_df_2-12 order_content_img">-->
-                                        <!--<img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_8-12 o_xs_10-12 order_content_name">-->
-                                        <!--<h4>统帅323L大容量无霜冰箱</h4>-->
-                                        <!--<span>BCD-323WLDPN</span>-->
-                                    <!--</div>-->
-                                    <!--<div class="o_u o_df_2-12 order_content_nub">-->
-                                        <!--x1-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
+
+                                        <ul class="o_u o_df_2-2">
+                                            <li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12">
+                                                <a href="javascript:;"  class="sm-hide" >查看评价</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-line2 see-evaluate  o_u o_df_8-12 o_sm_11-12 o_xs_11-12" data-alt="1">查看评价</a>
+                                            </li>
+                                            <li class="o_u o_df_4-2  sm-hide">
+                                                <a href="javascript:;" >查看物流</a>
+                                            </li>
+                                            <li class="o_u o_df_2-2 sm-hide "><a href="javascript:;">下载发票</a></li>
+
+                                            <li class=" o_u o_df_2-2 o_sm_4-12 o_xs_4-12 ">
+                                                <a href="javascript:;" class="sm-hide">申请售后</a>
+                                                <a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_service">申请售后</a>
+                                            </li>
+
+                                            <li class="o_u o_df_2-2 o_sm_5-12 o_xs_3-12 order_list_more"   data-click='1'><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>
+                                                <div class="l-float-tops">
+                                                    <div class="float_content">
+                                                        <a href="" class="o_u o_df_11-12">下载发票</a>
+                                                        <a href="" class="o_u o_df_11-12">申请售后</a>
+                                                    </div>
+                                                    <p>
+                                                        <i></i>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="member_contborder_box  o_u  o_df_11-12">
+                            <div class="o_g">
+                                <div class="order_cont_title_box">
+                                    <div class="o_u o_df_11-12">
+                                        <div class=" order_cont_title o_u o_df_2-2">
+                                            <h3 class="title_disable">已关闭</h3>
+                                            <div class="o_u">
+                                                <p class="o_u  o_md_2-2 o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>2017-06-14 08:23:42</span></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>2017061428818</i></p>
+                                                <p class="o_u  o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥5699</i></p>
+                                            </div>
+                                            <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_u o_df_11-12 order_content_box"   style="padding-top: 30px">
+                                    <div class="o_u o_df_2-12 order_content_img">
+                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
+                                    </div>
+                                    <div class="o_u o_df_8-12 o_xs_10-12 order_content_name">
+                                        <h4>统帅323L大容量无霜冰箱</h4>
+                                        <span>BCD-323WLDPN</span>
+                                    </div>
+                                    <div class="o_u o_df_2-12 order_content_nub">
+                                        x1
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
                      <!--暂无订单-->
                         <div class="o_g prdouct-search-zanwu js_memberOrderNot"  >
                             <img src="images/share_nothing.png"  alt="">
                             <p>暂无相关订单</p>
+                            <div>
+                                <a  href="javascript:;"  class="">去晒单 <i class="iconfont icon-arrow-line-right"></i> </a>
+                            </div>
+
                         </div>
                         <!--暂无订单 END-->
                         <!-- 内容区域 End-->
