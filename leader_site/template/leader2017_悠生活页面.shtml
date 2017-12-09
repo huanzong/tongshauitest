@@ -9,7 +9,6 @@
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
     <link rel="stylesheet" type="text/css" href="life_style.css">
-    <link rel="stylesheet" href="mediaelementplayer.min.css">
 </head>
 
 <body class=" ">
