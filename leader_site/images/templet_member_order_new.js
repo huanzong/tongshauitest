@@ -294,46 +294,44 @@ function memberOrderNot(way){
 
 //绘制标题栏数字
 function orderListCount(way){
+    var templet_date;
+    if('收货'==way){
+        templet_date={
+            "orderStatus":3
+        };
+    }
     if('付款'==way){
-        var templet_datePay={
+        templet_date={
             "orderStatus":1
         };
+    }
 
         $.ajax({
             url: siteConfig.userUrl + "/buy/order/order-front/list/",
-            data: JSON.stringify(templet_datePay),
+            data: JSON.stringify(templet_date),
             applicationType: true,
             login: true,
             success_cb: function (data) {
-                if(!data.data.entityCount==0){
-                    $(".js-notPay").addClass('member-nub-round');
-                    $(".js-notPay").html(data.data.entityCount);
+
+                if('收货'==way){
+                    if(!data.data.entityCount==0){
+                        $(".js-notReceived").addClass('member-nub-round');
+                        $(".js-notReceived").html(data.data.entityCount);
+                    }else{
+                        $(".js-notReceived").removeClass('member-nub-round');
+                        $(".js-notReceived").html('');
+                    }
                 }
-                else{
-                    $(".js-notPay").removeClass('member-nub-round');
-                    $(".js-notPay").html('');
-                }
-            }
-        })
-    }
-    if('收货'==way){
-        var templet_dateReceived={
-            "orderStatus":3
-        };
-        $.ajax({
-            url: siteConfig.userUrl + "/buy/order/order-front/list/",
-            data: JSON.stringify(templet_dateReceived),
-            applicationType: true,
-            login: true,
-            success_cb: function (data) {
-                if(!data.data.entityCount==0){
-                    $(".js-notReceived").addClass('member-nub-round');
-                    $(".js-notReceived").html(data.data.entityCount);
-                }else{
-                    $(".js-notReceived").removeClass('member-nub-round');
-                    $(".js-notReceived").html('');
+                if('付款'==way){
+                    if(!data.data.entityCount==0){
+                        $(".js-notPay").addClass('member-nub-round');
+                        $(".js-notPay").html(data.data.entityCount);
+                    }
+                    else{
+                        $(".js-notPay").removeClass('member-nub-round');
+                        $(".js-notPay").html('');
+                    }
                 }
             }
         })
-    }
 }
