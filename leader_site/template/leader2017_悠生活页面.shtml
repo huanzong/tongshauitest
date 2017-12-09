@@ -8,7 +8,7 @@
         <meta name="format-detection" content="telephone=no, email=no" />
         <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
         <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
-        <link rel="stylesheet" type="text/css" href="life_style.css">
+        <link rel="stylesheet" type="text/css" href="life_style.css" OLDSRC="life_style.css" RELATED="1">
         <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
 </head>
 
