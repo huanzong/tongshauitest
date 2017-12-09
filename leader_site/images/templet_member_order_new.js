@@ -69,7 +69,7 @@ function searchAllList(currPageT, pageSize){
             var currentPageNo = data.data.pageNo;
             var templet_addhtml = '';
             if(templet_orderlist.length==0){
-                memberOrderNot();
+                memberOrderNot('1');
                 return;
             }
             for (var i = 0; i < templet_orderlist.length; i++) {
@@ -259,7 +259,7 @@ $('.js_orderList>li').click(function(){
     }
     //待评论
     if(3==index){
-
+        memberOrderNot();
     }
 
 });
@@ -273,11 +273,20 @@ function removeMsec(time){
 }
 
 //无订单页面
-function memberOrderNot(){
+function memberOrderNot(way){
     var templet_addhtml;
-    templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot"  >';
-    templet_addhtml+='<img src="images/share_nothing.png"  alt="">';
-    templet_addhtml+='<p>暂无相关订单</p> </div>';
+    if(way==1){
+        templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot" >';
+        templet_addhtml+='<img src="../images/share_nothing.png"  alt="">';
+        templet_addhtml+='<p>还没有任何订单，去寻找心仪的产品吧</p>';
+        templet_addhtml+='<div> <a  href="http://test.tongshuai.com/cooling/"  class="">轻产品 <i class="iconfont icon-arrow-line-right"></i> </a></div></div>';
+    }else{
+        templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot"  >';
+        templet_addhtml+='<img src="../images/share_nothing.png"  alt="">';
+        templet_addhtml+='<p>暂无订单记录</p> </div>';
+
+
+    }
     $(".js-orderAllList").html(templet_addhtml);
     $('.js_memberOrderNot').show();
 
