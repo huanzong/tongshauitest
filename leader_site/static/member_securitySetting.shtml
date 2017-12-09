@@ -48,7 +48,7 @@
                                             <div class="member-functioname">账号密码</div>
                                         </div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functioninfo"></div>
-                                        <div class="o_u o_df_1-3 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">用于保护帐号信息和登录安全</div></div></div></div>
+                                        <div class="o_u o_df_1-3 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">用于保护账号信息和登录安全</div></div></div></div>
                                         <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox">
                                             <a href="/security/index_103.shtml" class="l-btn-sm l-btn-line2 member-security-revisebtn">修改</a>
                                         </div>

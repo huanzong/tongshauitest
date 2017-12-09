@@ -480,7 +480,7 @@
                                             <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">
                                             <div class="o_u o_df_6-12">
                                                 <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                    <img src="images/detail_prd01.png" alt="">
+                                                    <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>' alt="">
                                                 </div>
                                                 <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
                                                     <p><trs_viewdata field='xmjg'/></p>
@@ -495,7 +495,7 @@
                                             <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="2">
                                                 <div class="o_u o_df_6-12">
                                                     <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                        <img src="images/detail_prd01.png" alt="">
+                                                        <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>' alt="">
                                                     </div>
                                                     <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
                                                         <p><trs_viewdata field='xmjg'/></p>
