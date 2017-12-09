@@ -12,6 +12,23 @@ var templet_pageNo=1;
 var templet_pageSize=10;
 loadUserInfoList();//获取用户地址列表
 
+
+
+var infotell=[];
+//固定电话号码错误显示逻辑
+$('.js_addressPhoneInput').find('input').blur(function(){
+    var inputVal = $.trim($(this).val());
+    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
+    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+        $(this).removeClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_wrong').length!=0){
+        $(this).addClass('Validform_error');
+        infotell[nubName-1] = '';
+    }else if($(this).siblings('.Validform_right').length!=0){
+        infotell[nubName-1] = inputVal;
+    }
+})
 //取消弹框提示
 var templet_text="确定取消添加吗？";
 $('.js_addressCancel').click(function(){
@@ -33,9 +50,10 @@ $(".js-alertTrue").click(function(){
 });
 $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
     templet_text = '确定取消添加？';
-    resetForm();
     $(".js_btnSubmit").attr("type",1);
     $(".js_form_addAddrManagement").show();
+    resetForm();
+    $('.lose').css('background-color','#fff');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
 })
 var templet_pageNo=1;
@@ -201,9 +219,13 @@ function saveUserAddress(){
     var bool = false;
     var realnameVal=$.trim($("#realName").val());//联系人
     var mobileVal=$.trim($("#mobile").val());//手机号
-    var phoneVal=$.trim($("#phone").val());//电话号
-    var phonequhaoVal=$.trim($("#phonequhao").val());//区号
-    var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    // var phoneVal=$.trim($("#phone").val());//电话号
+    // var phonequhaoVal=$.trim($("#phonequhao").val());//区号
+    // var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    var phonequhaoVal=infotell[0];//区号
+    var phoneVal= infotell[1];//电话号
+    var phonefenjihaoVal=infotell[2];//分机号
+
     var provinceVal=$.trim($("#js_save").val());//省
     var cityVal=$.trim($("#js_city").val());//市
     var areaVal=$.trim($("#js_area").val());//区
@@ -212,7 +234,14 @@ function saveUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
-    var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
+
+    if(phonequhaoVal&&phoneVal){
+        var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
+    }else{
+        var telPhoneVal='';
+    }
+
+
 
     var data = {
         "customerName":realnameVal,
@@ -239,7 +268,7 @@ function saveUserAddress(){
             if(responseT.isSuccess){
                 loadUserInfoList();//获取列表
                 resetForm();//重置表单
-                $(".js_newAddress").hide();
+                $(".js_form_addAddrManagement").hide();
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2("添加地址失败，请稍后重试...",2,2000);
@@ -256,9 +285,12 @@ function saveUserAddress(){
 }
 
 //校验表单验证，成功后保存地址
-$(".js_form_addAddrManagement").Validform({
+var address=$(".js_form_addAddrManagement").Validform({
     tiptype:3,
     btnSubmit:".js_btnSubmit",//提交按钮
+    showAllError:false,
+    ignoreHidden:false,
+    dragonfly:false,
     callback:function(form){//验证后保存地址
         var templet_type=$(".js_btnSubmit").attr("type");//判断保存和修改
         if(templet_type==1){
@@ -270,6 +302,9 @@ $(".js_form_addAddrManagement").Validform({
     }
 });
 
+$(function(){
+    address.ignore('#phonequhao,#phone,#phonefenjihao');
+})
 //获取用户地址列表
 function loadUserInfoList(){
     $.ajax({
@@ -287,6 +322,7 @@ function loadUserInfoList(){
                 var count = addlist.length;
                 if(count != 0){
                     $(".js_memberAddressBtn").show();//显示"新增地址"按钮
+                    $(".js_form_addAddrManagement").hide();//隐藏"新增地址"表单
                     $(".js_lineInfo").html("");
                     var addhtml="";
                     for(var i=0;i<count;i++){
@@ -360,10 +396,14 @@ function resetForm(){
     templet_select_shi.lose();
     templet_select_qu.lose();
     templet_select_road.lose();
+    $("#realName").blur();
+    $("#mobile").blur();
     $("#address").blur();
     $("#phonequhao").blur();
     $("#phone").blur();
     $("#phonefenjihao").blur();
+     $('.js-addressMobError').html(' ');
+    $('.Validform_error').removeClass('Validform_error');
 };
 
 
@@ -478,7 +518,7 @@ var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
-    $('.lose').css('background-color','#ccc');
+    $('.lose').css('background-color','#fff');
     $(window).scrollTop($('.member-security-tit').height())
     $(".js_btnSubmit").attr("type",2);
     saveId=id;
@@ -703,21 +743,7 @@ function getAddressInfo(id){
     });
 }
 
-var infotell=[];
-//固定电话号码错误显示逻辑
-$('.js_addressPhoneInput').find('input').blur(function(){
-    var inputVal = $.trim($(this).val());
-    var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
-    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
-        $(this).removeClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_wrong').length!=0){
-        $(this).addClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_right').length!=0){
-        infotell[nubName-1] = inputVal;
-    }
-})
+
 //保存修改地址
 function updateUserAddress(){
     var bool = false;
@@ -726,6 +752,10 @@ function updateUserAddress(){
     //var phoneVal=$.trim($("#phone").val());//电话号
     //var phonequhaoVal=$.trim($("#phonequhao").val());//区号
     //var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
+    var phonequhaoVal=infotell[0];//区号
+    var phoneVal= infotell[1];//电话号
+    var phonefenjihaoVal=infotell[2];//分机号
+    var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
     var provinceVal=$.trim($("#js_save").val());//省
     var cityVal=$.trim($("#js_city").val());//市
     var areaVal=$.trim($("#js_area").val());//区
@@ -735,9 +765,8 @@ function updateUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
-    if(infotell[0]&&infotell[1]){
-        var telPhoneVal=infotell[0]+";"+infotell[1]+";"+infotell[2];
-
+    if(phonequhaoVal&&phoneVal){
+        var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
     }else{
         var telPhoneVal='';
     }

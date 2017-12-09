@@ -144,39 +144,20 @@
                                                 <!--</div>-->
                                                 <!--</div>-->
                                                 <!--</div>-->
-                                                <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df">
+                                                <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df js-recommendation" smallfreshen="0" freshen="A">
                                                     <div class="o_g member-home-down-table table-title">
                                                         <div class="o_u o_df_2-2">
                                                             <span>精选推荐</span>
-                                                            <a href="javascript:;" class="iconfont icon-refresh-solid"></a>
+                                                            <a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>
                                                         </div>
                                                     </div>
-                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 ">
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
 
-                                                        <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3">
-                                                                <img src="images/compare_goods.PNG">
-                                                            </a>
-                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                                <strong>￥2999.00</strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 ">
-
-                                                        <div class="member-home-down-cont">
-                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3">
-                                                                <img src="images/compare_goods.PNG">
-                                                            </a>
-                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3">
-                                                                <p class="pro-info-title">统帅就给个洗衣机</p>
-                                                                <span class="pro-info-type">JGEJJGEJ-988</span>
-                                                                <strong>￥2999.00</strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
                                                 </div>
                                             </div>
                                             <!--<div class="o_u o_df_1-12"></div>-->
@@ -206,5 +187,6 @@
 <script type="text/javascript" src="images/member_nav.js"></script>
 
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
+<script type="text/javascript" src="images/templet_member_home.js"></script>
 </body>
 </html>

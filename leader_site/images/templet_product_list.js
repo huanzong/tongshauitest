@@ -214,8 +214,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     searchHtml += '<div class="prolist-box">';
                     if (rqcp == "是") {
                         searchHtml += '<span class="l-tag-radius l-tag-green pro-tag">人气</span>'
-                    }
-                    if ((curDate - newsssj) <= bdate) {
+                    } else if ((curDate - newsssj) <= bdate) {
                         searchHtml += '<span class="l-tag-radius l-tag-blue pro-tag">新品</span>';
                     }
                     searchHtml += '<div class="pro-opporate">';
@@ -265,7 +264,11 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                 //分页结束1
             } else {
                 //设置总数
-                $(".red").html(returnData.length);
+                if (returnData == null) {
+                    $(".red").html(0);
+                } else {
+                    $(".red").html(returnData.length);
+                }
                 $(".prolist-con").html(searchHtml);
             }
 
@@ -309,7 +312,7 @@ $(".font").each(function () {
             order = "-shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "+cprq"
+            order = "+rqcp"
         }
         if ($(this).text() == "价格") {
             order = "+price"
@@ -323,7 +326,7 @@ $(".font").each(function () {
             order = "+shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "-cprq"
+            order = "-rqcp"
         }
         if ($(this).text() == "价格") {
             order = "-price"
@@ -337,15 +340,22 @@ function noneShaiXuan(currentClass) {
     var noneShaiXuan;
     if (currentClass == ".sole-type") {
         noneShaiXuan = $(".js_screenClick").find(".filter-line");
+
+        if (noneShaiXuan.length == '' || noneShaiXuan.length == 0) {
+            $(".js_listNavhide").hide();
+        } /*else {
+            $(".js_listNavhide").show();
+        }*/
     } else {
         noneShaiXuan = $(".layer-list").find("li");
+
+        if (noneShaiXuan.length == '' || noneShaiXuan.length == 0) {
+            $(".js_listMobileNavhide").hide();
+        } /*else {
+            $(".js_listMobileNavhide").show();
+        }*/
     }
 
-    if (noneShaiXuan.length == '' || noneShaiXuan.length == 0) {
-        $(".js_listNavhide").hide();
-    } else {
-        $(".js_listNavhide").show();
-    }
 
 }
 

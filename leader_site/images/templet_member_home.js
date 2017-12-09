@@ -3,13 +3,8 @@
 * @author:      刘悦
 * @date        2017.11.15
 * ---------------------------------------------------------------------------*/
-var templet_entities;
-var templet_addhtml;
-$(function () {
-
-    $('.js-recommendation').attr('freshen', 'A');
-
-    //精选推荐 4个按时间倒序
+$(function(){
+    var templet_entities;
     var data = {
         "orderBy": "-shangshishijian",
         "pageNo": 1,
@@ -22,29 +17,39 @@ $(function () {
         login: true,
         success_cb: function (data) {
             templet_entities = data.data.entities;
-            freshenA();
+            //大于575显示两个 小于575显示一个
+            if($(window).width()<=575){
+                smallfreshen(templet_entities);
 
+
+            }else{
+                freshenA(templet_entities);
+            }
             $('.js-freshen').live('click',function () {
-                if ($('.js-recommendation').attr('freshen') == 'A') {
-                    freshenB();
-
-                }
-                else if ($('.js-recommendation').attr('freshen') == 'B') {
-                    freshenA();
+                if($(window).width()<=575){
+                    smallfreshen(templet_entities);
+                }else{
+                    if ($('.js-recommendation').attr('freshen') == 'A') {
+                        freshenB(templet_entities);
+                        $('.js-recommendation').attr('smallfreshen',0);
+                    }
+                    else if ($('.js-recommendation').attr('freshen') == 'B') {
+                        freshenA(templet_entities);
+                        $('.js-recommendation').attr('smallfreshen',2);
+                    }
                 }
             })
-
         }
     });
 })
-//第一第二个产品
-function freshenA() {
+
+//第一第二个产品(大于575)
+function freshenA(templet_entities) {
     $('.js-recommendation').attr('freshen','A');
-    templet_addhtml='';
-    templet_addhtml+='<div class="o_g member-home-down-table"><div class="o_u o_df_11-12"> <span>精选推荐</span>';
-    templet_addhtml+='<a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>';
-    templet_addhtml+='</div></div>';
-    templet_branches=2;
+
+    $(".js-recommendation div.js-product").remove();
+    var templet_addhtml='';
+    var templet_branches=2;
     //如果产品总数小于2
     if(templet_branches>templet_entities.length){
         templet_branches=templet_entities.length;
@@ -53,42 +58,68 @@ function freshenA() {
         var templet_docpuburl=templet_entities[i].docpuburl;
         var templet_location=templet_docpuburl.lastIndexOf("\/");
         var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[i].appfile;
-        templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2">';
+        templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 js-product">';
         templet_addhtml+='<div class="member-home-down-cont">';
-        templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3" href="'+templet_docpuburl+'">';
+        templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3" href="'+templet_docpuburl+'">';
         templet_addhtml+='<img src="'+templet_picUrl+'"/></a>';
-        templet_addhtml+='<a href="'+templet_docpuburl+'"><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2"> ';
+        templet_addhtml+='<a href="'+templet_docpuburl+'"><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3"> ';
         templet_addhtml+='<p class="pro-info-title">'+templet_entities[i].pname+'</p>';
         templet_addhtml+='<span class="pro-info-type">'+templet_entities[i].modelno+'</span>';
         templet_addhtml+='<strong>￥'+templet_entities[i].price+'.00</strong></div></a></div></div> ';
     }
-    $('.js-recommendation').html(templet_addhtml);
+    $('.js-recommendation').append(templet_addhtml);
 
 }
-function freshenB() {
+//第三第四个产品(大于575)
+function freshenB(templet_entities) {
     //如果产品总数小于2就不执行B方法
     if(2>templet_entities.length){
         return;
     }
     $('.js-recommendation').attr('freshen','B');
-    templet_addhtml='';
-    templet_addhtml+='<div class="o_g member-home-down-table"><div class="o_u o_df_11-12"> <span>精选推荐</span>';
-    templet_addhtml+='<a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>';
-    templet_addhtml+='</div></div>';
+
+    $(".js-recommendation div.js-product").remove();
+    var templet_addhtml='';
     for(var i=2;i<templet_entities.length;i++){
         var templet_docpuburl=templet_entities[i].docpuburl;
         var templet_location=templet_docpuburl.lastIndexOf("\/");
         var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[i].appfile;
-        templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2">';
+        templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 js-product">';
         templet_addhtml+='<div class="member-home-down-cont">';
-        templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3" href="'+templet_docpuburl+'">';
+        templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3" href="'+templet_docpuburl+'">';
         templet_addhtml+='<img src="'+templet_picUrl+'"/></a>';
-        templet_addhtml+='<a href="'+templet_docpuburl+'"><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2"> ';
+        templet_addhtml+='<a href="'+templet_docpuburl+'"><div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3"> ';
         templet_addhtml+='<p class="pro-info-title">'+templet_entities[i].pname+'</p>';
         templet_addhtml+='<span class="pro-info-type">'+templet_entities[i].modelno+'</span>';
         templet_addhtml+='<strong>￥'+templet_entities[i].price+'.00</strong></div></a></div></div> ';
     }
-    $('.js-recommendation').html(templet_addhtml);
+    $('.js-recommendation').append(templet_addhtml);
+}
+
+//小于575的时候根据Div里面的smallfreshen来取值
+function smallfreshen(templet_entities){
+    var templet_count=$('.js-recommendation').attr('smallfreshen')
+    $(".js-recommendation div.js-product").remove();
+    var templet_addhtml='';
+    var templet_docpuburl=templet_entities[templet_count].docpuburl;
+    var templet_location=templet_docpuburl.lastIndexOf("\/");
+    var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[templet_count].appfile;
+    templet_addhtml+='<div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_2-2 js-product">';
+    templet_addhtml+='<div class="member-home-down-cont">';
+    templet_addhtml+='<a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_1-3" href="'+templet_docpuburl+'">';
+    templet_addhtml+='<img src="'+templet_picUrl+'"/></a>';
+    templet_addhtml+='<div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-3"><a href="\'+templet_docpuburl+\'"> ';
+    templet_addhtml+='<p class="pro-info-title">'+templet_entities[templet_count].pname+'</p>';
+    templet_addhtml+='<span class="pro-info-type">'+templet_entities[templet_count].modelno+'</span>';
+    templet_addhtml+='<strong>￥'+templet_entities[templet_count].price+'.00</strong></a></div></div></div> ';
+    $('.js-recommendation').append(templet_addhtml);
+
+    templet_count++;
+    if(templet_count>=templet_entities.length){
+        $('.js-recommendation').attr('smallfreshen',0);
+    }else{
+        $('.js-recommendation').attr('smallfreshen',templet_count);
+    }
 }
 
 

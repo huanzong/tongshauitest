@@ -2,7 +2,6 @@
 
 
 /*个人信息*/
-
 .member_order_title_box {
     text-align: center;
     >h2 {
@@ -225,7 +224,7 @@
 //产品模块1
 .order_content_box,
 .order_content3_box {
-    padding: 30px 0;
+    padding: 0 0 30px 0;
     border-bottom: 1px solid #eee;
     .order_content_img {
         text-align: left;
@@ -360,6 +359,7 @@
             .order_list_more {
                 height: 32px;
                 line-height: 32px;
+                z-index: 9;
                 input {
                     width: 1px;
                     height: 1px;
@@ -367,6 +367,12 @@
                     background: #fff;
                 }
                 display: none;
+                >a{
+                    @media (max-width: 575px) {
+                        width: 60px;
+                    }
+                }
+
                 }
 
             li {
@@ -454,6 +460,10 @@
                 margin: 0 0 0 10px;
 
               }
+              .see-evaluate{
+                  display: inline-block;
+                  width: 95px;
+              }
               .order_list_more{
                 float: right;
                 display: inline-block;
@@ -477,6 +487,10 @@
               }
               .sm-hide{
                 display: none;
+              }
+              .see-evaluate{
+                  display: inline-block;
+                  width: 95px;
               }
               .check_service{
                  display: inline-block;
@@ -703,4 +717,42 @@
 
 .order_cont_title_time {
     padding-left: 0 !important;
+}
+.prdouct-search-zanwu{
+    padding-top: 60px;
+    display: none;
+    p{
+        font-size: 20px;
+        color: #333;padding-top: 20px;
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+        padding-top: 45px;
+        img{
+            width: 64px;
+        }
+    }
+}
+.order-title-in-orange,.order-title-in-green{
+    h3{
+        font-size: 16px;
+
+        padding: 5px 0 5px 0;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        width: 79px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 10px 0 0;
+    }
+    text-align: right;
+
+}
+
+
+.order-title-in-orange{
+    h3{color:@l-orange ; }
+}
+.order-title-in-green{
+    h3{color:@l-green ; }
 }

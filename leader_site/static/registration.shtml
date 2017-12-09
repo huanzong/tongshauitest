@@ -48,17 +48,17 @@
                                             <div class="reg-input">
                                                 <div class="l-input">
                                                     <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
-                                                    <i class="iconfont icon-lock-solid"></i>
-                                                    <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号</p>
+                                                    <i class="iconfont icon-eye-close-solid"></i>
+                                                    <!-- <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号</p> -->
                                                 </div>
                                             </div>
-                                            <div class="reg-input">
+                                            <!-- <div class="reg-input">
                                                 <div class="l-input o_borderbox">
                                                     <input type="text"  class="o_borderbox" name="" ph="图形验证码" maxlength="4">
                                                     <a href="javascript:;" class="exchange">换一换</a>
                                                     <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable code"><img src="images/l_validateCode.png"/></a>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="reg-input">
                                                 <div class="l-input">
                                                     <input type="text" name="password" ph="短信验证码">
@@ -84,7 +84,7 @@
                                             <div class="reg-input">
                                                 <div class="l-input">
                                                     <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
-                                                    <i class="iconfont icon-lock-solid"></i>
+                                                    <i class="iconfont icon-eye-close-solid"></i>
                                                 </div>
                                             </div>
                                             <div class="reg-input">
@@ -96,7 +96,7 @@
                                             <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable reg-btn">注册</a>
                                             <a href="javascript:;" class="l-btn-lg l-btn-line1 o_df-hide o_md-show o_sm-show o_xs-show reg-btn-line js_regType"  data-reg=0>使用手机注册</a>
                                             <div class="reg-info">
-                                                点击"注册"，即表示您同意并愿意遵守<br><a href="javascript:;">《统帅用户注册协议》</a>和<a href="javascript:;">《隐私政策》</a>
+                                                点击“注册”，即表示您同意并愿意遵守<br><a href="javascript:;">《统帅用户注册协议》</a>和<a href="javascript:;">《隐私政策》</a>
                                             </div>
                                             <div class="reg-login-bottom o_df-hide o_md-show o_sm-show o_xs-show">
                                                 <span>已经注册，<a href="javascript:;">立即登录</a></span>

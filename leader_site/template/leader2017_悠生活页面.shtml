@@ -44,21 +44,28 @@
             <div class="life-style-video-box js_styleVideoBox">
                 <div class="life-style-video-cont js_styleVideoCont">
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft" data-alt="false">
+                       data-alt="false">
+                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
                         <!-- <img src="" alt=""> --></a>
                     <div class="video-cont-md o_g">
                         <div class="js_lifeStyleVideoSwipe o_u o_df_11-12" style="overflow: hidden;">
                             <ul class="o_u o_df_12-12 swiper-wrapper">
                                 <li class= "o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide" data-index = "1" data-gif="">
+                                    data-index="1" data-gif="">
                                     <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" width="100%" alt="">
+                                         class="" width="100%" alt="">
                                 </li>
                                 <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide" data-index = "2" data-gif="">
+                                    data-index="2" data-gif="">
                                     <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class=""  width="100%" alt="">
+                                         class="" width="100%" alt="">
                                 </li>
                             </ul>
                         </div>
                        
                         <div class=" video-cont-md-imgmin  o_u o_df_1-12 js_videoMdImgMin">
                             <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" alt="">
+                                 class="" alt="">
 
                             
                         </div>
@@ -66,17 +73,25 @@
           
                     <div class="o_u o_df_6-12 o_lg_8-12  o_md_12-12 o_sm_12-12 o_xs_12-12 video-cont-center">
                         <img src="images/style_life_title.png" alt="">
+                        <p>
                         <p><trs_viewdata field='textdescription'/></p>
+                        </p>
                         <div>
                             <trs_viewdata field='textdescription'/>
                         </div>
+                        <a href="javascript:;" class="js_lifeStylePlay"
                         <a href="javascript:;" class="js_lifeStylePlay" data-src = "<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png" alt=""></a>
+                                                                              alt=""></a>
                     </div>
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"></a>
+                       data-alt="false">
+                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                             alt=""></a>
                 </div>
             </div>
             <div class="life-style-player js_playerBox">
                 <video  id="player" class="o_df-hide js_jchg_video player" src="<trs_viewdata field='link_video'/>" type="video/mp4" controls preload="auto"></video>
+                       type="video/mp4" controls preload="auto"></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
             </trs_viewdatas>
@@ -97,10 +112,13 @@
                         <div class="swiper-wrapper">
                             <trs_viewdatas id="悠生活轮播">
                             <div class="swiper-slide">
+                                <div class="photo-list-img js_lifeStylePhotoCentent"
                                 <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url('<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>') no-repeat ;"></div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
+                                    <p>
                                     <p><trs_viewdata field='text_description'/></p>
+                                    </p>
                                 </div>
                             </div>
                             </trs_viewdatas>
@@ -116,7 +134,9 @@
                     <div class="life-style-photo-cur-text js_lifeStyelGoodLifeDown">
                         <trs_viewdatas id="悠生活轮播" num="1" startpos="0">
                         <img src="images/style_photo_1_text.png" alt="">
+                        <p class="js_lifeStyelGoodLifeText">
                         <p class="js_lifeStyelGoodLifeText"><trs_viewdata field='text_description'/></p>
+                        </p>
                         </trs_viewdatas>
                     </div>
                 </div>
@@ -255,6 +275,7 @@
                     <div class="o_u o_df_4-12 o_md_5-12 o_sm_5-12 o_xs_12-12 superiority-left-box js_superioritySwiperLeft">
                         <div class="swiper-wrapper">
                             <div class="superiority-left js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_12-12">
+                            <a href="javascript:;"
                                 <a href="javascript:;" class="superiority-img-btn 1111 iconfont icon-arrow-jiantou-left js_superiorityRightBtn "></a>
                                 <div class="superiority-left-cont ">
                                     <img src="images/superiority-left-cont1.png" alt="">
@@ -263,6 +284,7 @@
                                 </div>
                             </div>
                             <div class="superiority-left superiority-left2 js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_12-12">
+                            <a href="javascript:;"
                                 <a href="javascript:;" class=" js_superiorityRightBtn superiority-img-btn iconfont icon-arrow-jiantou-left"></a>
                                 <div class="superiority-left-cont ">
                                     <img src="images/superiority-left-cont2.png" alt="">
@@ -271,10 +293,12 @@
                                 </div>
                             </div>
            
+                        <a href="javascript:;"
                             <a href="javascript:;" class="js_liftSuperiorityLeft superiority-left-btn iconfont icon-arrow-jiantou-left"></a>
                         </div>
                     </div>
                     <div class="o_u o_df_4-12 o_md_2-12  o_sm_2-12 o_xs_2-12 superiority-minbox js_superiorityJt" style="display: none">
+                     style="display: none">
                         <div class="superiority-left-min js_superiorityLeftMin">
                             <img src="images/style_life_superiority_3min.jpg" height="100%" alt="">
                             <a href="javascript:;" class="iconfont js_superiorityRightBtn icon-arrow-jiantou-left"></a>
@@ -296,8 +320,10 @@
                     </div>
                     <div class="o_u o_df_4-12  o_md_5-12  o_sm_5-12 o_xs_12-12 superiority-left-box js_superioritySwiperRight">
                         <div class="swiper-wrapper">
+                        <a href="javascript:;"
                             <a href="javascript:;" class="superiority-right-btn js_liftSuperiorityRight iconfont icon-arrow-jiantou-right "></a>
                             <div class="superiority-right js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_4-12">
+                            <a href="javascript:;"
                                 <a href="javascript:;" class="superiority-img-btn iconfont icon-arrow-jiantou-right js_superiorityLeftBtn"></a>
                                 <div class="superiority-left-cont ">
                                     <img src="images/superiority-left-cont3.png" alt="">
@@ -306,6 +332,7 @@
                                 </div>
                             </div>
                             <div class="superiority-right superiority-right2 js_lifeStyleSuperiorityL swiper-slide o_u o_df_12-12 o_xs_4-12">
+                            <a href="javascript:;"
                                 <a href="javascript:;" class="superiority-img-btn iconfont icon-arrow-jiantou-right js_superiorityLeftBtn"></a>
                                 <div class="superiority-left-cont ">
                                     <img src="images/superiority-left-cont4.png" alt="">
@@ -379,6 +406,7 @@
                             <trs_viewdatas id="悠生活生活诠释" num="3" startpos="0">
                             <div class="swiper-slide" data-index="">
                                  <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" width="100%" alt="">
+                                     width="100%" alt="">
                             </div>
                             </trs_viewdatas>
                         </div>
@@ -408,8 +436,12 @@
                     <li class="cur">
                         <img src="images/life-style-case-title.png" alt="">
                         <div class="life-case-text"> <img src="images/life-style-case-titleleft.png" class="left" alt=""><trs_viewdata field='textdescription_right'/><img src="images/life-style-case-titleright.png" class="right" alt=""></div>
+                            <trs_viewdata field='textdescription_right'/>
+                            <img src="images/life-style-case-titleright.png" class="right" alt=""></div>
                         <div class="life-case-text-down">
+                            <p>
                             <p><trs_viewdata field='prod_txt'/></p>
+                            </p>
                             <span><trs_viewdata field='prod_model'/></span>
                         </div>
                     </li>
@@ -423,6 +455,7 @@
             <div class="life-style-create">
                 <div class="life-style-create-cont-box">
                     <div class="o_u o_df_1-12 create-left-btn">
+                    <a href="javascript:;"
                         <a href="javascript:;" class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
                     </div>
                     <div class="o_u o_df_5-12 o_lg_6-12 o_md_8-12 o_sm_10-12 o_xs_10-12">
@@ -568,6 +601,8 @@
                                 <div class="js_lifeStyleCreateSwipe_3 js_lifeStyleCreateSwipe" >
                                 <ul class="swiper-wrapper">
                                     <li class="o_u o_df_12-12 swiper-slide">
+                                            <trs_viewdata field='prod_content1'/>
+                                            <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">
                                         <div class="o_u o_df_6-12">
                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
                                             <img src="images/detail_prd01.png" alt="">
@@ -593,6 +628,7 @@
                                       
                                     </li>
                                     <li class="o_u o_df_12-12 swiper-slide">
+                                            <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="2">
                                         <div class="o_u o_df_6-12">
                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
                                             <img src="images/detail_prd01.png" alt="">
@@ -620,12 +656,14 @@
                              
                                 </ul>
                                 </div>
+                            </trs_viewdatas>
                                 <!-- 至尚系列轮播 end -->
 
                             </div>
                         </div>
                     </div>
                     <div class="o_u o_df_1-12 create-right-btn">
+                    <a href="javascript:;"
                         <a href="javascript:;" class="iconfont js_lifeStyleCreateRightBtn icon-arrow-jiantou-right life-style-create-btn"></a>
                     </div>
                 </div>
@@ -642,6 +680,14 @@
                 $("#lifepic div").eq(0).attr("data-index","1");  //第一个div
                 $("#lifepic div").eq(1).attr("data-index","2");//第二个div
                 $("#lifepic div").eq(2).attr("data-index","3");  //第三个div
+
+            $("#series_name li").eq(0).addClass("cur");  //系列产品推荐中系列列表第一个li
+            $("#series_txt p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
+            $("#series_txt p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
+
+            $(".lbindex").eq(0).addClass("js_lifeStyleCreateSwipe_1");
+            $(".lbindex").eq(1).addClass("js_lifeStyleCreateSwipe_2");
+            $(".lbindex").eq(2).addClass("js_lifeStyleCreateSwipe_3");
             })
         </script>
         <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
