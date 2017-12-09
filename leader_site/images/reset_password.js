@@ -5,6 +5,32 @@ $(function() {
         init();
     });
     function init() {
+
+        //更改模块位置
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        var inputBoxHeight = $('.js_firstStep').height();
+        var footBoxHeight = $('.js_footBox').height();
+        var inputBoxWidth = $('.js_firstStep').width();
+        var positionLeft = (windowWidth-inputBoxWidth)/2;
+        var positionTop = (windowHeight-inputBoxHeight-footBoxHeight)/2;
+        var topShift;
+        if(windowWidth>991){
+            topShift=30;
+        }else if(windowWidth<992 && windowWidth>700){
+            topShift=50;
+        }else if(windowWidth<576){
+            topShift = 0;
+        }
+        if(windowWidth>575){
+            $('.js_firstStep').css({'top':positionTop-topShift,'left':positionLeft});
+            $('.js_twoStep').css({'top':positionTop-topShift,'left':positionLeft});
+            $('.js_threeStep').css({'top':positionTop-topShift,'left':positionLeft});
+            $('.js_fourStep').css({'top':positionTop-topShift,'left':positionLeft});
+
+        }
+
+
         //密码进入事件,更改密码框类型为密码
         $("#js_loginPassword2").focus(function () {
             var $parent = $(this).parent();
