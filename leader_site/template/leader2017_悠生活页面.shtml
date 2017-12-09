@@ -14,7 +14,8 @@
 
 <body class=" ">
     <div class="o_main">
-                <!-- 首屏动画 -->
+
+        <!-- 首屏动画 -->
             <div class="o_g js_animateLine">
                 <div class="index_animate">
                     <div class="index_animateBox">
