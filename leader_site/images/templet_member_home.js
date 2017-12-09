@@ -41,6 +41,10 @@ $(function(){
             })
         }
     });
+
+    //绘制数字
+    orderListCount('付款');
+    orderListCount('收货');
 })
 
 //第一第二个产品(大于575)
@@ -97,7 +101,7 @@ function freshenB(templet_entities) {
 }
 
 //小于575的时候根据Div里面的smallfreshen来取值
-function smallfreshen(templet_entities){
+function smallFreshen(templet_entities){
     var templet_count=$('.js-recommendation').attr('smallfreshen')
     $(".js-recommendation div.js-product").remove();
     var templet_addhtml='';
@@ -122,5 +126,41 @@ function smallfreshen(templet_entities){
     }
 }
 
+//绘制标题栏数字
+function orderListCount(way){
+    if('付款'==way){
+        var templet_datePay={
+            "orderStatus":1
+        };
+
+        $.ajax({
+            url: siteConfig.userUrl + "/buy/order/order-front/list/",
+            data: JSON.stringify(templet_datePay),
+            applicationType: true,
+            login: true,
+            success_cb: function (data) {
+                if(!data.data.entityCount==0){
+                    $('.js-countPay').html('<div class="member-home-top-list-nub">'+data.data.entityCount+'</div>');
+                }
+            }
+        })
+    }
+    if('收货'==way){
+        var templet_dateReceived={
+            "orderStatus":3
+        };
+        $.ajax({
+            url: siteConfig.userUrl + "/buy/order/order-front/list/",
+            data: JSON.stringify(templet_dateReceived),
+            applicationType: true,
+            login: true,
+            success_cb: function (data) {
+                if(!data.data.entityCount==0){
+                    $('.js-countReceived').html('<div class="member-home-top-list-nub">'+data.data.entityCount+'</div>');
+                }
+            }
+        })
+    }
+}
 
 

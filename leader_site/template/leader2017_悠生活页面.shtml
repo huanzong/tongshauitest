@@ -9,7 +9,6 @@
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
     <link rel="stylesheet" type="text/css" href="life_style.css">
-    <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
 </head>
 
 <body class=" ">
@@ -543,7 +542,7 @@
         })
     </script>
     <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
-    <script src="http://www.casarte.com/images/mediaelement-and-player.min.js"></script>
+    <script src="mediaelement-and-player.min.js"></script>
     <script src="life_style.js"></script>
 </body>
 
