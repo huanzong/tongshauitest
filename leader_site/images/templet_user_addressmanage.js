@@ -214,8 +214,12 @@ $("#js_area").change(function(){
 })
 
 //新增地址
-var templet_isSubmiting=false;
 function saveUserAddress(){
+    var templet_isSubmiting=false;
+    if(templet_isSubmiting){//正在提交
+        globalShade2('正在提交，请稍后','3');
+        return;
+    }
     var bool = false;
     var realnameVal=$.trim($("#realName").val());//联系人
     var mobileVal=$.trim($("#mobile").val());//手机号
@@ -240,8 +244,6 @@ function saveUserAddress(){
     }else{
         var telPhoneVal='';
     }
-
-
 
     var data = {
         "customerName":realnameVal,
@@ -271,7 +273,7 @@ function saveUserAddress(){
                 $(".js_form_addAddrManagement").hide();
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
-                globalShade2("添加地址失败，请稍后重试...",2,2000);
+                globalShade2(responseT.resultMsg,2,2000);
             }
             templet_isSubmiting=false;
         },
