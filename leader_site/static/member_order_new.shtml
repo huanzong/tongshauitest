@@ -74,39 +74,9 @@
                                         x1
                                     </div>
                                 </div>
-                                <div class="o_u o_df_11-12 order_content_box" >
-                                    <div class="order-title-in-orange">
-                                        <h3 class="title_hide">待收货</h3>
-                                    </div>
-                                    <div class="o_u o_df_2-12 order_content_img">
-                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
-                                    </div>
-                                    <div class="o_u o_df_8-12 o_xs_10-12 order_content_name">
-                                        <h4>统帅323L大容量无霜冰箱</h4>
-                                        <span>BCD-323WLDPN</span>
-                                    </div>
-                                    <div class="o_u o_df_2-12 order_content_nub">
-                                        x1
-                                    </div>
 
-                                </div>
-                                <div class="o_u o_df_11-12 order_content_box" >
-                                    <div class="order-title-in-orange">
-                                        <h3 >待发货</h3>
-                                    </div>
-                                    <div class="o_u o_df_2-12 order_content_img">
-                                        <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;">
-                                    </div>
-                                    <div class="o_u o_df_8-12 o_xs_10-12 order_content_name">
-                                        <h4>统帅323L大容量无霜冰箱</h4>
-                                        <span>BCD-323WLDPN</span>
-                                    </div>
-                                    <div class="o_u o_df_2-12 order_content_nub">
-                                        x1
-                                    </div>
-                                </div>
+
                             </div>
-
                         </div>
                         <!-- 内容区域 End-->
 
@@ -198,6 +168,6 @@
 <script type="text/javascript" src="images/templet_pagination.js"></script>
 <script type="text/javascript" src="images/member_nav.js"></script>
 <!--<script type="text/javascript" src="images/member_order_new.js"></script>-->
-<!--<script type="text/javascript" src="images/templet_member_order_new.js"></script>-->
+<script type="text/javascript" src="images/templet_member_order_new.js"></script>
 </body>
 </html>

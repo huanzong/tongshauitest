@@ -4,7 +4,7 @@
 * @date        2017.11.7
 * ---------------------------------------------------------------------------*/
 $(function(){
-
+    $('.js-resetPassWord').focus(function(){$(this).css('border-color','#ccc')})
     //是否有邮箱 手机号
     var templet_isemail=false;
     var templet_isphone=false;
