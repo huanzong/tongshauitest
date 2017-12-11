@@ -5,7 +5,6 @@ $(function() {
         init();
     });
     function init() {
-
         //更改模块位置
         var windowWidth = $(window).width();
         var windowHeight = $(window).height();
