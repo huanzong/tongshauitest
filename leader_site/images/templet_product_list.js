@@ -312,7 +312,7 @@ $(".font").each(function () {
             order = "-shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "+rqcp"
+            order = "-rqcp"
         }
         if ($(this).text() == "价格") {
             order = "+price"
@@ -326,7 +326,7 @@ $(".font").each(function () {
             order = "+shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "-rqcp"
+            order = "+rqcp"
         }
         if ($(this).text() == "价格") {
             order = "-price"
