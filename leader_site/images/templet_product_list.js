@@ -312,7 +312,8 @@ $(".font").each(function () {
             order = "-shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "+rqcp"
+            $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-up").addClass("icon-arrow-refresh-down");
+            order = "-rqcp"
         }
         if ($(this).text() == "价格") {
             order = "+price"
@@ -326,7 +327,8 @@ $(".font").each(function () {
             order = "+shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "-rqcp"
+            $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-down").addClass("icon-arrow-refresh-up");
+            order = "+rqcp"
         }
         if ($(this).text() == "价格") {
             order = "-price"
@@ -495,7 +497,7 @@ function deleteFilterItemShowBarClick() {
             searchWord = searchWord.replace($(this).parent().attr("query") + " and", "");
             searchWord = searchWord.replace("and " + $(this).parent().attr("query"), "");
         } else {
-            searchWord = searchWord.replace($(this).attr("query"), "");
+            searchWord = searchWord.replace($(this).parent().attr("query"), "");
         }
         //删除筛选项中的选中事件
         $(".sole-type.active").filter('[inputName="' + $(this).parent().attr("inputName") + '"]').removeClass("active");
