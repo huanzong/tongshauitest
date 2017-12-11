@@ -18,12 +18,12 @@ function initContent(data,curPage,pageSize){
       var commentNum=data.data.entityCount;
       $(".js_comment").find("span").html(commentNum);
       var commentNone='';
+      //循环每个entity
+      //初始化分页
+      templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
+      templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMiddle",6);
+      templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMax",8);
       if(commentNum!=0){
-          //循环每个entity
-          //初始化分页
-          templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
-          templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMiddle",6);
-          templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMax",8);
           $(".product-prise-body .o_df_10-12").html("");
           for (var j = 0; j<data.data.entities.length;j++) {
               //append每个entity
