@@ -99,10 +99,10 @@ function initLoadCookie() {
                 var product = proObjList[i];
                 compareHtml += '<li>' +
                     '<div class="compare-product-img" id="' + product.id + '" data-chanid="' + product.channelid + '">' +
-                    '<a href="'+proUrl+'"><img src="' + product.img + '"></a>' +
+                    '<a href="'+product.url+'"><img src="' + product.img + '"></a>' +
                     '</div>' +
                     '<div class="compare-product-info">' +
-                    ' <a href="'+proUrl+'"><p>' + product.title + '</p>' +
+                    ' <a href="'+product.url+'"><p>' + product.title + '</p>' +
                     '<p class="leaveout">' + product.desc + '</p></a>' +
                     '<span>' + product.price + '</span>' +
                     '</div>' +
