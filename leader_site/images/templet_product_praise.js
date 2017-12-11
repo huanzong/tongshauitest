@@ -48,7 +48,7 @@ function initContent(data,curPage,pageSize){
           commentNone+='<div class="prise_no_item"><img src="no_praise.png"/></div>';
           commentNone+='<div class="prise_no_item">';
           commentNone+='<span class="prise_no_tip">暂时还没有任何买家评价哦</span></div></div></div>';
-          $(".o_main").after(commentNone);
+          $(".js_animateLine").after(commentNone);
       }
 
 
