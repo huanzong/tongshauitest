@@ -72,10 +72,10 @@
                     <div class="o_u o_df_6-12 o_lg_8-12  o_md_12-12 o_sm_12-12 o_xs_12-12 video-cont-center">
                         <img src="images/style_life_title.png" alt="">
                         <p>
-                            <trs_viewdata field='textdescription'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='textdescription'/>
                         </p>
                         <div>
-                            <trs_viewdata field='textdescription'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='textdescription'/>
                         </div>
                         <a href="javascript:;" class="js_lifeStylePlay"
                            data-src="<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png"
@@ -114,7 +114,7 @@
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>
-                                        <trs_viewdata field='text_description'/>
+                                        <trs_viewdata AUTOFORMATTYPE="HTML" field='text_description'/>
                                     </p>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                     <trs_viewdatas id="悠生活轮播" num="1" startpos="0">
                         <img src="images/style_photo_1_text.png" alt="">
                         <p class="js_lifeStyelGoodLifeText">
-                            <trs_viewdata field='text_description'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='text_description'/>
                         </p>
                     </trs_viewdatas>
                 </div>
@@ -426,7 +426,7 @@
                     <li class="cur">
                         <img src="images/life-style-case-title.png" alt="">
                         <div class="life-case-text"><img src="images/life-style-case-titleleft.png" class="left" alt="">
-                            <trs_viewdata field='textdescription_right'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='textdescription_right'/>
                             <img src="images/life-style-case-titleright.png" class="right" alt=""></div>
                         <div class="life-case-text-down">
                             <p>
@@ -439,7 +439,6 @@
             </ul>
             <div class="o_u o_df_1-12  o_md_2-12"></div>
         </div>
-
 
         <!-- 创造优生活 -->
 
