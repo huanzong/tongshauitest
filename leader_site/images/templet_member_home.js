@@ -159,7 +159,7 @@ function orderListCount(){
     })
 
     var templet_comment={
-        "commentStatus":1,
+        "commentStatus":0,
         "pageNo":1,
         "pageSize":1
     };
