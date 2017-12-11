@@ -495,7 +495,7 @@ function deleteFilterItemShowBarClick() {
             searchWord = searchWord.replace($(this).parent().attr("query") + " and", "");
             searchWord = searchWord.replace("and " + $(this).parent().attr("query"), "");
         } else {
-            searchWord = searchWord.replace($(this).attr("query"), "");
+            searchWord = searchWord.replace($(this).parent().attr("query"), "");
         }
         //删除筛选项中的选中事件
         $(".sole-type.active").filter('[inputName="' + $(this).parent().attr("inputName") + '"]').removeClass("active");
