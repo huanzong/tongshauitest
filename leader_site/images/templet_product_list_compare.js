@@ -102,8 +102,8 @@ function initLoadCookie() {
                     '<a href="'+product.url+'"><img src="' + product.img + '"></a>' +
                     '</div>' +
                     '<div class="compare-product-info">' +
-                    ' <a href="'+product.url+'"><p>' + product.title + '</p></a>' +
-                    '<p class="leaveout">' + product.desc + '</p>' +
+                    ' <a href="'+product.url+'"><p>' + product.title + '</p>' +
+                    '<p class="leaveout">' + product.desc + '</p></a>' +
                     '<span>' + product.price + '</span>' +
                     '</div>' +
                     ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
@@ -172,8 +172,8 @@ window.add_compare_flyOut_item = function ($obj) {
             '<a href="'+proUrl+'"><img src="' + proImg + '"></a>' +
             '</div>' +
             '<div class="compare-product-info">' +
-            '<a href="'+proUrl+'"><p>' + proTitle + '</p></a>' +
-            '<p class="leaveout">' + proDesc + '</p>' +
+            ' <a href="'+proUrl+'"><p>' + proTitle + '</p>' +
+            '<p class="leaveout">' + proDesc + '</p></a>' +
             '<span>' + price + '</span>' +
             '</div>' +
             ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
