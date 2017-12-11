@@ -1459,7 +1459,7 @@
         //var templet_businessId="BCD-557WDGSU1"
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
-        var templet_commentUrl='';//参数页面
+        var templet_parameterUrl='';//参数页面
         var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
@@ -1469,6 +1469,7 @@
         templet_commentUrl=templet_detailUrl+'_comment.shtml';
         $(".js_commentUrl").prop("href",templet_commentUrl);//口碑
         $(".js_comment").prop("href",templet_commentUrl);//口碑
+
         if(templet_dsly ==""||templet_dsly ==null){
             $(".js_detail-foldover").hide();//电商拉页隐藏
         }

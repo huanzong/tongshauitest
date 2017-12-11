@@ -16,6 +16,99 @@
 		<!-- 导航 -->
 		<!--#include file="${ROOT_PATH}public/header/header.shtml"-->
 		<!-- 导航 End-->
+		<!-- 详情页导航 -->
+		<div class="detail-nav-height">
+			<div class="o_g o_md-hide o_sm-hide o_xs-hide detail-nav js_detailNav">
+				<div class="o_u o_df_1-12"></div>
+				<div class="o_u o_df_5-6">
+					<div class="detail-nav-head">
+						<div class="nav-head-con">
+							<TRS_CHANNELLOGO id='parent' INDEX=1 SHOWPIC='true' URLISABS="true" SHOWMODE='SHOWPIC'/>
+							<div class="nav-head-info">
+								<div class="head-info-titcn">
+									<div class="head-info-box">
+										<TRS_CHANNEL id="parent" FIELD="CHNLDESC" AUTOLINK='FALSE'/>
+										<i class="iconfont icon-arrow-line-down"></i>
+									</div>
+									<!-- <div class="head-info-hover">
+                                    <div class="l-float-tops">
+                                        <div class="float_content">
+                                            <a href="javascript:;">特性</a>
+                                            <a href="javascript:;">设计</a>
+                                            <a href="javascript:;">参数</a>
+                                            <a href="javascript:;">口碑(888)</a>
+                                            <a href="javascript:;">优惠组合</a>
+                                            <a href="javascript:;">配送与服务</a>
+                                        </div>
+                                        <p>
+                                            <i></i>
+                                        </p>
+                                    </div>
+                                </div> -->
+								</div>
+								<div class="head-info-titen"><trs_viewdata field='modelno'/></div>
+							</div>
+						</div>
+					</div>
+					<div class="o_u detail-nav-info">
+						<div class="nav-info-box js_navLink">
+							<a class="nav-type" data-nav="js_features"  href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_features">特性
+								<div class="line"></div>
+							</a>
+							<a class="nav-type" data-nav="js_design" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_design">设计
+								<div class="line"></div>
+							</a>
+							<a class="nav-type" data-nav="js_params" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params">参数
+								<div class="line"></div>
+							</a>
+							<a class="nav-type active js_comment" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
+								<div class="line"></div>
+							</a>
+							<!-- <a class="nav-type" data-nav="js_favourable" href="javascript:;">优惠组合
+                                 <div class="line"></div>
+                             </a>
+                             <a class="nav-type" href="javascript:;">配送与服务
+                                 <div class="line"></div>
+                             </a>-->
+							<a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">立即购买</a>
+						</div>
+					</div>
+				</div>
+				<div class="o_df_1-12"></div>
+			</div>
+			<div class="o_g o_df-hide o_md-show o_sm-show o_xs-show detail-nav js_detailNav">
+				<div class="o_u o_df_2-2">
+					<div class="detail-nav-head">
+						<div class="nav-head-list">
+							<i class="iconfont icon-menu-solid nav-head-icon"></i>
+							<a class="head-list-type"><trs_viewdata field='modelno'/></a>
+							<div class="head-info-hover">
+								<div class="l-float-tops">
+									<div class="float_content js_navLink">
+										<a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_features" data-nav="js_features">特性</a>
+										<a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_design" data-nav="js_design">设计</a>
+										<a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params" data-nav="js_params">参数</a>
+										<a href="javascript:;" class="js_comment" data-nav="js_praise">口碑(<span></span>)</a>
+										<!--<a href="javascript:;" data-nav="js_favourable">优惠组合</a>
+                                        <a href="javascript:;">配送与服务</a>-->
+									</div>
+									<p>
+										<i></i>
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="o_u detail-nav-info">
+						<div class="nav-info-box">
+							<a class="l-btn-sm l-btn-red nav-btn" class="" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">立即购买</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 详情页导航 END -->
 		<div class="o_g param-bg">
 			<div class="o_u o_df_3-12 o_sm_1-2 o_xs_1-2 param-bg-deep"></div>
 			<div class="o_u o_df_9-12 o_sm_1-2 o_xs_1-2 param-bg-light"></div>
@@ -59,6 +152,30 @@
     templet_init();
     array(appendix,"span","js_appendixText","param-attachment-other");
   });
+  //吸顶导航链接
+  var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
+  templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
+  var templet_commentUrl=templet_detailUrl+'_comment.shtml';
+  $(".js_comment").prop("href",templet_commentUrl);//口碑
+  //获取口碑个数
+  getCommentDataNum();
+  function getCommentDataNum(){
+      $.ajax({
+          url:siteConfig.domain+"/interaction-comment/comment/commentListShow/getContentData/",
+          data:{businessId:templet_businessId,pageNo:1,pageSize:3},
+          type:"GET",
+          dataType:"json",
+          success_cb:	function (data){
+              if(data.isSuccess==true){
+                  var commentNum=data.data.entityCount;
+                  $(".js_comment").find("span").html(commentNum);
+
+              }
+          }
+      });
+  }
+
+
   //定义附件信息展示数据
   var appendix ="<TRS_VIEWDATA field="fjxx"/>";
   //附件信息
