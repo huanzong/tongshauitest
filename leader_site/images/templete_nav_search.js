@@ -118,7 +118,9 @@ $('.js_menuShow').on('click', function () {
 });
 
 //点击搜索按钮全文搜索
-$('.js_jumpto_product_search').on('click', jumpToProductSearch());
+$('.js_jumpto_product_search').on('click', function () {
+    jumpToProductSearch();
+});
 
 //回车键搜索
 $('.js_searchHistory').keydown(function (e) {
