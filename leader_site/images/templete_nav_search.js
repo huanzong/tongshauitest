@@ -224,7 +224,5 @@ function searchBoxInput(webSize) {
 function deleteHistory() {
     $(".js_delete_history").off().on('click', function () {
         $.cookie('historyCookie', null, {path: '/'});
-        $('.js_searchHistory').val("");
-        $('.js_searchHistory').focus();
     });
 }
