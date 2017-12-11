@@ -169,12 +169,12 @@ window.add_compare_flyOut_item = function ($obj) {
 
         var compareHtml = '<li>' +
             '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
-            '<img src="' + proImg + '">' +
+            '<a href="'+proUrl+'"><img src="' + proImg + '"></a>' +
             '</div>' +
             '<div class="compare-product-info">' +
-            ' <p>' + proTitle + '</p>' +
+            ' <a href="'+proUrl+'"><p>' + proTitle + '</p>' +
             '<p class="leaveout">' + proDesc + '</p>' +
-            '<span>' + price + '</span>' +
+            '<span>' + price + '</span></a>' +
             '</div>' +
             ' <i class="iconfont icon-close compare-close js_compareClose"></i>' +
             '</li>';
