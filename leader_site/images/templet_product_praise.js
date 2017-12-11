@@ -50,6 +50,8 @@ function initContent(data,curPage,pageSize){
           commentNone+='<div class="prise_no_item">';
           commentNone+='<span class="prise_no_tip">暂时还没有任何买家评价哦</span></div></div></div>';
           $(".product-prise-header").after(commentNone);
+          $(".js_comment1").hide();
+
       }
 
 
