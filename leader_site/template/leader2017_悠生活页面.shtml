@@ -9,7 +9,6 @@
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
     <link rel="stylesheet" type="text/css" href="life_style.css">
-    <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
 </head>
 
 <body class=" ">
@@ -443,6 +442,7 @@
 
 
         <!-- 创造优生活 -->
+
         <div class="life-style-create">
             <div class="life-style-create-cont-box">
                 <div class="o_u o_df_1-12 create-left-btn">
@@ -456,7 +456,7 @@
                         </div>
 
                         <div class="product-list-title">
-                            <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐'/>：</span>
+                            <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐' AUTOLINK="false"/>：</span>
                             <ul id="series_name" class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
                                 <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
                                     <li class="o_u o_sm_4-12 o_xs_4-12">
@@ -472,14 +472,14 @@
                                 </p>
 
                                 <!-- 产品推荐轮播 start -->
-                                <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
+                                <div class="js_lifeStyleCreateSwipe lbindex">
                                     <ul class="swiper-wrapper">
                                         <li class="o_u o_df_12-12 swiper-slide">
                                             <trs_viewdata field='prod_content1'/>
                                             <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="0">
                                             <div class="o_u o_df_6-12">
                                                 <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                    <img src="images/detail_prd01.png" alt="">
+                                                    <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>' alt="">
                                                 </div>
                                                 <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
                                                     <p><trs_viewdata field='xmjg'/></p>
@@ -494,7 +494,7 @@
                                             <TRS_RELNEWS id="prod_content1" num="2" STARTPOS="2">
                                                 <div class="o_u o_df_6-12">
                                                     <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                                        <img src="images/detail_prd01.png" alt="">
+                                                        <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>' alt="">
                                                     </div>
                                                     <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
                                                         <p><trs_viewdata field='xmjg'/></p>
@@ -505,7 +505,6 @@
                                                 </div>
                                             </TRS_RELNEWS>
                                         </li>
-
                                     </ul>
                                 </div>
                             </trs_viewdatas>
@@ -536,10 +535,14 @@
             $("#series_name li").eq(0).addClass("cur");  //系列产品推荐中系列列表第一个li
             $("#series_txt p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
             $("#series_txt p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
+
+            $(".lbindex").eq(0).addClass("js_lifeStyleCreateSwipe_1");
+            $(".lbindex").eq(1).addClass("js_lifeStyleCreateSwipe_2");
+            $(".lbindex").eq(2).addClass("js_lifeStyleCreateSwipe_3");
         })
     </script>
     <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
-    <script src="http://www.casarte.com/images/mediaelement-and-player.min.js"></script>
+    <script src="mediaelement-and-player.min.js"></script>
     <script src="life_style.js"></script>
 </body>
 

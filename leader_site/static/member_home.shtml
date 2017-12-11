@@ -95,14 +95,14 @@
                                                 <!--</div>-->
                                                 <div class="member-home-top-list o_u o_df_11-12">
                                                     <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-wallet-solid o_u">
-                                                    <div class="member-home-top-list-nub">2</div>
+                                                <span class="iconfont icon-wallet-solid o_u js-countPay">
+
                                                 </span>
                                                         <p>待付款</p>
                                                     </a>
                                                     <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-box-solid o_u">
-                                                    <div class="member-home-top-list-nub">2</div>
+                                                <span class="iconfont icon-box-solid o_u js-countReceived">
+
                                                 </span>
                                                         <p>待收货</p>
                                                     </a>
@@ -151,7 +151,13 @@
                                                             <a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>
                                                         </div>
                                                     </div>
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
 
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
                                                 </div>
                                             </div>
                                             <!--<div class="o_u o_df_1-12"></div>-->
