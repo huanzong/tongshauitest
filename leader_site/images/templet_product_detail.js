@@ -176,7 +176,6 @@ function getCommentData(){
             }
         }
     });
-
     $(function(){
         //口碑参数页吸顶导航跳转功能
         //获取url地址栏信息方法
