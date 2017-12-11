@@ -13,133 +13,258 @@
 	<link rel="stylesheet" type="text/css" href="images/product_praise.css">
 </head>
 
-<body>
-	<div class="o_body">
-        <div class="o_main">
-        	<div class="o_g js_animateLine">
-	        	<div class="index_animate">
-					<div class="index_animateBox">
-						<span></span>
+	<body>
+		<div class="o_body">
+			<div class="o_main">
+				<!-- 详情页导航 -->
+				<div class="detail-nav-height">
+					<div class="o_g o_md-hide o_sm-hide o_xs-hide detail-nav js_detailNav">
+						<div class="o_u o_df_1-12"></div>
+						<div class="o_u o_df_5-6">
+							<div class="detail-nav-head">
+								<div class="nav-head-con">
+									<img src="images/icon_01.png">
+									<div class="nav-head-info">
+										<div class="head-info-titcn">
+											<div class="head-info-box">
+												冰箱
+												<i class="iconfont icon-arrow-line-down"></i>
+											</div>
+											<!-- <div class="head-info-hover">
+                                            <div class="l-float-tops">
+                                                <div class="float_content">
+                                                    <a href="javascript:;">特性</a>
+                                                    <a href="javascript:;">设计</a>
+                                                    <a href="javascript:;">参数</a>
+                                                    <a href="javascript:;">口碑(888)</a>
+                                                    <a href="javascript:;">优惠组合</a>
+                                                    <a href="javascript:;">配送与服务</a>
+                                                </div>
+                                                <p>
+                                                    <i></i>
+                                                </p>
+                                            </div>
+                                        </div> -->
+										</div>
+										<div class="head-info-titen">JIGEJOJ-12800</div>
+									</div>
+								</div>
+							</div>
+							<div class="o_u detail-nav-info">
+								<div class="nav-info-box js_navLink">
+									<a class="nav-type" data-nav="js_features" href="javascript:;">特性
+										<div class="line"></div>
+									</a>
+									<a class="nav-type" data-nav="js_design" href="javascript:;">设计
+										<div class="line"></div>
+									</a>
+									<a class="nav-type" data-nav="js_params" href="javascript:;">参数
+										<div class="line"></div>
+									</a>
+									<a class="nav-type active" data-nav="js_praise" href="javascript:;">口碑(888)
+										<div class="line"></div>
+									</a>
+									<a class="nav-type" data-nav="js_favourable" href="javascript:;">优惠组合
+										<div class="line"></div>
+									</a>
+									<a class="nav-type" href="javascript:;">配送与服务
+										<div class="line"></div>
+									</a>
+									<a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top" href="javascript:;">立即购买</a>
+								</div>
+							</div>
+						</div>
+						<div class="o_df_1-12"></div>
 					</div>
-					<div class="index_animateBox">
-						<span></span>
+					<div class="o_g o_df-hide o_md-show o_sm-show o_xs-show detail-nav js_detailNav">
+						<div class="o_u o_df_2-2">
+							<div class="detail-nav-head">
+								<div class="nav-head-list">
+									<i class="iconfont icon-menu-solid nav-head-icon"></i>
+									<a class="head-list-type">JGOEJGEJ-879</a>
+									<div class="head-info-hover">
+										<div class="l-float-tops">
+											<div class="float_content js_navLink">
+												<a href="javascript:;" data-nav="js_features">特性</a>
+												<a href="javascript:;" data-nav="js_design">设计</a>
+												<a href="javascript:;" data-nav="js_params">参数</a>
+												<a href="javascript:;" data-nav="js_praise">口碑(888)</a>
+												<a href="javascript:;" data-nav="js_favourable">优惠组合</a>
+												<a href="javascript:;">配送与服务</a>
+											</div>
+											<p>
+												<i></i>
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="o_u detail-nav-info">
+								<div class="nav-info-box">
+									<a class="l-btn-sm l-btn-red nav-btn" class="" href="javascript:;">立即购买</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="index_animateBox">
-						<span></span>
-					</div>
-					<div class="index_animateBox">
-						<span></span>
-					</div>
-					<div class="index_animateBox">
-						<span></span>
-					</div>
-					<div class="index_animateBox"></div>
 				</div>
-	        </div>
-	    	<div class="o_g product-prise-header">
-	    		<div class="o_u o_df_1-12"></div>
-	    		<div class="o_u o_df_10-12">
-	    			<div class="prise-head">
-	    				<div class="prise-percent">
-	    					<div class="percent-key">好评率：</div>
-	    					<div class="percent-value">98.8<sub>%</sub></div>
-	    				</div>
-	    				<div class="prise-tips">
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">全部</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2 active">质量超好(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">有图评价(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
-	    					<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
-	    				</div>
-	    				<div class="clear"></div>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="o_g product-prise-body">
-	    		<div class="o_u o_df_1-12"></div>
-	    		<div class="o_u o_df_10-12">
-	    			<div class="o_g prise-box">
-	    				<div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
-	    					<div class="prise-user-name">
-	    						西门雨萱
-	    					</div>
-	    				</div>
-	    				<div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
-	    					<span class="prise-time">2015/10/10</span>
-	    					<span class="prise-form">来自</span>
-	    					<span class="prise-form">倩女官网</span>
-	    					<div class="prise-column">
-	    						近日，我们采访了西门雨萱小朋友，小朋友对鬼谷同学赞不绝口，啧啧称奇，世间怎会有如此除尘绝伦的女子，美艳不可方物。。。。
-	    					</div>
-	    					<div class="prise-img">
-	    						<div class="prise-img-box">
-	    							<img src="images/detail_prd01.png">
-	    						</div>
-	    						<div class="prise-img-box">
-	    							<img src="images/detail_prd02.png">
-	    						</div>
-	    						<div class="prise-img-box">
-	    							<img src="images/detail_prd02.png">
-	    						</div>
-	    						<div class="prise-img-box">
-	    							<img src="images/detail_prd02.png">
-	    						</div>
-	    					</div>
-	    				</div>
-	    				<div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>
-	    				<div class="o_u o_df_4-12 o_lg_9-12 o_md_10-12 o_sm_10-12 o_xs_10-12 prise-reply">
-	    					<span class="prise-form">官方回复：</span>
-	    					<div class="prise-column">
-	    						经核实，有过之而无不及。
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="o_g prise-box">
-	    				<div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
-	    					<div class="prise-user-name">
-	    						西门雨萱
-	    					</div>
-	    				</div>
-	    				<div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
-	    					<span class="prise-time">2015/10/10</span>
-	    					<span class="prise-form">来自</span>
-	    					<span class="prise-form">倩女官网</span>
-	    					<div class="prise-column">
-	    						近日，我们采访了西门雨萱小朋友，小朋友对鬼谷同学赞不绝口，啧啧称奇，世间怎会有如此除尘绝伦的女子，美艳不可方物。。。。
-	    					</div>
-	    				</div>
-	    				<div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>
-	    				<div class="o_u o_df_4-12 o_lg_9-12 o_md_10-12 o_sm_10-12 o_xs_10-12 prise-reply">
-	    					<span class="prise-form">官方回复：</span>
-	    					<div class="prise-column">
-	    						经核实，有过之而无不及。
-	    					</div>
-	    				</div>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="o_g product-prise-page" >
-                <a  class="l-pagination-prew">上一页</a>
-                <a  class="l-pagination-pagenumber active">1</a>
-                <a  class="l-pagination-pagenumber">2</a>
-                <a  class="l-pagination-pagenumber">3</a>
-                <a  class="l-pagination-pagenumber o_xs-hide">4</a>
-                <a  class="l-pagination-pagenumber o_xs-hide">5</a>
-                <a  class="l-pagination-pagenumber o_xs-hide">6</a>
-                <a  class="l-pagination-pagenumber o_sm-hide o_xs-hide">7</a>
-                <a  class="l-pagination-pagenumber o_sm-hide o_xs-hide">8</a>
-                <a  class="l-pagination-next ">下一页</a>
-	    	</div>
-        </div>
-	</div>
-	<!--#include virtual="public/foot.shtml"-->
-	<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
-	<script type="text/javascript" src="images/product_praise.js"></script>
-</body>
+				<!-- 详情页导航 END -->
+				<div class="o_g js_animateLine">
+					<div class="index_animate">
+						<div class="index_animateBox">
+							<span></span>
+						</div>
+						<div class="index_animateBox">
+							<span></span>
+						</div>
+						<div class="index_animateBox">
+							<span></span>
+						</div>
+						<div class="index_animateBox">
+							<span></span>
+						</div>
+						<div class="index_animateBox">
+							<span></span>
+						</div>
+						<div class="index_animateBox"></div>
+					</div>
+				</div>
+				<div class="o_g product-prise-header">
+					<div class="o_u o_df_1-12"></div>
+					<div class="o_u o_df_10-12">
+						<div class="prise-head">
+							<div class="prise-percent">
+								<div class="percent-key">好评率：</div>
+								<div class="percent-value">98.8<sub>%</sub></div>
+							</div>
+							<div class="prise-tips">
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">全部</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2 active">质量超好(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">有图评价(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">海尔(33)</a>
+								<a href="javascript:;" class="l-btn-sm l-btn-line2">统帅(33)</a>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="o_g product-prise-body">
+					<div class="o_u o_df_1-12"></div>
+					<div class="o_u o_df_10-12">
+						<div class="o_g prise-box">
+							<div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<div class="prise-user-name">
+									西门雨萱
+								</div>
+							</div>
+							<div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<span class="prise-time">2015/10/10</span>
+								<span class="prise-form">来自</span>
+								<span class="prise-form">倩女官网</span>
+								<div class="prise-column">
+									近日，我们采访了西门雨萱小朋友，小朋友对鬼谷同学赞不绝口，啧啧称奇，世间怎会有如此除尘绝伦的女子，美艳不可方物。。。。
+								</div>
+								<div class="prise-img">
+									<div class="prise-img-box">
+										<img src="images/detail_prd01.png">
+									</div>
+									<div class="prise-img-box">
+										<img src="images/detail_prd02.png">
+									</div>
+									<div class="prise-img-box">
+										<img src="images/detail_prd02.png">
+									</div>
+									<div class="prise-img-box">
+										<img src="images/detail_prd02.png">
+									</div>
+								</div>
+							</div>
+							<div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>
+							<div class="o_u o_df_4-12 o_lg_9-12 o_md_10-12 o_sm_10-12 o_xs_10-12 prise-reply">
+								<span class="prise-form">官方回复：</span>
+								<div class="prise-column">
+									经核实，有过之而无不及。
+								</div>
+							</div>
+						</div>
+						<div class="o_g prise-box">
+							<div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<div class="prise-user-name">
+									西门雨萱
+								</div>
+							</div>
+							<div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
+								<span class="prise-time">2015/10/10</span>
+								<span class="prise-form">来自</span>
+								<span class="prise-form">倩女官网</span>
+								<div class="prise-column">
+									近日，我们采访了西门雨萱小朋友，小朋友对鬼谷同学赞不绝口，啧啧称奇，世间怎会有如此除尘绝伦的女子，美艳不可方物。。。。
+								</div>
+							</div>
+							<div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>
+							<div class="o_u o_df_4-12 o_lg_9-12 o_md_10-12 o_sm_10-12 o_xs_10-12 prise-reply">
+								<span class="prise-form">官方回复：</span>
+								<div class="prise-column">
+									经核实，有过之而无不及。
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="o_g product-prise-page">
+					<a class="l-pagination-prew">上一页</a>
+					<a class="l-pagination-pagenumber active">1</a>
+					<a class="l-pagination-pagenumber">2</a>
+					<a class="l-pagination-pagenumber">3</a>
+					<a class="l-pagination-pagenumber o_xs-hide">4</a>
+					<a class="l-pagination-pagenumber o_xs-hide">5</a>
+					<a class="l-pagination-pagenumber o_xs-hide">6</a>
+					<a class="l-pagination-pagenumber o_sm-hide o_xs-hide">7</a>
+					<a class="l-pagination-pagenumber o_sm-hide o_xs-hide">8</a>
+					<a class="l-pagination-next ">下一页</a>
+				</div>
+
+				<!--没有口碑评价-->
+				<div class="o_g product-prise-header">
+					<div class="o_u o_df_1-12"></div>
+					<div class="o_u o_df_10-12">
+						<div class="prise-head">
+							<div class="prise-percent">
+								<div class="percent-key">好评率：</div>
+								<div class="percent-value">100<sub>%</sub></div>
+							</div>
+							<div class="prise-tips">
+								<span class="prise_no_title">暂时还没有买家印象哦</span>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="o_g prise_no_pic">
+					<div class="o_u o_df_1-12"></div>
+					<div class="o_u o_df_10-12">
+						<div class="prise_no_item">
+							<img src="images/no_praise.png"/>
+						</div>
+						<div class="prise_no_item">
+							<span class="prise_no_tip">
+								暂时还没有任何买家评价哦
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--没有口碑评价END-->
+			</div>
+		</div>
+		<!--#include virtual="public/foot.shtml"-->
+		<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="images/product_praise.js"></script>
+	</body>
+
 </html>

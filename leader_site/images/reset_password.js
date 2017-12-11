@@ -5,9 +5,13 @@ $(function() {
         init();
     });
     function init() {
-
         //更改模块位置
         var windowWidth = $(window).width();
+        var cenW = $(".js_center").width();
+        if (windowWidth > 701) {
+            $(".js_center").css("margin-left",-cenW/2);
+        }
+        /*var windowWidth = $(window).width();
         var windowHeight = $(window).height();
         var inputBoxHeight = $('.js_firstStep').height();
         var footBoxHeight = $('.js_footBox').height();
@@ -22,17 +26,33 @@ $(function() {
         }else if(windowWidth<576){
             topShift = 0;
         }
-        if(windowWidth>575){
-            $('.js_firstStep').css({'top':positionTop-topShift,'left':positionLeft});
-            $('.js_twoStep').css({'top':positionTop-topShift,'left':positionLeft});
-            $('.js_threeStep').css({'top':positionTop-topShift,'left':positionLeft});
-            $('.js_fourStep').css({'top':positionTop-topShift,'left':positionLeft});
+        if (windowWidth > 575) {
+            $('.js_firstStep').css({
+                'top': positionTop - topShift,
+                'left': positionLeft
+            });
+            $('.js_twoStep').css({
+                'top': positionTop - topShift,
+                'left': positionLeft
+            });
+            $('.js_threeStep').css({
+                'top': positionTop - topShift,
+                'left': positionLeft
+            });
+            $('.js_fourStep').css({
+                'top': positionTop - topShift,
+                'left': positionLeft
+            });
 
-        }
+        }*/
+
 
 
         //密码进入事件,更改密码框类型为密码
         $("#js_loginPassword2").focus(function () {
+            $(this).css({
+                "border": "1px solid rgb(230, 0, 18)"
+            })
             var $parent = $(this).parent();
             if($parent.hasClass("open")){
                 return;

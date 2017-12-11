@@ -10,27 +10,50 @@ $(function(){
   getHeaderData();
   getContentData(1,reputationConfig.templet_pageSize);
 });
+var template_value='';
 //初始化内容方法
 function initContent(data,curPage,pageSize){
   //判断成功执行，失败。
   if(data.isSuccess==true){
-    //循环每个entity
-    //初始化分页
-    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
-    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMiddle",6);
-    templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMax",8);
-    $(".product-prise-body .o_df_10-12").html("");
-    for (var j = 0; j<data.data.entities.length;j++) {
-      //append每个entity
-      $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSourceStr+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
-      //插入图片
-      for(var i=0;i<data.data.entities[j].paths.length;i++){
-        //修改图片class
-        var templet_contentImg=" ";
-        templet_contentImg+='<div class="prise-img-box"><img src="/tongshuaifile'+data.data.entities[j].paths[i]+'"></div>';
-        $(".img"+j).append(templet_contentImg);
+      var commentNum=data.data.entityCount;
+      $(".js_comment").find("span").html(commentNum);
+      var commentNone='';
+      if(commentNum!=0){
+          //循环每个entity
+          //初始化分页
+          templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
+          templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMiddle",6);
+          templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMax",8);
+          $(".product-prise-body .o_df_10-12").html("");
+          for (var j = 0; j<data.data.entities.length;j++) {
+              //append每个entity
+              $(".product-prise-body .o_df_10-12").append('<div class="o_g prise-box"><div class="o_u o_df_2-12 o_lg_3-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><div class="prise-user-name">'+templet_userNameHide(data.data.entities[j].loginAccountName)+'</div></div><div class="o_u o_df_6-12 o_lg_9-12 o_md_2-2 o_sm_2-2 o_xs_2-2"><span class="prise-time">'+data.data.entities[j].commentTime+'</span><span class="prise-form">来自</span><span class="prise-form">'+data.data.entities[j].channelSourceStr+'</span><div class="prise-column">'+data.data.entities[j].content+'</div><div class="prise-img img'+j+'"><img src=""/></div></div><div class="o_u o_lg_3-12 o_df-hide o_lg-show"></div>'+templet_reply(data.data.entities[j].replyContent)+'</div>');
+              //插入图片
+              for(var i=0;i<data.data.entities[j].paths.length;i++){
+                  //修改图片class
+                  var templet_contentImg=" ";
+                  templet_contentImg+='<div class="prise-img-box"><img src="/tongshuaifile'+data.data.entities[j].paths[i]+'"></div>';
+                  $(".img"+j).append(templet_contentImg);
+              }
+          }
+      }else{
+          /*commentNone+='<div class="o_g product-prise-header"><div class="o_u o_df_1-12"></div>';
+          commentNone+='<div class="o_u o_df_10-12">';
+          commentNone+='<div class="prise-head"><div class="prise-percent">';
+          commentNone+='<div class="percent-key">好评率：</div>';
+          commentNone+='<div class="percent-value">'+template_value+'<sub>%</sub></div></div><div class="prise-tips">';
+          commentNone+='<span class="prise_no_title">暂时还没有买家印象哦</span></div>';
+          commentNone+='<div class="clear"></div></div></div></div>';*/
+          commentNone+='<div class="o_g prise_no_pic">';
+          commentNone+='<div class="o_u o_df_1-12"></div>';
+          commentNone+='<div class="prise_no_item"><img src="/images/no_praise.png"/></div>';
+          commentNone+='<div class="prise_no_item">';
+          commentNone+='<span class="prise_no_tip">暂时还没有任何买家评价哦</span></div></div></div>';
+          $(".product-prise-header").after(commentNone);
+          $(".js_comment1").hide();
+
       }
-    }
+
 
   }
 }
@@ -95,13 +118,18 @@ function getHeaderData(){
       //循环输出。判断成功执行，失败。
       if(data.isSuccess==true){
         //修改好评率
-        $(".percent-value").html(data.data.favorableRate+'<sub>%</sub>');
-        //循环遍历标签
-        for(var k=0;k<data.data.topTagInfo.length;k++){
-          var  templet_topTagInfo="";
-          templet_topTagInfo+='<a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment">'+data.data.topTagInfo[k].tagName+'</a>';
-          $(".prise-tips").append(templet_topTagInfo);
-        }
+          template_value=data.data.favorableRate;
+          $(".percent-value").html(data.data.favorableRate+'<sub>%</sub>');
+          if(template_value!=0){
+              //循环遍历标签
+              for(var k=0;k<data.data.topTagInfo.length;k++){
+                  var  templet_topTagInfo="";
+                  templet_topTagInfo+='<a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment">'+data.data.topTagInfo[k].tagName+'</a>';
+                  $(".prise-tips").append(templet_topTagInfo);
+              }
+          }else{
+              $(".prise-tips").append('<span class="prise_no_title">暂时还没有买家印象哦</span>');
+          }
         //根据点击获取数据
         getContentDataByTag(1,reputationConfig.templet_pageSize);
         onTagAll();
