@@ -34,7 +34,7 @@
                         <div class="mail_register_cont_time js_registerContTime"><a href="">重新发送</a></div>
                         <div class="mail_register_wrong_text js_registerWrongText">我是错误提示</div>
                         <div class="mail_register_cont_down">没有收到邮件
-                            <i class="iconfont icon-problem-solid js_resgoster_hover">
+                            <i class="mail-problem js_resgoster_hover">
                                 <div class="l-float-tops">
                                     <div class="float_content">
                                         <p>1. 检查邮箱是否正确无误</p>
