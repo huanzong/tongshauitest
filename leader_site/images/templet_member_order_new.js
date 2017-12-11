@@ -94,16 +94,17 @@ function searchAllList(currPageT, pageSize){
             }
             for (var i = 0; i < templet_orderlist.length; i++) {
                 if(templet_orderlist[i].haveSub==0){
-                    if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
-                        templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_10-12 o_sm_7-12 o_xs_7-12"> ';
-                        templet_addhtml += ' <h3>待付款</h3> ';
-                    }
+                    // if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
+                    //     templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_10-12 o_sm_7-12 o_xs_7-12"> ';
+                    //     templet_addhtml += ' <h3>待付款</h3> ';
+                    // }
                     if (templet_orderlist[i].statusDesc.indexOf("待发货") > -1) {
                         templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
                         templet_addhtml += ' <h3>待发货</h3> ';
                     }
                     if (templet_orderlist[i].statusDesc.indexOf("已关闭") > -1) {
-                        templet_addhtml += ' <h3>已关闭</h3> ';
+                        templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
+                        templet_addhtml += ' <h3 class="title_disable">已关闭</h3> ';
                     }
                     var templet_time = removeMsec(templet_orderlist[i].orderTime);
                     templet_addhtml += ' <div class="o_u"><p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>' + templet_time + '</span></p>';
@@ -111,10 +112,10 @@ function searchAllList(currPageT, pageSize){
                     templet_addhtml += ' <p class="o_u o_md_1-2  o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥' + templet_orderlist[i].orderPrice + '</i></p></div> ';
                     templet_addhtml += ' <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
 
-                    if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
-                        templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
-                        templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2">取消</a></div> ';
-                    }
+                    // if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
+                    //     templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
+                    //     templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2">取消</a></div> ';
+                    // }
 
                     templet_addhtml += ' </div> </div> ';
 

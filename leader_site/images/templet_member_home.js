@@ -100,7 +100,7 @@ function freshenB(templet_entities) {
 }
 
 //小于575的时候根据Div里面的smallfreshen来取值
-function smallFreshen(templet_entities){
+function smallfreshen(templet_entities){
     var templet_count=$('.js-recommendation').attr('smallfreshen')
     $(".js-recommendation div.js-product").remove();
     var templet_addhtml='';
