@@ -248,7 +248,7 @@ jQuery(function () {
             html += '<a class="iconfont icon-close" ></a>';
             // </a>
             html += ' <a href ="' + p_link + '" ><img src="' + p_imgSrc + '"></a>';
-            html += ' <a class="goods_name">' + p_title + '</a>';
+            html += ' <a class="goods_name" href ="' + p_link + '">' + p_title + '</a>';
             html += '  <span class="goods_type">' + p_mold + '</span>';
             if (p_price != 0 || p_price != "0" || p_price != '' || p_price != undefined) {
                 html += '<span class="goods_price">￥' + p_price + '</span>'
