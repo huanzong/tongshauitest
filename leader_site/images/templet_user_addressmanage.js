@@ -19,15 +19,46 @@ var infotell=[];
 $('.js_addressPhoneInput').find('input').blur(function(){
     var inputVal = $.trim($(this).val());
     var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
-    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
-        $(this).removeClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_wrong').length!=0){
-        $(this).addClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_right').length!=0){
+    var tellQuhao = /[1-9]([0-9]{2,3})/;
+    var tellNub = /[1-9]([0-9]{7})/;
+    var tellNubs = /[1-9]([0-9]{1,8})/;
+    if(nubName==1&&tellQuhao.test(inputVal)){
         infotell[nubName-1] = inputVal;
+        $(this).removeClass('Validform_error');
+    }else if(nubName==1&&!tellQuhao.test(inputVal)){
+        infotell[nubName-1] = "";
+        $(this).addClass('Validform_error');
+
     }
+    if(nubName==2&&tellNub.test(inputVal)){
+        infotell[nubName-1] = inputVal;
+        $(this).removeClass('Validform_error');
+
+    }else if(nubName==2&&!tellNub.test(inputVal)){
+        infotell[nubName-1] = "";
+        $(this).addClass('Validform_error');
+
+    }
+    if(nubName==3&&tellNubs.test(inputVal)){
+        infotell[nubName-1] = inputVal;
+        $(this).removeClass('Validform_error');
+
+    }else if(nubName==3&&!tellNubs.test(inputVal)){
+        infotell[nubName-1] = "";
+        $(this).addClass('Validform_error');
+
+    }
+
+    //
+    //if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+    //    $(this).removeClass('Validform_error');
+    //    infotell[nubName-1] = '';
+    //}else if($(this).siblings('.Validform_wrong').length!=0){
+    //    $(this).addClass('Validform_error');
+    //    infotell[nubName-1] = '';
+    //}else if($(this).siblings('.Validform_right').length!=0){
+    //    infotell[nubName-1] = inputVal;
+    //}
 })
 //取消弹框提示
 var templet_text="确定取消添加吗？";
