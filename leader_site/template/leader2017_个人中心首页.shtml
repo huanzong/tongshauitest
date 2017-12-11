@@ -94,21 +94,21 @@
                                                 <!--</div>-->
                                                 <!--</div>-->
                                                 <div class="member-home-top-list o_u o_df_11-12">
-                                                    <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-wallet-solid o_u">
-                                                    <div class="member-home-top-list-nub">2</div>
+                                                    <a class="o_u o_df_3-10" href="/order?way=pay">
+                                                <span class="iconfont icon-wallet-solid o_u js-countPay">
+
                                                 </span>
                                                         <p>待付款</p>
                                                     </a>
-                                                    <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-box-solid o_u">
-                                                    <div class="member-home-top-list-nub">2</div>
+                                                    <a class="o_u o_df_3-10" href="/order?way=received">
+                                                <span class="iconfont icon-box-solid o_u js-countReceived">
+
                                                 </span>
                                                         <p>待收货</p>
                                                     </a>
-                                                    <a class="o_u o_df_3-10">
-                                                <span class="iconfont icon-comment--solid o_u">
-                                                    <div class="member-home-top-list-nub">2</div>
+                                                    <a class="o_u o_df_3-10" href="/order?way=comment">
+                                                <span class="iconfont icon-comment--solid o_u js-countComment">
+
                                                 </span>
                                                         <p>待评价</p>
                                                     </a>

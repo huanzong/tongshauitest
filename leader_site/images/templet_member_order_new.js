@@ -9,8 +9,28 @@ $(function(){
     //绘制标题栏数字
     orderListCount('付款');
     orderListCount('收货');
-    //全部订单第一页
-    searchAllList(1,templat_pagesize);
+    orderListCount('评价');
+
+    //根据参数去相应的页面
+    var templet_orderway=getQueryString("way");
+
+    if('pay'==templet_orderway){
+        searchStateList(1,10,'待付款');
+        $('.js_orderList>li').eq(1).addClass('cur').siblings().removeClass('cur');
+    }
+    if('received'==templet_orderway){
+        searchStateList(1,10,'待收货');
+        $('.js_orderList>li').eq(2).addClass('cur').siblings().removeClass('cur');
+    }
+    if('comment'==templet_orderway){
+        memberOrderNot();
+        $('.js_orderList>li').eq(3).addClass('cur').siblings().removeClass('cur');
+    }
+    if(templet_orderway==null || templet_orderway=='null' ||templet_orderway==''){
+        //全部订单第一页
+        searchAllList(1,templat_pagesize);
+    }
+
 })
 
 //分页初始化
@@ -251,11 +271,11 @@ $('.js_orderList>li').click(function(){
     }
     //待付款
     if(1==index){
-        searchStateList(1,10,'待付款')
+        searchStateList(1,10,'待付款');
     }
     //待收货
     if(2==index){
-        searchStateList(1,10,'待收货')
+        searchStateList(1,10,'待收货');
     }
     //待评论
     if(3==index){
@@ -305,7 +325,7 @@ function orderListCount(way){
             "orderStatus":1
         };
     }
-
+    if('付款'==way || '收货'==way){
         $.ajax({
             url: siteConfig.userUrl + "/buy/order/order-front/list/",
             data: JSON.stringify(templet_date),
@@ -334,4 +354,39 @@ function orderListCount(way){
                 }
             }
         })
+    }
+
+
+    if('评价'==way){
+        templet_date={
+            "commentStatus":1,
+            "pageNo":1,
+            "pageSize":1
+        };
+        $.ajax({
+            url: siteConfig.userUrl + "/interaction-comment/comment/orderComment/getOrderListByCommSta/",
+            type:"get",
+            data: templet_date,
+            login: true,
+            success_cb: function (data) {
+                if(!data.data.entityCount==0){
+                    if(!data.data.entityCount==0){
+                        $(".js-evaluate").addClass('member-nub-round');
+                        $(".js-evaluate").html(data.data.entityCount);
+                    }else{
+                        $(".js-evaluate").removeClass('member-nub-round');
+                        $(".js-evaluate").html('');
+                    }
+                }
+            }
+        });
+    }
+}
+
+//标题栏参数
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
 }
