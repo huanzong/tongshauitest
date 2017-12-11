@@ -10,6 +10,7 @@ $(function(){
   getHeaderData();
   getContentData(1,reputationConfig.templet_pageSize);
 });
+var template_value='';
 //初始化内容方法
 function initContent(data,curPage,pageSize){
   //判断成功执行，失败。
@@ -36,19 +37,21 @@ function initContent(data,curPage,pageSize){
               }
           }
       }else{
-          commentNone+='<div class="o_g product-prise-header"><div class="o_u o_df_1-12"></div>';
+          /*commentNone+='<div class="o_g product-prise-header"><div class="o_u o_df_1-12"></div>';
           commentNone+='<div class="o_u o_df_10-12">';
           commentNone+='<div class="prise-head"><div class="prise-percent">';
           commentNone+='<div class="percent-key">好评率：</div>';
-          commentNone+='<div class="percent-value"></div></div><div class="prise-tips">';
+          commentNone+='<div class="percent-value">'+template_value+'<sub>%</sub></div></div><div class="prise-tips">';
           commentNone+='<span class="prise_no_title">暂时还没有买家印象哦</span></div>';
-          commentNone+='<div class="clear"></div></div></div></div>';
+          commentNone+='<div class="clear"></div></div></div></div>';*/
           commentNone+='<div class="o_g prise_no_pic">';
           commentNone+='<div class="o_u o_df_1-12"></div>';
-          commentNone+='<div class="prise_no_item"><img src="no_praise.png"/></div>';
+          commentNone+='<div class="prise_no_item"><img src="/images/no_praise.png"/></div>';
           commentNone+='<div class="prise_no_item">';
           commentNone+='<span class="prise_no_tip">暂时还没有任何买家评价哦</span></div></div></div>';
-          $(".js_animateLine").after(commentNone);
+          $(".product-prise-header").after(commentNone);
+          $(".js_comment1").hide();
+
       }
 
 
@@ -115,15 +118,18 @@ function getHeaderData(){
       //循环输出。判断成功执行，失败。
       if(data.isSuccess==true){
         //修改好评率
-        $(".percent-value").html(data.data.favorableRate+'<sub>%</sub>');
-        //循环遍历标签
-        for(var k=0;k<data.data.topTagInfo.length;k++){
-            var  templet_topTagInfo="";
-            templet_topTagInfo+='<a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment">'+data.data.topTagInfo[k].tagName+'</a>';
-            $(".prise-tips").append(templet_topTagInfo);
-        }
-
-
+          template_value=data.data.favorableRate;
+          $(".percent-value").html(data.data.favorableRate+'<sub>%</sub>');
+          if(template_value!=0){
+              //循环遍历标签
+              for(var k=0;k<data.data.topTagInfo.length;k++){
+                  var  templet_topTagInfo="";
+                  templet_topTagInfo+='<a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment">'+data.data.topTagInfo[k].tagName+'</a>';
+                  $(".prise-tips").append(templet_topTagInfo);
+              }
+          }else{
+              $(".prise-tips").append('<span class="prise_no_title">暂时还没有买家印象哦</span>');
+          }
         //根据点击获取数据
         getContentDataByTag(1,reputationConfig.templet_pageSize);
         onTagAll();
