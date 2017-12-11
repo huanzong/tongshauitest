@@ -77,7 +77,7 @@ $(function(){
         })
 })
 
-    address.ignore('#phonequhao,#phone,#phonefenjihao');
+    //address.ignore('#phonequhao,#phone,#phonefenjihao');
 
 
 
