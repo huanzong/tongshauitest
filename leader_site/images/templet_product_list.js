@@ -312,6 +312,7 @@ $(".font").each(function () {
             order = "-shangshishijian"
         }
         if ($(this).text() == "人气") {
+            $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-up").addClass("icon-arrow-refresh-down");
             order = "-rqcp"
         }
         if ($(this).text() == "价格") {
@@ -326,6 +327,7 @@ $(".font").each(function () {
             order = "+shangshishijian"
         }
         if ($(this).text() == "人气") {
+            $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-down").addClass("icon-arrow-refresh-up");
             order = "+rqcp"
         }
         if ($(this).text() == "价格") {
