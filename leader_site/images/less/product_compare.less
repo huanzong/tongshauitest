@@ -74,7 +74,7 @@
 		font-size: 14px;
 		text-align: center;
 		min-height: 260px;
-		a{
+		.iconfont{
 			position: absolute;
 			right: 15px;
 			top: 5px;
@@ -92,6 +92,8 @@
 			padding: 0 30px;
 		}
 		.goods_name{
+			display: block;
+			padding: 20px 30px 0;
 			line-height: 20px;
 			color: #333;
 		}
@@ -156,6 +158,17 @@
 			width: 30px;
 			height: 10px;
 			background: #fff;
+		}
+
+		&.border-none{
+			display: table;
+			width: 100%;
+
+			.o_df_1-5{
+				display: table-cell;
+				width: 20%;
+				vertical-align: middle;
+			}
 		}
 	}
 	.compare_th{
