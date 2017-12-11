@@ -173,7 +173,7 @@ function orderListCount(){
                 $('.js-countComment').html('<div class="member-home-top-list-nub">'+data.data.entityCount+'</div>');
             }
         }
-    })
+    });
 
 }
 
