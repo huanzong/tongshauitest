@@ -21,7 +21,10 @@ $('.js_addressPhoneInput').find('input').blur(function(){
     var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
     var tellQuhao = /[1-9]([0-9]{2,3})/;
     var tellNub = /[1-9]([0-9]{7})/;
-    var tellNubs = /[1-9]([0-9]{1,8})/;
+    var tellNubs = /[1-9]([0-9]{1,7})/;
+if(inputVal.length==0){
+    $(this).removeClass('Validform_error');
+}else{
     if(nubName==1&&tellQuhao.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
@@ -48,6 +51,8 @@ $('.js_addressPhoneInput').find('input').blur(function(){
         $(this).addClass('Validform_error');
 
     }
+}
+
 
     //
     //if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
