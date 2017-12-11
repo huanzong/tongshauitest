@@ -264,7 +264,7 @@
 					<div class="prolist-top">
 						<a class="font">上市时间<i class="iconfont icon-arrow-refresh-down"></i></a>
 						<span class="line"></span>
-						<a class="font">人气<i class="iconfont l-none"></i></a>
+						<a class="font">人气<i class="iconfont l-none icon-arrow-refresh-down"></i></a>
 						<span class="line"></span>
 						<a class="font">价格<i class="iconfont l-none"></i></a>
 						<span class="info">
