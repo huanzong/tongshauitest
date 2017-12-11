@@ -246,7 +246,7 @@ jQuery(function () {
             html += ' <div class="compare_goods" isAdd="0">';
             //href ="' + p_link + '"
             html += '<a class="iconfont icon-close" ></a>';
-            html += '  <img src="' + p_imgSrc + '">';
+            html += '  <a href ="' + p_link + '"><img src="' + p_imgSrc + '"></a>';
             html += ' <span class="goods_name">' + p_title + '</span>';
             html += '  <span class="goods_type">' + p_mold + '</span>';
             if (p_price != 0 || p_price != "0" || p_price != '' || p_price != undefined) {
