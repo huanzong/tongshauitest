@@ -118,7 +118,17 @@ $('.js_menuShow').on('click', function () {
 });
 
 //点击搜索按钮全文搜索
-$('.js_jumpto_product_search').on('click', function () {
+$('.js_jumpto_product_search').on('click', jumpToProductSearch());
+
+//回车键搜索
+$('.js_searchHistory').keydown(function (e) {
+    if(e.which == 13){
+        jumpToProductSearch();
+    }
+});
+
+//跳转至全文检索页面
+function jumpToProductSearch() {
     var channelId = '273690';
     var historyCookie = $.cookie('historyCookie');
     var searchWord = $.trim($('.js_searchHistory').val());
@@ -151,7 +161,7 @@ $('.js_jumpto_product_search').on('click', function () {
         searchWord = encodeURIComponent(searchWord);
         window.location.href = "/was5/web/search?channelid=" + channelId + "&searchword=" + searchWord;
     }
-});
+}
 
 //搜索框浮层检索
 function searchBoxWord(word) {
