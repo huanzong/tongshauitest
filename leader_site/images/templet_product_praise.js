@@ -14,6 +14,8 @@ $(function(){
 function initContent(data,curPage,pageSize){
   //判断成功执行，失败。
   if(data.isSuccess==true){
+      var commentNum=data.data.entityCount;
+      $(".js_comment").find("span").html(commentNum);
     //循环每个entity
     //初始化分页
     templet_pagination(curPage,data.data.pageCount,pageSize,$(this).text(),".pageMobile",3);
