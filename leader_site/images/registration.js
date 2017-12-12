@@ -55,6 +55,28 @@ $(function() {
         }
     });
 
+
+// 表单初始化
+    var address=$(".js_regType_phone").Validform({
+        tiptype:3,
+        showAllError:false,
+        ignoreHidden:false,
+        dragonfly:false,
+        callback:function(form){//验证后保存地址
+
+        }
+    });
+
+    var email=$(".js_regType_email").Validform({
+        tiptype:3,
+        showAllError:false,
+        ignoreHidden:false,
+        dragonfly:false,
+        callback:function(form){//验证后保存地址
+
+        }
+    });
+
 });
 
 
