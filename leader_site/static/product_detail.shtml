@@ -117,8 +117,8 @@
 
                         </div>
                         <div class="o_u detail-nav-info">
-                            <div class="nav-info-box">
-                                <a class="l-btn-sm l-btn-red nav-btn" class="" href="javascript:;">立即购买</a>
+                            <div class="nav-info-box js_navLink">
+                                <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top" href="javascript:;">立即购买</a>
                             </div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
-                            <img src="images/compare_goods.PNG" class="banner-pro-img">
+                            <img src="images/compare_goods.PNG" class="banner-pro-img js_specificsShow">
                             <div class="banner-pro-oppo o_df-hide o_xs-show">
                                 <div class="activity-icon active">
                                     <div class="icon-font">
@@ -186,7 +186,7 @@
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
                                         <span class="address-tit">配送至:</span>
-                                        <span>浙江 杭州市 西湖区</span>
+                                        <span>浙江 杭州市 西湖区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
                                     <div class="delivery-time">
                                         <span>有货</span>
@@ -262,7 +262,7 @@
                                         7月31日-8月20日
                                     </div>
                                     <div class="activity-con-info">
-                                        套购慢件最高3000，满减赠扫地机器人
+                                        套购满减最高3000，满减赠扫地机器人
                                     </div>
                                 </div>
                                 <div class="activity-con-small">
@@ -383,7 +383,7 @@
                     <div class="o_u o_df_10-12">
                         <div class="o_u o_df_2-2 detail-fontpoint">
                             <div class="o_u o_df_1-12"></div>
-                            <div class="o_u o_df_10-12">
+                            <div class="o_u o_df_10-12 o_df-center">
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold">342L</div>
@@ -478,6 +478,7 @@
                         <span>海尔保险</span>
                     </div>
                 </div>
+                <div class="o_clear"></div>
             </div>
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
@@ -778,7 +779,7 @@
                             <div class="param-attachment">
                                 <span class="param-attachment-title">附件</span>
                                 <span class="param-attachment-line o_xs-hide"></span>
-                                <a class="param-attachment-other">外机支架</a>
+                                <span class="param-attachment-other">外机支架</span>
                                 <a class="param-attachment-other">安装管道</a>
                                 <a class="param-attachment-other">说明书</a>
                                 <a class="param-attachment-other">遥控器</a>
@@ -881,6 +882,8 @@
                             <div class="praise-con">
                                 <div class="detail-praise-box">
                                     打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千 打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千
+                                </div>
+                                <div class="detail-praise-img">
                                 </div>
                                 <div class="detail-praise-font">
                                     <span class="name">海****尔</span>
