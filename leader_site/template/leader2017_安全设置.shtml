@@ -101,9 +101,9 @@
                                             <i class="iconfont icon-information-mark-sol member-security-goodcolor"></i>
                                             <div class="member-security-functioninfotxt member-security-goodcolor">已开启</div>
                                         </div>
-                                        <div class="o_u o_df_1-3 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">绑定邮箱或手机，更改密码时，接收邮件或短信提醒</div></div></div></div>
-                                        <div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox js-functionbtn">
-                                        </div>
+                                        <div class="o_u o_df_1-2 member-security-functiontext"><div class="o_table"><div class="o_cell"><div class="o-g member-security-functiontextalgin">绑定邮箱或手机，更改密码时，接收邮件或短信提醒</div></div></div></div>
+                                        <!--<div class="o_u o_df_1-6 o_lg_1-4 o_md_1-4 o_sm_1-3 member-security-functionbtnbox js-functionbtn">-->
+                                        <!--</div>-->
                                     </li>
                                 </ul>
                             </div>
