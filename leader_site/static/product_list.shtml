@@ -818,58 +818,61 @@
 					</div>
 				</div>
 				<ul class="compare-list js_compareBox">
-					<li>
-						<div class="compare-product-img">
-							<img src="images/compare_goods.PNG">
-						</div>
-						<div class="compare-product-info">
-							<p>双开门双</p>
-							<p class="leaveout">双开门双开门双开门双开门</p>
-							<span>GHEGEGJ-GHEIGO</span>
-						</div>
-						<i class="iconfont icon-close compare-close js_compareClose"></i>
-					</li>
-					<li>
-						<div class="compare-product-img">
-							<img src="images/compare_goods.PNG">
-						</div>
-						<div class="compare-product-info">
-							<p>双开门双</p>
-							<p class="leaveout">双开门双开门双开门双开门</p>
-							<span>GHEGEGJ-GHEIGO</span>
-						</div>
-						<i class="iconfont icon-close compare-close js_compareClose"></i>
-					</li>
-					<li>
-						<div class="compare-product-img">
-							<img src="images/compare_goods.PNG">
-						</div>
-						<div class="compare-product-info">
-							<p>双开门双</p>
-							<p class="leaveout">双开门双开门双开门双开门</p>
-							<span>GHEGEGJ-GHEIGO</span>
-						</div>
-						<i class="iconfont icon-close compare-close js_compareClose"></i>
-					</li>
-					<li>
-						<div class="compare-product-img">
-							<img src="images/compare_goods.PNG">
-						</div>
-						<div class="compare-product-info">
-							<p>双开门双</p>
-							<p class="leaveout">双开门双开门双开门双开门</p>
-							<span>GHEGEGJ-GHEIGO</span>
-						</div>
-						<i class="iconfont icon-close compare-close js_compareClose"></i>
-					</li>
-					<li>
-						<div class="compare-link">
-							<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
-						</div>
-						<div class="compare-link">
-							<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
-						</div>
-					</li>
+					<div class="o_g">
+						<li class="o_u o_df_1-5">
+							<div class="compare-product-img">
+								<img src="images/compare_goods.PNG">
+							</div>
+							<div class="compare-product-info">
+								<p>双开门双</p>
+								<p class="leaveout">双开门双开门双开门双开门</p>
+								<span>GHEGEGJ-GHEIGO</span>
+							</div>
+							<i class="iconfont icon-close compare-close js_compareClose"></i>
+						</li>
+						<li class="o_u o_df_1-5">
+							<div class="compare-product-img">
+								<img src="images/compare_goods.PNG">
+							</div>
+							<div class="compare-product-info">
+								<p>双开门双</p>
+								<p class="leaveout">双开门双开门双开门双开门</p>
+								<span>GHEGEGJ-GHEIGO</span>
+							</div>
+							<i class="iconfont icon-close compare-close js_compareClose"></i>
+						</li>
+						<li class="o_u o_df_1-5">
+							<div class="compare-product-img">
+								<img src="images/compare_goods.PNG">
+							</div>
+							<div class="compare-product-info">
+								<p>双开门双</p>
+								<p class="leaveout">双开门双开门双开门双开门</p>
+								<span>GHEGEGJ-GHEIGO</span>
+							</div>
+							<i class="iconfont icon-close compare-close js_compareClose"></i>
+						</li>
+						<li class="o_u o_df_1-5">
+							<div class="compare-product-img">
+								<img src="images/compare_goods.PNG">
+							</div>
+							<div class="compare-product-info">
+								<p>双开门双</p>
+								<p class="leaveout">双开门双开门双开门双开门</p>
+								<span>GHEGEGJ-GHEIGO</span>
+							</div>
+							<i class="iconfont icon-close compare-close js_compareClose"></i>
+						</li>
+						<li class="o_u o_df_1-5 o_df-right compare-button-clear">
+							<div class="compare-link">
+								<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
+							</div>
+							<div class="compare-link">
+								<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
+							</div>
+						</li>
+					</div>
+						
 				</ul>
 			</div>
 		<!-- 产品对比 END -->
