@@ -82,7 +82,7 @@
             </div>
 
             <!-- 优生活 start-->
-            <div class="life-style-photo-box  ">
+            <div class="life-style-photo-box  js_lifeStylePhotoBox">
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
                     <div class="photo-list-img  js_lifeStylePhotoCentent" ></div>
                     <div class="life-style-photo-cur-text">
