@@ -342,6 +342,17 @@ var address=$(".js_form_addAddrManagement").Validform({
 
 $(function(){
     address.ignore('#phonequhao,#phone,#phonefenjihao');
+
+    $('.js-newMobile').blur(function(){
+        var dataType =$(this).attr('data-type');
+        var dataVal = $(this).val();
+        var inputNullText = $(this).attr('nullmsg');
+        console.log($(this).val());
+        if(dataVal.length==0){
+            $(this).addClass('Validform_error').attr('data-type',1);
+            $(this).siblings('.js-addressMobError').html(inputNullText)
+        }
+    })
 })
 //获取用户地址列表
 function loadUserInfoList(){
@@ -442,9 +453,20 @@ function resetForm(){
     $("#phonefenjihao").blur();
      $('.js-addressMobError').html(' ');
     $('.Validform_error').removeClass('Validform_error');
+ 
+
 };
 
-
+$('.js-newMobile').blur(function(){
+ 
+    var dataVal = $(this).val();
+    var inputNullText = $(this).attr('nullmsg');
+    console.log($(this).val());
+    if(!dataType&&dataVal.length==0){
+        $(this).addClass('Validform_error').attr('data-type',1);
+        $(this).siblings('.js-addressMobError').html(inputNullText)
+    }
+})
 //设置默认地址
 $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
