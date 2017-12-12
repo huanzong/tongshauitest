@@ -11,7 +11,7 @@ $(function(){
     orderListCount('收货');
     orderListCount('评价');
 
-    //根据参数去相应的页面
+    //根据参数去相应页面
     var templet_orderway=getQueryString("way");
 
     if('pay'==templet_orderway){
