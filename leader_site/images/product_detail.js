@@ -761,9 +761,9 @@ $(function() {
 
         // 当前页面商品信息
         var goodsInfo = [{
-            "inSkuCode": "1234-sku",
+            "inSkuCode": "650000",
             "quantity": 1,
-            "regionCode": 2212
+            "regionCode": 2450
         }]
         
         if (istrsidssdssotoken()) {

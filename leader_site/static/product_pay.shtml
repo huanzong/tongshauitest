@@ -284,15 +284,16 @@
             <!-- 支付成功页面内容 END -->
             <!-- 页脚吸底 -->
             <div class="o_g pay-footer">
-                <a href="javascript:;" class="l-btn-lg l-btn-red o_lg-show">去付款</a>
-                <a href="javascript:;" class="l-btn-normal l-btn-red">去付款</a>
+                <a href="javascript:;" class="l-btn-lg l-btn-red o_lg-show js-pay">去付款</a>
+                <a href="javascript:;" class="l-btn-normal l-btn-red js-pay">去付款</a>
             </div>
             <!-- 页脚吸底 END -->
             <!--#include virtual="public/footer.shtml"-->
-
+            
 
         </div>
     </div>
+    <div class="js-pay-form">订单号：8887777789076665</div>
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/product_pay.js"></script>
 

@@ -337,11 +337,13 @@ $(function() {
             })
         })
         var orderCode = ('' + Math.random()).substring(3,10)
-        $.cookie('orderCode' + orderCode, JSON.stringify(orderArr), {
-            'path':'/',
-            // 'domain':'.tongshuai.com'
-        });
-        window.location.href = "./product_orderconfirm.shtml?code=" + orderCode
+        if (orderArr.length > 0) {
+            $.cookie('orderCode' + orderCode, JSON.stringify(orderArr), {
+                'path':'/',
+                // 'domain':'.tongshuai.com'
+            });
+            window.location.href = "./product_orderconfirm.shtml?code=" + orderCode
+        }
     })
    
 });

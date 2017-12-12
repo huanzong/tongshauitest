@@ -181,7 +181,7 @@ $(function () {
     }
 
 
-    console.log(getOS())
+    console.log(cartIds)
     /**
      * 提交订单
      */
@@ -190,7 +190,7 @@ $(function () {
         var orderParams = {
             "cartIds": cartIds,
             "goods": orderList,
-            "clientRemark": "string",
+            "clientRemark": "",
             // "invoiceHead": "张三",
             "invoiceId": $('.js_orderconInvoiceBox').attr('invoiceId'),
             "invoiceType": 2,
@@ -842,7 +842,7 @@ var orderServer = {
             applicationType: true,
             success_cb: function (data) {
                 if (data.isSuccess) {
-                    window.location.href = "./product_pay.shtml"
+                    window.location.href = "./product_pay.shtml?code=" + data.data[0]
                     return false;
                 }
                 return true;//终止购物车商品数量增减
