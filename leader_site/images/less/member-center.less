@@ -104,7 +104,7 @@
             }
             p {
                 color: #666;
-                font-size: 12px;
+                font-size: 14px;
                 margin: 10px 0 20px 0;
             }
             a {
@@ -155,7 +155,7 @@
 
 
 .member-center {
-    height: 920px;
+    height: 840px;
     position: relative;
     .member-center-left {
         background: #f8f8f8;
@@ -228,7 +228,7 @@
             // background: url(member-content-1.png) no-repeat center;
             background-size: 100% auto !important;
             box-shadow: 2px 1px 17px 0 #eee;
-            margin: 0 -25px 26px 0;
+            margin: 0 15px 26px 0;
         }
         .member-content-3 {
             width: 475px;
@@ -238,8 +238,24 @@
             background-size: 100% auto  !important;
             box-shadow: 2px 1px 17px 0 #eee;
             margin: 0 15px 26px 0;
+            float: right;
             .member-conter-text {
                 margin-top: 145px;
+            }
+            @media (min-width: 701px) and (max-width: 991px) {
+                /* md*/
+                float: initial;
+
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+                /* sm*/
+                float: initial;
+
+            }
+            @media (max-width: 575px) {
+                /* xs*/
+                float: initial;
+
             }
         }
         .member-content-2 {
@@ -249,7 +265,7 @@
             // background: url(member-content-2.png) no-repeat center;
             background-size: 100% auto  !important;
             box-shadow: 2px 1px 17px 0 #eee;
-            margin-bottom: 26px;
+            //margin-bottom: 26px;
             margin: 0 0 26px 15px;
             .member-conter-text {
                 margin-top: 140px;
@@ -306,6 +322,7 @@
                 >i {
                     padding: 20px 0 0 0;
                 }
+
             }
             h5 {
                 font-size: 20px;
@@ -333,6 +350,7 @@
             .iconfont {
                 padding: 0 10px 0 0;
             }
+
         }
 
         @media (min-width: 992px) and (max-width: 1199px) {
@@ -495,10 +513,12 @@
     background: url(member-bottombk.png) no-repeat center;
     text-align: center;
     height: 475px;
+    position: relative;
+    z-index: 9;
         @media (max-width: 575px) {
           /* xs*/
-          height: 530px;
-          background-size: auto 100%;
+          height: 530px;  background: url(member-bottombk-min.png) no-repeat center;
+          background-size: 1080px 1650px;
         }
     h3 {
         font-size: 32px;
@@ -539,6 +559,7 @@
                 }
                 p{
                     text-align: center;
+                    margin:  0 auto;
                 }
             }
             @media (min-width: 576px) and (max-width: 700px) {
@@ -548,6 +569,8 @@
                 }
                 p{
                     text-align: center;
+                    margin:  0 auto;
+
                 }
                
             }
@@ -559,6 +582,8 @@
                     }
                     p{
                         text-align: center;
+                        margin:  0 auto;
+
                     }
             }
         }
@@ -610,13 +635,28 @@
         h5 {
             font-size: 20px;
             color: #333;
+            @media (min-width: 701px) and (max-width: 991px) {
+                /* md*/
+                font-size: 16px;
+
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+                /* sm*/
+                font-size: 14px;
+
+            }
+            @media (max-width: 575px) {
+                /* xs*/
+                font-size: 14px;
+
+            }
         }
         p {
             font-size: 12px;
             color: #666;
             width: 105px;
             line-height: 21px;
-                    @media (min-width: 576px) and (max-width: 700px) {
+            @media (min-width: 576px) and (max-width: 700px) {
             /* sm*/
               width: 100%;
         }
@@ -748,10 +788,30 @@
 
             }
         }
+        .member-conter-text-down{
+
+
+        }
 
     }
 
+    i:last-child{
+        @media (min-width: 701px) and (max-width: 991px) {
+            /* md*/
+            display: none !important;
+            font-size: 0;
+            width: 20px;
 
+        }
+        @media (min-width: 576px) and (max-width: 700px) {
+            /* sm*/
+            display: none;
+        }
+        @media (max-width: 575px) {
+            /* xs*/
+            display: none;
+        }
+    }
 }
 .member-content-3{
      .member-conter-text{
