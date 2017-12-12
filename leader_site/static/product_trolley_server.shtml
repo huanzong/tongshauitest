@@ -213,10 +213,10 @@
                 <div class="o_u o_df_3-12 o_lg_1-2 o_md_1-2 o_sm_5-12 o_xs_5-12">
                     <div class="trolley-footer-total">
                         <div class="footer-total-num o_sm-hide o_xs-hide">
-                            共<span>6</span>件商品，已选择<span>1</span>件
+                            共<span class="js-product-num">6</span>件商品，已选择<span class="js-selectd-num">0</span>件
                         </div>
-                        <div class="footer-total-price">
-                            <span>合计：</span>￥88899
+                        <div class="footer-total-price js-total-amount">
+                            <span>合计：</span>￥0
                         </div>
                     </div>
                 </div>

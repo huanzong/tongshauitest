@@ -30,7 +30,12 @@ $(function() {
             orderId: getRequest().code
         })
     })
+
+    var orderInfo = JSON.parse($.cookie('payCode' + getRequest().code))
     
+    $('.js-userinfo').text(orderInfo.userinfo)
+    $('.js-address').html('&emsp;' + orderInfo.address)
+    $('.js-price').text(orderInfo.price)
 });
 
 var orderServer = {

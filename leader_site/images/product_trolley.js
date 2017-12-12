@@ -17,6 +17,7 @@ $(function() {
                 success_cb: function(data){
                     if(data.isSuccess){
                         console.log(data)
+                        console.log(skuCodesObj)
                         //测试数据
                         // var data = trolleyListData;
 
@@ -28,8 +29,11 @@ $(function() {
                             n.skuShowVO['quantity'] = quantity;
                             n.skuShowVO['cartGoodId'] = cartGoodId;
                         })
+
+                        $('.js-product-num').text(trolleyData.length)
                         $(".js_trolleyListData").setTemplateElement("template-items");
                         $(".js_trolleyListData").processTemplate(trolleyData);
+
                         trolleyDatafun();
                     }
                         
@@ -151,6 +155,14 @@ $(function() {
         } else {
             $(this).parents('.trolley-product').removeClass('trolley-product-selected')
         }
+
+        $('.js-selectd-num').text($('.trolley-product-selected').length)
+        var totalAmount = 0;
+        
+        $('.trolley-product-selected').each(function(){
+            totalAmount += parseFloat($(this).find('.js_trolleyPrice').text().substring(1,10)) * parseInt($('.js_trolleyNumber input').val())
+        })
+        $('.js-total-amount').html('<span>合计：</span> ￥' + totalAmount)
     })
 
     /**

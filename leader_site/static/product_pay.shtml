@@ -51,21 +51,21 @@
                     </div>
                     <div class="success-tip-address">
                        <span class="tip-address-tit">收货信息：</span>
-                       <span>海尔统帅</span>
-                       <span>山东省青岛市市南区费金额哦根据9900金额</span>
-                       <span class="tip-address-price">应付总额：<em>￥9900</em></span>
+                       <span class="js-userinfo">海尔统帅</span>
+                       <span class="js-address">山东省青岛市市南区费金额哦根据9900金额</span>
+                       <span class="tip-address-price">应付总额：<em class="js-price">￥9900</em></span>
                     </div>
                     <!-- 订单提交成功 END -->
                     <!-- 支付方式 XL -->
                     <div class="pay-system-xl">
                         <div class="o_g pay-system-head js_paySystem">
-                            <div class="o_u o_df_1-5">
+                            <!-- <div class="o_u o_df_1-5">
                                 <a href="javascript:;" pay-index="1" class="active">微信支付</a>
-                            </div>
+                            </div> -->
                             <div class="o_u o_df_1-5">
-                                <a href="javascript:;" pay-index="2">支付宝</a>
+                                <a href="javascript:;" pay-index="1" class="active">支付宝</a>
                             </div>
-                            <div class="o_u o_df_1-5">
+                            <!-- <div class="o_u o_df_1-5">
                                 <a href="javascript:;" pay-index="3">分期付款</a>
                             </div>
                             <div class="o_u o_df_1-5">
@@ -73,27 +73,27 @@
                             </div>
                             <div class="o_u o_df_1-5">
                                 <a href="javascript:;" pay-index="5">信用卡快捷支付</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="pay-system-con">
                             <!-- 微信支付 -->
-                            <div class="pay-system-wechat js_paySystemBox">
+                            <!-- <div class="pay-system-wechat js_paySystemBox">
                                 <img src="images/pay_wechat.jpg">
-                            </div>
+                            </div> -->
                             <!-- 微信支付 END -->
                             <!-- 支付宝 -->
-                            <div class="pay-system-alipay l-none js_paySystemBox">
+                            <div class="pay-system-alipay js_paySystemBox">
                                 <img src="images/pay_system1.jpg">
                                 <div class="alipay-info">
                                     前往支付宝直接扫码或登录完成付款
                                 </div>
                                 <div class="alipay-btn">
-                                    <a href="javascript:;" class="l-btn-normal l-btn-red">立即前往</a>
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red js-pay">立即前往</a>
                                 </div>
                             </div>
                             <!-- 支付宝 END -->
                             <!-- 分期付款 -->
-                            <div class="pay-system-instalments l-none js_paySystemBox">
+                            <!-- <div class="pay-system-instalments l-none js_paySystemBox">
                                 <ul class="instalments-select">
                                     <li class="active">
                                         <img src="images/pay_system1.jpg">
@@ -146,10 +146,10 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!-- 分期付款 END -->
                             <!-- 更多在线支付 -->
-                            <div class="pay-system-more l-none js_paySystemBox">
+                            <!-- <div class="pay-system-more l-none js_paySystemBox">
                                 <div class="more-info">
                                     <em>网上银行：</em>
                                     <span>支持以下银行，可使用储蓄卡或信用卡支付，需开通网上银行</span>
@@ -212,10 +212,10 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!-- 更多在线支付 END -->
                             <!-- 更多在线支付 -->
-                            <div class="pay-system-more l-none js_paySystemBox">
+                            <!-- <div class="pay-system-more l-none js_paySystemBox">
                                 <div class="more-info">
                                     <em>信用卡支付：</em>
                                     <span>设计与在线支付相同，未提供单独设计图</span>
@@ -247,7 +247,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!-- 更多在线支付 END -->
                         </div>
                     </div>
@@ -293,6 +293,8 @@
 
         </div>
     </div>
+    <!-- 支付表单 -->
+    <div class="js-pay-form"></div>
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/product_pay.js"></script>
 

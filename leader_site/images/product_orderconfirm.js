@@ -842,6 +842,16 @@ var orderServer = {
             applicationType: true,
             success_cb: function (data) {
                 if (data.isSuccess) {
+                    var orderInfo = {
+                        userinfo: $('.js-product-orderconfirm-address').find('p').eq(1).text(),
+                        address: $('.js-product-orderconfirm-address').find('p').eq(0).text(),
+                        price: $('.js-sumPayable').text()
+                    }
+                    $.cookie('payCode' + data.data[0], JSON.stringify(orderInfo), {
+                        'path':'/',
+                        // 'domain':'.tongshuai.com'
+                    });
+
                     window.location.href = "./product_pay.shtml?code=" + data.data[0]
                     return false;
                 }
@@ -965,6 +975,9 @@ var userServer = {
                     $('.js-product-address-list').html(addressList)
                     $(".js_radio").jq_qvote();
 
+                    $('.js-product-orderconfirm-address').find('p').eq(0).text($('.product-address-list-select .product-address-list-address').text())
+                    $('.js-product-orderconfirm-address').find('p').eq(1).html($('.product-address-list-select .product-address-list-name').text() + '&emsp;' +$('.product-address-list-select .product-address-list-phone').text() )
+
                     $('.c_ipt_cr').click(function () {
                         var select = $(this).hasClass('c_ipt_cr_rs');
                         if (select) {
@@ -973,7 +986,7 @@ var userServer = {
                         }
 
                         $('.js-product-orderconfirm-address').find('p').eq(0).text($('.product-address-list-select .product-address-list-address').text())
-                        $('.js-product-orderconfirm-address').find('p').eq(1).html($('.product-address-list-select .product-address-list-name').text() + '&emsp;&emsp;' +$('.product-address-list-select .product-address-list-phone').text() )
+                        $('.js-product-orderconfirm-address').find('p').eq(1).html($('.product-address-list-select .product-address-list-name').text() + '&emsp;' +$('.product-address-list-select .product-address-list-phone').text() )
                     })
 
                     // 查询发票头信息
