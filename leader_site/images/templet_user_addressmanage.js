@@ -463,7 +463,7 @@ $('.js-newMobile').blur(function(){
     var dataVal = $(this).val();
     var inputNullText = $(this).attr('nullmsg');
     console.log($(this).val());
-    if(!dataType&&dataVal.length==0){
+    if(dataVal.length==0){
         $(this).addClass('Validform_error').attr('data-type',1);
         $(this).siblings('.js-addressMobError').html(inputNullText)
     }
