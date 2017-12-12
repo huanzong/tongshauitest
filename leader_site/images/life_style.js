@@ -341,17 +341,28 @@ $(function () {
         cssWidthAndHeight: true,
         autoplayDisableOnInteraction: false, //手动滑动图片后是否停止滚动轮播
         onSlideChangeStart: function (swiper) {
-            var contentNext = $('.swiper-slide-active').next().children('.js_lifeStylePhotoCentent').css('background');
-            var contentPrev = $('.swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').css('background');
-            if (contentNext == undefined) {
-                // console.log(contentNext);
-                contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background');
-                $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
-                $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
-            } else {
-                $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
-                $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+            var dataType =  $('.js_lifeStylePhotoBox').attr('data-type');
+            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').css('background');
+            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').css('background');
+            if(dataType=='left'){
+                if (contentPrev == undefined) {
+                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background');
+                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
+                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+                } else {
+                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
+                }
+            }else{
+                if (contentNext == undefined) {
+                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background');
+                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
+                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+                } else {
+                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
+                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
 
+                }
             }
             $('.js_lifeStyelGoodLifeDown').html($('.swiper-slide-active').find('.js_lifeStyelGoodLifeCont').html());
 
@@ -361,13 +372,15 @@ $(function () {
 
     // 优生活切换按钮
     $('.js_photoLeftBtn').on('click', function (e) {
+        $('.js_lifeStylePhotoBox').attr('data-type','left');
         e.preventDefault();
         mySwiper.swipePrev();
-    })
+    });
     $('.js_photoRightBtn').on('click', function (e) {
+        $('.js_lifeStylePhotoBox').attr('data-type','right');
         e.preventDefault();
         mySwiper.swipeNext();
-    })
+    });
 
 
 // var superiorityNub =
