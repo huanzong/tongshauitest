@@ -53,17 +53,17 @@
 					<div class="banner-middle-box js_bannerSwiperFont">
 						<div class="info-main">
 							<div class="js_bannnerCenter">
-								<span><trs_viewdata field="m_title"/></span>
+								<span><trs_viewdata field="m_title" num="21" TRUNCATEDFLAG=""/></span>
 							</div>
 						</div>
 						<div class="info-main">
 							<div class="js_bannnerCenter">
-								<span><trs_viewdata field="m2_title"/></span>
+								<span><trs_viewdata field="m2_title" num="21" TRUNCATEDFLAG=""/></span>
 							</div>
 						</div>
 						<div class="info-sub">
 							<div class="js_bannnerCenter">
-								<span><trs_viewdata field="f_title"/></span>
+								<span><trs_viewdata field="f_title" num="37" TRUNCATEDFLAG=""/></span>
 							</div>
 						</div>
 					</div>
@@ -102,9 +102,9 @@
 				<!-- 循环体 -->
 				<trs_viewdatas id="首页banner" num="5">
 					<div class="o_u o_df_2-2 js_bannerSwiperFont1">
-						<div class="banner-big"><trs_viewdata field="m_title"/></div>
-						<div class="banner-big"><trs_viewdata field="m2_title"/></div>
-						<div class="banner-small"><trs_viewdata field="f_title"/></div>
+						<div class="banner-big"><trs_viewdata field="m_title" num="21"/></div>
+						<div class="banner-big"><trs_viewdata field="m2_title" num="21"/></div>
+						<div class="banner-small"><trs_viewdata field="f_title" num="37"/></div>
 					</div>
 				</trs_viewdatas>
 				<!-- 循环体 END -->
@@ -188,24 +188,27 @@
 				<!-- 循环体 -->
 				<trs_viewdatas id="产品推荐" num="5">
 					<div class="recommend-info js_recommendFont">
-						<div class="info-title"><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true'/></div>
+						<div class="info-title"><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="32" TRUNCATEDFLAG=""/></div>
 						<div class="info-con">
-							<trs_viewdata field='f_title'/>
+							<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG=""/>
 						</div>
 						<a class="info-more" href="<trs_viewdata field='link'/>">
 							<span></span>
 							<span></span>
 							<span></span>
 						</a>
+						<div class="info-page js_recommendPage">
+
+						</div>
 					</div>
 				</trs_viewdatas>
 				<!-- 循环体 End -->
 			</div>
 			<div class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2 recommend-main">
-				<div class="recommend-main-bg"></div>
+				<div class="recommend-main-bg js_recommendHerobg"></div>
 				<div class="rec-swiper-btn rec-swiper-prev js_swiperRecMainPrev"></div>
 				<div class="rec-swiper-btn rec-swiper-next js_swiperRecMainNext"></div>
-				<div class="recommend-main-box">
+				<div class="recommend-main-box js_recommendHero">
 					<div class="swiper-container js_swiperRecMain">
 						<div class="swiper-wrapper">
 							<trs_viewdatas id="产品推荐" num="5">
@@ -221,15 +224,18 @@
 				<div class="recommend-main-info o_df-hide o_sm-show o_xs-show">
 					<trs_viewdatas id="产品推荐" num="5">
 						<div class="js_recommendFont1">
-							<div class="info-title"><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true'/></div>
+							<div class="info-title"><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="32" TRUNCATEDFLAG=""/></div>
 							<div class="info-con">
-								<trs_viewdata field='f_title'/>
+								<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG=""/>
 							</div>
 							<a class="info-more" href="<trs_viewdata field='link'/>" target="_blank">
 								<span></span>
 								<span></span>
 								<span></span>
 							</a>
+							<div class="info-page js_recommendPage">
+
+							</div>
 						</div>
 					</trs_viewdatas>
 				</div>
@@ -255,8 +261,8 @@
 													<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic1'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 												</a>
 												<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
-													<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true'/></h3>
-													<p><trs_viewdata field='f_title'/></p>
+													<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num='28' TRUNCATEDFLAG=""/></h3>
+													<p><trs_viewdata field='f_title' num="100" TRUNCATEDFLAG=""/></p>
 													<a class="info-more" href="<trs_viewdata field='link'/>">
 														<span></span>
 														<span></span>
@@ -302,8 +308,8 @@
 														</a>
 													</div>
 													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
-														<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true'/></h3>
-														<p><trs_viewdata field='f_title'/></p>
+														<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="28" TRUNCATEDFLAG=""/></h3>
+														<p><trs_viewdata field='f_title' num="100" TRUNCATEDFLAG=""/></p>
 														<a class="info-more"  href="<trs_viewdata field='link'/>" target="_blank">
 															<span></span>
 															<span></span>
@@ -371,5 +377,6 @@
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
 <script type="text/javascript" src="../site5/index.js"></script>
+
 </body>
 </html>
