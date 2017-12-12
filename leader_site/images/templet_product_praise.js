@@ -120,7 +120,12 @@ function getHeaderData(){
       if(data.isSuccess==true){
         //修改好评率
           template_value=data.data.favorableRate;
-          $(".percent-value").html(data.data.favorableRate+'<sub>%</sub>');
+          if(template_value==0){
+              $(".percent-value").html('100'+'<sub>%</sub>');
+          }else{
+              $(".percent-value").html(data.data.favorableRate+'<sub>%</sub>');
+          }
+
           if(template_value!=0){
               //循环遍历标签
               for(var k=0;k<data.data.topTagInfo.length;k++){
