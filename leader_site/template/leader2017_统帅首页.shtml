@@ -192,7 +192,7 @@
 						<div class="info-con">
 							<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG=""/>
 						</div>
-						<a class="info-more" href="<trs_viewdata field='link'/>">
+						<a class="info-more" href="<trs_viewdata field='link'/>" target="_blank">
 							<span></span>
 							<span></span>
 							<span></span>
