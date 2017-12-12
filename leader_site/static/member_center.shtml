@@ -11,43 +11,9 @@
         <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
         <!-- <link rel="stylesheet" type="text/css" href="images/index.css"> -->
         <link rel="stylesheet" type="text/css" href="images/member-center.css">
-    <style>
-        .membercenter-banner{
-            background: url("images/member-center-banner.jpg") no-repeat top center;
-        }
-        @media (min-width: 992px) and (max-width: 1199px) {
-            /* lg*/
-            .membercenter-banner{
-                background: url("images/member-center-bannermin.jpg") no-repeat top center;
-                background-size:100% 100% ;
-            }
-            @media (min-width: 701px) and (max-width: 991px) {
-                /* md*/
-                .membercenter-banner{
-                    background: url("images/member-center-bannermin.jpg") no-repeat top center;
-                    background-size:auto 100% ;
-                }
-            }
-            @media (min-width: 576px) and (max-width: 700px) {
-                /* sm*/
-                .membercenter-banner{
-                height: 480px;
-                background: url("images/member-center-bannermin.jpg") no-repeat top right;
-                background-size:100% auto ;
-                }
-            }
-            @media (max-width: 575px) {
-                /* xs*/
-                .membercenter-banner{
-                height: 480px;
-                background: url("images/member-center-bannermin.jpg") no-repeat top right;
-                }
-            }
-        }
-    </style>
 </head>
 
-<body class=" ">
+<body>
     <div class="o_main">
             <!-- 首屏动画 -->
           <!-- 导航 -->
@@ -77,7 +43,8 @@
             <!-- 首屏动画 End -->
         <div class="o_g">
             <div class="membercenter-top">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner">
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner js_memberCenterBanner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
+                    <!--member-center-bannermin.jpg-->
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>加入统帅，<span>慢享悠悠生活</span></h2>
@@ -227,6 +194,7 @@
                     </ul>
                 </div>
             </div>
+            </div>
             <!--#include virtual="public/footer.shtml"-->
         </div>
         <!--#include virtual="public/foot.shtml"-->
@@ -235,6 +203,16 @@
     $(function(){
    
         var windowWidth = $(window).width();
+        if(windowWidth>1199){
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放大图
+            //images/member-center-banner.jpg
+        }else{
+
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放小图
+            //images/member-center-banner.jpg
+        }
 
         setTimeout(function(){
                 var leftBoxHeight = $('.js_centerBoxLeft').height();
