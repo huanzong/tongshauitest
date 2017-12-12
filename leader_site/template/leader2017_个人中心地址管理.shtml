@@ -135,7 +135,7 @@
                                         <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
                                             <div class="l-textarea member-address-textareabox">
-                                                <textarea  class="js_addressDetailedCont js_inputCheck"  data-normal="1" name="" maxlength="100" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
+                                                <textarea  class="js_addressDetailedCont js_inputCheck"  data-normal="1" name="" maxlength="100" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入正确地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空" id="address" ></textarea>
                                                 <p class="Validform_checktip Validform_wrong   js-addressMobError" style=" line-height: 35px;font-size: 12px;color: #f39800;"></p>
                                             </div>
                                         </div>
