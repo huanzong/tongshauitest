@@ -16,7 +16,7 @@ $(function() {
             var templet_data=data.data;
             $('.orderNo').html(templet_data.orderNo);
 
-            if(templet_data.statusDesc=='待付款'){
+            if(templet_data.orderStatus==1){
                 $(".js-pay a").show();
             }else{
                 $(".js-pay a").hide();
@@ -34,12 +34,28 @@ $(function() {
 
                 templet_addhtml+=' <img src="'+templet_picUrl+'" alt=""  ></div><div class="o_u o_df_6-12 o_sm_8-12 o_xs_2-2 order_content_name">';
                 templet_addhtml+='<h4>'+templet_goods.goodsName+'</h4><span>'+templet_goods.modelNo+'</span> </div>';
-                templet_addhtml+=' <div class="o_u o_df_2-12 o_md_4-12  o_sm_2-12 o_xs_2-2 order_content_price">&yen;1799<span>x1</span></div>';
-                templet_addhtml+='';
-                templet_addhtml+='';
-                templet_addhtml+='';
+                templet_addhtml+=' <div class="o_u o_df_2-12 o_md_4-12  o_sm_2-12 o_xs_2-2 order_content_price">&yen;'+templet_goods.costPrice+'<span>x'+templet_goods.buyNum +'</span></div>';
+                templet_addhtml+='<div class="o_u o_df_2-12 o_sm_2-2 o_xs_2-2 order_content_nub ">x'+templet_goods.buyNum +'</div></div>';
+                templet_addhtml+='<div class="datail_product_state_box">';
+                templet_addhtml+='<ul class="o_u o_df_11-12 datail_product_state">';
+                templet_addhtml+='<li class="o_u cur_after"><div class="cur_border"></div>提交订单<p>2017-06-14 08:23:42</p></li>';
+                templet_addhtml+='<li class="o_u cur"><div class="cur_border"></div>等待付款<p>2017-06-14 08:23:42</p></li>';
+                templet_addhtml+='<li class="o_u"><div class="cur_border"></div>订单确认<p>2017-06-14 08:23:42</p></li>';
+                templet_addhtml+='<li class="o_u"><div class="cur_border"></div>商品出库<p>2017-06-14 08:23:42</p></li>';
+                templet_addhtml+=' <li class="o_u"><div class="cur_border"></div>送货到家<p>2017-06-14 08:23:42</p></li>';
+                templet_addhtml+='<li class="o_u"><div class="cur_border"></div>完成<p>2017-06-14 08:23:42</p></li></ul>';
+                templet_addhtml+='<div class="datail_product_state_scroll"></div> </div>';
+
 
             }
+            $('.js-goods').html(templet_addhtml);
+
+            $('.js-recipientsName').html(templet_data.recipientsName);
+            var templet_callphone = templet_data.recipientsPhone.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");
+            $('.js-recipientsPhone').html(templet_callphone);
+            $('.js-payTime').html(templet_data.payTime);
+
+
         }
     })
 })
