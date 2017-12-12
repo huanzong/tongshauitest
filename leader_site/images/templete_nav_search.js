@@ -179,7 +179,7 @@ function searchBoxWord(word) {
             async: true,
             success: function (data) {
                 $('.js_quick_search').remove();
-                $('.js_searchBox_listShow').html(data);
+                $('.js_searchBox_root').html(data);
             },
             error: function (data) {
             }
