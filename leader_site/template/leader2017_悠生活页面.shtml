@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>悠生活-统帅官网</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
     <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -530,8 +530,8 @@
             $("#lifepic div").eq(2).attr("data-index", "3");  //第三个div
 
             $("#series_name li").eq(0).addClass("cur");  //系列产品推荐中系列列表第一个li
-            $("#series_txt p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
-            $("#series_txt p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
+            $("#series_txt>p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
+            $("#series_txt>p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
 
             $(".lbindex").eq(0).addClass("js_lifeStyleCreateSwipe_1");
             $(".lbindex").eq(1).addClass("js_lifeStyleCreateSwipe_2");
