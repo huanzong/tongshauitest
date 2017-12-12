@@ -158,11 +158,11 @@
         background: url(style_photo_2.png) no-repeat ;
         background-position: left top;
         background-size:  auto 100% !important; // position: absolute;
-        // margin: auto;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
+        @media (max-width: 575px) {
+            /* xs*/
+            background-size:   100% auto!important; // position: absolute;
+
+        }
     }
 }
 
@@ -195,6 +195,7 @@
         /* xs*/
         >img {
             width: 245px;
+            padding: 25px 0 15px 0;
         }
         p {
             font-size: 12px;
@@ -222,6 +223,11 @@
     // background-position: left top;
     // background-size: auto 100%;
     // height: 480px;
+    .photo-list-img-2{
+        background-position:  top right!important;
+        background-size: auto 100%  !important;
+        background-repeat:no-repeat !important;
+    }
     .life-style-photo-cur-text {
         display: none;
     }
@@ -254,9 +260,14 @@
 }
 
 .life-style-photo-list-left{
-    .photo-list-img{
-        background-position:  top right!important;
-        //background-size:  100% auto !important;
+    >.photo-list-img {
+        background-position:top right!important;
+        background-size: auto 100% !important;
+        background-repeat:no-repeat !important;
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+        display: none;
     }
 }
 
@@ -802,6 +813,11 @@
             filter: alpha(opacity=20);
             width: 100%;
         }
+        @media (max-width: 575px) {
+            /* xs*/
+            display: none;
+        }
+
     }
 
     .case-photo-min-left {
@@ -813,6 +829,10 @@
             opacity: 0.2;
             filter: alpha(opacity=20);
             width: 100%;
+        }
+        @media (max-width: 575px) {
+            /* xs*/
+            display: none;
         }
     }
 }
@@ -1199,4 +1219,27 @@
 }
 .life-style-create-btn{
     z-index: 9;
+}
+
+.life-style-photo-list-right{
+    @media (max-width: 575px) {
+        /* xs*/
+        display: none;
+    }
+}
+.index_animate{
+    div:first-child+div{
+        span{
+            border: none;
+        }
+    }
+    div:first-child+div+div+div{
+        span{
+            border: none;
+        }
+    }
+}
+@media (max-width: 575px) {
+    /* xs*/
+    display: none;
 }
