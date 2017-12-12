@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <a href="javascript:;" class="o_u iconfont icon-arrow-jiantou-left js_photoLeftBtn o_df_1-12"></a>
-                <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_8-12  life-style-photo-list-center ">
+                <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_10-12  life-style-photo-list-center ">
                     <div class="swiper-container js_lifeStyleGoodLifeSwipe">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -381,11 +381,11 @@
 
             <!-- 真实案例 -->
             <div class="life-style-case">
-                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-left js_lifeStyleCaseLeft">
+                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_1-12 case-photo-left js_lifeStyleCaseLeft">
                     <a href="javascript:;" class=" iconfont icon-arrow-jiantou-left js_lifeStyleCaseLeftBtn"></a>
                 </div>
            
-                <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_8-12 life-style-case-photo ">
+                <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_10-12 life-style-case-photo ">
                     <div class="js_lifeStyleCasePhoto life-case-photo-swiper" style="overflow: hidden;">
                         <div class="swiper-wrapper"  >
                             <div class="swiper-slide" data-index="1">
@@ -411,7 +411,7 @@
                     </div>
                 </div>
 
-                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-right js_lifeStyleCaseRight">
+                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_1-12 case-photo-right js_lifeStyleCaseRight">
                     <a href="javascript:;" class=" iconfont icon-arrow-jiantou-right js_lifeStyleCaseRightBtn"></a>
                     <ul class="case-photo-nub-btn js_casePhotoNub">
                         <li>03</li>

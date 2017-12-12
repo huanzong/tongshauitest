@@ -39,7 +39,7 @@
 		<div class="nav-search">
 			<input type="text" name="" ph="搜索产品、服务、帮助..." value="" phtype=1 class="js_searchHistory" maxlength="25">
 			<i class="iconfont icon-search js_jumpto_product_search"></i>
-			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl">
+			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl js_searchBox_root">
 				<div class="search-quick js_quick_search">快速链接</div>
 				<ul class="search-list js_searchBox_listShow">
 					<!--
@@ -165,7 +165,7 @@
 	<!-- 搜索结果：lg分辨率 -->
 	<ul class="o_u o_df_2-2 nav-searchresult-lg js_navSearchLg js_searchBox js_searchBox_lg">
 		<div class="o_u o_df_2-12"></div>
-		<div class="o_u o_df_8-12">
+		<div class="o_u o_df_8-12 js_searchBox_root">
 			<div class="searchresult-quick js_searchBoxQuick_lg">
 				<span>快捷链接：</span>
 				<a href="javascript:;">在线保修</a>
