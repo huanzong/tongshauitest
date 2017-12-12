@@ -242,15 +242,11 @@ $(function () {
                  videoMethod();
                  var windowHeight = $(window).height();
                  var navHeight = $('l-opacity0').height();
-                 //var videoSrc = $(this).attr("vidlink ");
-                 //$("#player ").attr("src ", videoSrc);
-                 // $(".js_picBox ").find("img ").addClass("o_df-hide ");
                  $('.js_styleVideoBox').hide();
-                 // $(this).hide();
+
+
                  $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
                  $("#player ").removeClass("o_df-hide ");
-                 // setPlayerSize("100% ",'700px');
-                 // player.play();
                  setTimeout(function () {
                      $(".js_jchg_video").css('height', windowHeight - navHeight);
                      $("#mep_0 ").css('height', windowHeight - navHeight);
@@ -303,7 +299,17 @@ $(function () {
                  //alert(1);
                var videoSrc =  $(this).attr('data-src');
                  $("#player").attr("src", videoSrc).removeClass("o_df-hide");
-                 $('.js_styleVideoBox').hide();
+
+                 if(windowWidth>991){
+                     $('.js_styleVideoBox').hide();
+
+                 }else{
+                     $('.js_videoMdShow').hide();
+
+                 }
+
+
+
                  // $(this).hide();
                  $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
                  $("#player ").removeClass("o_df-hide ").css('width','100%');
@@ -318,6 +324,8 @@ $(function () {
                      player.pause();
                      $(".js_playerBox ").hide();
                      $('.js_styleVideoBox').show();
+                     $('.js_videoMdShow').show();
+
                  });
 
              })
