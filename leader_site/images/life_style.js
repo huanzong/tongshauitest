@@ -342,25 +342,27 @@ $(function () {
         autoplayDisableOnInteraction: false, //手动滑动图片后是否停止滚动轮播
         onSlideChangeStart: function (swiper) {
             var dataType =  $('.js_lifeStylePhotoBox').attr('data-type');
-            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').css('background');
-            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').css('background');
+            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').css('background-image');
+            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').css('background-image');
+            var $leftBack = $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent');
+            var $rightBack = $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent')
             if(dataType=='left'){
                 if (contentPrev == undefined) {
-                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background');
-                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
-                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background-image');
+                    $leftBack.css('background-image', contentPrev);
+                    $rightBack.css('background-image', contentNext);
                 } else {
-                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
-                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
+                    $rightBack.css('background-image', contentNext);
+                    $leftBack.css('background-image', contentPrev);
                 }
             }else{
                 if (contentNext == undefined) {
-                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background');
-                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
-                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background-image');
+                    $leftBack.css('background-image', contentPrev);
+                    $rightBack.css('background-image',  contentNext);
                 } else {
-                    $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').css('background', contentPrev);
-                    $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').css('background', contentNext);
+                    $leftBack.css('background-image',contentPrev);
+                    $rightBack.css('background-image',contentNext);
 
                 }
             }

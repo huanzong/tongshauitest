@@ -1,7 +1,7 @@
 $(function() {
 
     init();
-
+    $('.validLink').mousedown(function(){var href = $(this).attr('href');window.location.href=href;})
     $(window).resize(function() {
         init();
     });
