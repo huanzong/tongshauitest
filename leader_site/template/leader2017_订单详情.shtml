@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title>个人中心-订单详情</title>
 
-    <%=base%>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
-    <!--#include virtual="public/head.shtml"-->
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" href="images/jquery.Jcrop.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="images/member_nav.css">
     <link rel="stylesheet" type="text/css" href="images/member_orderdetail.css">
@@ -19,7 +17,7 @@
     <div class="o_main">
         <div class="o_g">
             <!-- 左侧导航 START-->
-            <!--#include virtual="public/header_nav.shtml"-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
@@ -37,8 +35,8 @@
                                         <i class="orderNo"></i>
                                     </div>
                                     <div class="o_u o_df_6-12 o_sm_2-2  o_xs_2-2 detail_cont_title_btn js-pay">
-                                            <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a>
-                                            <a href="javascript:;" class="l-btn-sm l-btn-line2">取消订单</a>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2">取消订单</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,51 +47,51 @@
                             </div>
                             <div class="o_u o_df_11-12 detail_cont_box js-goods">
 
-                                    <!--<div class="o_g order_content2_box">-->
-                                        <!--<div class="o_u  o_df_11-12">-->
-                                            <!--<div class="o_u o_df_2-12 order_content2_img">-->
-                                                <!--<i class=" o_u iconfont icon-giftbox-solid"></i>-->
-                                            <!--</div>-->
-                                            <!--<div class="o_u o_df_8-12 o_md_9-12 o_sm_10-12 o_xs_10-12 order_content2_name">-->
-                                                <!--<h4>金岁月扫地机器人<span>&nbsp;x1</span></h4>-->
-                                                <!--<p>赠品将在您确认收货，并上传相关资料后发出 <a href="javascript:;">了解详细规则</a></p>-->
-                                            <!--</div>-->
-                                            <!--<div class="o_u o_df_2-12 o_md_1-12 order_content_nub">-->
-                                                <!--x1-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
+                                <!--<div class="o_g order_content2_box">-->
+                                <!--<div class="o_u  o_df_11-12">-->
+                                <!--<div class="o_u o_df_2-12 order_content2_img">-->
+                                <!--<i class=" o_u iconfont icon-giftbox-solid"></i>-->
+                                <!--</div>-->
+                                <!--<div class="o_u o_df_8-12 o_md_9-12 o_sm_10-12 o_xs_10-12 order_content2_name">-->
+                                <!--<h4>金岁月扫地机器人<span>&nbsp;x1</span></h4>-->
+                                <!--<p>赠品将在您确认收货，并上传相关资料后发出 <a href="javascript:;">了解详细规则</a></p>-->
+                                <!--</div>-->
+                                <!--<div class="o_u o_df_2-12 o_md_1-12 order_content_nub">-->
+                                <!--x1-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--</div>-->
 
                             </div>
-                           <div class="detail_cont_info_box">
-                               <div class="o_u o_df_11-12 detail_cont_info">
-                                   <div class="o_u o_df_6-12 o_xs_2-2">
-                                       <h3>收货人信息</h3>
-                                       <p><span class="o_u o_xs_2-2">姓名：</span><i class="o_u o_xs_2-2 js-recipientsName"></i></p>
-                                       <p><span class="o_u o_xs_2-2">联系电话：</span><i class="o_u o_xs_2-2 js-recipientsPhone"></i></p>
-                                   </div>
-                                   <div class="o_u o_df_6-12 o_xs_2-2">
-                                       <h3>支付信息</h3>
-                                       <p><span class="o_u o_xs_2-2">支付方式：</span><i class="o_u o_xs_2-2">支付宝支付</i></p>
-                                       <p><span class="o_u o_xs_2-2">支付时间：</span><i class="o_u o_xs_2-2 js-payTime"></i></p>
-                                   </div>
-                                       <p><span class="o_u o_xs_2-2">收货地址：</span><i class="o_u o_xs_2-2 "></i></p>
-                                   <div class="o_u o_df_6-12 o_xs_2-2">
-                                       <h3>发票信息</h3>
-                                       <p><span class="o_u o_xs_2-2">发票类型：</span><i class="o_u o_xs_2-2">电子发票（个人）</i></p>
-                                       <p><span class="o_u o_xs_2-2">发票抬头：</span><i class="o_u o_xs_2-2">广州白云有限公司</i></p>
-                                   </div>
-                               </div>
-                           </div>
+                            <div class="detail_cont_info_box">
+                                <div class="o_u o_df_11-12 detail_cont_info">
+                                    <div class="o_u o_df_6-12 o_xs_2-2">
+                                        <h3>收货人信息</h3>
+                                        <p><span class="o_u o_xs_2-2">姓名：</span><i class="o_u o_xs_2-2 js-recipientsName"></i></p>
+                                        <p><span class="o_u o_xs_2-2">联系电话：</span><i class="o_u o_xs_2-2 js-recipientsPhone"></i></p>
+                                    </div>
+                                    <div class="o_u o_df_6-12 o_xs_2-2">
+                                        <h3>支付信息</h3>
+                                        <p><span class="o_u o_xs_2-2">支付方式：</span><i class="o_u o_xs_2-2">支付宝支付</i></p>
+                                        <p><span class="o_u o_xs_2-2">支付时间：</span><i class="o_u o_xs_2-2 js-payTime"></i></p>
+                                    </div>
+                                    <p><span class="o_u o_xs_2-2">收货地址：</span><i class="o_u o_xs_2-2 "></i></p>
+                                    <div class="o_u o_df_6-12 o_xs_2-2">
+                                        <h3>发票信息</h3>
+                                        <p><span class="o_u o_xs_2-2">发票类型：</span><i class="o_u o_xs_2-2">电子发票（个人）</i></p>
+                                        <p><span class="o_u o_xs_2-2">发票抬头：</span><i class="o_u o_xs_2-2">广州白云有限公司</i></p>
+                                    </div>
+                                </div>
+                            </div>
                             <ul class="o_u o_df_11-12 detail_cont_down">
                                 <li class="o_u o_sm_2-2 o_xs_2-2 ">
                                     <p><span>商品总额：</span><i>&yen;3589</i></p>
                                 </li>
                                 <!--<li class="o_u o_sm_2-2 o_xs_2-2 ">-->
-                                    <!--<p><span>组合优惠：</span><i>&yen;199</i></p>-->
+                                <!--<p><span>组合优惠：</span><i>&yen;199</i></p>-->
                                 <!--</li>-->
                                 <!--<li class="o_u o_sm_2-2 o_xs_2-2 ">-->
-                                    <!--<p><span>优惠券优惠：</span><i>&yen;300</i></p>-->
+                                <!--<p><span>优惠券优惠：</span><i>&yen;300</i></p>-->
                                 <!--</li>-->
 
                                 <li class="o_u  o_lg_2-2  o_md_2-2 o_sm_2-2  o_xs_2-2 detail_cont_down_total">
@@ -106,13 +104,13 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/personal_footer.shtml"-->
+        <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
     </div>
 </div>
 
 <!-- Swiper -->
 
-<!--#include virtual="public/foot.shtml"-->
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/jquery.Jcrop.min.js"></script>
