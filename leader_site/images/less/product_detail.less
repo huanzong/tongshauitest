@@ -158,9 +158,9 @@
       font-size: 14px;
       padding: 16px 15px 0;
       line-height: 38px;
-      // @media(max-width: 991px){
-      //   display: none;
-      // }
+      span{
+        vertical-align: middle; 
+      }
       .line{
         display: none;
       }
@@ -191,6 +191,23 @@
   border-bottom: 1px solid #eee;
   .detail-banner{
     position: relative;
+    background: url(detail_leader.png) no-repeat center 170px;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:50% auto;
+    background-size:50% auto;
+    @media (max-width:1199px){
+      background-position: center 200px;
+      -moz-background-size:58.34% auto;
+      background-size:58.34% auto;
+    }
+    @media (max-width:700px){
+      background-position: center 240px;
+      -moz-background-size:83.34% auto;
+      background-size:83.34% auto;
+    }
+    @media (max-width:700px){
+      background-position: center 205px;
+    }
     .banner-pro{
       z-index: 0;
       text-align: center;
@@ -455,6 +472,11 @@
           line-height: 25px;
           .address-tit{
             color: #666;
+          }
+          i{
+            vertical-align: middle;
+            color: #ccc;
+            padding-left: 5px;
           }
         }
         .delivery-time{
@@ -781,10 +803,10 @@
         }
       }
       .pagination-prev{
-        left: 0;
+        left: 26%;
       }
       .pagination-next{
-        right: 0;
+        right: 29%;
       }
       .pagination-next,.pagination-prev{
         position: absolute;
@@ -827,6 +849,7 @@
 //文字卖点
 .detail-fontpoint-index{
   position: relative;
+  height: 218px;
   @media (min-width: 992px) {
     height: 200px;
   }
@@ -1379,6 +1402,7 @@
       }
     }
     .detail-praise-img{
+      min-height: 72px;
       padding: 0 20px;
       img{
         width: 40px;
