@@ -348,7 +348,7 @@ function searchStateList(currPageT, pageSize,orderlist){
                     var templet_picUrl=goodsPicCut(templet_docpuburl,templet_docgoodsPic);
 
                     templet_addhtml += ' <div class="o_u o_df_11-12 order_content_box" style="padding-top: 30px"> <div class="o_u o_df_2-12 order_content_img"> ';
-                    templet_addhtml += ' <img src="../images/compare_goods.PNG" alt="" width="80px" height="80px;"></div> ';
+                    templet_addhtml += ' <img src="'+templet_picUrl+'" alt="" width="80px" height="80px;"></div> ';
                     templet_addhtml += ' <div class="o_u o_df_8-12 o_xs_10-12 order_content_name"><h4>' + templet_ordergoods.goodsName + '</h4><span>' + templet_ordergoods.modelNo + '</span></div> ';
                     templet_addhtml += ' <div class="o_u o_df_2-12 order_content_nub">x' + templet_ordergoods.buyNum + '</div></div> ';
                 }
@@ -515,5 +515,25 @@ function getQueryString(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]);
     return null;
+}
+
+//未评论订单
+function notComment(currPageT, pageSize,orderlist){
+
+    var templet_date={
+        "pageNo": currPageT,
+        "pageSize": pageSize,
+        "commentStatus": 0,
+    };
+
+    $.ajax({
+        url: siteConfig.userUrl + "/comment/orderComment/getOrderListByCommSta/",
+        type:'get',
+        data: templet_date,
+        login: true,
+        success_cb: function (data) {
+            //TODO 调接口查询订单详情
+        }
+    })
 }
 

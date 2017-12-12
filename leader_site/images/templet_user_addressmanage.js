@@ -442,9 +442,20 @@ function resetForm(){
     $("#phonefenjihao").blur();
      $('.js-addressMobError').html(' ');
     $('.Validform_error').removeClass('Validform_error');
+    $('.js-newMobile').removeAttr('data-type');
+
 };
 
-
+$('.js-newMobile').blur(function(){
+    var dataType =$(this).attr('data-type');
+    var dataVal = $(this).val();
+    var inputNullText = $(this).attr('nullmsg');
+    console.log($(this).val());
+    if(!dataType&&dataVal.length==0){
+        $(this).addClass('Validform_error').attr('data-type',1);
+        $(this).siblings('.js-addressMobError').html(inputNullText)
+    }
+})
 //设置默认地址
 $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
