@@ -31,7 +31,7 @@ $(function(){
 
                 var templet_split = templet_email.split("@");
                 var templet_hide = templet_split[0].length / 2;
-                var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                var templet_emailnote = templet_split[0].substr(0,templet_hide) + '***' + '@' + templet_split[1]; //emai加.
                 $("#js_revisemail").attr('autotext',"邮箱（"+templet_emailnote+"）");
                 $("#js_revisemail").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
 
