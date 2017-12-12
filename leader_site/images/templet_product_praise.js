@@ -5,6 +5,7 @@
  * ---------------------------------------------------------------------------*/
 //先取到taginfore
 $(function(){
+
   //初始化分页
   getHeaderData();
   getContentData(1,reputationConfig.templet_pageSize);
