@@ -353,7 +353,7 @@ $(function() {
                 'path':'/',
                 // 'domain':'.tongshuai.com'
             });
-            window.location.href = "./product_orderconfirm.shtml?code=" + orderCode
+            window.location.href = siteConfig.orderConfirmUrl + "?code=" + orderCode
         }
     })
    

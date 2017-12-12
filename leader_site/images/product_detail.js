@@ -776,7 +776,7 @@ $(function() {
                 success_cb: function(data){
                     if (data.isSuccess) {
                         // 保存成功跳转购物车页面
-                        window.location.href = "./product_trolley_server.shtml"
+                        window.location.href = siteConfig.trolleyUrl
                     }
                 },
                 error_cb: function(jqXHR, textStatus, errorThrown) {
@@ -811,7 +811,7 @@ $(function() {
             });
 
             // 保存成功跳转购物车页面
-            window.location.href = "./product_trolley_server.shtml"            
+            window.location.href = siteConfig.trolleyUrl    
         }
     
     })

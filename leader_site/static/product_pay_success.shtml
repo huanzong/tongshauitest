@@ -39,9 +39,9 @@
                     <div class="pay-success-order">支付金额：<span class="pay-success-price js-total-amount">￥8887</span></div>
                     <div class="pay-success-gomyorder">
                     	<span>
-                    		<span id="pay-success-after" class="pay-success-after">5</span><span>s</span>
+                    		<span id="pay-success-after" class="pay-success-after js-interval">5</span><span>s</span>
                     	</span>后前往
-                    	<a class="pay-success-goorder">
+                    	<a href="javascript:;" class="pay-success-goorder js-router-to">
                     		我的订单
                     	</a>
                     </div>
