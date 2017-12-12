@@ -264,7 +264,7 @@
                                         <img src="images/pay_system1.jpg">
                                     </div>
                                 </li>
-                                <li class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
+                                <!-- <li class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
                                     <div class="system-pay active">
                                         <img src="images/pay_system3.jpg">
                                     </div>
@@ -274,7 +274,7 @@
                                         <img src="images/pay_system2.jpg">
                                         <em>金额需大于等于500元</em>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
