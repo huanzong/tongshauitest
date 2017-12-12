@@ -74,10 +74,10 @@
                                                 <i href="javascript:;" class="l-btn-sm l-btn-line2 addselect js_commentImpressAddShow">自定义</i>
 
                                                 <div class="o_g member-comment-impress-add js_commentImpressAddBox">
-                                                    <div class="l-input ">
-                                                        <input type="text" class="js_EvaluateVal5" name="" ph="最大长度5" value="">
+                                                    <div class="l-input  o_u o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2">
+                                                        <input type="text" class="js_EvaluateVal5 o_u o_df_11-12 o_sm_2-2 o_xs_2-2" name="" ph="最大长度5" value="">
                                                     </div>
-                                                    <a href="javascript:;" class="l-btn-normal l-btn-orange js_commentImpressAddBtn">添加标签</a>
+                                                    <a href="javascript:;" class="l-btn-normal l-btn-orange js_commentImpressAddBtn o_u o_sm_1-2 o_xs_1-2">添加标签</a>
                                                     <a href="javascript:;" class="l-btn-normal member-comment-impress-addclose js_commentImpressAddClose">取消</a>
                                                 </div>
 

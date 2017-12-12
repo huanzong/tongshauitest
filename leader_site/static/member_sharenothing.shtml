@@ -57,5 +57,15 @@
 <!--#include virtual="public/foot.shtml"-->
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
+<script>
+    $(function(){
+        var windowH = $(window).height();
+        var windowW = $(window).width();
+        if(windowW<575){
+            $('.js-contBox').height(windowH-$('.js_footer').height())
+        }
+
+    })
+</script>
 </body>
 </html>
