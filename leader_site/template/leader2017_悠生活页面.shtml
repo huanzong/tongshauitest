@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>悠生活-统帅官网</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
     <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -40,58 +40,49 @@
     <!-- 导航 End-->
     <div class="o_g">
         <trs_viewdatas id="悠生活banner" num="1" startpos="0">
+            <div class="life-style-player js_playerBox">
+                <video id="player" class="o_df-hide js_jchg_video player" src="<trs_viewdata field='link_video'/>" type="video/mp4" controls preload="auto"></video>
+                <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
+            </div>
             <div class="life-style-video-box js_styleVideoBox">
                 <div class="life-style-video-cont js_styleVideoCont">
-                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft"
-                       data-alt="false">
-                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
-                             alt=""></a>
+                    <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft" data-alt="false">
+                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" alt="">
+                    </a>
                     <div class="video-cont-md o_g">
                         <div class="js_lifeStyleVideoSwipe o_u o_df_11-12" style="overflow: hidden;">
                             <ul class="o_u o_df_12-12 swiper-wrapper">
-                                <li class="o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide"
-                                    data-index="1" data-gif="">
-                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
-                                         class="" width="100%" alt="">
+                                <li class="o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide" data-index="1" data-gif="">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" width="100%" alt="">
                                 </li>
-                                <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide"
-                                    data-index="2" data-gif="">
-                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
-                                         class="" width="100%" alt="">
+                                <li class=" o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxR swiper-slide" data-index="2" data-gif="">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" width="100%" alt="">
                                 </li>
                             </ul>
                         </div>
                         <div class=" video-cont-md-imgmin  o_u o_df_1-12 js_videoMdImgMin">
-                            <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
-                                 class="" alt="">
-
-
+                            <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_left'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" class="" alt="">
                         </div>
                     </div>
-
                     <div class="o_u o_df_6-12 o_lg_8-12  o_md_12-12 o_sm_12-12 o_xs_12-12 video-cont-center">
                         <img src="images/style_life_title.png" alt="">
                         <p>
-                            <trs_viewdata field='textdescription'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='textdescription'/>
                         </p>
                         <div>
-                            <trs_viewdata field='textdescription'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='textdescription'/>
                         </div>
                         <a href="javascript:;" class="js_lifeStylePlay"
-                           data-src="<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png"
-                                                                              alt=""></a>
+                           data-src="<trs_viewdata field='link_video'/>"><img src="images/style_life_play.png" alt="">
+                        </a>
                     </div>
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight"
                        data-alt="false">
-                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
-                             alt=""></a>
+                        <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_right'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="life-style-player js_playerBox">
-                <video id="player" class="o_df-hide js_jchg_video player" src="<trs_viewdata field='link_video'/>"
-                       type="video/mp4" controls preload="auto"></video>
-                <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
-            </div>
+
         </trs_viewdatas>
 
 
@@ -114,7 +105,7 @@
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>
-                                        <trs_viewdata field='text_description'/>
+                                        <trs_viewdata AUTOFORMATTYPE="HTML" field='text_description'/>
                                     </p>
                                 </div>
                             </div>
@@ -132,7 +123,7 @@
                     <trs_viewdatas id="悠生活轮播" num="1" startpos="0">
                         <img src="images/style_photo_1_text.png" alt="">
                         <p class="js_lifeStyelGoodLifeText">
-                            <trs_viewdata field='text_description'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='text_description'/>
                         </p>
                     </trs_viewdatas>
                 </div>
@@ -426,7 +417,7 @@
                     <li class="cur">
                         <img src="images/life-style-case-title.png" alt="">
                         <div class="life-case-text"><img src="images/life-style-case-titleleft.png" class="left" alt="">
-                            <trs_viewdata field='textdescription_right'/>
+                            <trs_viewdata AUTOFORMATTYPE="HTML" field='textdescription_right'/>
                             <img src="images/life-style-case-titleright.png" class="right" alt=""></div>
                         <div class="life-case-text-down">
                             <p>
@@ -439,7 +430,6 @@
             </ul>
             <div class="o_u o_df_1-12  o_md_2-12"></div>
         </div>
-
 
         <!-- 创造优生活 -->
         <div class="life-style-create">
@@ -481,8 +471,7 @@
                                                     <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>' alt="">
                                                 </div>
                                                 <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                    <p><trs_viewdata field='xmjg'/></p>
-                                                    <p><trs_viewdata field='cpms'/></p>
+                                                    <p><trs_viewdata AUTOFORMATTYPE="HTML" field='pname'/></p>
                                                     <span><trs_viewdata field='modelno'/></span>
                                                     <i>¥<trs_viewdata field='price'/></i>
                                                 </div>
@@ -496,8 +485,7 @@
                                                         <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>' alt="">
                                                     </div>
                                                     <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                                        <p><trs_viewdata field='xmjg'/></p>
-                                                        <p><trs_viewdata field='cpms'/></p>
+                                                        <p><trs_viewdata AUTOFORMATTYPE="HTML" field='pname'/></p>
                                                         <span><trs_viewdata field='modelno'/></span>
                                                         <i>¥<trs_viewdata field='price'/></i>
                                                     </div>
@@ -524,7 +512,9 @@
         </div>
         <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
     </div>
+</div>
     <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+
     <script type="text/javascript">
         $(function () {
             $("#lifepic div").eq(0).attr("data-index", "1");  //第一个div
@@ -532,8 +522,8 @@
             $("#lifepic div").eq(2).attr("data-index", "3");  //第三个div
 
             $("#series_name li").eq(0).addClass("cur");  //系列产品推荐中系列列表第一个li
-            $("#series_txt p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
-            $("#series_txt p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
+            $("#series_txt>p").eq(1).css("display", "none");//系列产品推荐描述中第二个p标签
+            $("#series_txt>p").eq(2).css("display", "none");  //系列产品推荐描述中第三个p标签
 
             $(".lbindex").eq(0).addClass("js_lifeStyleCreateSwipe_1");
             $(".lbindex").eq(1).addClass("js_lifeStyleCreateSwipe_2");
@@ -543,6 +533,7 @@
     <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
     <script src="mediaelement-and-player.min.js"></script>
     <script src="life_style.js"></script>
+
 </body>
 
 </html>

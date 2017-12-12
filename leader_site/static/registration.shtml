@@ -40,15 +40,15 @@
                                         <div class="reg-form js_regType_phone">
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input type="text" name="username" ph="请输入常用手机号">
-                                                    <i class="iconfont icon-member"></i>
-                                                    <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号<a href="javascript:;" class="validLink">请输入常用手机号</a></p>
+                                                    <input type="text" name="username" ph="请输入常用手机号"  maxlength="11"  datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" >
+                                                    <p class="Validform_checktip"></p>
                                                 </div>
                                             </div>
+                                            <!--<i class="iconfont icon-member"></i>请输入常用手机号<a href="javascript:;" class="validLink">请输入常用手机号</a>-->
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
-                                                    <i class="iconfont icon-eye-close-solid"></i>
+                                                    <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合" datatype="*6-16"  errormsg="<i class='iconfont icon-information-solid'></i>密码不得为空" nullmsg="<i class='iconfont icon-information-solid'></i>密码格式不正确">
+                                                    <p class="Validform_checktip"></p>
                                                     <!-- <p class="Validform_checktip"><i class="iconfont icon-member"></i>请输入常用手机号</p> -->
                                                 </div>
                                             </div>
@@ -61,8 +61,10 @@
                                             </div> -->
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input type="text" name="password" ph="短信验证码">
+                                                    <input type="text" name="password" ph="短信验证码"  datatype="s4-4" errormsg="<i class='iconfont icon-information-solid'></i>请输入动态密码" nullmsg="<i class='iconfont icon-information-solid'></i>动态密码不得为空" >
                                                     <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送动态密码</a>
+                                                    <p class="Validform_checktip"></p>
+
                                                 </div>
                                             </div>
                                             <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable reg-btn">注册</a>
@@ -83,14 +85,16 @@
                                             </div>
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合">
-                                                    <i class="iconfont icon-eye-close-solid"></i>
+                                                    <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合 datatype="*6-16"  errormsg="<i class='iconfont icon-information-solid'></i>密码不得为空" nullmsg="<i class='iconfont icon-information-solid'></i>密码格式不正确"">
+                                                    <p class="Validform_checktip"></p>
                                                 </div>
                                             </div>
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input type="text" name="password" ph="邮箱验证码">
+                                                    <input type="text" name="password" ph="邮箱验证码"  datatype="s4-4" errormsg="<i class='iconfont icon-information-solid'></i>请输入动态密码" nullmsg="<i class='iconfont icon-information-solid'></i>动态密码不得为空" >
                                                     <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable">发送验证邮件</a>
+                                                    <p class="Validform_checktip"></p>
+
                                                 </div>
                                             </div>
                                             <a href="javascript:;" class="l-btn-lg l-btn-red l-btn-disable reg-btn">注册</a>
@@ -116,6 +120,7 @@
         </div>
     </div>
     <!--#include virtual="public/foot.shtml"-->
+    <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="images/registration.js"></script>
 </body>
 </html>

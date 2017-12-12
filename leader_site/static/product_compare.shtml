@@ -77,8 +77,10 @@
 			    			<div class="o_u o_df_1-5 productInfo isAdd">
 			    				<div class="compare_goods">
 			    					<a class="iconfont icon-close"></a>
-			    					<img src="images/compare_goods.png">
-			    					<span class="goods_name">对开双门大容量交个哦几个洗衣机</span>
+			    					<a href="javascript:;">
+			    						<img src="images/compare_goods.png">
+			    					</a>
+			    					<a class="goods_name">对开双门大容量交个哦几个洗衣机</a>
 			    					<span class="goods_type">UOPEJTPII-79986966</span>
 			    					<span class="goods_price">￥ 5637</span>
 			    				</div>
@@ -180,7 +182,9 @@
 			    							质量很好(999)
 			    						</span>
 			    					</div>
-			    				</div>
+								</div>
+			    				<div class="o_u o_df_1-5"></div>
+			    				<div class="o_u o_df_1-5"></div>
 			    			</li>
 			    		</ul>
 			    	</div>

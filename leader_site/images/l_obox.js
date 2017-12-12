@@ -43,7 +43,7 @@
             }
         }), p.appendTo(h), r.append(l).append(c).append(h), i.before(r).css("display", "none"), i.appendTo(r), i.bar = p.oScrollBar(), r.addClass("lose"), i.init = function () {
             i.lose(), p.find("li").last().css("border", "none"), p.find("li").on("click", function (t) {
-                $(this).addClass("cur").siblings().removeClass("cur"), $i = p.find("li").index(this), d = i.find("option"), d.attr("selected", !1).eq($i + 1).attr("selected", !0), $val = $(this).find("span").html(), h.css("display", "none"), c.html($val), i.change(), t.stopPropagation()
+                $(this).addClass("cur").siblings().removeClass("cur"), $i = p.find("li").index(this), d = i.find("option"), d.attr("selected", !1).eq($i + 1).attr("selected", !0), $val = $(this).find("span").html(), h.css("display", "none"), a.css({"z-index": "0","height": "auto"}).removeClass("o_DropdownBox"), r.css({"background": "#fff","border-color": "#ccc" }),c.html($val), i.change(), t.stopPropagation()
             }), isPC || r.on("change", "select", function (t) {
                 var n = $(this).find("option:selected").html();
                 c.html(n)

@@ -163,7 +163,7 @@ jQuery(function () {
                         var productID = mold_for_this_subcat[j].productID;//产品ID
                         var json_url = mold_for_this_subcat[j].productJsonUrl;//产品url
                         if (json_url != undefined) {
-                            json_url = json_url.replace(".json", "_json.json");
+                            //json_url = json_url.replace(".json", "_json.json");
                             json_url = json_url.replace(".shtml", "_json.json");
                         }
                         ;
@@ -176,7 +176,7 @@ jQuery(function () {
                 }
                 ;//end for
             }
-            $('.compare_choose span span').eq(0).click();
+            //$('.compare_choose span span').eq(0).click();
         }
         ;//end if
 
@@ -244,9 +244,11 @@ jQuery(function () {
             //html+=' <div class="o_u o_df_1-5 productInfo isAdd">';
             $draw_area.attr('data-pid', productID);
             html += ' <div class="compare_goods" isAdd="0">';
-            html += '<a class="iconfont icon-close" href ="' + p_link + '"></a>';
-            html += '  <img src="' + p_imgSrc + '">';
-            html += ' <span class="goods_name">' + p_title + '</span>';
+            //href ="' + p_link + '"
+            html += '<a class="iconfont icon-close" ></a>';
+            // </a>
+            html += ' <a href ="' + p_link + '" ><img src="' + p_imgSrc + '"></a>';
+            html += ' <a class="goods_name" href ="' + p_link + '">' + p_title + '</a>';
             html += '  <span class="goods_type">' + p_mold + '</span>';
             if (p_price != 0 || p_price != "0" || p_price != '' || p_price != undefined) {
                 html += '<span class="goods_price">￥' + p_price + '</span>'
@@ -322,12 +324,6 @@ jQuery(function () {
                 $(this).remove();
                 var text = "";
                 //在这判断是不是吸顶效果的添加 如果是吸顶那要加上高度限制
-                /*if($(window).scrollTop()>conHeight){
-                 //如果是吸顶
-                 text+='<div class="row addBox" style="height: 71px;">'
-                 }else{
-                 text+='<div class="row addBox">'
-                 }*/
 
                 if (backUrl == null) {
                     backUrl = "/cooling";
@@ -340,7 +336,6 @@ jQuery(function () {
                 text += '</a>';
                 text += '</div>';
                 text += '</div>';
-                //text+='<a class="add" href="'+backUrl+'"><i class="o_icofont o-plus"></i>'+'添加新产品'+'</a>';
                 $(".productCompareShowDiv").append(text);
             });
             //清空下边数据

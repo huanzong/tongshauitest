@@ -1139,16 +1139,16 @@
 					line-height: 30px;
 				}
 			};
-			a:nth-child(1){
+			a:first-child{
 				background: url("member-home-top-list3.jpg") no-repeat center;
 				background-size: 100% 100%;
 			}
-			a:nth-child(2){
+			a:first-child+a{
 				background: url("member-home-top-list2.jpg") no-repeat center;
 				background-size: 100% 100%;
 				margin: 0 5%;
 			}
-			a:nth-child(3){
+			a:first-child+a+a{
 				background: url("member-home-top-list1.jpg") no-repeat center;
 				background-size: 100% 100%;
 			}
@@ -3638,7 +3638,7 @@
 	border: 1px solid #eee;
 	box-shadow: 0 0 10px #eee;
 	border-radius: 7px;
-	margin: 35px 0 0  0;
+	margin: 30px 0 0  0;
 
 	.member-order-title {
 		font-size: 12px;
@@ -4981,6 +4981,9 @@
 		// >div{
 		// 	margin-right: 8px;
 		// }
+		>div{
+			margin-bottom:10px;
+		}
 		.impress-add-input-box{
 			margin: 0 8px  10px 0; 
 			@media (min-width: 576px) and (max-width: 700px) {

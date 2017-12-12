@@ -1,7 +1,7 @@
 $(function() {
 
     init();
-
+    $('.validLink').mousedown(function(){var href = $(this).attr('href');window.location.href=href;})
     $(window).resize(function() {
         init();
     });
@@ -52,6 +52,28 @@ $(function() {
             $('.js_regType_tit').text('邮箱注册');
             $('.js_regType_float').text('使用手机注册');
             $('.js_regType').prop('data-reg',1);
+        }
+    });
+
+
+// 表单初始化
+    var address=$(".js_regType_phone").Validform({
+        tiptype:3,
+        showAllError:false,
+        ignoreHidden:false,
+        dragonfly:false,
+        callback:function(form){//验证后保存地址
+
+        }
+    });
+
+    var email=$(".js_regType_email").Validform({
+        tiptype:3,
+        showAllError:false,
+        ignoreHidden:false,
+        dragonfly:false,
+        callback:function(form){//验证后保存地址
+
         }
     });
 

@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="images/member-center.css">
 </head>
 
-<body class=" ">
+<body>
     <div class="o_main">
             <!-- 首屏动画 -->
           <!-- 导航 -->
@@ -43,7 +43,8 @@
             <!-- 首屏动画 End -->
         <div class="o_g">
             <div class="membercenter-top">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner js_memberCenterBanner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
+                    <!--member-center-bannermin.jpg-->
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>加入统帅，<span>慢享悠悠生活</span></h2>
@@ -56,7 +57,7 @@
                         <div class="membercenter-list-cont">
                             <h4>乐分享</h4>
                             <p>晒单分享，最多得550积分</p>
-                            <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">晒单分享</a>
                         </div>
                     </li>
                     <li class="list-endorsement o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("images/member-center-endorsement.png") no-repeat center right;'>
@@ -193,6 +194,7 @@
                     </ul>
                 </div>
             </div>
+            </div>
             <!--#include virtual="public/footer.shtml"-->
         </div>
         <!--#include virtual="public/foot.shtml"-->
@@ -201,6 +203,16 @@
     $(function(){
    
         var windowWidth = $(window).width();
+        if(windowWidth>1199){
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放大图
+            //images/member-center-banner.jpg
+        }else{
+
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放小图
+            //images/member-center-banner.jpg
+        }
 
         setTimeout(function(){
                 var leftBoxHeight = $('.js_centerBoxLeft').height();
