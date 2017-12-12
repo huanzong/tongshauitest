@@ -675,11 +675,10 @@
 	.compare-list{
 		display: none;
 		border-left: 1px solid #eee;
-		margin-left: 8.33%;
+		margin: 0 8.33%;
 		li{
 			position: relative;
 			display: inline-block;
-			width: 17.9%;
 			min-height: 100px;
 			border-right: 1px solid #eee;
 			vertical-align: top;
@@ -698,7 +697,9 @@
 				}
 			}
 			.compare-link{
+				font-size: 12px;
 				display: block;
+				text-align: center;
 				.l-btn-red{
 					min-width: 96px;
 					margin-top: 20px;
@@ -736,6 +737,9 @@
 			}
 			.clear{
 				display: block;
+			}
+			&.compare-button-clear{
+				border-left: 1px solid #eee;
 			}
 		}
 	}
