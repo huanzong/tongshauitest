@@ -10,6 +10,7 @@
 //}
 var templet_pageNo=1;
 var templet_pageSize=10;
+var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
 
@@ -250,8 +251,8 @@ $("#js_area").change(function(){
 })
 
 //新增地址
+
 function saveUserAddress(){
-    var templet_isSubmiting=false;
     if(templet_isSubmiting){//正在提交
         globalShade2('正在提交，请稍后','3');
         return;
@@ -573,8 +574,9 @@ $(document).on("click",".deleteAddress",function(){
         })
     })
 })
-var saveId="";
+
 //修改地址获取信息
+var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
@@ -806,6 +808,10 @@ function getAddressInfo(id){
 
 //保存修改地址
 function updateUserAddress(){
+    if(templet_isSubmiting){//正在提交
+        globalShade2('正在提交，请稍后','3');
+        return;
+    }
     var bool = false;
     var realnameVal=$.trim($("#realName").val());//联系人
     var mobileVal=$.trim($("#mobile").val());//手机号
