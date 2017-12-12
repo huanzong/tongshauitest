@@ -10,6 +10,7 @@
 //}
 var templet_pageNo=1;
 var templet_pageSize=10;
+var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
 
@@ -19,15 +20,51 @@ var infotell=[];
 $('.js_addressPhoneInput').find('input').blur(function(){
     var inputVal = $.trim($(this).val());
     var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
-    if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
-        $(this).removeClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_wrong').length!=0){
-        $(this).addClass('Validform_error');
-        infotell[nubName-1] = '';
-    }else if($(this).siblings('.Validform_right').length!=0){
+    var tellQuhao = /[1-9]([0-9]{2,3})/;
+    var tellNub = /[1-9]([0-9]{7})/;
+    var tellNubs = /[1-9]([0-9]{1,7})/;
+if(inputVal.length==0){
+    $(this).removeClass('Validform_error');
+}else{
+    if(nubName==1&&tellQuhao.test(inputVal)){
         infotell[nubName-1] = inputVal;
+        $(this).removeClass('Validform_error');
+    }else if(nubName==1&&!tellQuhao.test(inputVal)){
+        infotell[nubName-1] = "";
+        $(this).addClass('Validform_error');
+
     }
+    if(nubName==2&&tellNub.test(inputVal)){
+        infotell[nubName-1] = inputVal;
+        $(this).removeClass('Validform_error');
+
+    }else if(nubName==2&&!tellNub.test(inputVal)){
+        infotell[nubName-1] = "";
+        $(this).addClass('Validform_error');
+
+    }
+    if(nubName==3&&tellNubs.test(inputVal)){
+        infotell[nubName-1] = inputVal;
+        $(this).removeClass('Validform_error');
+
+    }else if(nubName==3&&!tellNubs.test(inputVal)){
+        infotell[nubName-1] = "";
+        $(this).addClass('Validform_error');
+
+    }
+}
+
+
+    //
+    //if($(this).siblings('.js-addressMobError').find('.js_nullMsg').length!=0){
+    //    $(this).removeClass('Validform_error');
+    //    infotell[nubName-1] = '';
+    //}else if($(this).siblings('.Validform_wrong').length!=0){
+    //    $(this).addClass('Validform_error');
+    //    infotell[nubName-1] = '';
+    //}else if($(this).siblings('.Validform_right').length!=0){
+    //    infotell[nubName-1] = inputVal;
+    //}
 })
 //取消弹框提示
 var templet_text="确定取消添加吗？";
@@ -214,8 +251,8 @@ $("#js_area").change(function(){
 })
 
 //新增地址
+
 function saveUserAddress(){
-    var templet_isSubmiting=false;
     if(templet_isSubmiting){//正在提交
         globalShade2('正在提交，请稍后','3');
         return;
@@ -306,6 +343,17 @@ var address=$(".js_form_addAddrManagement").Validform({
 
 $(function(){
     address.ignore('#phonequhao,#phone,#phonefenjihao');
+
+    $('.js-newMobile').blur(function(){
+        var dataType =$(this).attr('data-type');
+        var dataVal = $(this).val();
+        var inputNullText = $(this).attr('nullmsg');
+        console.log($(this).val());
+        if(dataVal.length==0){
+            $(this).addClass('Validform_error').attr('data-type',1);
+            $(this).siblings('.js-addressMobError').html(inputNullText)
+        }
+    })
 })
 //获取用户地址列表
 function loadUserInfoList(){
@@ -406,9 +454,20 @@ function resetForm(){
     $("#phonefenjihao").blur();
      $('.js-addressMobError').html(' ');
     $('.Validform_error').removeClass('Validform_error');
+ 
+
 };
 
-
+$('.js-newMobile').blur(function(){
+ 
+    var dataVal = $(this).val();
+    var inputNullText = $(this).attr('nullmsg');
+    console.log($(this).val());
+    if(!dataType&&dataVal.length==0){
+        $(this).addClass('Validform_error').attr('data-type',1);
+        $(this).siblings('.js-addressMobError').html(inputNullText)
+    }
+})
 //设置默认地址
 $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
@@ -515,8 +574,9 @@ $(document).on("click",".deleteAddress",function(){
         })
     })
 })
-var saveId="";
+
 //修改地址获取信息
+var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
@@ -748,6 +808,10 @@ function getAddressInfo(id){
 
 //保存修改地址
 function updateUserAddress(){
+    if(templet_isSubmiting){//正在提交
+        globalShade2('正在提交，请稍后','3');
+        return;
+    }
     var bool = false;
     var realnameVal=$.trim($("#realName").val());//联系人
     var mobileVal=$.trim($("#mobile").val());//手机号

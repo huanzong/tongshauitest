@@ -5,6 +5,7 @@
  
 
 $(function(){
+    $('.js-resetPassWord').focus(function(){$(this).css('border-color','#ccc')})
 
             //静态页面测试添加，正常后隐藏
         $("#js_resetpassword").attr('autotext',"邮箱（"+'1511***@163.com'+"）");

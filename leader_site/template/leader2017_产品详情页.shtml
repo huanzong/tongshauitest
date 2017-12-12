@@ -200,32 +200,38 @@
                                     </div>
                                 </div>
                                 <div class="particulars-btn">
-                                    <a href="javascript:;" class="l-btn-normal l-btn-red">加入购物车</a>
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red" productId="<trs_viewdata field='metadataid'/>">加入购物车</a>
                                 </div>
 
                                 <div class="particulars-buy-tit">品牌旗舰店购买：</div>
                                 <div class="particulars-buy-con">
                                     <!--<trs_viewdata field="tmall"/>-->
+                                    <trs_viewdata field="tmall">
                                     <TRS_CONDITION CONDITION="@tmall" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox">
+                                    <a class="particulars-buybox" href="<trs_viewdata field='tmall'/>">
                                         <div class="buy-img tianmao"></div>
                                         <div class="buy-tit">天猫旗舰店</div>
                                     </a>
                                     </TRS_CONDITION>
+                                    </trs_viewdata>
                                     <!--<trs_viewdata field="jd"/>-->
+                                    <trs_viewdata field="jd">
                                     <TRS_CONDITION CONDITION="@jd" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox">
+                                    <a class="particulars-buybox" href="<trs_viewdata field='jd'/>">
                                         <div class="buy-img jingdong"></div>
                                         <div class="buy-tit">京东旗舰店</div>
                                     </a>
                                     </TRS_CONDITION>
+                                    </trs_viewdata>
                                     <!--<trs_viewdata field="suning"/>-->
+                                    <trs_viewdata field="suning">
                                     <TRS_CONDITION CONDITION="@suning" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox">
+                                    <a class="particulars-buybox"  href="<trs_viewdata field='suning'/>">
                                         <div class="buy-img suning"></div>
                                         <div class="buy-tit">苏宁旗舰店</div>
                                     </a>
                                     </TRS_CONDITION>
+                                    </trs_viewdata>
                                 </div>
                             </div>
                         </div>
@@ -1459,7 +1465,7 @@
         //var templet_businessId="BCD-557WDGSU1"
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
-        var templet_commentUrl='';//参数页面
+        var templet_parameterUrl='';//参数页面
         var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
@@ -1469,10 +1475,11 @@
         templet_commentUrl=templet_detailUrl+'_comment.shtml';
         $(".js_commentUrl").prop("href",templet_commentUrl);//口碑
         $(".js_comment").prop("href",templet_commentUrl);//口碑
+
         if(templet_dsly ==""||templet_dsly ==null){
             $(".js_detail-foldover").hide();//电商拉页隐藏
         }
-        var templet_buy=$(".particulars-buy-con").find("a").lenght;
+        var templet_buy=$(".particulars-buy-con").find("a").length;
         if(templet_buy==""||templet_buy==null){
             $(".particulars-buy-tit").hide();
         }

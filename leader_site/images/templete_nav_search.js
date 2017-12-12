@@ -119,6 +119,18 @@ $('.js_menuShow').on('click', function () {
 
 //点击搜索按钮全文搜索
 $('.js_jumpto_product_search').on('click', function () {
+    jumpToProductSearch();
+});
+
+//回车键搜索
+$('.js_searchHistory').keydown(function (e) {
+    if(e.which == 13){
+        jumpToProductSearch();
+    }
+});
+
+//跳转至全文检索页面
+function jumpToProductSearch() {
     var channelId = '273690';
     var historyCookie = $.cookie('historyCookie');
     var searchWord = $.trim($('.js_searchHistory').val());
@@ -151,7 +163,7 @@ $('.js_jumpto_product_search').on('click', function () {
         searchWord = encodeURIComponent(searchWord);
         window.location.href = "/was5/web/search?channelid=" + channelId + "&searchword=" + searchWord;
     }
-});
+}
 
 //搜索框浮层检索
 function searchBoxWord(word) {
@@ -167,7 +179,7 @@ function searchBoxWord(word) {
             async: true,
             success: function (data) {
                 $('.js_quick_search').remove();
-                $('.js_searchBox_listShow').html(data);
+                $('.js_searchBox_root').html(data);
             },
             error: function (data) {
             }
@@ -196,10 +208,10 @@ function searchBoxInput(webSize) {
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
         }
     } else {
-        searchBoxHtml = '<li><a href = "">在线保修<a/></li>' +
-            '<li><a href = "">产品注册<a/></li>' +
-            '<li><a href = "">帮助中心<a/></li>' +
-            '<li><a href = "">联系我们<a/></li>';
+        searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修<a/></li>' +
+            '<li><a href = "user.tongshuai.com/product_registe">产品注册<a/></li>' +
+            '<li><a href = "/service/help">帮助中心<a/></li>' +
+            '<li><a href = "/contact">联系我们<a/></li>';
         if (webSize == "xl") {
             searchBoxHtml = '<div class="search-quick js_quick_search">快速链接</div>' +
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
@@ -212,6 +224,5 @@ function searchBoxInput(webSize) {
 function deleteHistory() {
     $(".js_delete_history").off().on('click', function () {
         $.cookie('historyCookie', null, {path: '/'});
-        $('.js_searchHistory').focus();
     });
 }

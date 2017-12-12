@@ -122,14 +122,18 @@ function readXmlFile(url) {
             //移动端筛选项初始化
             $(".layer-list").html(mobileHtml);
             //if (document.body.offsetWidth >= 1200 ) {
-            setTimeout(noneShaiXuan(".sole-type"), 1000);
+            //setTimeout(noneShaiXuan(".sole-type"), 1000);
+            noneShaiXuan(".sole-type")
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(initCookie(), 1000);
-            setTimeout(initLoadCookie(), 1000);
+            //setTimeout(initCookie(), 1000);
+            initCookie()
+            //setTimeout(initLoadCookie(), 1000);
+            initLoadCookie()
             // }else{
-            setTimeout(noneShaiXuan(".list-btn"), 1000);
+            //setTimeout(noneShaiXuan(".list-btn"), 1000);
+            noneShaiXuan(".list-btn")
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
@@ -312,7 +316,8 @@ $(".font").each(function () {
             order = "-shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "+rqcp"
+            $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-up").addClass("icon-arrow-refresh-down");
+            order = "-rqcp"
         }
         if ($(this).text() == "价格") {
             order = "+price"
@@ -326,7 +331,8 @@ $(".font").each(function () {
             order = "+shangshishijian"
         }
         if ($(this).text() == "人气") {
-            order = "-rqcp"
+            $icon.css("display", "inline-block").removeClass("icon-arrow-refresh-down").addClass("icon-arrow-refresh-up");
+            order = "+rqcp"
         }
         if ($(this).text() == "价格") {
             order = "-price"
@@ -495,7 +501,7 @@ function deleteFilterItemShowBarClick() {
             searchWord = searchWord.replace($(this).parent().attr("query") + " and", "");
             searchWord = searchWord.replace("and " + $(this).parent().attr("query"), "");
         } else {
-            searchWord = searchWord.replace($(this).attr("query"), "");
+            searchWord = searchWord.replace($(this).parent().attr("query"), "");
         }
         //删除筛选项中的选中事件
         $(".sole-type.active").filter('[inputName="' + $(this).parent().attr("inputName") + '"]').removeClass("active");

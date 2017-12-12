@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>优生活</title>
     <%=base%>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
         <!-- <link rel="stylesheet" type="text/css" href="images/index.css"> -->
         <link rel="stylesheet" type="text/css" href="images/life_style.css">
-        <link rel="stylesheet" href="http://www.casarte.com/images/mediaelementplayer.min.css">
+        <link rel="stylesheet" href="images/mediaelementplayer.min.css">
 </head>
 
 <body class=" ">
@@ -42,11 +42,15 @@
             <!--#include virtual="public/nav.shtml"-->
         <!-- 导航 End-->
         <div class="o_g">
+            <div class="life-style-player js_playerBox">
+                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"></video>
+                <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
+            </div>
             <div class="life-style-video-box js_styleVideoBox">
                 <div class="life-style-video-cont js_styleVideoCont">
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-left js_styleVideoContLeft" data-alt="false">
                         <img src="images/style_life_video_left.png" alt=""></a>
-                    <div class="video-cont-md o_g">
+                    <div class="video-cont-md js_videoMdShow o_g">
                         <div class="js_lifeStyleVideoSwipe o_u o_df_11-12" style="overflow: hidden;">
                             <ul class="o_u o_df_12-12 swiper-wrapper">
                                 <li class= "o_u o_df_12-12  video-cont-md-imgmax js_videoMdImgMaxL swiper-slide" data-index = "1" data-gif="">
@@ -61,7 +65,7 @@
                         <div class=" video-cont-md-imgmin  o_u o_df_1-12 js_videoMdImgMin">
                             <img src="images/style_life_video_left.png" class="" alt="">
 
-                            
+
                         </div>
                     </div>
           
@@ -76,12 +80,9 @@
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"><img src="images/style_life_video_right.png" alt=""></a>
                 </div>
             </div>
-            <div class="life-style-player js_playerBox">
-                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"></video>
-                <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
-            </div>
+
             <!-- 优生活 start-->
-            <div class="life-style-photo-box  ">
+            <div class="life-style-photo-box  js_lifeStylePhotoBox">
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
                     <div class="photo-list-img  js_lifeStylePhotoCentent" ></div>
                     <div class="life-style-photo-cur-text">
@@ -89,7 +90,7 @@
                     </div>
                 </div>
                 <a href="javascript:;" class="o_u iconfont icon-arrow-jiantou-left js_photoLeftBtn o_df_1-12"></a>
-                <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_8-12  life-style-photo-list-center ">
+                <div class="o_u o_df_6-12  o_lg_8-12 o_lg_8-12 o_md_8-12 o_sm_8-12 o_xs_10-12  life-style-photo-list-center ">
                     <div class="swiper-container js_lifeStyleGoodLifeSwipe">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -380,11 +381,11 @@
 
             <!-- 真实案例 -->
             <div class="life-style-case">
-                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-left js_lifeStyleCaseLeft">
+                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_1-12 case-photo-left js_lifeStyleCaseLeft">
                     <a href="javascript:;" class=" iconfont icon-arrow-jiantou-left js_lifeStyleCaseLeftBtn"></a>
                 </div>
            
-                <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_8-12 life-style-case-photo ">
+                <div class="o_u o_df_4-12  o_md_8-12  o_sm_8-12 o_xs_10-12 life-style-case-photo ">
                     <div class="js_lifeStyleCasePhoto life-case-photo-swiper" style="overflow: hidden;">
                         <div class="swiper-wrapper"  >
                             <div class="swiper-slide" data-index="1">
@@ -410,7 +411,7 @@
                     </div>
                 </div>
 
-                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_2-12 case-photo-right js_lifeStyleCaseRight">
+                <div class="o_u o_df_1-12 o_md_2-12 o_sm_2-12 o_xs_1-12 case-photo-right js_lifeStyleCaseRight">
                     <a href="javascript:;" class=" iconfont icon-arrow-jiantou-right js_lifeStyleCaseRightBtn"></a>
                     <ul class="case-photo-nub-btn js_casePhotoNub">
                         <li>03</li>
