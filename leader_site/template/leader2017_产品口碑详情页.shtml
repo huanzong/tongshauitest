@@ -72,7 +72,7 @@
                             <a class="nav-type" data-nav="js_params" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params">参数
                                 <div class="line"></div>
                             </a>
-                            <a class="nav-type active js_comment" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
+                            <a class="nav-type active js_commentNum" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
                                 <div class="line"></div>
                             </a>
                            <!-- <a class="nav-type" data-nav="js_favourable" href="javascript:;">优惠组合
