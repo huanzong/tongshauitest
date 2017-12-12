@@ -13,9 +13,9 @@
       // 口碑常量配置
       var reputationConfig= {
         //产品型号
-        //templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
-        templet_businessId: "BCD-557WDGSU1",
-        templet_pageSize:2
+        templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
+        //templet_businessId: "BCD-557WDGSU1",
+        templet_pageSize:10
       };
     </script>
 </head>
