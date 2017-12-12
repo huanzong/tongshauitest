@@ -16,7 +16,7 @@ function initContent(data,curPage,pageSize){
   //判断成功执行，失败。
   if(data.isSuccess==true){
       var commentNum=data.data.entityCount;
-      $(".js_comment").find("span").html(commentNum);
+      $(".js_commentNum").find("span").html(commentNum);
       var commentNone='';
       //循环每个entity
       //初始化分页
@@ -102,7 +102,8 @@ function getContentData1(curPage,pageSize){
 //点击触发全部内容展示
 function onTagAll(){
   $(".js_comment1").on("click", function(){
-    getContentData(1,reputationConfig.templet_pageSize);
+      $(this).addClass("active").siblings().removeClass("active");
+     getContentData(1,reputationConfig.templet_pageSize);
   });
 }
 
@@ -141,6 +142,7 @@ function getContentDataByTag(curPage,pageSize){
   //根据标签点击获取对应内容
   $(".js_comment").on("click", function(){
     var tagName=$(this).text();
+    $(this).addClass("active").siblings().removeClass("active");
     $.ajax({
       url: siteConfig.domain+"/interaction-comment/comment/commentListShow/getContentDataByTag/",
       data:{businessId:reputationConfig.templet_businessId,pageNo:curPage,pageSize:pageSize,tagName:tagName},

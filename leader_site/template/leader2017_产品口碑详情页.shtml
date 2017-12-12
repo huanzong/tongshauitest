@@ -13,8 +13,8 @@
       // 口碑常量配置
       var reputationConfig= {
         //产品型号
-        templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
-        //templet_businessId: "BCD-557WDGSU1",
+        //templet_businessId: "<TRS_ViewData Field='modelno'></TRS_ViewData>",
+        templet_businessId: "BCD-557WDGSU1",
         templet_pageSize:2
       };
     </script>
@@ -72,7 +72,7 @@
                             <a class="nav-type" data-nav="js_params" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params">参数
                                 <div class="line"></div>
                             </a>
-                            <a class="nav-type active js_comment" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
+                            <a class="nav-type active js_commentNum" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
                                 <div class="line"></div>
                             </a>
                            <!-- <a class="nav-type" data-nav="js_favourable" href="javascript:;">优惠组合
@@ -150,7 +150,7 @@
                         <div class="percent-value"></div>
                     </div>
                     <div class="prise-tips">
-                        <a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment1">全部</a>
+                        <a href="javascript:;" class="l-btn-sm l-btn-line2 js_comment1 active">全部</a>
                     </div>
                     <div class="clear"></div>
                 </div>
