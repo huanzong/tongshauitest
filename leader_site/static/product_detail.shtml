@@ -131,7 +131,7 @@
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
-                            <img src="images/compare_goods.PNG" class="banner-pro-img">
+                            <img src="images/compare_goods.PNG" class="banner-pro-img js_specificsShow">
                             <div class="banner-pro-oppo o_df-hide o_xs-show">
                                 <div class="activity-icon active">
                                     <div class="icon-font">
@@ -262,7 +262,7 @@
                                         7月31日-8月20日
                                     </div>
                                     <div class="activity-con-info">
-                                        套购慢件最高3000，满减赠扫地机器人
+                                        套购满减最高3000，满减赠扫地机器人
                                     </div>
                                 </div>
                                 <div class="activity-con-small">
@@ -383,7 +383,7 @@
                     <div class="o_u o_df_10-12">
                         <div class="o_u o_df_2-2 detail-fontpoint">
                             <div class="o_u o_df_1-12"></div>
-                            <div class="o_u o_df_10-12">
+                            <div class="o_u o_df_10-12 o_df-center">
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold">342L</div>
@@ -478,6 +478,7 @@
                         <span>海尔保险</span>
                     </div>
                 </div>
+                <div class="o_clear"></div>
             </div>
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
@@ -778,7 +779,7 @@
                             <div class="param-attachment">
                                 <span class="param-attachment-title">附件</span>
                                 <span class="param-attachment-line o_xs-hide"></span>
-                                <a class="param-attachment-other">外机支架</a>
+                                <span class="param-attachment-other">外机支架</span>
                                 <a class="param-attachment-other">安装管道</a>
                                 <a class="param-attachment-other">说明书</a>
                                 <a class="param-attachment-other">遥控器</a>
@@ -882,6 +883,8 @@
                                 <div class="detail-praise-box">
                                     打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千 打雷要下雨 嘞哦 (什么) 下雨要打伞 嘞哦 (这我也知道) 天冷穿棉袄 嘞哦 嘞哎哟 天热扇扇子 智慧就是 (说呀) 这么简单 为什么会打雷下雨 (为什么) 为什么有冬天夏天 (嗯 是个难题) 不知道的奥秘万万千千 智慧简单 又不简单 不知道的奥秘万万千千
                                 </div>
+                                <div class="detail-praise-img">
+                                </div>
                                 <div class="detail-praise-font">
                                     <span class="name">海****尔</span>
                                     <span class="time">2017/08/09</span>
@@ -907,7 +910,7 @@
                             <div class="swiper-wrapper">
                                 <a class="swiper-slide">
                                     <div class="detail-scene1-img">
-                                        <img src="images/footer_logo1.jpg">
+                                        <img src="images/icon_01.png">
                                     </div>
                                     <div class="detail-more-info">
                                         <div class="detail-more-tit">
@@ -926,7 +929,7 @@
                                 </a>
                                 <a class="swiper-slide">
                                     <div class="detail-scene1-img">
-                                        <img src="images/footer_logo2.jpg">
+                                        <img src="images/icon_01.png">
                                     </div>
                                     <div class="detail-more-info">
                                         <div class="detail-more-tit">
@@ -945,7 +948,7 @@
                                 </a>
                                 <a class="swiper-slide">
                                     <div class="detail-scene1-img">
-                                        <img src="images/footer_logo3.jpg">
+                                        <img src="images/icon_01.png">
                                     </div>
                                     <div class="detail-more-info">
                                         <div class="detail-more-tit">
@@ -1211,8 +1214,8 @@
                 </div>
             </div>
             <!-- 优惠组合 END -->
-            <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
-            <!--激活登陆弹窗按钮添加class js_landBtn -->
+            <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登录按钮</a>-->
+            <!--激活登录弹窗按钮添加class js_landBtn -->
             <!--#include virtual="public/footer.shtml"-->
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
@@ -1229,7 +1232,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landUserId">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-newMobile js-landUserIdInput" name="" ph="手机/邮箱/用户名" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入正确的账号" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                     </form>
                                 </div>
@@ -1237,7 +1241,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPassWord">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  js-mobileCode js-landPassWordInput" name="" ph="密码" value="" datatype="s6-16" errormsg="<i class='iconfont icon-information-solid'></i>请输入6-16位密码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <p class="Validform_checktip Validform_wrong"></p>
                                     </form>
                                 </div>
@@ -1247,7 +1252,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12  l-input member-bingmob-listipt js-landPhone">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" name="" ph="请输入需要绑定的手机号" value="" datatype="m" errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <p class="Validform_checktip Validform_wrong js-newMobileerror"></p>
                                     </form>
                                 </div>
@@ -1255,7 +1261,8 @@
                             <div class="o_g member-bingmob-list">
                                 <div class="o_u o_df_11-12 l-input member-bingmob-listipt js-landPhoneYanzheng">
                                     <form class="ui_validForm js_ui_validForm">
-                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息" />
+                                        <input type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-mobileCode" name="" ph="短信验证码" value="" datatype="n6-6" errormsg="<i class='iconfont icon-information-solid'></i>请输入6位验证码" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"
+                                        />
                                         <a href="javascript:;" class="l-btn-sm l-btn-red l-btn-disable js-getinfo">发送验证短信</a>
                                         <p class="Validform_checktip Validform_wrong"></p>
                                     </form>

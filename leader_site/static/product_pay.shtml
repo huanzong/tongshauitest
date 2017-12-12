@@ -293,7 +293,6 @@
 
         </div>
     </div>
-    <div class="js-pay-form">订单号：8887777789076665</div>
     <!--#include virtual="public/foot.shtml"-->
     <script type="text/javascript" src="images/product_pay.js"></script>
 

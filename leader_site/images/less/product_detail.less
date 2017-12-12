@@ -781,10 +781,10 @@
         }
       }
       .pagination-prev{
-        left: 0;
+        left: 26%;
       }
       .pagination-next{
-        right: 0;
+        right: 29%;
       }
       .pagination-next,.pagination-prev{
         position: absolute;
@@ -827,6 +827,7 @@
 //文字卖点
 .detail-fontpoint-index{
   position: relative;
+  height: 218px;
   @media (min-width: 992px) {
     height: 200px;
   }
@@ -1363,13 +1364,29 @@
       color: #666;
       font-size: 16px;
       line-height: 25px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow:ellipsis; 
+      -o-text-overflow:ellipsis; 
+      -icab-text-overflow: ellipsis; 
+      -khtml-text-overflow: ellipsis; 
+      -moz-text-overflow: ellipsis; 
+      -webkit-text-overflow: ellipsis;
+      height:100px;
+      &::after {
+          content:"...";
+          font-weight:bold;
+          position:absolute;
+          bottom:0;
+          right:0;
+          padding:0 20px 1px 45px;
+          background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+      }
       //4行省略
       @media (min-width: 992px){
         min-height: 100px;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
       }
       @media (min-width: 992px) and (max-width: 1199px){
         margin-bottom: 90px;
@@ -1379,6 +1396,7 @@
       }
     }
     .detail-praise-img{
+      min-height: 72px;
       padding: 0 20px;
       img{
         width: 40px;

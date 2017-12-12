@@ -112,6 +112,9 @@
                                         <div class="selectbox">
                                             <div class="">
                                                 <select name="" id="js_orderConfirmSave"  autotext="省">
+                                                    <option value="0">--山东--</option>
+                                                    <option value="1">北京</option>
+                                                    <option value="2">上海</option>
                                                 </select>
 
                                             </div>
