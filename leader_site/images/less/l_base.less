@@ -218,8 +218,12 @@ img {
                 line-height: 62px;
                 padding-bottom: 0;
             }
-            i{
-                font-size: 32px;
+            i {
+                font-size: 16px;
+                color: #ccc;
+                border: 1px solid #eee;
+                padding: 8px;
+                border-radius: 50%;
             }
             span{
                 padding-left: 10px;
@@ -412,14 +416,28 @@ img {
                     border-left: 1px solid #eee;
                     color: #666;
                     font-size: 12px;
+                    @media (max-width:575px){
+                        padding: 0 7px;
+                    }
                 }
             }
              :first-child {
                 a {
-                
+                    padding-left: 0;
                     border-left: none;
+                    @media (max-width:991px){
+                        padding-left: 15px;
+                    }
+                    @media (max-width:575px){
+                        padding-left: 7px;
+                    }
                 }
-
+            }
+        }
+        .footer_middle_copy{
+            display: inline-block;
+            @media (max-width:1199px){
+                display: block;
             }
         }
         .copy_service{
@@ -1160,4 +1178,9 @@ img {
     .personal_footer_copy>p {
         width: 235px
     }
+}
+
+// 弹层-ie8
+.o_shade.show{
+    filter:alpha(opacity=50);
 }
