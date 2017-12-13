@@ -105,7 +105,7 @@
                                     <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
                                     <div class="member-conter-text-down">
                                         <div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>
-                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>
                                         <div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>
                                     </div>
                                 </div>
@@ -150,7 +150,7 @@
                                     <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
                                     <div class="member-conter-text-down">
                                         <div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>
-                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>
                                         <div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>
                                     </div>
                                 </div>
