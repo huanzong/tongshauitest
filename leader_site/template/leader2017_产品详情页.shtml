@@ -117,8 +117,8 @@
 
                         </div>
                         <div class="o_u detail-nav-info">
-                            <div class="nav-info-box">
-                                <a class="l-btn-sm l-btn-red nav-btn" class="" href="javascript:;">立即购买</a>
+                            <div class="nav-info-box js_navLink">
+                                <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top" href="javascript:;">立即购买</a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
                                         <span class="address-tit">配送至：</span>
-                                        <span>浙江 杭州市 西湖区</span>
+                                        <span>浙江 杭州市 西湖区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
                                     <div class="delivery-time">
                                         <span>有货</span>
@@ -410,7 +410,7 @@
             <div class="detail-fontpoint-index">
                 <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-fontpoint-top">
                     <div class="o_u o_df_1-12"></div>
-                    <div class="o_u o_df_10-12">
+                    <div class="o_u o_df_10-12 o_df-center">
                         <div class="o_u o_df_2-2 detail-fontpoint">
                             <div class="o_u o_df_1-12"></div>
                             <div class="o_u o_df_10-12 o_df-center">
@@ -933,6 +933,7 @@
                         
                     </div>
                 </div>
+                <div class="o_clear"></div>
             </div>
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
@@ -1466,7 +1467,7 @@
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
-        var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
+        var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
