@@ -208,7 +208,7 @@
                                     <!--<trs_viewdata field="tmall"/>-->
                                     <trs_viewdata field="tmall">
                                     <TRS_CONDITION CONDITION="@tmall" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox" href="<trs_viewdata field='tmall'/>">
+                                    <a class="particulars-buybox" href="<trs_viewdata field='tmall'/>" target="_blank">
                                         <div class="buy-img tianmao"></div>
                                         <div class="buy-tit">天猫旗舰店</div>
                                     </a>
@@ -217,7 +217,7 @@
                                     <!--<trs_viewdata field="jd"/>-->
                                     <trs_viewdata field="jd">
                                     <TRS_CONDITION CONDITION="@jd" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox" href="<trs_viewdata field='jd'/>">
+                                    <a class="particulars-buybox" href="<trs_viewdata field='jd'/>" target="_blank">
                                         <div class="buy-img jingdong"></div>
                                         <div class="buy-tit">京东旗舰店</div>
                                     </a>
@@ -226,7 +226,7 @@
                                     <!--<trs_viewdata field="suning"/>-->
                                     <trs_viewdata field="suning">
                                     <TRS_CONDITION CONDITION="@suning" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox"  href="<trs_viewdata field='suning'/>">
+                                    <a class="particulars-buybox"  href="<trs_viewdata field='suning'/>" target="_blank">
                                         <div class="buy-img suning"></div>
                                         <div class="buy-tit">苏宁旗舰店</div>
                                     </a>
