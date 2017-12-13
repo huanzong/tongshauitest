@@ -296,7 +296,6 @@ function compareButtonOnclick() {
                     //如果是育婴家电的几个栏目就做截取到父栏目
                     vURL = vURL.substring(0, vURL.lastIndexOf("/"));
                 }
-                //todo channelId先暂时固定
                 vURL = vURL + '/compare.shtml?productId=' + vStr + '&channelId=' + chnlid_owner;
             } else {
                 vURL = window.location.href;
