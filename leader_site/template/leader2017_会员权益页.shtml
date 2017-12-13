@@ -42,8 +42,8 @@
     <div class="o_g">
         <div class="membercenter-top">
             <trs_viewdatas id="会员权益banner" num="1" startpos="0">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner"
-                     style='background: url("<trs_viewdata field="picture"/>") no-repeat top center;'>
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner js_memberCenterBanner" memberCenterBanner="<TRS_VIEWDATAAPPENDIXS FIELD='picture'><TRS_VIEWDATAAPPENDIX FIELD='picture' UrlIsAbs='TRUE'/>,</TRS_VIEWDATAAPPENDIXS>">
+                     <!--style='background: url("<trs_viewdata field="picture"/>") no-repeat top center;'>-->
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>
@@ -202,6 +202,21 @@
 <script type="text/javascript">
     $(function () {
         var windowWidth = $(window).width();
+        var bannerpic=$(".js_memberCenterBanner").attr("memberCenterBanner");
+
+        var result=bannerpic.split(",");
+            var bannerpic1=result[0];
+            var bannerpic2=result[1];
+
+        if(windowWidth>1199){
+            $(".js_memberCenterBanner").css("background-image",'url("'+bannerpic2+'")');
+            //这里放小图
+            //images/member-center-bannermin.jpg
+        }else{
+            $(".js_memberCenterBanner").css('background-image','url("'+bannerpic1+'")');
+            //这里放大图
+            //images/member-center-banner.jpg
+        }
 
         setTimeout(function () {
             var leftBoxHeight = $('.js_centerBoxLeft').height();
