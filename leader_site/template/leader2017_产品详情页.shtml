@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>产品详情</title>
+    <title>【统帅<trs_viewdata field="modelno"/>】<trs_viewdata field="pname"/>_￥<trs_viewdata field="price"/> - 统帅官网</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
         <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -435,7 +435,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nhdj"/></div>
                                         <div class="fontpoint-small">能耗等级</div>
                                     </div>
@@ -462,7 +462,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -489,7 +489,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -516,7 +516,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -537,7 +537,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="fdx"/></div>
                                         <div class="fontpoint-small">防冻性</div>
                                     </div>
@@ -564,7 +564,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -585,7 +585,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="yyjpfl"/></div>
                                         <div class="fontpoint-small">排风量</div>
                                     </div>
@@ -606,7 +606,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="edrfh"/></div>
                                         <div class="fontpoint-small">额定热负荷</div>
                                     </div>
@@ -633,7 +633,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="mbys"/></div>
                                         <div class="fontpoint-small">面板颜色</div>
                                     </div>
@@ -654,7 +654,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="fbl"/></div>
                                         <div class="fontpoint-small">分辨率</div>
                                     </div>
@@ -1467,7 +1467,7 @@
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
-        var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
+        var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);

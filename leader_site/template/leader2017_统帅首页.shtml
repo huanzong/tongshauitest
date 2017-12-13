@@ -377,6 +377,16 @@
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
 <script type="text/javascript" src="../site5/index.js"></script>
+<script>
+	$(function(){
+	    var templat_num=<TRS_CHANNEL ID='产线分类' FIELD='_DataCount'/>;
+        if(window.innerWidth<1200){
+            if(templat_num<8){
+                $(".js_enterMore").hide();
+			}
+		}
+	})
 
+</script>
 </body>
 </html>
