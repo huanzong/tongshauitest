@@ -137,7 +137,7 @@ window.add_compare_flyOut_item = function ($obj) {
 
     if (currentUrlName.indexOf("product_compare") == -1) {
 
-        var $list = $('.js_compareBox').find("div");
+        var $list = $('.js_compareBox').find(".o_g");
         var count = $list.find('.compare-product-img').length;
         if (count >= 4) {
             alert("最多只能选择4款产品！");
