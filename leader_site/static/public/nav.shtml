@@ -46,9 +46,9 @@
 					<li><a>我是搜索结果</a></li>
 				</ul>
 				<ul class="search-list-key">
-					<li><a>我是搜索<span>结果</span></a></li>
-					<li><a>我是搜索<span>结果</span></a></li>
-					<li><a>我是搜索<span>结果</span></a></li>
+					<li><a>我是搜索<font>结果</font></a></li>
+					<li><a>我是搜索<font>结果</font></a></li>
+					<li><a>我是搜索<font>结果</font></a></li>
 				</ul>
 			</div>
 		</div>
