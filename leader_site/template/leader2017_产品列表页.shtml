@@ -472,7 +472,6 @@
 					</div>
 				</div>
 				<ul class="compare-list js_compareBox">
-					<div class="o_g">
 
 						<li class="o_u o_df_1-5 o_df-right compare-button-clear">
 							<div class="compare-link compareButton">
@@ -482,7 +481,6 @@
 								<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
 							</div>
 						</li>
-					</div>
 				</ul>
 			</div>
 		<!-- 产品对比 END -->

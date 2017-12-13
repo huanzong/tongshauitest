@@ -137,7 +137,7 @@ window.add_compare_flyOut_item = function ($obj) {
 
     if (currentUrlName.indexOf("product_compare") == -1) {
 
-        var $list = $('.js_compareBox').find(".o_g");
+        var $list = $('.js_compareBox');
         var count = $list.find('.compare-product-img').length;
         if (count >= 4) {
             alert("最多只能选择4款产品！");
@@ -167,7 +167,7 @@ window.add_compare_flyOut_item = function ($obj) {
         var channelId = $obj.attr('data-chnid');
         var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
 
-        var compareHtml = '<li class="o_u o_df_1-5>' +
+        var compareHtml = '<li>' +
             '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
             '<a href="'+proUrl+'"><img src="' + proImg + '"></a>' +
             '</div>' +
@@ -296,6 +296,7 @@ function compareButtonOnclick() {
                     //如果是育婴家电的几个栏目就做截取到父栏目
                     vURL = vURL.substring(0, vURL.lastIndexOf("/"));
                 }
+                //todo channelId先暂时固定
                 vURL = vURL + '/compare.shtml?productId=' + vStr + '&channelId=' + chnlid_owner;
             } else {
                 vURL = window.location.href;
