@@ -145,7 +145,7 @@ $(function() {
             $('.js-recipientsPhone').html(templet_callphone);
 
             //不是待付款状态则显示
-            if(!templet_data.orderStatus==1){
+            if(!templet_data.orderStatus==1 && !templet_data.orderStatus==-1){
                 $('.js-payTime').html(templet_data.payTime);
                 $('.js-payType').html('支付宝支付');
                 if(templet_data.invoiceType==2 ){
