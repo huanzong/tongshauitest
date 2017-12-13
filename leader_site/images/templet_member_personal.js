@@ -29,7 +29,7 @@ $(function(){
     var template_birthday;
     var template_loginName;
 
-    //页面加载时调个人信息
+    //页面加载时调个人信息。
     $.ajax({
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
