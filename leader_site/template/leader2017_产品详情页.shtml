@@ -1467,7 +1467,7 @@
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
-        var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
+        var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
