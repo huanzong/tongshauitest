@@ -1478,7 +1478,6 @@
 						}
 						.member-security-safeplaintext {
 							width: auto;
-							float: left;
 							height: 24px;
 							line-height: 24px;
 							font-size: 12px;
@@ -1494,16 +1493,29 @@
 								/* md*/
 								margin-left: 5px;
 								font-size: 16px;
+								float: left;
+
+							}
+							@media (min-width: 701px) and (max-width: 750px) {
+								/* md*/
+								margin-left: 5px;
+								font-size: 16px;
+								float: none;
+
 							}
 							@media (min-width: 576px) and (max-width: 700px) {
 								/* sm*/
 								margin-left: 5px;
 								font-size: 16px;
+								float: left;
+
 							}
 							@media (max-width: 575px) {
 								/* xs*/
 								margin-left: 5px;
 								font-size: 16px;
+								float: left;
+
 							}
 						}
 						.member-security-safefinetext {
