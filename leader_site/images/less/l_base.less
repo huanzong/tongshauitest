@@ -572,6 +572,9 @@ img {
             padding-top: 5px;
             li {
                 line-height: 40px;
+                overflow: hidden; /*自动隐藏文字*/
+                text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+                white-space: nowrap;/*强制不换行*/
             }
         }
         .search-list {
@@ -583,8 +586,9 @@ img {
             display: none;
             a{
                 color: #999;
-                span{
+                span,font{
                     color: #333;
+                    font-weight: bold;
                 }
             }
         }
