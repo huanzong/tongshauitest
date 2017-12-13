@@ -186,14 +186,14 @@ $(function () {
      * 提交订单
      */
     $('.js-sub-order').on('click', function () {
-
+        // $('.js_orderconInvoiceBox')
         var orderParams = {
             "cartIds": cartIds,
             "goods": orderList,
             "clientRemark": "",
-            // "invoiceHead": "张三",
-            "invoiceId": $('.js_orderconInvoiceBox').attr('invoiceId'),
-            "invoiceType": 2,
+            "invoiceHead": $('.js_orderconInvoiceBox').attr('invoiceId') ? '' : $('.product-address-list-select .product-address-list-name').text() ,
+            "invoiceId": $('.js_orderconInvoiceBox').attr('invoiceId') || '',
+            "invoiceType": $('.js_orderconInvoiceBox').attr('invoiceId') ? 2 : 1,
             "orderRemark": "",
             "orderTerminal": getOS(), // 1pc 2移动端
             "payType": 1,
@@ -987,6 +987,10 @@ var userServer = {
 
                         $('.js-product-orderconfirm-address').find('p').eq(0).text($('.product-address-list-select .product-address-list-address').text())
                         $('.js-product-orderconfirm-address').find('p').eq(1).html($('.product-address-list-select .product-address-list-name').text() + '&emsp;' +$('.product-address-list-select .product-address-list-phone').text() )
+
+                        if (!$('.js_orderconInvoiceBox').attr('invoiceId')) {
+                            $('.js_orderconInvoiceBox').find('p').eq(1).find('span').text($('.product-address-list-select .product-address-list-name').text())
+                        }
                     })
 
                     // 查询发票头信息
@@ -1048,15 +1052,25 @@ var userServer = {
             data: {invoiceType: invoiceType || 1},
             success_cb: function (data) {
                 if (data.isSuccess) {
-                    // 如果没有发票头信息则使用当前收获地址创建发票头信息
+                    // 如果没有发票头信息则使用当前收获地址信息
                     if (!data.data) {
-                        var invoiceHead = {
-                            invoiceCode: '',
-                            invoiceHead: $('.product-address-list-select .product-address-list-name').text(),
-                            invoiceType: 1
-                        }
 
-                        userServer.invoiceSave(invoiceHead)
+                        var invoiceHead = ''
+                        invoiceHead += '<div class="o_u o_sm_2-3 o_xs_2-3 ">' +
+                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票类型：<span>'
+    
+                        invoiceHead += '电子发票（个人）'
+    
+                        invoiceHead += '</span></p>' +
+                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票抬头： <span>' + $('.product-address-list-select .product-address-list-name').text() + '</span></p>' +
+                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票内容： <span>商品明细</span></p>' +
+                        '</div>' +
+                        '<a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>' 
+    
+                        $('.js_orderconInvoiceBox').html(invoiceHead)
+    
+                        $('.js_orderconInvoiceSet').hide();
+                        $('.js_orderconInvoiceBox').show();
                     } else {
                         var invoiceHead = ''
                         invoiceHead += '<div class="o_u o_sm_2-3 o_xs_2-3 ">' +
