@@ -763,7 +763,7 @@ $(function() {
         var goodsInfo = [{
             "inSkuCode": "650000",
             "quantity": 1,
-            "regionCode": 2450
+            "regionCode": $('.js-delivery-address').attr('areaCode') || ''
         }]
         
         if (istrsidssdssotoken()) {
@@ -816,10 +816,43 @@ $(function() {
     
     })
 
+    regionServer.regionInfo()
     
-    $('.js-delivery-address span').on('click', function(){
-        addressAlert(1111)        
-        // addressAlert(add)        
-        // var add = {'save':'北京','city':'北京','area':'朝阳','savecode':'1','citycode':'1','areacode':'1'}
-    })
 });
+
+
+var regionServer = {
+    regionInfo: function (){
+        leaderServer.getIpAddress().then(function(data){
+            var params = {
+                provinceName: data.content.address_detail.province,
+                cityName: data.content.address_detail.city
+            }
+            leaderServer.regionInfo(params).then(function(address){
+                var add = {
+                    'save': address.data.provinceName,
+                    'city': address.data.cityName,
+                    'area': address.data.areaName,
+                    'savecode': address.data.provinceName,
+                    'citycode': address.data.cityCode,
+                    'areacode': address.data.areaCode,
+                }
+
+                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(1).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+                
+                /**
+                 * @param {*} regionData 
+                 * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
+                 */
+                var addressCallback = function (regionData) {
+                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(1).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                    $('.js_addShadeTop').hide()
+                }
+
+                $('.js-delivery-address span').on('click', function(){
+                    addressAlert(add, addressCallback)        
+                })
+            })
+        })
+    }
+}

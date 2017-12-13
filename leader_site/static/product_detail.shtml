@@ -1282,6 +1282,7 @@
         </div>
     </div>
 
+    <!-- 配送地址 -->
     <div class="o_g land-shade  land-shade-top js_addShadeTop">
         <div class="land-box land-box-address js_addContBox">
             <div class="land-cont-title alert-cont-title o_u">
@@ -1296,7 +1297,7 @@
                 <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
                 <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
             </div>
-            <div class="js_landInputBox">
+            <div class="js_addInputBox">
                 <div class="land-cont-normal-input o_g">
                     <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
                 </div>
@@ -1309,12 +1310,30 @@
             </div>
         </div>
     </div>
-
+    <!-- 配送地址 end -->
+    
     <!--#include virtual="public/foot.shtml"-->
+    
+    <script>
+        var chnlid_owner ='61';
+        var templet_price='';//价格字符串
+        var point='';//功能亮点
+        var appendix='';//附件信息
+        var templet_channelName="http://test.tongshuai.com/cooling/";//栏目链接
+        var templet_businessId="AA9XR000R";
+        //var templet_businessId="BCD-557WDGSU1"
+        var templet_detailUrl='http://test.tongshuai.com/cooling/20171211_777.shtml';//页面路径
+        var templet_commentUrl='';//口碑页面
+        var templet_parameterUrl='';//参数页面
+        var templet_dsly='http://test.tongshuai.com/cooling/W020171211405583995993.png';//电商拉页
+    </script>
+
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
     <script type="text/javascript" src="images/product_detail.js"></script>
+    <script type="text/javascript" src="images/templet_product_detail.js"></script>
+    
 </body>
 
 </html>

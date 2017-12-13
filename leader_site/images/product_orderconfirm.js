@@ -175,7 +175,7 @@ $(function () {
         var skuData = {
             // skuCodes: skuCodesArray.join(','),
             skuCodes: skuCodes.join(','),
-            regionCode: 2450
+            regionCode: orderList[0].regionCode
         }
         skuServer.getSkuByCodes(skuData, orderList)
     }

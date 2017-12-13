@@ -87,7 +87,7 @@ $(function() {
                         var skuData = {
                             // skuCodes: skuCodesArray.join(','),
                             skuCodes: skuCodesArray.join(','),
-                            regionCode: 2450
+                            regionCode: $('.js_ipAddress').attr('areaCode')
                         } 
                         //根据inskucode集合查询SKU相关信息
                         skuServer.getSkuByCodes(skuData,skuCodesObj);
@@ -149,12 +149,47 @@ $(function() {
 
     $(".js_checkbox").jq_qvote();
 
+    /**
+     * 购物车商品选择
+     * 单选、多选
+     */
     $(".js_checkbox").live('change',function(){
-        if ($(this).prop('checked')) {
-            $(this).parents('.trolley-product').addClass('trolley-product-selected')
+        if ($(this).hasClass('js-checked-all')) {
+            if ($(this).prop('checked')) {
+                $(".js_checkbox").each(function(){
+                    $(this)[0].checked = true
+                    $(this).prev().removeClass('c_ipt_cr_cus').addClass('c_ipt_cr_cs')
+                })
+                $('.trolley-product').addClass('trolley-product-selected')
+            } else {
+                $(".js_checkbox").each(function(){
+                    $(this)[0].checked = false
+                    $(this).prev().addClass('c_ipt_cr_cus').removeClass('c_ipt_cr_cs')
+                })
+                $('.trolley-product').removeClass('trolley-product-selected')
+            }
         } else {
-            $(this).parents('.trolley-product').removeClass('trolley-product-selected')
+            if ($(this).prop('checked')) {
+                $(this).parents('.trolley-product').addClass('trolley-product-selected')
+                if ($('.trolley-product').length == $('.trolley-product-selected').length) {
+                    $('.js-checked-all').each(function(){
+                        $(this)[0].checked = true
+                        $(this).prev().removeClass('c_ipt_cr_cus').addClass('c_ipt_cr_cs')
+                    })
+                }
+            } else {
+                $(this).parents('.trolley-product').removeClass('trolley-product-selected')
+                if ($('.trolley-product').length > $('.trolley-product-selected').length) {
+                    $('.js-checked-all').each(function(){
+                        $(this)[0].checked = false
+                        $(this).prev().addClass('c_ipt_cr_cus').removeClass('c_ipt_cr_cs')
+                })
+                }
+            }
         }
+
+
+        
 
         $('.js-selectd-num').text($('.trolley-product-selected').length)
         var totalAmount = 0;
@@ -198,11 +233,15 @@ $(function() {
                     var inskucode = $(ele).attr('data-inskucode'),
                         quantity = parseInt($(ele).find('input').val())-1;
 
-                    var trolleyData = {
+                    // 更新价格
+                    var price = parseFloat($(ele).parent().prev().find('.js_trolleyPrice').html().substring(1,10))
+                    $(ele).parent().next().find('.trolley-price-total').html('¥' + price * quantity)
+
+                    var trolleyData = [{
                         inSkuCode: inskucode,
                         quantity: quantity,
-                        regionCode: 2450
-                    }
+                        regionCode: $('.js_ipAddress').attr('areaCode')
+                    }]
                     return trolleyServer.save(trolleyData);
                 }
             },
@@ -213,15 +252,14 @@ $(function() {
                     var inskucode = $(ele).attr('data-inskucode'),
                         quantity = parseInt($(ele).find('input').val())+1;
 
-                    // var trolleyData = {
-                    //     inSkuCode: inskucode,
-                    //     quantity: quantity,
-                    //     regionCode: 2450
-                    // }
+                    // 更新价格
+                    var price = parseFloat($(ele).parent().prev().find('.js_trolleyPrice').html().substring(1,10))
+                    $(ele).parent().next().find('.trolley-price-total').html('¥' + price * quantity)
+
                     var trolleyData = [{
                         inSkuCode: inskucode,
                         quantity: quantity,
-                        regionCode: 2450
+                        regionCode: $('.js_ipAddress').attr('areaCode')
                     }];
                     return trolleyServer.save(trolleyData);
                 }
@@ -283,65 +321,58 @@ $(function() {
         // jumpToLoginPage();
     }
 
-    //根据ip获取地址信息
-    var ipAddress = leaderServer.getIpAddress() || '服务取值-山东省青岛市崂山区';
-    $('.js_ipAddress').html(ipAddress);
+    /**
+     * 根据ip获取地址信息
+     */
+    var ipAddress = leaderServer.getIpAddress().then(function(data){
+        var params = {
+            provinceName: data.content.address_detail.province,
+            cityName: data.content.address_detail.city
+        }
+        leaderServer.regionInfo(params).then(function(address){
+            var add = {
+                'save': address.data.provinceName,
+                'city': address.data.cityName,
+                'area': address.data.areaName,
+                'savecode': address.data.provinceName,
+                'citycode': address.data.cityCode,
+                'areacode': address.data.areaCode,
+            }
 
-    //获取用户信息
+            $('.js_ipAddress').attr('areaCode', address.data.areaCode).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+
+            /**
+             * @param {*} regionData 
+             * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
+             */
+            var addressCallback = function (regionData) {
+                $('.js_ipAddress').attr('areaCode', regionData.areaCode).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                $('.js_addShadeTop').hide()
+            }
+
+            $('.js_ipAddress').on('click',function(){
+                addressAlert(add, addressCallback)                        
+            })
+
+            skuInit()
+        })
+            
+    })
+
+    /**
+     * 获取用户信息
+     */
     userServer.getUserInfo(); 
 
-    // 查询当前 cookie 中是否有本地购物车商品
 
-    if ($.cookie('goodsInCart') && istrsidssdssotoken()) {
-        var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
-        $.ajax({
-            type: "post",
-            url: siteConfig.userUrl+"/buy/order/cartGoods/save",
-            csrf: true,
-            applicationType: true,
-            data: JSON.stringify(goodsInCartArr),
-            success_cb: function(data){
-                if (data.isSuccess) {
-                    // 添加成功清除历史 cookie 
-                    $.cookie('goodsInCart', null)
-                    //获取购物车列表
-                    trolleyServer.list();
-                }
-            },
-            error_cb: function(jqXHR, textStatus, errorThrown) {
-                if (jqXHR.responseText) {
-                    console.log(JSON.parse(jqXHR.responseText).resultMsg)
-                    //获取购物车列表
-                    trolleyServer.list();
-                }
-            }
-        });
-    } else if (istrsidssdssotoken()) {
-        //获取购物车列表
-        trolleyServer.list();
-    } else if ($.cookie('goodsInCart')) {
-        var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
-        //inSkuCode集合
-        var skuCodesArray = new Array();
-        //购物车商品数量(quantity)和购物车商品id(cartGoodId)
-        var skuCodesObj = new Object();
-        jQuery.each(goodsInCartArr,function(i,n){
-            skuCodesArray.push(n.inSkuCode);
-        });
-
-        var skuData = {
-            skuCodes: skuCodesArray.join(','),
-            regionCode: 2450
-        } 
-        //根据inskucode集合查询SKU相关信息
-        skuServer.getSkuByCodes(skuData,skuCodesObj);
-    }
-
-    // 去结算
+    /**
+     * 去结算
+     */
     $('.js-pay').on('click', function () {
         var orderArr = []
         $('.trolley-product-selected').each(function(){
             orderArr.push({
+                "regionCode": $('.js_ipAddress').attr('areaCode'),
                 "cartId": $(this).parent('.trolley-prolist').attr('cartId'),
                 "buyNum": $(this).find('.js_trolleyNumber').find('input').val(),
                 "inSkuCode": $(this).parent('.trolley-prolist').attr('inSkuCode')
@@ -357,4 +388,56 @@ $(function() {
         }
     })
    
+
+    /**
+     * 商品信息初始化
+     */
+    function skuInit () {
+        // 查询当前 cookie 中是否有本地购物车商品
+        if ($.cookie('goodsInCart') && istrsidssdssotoken()) {
+            var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
+            $.ajax({
+                type: "post",
+                url: siteConfig.userUrl+"/buy/order/cartGoods/save",
+                csrf: true,
+                applicationType: true,
+                data: JSON.stringify(goodsInCartArr),
+                success_cb: function(data){
+                    if (data.isSuccess) {
+                        // 添加成功清除历史 cookie 
+                        $.cookie('goodsInCart', null)
+                        //获取购物车列表
+                        trolleyServer.list();
+                    }
+                },
+                error_cb: function(jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.responseText) {
+                        console.log(JSON.parse(jqXHR.responseText).resultMsg)
+                        //获取购物车列表
+                        trolleyServer.list();
+                    }
+                }
+            });
+        } else if (istrsidssdssotoken()) {
+            //获取购物车列表
+            trolleyServer.list();
+        } else if ($.cookie('goodsInCart')) {
+            var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
+            //inSkuCode集合
+            var skuCodesArray = new Array();
+            //购物车商品数量(quantity)和购物车商品id(cartGoodId)
+            var skuCodesObj = new Object();
+            jQuery.each(goodsInCartArr,function(i,n){
+                skuCodesArray.push(n.inSkuCode);
+            });
+
+            var skuData = {
+                skuCodes: skuCodesArray.join(','),
+                regionCode: $('.js_ipAddress').attr('areaCode')
+            } 
+            //根据inskucode集合查询SKU相关信息
+            skuServer.getSkuByCodes(skuData,skuCodesObj);
+        }
+    }
+
 });
