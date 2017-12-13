@@ -578,7 +578,7 @@
 		<div class="o_g product-recommend">
 			<div class="o_u o_df_1-12"></div>
 			<div class="o_u o_df_10-12">
-				<div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 product-search-downleft-box ">
+				<div class="o_u o_df_2-2 o_sm_2-2 o_xs_2-2 product-search-downleft-box ">
 					<div class="o_u product-search-downleft">
 						<div class="recommend-box">
 							<div class="recommend-title">
@@ -587,7 +587,7 @@
 							</div>
 							<div class="recommend-pro">
 								<div class="o_g">
-									<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
+									<a class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_1-4 o_xs_1-2">
 										<img src="images/compare_goods.PNG">
 										<div class="recommend-pro-info">
 											<span class="pro-info-title">统帅就给个</span>
@@ -596,7 +596,25 @@
 											<span class="pro-info-price">￥633</span>
 										</div>
 									</a>
-									<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">
+									<a class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_1-4 o_xs_1-2">
+										<img src="images/compare_goods.PNG">
+										<div class="recommend-pro-info">
+											<span class="pro-info-title">统帅就给个</span>
+											<span class="pro-info-title">洗衣机</span>
+											<span class="pro-info-type">JGEJJGEJ-988</span>
+											<span class="pro-info-price">￥633</span>
+										</div>
+									</a>
+									<a class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_1-4 o_xs_1-2">
+										<img src="images/compare_goods.PNG">
+										<div class="recommend-pro-info">
+											<span class="pro-info-title">统帅就给个</span>
+											<span class="pro-info-title">洗衣机</span>
+											<span class="pro-info-type">JGEJJGEJ-988</span>
+											<span class="pro-info-price">￥633</span>
+										</div>
+									</a>
+									<a class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_1-4 o_xs_1-2">
 										<img src="images/compare_goods.PNG">
 										<div class="recommend-pro-info">
 											<span class="pro-info-title">统帅就给个</span>
@@ -610,28 +628,28 @@
 						</div>
 					</div>
 				</div>
-				<div class="o_u o_df_6-12 o_sm_2-2 o_xs_2-2 product-search-downright-box" >
-					<div class="o_u product-search-downright" >
-						<div class="recommend-box">
-							<div class="recommend-title">
-								热门活动
-								<i class="iconfont icon-refresh-solid recommend-reload"></i>
-							</div>
-							<div class="recommend-activity">
-								<div class="o_g">
-									<a class="o_u o_df_2-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-										<img src="images/product_search_huodong.jpg" width="200px" height="100px">
-									</a>
-									<div class="o_u o_df_3-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 recommend-activity-text">
-										<h5>狂欢返场，倾情钜惠</h5>
-										<p>统帅商城注册赢惊喜，注册会员享超值惊爆价</p>
-										<span>活动时间：2017.09.06-2017.10.20</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<!--<div class="o_u o_df_6-12 o_sm_2-2 o_xs_2-2 product-search-downright-box" >-->
+					<!--<div class="o_u product-search-downright" >-->
+						<!--<div class="recommend-box">-->
+							<!--<div class="recommend-title">-->
+								<!--热门活动-->
+								<!--<i class="iconfont icon-refresh-solid recommend-reload"></i>-->
+							<!--</div>-->
+							<!--<div class="recommend-activity">-->
+								<!--<div class="o_g">-->
+									<!--<a class="o_u o_df_2-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">-->
+										<!--<img src="images/product_search_huodong.jpg" width="200px" height="100px">-->
+									<!--</a>-->
+									<!--<div class="o_u o_df_3-5 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 recommend-activity-text">-->
+										<!--<h5>狂欢返场，倾情钜惠</h5>-->
+										<!--<p>统帅商城注册赢惊喜，注册会员享超值惊爆价</p>-->
+										<!--<span>活动时间：2017.09.06-2017.10.20</span>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
 
 
 			</div>

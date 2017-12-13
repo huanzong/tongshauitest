@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>产品详情</title>
+    <title>【统帅<trs_viewdata field="modelno"/>】<trs_viewdata field="pname"/>_￥<trs_viewdata field="price"/> - 统帅官网</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
         <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -117,8 +117,8 @@
 
                         </div>
                         <div class="o_u detail-nav-info">
-                            <div class="nav-info-box">
-                                <a class="l-btn-sm l-btn-red nav-btn" class="" href="javascript:;">立即购买</a>
+                            <div class="nav-info-box js_navLink">
+                                <a class="l-btn-sm l-btn-red nav-btn js_buyNow" data-nav="js_top" href="javascript:;">立即购买</a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                                 <div class="particulars-delivery">
                                     <div class="delivery-address">
                                         <span class="address-tit">配送至：</span>
-                                        <span>浙江 杭州市 西湖区</span>
+                                        <span>浙江 杭州市 西湖区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
                                     <div class="delivery-time">
                                         <span>有货</span>
@@ -208,7 +208,7 @@
                                     <!--<trs_viewdata field="tmall"/>-->
                                     <trs_viewdata field="tmall">
                                     <TRS_CONDITION CONDITION="@tmall" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox" href="<trs_viewdata field='tmall'/>">
+                                    <a class="particulars-buybox" href="<trs_viewdata field='tmall'/>" target="_blank">
                                         <div class="buy-img tianmao"></div>
                                         <div class="buy-tit">天猫旗舰店</div>
                                     </a>
@@ -217,7 +217,7 @@
                                     <!--<trs_viewdata field="jd"/>-->
                                     <trs_viewdata field="jd">
                                     <TRS_CONDITION CONDITION="@jd" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox" href="<trs_viewdata field='jd'/>">
+                                    <a class="particulars-buybox" href="<trs_viewdata field='jd'/>" target="_blank">
                                         <div class="buy-img jingdong"></div>
                                         <div class="buy-tit">京东旗舰店</div>
                                     </a>
@@ -226,7 +226,7 @@
                                     <!--<trs_viewdata field="suning"/>-->
                                     <trs_viewdata field="suning">
                                     <TRS_CONDITION CONDITION="@suning" OPERATOR="blank" NOT="true">
-                                    <a class="particulars-buybox"  href="<trs_viewdata field='suning'/>">
+                                    <a class="particulars-buybox"  href="<trs_viewdata field='suning'/>" target="_blank">
                                         <div class="buy-img suning"></div>
                                         <div class="buy-tit">苏宁旗舰店</div>
                                     </a>
@@ -410,7 +410,7 @@
             <div class="detail-fontpoint-index">
                 <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-fontpoint-top">
                     <div class="o_u o_df_1-12"></div>
-                    <div class="o_u o_df_10-12">
+                    <div class="o_u o_df_10-12 o_df-center">
                         <div class="o_u o_df_2-2 detail-fontpoint">
                             <div class="o_u o_df_1-12"></div>
                             <div class="o_u o_df_10-12 o_df-center">
@@ -435,7 +435,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nhdj"/></div>
                                         <div class="fontpoint-small">能耗等级</div>
                                     </div>
@@ -462,7 +462,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -489,7 +489,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -516,7 +516,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -537,7 +537,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="fdx"/></div>
                                         <div class="fontpoint-small">防冻性</div>
                                     </div>
@@ -564,7 +564,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
@@ -585,7 +585,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="yyjpfl"/></div>
                                         <div class="fontpoint-small">排风量</div>
                                     </div>
@@ -606,7 +606,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="edrfh"/></div>
                                         <div class="fontpoint-small">额定热负荷</div>
                                     </div>
@@ -633,7 +633,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="mbys"/></div>
                                         <div class="fontpoint-small">面板颜色</div>
                                     </div>
@@ -654,7 +654,7 @@
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
-                                    <div class="fontpoint-box">
+                                    <div class="fontpoint-box border-none">
                                         <div class="fontpoint-bold"><trs_viewdata field="fbl"/></div>
                                         <div class="fontpoint-small">分辨率</div>
                                     </div>
@@ -933,6 +933,7 @@
                         
                     </div>
                 </div>
+                <div class="o_clear"></div>
             </div>
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
@@ -1466,7 +1467,7 @@
         var templet_detailUrl='<trs_viewdata field="_recurl" UrlIsAbs="true"/>';//页面路径
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
-        var templet_dsly='<TRS_VIEWDATAAPPENDIXS  FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
+        var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
