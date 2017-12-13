@@ -11,43 +11,9 @@
         <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
         <!-- <link rel="stylesheet" type="text/css" href="images/index.css"> -->
         <link rel="stylesheet" type="text/css" href="images/member-center.css">
-    <style>
-        .membercenter-banner{
-            background: url("images/member-center-banner.jpg") no-repeat top center;
-        }
-        @media (min-width: 992px) and (max-width: 1199px) {
-            /* lg*/
-            .membercenter-banner{
-                background: url("images/member-center-bannermin.jpg") no-repeat top center;
-                background-size:100% 100% ;
-            }
-            @media (min-width: 701px) and (max-width: 991px) {
-                /* md*/
-                .membercenter-banner{
-                    background: url("images/member-center-bannermin.jpg") no-repeat top center;
-                    background-size:auto 100% ;
-                }
-            }
-            @media (min-width: 576px) and (max-width: 700px) {
-                /* sm*/
-                .membercenter-banner{
-                height: 480px;
-                background: url("images/member-center-bannermin.jpg") no-repeat top right;
-                background-size:100% auto ;
-                }
-            }
-            @media (max-width: 575px) {
-                /* xs*/
-                .membercenter-banner{
-                height: 480px;
-                background: url("images/member-center-bannermin.jpg") no-repeat top right;
-                }
-            }
-        }
-    </style>
 </head>
 
-<body class=" ">
+<body>
     <div class="o_main">
             <!-- 首屏动画 -->
           <!-- 导航 -->
@@ -77,7 +43,8 @@
             <!-- 首屏动画 End -->
         <div class="o_g">
             <div class="membercenter-top">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner">
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner js_memberCenterBanner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
+                    <!--member-center-bannermin.jpg-->
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>加入统帅，<span>慢享悠悠生活</span></h2>
@@ -118,9 +85,9 @@
             </div>
             <div class="member-center js_memberCenterBox o_g">
                 <div class="o_u o_df_4-12 member-center-left"></div>
-                <div class="o_u o_df_2-12 member-center-border"></div>
-                <div class="o_u o_df_2-12 member-center-border"></div>
-                <div class="o_u o_df_2-12 member-center-border">
+                <div class="o_u o_df_2-12 "></div>
+                <div class="o_u o_df_2-12 "></div>
+                <div class="o_u o_df_2-12 ">
                     <div class="member-center-border-red"></div>
                 </div>
                 <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
@@ -138,7 +105,7 @@
                                     <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
                                     <div class="member-conter-text-down">
                                         <div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>
-                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>
                                         <div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>
                                     </div>
                                 </div>
@@ -183,7 +150,7 @@
                                     <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
                                     <div class="member-conter-text-down">
                                         <div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>
-                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>
                                         <div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>
                                     </div>
                                 </div>
@@ -198,34 +165,35 @@
                     <ul class="o_u o_df_10-12">
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-no-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u o_md_12-12 o_sm_12-12 o_xs_12-12">
                                 <h5>粉丝</h5>
                                 <p>注册网站会员</p>
                             </div>
                         </li>
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-ordinary-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u  o_md_12-12  o_sm_12-12 o_xs_12-12">
                                 <h5>普通会员</h5>
                                 <p>至少注册一款产品</p>
                             </div>
                         </li>
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-silvery-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u  o_md_12-12  o_sm_12-12 o_xs_12-12">
                                 <h5>银卡会员</h5>
                                 <p>累计注册产品金额达9000元</p>
                             </div>
                         </li>
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-golden-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u  o_md_12-12  o_sm_12-12 o_xs_12-12">
                                 <h5>金卡会员</h5>
                                 <p>累计注册产品金额达16000元</p>
                             </div>
                         </li>
                     </ul>
                 </div>
+            </div>
             </div>
             <!--#include virtual="public/footer.shtml"-->
         </div>
@@ -235,6 +203,16 @@
     $(function(){
    
         var windowWidth = $(window).width();
+        if(windowWidth>1199){
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放大图
+            //images/member-center-banner.jpg
+        }else{
+
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放小图
+            //images/member-center-banner.jpg
+        }
 
         setTimeout(function(){
                 var leftBoxHeight = $('.js_centerBoxLeft').height();
