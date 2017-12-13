@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>【统帅<trs_viewdata field="modelno"/>】<trs_viewdata field="pname"/>_<trs_viewdata field="price"/> - 统帅官网</title>
+    <title>【统帅<trs_viewdata field="modelno"/>】<trs_viewdata field="pname"/>_￥<trs_viewdata field="price"/> - 统帅官网</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
         <meta name="format-detection" content="telephone=no, email=no" />
         <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
