@@ -430,7 +430,6 @@ function addressAlert(add){
             login:true,
             success_cb:function(data){
                 var contdata = data.data;
-                console.log(123,contdata);
                 if(data.isSuccess){
                     for(var i = 0;i<contdata.length;i++){
                         addressSave+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'

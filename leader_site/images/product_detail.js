@@ -815,4 +815,11 @@ $(function() {
         }
     
     })
+
+    
+    $('.js-delivery-address span').on('click', function(){
+        addressAlert(1111)        
+        // addressAlert(add)        
+        // var add = {'save':'北京','city':'北京','area':'朝阳','savecode':'1','citycode':'1','areacode':'1'}
+    })
 });
