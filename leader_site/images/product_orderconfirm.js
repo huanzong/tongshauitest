@@ -75,7 +75,22 @@ $(function () {
         userServer.invoiceSave(invoiceHead)
     })
 
-    
+    $('.js_orderconInvoiceSet .js_radio').on('change', function (){
+        $('.js-invoice-head').val('')
+        $('.js-ein input').val('')
+
+        if ($("input[name='invoicetop']:checked").val() == '公司') {
+            $('.js-ein').show()
+            var comInvoice = function (invoiceInfo) {
+                console.log(invoiceInfo)
+                $('.js-invoice-code').val(invoiceInfo.invoiceCode)
+                $('.js-invoice-head').val(invoiceInfo.invoiceHead)                
+            }
+            userServer.queryUserInvoiceHead(2, comInvoice)
+        } else {
+            $('.js-ein').hide()
+        }
+    })
 
     var inputArr = [$('.js_order_username'), $('.js_order_userphone'), $('.js_order_usertell')];
 
@@ -102,6 +117,56 @@ $(function () {
 
     });
 
+    //    修改地址
+    $('.js_addressListSetBtn').live('click', function () {
+        var objparents = $(this).parents('li');
+        var userinfo = $(this).siblings('.js_orderAddressCont');
+        var userinfoName = userinfo.children('.product-address-list-name').html();
+        var userinfoPhone = userinfo.children('.product-address-list-phone').html();
+        var userinfoAddress = userinfo.children('.product-address-list-address').attr('regionDetail');
+
+        $('#regionId').val($(this).attr('regionId')) 
+        buildProvinces().then(function(){
+            $('#js_orderConfirmSave').val(userinfo.children('.product-address-list-address').attr('province')).parent().find('.name').text(userinfo.children('.product-address-list-address').attr('province'))
+            buildCity().then(function(){
+                $('#js_orderConfirmCity').val(userinfo.children('.product-address-list-address').attr('city')).parent().find('.name').text(userinfo.children('.product-address-list-address').attr('city'))
+                buildArea().then(function(){
+                    $('#js_orderConfirmArea').val(userinfo.children('.product-address-list-address').attr('area')).parent().find('.name').text(userinfo.children('.product-address-list-address').attr('area'))
+                    buildRoad().then(function(){
+                        $('#js_orderConfirmRode').val(userinfo.children('.product-address-list-address').attr('streetName')).parent().find('.name').text(userinfo.children('.product-address-list-address').attr('streetName'))                        
+                    })    
+                })
+            })
+        })
+  
+        $("#js_orderConfirmSave").change(function () {
+            buildCity();
+        })
+
+        $("#js_orderConfirmCity").change(function () {
+            buildArea();
+        })
+
+        $("#js_orderConfirmArea").change(function () {
+            buildRoad();
+        })
+
+
+        $('.Validform_wrong').removeClass('Validform_wrong').addClass('Validform_right');
+        $('.Validform_error').removeClass('Validform_error');
+
+        $('.js_order_username').val(userinfoName);
+        $('.js_order_userphone').val(userinfoPhone);
+        $('.js_order_address').val(userinfoAddress);
+
+        $('.js_addressListCont').show();
+        // objparents.children('.js_addressListCont').hide();
+        objparents.append($('.js_orderUserInforBox'));
+        $('.js_orderconBox').show();
+        // resetForm();
+        $('.Validform_checktip').html('');
+
+    });
 
     var userinfo = $(".js_orderUserInforBox").Validform({
         tiptype: 3,
@@ -112,34 +177,16 @@ $(function () {
         //btnReset:'.js_memberAddressBtn',
         //btnReset:'.js_memberAddressBtn',
         callback: function (from) {
-            saveUserAddress()
+            if ($('#regionId').val()) {
+                updateUserAddress()
+            } else {
+                saveUserAddress()
+            }
             return false;
         }
     });
     userinfo.ignore('#phonequhao,#phone,#phonefenjihao');
 
-    //    修改地址
-    $('.js_addressListSetBtn').click(function () {
-        var objparents = $(this).parents('li');
-        var userinfo = $(this).siblings('.js_orderAddressCont');
-        var userinfoName = userinfo.children('.product-address-list-name').html();
-        var userinfoPhone = userinfo.children('.product-address-list-phone').html();
-        var userinfoAddress = userinfo.children('.product-address-list-address').html();
-        $('.Validform_wrong').removeClass('Validform_wrong').addClass('Validform_right');
-        $('.Validform_error').removeClass('Validform_error');
-
-        $('.js_order_username').val(userinfoName);
-        $('.js_order_userphone').val(userinfoPhone);
-        $('.js_order_address').val(userinfoAddress);
-
-        $('.js_addressListCont').show();
-        objparents.children('.js_addressListCont').hide();
-        objparents.append($('.js_orderUserInforBox'));
-        $('.js_orderconBox').show();
-        userinfo.resetForm();
-        $('.Validform_checktip').html('');
-
-    });
 
     //初始化方法
     function resetInput(obj, input) {
@@ -171,7 +218,6 @@ $(function () {
             skuCodes.push(orderList[i].inSkuCode)
         }
         cartIds = cartIds.join(',')
-        console.log(orderList)
         var skuData = {
             // skuCodes: skuCodesArray.join(','),
             skuCodes: skuCodes.join(','),
@@ -181,7 +227,6 @@ $(function () {
     }
 
 
-    console.log(cartIds)
     /**
      * 提交订单
      */
@@ -207,9 +252,6 @@ $(function () {
     /**
      * 发票
      */
-
-
-
 
     var infotell = [];
     //固定电话号码错误显示逻辑
@@ -264,7 +306,7 @@ $(function () {
 
     var templet_isUpdate = false;//是否修改标识 true 是修改  false添加
     function buildProvinces() {
-        $.ajax({
+        return $.ajax({
             url: siteConfig.userUrl + "/interaction-service/regionInfo/regionList",
             type: "get",
             dataType: "json",
@@ -297,7 +339,7 @@ $(function () {
     //获取市信息
     function buildCity() {
         var shengCode = $("#js_orderConfirmSave option:selected").attr("shengCode");
-        $.ajax({
+        return $.ajax({
             url: siteConfig.userUrl + "/interaction-service/regionInfo/regionList",
             type: "get",
             dataType: "json",
@@ -335,7 +377,7 @@ $(function () {
     //获取区信息
     function buildArea() {
         var cityCode = $("#js_orderConfirmCity option:selected").attr("cityCode");
-        $.ajax({
+        return $.ajax({
             url: siteConfig.userUrl + "/interaction-service/regionInfo/regionList",
             type: "get",
             dataType: "json",
@@ -370,7 +412,7 @@ $(function () {
     //获取街道信息
     function buildRoad() {
         var areaCode = $("#js_orderConfirmArea option:selected").attr("areaCode");
-        $.ajax({
+        return $.ajax({
             url: siteConfig.userUrl + "/interaction-service/regionInfo/regionList",
             type: "get",
             dataType: "json",
@@ -419,7 +461,7 @@ $(function () {
         var cityVal = $.trim($("#js_orderConfirmCity").val());//市
         var areaVal = $.trim($("#js_orderConfirmArea").val());//区
         var streetVal = $.trim($("#js_orderConfirmRode").val());//街道
-        var addressVal = $.trim($("#js_order_address").val());//地址
+        var addressVal = $.trim($(".js_order_address").val());//地址
         var provinceCodeVal = $.trim($("#js_orderConfirmSave option:selected").attr("shengCode"));
         var cityCodeVal = $.trim($("#js_orderConfirmCity option:selected").attr("cityCode"));
         var areaCodeVal = $.trim($("#js_orderConfirmArea option:selected").attr("areaCode"));
@@ -753,11 +795,12 @@ $(function () {
     }
 
 
+
     //保存修改地址
     function updateUserAddress() {
         var bool = false;
-        var realnameVal = $.trim($("#realName").val());//联系人
-        var mobileVal = $.trim($("#mobile").val());//手机号
+        var realnameVal = $.trim($(".js_order_username").val());//联系人
+        var mobileVal = $.trim($(".js_order_userphone").val());//手机号
         //var phoneVal=$.trim($("#phone").val());//电话号
         //var phonequhaoVal=$.trim($("#phonequhao").val());//区号
         //var phonefenjihaoVal=$.trim($("#phonefenjihao").val());//分机号
@@ -765,15 +808,15 @@ $(function () {
         var phoneVal = infotell[1];//电话号
         var phonefenjihaoVal = infotell[2];//分机号
         var telPhoneVal = phonequhaoVal + ";" + phoneVal + ";" + phonefenjihaoVal;
-        var provinceVal = $.trim($("#js_save").val());//省
-        var cityVal = $.trim($("#js_city").val());//市
-        var areaVal = $.trim($("#js_area").val());//区
-        var streetVal = $.trim($("#js_road").val());//街道
-        var addressVal = $.trim($("#address").val());//地址
+        var provinceVal = $.trim($("#js_orderConfirmSave").val());//省
+        var cityVal = $.trim($("#js_orderConfirmCity").val());//市
+        var areaVal = $.trim($("#js_orderConfirmArea").val());//区
+        var streetVal = $.trim($("#js_orderConfirmRode").val());//街道
+        var addressVal = $.trim($(".js_order_address").val());//地址
         /*var idVal=$.trim($(".js_addressBox").attr("addid"));//id*/
-        var provinceCodeVal = $.trim($("#js_save option:selected").attr("shengCode"));
-        var cityCodeVal = $.trim($("#js_city option:selected").attr("cityCode"));
-        var areaCodeVal = $.trim($("#js_area option:selected").attr("areaCode"));
+        var provinceCodeVal = $.trim($("#js_orderConfirmSave option:selected").attr("shengCode"));
+        var cityCodeVal = $.trim($("#js_orderConfirmCity option:selected").attr("cityCode"));
+        var areaCodeVal = $.trim($("#js_orderConfirmArea option:selected").attr("areaCode"));
         if (phonequhaoVal && phoneVal) {
             var telPhoneVal = phonequhaoVal + ";" + phoneVal + ";" + phonefenjihaoVal;
         } else {
@@ -795,7 +838,7 @@ $(function () {
             "regionId": areaCodeVal,
             "regionDetail": addressVal,
             "telPhone": telPhoneVal,
-            "id": saveId
+            "id": $('#regionId').val()
         }
         templet_isSubmiting = true;
         $.ajax({
@@ -807,7 +850,8 @@ $(function () {
             csrf: true,
             success_cb: function (data) {
                 if (data.isSuccess) {
-                    loadUserInfoList();
+                    // loadUserInfoList();
+                    userServer.list() // 获取地址列表
                     $(".js_form_addAddrManagement").hide();
                     globalShade2("修改地址成功", 1, 2000);
                 } else {//添加地址失败
@@ -942,7 +986,8 @@ var userServer = {
                             provinceName: data.data.entities[i].provinceName || '',
                             cityName: data.data.entities[i].cityName || '',
                             areaName: data.data.entities[i].areaName || '',
-                            streetName: data.data.entities[i].streetName || ''
+                            streetName: data.data.entities[i].streetName || '',
+                            regionDetail: data.data.entities[i].regionDetail || ''
                         }
 
                         addressList += '<li class="">' +
@@ -965,9 +1010,9 @@ var userServer = {
                             '<p class="o_u o_sm_9-12 o_xs_8-12 js_orderAddressCont">' +
                             '<i class="product-address-list-name">' + data.data.entities[i].customerName + '</i>' +
                             '<i class="product-address-list-phone">' + data.data.entities[i].mobilePhone + '</i>' +
-                            '<i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2">' + address.provinceName + ' ' + address.cityName + ' ' + address.areaName + ' ' + address.streetName + '</i>' +
+                            '<i class="product-address-list-address o_u o_sm_2-2 o_xs_2-2" province="' + address.provinceName + '" city="' + address.cityName + '" area="' + address.areaName + '" streetName="' + address.streetName + '" regionDetail="' + address.regionDetail + '">' + address.provinceName + ' ' + address.cityName + ' ' + address.areaName + ' ' + address.streetName + '</i>' +
                             '</p>' +
-                            '<a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn order-address-set-btn">修改</a>' +
+                            '<a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn order-address-set-btn" regionId="' + data.data.entities[i].id + '">修改</a>' +
                             '</div>' +
                             '</li>'
                     }
@@ -1044,7 +1089,7 @@ var userServer = {
         });
     },
     // 查询用户发票抬头
-    queryUserInvoiceHead: function (invoiceType) {
+    queryUserInvoiceHead: function (invoiceType, callback) {
         $.ajax({
             url: siteConfig.domain + "/hshop-user/front/userInvoiceHead/userInvoiceHead",
             type: 'get',
@@ -1052,44 +1097,48 @@ var userServer = {
             data: {invoiceType: invoiceType || 1},
             success_cb: function (data) {
                 if (data.isSuccess) {
-                    // 如果没有发票头信息则使用当前收获地址信息
-                    if (!data.data) {
+                    if (!callback) {
+                        // 如果没有发票头信息则使用当前收获地址信息
+                        if (!data.data) {
 
-                        var invoiceHead = ''
-                        invoiceHead += '<div class="o_u o_sm_2-3 o_xs_2-3 ">' +
-                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票类型：<span>'
-    
-                        invoiceHead += '电子发票（个人）'
-    
-                        invoiceHead += '</span></p>' +
-                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票抬头： <span>' + $('.product-address-list-select .product-address-list-name').text() + '</span></p>' +
-                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票内容： <span>商品明细</span></p>' +
-                        '</div>' +
-                        '<a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>' 
-    
-                        $('.js_orderconInvoiceBox').html(invoiceHead)
-    
-                        $('.js_orderconInvoiceSet').hide();
-                        $('.js_orderconInvoiceBox').show();
-                    } else {
-                        var invoiceHead = ''
-                        invoiceHead += '<div class="o_u o_sm_2-3 o_xs_2-3 ">' +
-                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票类型：<span>'
-
-                        if (data.data.invoiceType == 1) {
+                            var invoiceHead = ''
+                            invoiceHead += '<div class="o_u o_sm_2-3 o_xs_2-3 ">' +
+                            '<p class="o_u o_sm_2-2 o_xs_2-2">发票类型：<span>'
+        
                             invoiceHead += '电子发票（个人）'
+        
+                            invoiceHead += '</span></p>' +
+                            '<p class="o_u o_sm_2-2 o_xs_2-2">发票抬头： <span>' + $('.product-address-list-select .product-address-list-name').text() + '</span></p>' +
+                            '<p class="o_u o_sm_2-2 o_xs_2-2">发票内容： <span>商品明细</span></p>' +
+                            '</div>' +
+                            '<a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>' 
+        
+                            $('.js_orderconInvoiceBox').html(invoiceHead)
+        
+                            $('.js_orderconInvoiceSet').hide();
+                            $('.js_orderconInvoiceBox').show();
                         } else {
-                            invoiceHead += '电子发票（公司）'
+                            var invoiceHead = ''
+                            invoiceHead += '<div class="o_u o_sm_2-3 o_xs_2-3 ">' +
+                            '<p class="o_u o_sm_2-2 o_xs_2-2">发票类型：<span>'
+
+                            if (data.data.invoiceType == 1) {
+                                invoiceHead += '电子发票（个人）'
+                            } else {
+                                invoiceHead += '电子发票（公司）'
+                            }
+
+                            invoiceHead += '</span></p>' +
+                            '<p class="o_u o_sm_2-2 o_xs_2-2">发票抬头： <span>' + data.data.invoiceHead + '</span></p>' +
+                            '<p class="o_u o_sm_2-2 o_xs_2-2">发票内容： <span>商品明细</span></p>' +
+                            '</div>' +
+                            '<a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>' 
+
+                            $('.js_orderconInvoiceBox').html(invoiceHead).attr('invoiceId', data.data.id)
                         }
-
-                        invoiceHead += '</span></p>' +
-                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票抬头： <span>' + data.data.invoiceHead + '</span></p>' +
-                        '<p class="o_u o_sm_2-2 o_xs_2-2">发票内容： <span>商品明细</span></p>' +
-                        '</div>' +
-                        '<a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>' 
-
-                        $('.js_orderconInvoiceBox').html(invoiceHead).attr('invoiceId', data.data.id)
-                    }
+                    } else {
+                        callback(data.data)
+                    }                
                 }
             },
             error_cb: function (jqXHR, textStatus, errorThrown) {

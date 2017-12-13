@@ -1,21 +1,18 @@
-$(function() {
-
-    var swiper = {
-    }; //用来存放所有轮播
+$(function () {
 
     /**
      * 服务请求
-     **/   
+     **/
     //sku服务
     var skuServer = {
         //根据inskucode集合查询SKU相关信息
-        getSkuByCodes:function(data,skuCodesObj){
+        getSkuByCodes: function (data, skuCodesObj) {
             $.ajax({
-                url: siteConfig.apiUrl+"/sku/front/sku/getSkuByCodes/",
+                url: siteConfig.apiUrl + "/sku/front/sku/getSkuByCodes/",
                 type: 'get',
                 data: data,
-                success_cb: function(data){
-                    if(data.isSuccess){
+                success_cb: function (data) {
+                    if (data.isSuccess) {
                         console.log(data)
                         console.log(skuCodesObj)
                         //测试数据
@@ -23,9 +20,9 @@ $(function() {
 
                         // 设置模版-填充数据并展示
                         var trolleyData = data.data;
-                        jQuery.each(trolleyData,function(i,n){
-                            var cartGoodId =  skuCodesObj[n.skuShowVO.inSkuCode]['cartGoodId'],
-                                quantity =  skuCodesObj[n.skuShowVO.inSkuCode]['quantity'];
+                        jQuery.each(trolleyData, function (i, n) {
+                            var cartGoodId = skuCodesObj[n.skuShowVO.inSkuCode]['cartGoodId'],
+                                quantity = skuCodesObj[n.skuShowVO.inSkuCode]['quantity'];
                             n.skuShowVO['quantity'] = quantity;
                             n.skuShowVO['cartGoodId'] = cartGoodId;
                         })
@@ -36,10 +33,10 @@ $(function() {
 
                         trolleyDatafun();
                     }
-                        
+
                 },
-                error_cb: function(jqXHR, textStatus, errorThrown) {
-                    if(jqXHR.status==401){
+                error_cb: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status == 401) {
                         console.log('用户未登录');
                     }
                 }
@@ -49,71 +46,71 @@ $(function() {
     //购物车服务
     var trolleyServer = {
         //删除购物车商品
-        delete:function(data){
+        delete: function (data) {
             $.ajax({
-                url: siteConfig.apiUrl+"/order/cartGoods/delete/",
+                url: siteConfig.apiUrl + "/order/cartGoods/delete/",
                 data: data,
                 // applicationType:true,
-                success_cb: function(data){
-                    if(data.isSuccess){
+                success_cb: function (data) {
+                    if (data.isSuccess) {
                         trolleyServer.list();
                     }
                 },
-                error_cb: function(jqXHR, textStatus, errorThrown) {
-                    if(jqXHR.status==401){
+                error_cb: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status == 401) {
                         console.log('用户未登录');
                     }
                 }
             });
         },
         //获取购物车商品列表
-        list:function(){
+        list: function () {
             $.ajax({
-                url: siteConfig.apiUrl+"/order/cartGoods/list/",
-                applicationType:true,
-                success_cb: function(data){
-                    if(data.isSuccess){
+                url: siteConfig.apiUrl + "/order/cartGoods/list/",
+                applicationType: true,
+                success_cb: function (data) {
+                    if (data.isSuccess) {
                         //inSkuCode集合
                         var skuCodesArray = new Array();
                         //购物车商品数量(quantity)和购物车商品id(cartGoodId)
                         var skuCodesObj = new Object();
-                        jQuery.each(data.data,function(i,n){
+                        jQuery.each(data.data, function (i, n) {
                             skuCodesArray.push(n.inSkuCode);
                             skuCodesObj[n.inSkuCode] = new Object();
                             skuCodesObj[n.inSkuCode]['cartGoodId'] = n.cartGoodId;
                             skuCodesObj[n.inSkuCode]['quantity'] = n.quantity;
-                        });                  
+                        });
 
                         var skuData = {
                             // skuCodes: skuCodesArray.join(','),
                             skuCodes: skuCodesArray.join(','),
                             regionCode: $('.js_ipAddress').attr('areaCode')
-                        } 
+                        }
                         //根据inskucode集合查询SKU相关信息
-                        skuServer.getSkuByCodes(skuData,skuCodesObj);
+                        skuServer.getSkuByCodes(skuData, skuCodesObj);
                     }
                 },
-                error_cb: function(jqXHR, textStatus, errorThrown) {
-                    if(jqXHR.status==401){
+                error_cb: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status == 401) {
                         console.log('用户未登录');
                     }
                 }
             });
         },
         //修改购物车商品数量
-        save:function(data){
+        save: function (data) {
             $.ajax({
-                url: siteConfig.apiUrl+"/order/cartGoods/save/",
+                url: siteConfig.apiUrl + "/order/cartGoods/save/",
                 csrf: true,
                 data: JSON.stringify(data),
-                applicationType:true,
-                success_cb: function(data){
+                applicationType: true,
+                success_cb: function (data) {
                     if (data.isSuccess) {
                         return false;
                     }
                     return true;//终止购物车商品数量增减
                 },
-                error_cb: function(jqXHR, textStatus, errorThrown) {
+                error_cb: function (jqXHR, textStatus, errorThrown) {
                     // if(jqXHR.status==401){
                     //     console.log('用户未登录');
                     // }
@@ -124,13 +121,13 @@ $(function() {
     };
     //获取用户信息
     var userServer = {
-       getUserInfo:function(){
+        getUserInfo: function () {
             $.ajax({
                 type: "get",
-                url: siteConfig.userUrl+"/hshop-user/front/user/userInfo",
-                login:true,
-                success_cb:function(data){
-                    if(data.isSuccess){
+                url: siteConfig.userUrl + "/hshop-user/front/user/userInfo",
+                login: true,
+                success_cb: function (data) {
+                    if (data.isSuccess) {
                         $('.js_userName').html(data.data.loginName);
                     }
                 }
@@ -138,7 +135,7 @@ $(function() {
         }
     }
 
-    $(window).resize(function() {
+    $(window).resize(function () {
         init();
     });
 
@@ -147,22 +144,23 @@ $(function() {
         var screenHeight = document.body.offsetHeight;
     }
 
-    $(".js_checkbox").jq_qvote();
+
+    $(".js_checkbox").jq_qvote(); // 初始化多选
 
     /**
      * 购物车商品选择
      * 单选、多选
      */
-    $(".js_checkbox").live('change',function(){
+    $(".js_checkbox").live('change', function () {
         if ($(this).hasClass('js-checked-all')) {
             if ($(this).prop('checked')) {
-                $(".js_checkbox").each(function(){
+                $(".js_checkbox").each(function () {
                     $(this)[0].checked = true
                     $(this).prev().removeClass('c_ipt_cr_cus').addClass('c_ipt_cr_cs')
                 })
                 $('.trolley-product').addClass('trolley-product-selected')
             } else {
-                $(".js_checkbox").each(function(){
+                $(".js_checkbox").each(function () {
                     $(this)[0].checked = false
                     $(this).prev().addClass('c_ipt_cr_cus').removeClass('c_ipt_cr_cs')
                 })
@@ -172,7 +170,7 @@ $(function() {
             if ($(this).prop('checked')) {
                 $(this).parents('.trolley-product').addClass('trolley-product-selected')
                 if ($('.trolley-product').length == $('.trolley-product-selected').length) {
-                    $('.js-checked-all').each(function(){
+                    $('.js-checked-all').each(function () {
                         $(this)[0].checked = true
                         $(this).prev().removeClass('c_ipt_cr_cus').addClass('c_ipt_cr_cs')
                     })
@@ -180,22 +178,19 @@ $(function() {
             } else {
                 $(this).parents('.trolley-product').removeClass('trolley-product-selected')
                 if ($('.trolley-product').length > $('.trolley-product-selected').length) {
-                    $('.js-checked-all').each(function(){
+                    $('.js-checked-all').each(function () {
                         $(this)[0].checked = false
                         $(this).prev().addClass('c_ipt_cr_cus').removeClass('c_ipt_cr_cs')
-                })
+                    })
                 }
             }
         }
 
-
-        
-
         $('.js-selectd-num').text($('.trolley-product-selected').length)
         var totalAmount = 0;
-        
-        $('.trolley-product-selected').each(function(){
-            totalAmount += parseFloat($(this).find('.js_trolleyPrice').text().substring(1,10)) * parseInt($('.js_trolleyNumber input').val())
+
+        $('.trolley-product-selected').each(function () {
+            totalAmount += parseFloat($(this).find('.js_trolleyPrice').text().substring(1, 10)) * parseInt($('.js_trolleyNumber input').val())
         })
         $('.js-total-amount').html('<span>合计：</span> ￥' + totalAmount)
     })
@@ -204,16 +199,16 @@ $(function() {
      *   服务对接
      */
 
-     //区分静态页面，之后去掉
-    if(window.location.host.indexOf("123")>0 || window.location.href.indexOf("product_trolley.shtml")>0){
+    //区分静态页面，之后去掉
+    if (window.location.host.indexOf("123") > 0 || window.location.href.indexOf("product_trolley.shtml") > 0) {
         trolleyDatafun();
         return false;
     }
 
-    function trolleyDatafun(){
+    function trolleyDatafun() {
         //避免checkbox重复初始化
-        $(".js_checkbox").each(function(i,n){
-            $(this).siblings('.c_ipt_cr ').size()<1&&$(this).jq_qvote();
+        $(".js_checkbox").each(function (i, n) {
+            $(this).siblings('.c_ipt_cr ').size() < 1 && $(this).jq_qvote();
         });
 
         /**
@@ -226,15 +221,15 @@ $(function() {
             // input:'input',
             // preNum:1,
 
-            beforeMinusRule:function(num,ele){
-                if(num<1){
+            beforeMinusRule: function (num, ele) {
+                if (num < 1) {
                     return true;//终止操作,即终止+1
-                }else{
+                } else {
                     var inskucode = $(ele).attr('data-inskucode'),
-                        quantity = parseInt($(ele).find('input').val())-1;
+                        quantity = parseInt($(ele).find('input').val()) - 1;
 
                     // 更新价格
-                    var price = parseFloat($(ele).parent().prev().find('.js_trolleyPrice').html().substring(1,10))
+                    var price = parseFloat($(ele).parent().prev().find('.js_trolleyPrice').html().substring(1, 10))
                     $(ele).parent().next().find('.trolley-price-total').html('¥' + price * quantity)
 
                     var trolleyData = [{
@@ -245,15 +240,15 @@ $(function() {
                     return trolleyServer.save(trolleyData);
                 }
             },
-            beforePlusRule:function(num,ele){
-                if(num<1){
+            beforePlusRule: function (num, ele) {
+                if (num < 1) {
                     return true;//终止操作
-                }else{
+                } else {
                     var inskucode = $(ele).attr('data-inskucode'),
-                        quantity = parseInt($(ele).find('input').val())+1;
+                        quantity = parseInt($(ele).find('input').val()) + 1;
 
                     // 更新价格
-                    var price = parseFloat($(ele).parent().prev().find('.js_trolleyPrice').html().substring(1,10))
+                    var price = parseFloat($(ele).parent().prev().find('.js_trolleyPrice').html().substring(1, 10))
                     $(ele).parent().next().find('.trolley-price-total').html('¥' + price * quantity)
 
                     var trolleyData = [{
@@ -264,59 +259,58 @@ $(function() {
                     return trolleyServer.save(trolleyData);
                 }
             }
-
         });
-        $('.js_edit').on('click',function(){
+
+        $('.js_edit').on('click', function () {
             // var parent = $(this).parent().parent();
             var parent = $(this).parentsUntil('.trolley-prolist');
-            if($(this).attr('data-oppo')=='edit'){
+            if ($(this).attr('data-oppo') == 'edit') {
                 parent.find('.js_trolleyNumber').removeClass('opacity-0');
                 parent.find('.js_trolleyFont').addClass('opacity-0');
                 parent.find('.js_trolleyPrice').addClass('opacity-0');
                 parent.find('.js-mul').hide();
                 parent.find('.js-product-num').hide();
-                $(this).attr('data-oppo','finish').html('完成');
+                $(this).attr('data-oppo', 'finish').html('完成');
                 $(this).siblings('.js_deleteXs').removeClass('opacity-0');
-            }else{
+            } else {
                 parent.find('.js_trolleyNumber').addClass('opacity-0');
                 parent.find('.js_trolleyFont').removeClass('opacity-0');
                 parent.find('.js_trolleyPrice').removeClass('opacity-0');
                 parent.find('.js-mul').show();
                 parent.find('.js-product-num').show();
-                $(this).attr('data-oppo','edit').html('编辑');
+                $(this).attr('data-oppo', 'edit').html('编辑');
                 $(this).siblings('.js_deleteXs').addClass('opacity-0');
             }
-
         });
 
         //删除购物车商品
-        $('.js_proDelete').on('click',function(event){
+        $('.js_proDelete').on('click', function (event) {
             //防止事件冒泡
             event.stopPropagation();
             $this = $(this);
-            if(!istrsidssdssotoken()){
+            if (!istrsidssdssotoken()) {
                 //用户未登录时，物理删除
                 return false;
             }
 
             leaderConfirm.open({
-                info : "确定要删除这件商品么？", //提示信息
-                ele : $(this), //传递对象
-                callbackFn : function(ele){ //确认后执行方法
+                info: "确定要删除这件商品么？", //提示信息
+                ele: $(this), //传递对象
+                callbackFn: function (ele) { //确认后执行方法
                     var cartGoodId = $this.attr('data-cartGoodId');
                     var trolleyData = {
-                        cartGoodId : cartGoodId
+                        cartGoodId: cartGoodId
                     }
                     trolleyServer.delete(trolleyData);
                     return;
                 },
             });
-                
+
         });
     }
 
     //前台判断是否登陆
-    if(!istrsidssdssotoken()){
+    if (!istrsidssdssotoken()) {
         console.log('用户未登录')
         // jumpToLoginPage();
     }
@@ -324,12 +318,12 @@ $(function() {
     /**
      * 根据ip获取地址信息
      */
-    var ipAddress = leaderServer.getIpAddress().then(function(data){
+    var ipAddress = leaderServer.getIpAddress().then(function (data) {
         var params = {
             provinceName: data.content.address_detail.province,
             cityName: data.content.address_detail.city
         }
-        leaderServer.regionInfo(params).then(function(address){
+        leaderServer.regionInfo(params).then(function (address) {
             var add = {
                 'save': address.data.provinceName,
                 'city': address.data.cityName,
@@ -350,19 +344,19 @@ $(function() {
                 $('.js_addShadeTop').hide()
             }
 
-            $('.js_ipAddress').on('click',function(){
-                addressAlert(add, addressCallback)                        
+            $('.js_ipAddress').on('click', function () {
+                addressAlert(add, addressCallback)
             })
 
             skuInit()
         })
-            
+
     })
 
     /**
      * 获取用户信息
      */
-    userServer.getUserInfo(); 
+    userServer.getUserInfo();
 
 
     /**
@@ -370,7 +364,7 @@ $(function() {
      */
     $('.js-pay').on('click', function () {
         var orderArr = []
-        $('.trolley-product-selected').each(function(){
+        $('.trolley-product-selected').each(function () {
             orderArr.push({
                 "regionCode": $('.js_ipAddress').attr('areaCode'),
                 "cartId": $(this).parent('.trolley-prolist').attr('cartId'),
@@ -378,31 +372,31 @@ $(function() {
                 "inSkuCode": $(this).parent('.trolley-prolist').attr('inSkuCode')
             })
         })
-        var orderCode = ('' + Math.random()).substring(3,10)
+        var orderCode = ('' + Math.random()).substring(3, 10)
         if (orderArr.length > 0) {
             $.cookie('orderCode' + orderCode, JSON.stringify(orderArr), {
-                'path':'/',
+                'path': '/',
                 // 'domain':'.tongshuai.com'
             });
             window.location.href = siteConfig.orderConfirmUrl + "?code=" + orderCode
         }
     })
-   
+
 
     /**
      * 商品信息初始化
      */
-    function skuInit () {
+    function skuInit() {
         // 查询当前 cookie 中是否有本地购物车商品
         if ($.cookie('goodsInCart') && istrsidssdssotoken()) {
             var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
             $.ajax({
                 type: "post",
-                url: siteConfig.userUrl+"/buy/order/cartGoods/save",
+                url: siteConfig.userUrl + "/buy/order/cartGoods/save",
                 csrf: true,
                 applicationType: true,
                 data: JSON.stringify(goodsInCartArr),
-                success_cb: function(data){
+                success_cb: function (data) {
                     if (data.isSuccess) {
                         // 添加成功清除历史 cookie 
                         $.cookie('goodsInCart', null)
@@ -410,7 +404,7 @@ $(function() {
                         trolleyServer.list();
                     }
                 },
-                error_cb: function(jqXHR, textStatus, errorThrown) {
+                error_cb: function (jqXHR, textStatus, errorThrown) {
                     if (jqXHR.responseText) {
                         console.log(JSON.parse(jqXHR.responseText).resultMsg)
                         //获取购物车列表
@@ -427,16 +421,16 @@ $(function() {
             var skuCodesArray = new Array();
             //购物车商品数量(quantity)和购物车商品id(cartGoodId)
             var skuCodesObj = new Object();
-            jQuery.each(goodsInCartArr,function(i,n){
+            jQuery.each(goodsInCartArr, function (i, n) {
                 skuCodesArray.push(n.inSkuCode);
             });
 
             var skuData = {
                 skuCodes: skuCodesArray.join(','),
                 regionCode: $('.js_ipAddress').attr('areaCode')
-            } 
+            }
             //根据inskucode集合查询SKU相关信息
-            skuServer.getSkuByCodes(skuData,skuCodesObj);
+            skuServer.getSkuByCodes(skuData, skuCodesObj);
         }
     }
 

@@ -66,6 +66,9 @@
                 <form action="" class="js_orderUserInforBox">
                     <ul class="product-ordercon-box  js_orderconBox o_u o_df_2-2">
                         <li>
+                            <input type="text" class="l-none" name="" id="regionId"  value="" data-normal="1"/>
+                        </li>
+                        <li>
                             <div class="o_u o_df_2-12"></div>
                             <div class="o_u o_df_2-12   o_sm_11-12  o_xs_11-12 product-ordercon-list-title">
                                 <p><span>*</span><i>联系人姓名</i></p>
@@ -319,7 +322,7 @@
                             <input  type="text" class="o_u o_df_12-12 o_sm_11-12 o_xs_11-12 js-invoice-head" name="" ph="请填写发票抬头" value="">
                         </div>
                     </li>
-                    <li class="o_u o_df_2-2   o_sm_10-12  o_xs_10-12">
+                    <li class="o_u o_df_2-2  o_sm_10-12  o_xs_10-12 js-ein l-none">
                         <p class="ordercon-setInvoice-list-title o_u o_df_1-3 o_sm_2-2 o_xs_2-2"><span>*</span>税号<i>*</i></p>
                         <div class="l-input o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
                             <input  type="text" class="o_u o_df_12-12 o_sm_11-12 o_xs_11-12 js-invoice-code" name="" ph="请填写税号" value="">
