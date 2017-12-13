@@ -20,7 +20,7 @@ $(function(){
                 var templet_email=jQuery.trim(data.data.email);
                 var templet_split = templet_email.split("@");
                 var templet_hide = templet_split[0].length / 2;
-                var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                var templet_emailnote = templet_split[0].substr(0,templet_hide) + '***' + '@' + templet_split[1]; //emai加.
 
                 $("#js_unbindmob").attr('autotext',"邮箱（"+templet_emailnote+"）");
                 $("#js_unbindmob").append("<option value='1'>邮箱（"+templet_emailnote+"）</option>");
@@ -106,7 +106,7 @@ $(function(){
     });
 
     //第二步发送验证码亮起
-    var mobile_regexp = /^[1][2-8][0-9]{9}$/;
+    var mobile_regexp = /^[1][2-9][0-9]{9}$/;
     $('.js-newMobile').blur(function(){
         var templet_newPhone=$.trim($('.js-newMobile').val());
         if(mobile_regexp.test(templet_newPhone)){

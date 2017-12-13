@@ -179,7 +179,7 @@ function searchBoxWord(word) {
             async: true,
             success: function (data) {
                 $('.js_quick_search').remove();
-                $('.js_searchBox_listShow').html(data);
+                $('.js_searchBox_root').html(data);
             },
             error: function (data) {
             }
@@ -208,10 +208,10 @@ function searchBoxInput(webSize) {
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
         }
     } else {
-        searchBoxHtml = '<li><a href = "">在线保修<a/></li>' +
-            '<li><a href = "">产品注册<a/></li>' +
-            '<li><a href = "">帮助中心<a/></li>' +
-            '<li><a href = "">联系我们<a/></li>';
+        searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修<a/></li>' +
+            '<li><a href = "user.tongshuai.com/product_registe">产品注册<a/></li>' +
+            '<li><a href = "/service/help">帮助中心<a/></li>' +
+            '<li><a href = "/contact">联系我们<a/></li>';
         if (webSize == "xl") {
             searchBoxHtml = '<div class="search-quick js_quick_search">快速链接</div>' +
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';

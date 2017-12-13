@@ -20,8 +20,6 @@ $(function(){
             //大于575显示两个 小于575显示一个
             if($(window).width()<=575){
                 smallfreshen(templet_entities);
-
-
             }else{
                 freshenA(templet_entities);
             }
@@ -76,7 +74,7 @@ function freshenA(templet_entities) {
 //第三第四个产品(大于575)
 function freshenB(templet_entities) {
     //如果产品总数小于2就不执行B方法
-    if(2>templet_entities.length){
+    if(3>templet_entities.length){
         return;
     }
     $('.js-recommendation').attr('freshen','B');

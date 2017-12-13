@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>会员权益—统帅官网</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
     <meta name="format-detection" content="telephone=no, email=no"/>
@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="">
+<body>
 <div class="o_main">
     <!-- 首屏动画 -->
     <!-- 导航 -->
@@ -42,8 +42,8 @@
     <div class="o_g">
         <div class="membercenter-top">
             <trs_viewdatas id="会员权益banner" num="1" startpos="0">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner"
-                     style='background: url("<trs_viewdata field="picture"/>") no-repeat top center;'>
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner js_memberCenterBanner" memberCenterBanner="<TRS_VIEWDATAAPPENDIXS FIELD='picture'><TRS_VIEWDATAAPPENDIX FIELD='picture' UrlIsAbs='TRUE'/>,</TRS_VIEWDATAAPPENDIXS>">
+                     <!--style='background: url("<trs_viewdata field="picture"/>") no-repeat top center;'>-->
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>
@@ -78,9 +78,9 @@
         </div>
         <div class="member-center js_memberCenterBox o_g">
             <div class="o_u o_df_4-12 member-center-left"></div>
-            <div class="o_u o_df_2-12 member-center-border"></div>
-            <div class="o_u o_df_2-12 member-center-border"></div>
-            <div class="o_u o_df_2-12 member-center-border">
+            <div class="o_u o_df_2-12"></div>
+            <div class="o_u o_df_2-12"></div>
+            <div class="o_u o_df_2-12">
                 <div class="member-center-border-red"></div>
             </div>
             <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
@@ -179,7 +179,7 @@
                     <trs_viewdatas id="会员等级规则" num="4">
                         <li class=" o_u o_df_3-12 o_xs_6-12 <trs_viewdata field='icon_name'/>">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u o_md_12_12 o_sm_12-12 o_xs_12-12">
                                 <h5>
                                     <trs_viewdata field='memberdj_name2'/>
                                 </h5>
@@ -202,6 +202,21 @@
 <script type="text/javascript">
     $(function () {
         var windowWidth = $(window).width();
+        var bannerpic=$(".js_memberCenterBanner").attr("memberCenterBanner");
+
+        var result=bannerpic.split(",");
+            var bannerpic1=result[0];
+            var bannerpic2=result[1];
+
+        if(windowWidth>1199){
+            $(".js_memberCenterBanner").css("background-image",'url("'+bannerpic2+'")');
+            //这里放小图
+            //images/member-center-bannermin.jpg
+        }else{
+            $(".js_memberCenterBanner").css('background-image','url("'+bannerpic1+'")');
+            //这里放大图
+            //images/member-center-banner.jpg
+        }
 
         setTimeout(function () {
             var leftBoxHeight = $('.js_centerBoxLeft').height();
@@ -227,12 +242,13 @@
                 $(".member_"+i).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
-                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
+                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
                 $(".member_"+i).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
             }
         }
     }
+
 </script>
 </html>
