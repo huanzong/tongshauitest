@@ -241,7 +241,7 @@ $(function () {
              $(".js_lifeStylePlay ").on('click', function () {
                  videoMethod();
                  var windowHeight = $(window).height();
-                 var navHeight = $('l-opacity0').height();
+                 var navHeight = $('.l-opacity0').height();
                  $('.js_styleVideoBox').hide();
 
 
@@ -305,7 +305,8 @@ $(function () {
 
                  }else{
                      $('.js_videoMdShow').hide();
-
+                     var navHeight = $('.l-opacity0').height();
+                     $(document).scrollTop(navHeight);
                  }
 
 
@@ -511,73 +512,125 @@ $(function () {
             }
             // console.log(casePhotoNext);
         }
-    })
+    });
 
 
     $('.js_lifeStyleCaseLeftBtn').on('click', function (e) {
         e.preventDefault();
         caseSwiper.swipeNext()
-    })
+    });
     $('.js_lifeStyleCaseRightBtn').on('click', function (e) {
-
         e.preventDefault();
         caseSwiper.swipePrev()
-    })
+    });
 
 
 // 创造优生活 轮播
-    var CreateSwipe_1 = new Swiper('.js_lifeStyleCreateSwipe_1', {
-        loop: true,
-        autoplay: 5000,
-        simulateTouch: false,
-        cssWidthAndHeight: true,
-        autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
-        onSlideChangeStart: function (swiper) {
 
-        }
+
+    var CreateSwipe=[];
+
+
+    var createSwipeTittle = new Swiper('.js_lifeStyleCreateTop', {
+        loop: false,
+        slidesPerView : 'auto',
+        loopedSlides:3,
+
     })
+    //var CreateSwipe_1 = new Swiper('.js_lifeStyleCreateSwipe_1', {
+    //    loop: true,
+    //    autoplay: 5000,
+    //    simulateTouch: false,
+    //    cssWidthAndHeight: true,
+    //    autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
+    //    onSlideChangeStart: function (swiper) {
+    //
+    //    }
+    //});
+    //
+    //var CreateSwipe_2 = new Swiper('.js_lifeStyleCreateSwipe_2', {
+    //    loop: true,
+    //    autoplay: 5000,
+    //    simulateTouch: false,
+    //    cssWidthAndHeight: true,
+    //    autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
+    //    onSlideChangeStart: function (swiper) {
+    //
+    //    }
+    //});
+    //var CreateSwipe_3 = new Swiper('.js_lifeStyleCreateSwipe_3', {
+    //    loop: true,
+    //    autoplay: 5000,
+    //    simulateTouch: false,
+    //    cssWidthAndHeight: true,
+    //    autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
+    //    onSlideChangeStart: function (swiper) {
+    //
+    //    }
+    //});
 
-    var CreateSwipe_2 = new Swiper('.js_lifeStyleCreateSwipe_2', {
-        loop: true,
-        autoplay: 5000,
-        simulateTouch: false,
-        cssWidthAndHeight: true,
-        autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
-        onSlideChangeStart: function (swiper) {
+setTimeout(function(){
+    for(var i = 1;i<$('.js_lifeStyleCreateSwipe').length+1;i++){
+        var className =".js_lifeStyleCreateSwipe_"+i;
+        //console.log(i)
+        //$(className).hide();
+        if($(className)){
+               CreateSwipe[i] = new Swiper(className, {
+                loop: true,
+                autoplay: 5000,
+                simulateTouch: false,
+                cssWidthAndHeight: true,
+                autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
+                onSlideChangeStart: function (swiper) {
 
+                }
+            });
         }
-    })
-    var CreateSwipe_3 = new Swiper('.js_lifeStyleCreateSwipe_3', {
-        loop: true,
-        autoplay: 5000,
-        simulateTouch: false,
-        cssWidthAndHeight: true,
-        autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
-        onSlideChangeStart: function (swiper) {
 
-        }
-    })
+    }
+},400)
+
 
 
     $('.js_lifeStyleCreateLeftBtn').on('click', function (e) {
         e.preventDefault();
-        CreateSwipe_1.swipeNext()
-        CreateSwipe_2.swipeNext()
-        CreateSwipe_3.swipeNext()
-    })
+        for(var i= 0;i<CreateSwipe.length;i++){
+            if(CreateSwipe[i]){
+                CreateSwipe[i].swipeNext();
 
+            }
+        }
+    });
     $('.js_lifeStyleCreateRightBtn').on('click', function (e) {
-
         e.preventDefault();
-        CreateSwipe_1.swipePrev()
-        CreateSwipe_2.swipePrev()
-        CreateSwipe_3.swipePrev()
-    })
+        for(var i = 0;i<CreateSwipe.length;i++){
+            if(CreateSwipe[i]){
+            CreateSwipe[i].swipeNext();
+
+            }
+        }
+    });
+
+    //$('.js_lifeStyleCreateLeftBtn').on('click', function (e) {
+    //    e.preventDefault();
+    //    CreateSwipe_1.swipeNext();
+    //    CreateSwipe_2.swipeNext();
+    //    CreateSwipe_3.swipeNext();
+    //});
+    //
+    //$('.js_lifeStyleCreateRightBtn').on('click', function (e) {
+    //
+    //    e.preventDefault();
+    //    CreateSwipe_1.swipePrev();
+    //    CreateSwipe_2.swipePrev();
+    //    CreateSwipe_3.swipePrev();
+    //});
 
 
     setTimeout(function () {
         $('.js_lifeStyleCreateTop li').eq(0).click();
     }, 1000)
+
 
 
 })
