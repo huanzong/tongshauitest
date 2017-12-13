@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="">
+<body>
 <div class="o_main">
     <!-- 首屏动画 -->
     <!-- 导航 -->
@@ -78,9 +78,9 @@
         </div>
         <div class="member-center js_memberCenterBox o_g">
             <div class="o_u o_df_4-12 member-center-left"></div>
-            <div class="o_u o_df_2-12 member-center-border"></div>
-            <div class="o_u o_df_2-12 member-center-border"></div>
-            <div class="o_u o_df_2-12 member-center-border">
+            <div class="o_u o_df_2-12"></div>
+            <div class="o_u o_df_2-12"></div>
+            <div class="o_u o_df_2-12">
                 <div class="member-center-border-red"></div>
             </div>
             <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
@@ -179,7 +179,7 @@
                     <trs_viewdatas id="会员等级规则" num="4">
                         <li class=" o_u o_df_3-12 o_xs_6-12 <trs_viewdata field='icon_name'/>">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u o_md_12_12 o_sm_12-12 o_xs_12-12">
                                 <h5>
                                     <trs_viewdata field='memberdj_name2'/>
                                 </h5>
@@ -242,7 +242,7 @@
                 $(".member_"+i).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
-                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
+                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
                 $(".member_"+i).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
