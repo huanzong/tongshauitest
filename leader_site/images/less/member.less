@@ -1139,16 +1139,16 @@
 					line-height: 30px;
 				}
 			};
-			a:nth-child(1){
+			a:first-child{
 				background: url("member-home-top-list3.jpg") no-repeat center;
 				background-size: 100% 100%;
 			}
-			a:nth-child(2){
+			a:first-child+a{
 				background: url("member-home-top-list2.jpg") no-repeat center;
 				background-size: 100% 100%;
 				margin: 0 5%;
 			}
-			a:nth-child(3){
+			a:first-child+a+a{
 				background: url("member-home-top-list1.jpg") no-repeat center;
 				background-size: 100% 100%;
 			}
@@ -1478,7 +1478,6 @@
 						}
 						.member-security-safeplaintext {
 							width: auto;
-							float: left;
 							height: 24px;
 							line-height: 24px;
 							font-size: 12px;
@@ -1494,16 +1493,29 @@
 								/* md*/
 								margin-left: 5px;
 								font-size: 16px;
+								float: left;
+
+							}
+							@media (min-width: 701px) and (max-width: 750px) {
+								/* md*/
+								margin-left: 5px;
+								font-size: 16px;
+								float: none;
+
 							}
 							@media (min-width: 576px) and (max-width: 700px) {
 								/* sm*/
 								margin-left: 5px;
 								font-size: 16px;
+								float: left;
+
 							}
 							@media (max-width: 575px) {
 								/* xs*/
 								margin-left: 5px;
 								font-size: 16px;
+								float: left;
+
 							}
 						}
 						.member-security-safefinetext {
@@ -3580,6 +3592,21 @@
 								margin-bottom: 30px;
 							}
 						}
+						@media (max-width: 576px){
+							position: relative;
+							height: 0;
+							.membe-personalinfo-photo-right {
+								display: block;
+								height: 180px;
+								width: 180px;
+								margin: 10px auto 0 auto;
+								overflow: hidden;
+								border-radius: 100px;
+							}
+							a {
+								margin-top: 30px;
+							}
+						}
 					}
 				}
 			}
@@ -4137,6 +4164,8 @@
 					font-size: 12px;
 					color: #999;
 				}
+
+
 			}
 		}
 	}
@@ -4235,7 +4264,8 @@
 				.member-home-down-info{
 					padding-top: 33px;
 					text-align: left;
-
+					width: 165px;
+					margin-left: 10px;
 					p{
 						font-size: 14px;
 					}
@@ -4981,6 +5011,9 @@
 		// >div{
 		// 	margin-right: 8px;
 		// }
+		>div{
+			margin-bottom:10px;
+		}
 		.impress-add-input-box{
 			margin: 0 8px  10px 0; 
 			@media (min-width: 576px) and (max-width: 700px) {

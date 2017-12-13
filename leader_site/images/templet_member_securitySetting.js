@@ -32,7 +32,7 @@ $(function(){
                     var templet_email = templet_emailtrim;
                     var templet_split = templet_email.split("@");
                     var templet_hide = templet_split[0].length / 2;
-                    var templet_emailnote = templet_split[0].substr(0, templet_hide) + '..' + '@' + templet_split[1];
+                    var templet_emailnote = templet_split[0].substr(0, templet_hide) + '***' + '@' + templet_split[1];
                     $('.js-emailsuccessfirst').html(templet_emailnote);
                     $('.js-emailsuccessfirst').show();
                     $('.js-emailfalsefirst').hide();

@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="images/member-center.css">
 </head>
 
-<body class=" ">
+<body>
     <div class="o_main">
             <!-- 首屏动画 -->
           <!-- 导航 -->
@@ -43,7 +43,8 @@
             <!-- 首屏动画 End -->
         <div class="o_g">
             <div class="membercenter-top">
-                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
+                <div class="o_u o_df_9-12 o_md_7-12  o_sm_6-6 o_xs_6-6 membercenter-banner js_memberCenterBanner" style='background: url("images/member-center-banner.jpg") no-repeat top center;'>
+                    <!--member-center-bannermin.jpg-->
                     <div class="o_u o_df_1-8"></div>
                     <div class="o_u o_df_7-8 membercenter-banner-cont">
                         <h2>加入统帅，<span>慢享悠悠生活</span></h2>
@@ -56,7 +57,7 @@
                         <div class="membercenter-list-cont">
                             <h4>乐分享</h4>
                             <p>晒单分享，最多得550积分</p>
-                            <a href="javascript:;" class="l-btn-sm l-btn-line1">品牌按钮</a>
+                            <a href="javascript:;" class="l-btn-sm l-btn-line1">晒单分享</a>
                         </div>
                     </li>
                     <li class="list-endorsement o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style=' background: url("images/member-center-endorsement.png") no-repeat center right;'>
@@ -84,9 +85,9 @@
             </div>
             <div class="member-center js_memberCenterBox o_g">
                 <div class="o_u o_df_4-12 member-center-left"></div>
-                <div class="o_u o_df_2-12 member-center-border"></div>
-                <div class="o_u o_df_2-12 member-center-border"></div>
-                <div class="o_u o_df_2-12 member-center-border">
+                <div class="o_u o_df_2-12 "></div>
+                <div class="o_u o_df_2-12 "></div>
+                <div class="o_u o_df_2-12 ">
                     <div class="member-center-border-red"></div>
                 </div>
                 <div class="o_u o_df_2-12 o_lg_1-12 member-center-border"></div>
@@ -104,7 +105,7 @@
                                     <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
                                     <div class="member-conter-text-down">
                                         <div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>
-                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>
                                         <div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>
                                     </div>
                                 </div>
@@ -149,7 +150,7 @@
                                     <p>普通会员专享型号，银卡会员增享生日关怀，金卡会员增享节日关怀与邮寄杂志</p>
                                     <div class="member-conter-text-down">
                                         <div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>
-                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>
+                                        <div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>
                                         <div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>
                                     </div>
                                 </div>
@@ -164,34 +165,35 @@
                     <ul class="o_u o_df_10-12">
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-no-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u o_md_12-12 o_sm_12-12 o_xs_12-12">
                                 <h5>粉丝</h5>
                                 <p>注册网站会员</p>
                             </div>
                         </li>
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-ordinary-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u  o_md_12-12  o_sm_12-12 o_xs_12-12">
                                 <h5>普通会员</h5>
                                 <p>至少注册一款产品</p>
                             </div>
                         </li>
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-silvery-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u  o_md_12-12  o_sm_12-12 o_xs_12-12">
                                 <h5>银卡会员</h5>
                                 <p>累计注册产品金额达9000元</p>
                             </div>
                         </li>
                         <li class=" o_u o_df_3-12 o_xs_6-12 member-golden-vip">
                             <div class="log"><span></span></div>
-                            <div class="o_u o_sm_12-12 o_xs_12-12">
+                            <div class="o_u  o_md_12-12  o_sm_12-12 o_xs_12-12">
                                 <h5>金卡会员</h5>
                                 <p>累计注册产品金额达16000元</p>
                             </div>
                         </li>
                     </ul>
                 </div>
+            </div>
             </div>
             <!--#include virtual="public/footer.shtml"-->
         </div>
@@ -201,6 +203,16 @@
     $(function(){
    
         var windowWidth = $(window).width();
+        if(windowWidth>1199){
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放大图
+            //images/member-center-banner.jpg
+        }else{
+
+            $('.js_memberCenterBanner').css('background-image','图片的链接地址')
+            //这里放小图
+            //images/member-center-banner.jpg
+        }
 
         setTimeout(function(){
                 var leftBoxHeight = $('.js_centerBoxLeft').height();

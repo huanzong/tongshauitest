@@ -4,7 +4,7 @@
 * @date        2017.11.7
 * ---------------------------------------------------------------------------*/
 $(function(){
-
+    $('.js-resetPassWord').focus(function(){$(this).css('border-color','#ccc')})
     //是否有邮箱 手机号
     var templet_isemail=false;
     var templet_isphone=false;
@@ -24,7 +24,7 @@ $(function(){
                     templet_isemail=true;
                     var templet_split = templet_email.split("@");
                     var templet_hide = templet_split[0].length / 2;
-                    var templet_emailnote = templet_split[0].substr(0,templet_hide) + '..' + '@' + templet_split[1]; //emai加.
+                    var templet_emailnote = templet_split[0].substr(0,templet_hide) + '***' + '@' + templet_split[1]; //emai加.
                     $("#js_resetpassword").attr('autotext',"邮箱（"+templet_emailnote+"）");
                     $("#js_resetpassword").append("<option value='2'>邮箱（"+ templet_emailnote +"）</option>");
 

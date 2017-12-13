@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人中心-安全设置-绑定邮箱</title>
+    <title>绑定邮箱</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
@@ -55,7 +55,7 @@
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_5-6 o_xs_6-6 selectbox member-bingmob-listipt">
                                         <div>
                                             <select name="" id="js_unbindmob"  autotext="">
-                                                <option value="0">--验证手机是否正确--</option>
+                                                <option value="0">--验证手机号码--</option>
 
                                             </select>
                                         </div>
