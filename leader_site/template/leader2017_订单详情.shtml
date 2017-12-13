@@ -17,7 +17,7 @@
     <div class="o_main">
         <div class="o_g">
             <!-- 左侧导航 START-->
-            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
+            <!--#include virtual="public/header_nav.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
@@ -46,7 +46,7 @@
                                 <!--<p class="o_u  o_df_6-12 o_sm_2-2 o_xs_2-2"><span>收货确认码：</span><i>169063</i></p>-->
                             </div>
                             <div class="o_u o_df_11-12 detail_cont_box js-goods">
-
+                                <!--o_u cur_after o_u cur-->
                                 <!--<div class="o_g order_content2_box">-->
                                 <!--<div class="o_u  o_df_11-12">-->
                                 <!--<div class="o_u o_df_2-12 order_content2_img">-->
@@ -72,20 +72,20 @@
                                     </div>
                                     <div class="o_u o_df_6-12 o_xs_2-2">
                                         <h3>支付信息</h3>
-                                        <p><span class="o_u o_xs_2-2">支付方式：</span><i class="o_u o_xs_2-2">支付宝支付</i></p>
+                                        <p><span class="o_u o_xs_2-2">支付方式：</span><i class="o_u o_xs_2-2 js-payType"></i></p>
                                         <p><span class="o_u o_xs_2-2">支付时间：</span><i class="o_u o_xs_2-2 js-payTime"></i></p>
                                     </div>
-                                    <p><span class="o_u o_xs_2-2">收货地址：</span><i class="o_u o_xs_2-2 "></i></p>
+                                    <p><span class="o_u o_xs_2-2">收货地址：</span><i class="o_u o_xs_2-2 js-address"></i></p>
                                     <div class="o_u o_df_6-12 o_xs_2-2">
                                         <h3>发票信息</h3>
-                                        <p><span class="o_u o_xs_2-2">发票类型：</span><i class="o_u o_xs_2-2">电子发票（个人）</i></p>
-                                        <p><span class="o_u o_xs_2-2">发票抬头：</span><i class="o_u o_xs_2-2">广州白云有限公司</i></p>
+                                        <p><span class="o_u o_xs_2-2">发票类型：</span><i class="o_u o_xs_2-2 js-invoiceType "></i></p>
+                                        <p><span class="o_u o_xs_2-2">发票抬头：</span><i class="o_u o_xs_2-2 js-invoiceTitle "></i></p>
                                     </div>
                                 </div>
                             </div>
                             <ul class="o_u o_df_11-12 detail_cont_down">
                                 <li class="o_u o_sm_2-2 o_xs_2-2 ">
-                                    <p><span>商品总额：</span><i>&yen;3589</i></p>
+                                    <p><span>商品总额：</span><i class="js-price"></i></p>
                                 </li>
                                 <!--<li class="o_u o_sm_2-2 o_xs_2-2 ">-->
                                 <!--<p><span>组合优惠：</span><i>&yen;199</i></p>-->
@@ -95,7 +95,7 @@
                                 <!--</li>-->
 
                                 <li class="o_u  o_lg_2-2  o_md_2-2 o_sm_2-2  o_xs_2-2 detail_cont_down_total">
-                                    <span>应付款金额：</span><i>&yen;3099</i>
+                                    <span>付款金额：</span><i class="js-price"></i>
                                 </li>
                             </ul>
                         </div>

@@ -106,7 +106,7 @@ $(function(){
     });
 
     //第二步发送验证码亮起
-    var mobile_regexp = /^[1][2-8][0-9]{9}$/;
+    var mobile_regexp = /^[1][2-9][0-9]{9}$/;
     $('.js-newMobile').blur(function(){
         var templet_newPhone=$.trim($('.js-newMobile').val());
         if(mobile_regexp.test(templet_newPhone)){
