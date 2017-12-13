@@ -7,6 +7,12 @@ $(function() {
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
         slidesPerView : 'auto',
     });
+    $('.js_fontSwiperPrev').on('click',function(){
+        swiper.fontSwiper.swipePrev();
+    });
+    $('.js_fontSwiperNext').on('click',function(){
+        swiper.fontSwiper.swipeNext();
+    });
 
     //场景展示
     $(".js_scenePicture").each(function() {
