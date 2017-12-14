@@ -563,46 +563,6 @@ setTimeout(function(){
         $('.js_lifeStyleCreateTop li').eq(0).click();
     }, 1000)
 
-    //创造优生活模块轮播 title文字长度限制
-    var lifeStyleTitle={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
-    var lifeStyleContTitle={'obj':$('.list-cont-text>p'),'fontSize':'14','lineNub':'2','width':'200' };
-
-    textLength(lifeStyleTitle);
-
-    //
-    //textLength('.list-cont-text>p','14','2' );
-//setTimeout(function(){
-    textLength(lifeStyleContTitle);
-//},400)
- //function textLength(obj,fontSize,lineNub,objWidth){
- //    var $obj = $(obj);
- //    var fontSize = fontSize;
- //    var lineNub = lineNub;
- //    //如果对象是一个数组
- //    if($obj.length>1){
- //        for(var i = 0;i<$obj.length;i++){
- //            if(!objWidth){
- //                var $objWidth = $obj.eq(i).width();
- //            }else{
- //                var $objWidth = objWidth;
- //            }
- //
- //            var objCont = $obj.eq(i).html();
- //            var maxFontNub = parseInt($objWidth*lineNub/fontSize);
- //            $obj.eq(i).html(objCont.substring(0,maxFontNub-4)+'...');
- //        }
- //    }else if($obj.length==1){
- //        if(!objWidth){
- //            var $objWidth = $obj.eq(i).width();
- //        }else{
- //            var $objWidth = objWidth;
- //        }
- //        var objCont = $obj.html();
- //        var maxFontNub = parseInt($objWidth*lineNub/fontSize);
- //        $obj.html(objCont.substring(0,maxFontNub-8)+'...');
- //    }
- //
- //}
 
 
 
