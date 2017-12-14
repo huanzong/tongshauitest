@@ -253,7 +253,7 @@ $(function() {
                 beforePlusRule:function(num,$this){},//若终止执行操作，需return true
                 beforeMinusRule:function(num,$this){},//若终止执行操作，需return true
                 plusCallback:function(num,$this){},
-                minusCallback:function(num,$this){},
+                minusCallback:function(num,$this){}
             };
 
             //实际元素-用户定义
@@ -266,7 +266,7 @@ $(function() {
                 var ele = {
                     plusEle:$(this).find(elActive.plus),
                     minusEle:$(this).find(elActive.minus),
-                    inputEle:$(this).find(elActive.input),
+                    inputEle:$(this).find(elActive.input)
                 };
 
                 //加法
@@ -329,7 +329,6 @@ $(function() {
                 }
                 
             }).focus(function () {
-                console.log(text);
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
                     $this.css('color','#666');
@@ -366,7 +365,6 @@ $(function() {
 $('.js_addType>div').click(function(){
     var dataAlt = $('.js_addType').attr('data-alt');
     var divIndex = $(this).index();
-    console.log(dataAlt,divIndex);
     //alert(dataAlt);
     if(dataAlt==1){
         if(divIndex==0){
@@ -425,12 +423,10 @@ function addressAlert(add){
             url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
             data: 'parentId=0',
             //error:function(data){
-            //    console.log(data);
             //},
             login:true,
             success_cb:function(data){
                 var contdata = data.data;
-                console.log(123,contdata);
                 if(data.isSuccess){
                     for(var i = 0;i<contdata.length;i++){
                         addressSave+='<li class="o_u o_df_3-12 o_xs_11-12" data-code="'+contdata[i].regionCode+'">'+contdata[i].regionName+'</li>'
@@ -447,7 +443,6 @@ function addressAlert(add){
         $('.js_addType').attr('data-alt',2);
         saveText = $(this).html();
         saveCode = $(this).attr('data-code');
-        console.log(1,saveCode);
         //获取city信息并汇入
         //简单判断本次选择的省份是否与上次为相同数据，如果不同再次请求
         if (saveCode != savecode_used) {
@@ -456,12 +451,10 @@ function addressAlert(add){
                 url: siteConfig.domain + '/interaction-service/regionInfo/regionList/',
                 data: 'parentId=' + saveCode,
                 error: function (data) {
-                    console.log(data);
                 },
                 success: function (data) {
                     var contdata = data.data;
                     savecode_used = saveCode;
-                    console.log(2,saveCode);
                     if (data.isSuccess) {
                         addressCity='';
                         for (var i = 0; i < contdata.length; i++) {
@@ -490,11 +483,9 @@ function addressAlert(add){
             url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
             data: 'parentId='+cityCode,
             error:function(data){
-                console.log(data);
             },
             success:function(data){
                 var contdata = data.data;
-                console.log(123,contdata);
                 if(data.isSuccess){
                     addressArea='';
                     for(var i = 0;i<contdata.length;i++){
@@ -515,7 +506,6 @@ function addressAlert(add){
     $('.js_alertAddress_area_cont>li').live('click',function(){
         areaText =  $(this).html();
         areaCode = $(this).attr('data-code');
-        console.log(areaText);
 
         $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');
         var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
