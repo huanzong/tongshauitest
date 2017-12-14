@@ -637,3 +637,34 @@ function btnTimeOut(obj,time,timetext,callback){
       }
     },1000);
 }
+
+//文字截取方法
+var obj={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
+
+function textLength(obj){
+    var $obj = obj.obj;
+    var fontSize = obj.fontSize;
+    var lineNub = obj.lineNub;
+    if(!obj.objWidth){
+        var $objWidth = $obj.width();
+    }else{
+        var $objWidth = obj.width;
+    }
+    //如果对象是一个数组
+    if($obj.length>1){
+        for(var i = 0;i<$obj.length;i++){
+            var objCont =  $obj.eq(i).html();
+            var maxFontNub = parseInt($objWidth*lineNub/fontSize);
+            if(maxFontNub -4<= objCont.length){
+                $obj.eq(i).html(objCont.substring(0,maxFontNub-4)+'...');
+            }
+        }
+    }else if($obj.length==1){
+        var objCont = $obj.html();
+        var maxFontNub = parseInt($objWidth*lineNub/fontSize);
+        if(maxFontNub-4 <= objCont.length){
+            $obj.html(objCont.substring(0,maxFontNub-4)+'...');
+        }
+    }
+}
+

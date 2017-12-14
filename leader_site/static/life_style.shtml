@@ -43,7 +43,7 @@
         <!-- 导航 End-->
         <div class="o_g">
             <div class="life-style-player js_playerBox">
-                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"></video>
+                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"  height="100%" ></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
             <div class="life-style-video-box js_styleVideoBox">
@@ -78,6 +78,15 @@
                         <a href="javascript:;" class="js_lifeStylePlay" data-src = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"><img src="images/style_life_play.png" alt=""></a>
                     </div>
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"><img src="images/style_life_video_right.png" alt=""></a>
+                </div>
+                <div class="o_u o_df_12-12 life-video-back-border">
+                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
+                    <div class="o_u o_df_2-12 sm-hide"></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
+                    <div class="o_u o_df_2-12  o_xs_4-12 back-gray "></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
+                    <div class="o_u o_df_2-12 sm-hide"></div>
+                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
                 </div>
             </div>
 
@@ -456,200 +465,352 @@
                     <div class="o_u o_df_1-12 create-left-btn">
                         <a href="javascript:;" class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
                     </div>
-                    <div class="o_u o_df_5-12 o_lg_6-12 o_md_8-12 o_sm_10-12 o_xs_10-12">
+                    <div class="o_u life-style-create-cont   o_sm_10-12 o_xs_10-12">
                         <div>
                             <div class="create-title-img " >
                                 <img src="images/life-style-create-cont-title.png" width="100%"  alt="">
                             </div>
-                            
-                            <div class="product-list-title">
+                            <div class="o_u product-list-title  o_sm_10-12 o_xs_12-12">
                                 <span class="o_u o_sm_12-12 o_xs_12-12">系列产品推荐：</span>
-                                <ul class="js_lifeStyleCreateTop o_u o_sm_12-12 o_xs_12-12">
-                                    <li class="cur o_u o_sm_4-12 o_xs_4-12">至享系列</li>
-                                    <li class="o_u o_sm_4-12 o_xs_4-12">至美系列</li>
-                                    <li class="o_u o_sm_4-12 o_xs_4-12">至尚系列</li>
-                                </ul>
+                                <div class="js_lifeStyleCreateTop product-list-title-box o_u o_sm_12-12 o_xs_12-12">
+                                    <ul class=" swiper-wrapper o_u o_sm_12-12 o_xs_12-12">
+                                        <li class="cur o_u   swiper-slide">至享系列</li>
+                                        <li class="o_u    swiper-slide">至美系列</li>
+                                        <li class="o_u   swiper-slide ">至尚系列</li>
+                                        <li class="o_u    swiper-slide">至尚系列</li>
+                                        <li class="o_u   swiper-slide ">至尚系列</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="product-list-cont">
-                                <p class="js_lifeStyleCreateTitle">111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-                                <p class="js_lifeStyleCreateTitle" style="display: none;">222简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-                                <p class="js_lifeStyleCreateTitle" style="display: none;">333简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
-
-
+                            <div class="product-list-cont o_u o_sm_2-2 o_xs_2-2">
+                                <p class="js_lifeStyleCreateTitle">111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
+                                <p class="js_lifeStyleCreateTitle" style="display: none;">222简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验</p>
+                                <p class="js_lifeStyleCreateTitle" style="display: none;">333简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验验</p>
+                                <p class="js_lifeStyleCreateTitle" style="display: none;">333简洁的外观设计、简单的操作，给你智慧、节能、舒适的111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验美好生活体验</p>
+                                <p class="js_lifeStyleCreateTitle" style="display: none;">333简洁的外观设计、简单的操作，给你智慧、节111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验111简洁的外观设计、简单的操作，给你智慧、节能、舒适的美好生活体验能、舒适的美好生活体验</p>
                                 <!-- 至尊系列轮播 start -->
                                 <div class="js_lifeStyleCreateSwipe_1 js_lifeStyleCreateSwipe">
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门11</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门11</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门22</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门222</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                             
-                                </ul>
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                 <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                <img src="images/detail_prd01.png" alt="">
+                                            </div>
+                                            <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                <p>双开门1112223333大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                <!--<p>大容量静音节能冰箱</p>-->
+                                                <span>BCD-455WLDPC</span>
+                                                <i>¥1799</i>
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                    <p>双开门2223333大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                    <!--<p>大容量静音节能冰箱</p>-->
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                    <p>双开门233333223333大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                    <!--<p>大容量静音节能冰箱</p>-->
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <!--<li class="o_u o_df_6-12 swiper-slide">-->
+                                            <!--<div class="o_u o_df_2-2">-->
+                                                  <!--<div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">-->
+                                                <!--<img src="images/detail_prd01.png" alt="">-->
+                                            <!--</div>-->
+                                            <!--<div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12  list-cont-text">-->
+                                                <!--<p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>-->
+
+                                                <!--<span>BCD-455WLDPC</span>-->
+                                                <!--<i>¥1799</i>-->
+                                            <!--</div>-->
+                                            <!--</div>-->
+
+                                        <!--</li>-->
+                                        <!--<li class="o_u o_df_6-12 swiper-slide">-->
+                                            <!--<div class="o_u o_df_2-2">-->
+                                                <!--<div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">-->
+                                                    <!--<img src="images/detail_prd01.png" alt="">-->
+                                                <!--</div>-->
+                                                <!--<div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">-->
+                                                    <!--<p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>-->
+
+                                                    <!--<span>BCD-455WLDPC</span>-->
+                                                    <!--<i>¥1799</i>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                        <!--<li class="o_u o_df_6-12 swiper-slide">-->
+                                            <!--<div class="o_u o_df_2-2">-->
+                                                <!--<div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">-->
+                                                    <!--<img src="images/detail_prd01.png" alt="">-->
+                                                <!--</div>-->
+                                                <!--<div class="o_u o_df_8-12 o_xs_12-12 o_xs_12-12  list-cont-text">-->
+                                                    <!--<p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>-->
+
+                                                    <!--<span>BCD-455WLDPC</span>-->
+                                                    <!--<i>¥1799</i>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+
+                                    </ul>
                                 </div>
                                 <!-- 至尊系列轮播 end -->
                               
-
                                 <!-- 至美系列轮播 start -->
-                                <div class="js_lifeStyleCreateSwipe_2 js_lifeStyleCreateSwipe" >
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门333</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门333</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门444</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门444</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                             
-                                </ul>
+                                <div class="js_lifeStyleCreateSwipe_2 js_lifeStyleCreateSwipe">
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                    <!--<p>大容量静音节能冰箱</p>-->
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_xs_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <!-- 至美系列轮播 end -->
 
+                                <!-- 至尚系列轮播 start -->
+                                <div class="js_lifeStyleCreateSwipe_3 js_lifeStyleCreateSwipe">
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                    <!--<p>大容量静音节能冰箱</p>-->
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
 
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_xs_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 至尚系列轮播 end -->
 
                                 <!-- 至尚系列轮播 start -->
-                                <div class="js_lifeStyleCreateSwipe_3 js_lifeStyleCreateSwipe" >
-                                <ul class="swiper-wrapper">
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门555</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门555</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                                    <li class="o_u o_df_12-12 swiper-slide">
-                                        <div class="o_u o_df_6-12">
-                                             <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12 list-cont-text">
-                                            <p>双开门666</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                        <div class="o_u o_df_6-12"> 
-                                              <div class="o_u o_df_4-12 o_sm_12-12 o_xs_12-12  list-cont-photo">
-                                            <img src="images/detail_prd01.png" alt="">
-                                        </div>
-                                        <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
-                                            <p>双开门666</p>
-                                            <p>大容量静音节能冰箱</p>
-                                            <span>BCD-455WLDPC</span>
-                                            <i>¥1799</i>
-                                        </div>
-                                        </div>
-                                      
-                                    </li>
-                             
-                                </ul>
+                                <div class="js_lifeStyleCreateSwipe_4 js_lifeStyleCreateSwipe">
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                    <!--<p>大容量静音节能冰箱</p>-->
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_xs_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>11122</p>
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 至尚系列轮播 end -->
+                                <!-- 至尚系列轮播 start -->
+                                <div class="js_lifeStyleCreateSwipe_5 js_lifeStyleCreateSwipe">
+                                    <ul class="swiper-wrapper">
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12 list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+                                                    <!--<p>大容量静音节能冰箱</p>-->
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_11-12 o_xs_11-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_sm_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="o_u o_df_6-12 swiper-slide">
+                                            <div class="o_u o_df_2-2">
+                                                <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
+                                                    <img src="images/detail_prd01.png" alt="">
+                                                </div>
+                                                <div class="o_u o_df_8-12 o_xs_12-12 o_xs_12-12  list-cont-text">
+                                                    <p>双开门11大容量静音节能冰箱大容量静音节能冰箱大容量静音节能冰箱</p>
+
+                                                    <span>BCD-455WLDPC</span>
+                                                    <i>¥1799</i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <!-- 至尚系列轮播 end -->
 

@@ -29,7 +29,7 @@ $(function(){
     var template_birthday;
     var template_loginName;
 
-    //页面加载时调个人信息
+    //页面加载时调个人信息。
     $.ajax({
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
@@ -160,9 +160,11 @@ $(function(){
                 //头像放进去
                 if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
                     $("#js-imgleft").attr("src",'/images/user_img.jpg');
+                    $("#js-img700").attr("src",'/images/user_img.jpg');
                 }
                 else{
                     $("#js-imgleft").attr("src",data.data.headUrl);
+                    $("#js-img700").attr("src",data.data.headUrl);
                 }
             }
         }
