@@ -39,7 +39,7 @@
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressUserName">
-                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入联系人的姓名"  value=""   maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>用户姓名不正确" nullmsg="<i class='iconfont icon-information-solid'></i>用户姓名不得为空" id="realName"/>
+                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入联系人的姓名"  value=""   maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>联系人姓名不正确" nullmsg="<i class='iconfont icon-information-solid'></i>联系人姓名不得为空" id="realName"/>
                                                 <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                             </div>
                                         </div>
