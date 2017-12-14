@@ -490,6 +490,68 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                        <div class="o_g">
+                                            <div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
+                                                <div class="l-padding">
+                                                    <a href="javascript:;">
+                                                        <img src="images/index_entrance01.jpg">
+                                                    </a>
+                                                    <div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
+                                                        <h3>你是我简单满足的小确幸1111</h3>
+                                                        <p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+                                                        <a class="info-more">
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
+                                                <div class="entrance-page o_md-hide">
+                                                    <div class="entrance-page-line">
+                                                        <div class="entrance-line-red"></div>
+                                                    </div>
+                                                    <div class="entrance-page-num js_entrancePage">
+                                                        <div class="page-num" data-index=1>01</div>
+                                                        <div class="page-num" data-index=2>02</div>
+                                                        <div class="page-num" data-index=3>03</div>
+                                                    </div>
+                                                </div>
+                                                <div class="l-padding">
+                                                    <div class="o_u entrance-img2">
+                                                        <img src="images/index_entrance02.jpg" style="width: 100%">
+                                                    </div>
+                                                    <br>
+                                                    <div class="index-entrance-bottom o_sm-hide o_xs-hide">
+                                                        <div class="o_df-hide o_md-show entrance-page">
+                                                            <div class="entrance-page-line">
+                                                                <div class="entrance-line-red"></div>
+                                                            </div>
+                                                            <div class="entrance-page-num js_entrancePage1">
+                                                                <div class="page-num" data-index=3>03</div>
+                                                                <div class="page-num active" data-index=2>02</div>
+                                                                <div class="page-num" data-index=1>01</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="o_u entrance-img3">
+                                                            <img src="images/index_entrance03.jpg" style="width: 100%">
+                                                        </div>
+                                                        <div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
+                                                            <h3>你是我简单满足22的小确幸</h3>
+                                                            <p>小确幸是生活中小小的幸运与快乐，是流淌在生活的每个瞬间且稍纵即逝的美好，是内心的宽容与满足</p>
+                                                            <a class="info-more">
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
