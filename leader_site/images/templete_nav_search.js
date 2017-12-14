@@ -57,11 +57,11 @@ $('body').on('click', function (e) {
     // }
     // $('.js_searchBox').hide();
     // $('.js_searchBoxQuick_lg').show();
-    if(!$(e.target).hasClass('js_userMsgXs')){
+    if (!$(e.target).hasClass('js_userMsgXs')) {
         $('.js_usermsg_xs').hide();
     }
     //搜索历史浮层点击按钮确认
-    if($(e.target).hasClass('js_searchHistory')){
+    if ($(e.target).hasClass('js_searchHistory')) {
         return false;
     }
     $('.js_searchBox').hide();
@@ -124,7 +124,7 @@ $('.js_jumpto_product_search').on('click', function () {
 
 //回车键搜索
 $('.js_searchHistory').keydown(function (e) {
-    if(e.which == 13){
+    if (e.which == 13) {
         jumpToProductSearch();
     }
 });
@@ -208,11 +208,11 @@ function searchBoxInput(webSize) {
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
         }
     } else {
-        searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修<a/></li>' +
-            '<li><a href = "user.tongshuai.com/product_registe">产品注册<a/></li>' +
-            '<li><a href = "/service/help">帮助中心<a/></li>' +
-            '<li><a href = "/contact">联系我们<a/></li>';
         if (webSize == "xl") {
+            searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修</a></li>' +
+                '<li><a href = "user.tongshuai.com/product_registe">产品注册</a></li>' +
+                '<li><a href = "/service/help">帮助中心</a></li>' +
+                '<li><a href = "/contact">联系我们</a></li>';
             searchBoxHtml = '<div class="search-quick js_quick_search">快速链接</div>' +
                 '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
         }
