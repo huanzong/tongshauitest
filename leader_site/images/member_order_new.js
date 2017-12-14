@@ -3,13 +3,13 @@
  */
 $(function(){
 
-        $('.js_orderListMove').click(function(){
+        $('.js_orderListMove').live('click',function () {
             $(this).find('.l-float-tops').show();
             $(this).attr('data-click','2');
            
         })
 
-        $(document).click(function (e) { 
+        $(document).click(function (e) {
             var attrAlts = $(e.target).attr('data-click'); 
             var attrAlt = $(e.target).parents('.order_list_more');
 
@@ -28,7 +28,7 @@ $(function(){
 
 
 
-    $('.l-float-tops').find('a').click(function(){
+    $('.l-float-tops').find('a').live('click',function () {
             $(this).parents('li').find('input').focus();
 
              var dataAlts = $(this).parents('li').attr('data-alt');
@@ -41,9 +41,9 @@ $(function(){
 
 
 
-    $('.js_orderList>li').click(function(){
-       $(this).addClass('cur').siblings().removeClass('cur');
-    });
+    // $('.js_orderList>li').click(function(){
+    //    $(this).addClass('cur').siblings().removeClass('cur');
+    // });
 
 
         //查看物流信息
