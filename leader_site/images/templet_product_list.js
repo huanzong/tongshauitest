@@ -122,17 +122,17 @@ function readXmlFile(url) {
             //移动端筛选项初始化
             $(".layer-list").html(mobileHtml);
             //if (document.body.offsetWidth >= 1200 ) {
-            setTimeout(noneShaiXuan(".sole-type"), 1000);
+            setTimeout(function(){noneShaiXuan(".sole-type")}, 1000);
             //noneShaiXuan(".sole-type")
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(initCookie(), 1000);
+            setTimeout(function(){initCookie()}, 1000);
             //initCookie()
-            setTimeout(initLoadCookie(), 1000);
+            setTimeout(function(){initLoadCookie()}, 1000);
             //initLoadCookie()
             // }else{
-            setTimeout(noneShaiXuan(".list-btn"), 1000);
+            setTimeout(function(){noneShaiXuan(".list-btn")}, 1000);
             //noneShaiXuan(".list-btn")
             //移动端监听事件
             filterItemOnclick(".list-btn");
@@ -145,8 +145,8 @@ function readXmlFile(url) {
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(initCookie(), 1000);
-            setTimeout(initLoadCookie(), 1000);
+            setTimeout(function(){initCookie()}, 1000);
+            setTimeout(function(){initLoadCookie()}, 1000);
             noneShaiXuan(".list-btn");
             //移动端监听事件
             filterItemOnclick(".list-btn");
