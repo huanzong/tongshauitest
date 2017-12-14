@@ -137,7 +137,7 @@ function readXmlFile(url) {
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
-            mobileResetButtonOnclick();
+            setTimeout(function(){mobileResetButtonOnclick()},1000);
             //}
         },
         error: function () {
@@ -151,7 +151,7 @@ function readXmlFile(url) {
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
-            mobileResetButtonOnclick();
+            setTimeout(function(){mobileResetButtonOnclick()},1000);
         }
     });
 }
