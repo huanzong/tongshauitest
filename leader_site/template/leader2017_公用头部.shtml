@@ -2,11 +2,9 @@
 	<!-- 一级导航 -->
 	<!-- logo -->
 	<div class="o_u o_df_2-12 o_xs_3-12">
-		<div class="nav-logo">
 			<a class="nav-logo" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />">
 				<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/logo.png" ignoreapd="true" />
 			</a>
-		</div>
 	</div>
 	<!-- logo END -->
 	<!-- 导航栏目 轻产品/悠生活、服务、会员-->
