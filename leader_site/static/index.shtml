@@ -332,8 +332,8 @@
 			    				<span></span>
 			    			</a>
                             <div class="info-page js_recommendPage">
-                                <span data-index='1' class="active">01</span>
-                                <span data-index='2'>02</span>
+                                <!-- <span data-index='1' class="active">01</span> -->
+                                <!-- <span data-index='2'>02</span> -->
                             </div>
                         </div>
                         <!-- 循环体 End -->
@@ -349,8 +349,8 @@
 			    				<span></span>
 			    			</a>
                             <div class="info-page js_recommendPage">
-                                <span data-index='1'>01</span>
-                                <span data-index='2' class="active">02</span>
+                                <!-- <span data-index='1'>01</span> -->
+                                <!-- <span data-index='2' class="active">02</span> -->
                             </div>
                         </div>
                     </div>
