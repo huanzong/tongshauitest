@@ -305,7 +305,7 @@ $(function() {
 
     loop: true,
     autoplay: 5000,
-
+    updateOnImagesReady: true,
     onFirstInit: function(swiper){
       var index = swiper.activeLoopIndex;
       $('.js_recommendFont').stop()
