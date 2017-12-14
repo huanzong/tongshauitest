@@ -159,7 +159,7 @@ $.jUploader({
     // 开始上传事件
 
     onUpload: function(data) {
-        console.log(data,111);
+        // console.log(data,111);
         if(data){
             globalShade2('图片上传中，请耐心等待....',4,'forever');
         }
@@ -260,7 +260,7 @@ $('.js-personalinfotab').click( function () {
     $('#getupimg').unbind().click( function () {
 
         var imgSize = jcrop_api.tellSelect();
-        console.log(imgSize);
+        // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
             type: "get",
