@@ -43,7 +43,7 @@
         <!-- 导航 End-->
         <div class="o_g">
             <div class="life-style-player js_playerBox">
-                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"></video>
+                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"  height="100%" ></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
             <div class="life-style-video-box js_styleVideoBox">
