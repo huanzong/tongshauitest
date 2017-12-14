@@ -72,16 +72,7 @@
 				</trs_viewdatas>
 				<!-- banner文字循环体 End-->
 				<!-- banner 分页 不需要循环-->
-				<div class="banner-page js_bannerSwiperPage">
-					<trs_viewdatas id="首页banner" startpos="0" num="5" >
-						<div class="page-num" data-index="<TRS_ROWNO/>">
-							<div class="line">
-								<div class="red-line"></div>
-							</div>
-							<div class="num">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div>
-						</div>
-					</trs_viewdatas>
-				</div>
+				<div class="banner-page js_bannerSwiperPage"> </div>
 				<!-- banner 分页 不需要循环 END-->
 
 			</div>

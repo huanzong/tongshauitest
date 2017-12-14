@@ -57,6 +57,20 @@ $(function() {
     }).init();
   });
 
+  var bannerHtmlStr = '';
+  for(var j=$('.o_df_1-6.banner-info').find('.js_bannerSwiperFont').length-1;j>=0;j--){
+      bannerHtmlStr += 
+      '<div class="page-num" data-index='+(j+1)+'>' +
+        '<div class="line">' +
+            '<div class="red-line"></div>' +
+        '</div>' +
+        '<div class="num">0'+ (j+1) +'</div>' +
+      '</div>'  
+  }
+
+  $('.js_bannerSwiperPage').html(bannerHtmlStr);
+
+
   var indexBannerInit = false;
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
@@ -89,7 +103,6 @@ $(function() {
       }
 
       setTimeout(function(){
-        console.log(1)
         $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(1).find('img').eq(0).height());
         $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(1).find('img').eq(0).height());
       },1000)
@@ -263,15 +276,15 @@ $(function() {
    */
   //产品推荐分页
   $('.js_recommendPage').each(function(i,n){
-    var htmlStr = '';
-    for(var j=$('.js_entrancePage1').length-1;j>=0;j--){
-      if(i==j){
-        htmlStr += '<span class="active" data-index='+(j+1)+'>0'+(j+1)+'</span>';
-      }else{
-        htmlStr += '<span data-index='+(j+1)+'>0'+(j+1)+'</span>';
+      var htmlStr = '';
+      for(var j=$('.js_recommendFont1').length-1;j>=0;j--){
+        if(i==j){
+          htmlStr += '<span class="active" data-index='+(j+1)+'>0'+(j+1)+'</span>';
+        }else{
+          htmlStr += '<span data-index='+(j+1)+'>0'+(j+1)+'</span>';
+        }
       }
-    }
-    $(this).html(htmlStr);
+      $(this).html(htmlStr);
   });
 
 	//产品推荐轮播
@@ -302,6 +315,15 @@ $(function() {
       $('.js_recommendFont1').eq(index).fadeIn(500);
     }
   });
+
+  /**
+   * 产品轮播hover停止自动
+   */
+  $('.js_swiperRecMain').hover(function(){
+    swiper.recommendSwiper.stopAutoplay()
+  }, function(){
+    swiper.recommendSwiper.startAutoplay()    
+  })
   
   //产品推荐分页
   $('.js_recommendPage span').on('click',function(){
@@ -359,7 +381,7 @@ $(function() {
   swiper.entrabceSwiper = new Swiper ('.js_swiperEntrabce', {
 
     loop: true,
-    // autoplay: 3000,
+    autoplay: 5000,
     initialSlide: 0,
     calculateHeight : true,
     autoplayDisableOnInteraction : false,//用户操作之后，不禁止autoplay
@@ -395,6 +417,15 @@ $(function() {
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
     } 
   });
+
+  /**
+   * 首页入口轮播hover停止自动
+   */
+  $('.js_swiperEntrabce').hover(function(){
+    swiper.entrabceSwiper.stopAutoplay()
+  }, function(){
+    swiper.entrabceSwiper.startAutoplay()    
+  })
 
   if (screenWidth <= 700) {
   	swiper.entrabceSwiper.params.slidesPerView = 2;
