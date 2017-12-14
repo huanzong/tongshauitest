@@ -87,12 +87,12 @@ $(function() {
           // 'margin': 0
         // }, 500);
       }
-
+    },
+    onImagesReady: function () {
       setTimeout(function(){
-        console.log(1)
         $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(1).find('img').eq(0).height());
         $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(1).find('img').eq(0).height());
-      },1000)
+      },500)
     }
   });
 
