@@ -2,6 +2,7 @@
 
 .life-style-video-box {
     position: relative;
+    z-index: 0;
     .video-cont-left {
         height: 400px;
         overflow: hidden;
@@ -1097,8 +1098,13 @@
                     font-size: 14px;
                     color: #333;
                     line-height: 20px;
-                    height: 40px;
-                     overflow:hidden;
+                    height: 20px;
+                    overflow:hidden;
+                     white-space:nowrap;
+                    //text-overflow: none;
+                    width: 200px;
+                    //white-space:nowrap;
+                    text-overflow: ellipsis;
                 }
                 span {
                     display: block;
