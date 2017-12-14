@@ -564,11 +564,16 @@ setTimeout(function(){
     }, 1000)
 
     //创造优生活模块轮播 title文字长度限制
-    textLength('.js_lifeStyleCreateTitle','14','2',$('.product-list-cont').width());
+    var lifeStyleTitle={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
+    var lifeStyleContTitle={'obj':$('.list-cont-text>p'),'fontSize':'14','lineNub':'2','width':'200' };
+
+    textLength(lifeStyleTitle);
 
     //
-    textLength('.list-cont-text>p','14','2',$('.list-cont-text>p').width());
-
+    //textLength('.list-cont-text>p','14','2' );
+//setTimeout(function(){
+    textLength(lifeStyleContTitle);
+//},400)
  //function textLength(obj,fontSize,lineNub,objWidth){
  //    var $obj = $(obj);
  //    var fontSize = fontSize;
