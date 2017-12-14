@@ -92,26 +92,7 @@ function initCookie() {
                 }
             }
 
-            //互斥不同类别的 找到所有的对比框
-            /*if (noCompareChannel != "") {
-                $(".o_u.o_df_1-2.o_xs-hide.btn").each(function () {
-                    var pType_ = $(this).attr("data-chnid");
-                    var isChecked_ = $(this).hasClass("uncontrast");
-                    if (isChecked_) {
-                        if (pType != pType_) {
-                            $(this).removeClass("uncontrast");
-                            $(this).attr("auto", "0");
-                            $(this).find("span").html("对比");
-                            $(this).find("i").removeClass("o-close").addClass("o-plus");
-                        }
-                    }
-                    if (pType != pType_ && pType != "") {
-                        $(this).addClass("lose");
-                        $(this).removeClass("js_contrast");
-                    }
 
-                });
-            }*/
         } else {
             proObjList = [];
         }
