@@ -56,6 +56,9 @@ function paginationInit(curPage,pageCount,pageSize,orderWay){
         if(3==orderWay){
             searchStateList(currPageT, pageSize,'待收货')
         }
+        if(4==orderWay){
+            notComment(currPageT, pageSize);
+        }
 
 
         pager.totalPage =  pageCount;
@@ -103,7 +106,7 @@ function searchAllList(currPageT, pageSize){
                         if(templet_orderlist[i].haveSub==0){
                             if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
                                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_10-12 o_sm_7-12 o_xs_7-12"> ';
-                                templet_addhtml += ' <h3>待付款</h3> ';
+                                templet_addhtml += ' <h3 id="js-pay'+templet_orderlist[i].orderId+'">待付款</h3> ';
                             }
                             if (templet_orderlist[i].statusDesc.indexOf("待发货") > -1) {
                                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
@@ -129,7 +132,7 @@ function searchAllList(currPageT, pageSize){
 
                             if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
                                 templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
-                                templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2" onclick="cancelOrder('+templet_orderlist[i].orderId+')">取消</a></div> ';
+                                templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red js-notPay'+templet_orderlist[i].orderId+'">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2 js-notPay'+templet_orderlist[i].orderId+'" onclick="cancelOrder(\'确定要取消订单?\','+templet_orderlist[i].orderId+')">取消</a></div> ';
                             }
 
                             templet_addhtml += ' </div> </div> ';
@@ -165,7 +168,6 @@ function searchAllList(currPageT, pageSize){
                                                     templet_addhtml += '<div class="l-float-tops"><div class="float_content"> <a href="" class="o_u o_df_11-12">下载发票</a><a href="" class="o_u o_df_11-12">查看物流</a></div><p><i></i></p></div></li></ul></div>';
                                                 }
                                             }
-                                            break;
                                         }
                                     }
 
@@ -175,8 +177,6 @@ function searchAllList(currPageT, pageSize){
                                     templet_addhtml += ' <div class="o_u o_df_8-12 o_xs_10-12 order_content_name"><h4>' + templet_ordergoods.goodsName + '</h4><span>' + templet_ordergoods.modelNo + '</span></div> ';
                                     templet_addhtml += ' <div class="o_u o_df_2-12 order_content_nub">x' + templet_ordergoods.buyNum + '</div> ';
                                 }
-
-                                templet_addhtml += '';
                                 templet_addhtml += '</div>';
                             }
                             templet_addhtml += ' </div> </div> ';
@@ -239,7 +239,6 @@ function searchAllList(currPageT, pageSize){
                                                        templet_addhtml += '<div class="l-float-tops"><div class="float_content"> <a href="" class="o_u o_df_11-12">下载发票</a><a href="" class="o_u o_df_11-12">查看物流</a></div><p><i></i></p></div></li></ul></div>';
                                                    }
                                                }
-                                               break;
                                            }
                                        }
 
@@ -249,10 +248,10 @@ function searchAllList(currPageT, pageSize){
                                        templet_addhtml += ' <div class="o_u o_df_8-12 o_xs_10-12 order_content_name"><h4>' + templet_orderlist[i].subOrders[j].orderGoods[k].goodsName + '</h4><span>' + templet_orderlist[i].subOrders[j].orderGoods[k].modelNo + '</span></div> ';
                                        templet_addhtml += ' <div class="o_u o_df_2-12 order_content_nub">x' + templet_orderlist[i].subOrders[j].orderGoods[k].buyNum + '</div> ';
                                    }
-                                   templet_addhtml += '';
                                    templet_addhtml += '</div>';
                                }
                             }
+                            templet_addhtml += ' </div> </div> ';
                         }
 
                     }
@@ -336,7 +335,7 @@ function searchStateList(currPageT, pageSize,orderlist){
 
                 if('待付款'==orderlist){
                     templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
-                    templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2">取消</a></div> ';
+                    templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2" onclick="cancelOrder(\'确定要取消订单?\','+templet_orderlist[i].orderId+')">取消</a></div> ';
                 }
 
                 templet_addhtml += ' </div> </div> ';
@@ -405,7 +404,7 @@ $('.js_orderList>li').click(function(){
     }
     //待评论
     if(3==index){
-        memberOrderNot();
+        notComment(1,10);
     }
 
 });
@@ -518,7 +517,7 @@ function getQueryString(name) {
 }
 
 //未评论订单
-function notComment(currPageT, pageSize,orderlist){
+function notComment(currPageT, pageSize){
 
     var templet_date={
         "pageNo": currPageT,
@@ -527,29 +526,142 @@ function notComment(currPageT, pageSize,orderlist){
     };
 
     $.ajax({
-        url: siteConfig.userUrl + "/comment/orderComment/getOrderListByCommSta/",
+        url: siteConfig.userUrl + "/interaction-comment/comment/orderComment/getOrderListByCommSta/",
         type:'get',
         data: templet_date,
         login: true,
         success_cb: function (data) {
-            //TODO 调接口查询订单详情
+            if(!data.data.entityCount==0){
+                $(".js-evaluate").addClass('member-nub-round');
+                $(".js-evaluate").html(data.data.entityCount);
+            }else{
+                $(".js-evaluate").removeClass('member-nub-round');
+                $(".js-evaluate").html('');
+                memberOrderNot();
+                return;
+            }
+            var allPageCount = data.data.pageCount;
+            var currentPageNo = data.data.pageNo;
+
+            var templet_notCommentOrder="";
+            for(var i=0;i<data.data.entities.length;i++){
+                if(templet_notCommentOrder==''){
+                    templet_notCommentOrder+=data.data.entities[i].orderId;
+                }else {
+                    templet_notCommentOrder+=','+data.data.entities[i].orderId;
+                }
+            }
+            $.ajax({
+                url: siteConfig.userUrl + "/buy/order/order-front/query/",
+                data: {orderIds:templet_notCommentOrder},
+                login: true,
+                success_cb: function (dataSuccess) {
+                    var templet_addhtml = '';
+                    //循环未评论订单，为未评论订单的商品赋值
+                    for(var i=0;i<data.data.entities.length;i++){
+                        var templet_notComment=data.data.entities[i];
+                        //循环查询出来的订单
+                        for(var j=0;j<dataSuccess.data.length;j++){
+                            if(templet_notComment.orderId==dataSuccess.data[j].orderId){
+                                var templet_orderList=dataSuccess.data[j];
+                                templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
+                                var templet_time = removeMsec(templet_orderList.orderTime);
+                                templet_addhtml += ' <div class="o_u"><p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>' + templet_time + '</span></p>';
+                                templet_addhtml += ' <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>' + templet_orderList.orderNo + '</i></p> ';
+                                templet_addhtml += ' <p class="o_u o_md_1-2  o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥' + templet_orderList.orderPrice + '</i></p></div> ';
+                                templet_addhtml += ' <a href="/order/orderdetail.shtml?orderId='+templet_orderList.orderId+'">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
+                                templet_addhtml += ' </div> </div> ';
+
+                                //循环未评价接口出来的商品取商品信息
+                                for(var k=0;k<templet_notComment.goodsCommentVOList.length;k++){
+                                    var templet_goodsComment=templet_notComment.goodsCommentVOList[k];
+                                    //循环商品信息
+                                    for(var m=0;m<templet_orderList.orderGoods.length;m++){
+                                        if(templet_goodsComment.businessId==templet_orderList.orderGoods[m].modelNo){
+                                            var templet_orderGoods=templet_orderList.orderGoods[m];
+                                            var templet_docpuburl = templet_orderGoods.proUrl;
+                                            var templet_docgoodsPic = templet_orderGoods.goodsPic;
+                                            var templet_picUrl=goodsPicCut(templet_docpuburl,templet_docgoodsPic);
+                                            templet_addhtml += ' <div class="o_u o_df_11-12 order_content3_box"><div class="order-title-in-orange"> <h3 class="title_hide">待评价</h3> </div> <div class="o_u o_df_2-12 order_content_img"> ';
+                                            templet_addhtml += ' <img src="'+templet_picUrl+'" alt="" width="80px" height="80px;"></div> ';
+                                            templet_addhtml += ' <div class="o_u o_df_5-12 o_sm_8-12 o_xs_10-12 order_content_name"><h4>' + templet_orderGoods.goodsName + '</h4><span>' + templet_orderGoods.modelNo + '</span></div> ';
+                                            templet_addhtml += ' <div class="o_u o_df_2-12 order_content_nub">x' + templet_orderGoods.buyNum + '</div> ';
+                                            templet_addhtml += '<div class="o_u o_df_3-12 o_sm_2-2 o_xs_2-2 order_content_btns"> <ul class="o_u o_df_2-2">';
+                                            if(templet_goodsComment.commentStatus==0){
+                                                templet_addhtml += ' <li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12"> <a href="javascript:;"  class="sm-hide" >查看评价</a> <a href="javascript:;" class="l-btn-sm l-btn-line2 see-evaluate  o_u o_df_8-12 o_sm_11-12 o_xs_11-12" data-alt="1">查看评价</a> </li>';
+
+                                            }else{
+                                                templet_addhtml += '<li class="o_u o_df_2-2 o_sm_3-12 o_xs_3-12"><a href="javascript:;" class="l-btn-sm l-btn-orange  o_u o_df_8-12 o_sm_11-12 o_xs_11-12">评价</a> </li>';
+                                            }
+                                            templet_addhtml += '<li class="o_u o_df_4-2  sm-hide"> <a href="javascript:;" >查看物流</a></li>';
+                                            templet_addhtml += '<li class="o_u o_df_2-2 sm-hide "><a href="javascript:;">下载发票</a></li>';
+                                            templet_addhtml += ' <li class=" o_u o_df_2-2 o_sm_4-12 o_xs_4-12 "><a href="javascript:;" class="sm-hide">申请售后</a><a href="javascript:;" class="l-btn-sm l-btn-line2 o_u o_df_2-2 check_service">申请售后</a></li>';
+                                            templet_addhtml += '<li class="o_u o_df_2-2 o_sm_5-12 o_xs_3-12 order_list_more"   data-click=\'1\'><a href="javascript:;" class="js_orderListMove">更多<i class="iconfont icon-arrow-line-down"></i></a>';
+                                            templet_addhtml += '<div class="l-float-tops"><div class="float_content"> <a href="" class="o_u o_df_11-12">下载发票</a><a href="" class="o_u o_df_11-12">查看物流</a></div><p><i></i></p></div></li></ul></div></div>';
+
+                                        }
+                                    }
+                                }
+                                templet_addhtml += '</div></div>';
+                            }
+                        }
+                    }
+                    templet_addhtml += '<div class=\'l-pagination-box member-share-pagination-box\'></div>';
+                    $(".js-orderAllList").html(templet_addhtml);
+                    //-------------------分页
+                    paginationInit(currentPageNo, allPageCount, pageSize,4);
+                    //分页结束
+                }
+            });
         }
     })
 }
 
-function cancelOrder(orderId) {
-    var templet_date={
-        "orderStatus":1
-    };
-    
-    $.ajax({
-        url: siteConfig.userUrl + "/buy/order/order-front/list/",
-        data: JSON.stringify(templet_date),
-        applicationType: true,
-        login: true,
-        success_cb: function (data) {
+//点击弹窗的确认与取消按钮
+$('.js-alertClose').unbind().click(function(){
+    $('.js_landClose').click();
+})
 
-        }
+
+//自定义取消弹窗
+function cancelOrder(alerttext,orderId){
+    $('.js_landShade').show();
+    $('.js_landContBox').show();
+    $("body").css({overflow:"hidden"});
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+    var alertHeight = $('.js_landContBox').height();
+    var alertWidth = $('.js_landContBox').width();
+    $('.js_landContBox').css({'top':(windowHeight-alertHeight)/2+'px','left':(windowWidth-alertWidth)/2+'px'})
+
+    $('.js-landText').html(alerttext);
+    $('.js_landClose').click(function(){
+        $('.js_landContBox').hide();
+        $('.js_landShade').hide();
+        $("body").css({overflow:"auto"});
+        return false;
     });
+    //$('.js_alertClose').click(function(){
+    //
+    //})
+    $('.js-alertTrue').unbind().click(function(){
+        $('.js_landClose').click();
+        $.ajax({
+            url: siteConfig.userUrl + "/buy/order/order-front/cancel/",
+            data: {"orderId":orderId},
+            login: true,
+            csrf:true,
+            success_cb: function (data) {
+                if(data.isSuccess==true){
+                    if($('.js_orderList>li').eq(0).hasClass('cur')){
+                        $("#js-pay"+orderId).addClass('title_disable').html("已关闭");
+                        $(".js-notPay"+orderId).hide();
+                    }
+                    if($('.js_orderList>li').eq(1).hasClass('cur')){
+                        window.location.href ='/order?way=pay';
+                    }
+                }
+            }
+        });
+    })
 }
-

@@ -200,7 +200,7 @@
 
   }
   var templet_Arry=[
-      <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数">
+      <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
       [
       <TRS_VIEWFIELDS>
       <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">

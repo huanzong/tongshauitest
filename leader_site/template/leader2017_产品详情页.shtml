@@ -365,7 +365,7 @@
                                     <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
                                     <div class="swiper-slide swiper-slide-active">
                                         <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" />
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>">
                                         </a>
                                     </div>
                                     </TRS_XAPPENDIXS>
@@ -373,11 +373,11 @@
                                     <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>" />
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
                                         </a>
                                     </div>
                                     </TRS_XAPPENDIXS>
-                                    
+
                                 </div>
                             </div>
                             <!-- 轮播 END -->
@@ -385,7 +385,7 @@
                             <div class="swiper-pagination js_bannerSwiperPage">
                                 <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0'>
                                 <div class="pagination-box" data-index=<TRS_ROWNO/>>
-                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>" />
+                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
                                 </div>
                                 </TRS_XAPPENDIXS>
                             </div>
@@ -664,7 +664,7 @@
                             <div class="o_u o_df_1-12"></div>
                         </div>
                         <div class="o_u o_df_2-2 detail-fontpoint-bottom js_pointText">
-                            
+
                         </div>
                     </div>
                     <div class="o_u o_df_1-12"></div>
@@ -919,7 +919,7 @@
                                     </div>
                                 </div>
                                 </TRS_CONDITION>
-                                
+
                             </div>
                         </div>
                         <div class="swiper-prev js_fontSwiperPrev">
@@ -930,23 +930,20 @@
                         </div>
                     </div>
                     <div class="o_u o_df_2-2 detail-fontpoint-bottom o_df-hide o_md-show o_sm-show o_xs-show js_pointText">
-                        
+
                     </div>
                 </div>
                 <div class="o_clear"></div>
             </div>
             <!-- 文字卖点 END -->
             <!-- 场景展示 -->
-            <div class="o_g">
+            <div class="o_g js_cpcjt">
                 <div class="detail-scene">
                     <div class="swiper-container js_sceneSwiper">
                         <div class="swiper-wrapper">
-                            <!--<TRS_ViewData Field="cpcjt">确保 Outline 字段被载入</TRS_ViewData>-->
-                            <TRS_RELNEWS id="cpcjt">
                             <div class="swiper-slide">
-                                <img class="js_scenePicture" src="" df="<trs_viewdata field='cpcjt_pc'/>" xs="<trs_viewdata field='cpcjt_yd'/>" sm="<trs_viewdata field='cpcjt_yd'/>" md="<trs_viewdata field='cpcjt_yd'/>" alt="" />
+                                <img class="js_scenePicture" src="" df="" xs="" sm="" md="" alt="" />
                             </div>
-                            </TRS_RELNEWS>
 
                         </div>
                     </div>
@@ -959,13 +956,13 @@
             <!-- 核心卖点-->
             <div class="o_g">
                 <!--<TRS_ViewData Field="mdjs_gw">确保 Outline 字段被载入</TRS_ViewData>-->
+                <TRS_ViewData Field="mdjs_gw">
                 <TRS_CONDITION  CONDITION='@mdjs_gw' OPERATOR="blank" NOT='TRUE'>
                 <div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
                 <div class="o_u o_df_4-12 bg-f8">
                     <div class="detail-sellpoint js_oHerlSize">
                         <div class="swiper-container js_swiperSellPoint">
                             <div class="swiper-wrapper">
-
                                 <TRS_RELNEWS id="mdjs_gw" num="5">
                                 <div class="swiper-slide">
                                     <img src="<trs_viewdata field='mdpt'/>" />
@@ -998,6 +995,7 @@
                     </a>
                 </div>
                 </TRS_CONDITION>
+                </TRS_ViewData>
             </div>
             <!-- 核心卖点 -->
             <!-- 详情展示 -->
@@ -1060,7 +1058,7 @@
                                 <TRS_CONDITION  CONDITION='@fjxx' NOT='TRUE' OPERATOR="blank">
                                 <span class="param-attachment-title">附件</span>
                                 <span class="param-attachment-line o_xs-hide"></span>
-                               
+
                                 </TRS_CONDITION>
                                 </trs_viewdata>
                             </div>
@@ -1069,7 +1067,7 @@
                             <div class="o_g">
                                 <div class="o_u o_df_1-5 o_df-hide o_lg-show o_md-show param-basic-bg"></div>
                                 <div class="o_u o_df_2-2 o_lg_4-5 o_md_4-5 param-basic-con">
-                                    <TRS_XVIEWFIELDGROUPS STARTPOS="2" PARENTNAME="规格参数" NUM='1'>
+                                    <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数" NUM='1'>
                                     <div class="param-basic-title"><TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP></div>
                                     <div class="o_u o_df_2-2">
                                         <div class="param-basic-box">
@@ -1139,7 +1137,7 @@
                                 </TRS_DOCUMENTS>
                                 </trs_channels>
 
-                                
+
                             </div>
                         </div>
                         <!-- 如果需要导航按钮 -->
@@ -1172,12 +1170,12 @@
                             </div>
                         </div>
 
-                        
+
 
                         </TRS_DOCUMENTS>
                         </trs_channels>
-                        
-                    </div>   
+
+                    </div>
                 </div>
                 <div class="o_u o_df_1-6"></div>
             </div>
@@ -1374,15 +1372,17 @@
                         展开<i class="iconfont icon-arrow-line-up"></i>
                     </div>
                 </div>
-                <ul class="compare-list js_compareBox">
-                    <li>
-                        <div class="compare-link compareButton">
-                            <a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
-                        </div>
-                        <div class="compare-link">
-                            <a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
-                        </div>
-                    </li>
+                <ul >
+                    <div class="o_g compare-list js_compareBox">
+                        <li class="o_u o_df_1-5 o_df-right compare-button-clear">
+                            <div class="compare-link compareButton">
+                                <a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
+                            </div>
+                            <div class="compare-link">
+                                <a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
+                            </div>
+                        </li>
+                    </div>
                 </ul>
             </div>
             <!-- 产品对比 END -->
@@ -1450,7 +1450,7 @@
     <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品对比详情页json" EXT="json" ></TRS_PAGEGENERATE>-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品口碑详情页" EXT="comment" ></TRS_PAGEGENERATE>-->
-    <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品参数详情页" EXT="parameter" ></TRS_PAGEGENERATE>-->  
+    <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品参数详情页" EXT="parameter" ></TRS_PAGEGENERATE>-->
     <script type="text/javascript" src="../site5/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
@@ -1468,6 +1468,7 @@
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
         var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
+        var templet_cpcjt='<TRS_VIEWDATAAPPENDIXS FIELD="cpcjt"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//产品场景图
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
@@ -1481,14 +1482,32 @@
             $(".js_detail-foldover").hide();//电商拉页隐藏
         }
         var templet_buy=$(".particulars-buy-con").find("a").length;
-        if(templet_buy==""||templet_buy==null){
+        if(templet_buy==""||templet_buy==null){//购买电商隐藏
             $(".particulars-buy-tit").hide();
         }
 
+        if(templet_cpcjt ==""||templet_cpcjt==null){//产品场景图
+            $(".js_cpcjt").hide();
+        }else{
+            templet_cpcjt=templet_cpcjt.split("http://");
+            $(".js_cpcjt").find("img").attr("df","http://"+templet_cpcjt[1]);
+            if(templet_cpcjt[2]==""||templet_cpcjt[2]==null){
+                $(".js_cpcjt").find("img").attr("md","http://"+templet_cpcjt[1]);
+                $(".js_cpcjt").find("img").attr("sm","http://"+templet_cpcjt[1]);
+                $(".js_cpcjt").find("img").attr("xs","http://"+templet_cpcjt[1]);
+            }else{
+                $(".js_cpcjt").find("img").attr("md","http://"+templet_cpcjt[2]);
+                $(".js_cpcjt").find("img").attr("sm","http://"+templet_cpcjt[2]);
+                $(".js_cpcjt").find("img").attr("xs","http://"+templet_cpcjt[2]);
+            }
 
-    </script> 
-    <script type="text/javascript" src="../site5/templet_product_detail.js"></script> 
-    
+        }
+
+
+
+    </script>
+    <script type="text/javascript" src="../site5/templet_product_detail.js"></script>
+
 </body>
 <!--<TRS_APPENDIX INDEX="0" MODE='PIC' WIDTH='200'/>-->
 <!--<TRS_APPENDIX INDEX="-1" MODE='PIC' WIDTH='1000'/>-->
