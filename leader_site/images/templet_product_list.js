@@ -569,6 +569,9 @@ function mobileResetButtonOnclick() {
         $(".list-btn.active").each(function (e, n) {
             $(this).removeClass("active");
         });
+        $(".list-btn.disabled").each(function (e, n) {
+            $(this).removeClass("disabled");
+        });
     });
 }
 
