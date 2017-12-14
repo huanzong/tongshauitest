@@ -90,8 +90,8 @@ $(function() {
     },
     onImagesReady: function () {
       setTimeout(function(){
-        $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(1).find('img').eq(0).height());
-        $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide').eq(1).find('img').eq(0).height());
+        $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
+        $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
       },500)
     }
   });
