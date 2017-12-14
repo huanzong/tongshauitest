@@ -103,7 +103,7 @@
             <!-- 商品列表-表头 END -->
 
             <!-- 商品列表 -->
-            <div class="o_g">
+            <div class="o_g trolley-pro-list">
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
                     <!-- 优惠券商品 -->
@@ -115,14 +115,18 @@
                                         【唤醒初夏】套购满额送豪礼
                                     </div>
                                     <div class="coupon-info-des">
-                                        <span class="info-des-icon">【满减】</span>
-                                        <span class="info-des-det">
-                                            已满2000，可使用2000减1000满减券
-                                        </span>
-                                        <span class="info-des-icon">【满减】</span>
-                                        <span class="info-des-det">
-                                            已满2000，可使用2000减1000满减券
-                                        </span>
+                                        <p>
+                                            <span class="info-des-icon">【满减】</span>
+                                            <span class="info-des-det">
+                                                已满2000，可使用2000减1000满减券
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span class="info-des-icon">【满减】</span>
+                                            <span class="info-des-det">
+                                                已满2000，可使用2000减1000满减券
+                                            </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +217,7 @@
                             <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
                                 <div class="trolley-price-total">￥89034</div>
                             </div>
-                            <div class="o_u o_df_1-10 o_xs-hide">
+                            <div class="o_u o_df_1-10 o_xs-hide o_df-right">
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
                                 <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
@@ -272,7 +276,7 @@
                             <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
                                 <div class="trolley-price-total">￥89034</div>
                             </div>
-                            <div class="o_u o_df_1-10">
+                            <div class="o_u o_df_1-10 o_df-right">
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
                                 <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
@@ -357,7 +361,7 @@
                             <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
                                 <div class="trolley-group-price">￥890.34</div>
                             </div>
-                            <div class="o_u o_df_1-10 trolley-group-oppo">
+                            <div class="o_u o_df_1-10 trolley-group-oppo o_df-right">
                                 <a href="javascript:;" class="trolley-delete">删除</a>
                                 <a href="javascript:;" class="trolley-edit js_edit" data-oppo="edit">编辑</a>
                             </div>

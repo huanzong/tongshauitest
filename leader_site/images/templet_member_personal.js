@@ -344,12 +344,23 @@ $(function(){
         var templet_loginName=$.trim($('#js_loginName').val());
         var templet_sex=$.trim($('input[name="cc"]:checked').attr("data"));
         var templet_birthday=$.trim($('.js_Date').val());
+
         var templet_provinceName=$.trim($("#js_save  option:selected").text());
         var templet_provinceId=$.trim($("#js_save  option:selected").val());
         var templet_city=$.trim($("#js_city  option:selected").text());
         var templet_cityId=$.trim($("#js_city  option:selected").val());
         var templet_areaName=$.trim($("#js_area  option:selected").text());
         var templet_areaId=$.trim($("#js_area  option:selected").val());
+        if(templet_provinceName.indexOf("请选择")>-1){
+            templet_provinceName='';
+        }
+        if(templet_city.indexOf("请选择")>-1){
+            templet_city='';
+        }
+        if(templet_areaName.indexOf("请选择")>-1){
+            templet_areaName='';
+        }
+
 
         if( $('.js_personalistwrongbox_user').hasClass('personalist-wrong-box') || templet_loginName==''){
             return;
