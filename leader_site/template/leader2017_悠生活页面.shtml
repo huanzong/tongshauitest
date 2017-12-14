@@ -468,7 +468,7 @@
                             </div>
                         </div>
                         <div id="series_txt" class="product-list-cont o_u o_sm_2-2 o_xs_2-2">
-                            <trs_viewdatas id="系列产品推荐" num="5" startpos="0">
+                            <trs_viewdatas id="系列产品推荐">
                                 <p class="js_lifeStyleCreateTitle">
                                     <trs_viewdata field='series_txt'/>
                                 </p>
