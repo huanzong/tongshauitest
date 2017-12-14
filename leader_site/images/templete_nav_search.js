@@ -170,7 +170,12 @@ function searchBoxWord(word) {
             async: true,
             success: function (data) {
                 $('.js_quick_search').remove();
-                $('.js_searchBox_root').html(data).find('.search-list-key').show();
+                if (screenWidth > 1199) {
+                    data = '<ul class="search-list-key">' + data + '</ul>';
+                    $('.js_searchBox_root').html(data).find('.search-list-key').show();
+                }else{
+                    $('.js_searchBox_listShow').html(data);
+                }
             },
             error: function (data) {
             }
