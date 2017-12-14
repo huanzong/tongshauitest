@@ -1016,6 +1016,7 @@
 	}
     .product-list-title {
         border-bottom: 1px solid #d8d8d8;
+        //padding-right: 150px;
         margin: 25px 0 0 0;
         span {
             font-size: 16px;
@@ -1027,10 +1028,17 @@
                 display: inline-block;
                 width: 105px;
                 text-align: center;
-
                 height: 40px;
                 font-size: 16px;
                 color: #999;
+                @media (min-width: 576px) and (max-width: 700px) {
+                    /* sm*/
+                    width: 165px;
+                }
+                @media (max-width: 575px) {
+                    /* xs*/
+                    width: 100px;
+                }
             }
             .cur {
                 color: red;
@@ -1042,10 +1050,37 @@
 
     .product-list-cont {
         overflow: hidden;
+        width: 600px;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            /* lg*/
+            width: 515px;
+
+        }
+        @media (min-width: 701px) and (max-width: 991px) {
+            /* md*/
+            width: 515px;
+
+
+
+        }
+        @media (min-width: 576px) and (max-width: 700px) {
+            /* md*/
+            //width: 580px;
+            width: 100% !important;
+
+        }
+
+
+
         >p {
             font-size: 14px;
             color: #333;
-            padding: 25px 0 50px 0;
+            margin: 25px 0 40px 0;
+            line-height: 22px;
+            height: 45px;
+            overflow: hidden;
+
         }
         ul {
             .list-cont-photo {
@@ -1061,6 +1096,8 @@
                     font-size: 14px;
                     color: #333;
                     line-height: 20px;
+                    height: 40px;
+                     overflow:hidden;
                 }
                 span {
                     display: block;
@@ -1117,7 +1154,14 @@
         /* md*/
         height: 500px;
         background-size: auto 100% ;
+        .product-list-title{
+            width: 515px;
+            overflow: hidden;
 
+            li{
+
+            }
+        }
     }
     @media (min-width: 576px) and (max-width: 700px) {
         /* sm*/
@@ -1140,7 +1184,12 @@
             padding: 80px 0 0 0;
             position: relative;
             height: auto; // min-height: 1140px;
-        }
+            @media (min-width: 576px) and (max-width: 700px) {
+              >div{
+                  text-align: center;
+              }
+            }
+            }
         .product-list-title {
             >span {
                 text-align: center;
@@ -1242,4 +1291,63 @@
 @media (max-width: 575px) {
     /* xs*/
     display: none;
+}
+.product-list-title-box{
+    width: 480px;
+    overflow: hidden;
+    ul{
+        height: 41px !important;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+        width: 375px;
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        width: 380px;
+
+    }
+}
+.life-style-create-cont{
+    width: 600px;
+    @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+        width: 515px;
+
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        width: 515px;
+
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+
+    }
+}
+
+
+.create-title-img {
+    width: 475px;
+    @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        width: 380px;
+
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+        width: 380px;
+        margin: 0 auto;
+
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+        width: 300px;
+        margin: 0 auto;
+
+    }
 }

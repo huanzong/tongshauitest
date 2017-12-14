@@ -97,7 +97,7 @@ function initLoadCookie() {
         if (proObjList.length > 0) {
             for (var i = 0; i < proObjList.length; i++) {
                 var product = proObjList[i];
-                compareHtml += '<li>' +
+                compareHtml += '<li class="o_u o_df_1-5">' +
                     '<div class="compare-product-img" id="' + product.id + '" data-chanid="' + product.channelid + '">' +
                     '<a href="'+product.url+'"><img src="' + product.img + '"></a>' +
                     '</div>' +
@@ -167,7 +167,7 @@ window.add_compare_flyOut_item = function ($obj) {
         var channelId = $obj.attr('data-chnid');
         var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");
 
-        var compareHtml = '<li>' +
+        var compareHtml = '<li class="o_u o_df_1-5">' +
             '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
             '<a href="'+proUrl+'"><img src="' + proImg + '"></a>' +
             '</div>' +
