@@ -28,12 +28,10 @@ $('.js_searchHistory').bind('input propertychange', function () {
     } else {
         $('.js_searchBoxQuick_lg').show();
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
-        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        $('.js_searchBox_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
-// }).on('blur', function () {
-//     $('.js_searchBox').hide();
-//     $('.js_searchBoxQuick_lg').show();
+
 }).on('focus', function () {
     if (screenWidth > 1199) {
         $('.js_searchBox_xl').show();
@@ -46,17 +44,12 @@ $('.js_searchHistory').bind('input propertychange', function () {
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBox_xl').html(searchBoxInput("xl"));
-        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        $('.js_searchBox_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
 });
 
 $('body').on('click', function (e) {
-    // if($(e.target).hasClass('js_searchHistory')){
-    //     return false;
-    // }
-    // $('.js_searchBox').hide();
-    // $('.js_searchBoxQuick_lg').show();
     if (!$(e.target).hasClass('js_userMsgXs')) {
         $('.js_usermsg_xs').hide();
     }
@@ -67,8 +60,6 @@ $('body').on('click', function (e) {
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
 });
-
-// $(".js_searchHistory").off( "click", "**" );//没有值时，xl搜索栏闪现bug
 
 //搜索--lg
 $('.js_search_lg').on('click', function () {
