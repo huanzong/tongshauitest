@@ -579,6 +579,8 @@ setTimeout(function(){
                 loop: true,
                 autoplay: 5000,
                 simulateTouch: false,
+                   slidesPerView:2,
+                   slidesPerGroup : 2,
                 cssWidthAndHeight: true,
                 autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
                 onSlideChangeStart: function (swiper) {
