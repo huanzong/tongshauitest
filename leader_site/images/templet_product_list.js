@@ -122,22 +122,22 @@ function readXmlFile(url) {
             //移动端筛选项初始化
             $(".layer-list").html(mobileHtml);
             //if (document.body.offsetWidth >= 1200 ) {
-            setTimeout(noneShaiXuan(".sole-type"), 1000);
+            setTimeout(function(){noneShaiXuan(".sole-type")}, 1000);
             //noneShaiXuan(".sole-type")
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(initCookie(), 1000);
+            setTimeout(function(){initCookie()}, 1000);
             //initCookie()
-            setTimeout(initLoadCookie(), 1000);
+            setTimeout(function(){initLoadCookie()}, 1000);
             //initLoadCookie()
             // }else{
-            setTimeout(noneShaiXuan(".list-btn"), 1000);
+            setTimeout(function(){noneShaiXuan(".list-btn")}, 1000);
             //noneShaiXuan(".list-btn")
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
-            mobileResetButtonOnclick();
+            setTimeout(function(){mobileResetButtonOnclick()},1000);
             //}
         },
         error: function () {
@@ -145,13 +145,13 @@ function readXmlFile(url) {
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(initCookie(), 1000);
-            setTimeout(initLoadCookie(), 1000);
+            setTimeout(function(){initCookie()}, 1000);
+            setTimeout(function(){initLoadCookie()}, 1000);
             noneShaiXuan(".list-btn");
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
-            mobileResetButtonOnclick();
+            setTimeout(function(){mobileResetButtonOnclick()},1000);
         }
     });
 }
@@ -370,7 +370,7 @@ function filterItemOnclick(onclickClass) {
 
     $(onclickClass).click(function () {
 
-        if ($(this).hasClass("disable")) {
+        if ($(this).hasClass("disabled")) {
             return;
         }
         //每组筛选项都是单选  =====取消选中筛选项
@@ -461,12 +461,12 @@ function displayFilterItem(filterItemList, currentClass) {
             if (isShow == "true") {
                 //互斥操作
                 var query = filterObj.query;
-                $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').removeClass("disable");
+                $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').removeClass("disabled");
                 //$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').on("click",onclickCommentFunction(currentClass));
             } else {
                 //互斥操作
                 if (!$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').hasClass("active")) {
-                    $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').addClass("disable");
+                    $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').addClass("disabled");
                     //$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').off("click");
                 }
             }
@@ -541,9 +541,9 @@ function isLastFilterItemSelect(currentClass) {
     var filterItemSelectLength = $(currentClass + ".active");
     //如果选中的
     if (filterItemSelectLength.length <= 0) {
-        var filterItemDisableLength = $(currentClass + ".disable");
+        var filterItemDisableLength = $(currentClass + ".disabled");
         filterItemDisableLength.each(function (e, n) {
-            $(this).removeClass("disable");
+            $(this).removeClass("disabled");
         });
         //pc端初始化
         //filterItemOnclick(currentClass);
@@ -568,6 +568,9 @@ function mobileResetButtonOnclick() {
          */
         $(".list-btn.active").each(function (e, n) {
             $(this).removeClass("active");
+        });
+        $(".list-btn.disabled").each(function (e, n) {
+            $(this).removeClass("disabled");
         });
     });
 }
