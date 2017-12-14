@@ -370,7 +370,7 @@ function filterItemOnclick(onclickClass) {
 
     $(onclickClass).click(function () {
 
-        if ($(this).hasClass("disable")) {
+        if ($(this).hasClass("disabled")) {
             return;
         }
         //每组筛选项都是单选  =====取消选中筛选项
@@ -461,12 +461,12 @@ function displayFilterItem(filterItemList, currentClass) {
             if (isShow == "true") {
                 //互斥操作
                 var query = filterObj.query;
-                $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').removeClass("disable");
+                $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').removeClass("disabled");
                 //$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').on("click",onclickCommentFunction(currentClass));
             } else {
                 //互斥操作
                 if (!$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').hasClass("active")) {
-                    $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').addClass("disable");
+                    $(currentClass).filter('[query="(' + filterItemObj.query + ')"]').addClass("disabled");
                     //$(currentClass).filter('[query="(' + filterItemObj.query + ')"]').off("click");
                 }
             }
@@ -541,9 +541,9 @@ function isLastFilterItemSelect(currentClass) {
     var filterItemSelectLength = $(currentClass + ".active");
     //如果选中的
     if (filterItemSelectLength.length <= 0) {
-        var filterItemDisableLength = $(currentClass + ".disable");
+        var filterItemDisableLength = $(currentClass + ".disabled");
         filterItemDisableLength.each(function (e, n) {
-            $(this).removeClass("disable");
+            $(this).removeClass("disabled");
         });
         //pc端初始化
         //filterItemOnclick(currentClass);
