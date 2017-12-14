@@ -79,6 +79,15 @@
                     </div>
                     <a href="javascript:;" class="o_u o_df_3-12 o_lg_2-12 video-cont-right js_styleVideoContRight" data-alt="false"><img src="images/style_life_video_right.png" alt=""></a>
                 </div>
+                <div class="o_u o_df_12-12 life-video-back-border">
+                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
+                    <div class="o_u o_df_2-12 sm-hide"></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
+                    <div class="o_u o_df_2-12  o_xs_4-12 back-gray "></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
+                    <div class="o_u o_df_2-12 sm-hide"></div>
+                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
+                </div>
             </div>
 
             <!-- 优生活 start-->
