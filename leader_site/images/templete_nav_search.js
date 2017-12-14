@@ -171,8 +171,7 @@ function searchBoxWord(word) {
             success: function (data) {
                 $('.js_quick_search').remove();
                 if (screenWidth > 1199) {
-                    data = '<ul class="search-list-key">' + data + '</ul>';
-                    $('.js_searchBox_root').html(data).find('.search-list-key').show();
+                    $('.js_search_list_bold').html(data).find('.search-list-key').show();
                 }else{
                     $('.js_searchBox_listShow').html(data);
                 }

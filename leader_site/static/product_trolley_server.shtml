@@ -106,7 +106,7 @@
             <!-- 商品列表-表头 END -->
 
             <!-- 商品列表 -->
-            <div class="o_g">
+            <div class="o_g trolley-pro-list">
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
                     <!-- 购物车商品列表：数据循环 -->
@@ -114,7 +114,7 @@
                     <!-- 购物车商品列表：数据循环 END -->
 
                     <!-- 单个商品-有货 -->
-                    <div class="trolley-prolist">
+                    <!-- <div class="trolley-prolist">
                         <div class="o_g trolley-product">
                             <div class="o_u o_df_3-5 o_md_1-2 o_xs_2-2">
                                 <div class="l-checkbox trolley-product-check">
@@ -157,10 +157,10 @@
                                 <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 单个商品-有货 END -->
                     <!-- 单个商品-无货 -->
-                    <div class="trolley-prolist trolley-pro-none">
+                    <!-- <div class="trolley-prolist trolley-pro-none">
                         <div class="o_g trolley-product">
                             <div class="o_u o_df_3-5 o_md_1-2">
                                 <div class="trolley-product-uncheck">
@@ -195,7 +195,7 @@
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 单个商品-无货 END -->
 
                 </div>
@@ -222,7 +222,7 @@
                 </div>
                 <div class="o_u o_df_2-12 o_lg_3-12 o_md_3-12 o_sm_1-4 o_xs_1-4">
                     <div class="trolley-footer-btn">
-                        <a href="javascript:;" class="l-btn-lg l-btn-red">去结算</a>
+                        <a href="javascript:;" class="l-btn-lg l-btn-red js-pay">去结算</a>
                     </div>
                 </div>
             </div>
@@ -239,7 +239,7 @@
     <p style="display:none">
         <textarea id="template-items">
             {#foreach $T as item}
-            <div class="trolley-prolist">
+            <div class="trolley-prolist" cartId="{$T.item.skuShowVO.cartGoodId}" inSkuCode="{$T.item.skuShowVO.inSkuCode}">
                 <div class="o_g trolley-product">
                     <div class="o_u o_df_3-5 o_md_1-2 o_xs_2-2">
                         <div class="l-checkbox trolley-product-check">
