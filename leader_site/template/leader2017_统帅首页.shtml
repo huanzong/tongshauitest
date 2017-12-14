@@ -309,7 +309,7 @@
 															<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic3'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%" />
 														</a>
 													</div>
-													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
+													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 17%;vertical-align: bottom;">
 														<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="28" TRUNCATEDFLAG=""/></h3>
 														<p><trs_viewdata field='f_title' num="100" TRUNCATEDFLAG=""/></p>
 														<a class="info-more"  href="<trs_viewdata field='link'/>" target="_blank">
