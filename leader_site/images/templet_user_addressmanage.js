@@ -251,7 +251,6 @@ $("#js_area").change(function(){
 })
 
 //新增地址
-
 function saveUserAddress(){
     if(templet_isSubmiting){//正在提交
         globalShade2('正在提交，请稍后','3');
@@ -275,6 +274,7 @@ function saveUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
+    var roadCodeVal=$.trim($("#js_road option:selected").attr("roadCode"));
 
     if(phonequhaoVal&&phoneVal){
         var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
@@ -293,6 +293,7 @@ function saveUserAddress(){
         "cityId":cityCodeVal,
         "regionId":areaCodeVal,
         "regionDetail":addressVal,
+        "streetId":roadCodeVal,
         "telPhone":telPhoneVal
     }
     templet_isSubmiting=true;
@@ -832,6 +833,7 @@ function updateUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
+    var roadCodeVal=$.trim($("#js_road option:selected").attr("roadCode"));
     if(phonequhaoVal&&phoneVal){
         var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
     }else{
@@ -851,6 +853,7 @@ function updateUserAddress(){
         "provinceId":provinceCodeVal,
         "cityId":cityCodeVal,
         "regionId":areaCodeVal,
+        "streetId":roadCodeVal,
         "regionDetail":addressVal,
         "telPhone":telPhoneVal,
         "id":saveId
