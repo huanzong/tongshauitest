@@ -51,6 +51,7 @@
 				<!-- banner文字循环体 -->
 				<trs_viewdatas id="首页banner" num="5">
 					<div class="banner-middle-box js_bannerSwiperFont">
+                        		<div>
 						<div class="info-main">
 							<div class="js_bannnerCenter">
 								<span><trs_viewdata field="m_title" num="21" TRUNCATEDFLAG=""/></span>
@@ -66,6 +67,7 @@
 								<span><trs_viewdata field="f_title" num="37" TRUNCATEDFLAG=""/></span>
 							</div>
 						</div>
+					</div>
 					</div>
 				</trs_viewdatas>
 				<!-- banner文字循环体 End-->
