@@ -51,6 +51,7 @@
 				<!-- banner文字循环体 -->
 				<trs_viewdatas id="首页banner" num="5">
 					<div class="banner-middle-box js_bannerSwiperFont">
+                        		<div>
 						<div class="info-main">
 							<div class="js_bannnerCenter">
 								<span><trs_viewdata field="m_title" num="21" TRUNCATEDFLAG=""/></span>
@@ -67,19 +68,11 @@
 							</div>
 						</div>
 					</div>
+					</div>
 				</trs_viewdatas>
 				<!-- banner文字循环体 End-->
 				<!-- banner 分页 不需要循环-->
-				<div class="banner-page js_bannerSwiperPage">
-					<trs_viewdatas id="首页banner" startpos="0" num="5" >
-						<div class="page-num" data-index="<TRS_ROWNO/>">
-							<div class="line">
-								<div class="red-line"></div>
-							</div>
-							<div class="num">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div>
-						</div>
-					</trs_viewdatas>
-				</div>
+				<div class="banner-page js_bannerSwiperPage"> </div>
 				<!-- banner 分页 不需要循环 END-->
 
 			</div>
@@ -307,7 +300,7 @@
 															<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic3'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%" />
 														</a>
 													</div>
-													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 3.8%;vertical-align: bottom;">
+													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 17%;vertical-align: bottom;">
 														<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="28" TRUNCATEDFLAG=""/></h3>
 														<p><trs_viewdata field='f_title' num="100" TRUNCATEDFLAG=""/></p>
 														<a class="info-more"  href="<trs_viewdata field='link'/>" target="_blank">

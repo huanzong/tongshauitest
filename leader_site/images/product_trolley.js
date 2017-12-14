@@ -16,6 +16,7 @@ $(function() {
                 data: data,
                 success_cb: function(data){
                     if(data.isSuccess){
+                        console.log(data)
                         //测试数据
                         // var data = trolleyListData;
 
@@ -78,7 +79,8 @@ $(function() {
                             skuCodesObj[n.inSkuCode] = new Object();
                             skuCodesObj[n.inSkuCode]['cartGoodId'] = n.cartGoodId;
                             skuCodesObj[n.inSkuCode]['quantity'] = n.quantity;
-                        });
+                        });                  
+
                         var skuData = {
                             // skuCodes: skuCodesArray.join(','),
                             skuCodes: skuCodesArray.join(','),
@@ -143,6 +145,14 @@ $(function() {
     }
 
     $(".js_checkbox").jq_qvote();
+
+    $(".js_checkbox").live('change',function(){
+        if ($(this).prop('checked')) {
+            $(this).parents('.trolley-product').addClass('trolley-product-selected')
+        } else {
+            $(this).parents('.trolley-product').removeClass('trolley-product-selected')
+        }
+    })
 
     /**
      *   服务对接
@@ -214,12 +224,16 @@ $(function() {
                 parent.find('.js_trolleyNumber').removeClass('opacity-0');
                 parent.find('.js_trolleyFont').addClass('opacity-0');
                 parent.find('.js_trolleyPrice').addClass('opacity-0');
+                parent.find('.js-mul').hide();
+                parent.find('.js-product-num').hide();
                 $(this).attr('data-oppo','finish').html('完成');
                 $(this).siblings('.js_deleteXs').removeClass('opacity-0');
             }else{
                 parent.find('.js_trolleyNumber').addClass('opacity-0');
                 parent.find('.js_trolleyFont').removeClass('opacity-0');
                 parent.find('.js_trolleyPrice').removeClass('opacity-0');
+                parent.find('.js-mul').show();
+                parent.find('.js-product-num').show();
                 $(this).attr('data-oppo','edit').html('编辑');
                 $(this).siblings('.js_deleteXs').addClass('opacity-0');
             }
@@ -264,6 +278,70 @@ $(function() {
 
     //获取用户信息
     userServer.getUserInfo(); 
-    //获取购物车列表
-    trolleyServer.list();
+
+    // 查询当前 cookie 中是否有本地购物车商品
+
+    if ($.cookie('goodsInCart') && istrsidssdssotoken()) {
+        var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
+        $.ajax({
+            type: "post",
+            url: siteConfig.userUrl+"/buy/order/cartGoods/save",
+            csrf: true,
+            applicationType: true,
+            data: JSON.stringify(goodsInCartArr),
+            success_cb: function(data){
+                if (data.isSuccess) {
+                    // 添加成功清除历史 cookie 
+                    $.cookie('goodsInCart', null)
+                    //获取购物车列表
+                    trolleyServer.list();
+                }
+            },
+            error_cb: function(jqXHR, textStatus, errorThrown) {
+                if (jqXHR.responseText) {
+                    console.log(JSON.parse(jqXHR.responseText).resultMsg)
+                    //获取购物车列表
+                    trolleyServer.list();
+                }
+            }
+        });
+    } else if (istrsidssdssotoken()) {
+        //获取购物车列表
+        trolleyServer.list();
+    } else if ($.cookie('goodsInCart')) {
+        var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
+        //inSkuCode集合
+        var skuCodesArray = new Array();
+        //购物车商品数量(quantity)和购物车商品id(cartGoodId)
+        var skuCodesObj = new Object();
+        jQuery.each(goodsInCartArr,function(i,n){
+            skuCodesArray.push(n.inSkuCode);
+        });
+
+        var skuData = {
+            skuCodes: skuCodesArray.join(','),
+            regionCode: 2450
+        } 
+        //根据inskucode集合查询SKU相关信息
+        skuServer.getSkuByCodes(skuData,skuCodesObj);
+    }
+
+    // 去结算
+    $('.js-pay').on('click', function () {
+        var orderArr = []
+        $('.trolley-product-selected').each(function(){
+            orderArr.push({
+                "cartId": $(this).parent('.trolley-prolist').attr('cartId'),
+                "buyNum": $(this).find('.js_trolleyNumber').find('input').val(),
+                "inSkuCode": $(this).parent('.trolley-prolist').attr('inSkuCode')
+            })
+        })
+        var orderCode = ('' + Math.random()).substring(3,10)
+        $.cookie('orderCode' + orderCode, JSON.stringify(orderArr), {
+            'path':'/',
+            // 'domain':'.tongshuai.com'
+        });
+        window.location.href = "./product_orderconfirm.shtml?code=" + orderCode
+    })
+   
 });
