@@ -113,7 +113,7 @@ function searchAllList(currPageT, pageSize){
                                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
                                 templet_addhtml += ' <h3>待收货</h3> ';
                             }
-                            if (templet_orderlist[i].statusDesc.indexOf("已取消") > -1) {
+                            if (templet_orderlist[i].statusDesc.indexOf("已关闭") > -1) {
                                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
                                 templet_addhtml += ' <h3 class="title_disable">已关闭</h3> ';
                             }
@@ -125,11 +125,11 @@ function searchAllList(currPageT, pageSize){
                             templet_addhtml += ' <div class="o_u"><p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>' + templet_time + '</span></p>';
                             templet_addhtml += ' <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>' + templet_orderlist[i].orderNo + '</i></p> ';
                             templet_addhtml += ' <p class="o_u o_md_1-2  o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥' + templet_orderlist[i].orderPrice + '</i></p></div> ';
-                            templet_addhtml += ' <a href=/order/'+templet_orderlist[i].orderId+'">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
+                            templet_addhtml += ' <a href="/order/orderdetail.shtml?orderId='+templet_orderlist[i].orderId+'">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
 
                             if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
                                 templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
-                                templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2">取消</a></div> ';
+                                templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2" onclick="cancelOrder('+templet_orderlist[i].orderId+')">取消</a></div> ';
                             }
 
                             templet_addhtml += ' </div> </div> ';
@@ -188,7 +188,7 @@ function searchAllList(currPageT, pageSize){
                             templet_addhtml += ' <div class="o_u"><p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>' + templet_time + '</span></p>';
                             templet_addhtml += ' <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>' + templet_orderlist[i].orderNo + '</i></p> ';
                             templet_addhtml += ' <p class="o_u o_md_1-2  o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥' + templet_orderlist[i].orderPrice + '</i></p></div> ';
-                            templet_addhtml += ' <a href="/order/'+templet_orderlist[i].orderId+'">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
+                            templet_addhtml += ' <a href="/order/orderdetail.shtml?orderId='+templet_orderlist[i].orderId+'">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
 
                             templet_addhtml += ' </div> </div> ';
                             //循环拆单以及里面的商品（显示状态）
@@ -332,7 +332,7 @@ function searchStateList(currPageT, pageSize,orderlist){
                 templet_addhtml += ' <div class="o_u"><p class="o_u o_md_2-2  o_sm_2-2 o_xs_2-2 order_cont_title_time"><span>' + templet_time + '</span></p>';
                 templet_addhtml += ' <p class="o_u o_md_1-2 o_sm_2-2 o_xs_2-2"><span>订单号：</span><i>' + templet_orderlist[i].orderNo + '</i></p> ';
                 templet_addhtml += ' <p class="o_u o_md_1-2  o_sm_2-2 o_xs_2-2"><span>订单总额：</span><i class="order_cont_title_price">￥' + templet_orderlist[i].orderPrice + '</i></p></div> ';
-                templet_addhtml += ' <a href="javascript:;">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
+                templet_addhtml += ' <a href="/order/orderdetail.shtml?orderId='+templet_orderlist[i].orderId+'">订单详情 <span class=" iconfont icon-arrow-line-right"></span></a> </div> ';
 
                 if('待付款'==orderlist){
                     templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
@@ -535,5 +535,21 @@ function notComment(currPageT, pageSize,orderlist){
             //TODO 调接口查询订单详情
         }
     })
+}
+
+function cancelOrder(orderId) {
+    var templet_date={
+        "orderStatus":1
+    };
+    
+    $.ajax({
+        url: siteConfig.userUrl + "/buy/order/order-front/list/",
+        data: JSON.stringify(templet_date),
+        applicationType: true,
+        login: true,
+        success_cb: function (data) {
+
+        }
+    });
 }
 

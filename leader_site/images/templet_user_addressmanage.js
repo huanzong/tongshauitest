@@ -13,7 +13,7 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-
+$('.js_inputCheck').focus(function(){$(this).css('border-color','#ccc');})
 
 var infotell=[];
 //固定电话号码错误显示逻辑
@@ -344,6 +344,7 @@ var address=$(".js_form_addAddrManagement").Validform({
 $(function(){
     address.ignore('#phonequhao,#phone,#phonefenjihao');
 
+    //电话号码验证规则
     $('.js-newMobile').blur(function(){
         var dataType =$(this).attr('data-type');
         var dataVal = $(this).val();
@@ -458,16 +459,16 @@ function resetForm(){
 
 };
 
-$('.js-newMobile').blur(function(){
- 
-    var dataVal = $(this).val();
-    var inputNullText = $(this).attr('nullmsg');
-    console.log($(this).val());
-    if(dataVal.length==0){
-        $(this).addClass('Validform_error').attr('data-type',1);
-        $(this).siblings('.js-addressMobError').html(inputNullText)
-    }
-})
+//$('.js-newMobile').blur(function(){
+//
+//    var dataVal = $(this).val();
+//    var inputNullText = $(this).attr('nullmsg');
+//    console.log($(this).val());
+//    if(dataVal.length==0){
+//        $(this).addClass('Validform_error').attr('data-type',1);
+//        $(this).siblings('.js-addressMobError').html(inputNullText)
+//    }
+//})
 //设置默认地址
 $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");

@@ -15,14 +15,9 @@ $(function () {
     if (windowWidth > 991) {
         // alert(1);
         $('.js_styleVideoBox').css('height', windowHeight - navHeight);
-        $('.js_playerBox').css('height', windowHeight - navHeight);
         $('.js_styleVideoCont').css({'padding-top': styleVudeoPading, 'padding-bottom': styleVudeoPading});
-        $(".js_playerBox").find(".mejs-video").css('height', windowHeight - navHeight);
-        $(".js_playerBox").css('height', windowHeight - navHeight);
-        $(".js_jchg_video").css('height', windowHeight - navHeight);
-        $("#mep_0").css('height', windowHeight - navHeight);
+        $("#mep_0").css('max-height', windowHeight - navHeight+'px');
     }
-
 
 // xl屏幕下视频模块hover有效
 
@@ -159,13 +154,9 @@ $(function () {
 
 
 // 设置lift-style-case 图片切换按钮高度
-
-    // alert(lifeCasePhotoH);
     if (windowWidth > 991) {
         $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
-        //$('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
-        //$('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
     } else {
         $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
@@ -206,21 +197,31 @@ $(function () {
             success: function (media, player, node) {
                 console.log($('#' + node.id + '-mode').html('mode: ' + player.pluginType));
                 $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-                //$('.mejs-overlay-button').trigger('click');
             },
-            showPosterWhenEnded: true,//显示海报
-            autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
-            setDimensions: true,
-            defaultVideoWidth: 700,
-            iPadUseNativeControls: true,//强制iPad的原生控件
-            iPhoneUseNativeControls: true,//强制iPhone的本机控件
-            AndroidUseNativeControls: true,//强制Android的原生控件
+            //showPosterWhenEnded: true,//显示海报
+            //autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
+            //setDimensions: true,
+            //defaultVideoWidth: 700,
+            //iPadUseNativeControls: true,//强制iPad的原生控件
+            //iPhoneUseNativeControls: true,//强制iPhone的本机控件
+            //AndroidUseNativeControls: true,//强制Android的原生控件
+            //usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
+            //enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
+            ////alwaysShowControls: true,//播放时隐藏控件，鼠标不在视频上方
+            //fullscreenText: '全屏',
+            //hideVideoControlsOnLoad: false,//显示视频控制
+
+
+
+
+
+            showPosterWhenEnded:true,//显示海报
+            autosizeProgress:false,//根据其他元素的大小自动计算进度条的宽度
+            iPadUseNativeControls:true,//强制iPad的原生控件
+            iPhoneUseNativeControls:true,//强制iPhone的本机控件
+            AndroidUseNativeControls:true,//强制Android的原生控件
             usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
-            enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
-            alwaysShowControls: false,//播放时隐藏控件，鼠标不在视频上方
-            fullscreenText: '全屏',
-            hideVideoControlsOnLoad: true,//显示视频控制
-            hideVideoControlsOnPause: true//暂停显示控件
+            hideVideoControlsOnPause: true        //暂停显示控件
         });
     }
 
@@ -230,7 +231,6 @@ $(function () {
              var player1 = new MediaElementPlayer('#player1');
 
              $(".js_styleLifevideoClose ").on('click', function () {
-                 // alert(1);
                  player.pause();
                  $(".js_playerBox ").hide();
                  $('.js_styleVideoBox').show();
@@ -240,19 +240,9 @@ $(function () {
              var player = new MediaElementPlayer('#player');
              $(".js_lifeStylePlay ").on('click', function () {
                  videoMethod();
-                 var windowHeight = $(window).height();
-                 var navHeight = $('l-opacity0').height();
                  $('.js_styleVideoBox').hide();
-
-
                  $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
                  $("#player ").removeClass("o_df-hide ");
-                 setTimeout(function () {
-                     $(".js_jchg_video").css('height', windowHeight - navHeight);
-                     $("#mep_0 ").css('height', windowHeight - navHeight);
-                     $('.mejs-overlay-play').css('height', windowHeight - navHeight);
-                     // alert(windowHeight - navHeight);
-                 }, 500)
                  var playerID = document.getElementById('player');
                  playerID.addEventListener('progress', onVideoProgressUpdate, false);
                  function onVideoProgressUpdate(e) {
@@ -296,16 +286,14 @@ $(function () {
              });
          }else{
              $(".js_lifeStylePlay ").on('click', function (){
-                 //alert(1);
                var videoSrc =  $(this).attr('data-src');
                  $("#player").attr("src", videoSrc).removeClass("o_df-hide");
-
                  if(windowWidth>991){
                      $('.js_styleVideoBox').hide();
-
                  }else{
                      $('.js_videoMdShow').hide();
-
+                     var navHeight = $('.l-opacity0').height();
+                     $(document).scrollTop(navHeight);
                  }
 
 
@@ -318,9 +306,7 @@ $(function () {
                      $("#player")[0].play();
                  }, 500);
                  $(".js_styleLifevideoClose ").on('click', function () {
-                     // alert(1);
                      var player = new MediaElementPlayer('#player');
-
                      player.pause();
                      $(".js_playerBox ").hide();
                      $('.js_styleVideoBox').show();
@@ -423,14 +409,11 @@ $(function () {
             loop: true,
             autoplay: 5000,
             simulateTouch: true,
-
             cssWidthAndHeight: true,
             autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
             onSlideChangeStart: function (swiper) {
                 var dataType = $('.js_superiorityBox').attr('data-type');
                 if (dataType == 1) {
-                    // console.log(dataType);
-
                     $('.js_superiorityBox').attr('data-type', '2');
                     $('.js_superiorityCenter').eq(0).hide();
                     $('.js_superiorityCenter').eq(1).show();
@@ -438,10 +421,7 @@ $(function () {
                     $('.js_superiorityJt').eq(0).hide();
                     $('.js_superiorityDownText').eq(1).show();
                     $('.js_superiorityDownText').eq(0).hide();
-
                 } else if (dataType == 2) {
-                    // console.log(dataType);
-
                     $('.js_superiorityBox').attr('data-type', '1');
                     $('.js_superiorityCenter').eq(1).hide();
                     $('.js_superiorityCenter').eq(0).show();
@@ -457,18 +437,13 @@ $(function () {
             loop: true,
             autoplay: 5000,
             simulateTouch: false,
-
             cssWidthAndHeight: true,
             autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
             onSlideChangeStart: function (swiper) {
-
-
             }
         })
     }
     $('.js_superiorityRightBtn').on('click', function (e) {
-        // alert(1)
-
         e.preventDefault();
         superioritySwiperLeft.swipeNext();
         superioritySwiperRight.swipeNext();
@@ -511,73 +486,83 @@ $(function () {
             }
             // console.log(casePhotoNext);
         }
-    })
+    });
 
 
     $('.js_lifeStyleCaseLeftBtn').on('click', function (e) {
         e.preventDefault();
         caseSwiper.swipeNext()
-    })
+    });
     $('.js_lifeStyleCaseRightBtn').on('click', function (e) {
-
         e.preventDefault();
         caseSwiper.swipePrev()
-    })
+    });
 
 
 // 创造优生活 轮播
-    var CreateSwipe_1 = new Swiper('.js_lifeStyleCreateSwipe_1', {
-        loop: true,
-        autoplay: 5000,
-        simulateTouch: false,
-        cssWidthAndHeight: true,
-        autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
-        onSlideChangeStart: function (swiper) {
 
-        }
+
+    var CreateSwipe=[];
+
+
+    var createSwipeTittle = new Swiper('.js_lifeStyleCreateTop', {
+        loop: false,
+        slidesPerView : 'auto',
+        loopedSlides:3
+
     })
 
-    var CreateSwipe_2 = new Swiper('.js_lifeStyleCreateSwipe_2', {
-        loop: true,
-        autoplay: 5000,
-        simulateTouch: false,
-        cssWidthAndHeight: true,
-        autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
-        onSlideChangeStart: function (swiper) {
 
-        }
-    })
-    var CreateSwipe_3 = new Swiper('.js_lifeStyleCreateSwipe_3', {
-        loop: true,
-        autoplay: 5000,
-        simulateTouch: false,
-        cssWidthAndHeight: true,
-        autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
-        onSlideChangeStart: function (swiper) {
 
+
+//    创造优生活模块轮播
+setTimeout(function(){
+    for(var i = 1;i<$('.js_lifeStyleCreateSwipe').length+1;i++){
+        var className =".js_lifeStyleCreateSwipe_"+i;
+        //console.log(i)
+        //$(className).hide();
+        if($(className)){
+               CreateSwipe[i] = new Swiper(className, {
+                loop: true,
+                autoplay: 5000,
+                simulateTouch: false,
+                   slidesPerView:2,
+                   slidesPerGroup : 2,
+                cssWidthAndHeight: true,
+                autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
+                onSlideChangeStart: function (swiper) {
+
+                }
+            });
         }
-    })
+    }
+},400);
+
 
 
     $('.js_lifeStyleCreateLeftBtn').on('click', function (e) {
         e.preventDefault();
-        CreateSwipe_1.swipeNext()
-        CreateSwipe_2.swipeNext()
-        CreateSwipe_3.swipeNext()
-    })
+        for(var i= 0;i<CreateSwipe.length;i++){
+            if(CreateSwipe[i]){
+                CreateSwipe[i].swipeNext();
 
+            }
+        }
+    });
     $('.js_lifeStyleCreateRightBtn').on('click', function (e) {
-
         e.preventDefault();
-        CreateSwipe_1.swipePrev()
-        CreateSwipe_2.swipePrev()
-        CreateSwipe_3.swipePrev()
-    })
+        for(var i = 0;i<CreateSwipe.length;i++){
+            if(CreateSwipe[i]){
+            CreateSwipe[i].swipeNext();
 
+            }
+        }
+    });
 
     setTimeout(function () {
         $('.js_lifeStyleCreateTop li').eq(0).click();
     }, 1000)
+
 
 
 })
