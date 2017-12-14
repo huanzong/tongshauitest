@@ -106,7 +106,7 @@ function searchAllList(currPageT, pageSize){
                         if(templet_orderlist[i].haveSub==0){
                             if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
                                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_10-12 o_sm_7-12 o_xs_7-12"> ';
-                                templet_addhtml += ' <h3>待付款</h3> ';
+                                templet_addhtml += ' <h3 id="js-pay'+templet_orderlist[i].orderId+'">待付款</h3> ';
                             }
                             if (templet_orderlist[i].statusDesc.indexOf("待发货") > -1) {
                                 templet_addhtml += ' <div class="member_contborder_box  o_u  o_df_11-12"><div class="o_g"> <div class="  order_cont_title_box"><div class="o_u o_df_11-12"> <div class=" order_cont_title o_u o_df_2-2"> ';
@@ -132,7 +132,7 @@ function searchAllList(currPageT, pageSize){
 
                             if (templet_orderlist[i].statusDesc.indexOf("待付款") > -1) {
                                 templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
-                                templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2" onclick="cancelOrder(\'确定要取消订单?\','+templet_orderlist[i].orderId+')">取消</a></div> ';
+                                templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red js-notPay'+templet_orderlist[i].orderId+'">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2 js-notPay'+templet_orderlist[i].orderId+'" onclick="cancelOrder(\'确定要取消订单?\','+templet_orderlist[i].orderId+')">取消</a></div> ';
                             }
 
                             templet_addhtml += ' </div> </div> ';
@@ -335,7 +335,7 @@ function searchStateList(currPageT, pageSize,orderlist){
 
                 if('待付款'==orderlist){
                     templet_addhtml += ' <div class=" order_cont_title_btn o_u o_df_2-12 o_sm_5-12 o_xs_5-12"> ';
-                    templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2" onclick="globalShade(\'确定要取消订单?\')">取消</a></div> ';
+                    templet_addhtml += ' <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a><br><a href="javascript:;" class="l-btn-sm l-btn-line2" onclick="cancelOrder(\'确定要取消订单?\','+templet_orderlist[i].orderId+')">取消</a></div> ';
                 }
 
                 templet_addhtml += ' </div> </div> ';
@@ -645,17 +645,23 @@ function cancelOrder(alerttext,orderId){
     //
     //})
     $('.js-alertTrue').unbind().click(function(){
-
-        // $.ajax({
-        //     url: siteConfig.userUrl + "/buy/order/order-front/cancel/",
-        //     data: {orderId:orderId},
-        //     applicationType: true,
-        //     login: true,
-        //     success_cb: function (data) {
-        //         if(data.isSuccess==true){
-        //
-        //         }
-        //     }
-        // });
+        $('.js_landClose').click();
+        $.ajax({
+            url: siteConfig.userUrl + "/buy/order/order-front/cancel/",
+            data: {"orderId":orderId},
+            login: true,
+            csrf:true,
+            success_cb: function (data) {
+                if(data.isSuccess==true){
+                    if($('.js_orderList>li').eq(0).hasClass('cur')){
+                        $("#js-pay"+orderId).addClass('title_disable').html("已关闭");
+                        $(".js-notPay"+orderId).hide();
+                    }
+                    if($('.js_orderList>li').eq(1).hasClass('cur')){
+                        window.location.href ='/order?way=pay';
+                    }
+                }
+            }
+        });
     })
 }
