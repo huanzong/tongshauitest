@@ -467,7 +467,7 @@
                             </div>
                         </div>
                         <div id="series_txt" class="product-list-cont o_u o_sm_2-2 o_xs_2-2">
-                            <trs_viewdatas id="系列产品推荐">
+                            <trs_viewdatas id="系列产品推荐" STARTPOS="0" NUM="5">
                                 <p class="js_lifeStyleCreateTitle">
                                     <trs_viewdata field='series_txt'/>
                                 </p>
@@ -475,11 +475,10 @@
                                 <!-- 产品推荐轮播 start -->
                                 <div class="js_lifeStyleCreateSwipe lbindex">
                                     <ul class="swiper-wrapper">
-
                                         <trs_viewdata field='prod_content1'/>
-                                        <TRS_RELNEWS id="prod_content1">
-                                            <li class="o_u o_df_12-12 swiper-slide">
-                                                <div class="o_u o_df_6-12">
+                                        <TRS_RELNEWS id="prod_content1" STARTPOS="0" NUM="6">
+                                            <li class="o_u o_df_6-12 swiper-slide">
+                                                <div class="o_u o_df_2-2">
                                                     <div class="o_u o_df_4-12 o_sm_11-12 o_xs_11-12  list-cont-photo">
                                                         <img src='<TRS_APPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC"/>'
                                                              alt="">
