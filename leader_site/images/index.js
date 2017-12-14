@@ -276,7 +276,7 @@ $(function() {
    * 产品推荐模块
    */
   //产品推荐分页
-  $('.js_recommendPage').each(function(i,n){
+  $('.o_df_1-3 .js_recommendPage').each(function(i,n){
       var htmlStr = '';
       for(var j=$('.js_recommendFont1').length-1;j>=0;j--){
         if(i==j){
@@ -287,6 +287,18 @@ $(function() {
       }
       $(this).html(htmlStr);
   });
+
+  $('.o_sm-show .js_recommendPage').each(function(i,n){
+    var htmlStr = '';
+    for(var j=$('.js_recommendFont1').length-1;j>=0;j--){
+      if(i==j){
+        htmlStr += '<span class="active" data-index='+(j+1)+'>0'+(j+1)+'</span>';
+      }else{
+        htmlStr += '<span data-index='+(j+1)+'>0'+(j+1)+'</span>';
+      }
+    }
+    $(this).html(htmlStr);
+});
 
 	//产品推荐轮播
   swiper.recommendSwiper = new Swiper ('.js_swiperRecMain', {
