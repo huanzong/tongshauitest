@@ -471,15 +471,17 @@
 						展开<i class="iconfont icon-arrow-line-up"></i>
 					</div>
 				</div>
-				<ul class="compare-list js_compareBox">
-					<li>
-						<div class="compare-link compareButton">
-							<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
-						</div>
-						<div class="compare-link">
-							<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
-						</div>
-					</li>
+				<ul >
+					<div class="o_g compare-list js_compareBox">
+						<li class="o_u o_df_1-5 o_df-right compare-button-clear">
+							<div class="compare-link compareButton">
+								<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
+							</div>
+							<div class="compare-link">
+								<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
+							</div>
+						</li>
+					</div>
 				</ul>
 			</div>
 		<!-- 产品对比 END -->
