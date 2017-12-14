@@ -85,7 +85,7 @@
                     <!-- banner文字循环体 End-->
                     <!-- banner 分页 不需要循环-->
                     <div class="banner-page js_bannerSwiperPage">
-                        <div class="page-num" data-index=2>
+                        <!-- <div class="page-num" data-index=2>
                             <div class="line">
                                 <div class="red-line"></div>
                             </div>
@@ -96,7 +96,7 @@
                                 <div class="red-line"></div>
                             </div>
                             <div class="num">01</div>
-                        </div>
+                        </div> -->
                         <!-- <div class="page-num" data-index=3>
                             <div class="line">
                                 <div class="red-line"></div>
