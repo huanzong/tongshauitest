@@ -365,6 +365,7 @@ $(function() {
     autoplayDisableOnInteraction : false,//用户操作之后，不禁止autoplay
     updateOnImagesReady : true,
     onSlideChangeStart: function(swiper){
+      $('.temp-slide').removeClass('temp-slide')
       $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').css({ 'filter':'alpha(opacity=0)', '-moz-opacity':'0', '-khtml-opacity': '0', 'opacity': '0' });
       clearTimeout(clearTimer)
       var clearTimer = setTimeout(function(){
@@ -380,6 +381,7 @@ $(function() {
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
     },
     onSlideChangeEnd: function(swiper){
+      $('.temp-slide').removeClass('temp-slide')
       var index = swiper.activeIndex;
       console.log(index)
       // $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').css({ 'filter':'alpha(opacity=0)', '-moz-opacity':'0', '-khtml-opacity': '0', 'opacity': '0' });
@@ -387,6 +389,7 @@ $(function() {
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
     },
     onInit: function (swiper){
+      $('.swiper-slide-active').next('.swiper-slide').addClass('temp-slide')
       var index = swiper.activeIndex + 1;
       $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').stop()
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
