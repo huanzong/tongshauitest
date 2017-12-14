@@ -2,88 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>服务条款</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" type="text/css" href="service.css">
     <link rel="stylesheet" type="text/css" href="product_list.css">
+    <link rel="stylesheet" type="text/css" href="member.css">
+    <link rel="stylesheet" type="text/css" href="member_nav.css">
 </head>
 <body>
 <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-    <div class="service_error_abovebox">
+<div class="service_error_abovebox">
 
-        <div class="service_error_adbox bigbg">
-            <div class="service_error_adimgbox">
-                <img class="service_error_adimg" src="ad.png"/>
-            </div>
+    <div class="service_error_adbox bigbg">
+        <div class="service_error_adimgbox">
+            <img class="service_error_adimg" src="error404.png"/>
         </div>
-        <div class="service_error_rightbox">
-            <div class="service_error_errorbox">
-                <img class="service_error_errorimg" src="error404.png">
-            </div>
-            <div class="service_error_testbox">
-                <p class="service_error_describe">页面君奋不顾身的去流浪了...</p>
-                <p class="service_error_reasontitle">无法访问可能原因为：</p>
-                <p class="service_error_reason">您输入的地址是否有误</p>
-                <p class="service_error_reason">该页面暂时失效或已被删除</p>
-                <a class="service_error_goback">返回首页</a>
-            </div>
+    </div>
+    <div class="service_error_rightbox">
+        <div class="service_error_testbox">
+            <p class="service_error_describe">页面君奋不顾身的去流浪了...</p>
+            <p class="service_error_reasontitle">无法访问可能原因为：</p>
+            <p class="service_error_reason">您输入的地址是否有误</p>
+            <p class="service_error_reason">该页面暂时失效或已被删除</p>
+            <a class="service_error_goback">返回首页</a>
+        </div>
 
+    </div>
+    <div class="service_error_adbox smallbg">
+        <div class="service_error_adimgbox">
+            <img class="service_error_adimg" src="ad.png"/>
         </div>
-        <div class="service_error_adbox smallbg">
-            <div class="service_error_adimgbox">
-                <img class="service_error_adimg" src="ad.png"/>
+    </div>
+
+</div>
+<!-- 精品推荐 二期-->
+<div class="o_g member-home-downbox">
+    <div class="o_u o_df_12-12  o_lg_2-2 o_sm_2-2 o_xs_2-2  member-order-table member-home-down-right  member-home-down-df js-recommendation" smallfreshen="0" freshen="A">
+        <div class="o_g member-home-down-table table-title">
+            <div class="o_u o_df_2-2">
+                <span>精选推荐</span>
+                <a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>
             </div>
         </div>
 
     </div>
-    <!-- 精品推荐 -->
-    <div class="o_g product-recommend">
-        <div class="o_u o_df_1-12"></div>
-        <div class="o_u o_df_10-12">
-            <div class="recommend-box">
-                <div class="recommend-title">
-                    精选推荐
-                    <i class="iconfont icon-refresh-solid recommend-reload js_recomChange"></i>
-                </div>
-                <div class="recommend-pro">
-                    <div class="o_g js_recommend">
-                        <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-                            <trs_channel id="parent" AUTOLINK='false'>
-                                <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
-                                    <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
-                                        <img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
-                                        <div class="recommend-pro-info">
-                                            <span class="pro-info-title"><trs_viewdata field="pname"/></span>
-                                            <span class="pro-info-type"><trs_viewdata field="modelno"/></span>
-                                            <span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
-                                        </div>
-                                    </a>
-                                </TRS_DOCUMENTS>
-                            </trs_channel>
-                        </TRS_CONDITION>
-                        <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-                            <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
-                                <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
-                                    <img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
-                                    <div class="recommend-pro-info">
-                                        <span class="pro-info-title"><trs_viewdata field="pname"/></span>
-                                        <span class="pro-info-type"><trs_viewdata field="modelno"/></span>
-                                        <span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
-                                    </div>
-                                </a>
-                            </TRS_DOCUMENTS>
-                        </TRS_CONDITION>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 精品推荐 END -->
+</div>
+<!--<div class="o_u o_df_1-12"></div>-->
 
-    <!--#include virtual="${ROOT_PATH}ucenter/footer.shtml"-->
+</div>
 
-    <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<!-- 精品推荐 END -->
+
+
+<!-- #include file="${ROOT_PATH}public/footer/footer.shtml"-->
+
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<script type="text/javascript" src="templet_member_home.js"></script>
 </body>
 </html>
