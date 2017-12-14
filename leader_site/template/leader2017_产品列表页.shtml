@@ -471,8 +471,8 @@
 						展开<i class="iconfont icon-arrow-line-up"></i>
 					</div>
 				</div>
-				<ul >
-					<div class="o_g compare-list js_compareBox">
+				<ul class="compare-list">
+					<div class="o_g js_compareBox">
 						<li class="o_u o_df_1-5 o_df-right compare-button-clear">
 							<div class="compare-link compareButton">
 								<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
