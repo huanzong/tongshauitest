@@ -562,8 +562,8 @@ setTimeout(function(){
     setTimeout(function () {
         $('.js_lifeStyleCreateTop li').eq(0).click();
     }, 1000)
+    var lifeStyleTile={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
 
-
-
+    textLength(lifeStyleTile);
 
 })

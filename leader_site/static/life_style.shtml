@@ -141,6 +141,18 @@
                             希望家电这一长久陪伴于你的生活物品，可以与你完美契合，给你悠然惬意的生活</p>
                     </div>
                 </div>
+
+                <div class="photo-back-border o_u o_df_2-2 ">
+                    <div class=" o_u o_df_2-12">
+                        <div class="photo-back-border-red"></div>
+                    </div>
+                    <div class=" o_u  o_df_8-12">
+                        <div class="photo-back-border-red"></div>
+                    </div>
+                    <div class="  o_u o_df_2-12">
+                        <div class=""></div>
+                    </div>
+                </div>
             </div>
             <!-- 优生活 END-->
             <!-- 核心优势 -->
@@ -456,6 +468,9 @@
                     </li>
                 </ul>
                 <div class="o_u o_df_1-12  o_md_2-12"></div>
+                <div class="life-style-case-back-red">
+
+                </div>
             </div>
 
 
