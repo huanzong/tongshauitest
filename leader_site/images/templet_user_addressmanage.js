@@ -418,6 +418,14 @@ function loadUserInfoList(){
                         }
                     }
                     $(".js_lineInfo").html(addhtml);
+                    var obj={
+                        'obj':$('.member-address-addtext'),       //需要截取的对象，可以是同一class的多个对象
+                        'fontSize':'12',                         //截取对象的字体大小
+                        'lineNub':'2',                          //保留的行数
+                        'width':$('.member-address-addtext').width()    //非必填：对象的宽度（如果传入的对象不是动态汇入的此项可省略）
+                    };
+                    //调用截取方法
+                    textLength(obj)
 
                 }else{
                     $(".js_form_addAddrManagement").show();//显示"新增地址"表单
