@@ -41,6 +41,7 @@
 			<i class="iconfont icon-search js_jumpto_product_search"></i>
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl js_searchBox_root">
 				<div class="search-quick js_quick_search">快速链接</div>
+				<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>
 				<ul class="search-list js_searchBox_list_xl">
 					<!--
                         <li>我是搜索结果</li>
@@ -178,6 +179,7 @@
 				<a href="javascript:;">帮助中心</a>
 				<a href="javascript:;">联系我们</a>
 			</div>
+			<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>
 			<ul class="searchresult-result js_searchBox js_searchBox_lg js_searchBox_list_lg">
 				<!--
                     <li>搜索结果</li>
