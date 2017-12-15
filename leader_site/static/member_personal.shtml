@@ -118,7 +118,6 @@
                                                         <div class="selectbox">
                                                             <div class="member-personalinfo-inputbox">
                                                                 <select name="" id="js_save" autotext="省">
-
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -127,7 +126,6 @@
                                                         <div class="selectbox  info-address-selectbox2">
                                                             <div class="member-personalinfo-inputbox">
                                                                 <select name="" id="js_city" autotext="市">
-
                                                                 </select>
                                                             </div>
                                                         </div>
