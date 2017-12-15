@@ -317,11 +317,13 @@ function saveUserAddress(){
                 loadUserInfoList();//获取列表
                 resetForm();//重置表单
                 $(".js_form_addAddrManagement").hide();
+                templet_isSubmiting=false;
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2(responseT.resultMsg,2,2000);
+                templet_isSubmiting=true;
             }
-            templet_isSubmiting=false;
+
         },
         error_cb:function(responseT){
             var responseT = JSON.parse(responseT.responseText); //由JSON字符串转换为JSON对象
@@ -887,11 +889,12 @@ function updateUserAddress(){
                 loadUserInfoList();
                 $(".js_form_addAddrManagement").hide();
                 globalShade2("修改地址成功",1,2000);
+                templet_isSubmiting = false;
             } else {//添加地址失败
                 globalShade2(data.resultMsg,2,2000);
-
+                templet_isSubmiting = true;
             }
-            templet_isSubmiting = false;
+
         },
         error_cb: function () {
             globalShade2("添加地址错误,请稍后重试...",1,2000);
