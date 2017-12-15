@@ -26,8 +26,14 @@ $(function() {
         slidesPerGroup: 1,//每次滑动移动个数
         // calculateHeight : true,//Swiper根据slides内容计算容器高度。
     });
+    //多图轮播，单图不轮播
+    if($('.js_sceneSwiper').find('.swiper-slide').size()>=1){
+        swiper.sceneSwiper.params.loop = false;
+    }
 
-    //核心卖点
+    /**
+     * 核心卖点
+     **/
     swiper.sellPointSwiper = new Swiper('.js_swiperSellPoint', {
         grabCursor: true,
         // loop: true,
@@ -40,10 +46,18 @@ $(function() {
             var index = swiper.activeIndex;
             $('.js_sellpointFont').hide();
             $('.js_sellpointFont').eq(index).show();
+            $('.js_sellpointSwiper_icon .icon-box').removeClass('active').eq(index).addClass('active');
         }
     });
     $('.js_swiperSellPointNext').on('click',function(){
         swiper.sellPointSwiper.swipeNext();
+    });
+    //图标-缩略图
+    $('.js_sellpointSwiper_icon .icon-box').on('click',function(){
+        var index = parseInt($(this).attr('icon-index'));
+        swiper.sellPointSwiper.swipeTo(index, 500);
+        $('.js_sellpointSwiper_icon .icon-box').removeClass('active');
+        $(this).addClass('active');
     });
 
     //优惠组合
@@ -252,7 +266,6 @@ $(function() {
                 var foldPlus = (btnNum * 52) + 80;
                 if (document.body.offsetWidth > 991) {
                     $(".js_foldPlus").css("top", foldPlus + 'px');
-                    // console.log(foldPlus);
                 }
             }
             // if (document.body.offsetWidth <= 991) {
