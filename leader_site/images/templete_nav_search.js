@@ -27,8 +27,8 @@ $('.js_searchHistory').bind('input propertychange', function () {
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBoxQuick_lg').show();
-        $('.js_searchBox_listShow').html(searchBoxInput("xl"));
-        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
 
@@ -43,8 +43,8 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_quick_search').remove();
         searchBoxWord($(this).val());
     } else {
-        $('.js_searchBox_listShow').html(searchBoxInput("xl"));
-        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
 });
