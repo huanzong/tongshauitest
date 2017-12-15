@@ -204,6 +204,8 @@ function searchBoxInput(webSize) {
     historyCookie = filterSymbol(historyCookie);
     var searchBoxHtml = "";
     if (!isEmpty(historyCookie)) {
+        $('.js_quick_search').hide();
+        $('.js_delete_history').show();
         if (historyCookie.indexOf(",") != -1) {
             var historyCookieArr = historyCookie.split(",");
             for (var i = 0; i < historyCookieArr.length; i++) {
