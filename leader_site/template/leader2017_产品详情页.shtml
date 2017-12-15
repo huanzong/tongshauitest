@@ -473,7 +473,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="xl"/></div>
-                                        <div class="fontpoint-small">产品类型</div>
+                                        <div class="fontpoint-small">产品系列</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -485,7 +485,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="kd"/></div>
-                                        <div class="fontpoint-small">宽度(mm)</div>
+                                        <div class="fontpoint-small">厚度(mm)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -1468,7 +1468,7 @@
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
         var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
-        var templet_cpcjt='<TRS_VIEWDATAAPPENDIXS FIELD="cpcjt"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//产品场景图
+        var templet_cpcjt='<TRS_VIEWDATAAPPENDIXS FIELD="cpcjt"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/><TRS_IsNotLastRecord>~</TRS_IsNotLastRecord></TRS_VIEWDATAAPPENDIXS>';//产品场景图
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
@@ -1489,16 +1489,16 @@
         if(templet_cpcjt ==""||templet_cpcjt==null){//产品场景图
             $(".js_cpcjt").hide();
         }else{
-            templet_cpcjt=templet_cpcjt.split("http://");
-            $(".js_cpcjt").find("img").attr("df","http://"+templet_cpcjt[1]);
-            if(templet_cpcjt[2]==""||templet_cpcjt[2]==null){
-                $(".js_cpcjt").find("img").attr("md","http://"+templet_cpcjt[1]);
-                $(".js_cpcjt").find("img").attr("sm","http://"+templet_cpcjt[1]);
-                $(".js_cpcjt").find("img").attr("xs","http://"+templet_cpcjt[1]);
+            templet_cpcjt=templet_cpcjt.split("~");
+            $(".js_cpcjt").find("img").attr("df",templet_cpcjt[0]);
+            if(templet_cpcjt[1]==""||templet_cpcjt[1]==null){
+                $(".js_cpcjt").find("img").attr("md",templet_cpcjt[0]);
+                $(".js_cpcjt").find("img").attr("sm",templet_cpcjt[0]);
+                $(".js_cpcjt").find("img").attr("xs",templet_cpcjt[0]);
             }else{
-                $(".js_cpcjt").find("img").attr("md","http://"+templet_cpcjt[2]);
-                $(".js_cpcjt").find("img").attr("sm","http://"+templet_cpcjt[2]);
-                $(".js_cpcjt").find("img").attr("xs","http://"+templet_cpcjt[2]);
+                $(".js_cpcjt").find("img").attr("md",templet_cpcjt[1]);
+                $(".js_cpcjt").find("img").attr("sm",templet_cpcjt[1]);
+                $(".js_cpcjt").find("img").attr("xs",templet_cpcjt[1]);
             }
 
         }
