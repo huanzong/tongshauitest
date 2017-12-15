@@ -13,10 +13,10 @@ $(function() {
     }
      var navH=$(".detail-nav-height").offset().top;
     $('.js_buyNow').hide();
-     //~{OjGi5<:=5D~}fix~{6(N;~}
+     //详情导航的fix定位
     $(window).scroll(function(){
         var currentPos = $(document).scrollTop();
-        //~{5<:=6(N;~}
+        //导航定位
         if(currentPos>navH){
             $('.js_detailNav').hasClass('detail-nav-fixed')||$('.js_detailNav').addClass('detail-nav-fixed');
             $('.js_buyNow').show();

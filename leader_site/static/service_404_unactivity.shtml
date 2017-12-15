@@ -15,35 +15,31 @@
 
 	<body>
 		<div class="service_error_abovebox">
-			<div class="service_error_adbox bigbg">
-				<div class="service_error_adimgbox">
-					<img class="service_error_adimg" src="images/ad.png" />
+			<div class="service_unactivity_padding">
+				<div class="service_error_adbox service_unactivity">
+					<div class="service_error_adimgbox">
+						<img class="service_error_adimg" src="images/error404.png" />
+					</div>
+				</div>
+				<div class="service_error_rightbox">
+					<div class="service_error_errorbox service_unactivity2">
+						<img class="service_error_errorimg" src="images/error404.png">
+					</div>
+					<div class="service_error_testbox">
+						<p class="service_error_describe">页面君奋不顾身的去流浪了...</p>
+						<p class="service_error_reasontitle">无法访问可能原因为：</p>
+						<p class="service_error_reason">您输入的地址是否有误</p>
+						<p class="service_error_reason">该页面暂时失效或已被删除</p>
+						<a class="service_error_goback">返回首页</a>
+					</div>
 				</div>
 			</div>
-			<div class="service_error_rightbox">
-				<div class="service_error_errorbox">
-					<img class="service_error_errorimg" src="images/error404.png">
-				</div>
-				<div class="service_error_testbox">
-					<p class="service_error_describe">页面君奋不顾身的去流浪了...</p>
-					<p class="service_error_reasontitle">无法访问可能原因为：</p>
-					<p class="service_error_reason">您输入的地址是否有误</p>
-					<p class="service_error_reason">该页面暂时失效或已被删除</p>
-					<a class="service_error_goback">返回首页</a>
-				</div>
-			</div>
-			<div class="service_error_adbox smallbg smallbg2">
-				<div class="service_error_adimgbox">
-					<img class="service_error_adimg" src="images/ad.png" />
-				</div>
-			</div>
-
 		</div>
-		<div class="service_marginbotton">
+		<div class="service_marginbotton service_marginbotton_unactivity">
 
 		</div>
 		<!-- 精品推荐 1-->
-		<!--<div class="o_g product-recommend">
+		<div class="o_g product-recommend">
 			<div class="o_u o_df_1-12"></div>
 			<div class="o_u o_df_10-12">
 				<div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 product-search-downleft-box ">
@@ -113,60 +109,60 @@
 			</div>
 			<div class="o_u o_df_1-12"></div>
 
-		</div>-->
+		</div>
 		<!-- 精品推荐 END -->
 		<!-- 精品推荐 2-->
-			<div class="o_g product-recommend">
-				<div class="o_u o_df_1-12"></div>
-				<div class="o_u o_df_10-12">
-					<div class="recommend-box border_radius_service">
-						<div class="recommend-title">
-							精选推荐
-							<i class="iconfont icon-refresh-solid recommend-reload"></i>
-						</div>
-						<div class="recommend-pro">
-							<div class="o_g">
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
-									<img src="images/compare_goods.PNG">
-									<div class="recommend-pro-info">
-										<span class="pro-info-title">统帅就给个</span>
-										<span class="pro-info-title">洗衣机</span>
-										<span class="pro-info-type">JGEJJGEJ-988</span>
-										<span class="pro-info-price">￥633</span>
-									</div>
-								</a>
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
-									<img src="images/compare_goods.PNG">
-									<div class="recommend-pro-info">
-										<span class="pro-info-title">统帅就给个</span>
-										<span class="pro-info-title">洗衣机</span>
-										<span class="pro-info-type">JGEJJGEJ-988</span>
-										<span class="pro-info-price">￥633</span>
-									</div>
-								</a>
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide">
-									<img src="images/compare_goods.PNG">
-									<div class="recommend-pro-info">
-										<span class="pro-info-title">统帅就给个</span>
-										<span class="pro-info-title">洗衣机</span>
-										<span class="pro-info-type">JGEJJGEJ-988</span>
-										<span class="pro-info-price">￥633</span>
-									</div>
-								</a>
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-									<img src="images/compare_goods.PNG">
-									<div class="recommend-pro-info">
-										<span class="pro-info-title">统帅就给个</span>
-										<span class="pro-info-title">洗衣机</span>
-										<span class="pro-info-type">JGEJJGEJ-988</span>
-										<span class="pro-info-price">￥633</span>
-									</div>
-								</a>
-							</div>
+		<!--<div class="o_g product-recommend">
+			<div class="o_u o_df_1-12"></div>
+			<div class="o_u o_df_10-12">
+				<div class="recommend-box border_radius_service">
+					<div class="recommend-title">
+						精选推荐
+						<i class="iconfont icon-refresh-solid recommend-reload"></i>
+					</div>
+					<div class="recommend-pro">
+						<div class="o_g">
+							<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								<img src="images/compare_goods.PNG">
+								<div class="recommend-pro-info">
+									<span class="pro-info-title">统帅就给个</span>
+									<span class="pro-info-title">洗衣机</span>
+									<span class="pro-info-type">JGEJJGEJ-988</span>
+									<span class="pro-info-price">￥633</span>
+								</div>
+							</a>
+							<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
+								<img src="images/compare_goods.PNG">
+								<div class="recommend-pro-info">
+									<span class="pro-info-title">统帅就给个</span>
+									<span class="pro-info-title">洗衣机</span>
+									<span class="pro-info-type">JGEJJGEJ-988</span>
+									<span class="pro-info-price">￥633</span>
+								</div>
+							</a>
+							<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide">
+								<img src="images/compare_goods.PNG">
+								<div class="recommend-pro-info">
+									<span class="pro-info-title">统帅就给个</span>
+									<span class="pro-info-title">洗衣机</span>
+									<span class="pro-info-type">JGEJJGEJ-988</span>
+									<span class="pro-info-price">￥633</span>
+								</div>
+							</a>
+							<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+								<img src="images/compare_goods.PNG">
+								<div class="recommend-pro-info">
+									<span class="pro-info-title">统帅就给个</span>
+									<span class="pro-info-title">洗衣机</span>
+									<span class="pro-info-type">JGEJJGEJ-988</span>
+									<span class="pro-info-price">￥633</span>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>-->
 		<!-- 精品推荐 END -->
 
 		<!-- <div class="o_body">
