@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>404 - 统帅官网</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
-    <link rel="stylesheet" type="text/css" href="product_list.css" />
-    <link rel="stylesheet" type="text/css" href="product_search.css" />
+    <link rel="stylesheet" type="text/css" href="product_list.css"/>
+    <link rel="stylesheet" type="text/css" href="product_search.css"/>
     <link rel="stylesheet" type="text/css" href="service.css">
 </head>
 
@@ -21,7 +21,7 @@
     <div class="service_unactivity_padding">
         <div class="service_error_adbox service_unactivity">
             <div class="service_error_adimgbox">
-                <img class="service_error_adimg" src="error404.png" />
+                <img class="service_error_adimg" src="error404.png"/>
             </div>
         </div>
         <div class="service_error_rightbox">
@@ -62,7 +62,7 @@
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript">
     $(function () {
-        var count=1;
+        var count = 1;
         var templet_entities;
         var data = {
             "orderBy": "-shangshishijian",
@@ -79,55 +79,55 @@
 
                 productdata1(templet_entities);
 
-                $('.recommend-reload').live('click',function () {
+                $('.recommend-reload').live('click', function () {
 
-                    if(count%2){
+                    if (count % 2) {
                         productdata2(templet_entities);
-                        count+=1;
-                    }else{
+                        count += 1;
+                    } else {
                         productdata1(templet_entities)
-                        count-=1;
+                        count -= 1;
                     }
                 })
 
             }
         });
-
     });
 
-    function productdata1(templet_entities){
+    function productdata1(templet_entities) {
         $('.prolist div.recommend-pro').remove();
-        var templet_addhtml='<div class="recommend-pro"><div class="o_g">';
-        var templet_branches=templet_entities.length;
-        for(var i=0;i<4;i++){
-            var templet_docpuburl=templet_entities[i].docpuburl;
-            var templet_location=templet_docpuburl.lastIndexOf("\/");
-            var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[i].appfile;
-            templet_addhtml+='<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="'+templet_docpuburl+'">';
-            templet_addhtml+='<img src="'+templet_picUrl+'"/><div class="recommend-pro-info">';
-            templet_addhtml+='<span class="pro-info-title">'+templet_entities[i].pname+'</span> ';
-            templet_addhtml+='<span class="pro-info-type">'+templet_entities[i].modelno+'</span>';
-            templet_addhtml+='<span class="pro-info-price">￥'+templet_entities[i].price+'.00</span></div></a> ';
+        var templet_addhtml = '<div class="recommend-pro"><div class="o_g">';
+        var templet_branches = templet_entities.length;
+        for (var i = 0; i < 4; i++) {
+            var templet_docpuburl = templet_entities[i].docpuburl;
+            var templet_location = templet_docpuburl.lastIndexOf("\/");
+            var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_entities[i].appfile;
+            templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + templet_docpuburl + '">';
+            templet_addhtml += '<img src="' + templet_picUrl + '"/><div class="recommend-pro-info">';
+            templet_addhtml += '<span class="pro-info-title">' + templet_entities[i].pname + '</span> ';
+            templet_addhtml += '<span class="pro-info-type">' + templet_entities[i].modelno + '</span>';
+            templet_addhtml += '<span class="pro-info-price">￥' + templet_entities[i].price + '.00</span></div></a> ';
         }
-        templet_addhtml+='</div></div>';
+        templet_addhtml += '</div></div>';
         $('.prolist').append(templet_addhtml);
 
     }
-    function productdata2(templet_entities){
+
+    function productdata2(templet_entities) {
         $('.prolist div.recommend-pro').remove();
-        var templet_addhtml='<div class="recommend-pro"><div class="o_g">';
-        var templet_branches=templet_entities.length;
-        for(var i=4;i<8;i++){
-            var templet_docpuburl=templet_entities[i].docpuburl;
-            var templet_location=templet_docpuburl.lastIndexOf("\/");
-            var templet_picUrl=templet_docpuburl.substring(0,templet_location+1)+templet_entities[i].appfile;
-            templet_addhtml+='<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="'+templet_docpuburl+'">';
-            templet_addhtml+='<img src="'+templet_picUrl+'"/><div class="recommend-pro-info">';
-            templet_addhtml+='<span class="pro-info-title">'+templet_entities[i].pname+'</span> ';
-            templet_addhtml+='<span class="pro-info-type">'+templet_entities[i].modelno+'</span>';
-            templet_addhtml+='<span class="pro-info-price">￥'+templet_entities[i].price+'.00</span></div></a> ';
+        var templet_addhtml = '<div class="recommend-pro"><div class="o_g">';
+        var templet_branches = templet_entities.length;
+        for (var i = 4; i < 8; i++) {
+            var templet_docpuburl = templet_entities[i].docpuburl;
+            var templet_location = templet_docpuburl.lastIndexOf("\/");
+            var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_entities[i].appfile;
+            templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + templet_docpuburl + '">';
+            templet_addhtml += '<img src="' + templet_picUrl + '"/><div class="recommend-pro-info">';
+            templet_addhtml += '<span class="pro-info-title">' + templet_entities[i].pname + '</span> ';
+            templet_addhtml += '<span class="pro-info-type">' + templet_entities[i].modelno + '</span>';
+            templet_addhtml += '<span class="pro-info-price">￥' + templet_entities[i].price + '.00</span></div></a> ';
         }
-        templet_addhtml+='</div></div>';
+        templet_addhtml += '</div></div>';
         $('.prolist').append(templet_addhtml);
 
     }
