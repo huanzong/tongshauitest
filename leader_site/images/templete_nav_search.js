@@ -205,7 +205,7 @@ function searchBoxInput(webSize) {
     var searchBoxHtml = "";
     if (!isEmpty(historyCookie)) {
         $('.js_quick_search').hide();
-        $('.js_delete_history').show();
+        $('.js_delete_history').parent().show();
         if (historyCookie.indexOf(",") != -1) {
             var historyCookieArr = historyCookie.split(",");
             for (var i = 0; i < historyCookieArr.length; i++) {
@@ -217,6 +217,7 @@ function searchBoxInput(webSize) {
             searchBoxHtml = '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookie + '">' + historyCookie + '</a></li>';
         }
     } else {
+        $('.js_delete_history').parent().hide();
         if (webSize == "xl") {
             searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修</a></li>' +
                 '<li><a href = "user.tongshuai.com/product_registe">产品注册</a></li>' +
