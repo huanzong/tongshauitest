@@ -895,3 +895,120 @@ Pagination Styles
 		}
 	}
 }
+
+/*
+ * 弹窗：表单
+ */
+.l-popup-wrap {
+    .l-popup {
+        width: 33.33%;
+        margin-left: -16.67%;
+        border-radius: 8px;
+        top: 70px;
+        @media (max-width: 1199px) and (min-width:992px) {
+            width: 46.67%;
+            margin-left: -23.34%;
+            top: 50px;
+        }
+        @media (max-width:991px) and (min-width:701px) {
+            width: 62.5%;
+            margin-left: -31.25%;
+            top: 100px;
+        }
+        @media (max-width:700px) and (min-width:576px) {
+            width: 80%;
+            margin-left: -40%;
+            top: 60px;
+        }
+        @media (max-width:575px) {
+            width: 83.33%;
+            margin-left: -41.47%;
+            top: 32px;
+        }
+        .l-popup-title {
+            font-size: 16px;
+            color: #333;
+            padding: 23px 0 23px 30px;
+            border-bottom: 1px solid #eee;
+            @media (max-width: 575px) {
+                padding: 23px 0 23px 20px;
+            }
+        }
+        .icon-close {
+            font-size: 16px;
+            color: #000;
+            background: none;
+            top: 18px;
+            right: 16px;
+        }
+        .l-popup-content {
+            margin: 33px 30px 30px 30px;
+            @media (max-width: 575px) {
+                margin: 33px 20px 30px 20px;
+            }
+            .l-popup-item {
+                font-size: 16px;
+                color: #333;
+                line-height: 31px;
+            }
+            form {
+                font-size: 14px;
+                color: #333;
+                .l-popup-label {
+                    padding: 23px 0 12px 0;
+                    .l-popup-head {
+                        display: inline-block;
+                    }
+                    .l-popup-red {
+                        padding-left: 3px;
+                        padding-top: 4px;
+                        color: #e60012;
+                        display: inline-block;
+                    }
+                }
+                .l-input {
+                    .l-popup-input {
+                        width: 100%;
+                        color: #999;
+                    }
+                }
+                .l-popup-select {
+                    height: 40px;
+                    color: #999;
+                }
+                .l-textarea {
+                    .l-popup-textarea {
+                        width: 100%;
+                        height: 120px;
+                        line-height: 24px;
+                        padding: 15px 0;
+                        text-indent: 20px;
+                        color: #999;
+                        overflow: hidden;
+                    }
+                }
+                .Validform_checktip i.iconfont {
+                    top: 1.5px;
+                }
+            }
+        }
+        .l-popup-submit {
+            width: 100%;
+            margin-top: 20px;
+            background: #e60012;
+            height: 40px;
+            border: 1px solid #e60012;
+            border-radius: 40px;
+            text-align: center;
+            span {
+                color: #fff;
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+.o_shade {
+    z-index: 999999999;
+}
