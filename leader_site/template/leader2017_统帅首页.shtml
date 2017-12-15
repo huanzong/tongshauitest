@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
+			
 	<trs_viewdatas id="首页">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<!-- <title><TRS_ViewData Field="title" /></title> -->
-		<!-- <title>首页</title> -->
+		<title><TRS_ViewData Field="title" /></title>
 		<meta name="keywords" content="<TRS_ViewData Field='Keywords' />" />
 		<meta name="description" content="<TRS_ViewData Field='Description' />" />
 	</TRS_ViewDatas>
