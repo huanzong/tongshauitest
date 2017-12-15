@@ -383,10 +383,15 @@
                             <!-- 轮播 END -->
                             <!-- 分页 -->
                             <div class="swiper-pagination js_bannerSwiperPage">
-                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0'>
-                                <div class="pagination-box" data-index=<TRS_ROWNO/>>
+                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                <div class="pagination-box" data-index="0">
                                     <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
                                 </div>
+                                </TRS_XAPPENDIXS>
+                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
+                                    <div class="pagination-box" data-index=<TRS_ROWNO/>>
+                                        <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
+                                    </div>
                                 </TRS_XAPPENDIXS>
                             </div>
                             <!-- 分页 END -->
