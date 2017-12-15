@@ -22,35 +22,43 @@ $('.js_addressPhoneInput').find('input').blur(function(){
     var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
     var tellQuhao = /[1-9]([0-9]{2,3})/;
     var tellNub = /[1-9]([0-9]{7})/;
-    var tellNubs = /[1-9]([0-9]{1,7})/;
+    var tellNubs = /[1-9]/;
 if(inputVal.length==0){
     $(this).removeClass('Validform_error');
+    $(this).siblings('.js-addressMobError').html(' ');
+
 }else{
     if(nubName==1&&tellQuhao.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
+
     }else if(nubName==1&&!tellQuhao.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
     if(nubName==2&&tellNub.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
 
     }else if(nubName==2&&!tellNub.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
     if(nubName==3&&tellNubs.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
-
+        $(this).siblings('.js-addressMobError').html(' ');
     }else if(nubName==3&&!tellNubs.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
 }
 
@@ -462,7 +470,7 @@ function resetForm(){
     $("#phonequhao").blur();
     $("#phone").blur();
     $("#phonefenjihao").blur();
-     $('.js-addressMobError').html(' ');
+     $('.Validform_wrong').html(' ');
     $('.Validform_error').removeClass('Validform_error');
  
 
