@@ -372,7 +372,7 @@
 	</div>
 </div>
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-<script type="text/javascript" src="../site5/idangerous.swiper2.7.6.min.js"></script>
+<script type="text/javascript" src="../site5/idangerous.swiper2.7.6.js"></script>
 <script type="text/javascript" src="../site5/index.js"></script>
 <script>
 	$(function(){
