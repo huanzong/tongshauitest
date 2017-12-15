@@ -752,4 +752,73 @@ $(function() {
 
     });
 
+    /**
+     * 加入购物车
+     * 
+     * 未登录-
+     * 保存当前商品信息到 cookie 
+     * 已登录-
+     * 调用服务添加购物车
+     * 
+     * 跳转购物车页面
+     */
+
+    $('.js-add-to-cart').on('click',function(){
+
+        // 当前页面商品信息
+        var goodsInfo = [{
+            "inSkuCode": "1234-sku",
+            "quantity": 1,
+            "regionCode": 2212
+        }]
+        
+        if (istrsidssdssotoken()) {
+            $.ajax({
+                type: "post",
+                url: siteConfig.userUrl+"/buy/order/cartGoods/save",
+                csrf: true,
+                applicationType: true,
+                data: JSON.stringify(goodsInfo),
+                success_cb: function(data){
+                    if (data.isSuccess) {
+                        // 保存成功跳转购物车页面
+                        window.location.href = "./product_trolley_server.shtml"
+                    }
+                },
+                error_cb: function(jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.responseText) {
+                        console.log(JSON.parse(jqXHR.responseText).resultMsg)
+                    }
+                }
+            });
+        } else {
+            if ($.cookie('goodsInCart')) {
+                var goodsInCartArr = JSON.parse($.cookie('goodsInCart'))
+                var tempCart = []
+                for (var i = 0; i < goodsInfo.length; i++) {
+                    var added = false
+                    for (var j = 0; j < goodsInCartArr.length; j++) {
+                        if (goodsInfo[i].inSkuCode == goodsInCartArr[j].inSkuCode) {
+                            added = true
+                        }
+                    }
+
+                    if (!added) {
+                        tempCart.push(goodsInfo[i])
+                    }
+                }
+
+                goodsInfo = goodsInCartArr.concat(tempCart)
+            }
+
+            $.cookie('goodsInCart', JSON.stringify(goodsInfo), {
+                'path':'/',
+                'domain':'.tongshuai.com'
+            });
+
+            // 保存成功跳转购物车页面
+            window.location.href = "./product_trolley_server.shtml"            
+        }
+    
+    })
 });

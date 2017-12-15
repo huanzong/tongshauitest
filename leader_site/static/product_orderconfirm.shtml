@@ -70,8 +70,8 @@
                             <div class="o_u o_df_2-12   o_sm_11-12  o_xs_11-12 product-ordercon-list-title">
                                 <p><span>*</span><i>联系人姓名</i></p>
                             </div>
-                            <div class="o_u o_df_6-12  o_md_2-10   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12 js_order_username" name=""  ph="请输入联系人姓名" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                            <div class="o_u o_df_6-12  o_md_2-10  o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
+                                <input type="text" class="o_u o_df_11-12 js_order_username" name="" id="realName"  ph="请输入联系人姓名" value="" data-normal="1"  maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名" nullmsg="<i class='iconfont icon-information-solid'></i>请输入联系人的姓名"/>
                                 <p class="Validform_checktip"></p>
                             </div>
                             <!--<div class="o_u o_df_3-12"></div>-->
@@ -82,7 +82,7 @@
                                 <p><span>*</span><i>手机</i></p>
                             </div>
                             <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_11-12 js_order_userphone" name=""  ph="请输入手机号" value="" data-normal="1" datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <input type="text" class="o_u o_df_11-12 js_order_userphone" name=""  ph="请输入手机号" value="" data-normal="1" maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>请输入11位手机号码" nullmsg="<i class='iconfont icon-information-solid'></i>请输入手机号"/>
                                 <p class="Validform_checktip"></p>
                             </div>
                             <div class="o_u o_df_3-12"></div>
@@ -90,12 +90,12 @@
                         <li>
                             <div class="o_u o_df_2-12"></div>
                             <div class="o_u o_df_2-12  o_sm_11-12  o_xs_11-12 product-ordercon-list-title">
-                                <p class="  "><span>*</span><i>电话</i></p>
+                                <p class="  "><i>电话</i></p>
                             </div>
                             <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-input product-ordercon-list-input">
-                                <input type="text" class="o_u o_df_3-12 js_order_usertell" name=""  ph="区号" value="" data-normal="1" datatype="n3-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                <input type="text" class="o_u o_df_3-12 js_order_usertell" name=""  ph="区号" value="" datatype="n2-4"  id="phonequhao" ignore="ignore"   maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位的区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>"/>
                                 <div class="o_u o_df_8-12" style='text-align: right'>
-                                  <input type="text" class="o_u o_df_11-12 js_order_usertell" name=""  ph="电话号" value="" data-normal="1" datatype="n8-8"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"/>
+                                  <input type="text" class="o_u o_df_11-12 js_order_usertell" name=""  ph="电话号" value="" id="phone" datatype="n8-8" ignore="ignore"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位的号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>"/>
                                 </div>
                                 <p class="Validform_checktip"></p>
                             </div>
@@ -112,9 +112,6 @@
                                         <div class="selectbox">
                                             <div class="">
                                                 <select name="" id="js_orderConfirmSave"  autotext="省">
-                                                    <option value="0">--山东--</option>
-                                                    <option value="1">北京</option>
-                                                    <option value="2">上海</option>
                                                 </select>
 
                                             </div>
@@ -163,7 +160,7 @@
                         <li>
                             <div class="o_u o_df_4-12 o_md_4-12 o_md_4-12"></div>
                             <div class="o_u o_df_6-12   o_sm_11-12  o_xs_11-12 l-textarea product-ordercon-list-input">
-                                <textarea type="text" class="o_u o_df_11-12 js_order_address" name=""  ph="尽可能详解地填写街道、楼号、楼层、门牌号" value="" data-normal="1" datatype="zh2-4"  errormsg="<i class='iconfont icon-information-solid'></i>2-4位中文字符" nullmsg="<i class='iconfont icon-information-solid'></i>请在普通输入框填写信息"></textarea>
+                                <textarea type="text" id="address" class="o_u o_df_11-12 js_order_address" name="" value="" maxlength="100" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100" errormsg="<i class='iconfont icon-information-solid'></i>请输入地址" nullmsg="<i class='iconfont icon-information-solid'></i>此项不可为空"></textarea>
                                 <p class="Validform_checktip"></p>
                             </div>
                         </li>
@@ -174,7 +171,7 @@
                                 <div class="o_u o_df_11-12">
                                    <div class="o_u o_df_11-12">
                                         <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-2 ">
-                                        <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red   js_orderConfirmGetUpData">保存</a>
+                                        <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red js_orderConfirmGetUpData">保存</a>
                                     </div>
                                     <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_2-2 ">
                                         <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderConfirmClose " onclick="globalShade('确定取消设置？')">取消</a>
@@ -190,14 +187,12 @@
                     </ul>
                 </form>
 
-                <ul class="product-address-list-box  ">
-                    <li class="">
+                <ul class="product-address-list-box  js-product-address-list">
+                    <!-- <li class="">
                         <div class="product-address-list o_g js_addressListCont product-address-list-select">
                             <div class="l-radio">
                                 <input  type="radio" class="js_radio" name="cc" checked  value="">
                             </div>
-                            <!--<div class="o_u o_df_1-12"></div>-->
-                            <!--<span class="c_ipt_cr c_ipt_cr_cus"></span>-->
                             <p class="o_u o_sm_9-12 o_xs_8-12 js_orderAddressCont">
                                 <i class="product-address-list-name">王柯科</i>
                                 <i class="product-address-list-phone">13884973771</i>
@@ -211,8 +206,6 @@
                             <div class="l-radio">
                                 <input  type="radio" class="js_radio" name="cc" value="">
                             </div>
-                            <!--<div class="o_u o_df_1-12"></div>-->
-                            <!--<span class="c_ipt_cr c_ipt_cr_cus"></span>-->
                             <p class="o_u o_sm_9-12 o_xs_8-12 js_orderAddressCont">
                                 <i class="product-address-list-name">王柯科111</i>
                                 <i class="product-address-list-phone">13884973771</i>
@@ -220,7 +213,7 @@
                             </p>
                             <a href="javascript:;" class="o_u o_sm_2-12 o_xs_2-12 iconfont icon-pencil-solid js_addressListSetBtn order-address-set-btn">修改</a>
                         </div>
-                    </li>
+                    </li> -->
 
 
 

@@ -328,27 +328,27 @@ $(function () {
         autoplayDisableOnInteraction: false, //手动滑动图片后是否停止滚动轮播
         onSlideChangeStart: function (swiper) {
             var dataType =  $('.js_lifeStylePhotoBox').attr('data-type');
-            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').css('background-image');
-            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').css('background-image');
-            var $leftBack = $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent');
-            var $rightBack = $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent')
+            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').children('img').attr('src');
+            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').children('img').attr('src');
+            var $leftBack = $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').children('img');
+            var $rightBack = $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').children('img');
             if(dataType=='left'){
                 if (contentPrev == undefined) {
-                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background-image');
-                    $leftBack.css('background-image', contentPrev);
-                    $rightBack.css('background-image', contentNext);
+                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').children('img').attr('src');
+                    $leftBack.attr('src', contentPrev);
+                    $rightBack.attr('src', contentNext);
                 } else {
-                    $rightBack.css('background-image', contentNext);
-                    $leftBack.css('background-image', contentPrev);
+                    $rightBack.attr('src', contentNext);
+                    $leftBack.attr('src', contentPrev);
                 }
             }else{
                 if (contentNext == undefined) {
-                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background-image');
-                    $leftBack.css('background-image', contentPrev);
-                    $rightBack.css('background-image',  contentNext);
+                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').children('img').attr('src');
+                    $leftBack.attr('src', contentPrev);
+                    $rightBack.attr('src',  contentNext);
                 } else {
-                    $leftBack.css('background-image',contentPrev);
-                    $rightBack.css('background-image',contentNext);
+                    $leftBack.attr('src',contentPrev);
+                    $rightBack.attr('src',contentNext);
 
                 }
             }
@@ -562,43 +562,8 @@ setTimeout(function(){
     setTimeout(function () {
         $('.js_lifeStyleCreateTop li').eq(0).click();
     }, 1000)
+    var lifeStyleTile={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
 
-    //创造优生活模块轮播 title文字长度限制
-    textLength('.js_lifeStyleCreateTitle','14','2',$('.product-list-cont').width());
-
-    //
-    textLength('.list-cont-text>p','14','2',$('.list-cont-text>p').width());
-
- //function textLength(obj,fontSize,lineNub,objWidth){
- //    var $obj = $(obj);
- //    var fontSize = fontSize;
- //    var lineNub = lineNub;
- //    //如果对象是一个数组
- //    if($obj.length>1){
- //        for(var i = 0;i<$obj.length;i++){
- //            if(!objWidth){
- //                var $objWidth = $obj.eq(i).width();
- //            }else{
- //                var $objWidth = objWidth;
- //            }
- //
- //            var objCont = $obj.eq(i).html();
- //            var maxFontNub = parseInt($objWidth*lineNub/fontSize);
- //            $obj.eq(i).html(objCont.substring(0,maxFontNub-4)+'...');
- //        }
- //    }else if($obj.length==1){
- //        if(!objWidth){
- //            var $objWidth = $obj.eq(i).width();
- //        }else{
- //            var $objWidth = objWidth;
- //        }
- //        var objCont = $obj.html();
- //        var maxFontNub = parseInt($objWidth*lineNub/fontSize);
- //        $obj.html(objCont.substring(0,maxFontNub-8)+'...');
- //    }
- //
- //}
-
-
+    textLength(lifeStyleTile);
 
 })
