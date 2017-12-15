@@ -93,7 +93,9 @@
             <!-- 优生活 start-->
             <div class="life-style-photo-box  js_lifeStylePhotoBox">
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
-                    <div class="photo-list-img  js_lifeStylePhotoCentent" ></div>
+                    <div class="photo-list-img  js_lifeStylePhotoCentent" >
+                        <img src="" alt="">
+                    </div>
                     <div class="life-style-photo-cur-text">
                         <img src="images/style_photo_1_text.png" alt="">
                     </div>
@@ -103,7 +105,10 @@
                     <div class="swiper-container js_lifeStyleGoodLifeSwipe">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_1.png) no-repeat ;">1</div>
+                                <!--<div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_1.png) no-repeat ;"></div>-->
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="images/style_photo_1.png" alt="">
+                                </div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>111我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
@@ -111,7 +116,10 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_2.png) no-repeat ;">2</div>
+                                <!--<div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_2.png) no-repeat ;">2</div>-->
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="images/style_photo_2.png" alt="">
+                                </div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>222我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
@@ -119,7 +127,10 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_3.png) no-repeat ; ">3</div>
+                                <!--<div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_3.png) no-repeat ; ">3</div>-->
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="images/style_photo_3.png" alt="">
+                                </div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>333我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
@@ -131,7 +142,9 @@
                 </div>
                 <a href="javascript:;" class="o_u o_df_1-12 iconfont icon-arrow-jiantou-right js_photoRightBtn"></a>
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12  life-style-photo-list-right js_lifeStylePhotoRight">
-                    <div class="photo-list-img-2 js_lifeStylePhotoCentent"></div>
+                    <div class="photo-list-img-2 js_lifeStylePhotoCentent">
+                        <img src="" alt="">
+                    </div>
                 </div>
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12"></div>
                 <div class="o_u o_df_8-12 o_lg_10-12 o_md_10-12 o_sm_10-12 o_xs_10-12">

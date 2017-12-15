@@ -903,13 +903,13 @@
                 </div>
             </div>
             <!-- 优惠组合 END -->
-            <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
-            <!--激活登陆弹窗按钮添加class js_landBtn -->
+            <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登录按钮</a>-->
+            <!--激活登录弹窗按钮添加class js_landBtn -->
             <!--#include virtual="public/footer.shtml"-->
             <div class="o_g land-shade js_landShade">
                 <div class="land-box js_landContBox">
                     <div class="land-cont-title o_u">
-                        <span class="o_u ">登陆</span>
+                        <span class="o_u ">登录</span>
                         <a href="" class="o_u iconfont icon-close js_landClose"></a>
                     </div>
                     <div class="js_landType">

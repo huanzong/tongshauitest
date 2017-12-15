@@ -328,27 +328,27 @@ $(function () {
         autoplayDisableOnInteraction: false, //手动滑动图片后是否停止滚动轮播
         onSlideChangeStart: function (swiper) {
             var dataType =  $('.js_lifeStylePhotoBox').attr('data-type');
-            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').css('background-image');
-            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').css('background-image');
-            var $leftBack = $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent');
-            var $rightBack = $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent')
+            var contentNext = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').next().children('.js_lifeStylePhotoCentent').children('img').attr('src');
+            var contentPrev = $('.js_lifeStyleGoodLifeSwipe .swiper-slide-active').prev().children('.js_lifeStylePhotoCentent').children('img').attr('src');
+            var $leftBack = $('.js_lifeStylePhotoLeft').children('.js_lifeStylePhotoCentent').children('img');
+            var $rightBack = $('.js_lifeStylePhotoRight').children('.js_lifeStylePhotoCentent').children('img');
             if(dataType=='left'){
                 if (contentPrev == undefined) {
-                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background-image');
-                    $leftBack.css('background-image', contentPrev);
-                    $rightBack.css('background-image', contentNext);
+                    contentPrev = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').children('img').attr('src');
+                    $leftBack.attr('src', contentPrev);
+                    $rightBack.attr('src', contentNext);
                 } else {
-                    $rightBack.css('background-image', contentNext);
-                    $leftBack.css('background-image', contentPrev);
+                    $rightBack.attr('src', contentNext);
+                    $leftBack.attr('src', contentPrev);
                 }
             }else{
                 if (contentNext == undefined) {
-                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').css('background-image');
-                    $leftBack.css('background-image', contentPrev);
-                    $rightBack.css('background-image',  contentNext);
+                    contentNext = $('.js_lifeStyleGoodLifeSwipe').find('.swiper-slide').eq(2).children('.js_lifeStylePhotoCentent').children('img').attr('src');
+                    $leftBack.attr('src', contentPrev);
+                    $rightBack.attr('src',  contentNext);
                 } else {
-                    $leftBack.css('background-image',contentPrev);
-                    $rightBack.css('background-image',contentNext);
+                    $leftBack.attr('src',contentPrev);
+                    $rightBack.attr('src',contentNext);
 
                 }
             }
