@@ -91,6 +91,7 @@
             m: /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}|16[0-9]{9}|17[0-9]{9}|18[0-9]{9}|19[0-9]{9}$/,
             e: /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
             url: /^(\w+:\/\/)?\w+(\.\w+)+.*$/
+            
         }, toString: Object.prototype.toString, isEmpty: function (k) {
             return k === "" || k === d.trim(this.attr("tip"))
         }, getValue: function (m) {
