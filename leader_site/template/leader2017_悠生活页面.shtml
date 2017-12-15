@@ -44,7 +44,7 @@
         <trs_viewdatas id="悠生活banner" num="1" startpos="0">
             <div class="life-style-player js_playerBox">
                 <video id="player" class="o_df-hide js_jchg_video player" src="<trs_viewdata field='link_video'/>"
-                       type="video/mp4" controls preload="auto"></video>
+                       type="video/mp4" controls preload="auto"  height="100%"></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
             <div class="life-style-video-box js_styleVideoBox">
@@ -92,6 +92,15 @@
                              alt="">
                     </a>
                 </div>
+                <div class="o_u o_df_12-12 life-video-back-border">
+                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
+                    <div class="o_u o_df_2-12 sm-hide"></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
+                    <div class="o_u o_df_2-12  o_xs_4-12 back-gray "></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
+                    <div class="o_u o_df_2-12 sm-hide"></div>
+                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
+                </div>
             </div>
         </trs_viewdatas>
 
@@ -99,7 +108,9 @@
         <!-- 优生活 start-->
         <div class="life-style-photo-box js_lifeStylePhotoBox">
             <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
-                <div class="photo-list-img  js_lifeStylePhotoCentent"></div>
+                <div class="photo-list-img  js_lifeStylePhotoCentent">
+                    <img src="" alt="">
+                </div>
                 <div class="life-style-photo-cur-text">
                     <img src="images/style_photo_1_text.png" alt="">
                 </div>
@@ -110,8 +121,10 @@
                     <div class="swiper-wrapper">
                         <trs_viewdatas id="悠生活轮播">
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent"
-                                     style=" background: url('<TRS_VIEWDATAAPPENDIXS FIELD='picture_lb'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>') no-repeat ;"></div>
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="<TRS_VIEWDATAAPPENDIXS FIELD='picture_lb'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" alt="">
+                                </div>
+
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>
@@ -125,7 +138,9 @@
             </div>
             <a href="javascript:;" class="o_u o_df_1-12 iconfont icon-arrow-jiantou-right js_photoRightBtn"></a>
             <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12  life-style-photo-list-right js_lifeStylePhotoRight">
-                <div class="photo-list-img-2 js_lifeStylePhotoCentent"></div>
+                <div class="photo-list-img-2 js_lifeStylePhotoCentent">
+                    <img src="" alt="">
+                </div>
             </div>
             <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12"></div>
             <div class="o_u o_df_8-12 o_lg_10-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
@@ -136,6 +151,17 @@
                             <trs_viewdata AUTOFORMATTYPE="HTML" field='text_description'/>
                         </p>
                     </trs_viewdatas>
+                </div>
+            </div>
+            <div class="photo-back-border o_u o_df_2-2 ">
+                <div class=" o_u o_df_2-12">
+                    <div class="photo-back-border-red"></div>
+                </div>
+                <div class=" o_u  o_df_8-12">
+                    <div class="photo-back-border-red"></div>
+                </div>
+                <div class="  o_u o_df_2-12">
+                    <div class=""></div>
                 </div>
             </div>
         </div>
@@ -439,6 +465,9 @@
                 </trs_viewdatas>
             </ul>
             <div class="o_u o_df_1-12  o_md_2-12"></div>
+            <div class="life-style-case-back-red">
+
+            </div>
         </div>
 
         <!-- 创造优生活 -->
