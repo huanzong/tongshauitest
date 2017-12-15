@@ -418,7 +418,6 @@ $(function() {
     onSlideChangeEnd: function(swiper){
       $('.temp-slide').removeClass('temp-slide')
       var index = swiper.activeIndex;
-      console.log(index)
       // $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').css({ 'filter':'alpha(opacity=0)', '-moz-opacity':'0', '-khtml-opacity': '0', 'opacity': '0' });
       $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').stop()
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
