@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>404</title>
+    <title>404 - 统帅官网</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -25,15 +25,15 @@
             </div>
         </div>
         <div class="service_error_rightbox">
-            <!--<div class="service_error_errorbox service_unactivity2">-->
-                <!--<img class="service_error_errorimg" src="error404.png">-->
-            <!--</div>-->
+            <div class="service_error_errorbox service_unactivity2">
+                <img class="service_error_errorimg" src="error404.png">
+            </div>
             <div class="service_error_testbox">
                 <p class="service_error_describe">页面君奋不顾身的去流浪了...</p>
                 <p class="service_error_reasontitle">无法访问可能原因为：</p>
                 <p class="service_error_reason">您输入的地址是否有误</p>
                 <p class="service_error_reason">该页面暂时失效或已被删除</p>
-                <a class="service_error_goback">返回首页</a>
+                <a class="service_error_goback" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />">返回首页</a>
             </div>
         </div>
     </div>
@@ -52,48 +52,6 @@
                 精选推荐
                 <a class="iconfont icon-refresh-solid recommend-reload"></a>
             </div>
-            <!--<div class="recommend-pro">-->
-                <!--<div class="o_g">-->
-                    <!--<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
-                        <!--<img src="images/compare_goods.PNG">-->
-                        <!--<div class="recommend-pro-info">-->
-                            <!--<span class="pro-info-title">统帅就给个</span>-->
-                            <!--<span class="pro-info-title">洗衣机</span>-->
-                            <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                            <!--<span class="pro-info-price">￥633</span>-->
-                        <!--</div>-->
-                    <!--</a>-->
-                    <!--<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
-                        <!--<img src="images/compare_goods.PNG">-->
-                        <!--<div class="recommend-pro-info">-->
-                            <!--<span class="pro-info-title">统帅就给个</span>-->
-                            <!--<span class="pro-info-title">洗衣机</span>-->
-                            <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                            <!--<span class="pro-info-price">￥633</span>-->
-                        <!--</div>-->
-                    <!--</a>-->
-                    <!--<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide">-->
-                        <!--<img src="images/compare_goods.PNG">-->
-                        <!--<div class="recommend-pro-info">-->
-                            <!--<span class="pro-info-title">统帅就给个</span>-->
-                            <!--<span class="pro-info-title">洗衣机</span>-->
-                            <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                            <!--<span class="pro-info-price">￥633</span>-->
-                        <!--</div>-->
-                    <!--</a>-->
-                    <!--<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide">-->
-                        <!--<img src="images/compare_goods.PNG">-->
-                        <!--<div class="recommend-pro-info">-->
-                            <!--<span class="pro-info-title">统帅就给个</span>-->
-                            <!--<span class="pro-info-title">洗衣机</span>-->
-                            <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                            <!--<span class="pro-info-price">￥633</span>-->
-                        <!--</div>-->
-                    <!--</a>-->
-               <!---->
-                <!--</div>-->
-            <!--</div>-->
-        <!---->
         </div>
     </div>
 </div>
@@ -120,8 +78,6 @@
                 templet_entities = data.data.entities;
 
                 productdata1(templet_entities);
-
-                // $(".recommend-reload").toggle(productdata1(templet_entities),productdata2(templet_entities));
 
                 $('.recommend-reload').live('click',function () {
 
