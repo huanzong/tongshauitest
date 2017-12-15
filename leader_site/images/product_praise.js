@@ -9,13 +9,15 @@ $(function() {
     function init() {
      	var screenWidth = document.body.offsetWidth;
 		var screenHeight = document.body.offsetHeight;
+		var navH=$(".detail-nav-height").offset().top;
     }
-
+     var navH=$(".detail-nav-height").offset().top;
+    $('.js_buyNow').hide();
      //详情导航的fix定位
     $(window).scroll(function(){
         var currentPos = $(document).scrollTop();
         //导航定位
-        if(currentPos>0){
+        if(currentPos>navH){
             $('.js_detailNav').hasClass('detail-nav-fixed')||$('.js_detailNav').addClass('detail-nav-fixed');
             $('.js_buyNow').show();
         }else{

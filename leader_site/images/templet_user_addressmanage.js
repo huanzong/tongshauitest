@@ -22,35 +22,43 @@ $('.js_addressPhoneInput').find('input').blur(function(){
     var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
     var tellQuhao = /[1-9]([0-9]{2,3})/;
     var tellNub = /[1-9]([0-9]{7})/;
-    var tellNubs = /[1-9]([0-9]{1,7})/;
+    var tellNubs = /[1-9]/;
 if(inputVal.length==0){
     $(this).removeClass('Validform_error');
+    $(this).siblings('.js-addressMobError').html(' ');
+
 }else{
     if(nubName==1&&tellQuhao.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
+
     }else if(nubName==1&&!tellQuhao.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
     if(nubName==2&&tellNub.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
 
     }else if(nubName==2&&!tellNub.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
     if(nubName==3&&tellNubs.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
-
+        $(this).siblings('.js-addressMobError').html(' ');
     }else if(nubName==3&&!tellNubs.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
 }
 
@@ -418,6 +426,14 @@ function loadUserInfoList(){
                         }
                     }
                     $(".js_lineInfo").html(addhtml);
+                    var obj={
+                        'obj':$('.member-address-addtext'),       //需要截取的对象，可以是同一class的多个对象
+                        'fontSize':'12',                         //截取对象的字体大小
+                        'lineNub':'2',                          //保留的行数
+                        'width':$('.member-address-addtext').width()    //非必填：对象的宽度（如果传入的对象不是动态汇入的此项可省略）
+                    };
+                    //调用截取方法
+                    textLength(obj)
 
                 }else{
                     $(".js_form_addAddrManagement").show();//显示"新增地址"表单
@@ -454,7 +470,7 @@ function resetForm(){
     $("#phonequhao").blur();
     $("#phone").blur();
     $("#phonefenjihao").blur();
-     $('.js-addressMobError').html(' ');
+     $('.Validform_wrong').html(' ');
     $('.Validform_error').removeClass('Validform_error');
  
 
