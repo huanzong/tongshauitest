@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>404</title>
+    <title>404 - 统帅官网</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
@@ -33,7 +33,7 @@
                 <p class="service_error_reasontitle">无法访问可能原因为：</p>
                 <p class="service_error_reason">您输入的地址是否有误</p>
                 <p class="service_error_reason">该页面暂时失效或已被删除</p>
-                <a class="service_error_goback">返回首页</a>
+                <a class="service_error_goback" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />">返回首页</a>
             </div>
         </div>
     </div>
@@ -41,127 +41,16 @@
 <div class="service_marginbotton service_marginbotton_unactivity">
 
 </div>
-<!--&lt;!&ndash; 精品推荐 1&ndash;&gt;-->
-<!--<div class="o_g product-recommend">-->
-    <!--<div class="o_u o_df_1-12"></div>-->
-    <!--<div class="o_u o_df_10-12">-->
-        <!--<div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 product-search-downleft-box ">-->
-            <!--<div class="o_u product-search-downleft">-->
-                <!--<div class="recommend-box">-->
-                    <!--<div class="recommend-title">-->
-                        <!--精选推荐-->
-                        <!--<i class="iconfont icon-refresh-solid recommend-reload"></i>-->
-                    <!--</div>-->
-                    <!--<div class="recommend-pro">-->
-                        <!--<div class="o_g">-->
-                            <!--<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
-                                <!--<img src="images/compare_goods.PNG">-->
-                                <!--<div class="recommend-pro-info">-->
-                                    <!--<span class="pro-info-title">统帅就给个</span>-->
-                                    <!--<span class="pro-info-title">洗衣机</span>-->
-                                    <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                                    <!--<span class="pro-info-price">￥633</span>-->
-                                <!--</div>-->
-                            <!--</a>-->
-                            <!--<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
-                                <!--<img src="images/compare_goods.PNG">-->
-                                <!--<div class="recommend-pro-info">-->
-                                    <!--<span class="pro-info-title">统帅就给个</span>-->
-                                    <!--<span class="pro-info-title">洗衣机</span>-->
-                                    <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                                    <!--<span class="pro-info-price">￥633</span>-->
-                                <!--</div>-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="o_u o_df_6-12  o_sm_2-2 o_xs_2-2 product-search-downleft-box ">-->
-            <!--<div class="o_u product-search-downleft product-search_marginleft">-->
-                <!--<div class="recommend-box">-->
-                    <!--<div class="recommend-title">-->
-                        <!--猜你喜欢-->
-                        <!--<i class="iconfont icon-refresh-solid recommend-reload"></i>-->
-                    <!--</div>-->
-                    <!--<div class="recommend-pro">-->
-                        <!--<div class="o_g">-->
-                            <!--<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
-                                <!--<img src="images/compare_goods.PNG">-->
-                                <!--<div class="recommend-pro-info">-->
-                                    <!--<span class="pro-info-title">统帅就给个</span>-->
-                                    <!--<span class="pro-info-title">洗衣机</span>-->
-                                    <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                                    <!--<span class="pro-info-price">￥633</span>-->
-                                <!--</div>-->
-                            <!--</a>-->
-                            <!--<a class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2">-->
-                                <!--<img src="images/compare_goods.PNG">-->
-                                <!--<div class="recommend-pro-info">-->
-                                    <!--<span class="pro-info-title">统帅就给个</span>-->
-                                    <!--<span class="pro-info-title">洗衣机</span>-->
-                                    <!--<span class="pro-info-type">JGEJJGEJ-988</span>-->
-                                    <!--<span class="pro-info-price">￥633</span>-->
-                                <!--</div>-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="o_u o_df_1-12"></div>-->
 
 </div>
-<!-- 精品推荐 END -->
-<!-- 精品推荐 2-->
+<!-- 精品推荐 -->
 <div class="o_g product-recommend">
     <div class="o_u o_df_1-12"></div>
     <div class="o_u o_df_10-12">
         <div class="recommend-box border_radius_service prolist">
             <div class="recommend-title">
                 精选推荐
-                <i class="iconfont icon-refresh-solid recommend-reload"></i>
-            </div>
-            <div class="recommend-pro">
-                <div class="o_g">
-                    <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
-                        <img src="images/compare_goods.PNG">
-                        <div class="recommend-pro-info">
-                            <span class="pro-info-title">统帅就给个</span>
-                            <span class="pro-info-title">洗衣机</span>
-                            <span class="pro-info-type">JGEJJGEJ-988</span>
-                            <span class="pro-info-price">￥633</span>
-                        </div>
-                    </a>
-                    <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2">
-                        <img src="images/compare_goods.PNG">
-                        <div class="recommend-pro-info">
-                            <span class="pro-info-title">统帅就给个</span>
-                            <span class="pro-info-title">洗衣机</span>
-                            <span class="pro-info-type">JGEJJGEJ-988</span>
-                            <span class="pro-info-price">￥633</span>
-                        </div>
-                    </a>
-                    <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide">
-                        <img src="images/compare_goods.PNG">
-                        <div class="recommend-pro-info">
-                            <span class="pro-info-title">统帅就给个</span>
-                            <span class="pro-info-title">洗衣机</span>
-                            <span class="pro-info-type">JGEJJGEJ-988</span>
-                            <span class="pro-info-price">￥633</span>
-                        </div>
-                    </a>
-                    <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-                        <img src="images/compare_goods.PNG">
-                        <div class="recommend-pro-info">
-                            <span class="pro-info-title">统帅就给个</span>
-                            <span class="pro-info-title">洗衣机</span>
-                            <span class="pro-info-type">JGEJJGEJ-988</span>
-                            <span class="pro-info-price">￥633</span>
-                        </div>
-                    </a>
-                </div>
+                <a class="iconfont icon-refresh-solid recommend-reload"></a>
             </div>
         </div>
     </div>
@@ -173,40 +62,37 @@
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript">
     $(function () {
+        var count=1;
         var templet_entities;
         var data = {
             "orderBy": "-shangshishijian",
             "pageNo": 1,
-            "pageSize": 4
+            "pageSize": 8
         };
 
         $.ajax({
             url: siteConfig.userUrl + "/interaction-search/front/recommendation/list/",
             data: JSON.stringify(data),
             applicationType: true,
-            login: true,
             success_cb: function (data) {
                 templet_entities = data.data.entities;
-                //大于575显示两个 小于575显示一个
 
-                // $('.recommend-reload').live('click',function () {
-                //     if($(window).width()<=575){
-                //         smallfreshen(templet_entities);
-                //     }else{
-                //         if ($('.js-recommendation').attr('freshen') == 'A') {
-                //             freshenB(templet_entities);
-                //             $('.js-recommendation').attr('smallfreshen',0);
-                //         }
-                //         else if ($('.js-recommendation').attr('freshen') == 'B') {
-                //             freshenA(templet_entities);
-                //             $('.js-recommendation').attr('smallfreshen',2);
-                //         }
-                //     }
-                // })
+                productdata1(templet_entities);
+
+                $('.recommend-reload').live('click',function () {
+
+                    if(count%2){
+                        productdata2(templet_entities);
+                        count+=1;
+                    }else{
+                        productdata1(templet_entities)
+                        count-=1;
+                    }
+                })
+
             }
         });
 
-        productdata1(templet_entities);
     });
 
     function productdata1(templet_entities){

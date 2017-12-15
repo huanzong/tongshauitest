@@ -5,13 +5,15 @@
 */*.site
 */build/
 */preview/
-*/images/maps/*.map
 */*.zip
 *.zip
 *.sh
 */**/*.psd
-*/**/maps/
+*/**/less/*.css
 */**/*.orig
+*/**/maps/
+*/**/*.map
+
 /.idea
 *.class
 
@@ -33,3 +35,6 @@ hs_err_pid*
 *.iml
 overlays/
 jxl.log
+*/.project
+*/.sublime-gulp.cache
+*.stackdump
