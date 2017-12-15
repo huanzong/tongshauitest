@@ -82,10 +82,10 @@
                 $('.recommend-reload').live('click',function () {
 
                     if(count%2){
-                        productdata1(templet_entities);
+                        productdata2(templet_entities);
                         count+=1;
                     }else{
-                        productdata2(templet_entities)
+                        productdata1(templet_entities)
                         count-=1;
                     }
                 })
