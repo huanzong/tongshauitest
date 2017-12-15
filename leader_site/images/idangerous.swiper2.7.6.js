@@ -2664,6 +2664,8 @@ Swiper.prototype = {
             es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = translate;
         }
         else {
+            if(isNaN(coords.x))coords.x=0;
+            if(isNaN(coords.y))coords.y=0;
             es.left = coords.x + 'px';
             es.top  = coords.y + 'px';
         }
