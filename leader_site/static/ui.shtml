@@ -823,7 +823,8 @@
         <h1>多行文字截取</h1>
     </div>
     <div class="main markdown small-padding">
-        <a href="javascript:;" class="l-btn-normal l-btn-orange testtimeout" onclick="textLength('.js_fontLength','14','3')" >点击成3行</a>
+
+        <a href="javascript:;" class="l-btn-normal l-btn-orange testtimeout" onclick="textLength(obj)" >点击成3行</a>
 
         <div style="height:100px;width: 500px;">
             <p class="js_fontLength" style="padding-bottom: 15px;">我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end</p>
@@ -831,15 +832,22 @@
         <h3>------------HTML-------------</h3>
         <textarea>
             <div style="height:100px;width: 500px;">
-                //****这里最好有15像素的下边距****
+
                 <p class="js_fontLength" style="font-size: 14px;">我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end</p>
 
             </div>
         </textarea>
         <h3>------------JS-------------</h3>
         <textarea>
-            textLength('所需要截取对象的class或者对应的选择器','截取对象的字体大小','保留的行数'，'对象的宽度（如果传入的对象不是动态汇入的此项可省略）')
-            textLength('.js_fontLength','14','3')
+                    var obj={
+                            'obj':$('.js_fontLength'),                //需要截取的对象，可以是同一class的多个对象
+                            'fontSize':'14',                         //截取对象的字体大小
+                            'lineNub':'3',                          //保留的行数
+                            'width':$('.js_fontLength').width()    //非必填：对象的宽度（如果传入的对象不是动态汇入的此项可省略）
+                            };
+
+            //调用方法
+            textLength(obj)
         </textarea>
     </div>
 
@@ -853,5 +861,9 @@
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/l_dateTime.js"></script>
 <script type="text/javascript" src="images/ui.js"></script>
+    <script>
+        var obj={'obj':$('.js_fontLength'),'fontSize':'14','lineNub':'3','width':$('.js_fontLength').width()};
+
+    </script>
 </body>
 </html>
