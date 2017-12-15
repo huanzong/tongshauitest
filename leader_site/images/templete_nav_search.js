@@ -23,10 +23,19 @@ $('.js_searchHistory').bind('input propertychange', function () {
         } else {
             $('.js_searchBox_lg').show();
         }
+
         $('.js_searchBoxQuick_lg').hide();
+        $('.js_quick_search').hide();
+        $('.js_searchBox_list_xl').hide();
+        $('.js_search_list_bold').show();
+
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBoxQuick_lg').show();
+        $('.js_quick_search').show();
+        $('.js_searchBox_list_xl').show();
+        $('.js_search_list_bold').hide();
+
         $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
@@ -40,9 +49,17 @@ $('.js_searchHistory').bind('input propertychange', function () {
     }
     $('.js_searchBoxQuick_lg').hide();
     if ($(this).val() && $(this).val() != "搜索产品、服务、帮助...") {
-        $('.js_quick_search').remove();
+
+        $('.js_quick_search').hide();
+        $('.js_searchBox_list_xl').hide();
+        $('.js_search_list_bold').show();
+
         searchBoxWord($(this).val());
     } else {
+        $('.js_quick_search').show();
+        $('.js_searchBox_list_xl').show();
+        $('.js_search_list_bold').hide();
+
         $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
@@ -169,7 +186,6 @@ function searchBoxWord(word) {
             dataType: "html",
             async: true,
             success: function (data) {
-                $('.js_quick_search').remove();
                 if(screenWidth > 1199){
                     $('.js_search_list_bold').html(data);
                 }else{
