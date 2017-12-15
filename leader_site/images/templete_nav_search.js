@@ -35,6 +35,7 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_quick_search').show();
         $('.js_searchBox_list_xl').show();
         $('.js_search_list_bold').hide();
+        $('.js_searchBox_list_lg').hide();
 
         $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
@@ -59,6 +60,7 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_quick_search').show();
         $('.js_searchBox_list_xl').show();
         $('.js_search_list_bold').hide();
+        $('.js_searchBox_list_lg').hide();
 
         $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
         $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
