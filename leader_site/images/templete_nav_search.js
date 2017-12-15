@@ -27,8 +27,8 @@ $('.js_searchHistory').bind('input propertychange', function () {
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBoxQuick_lg').show();
-        $('.js_searchBox_xl').html(searchBoxInput("xl"));
-        $('.js_searchBox_lg').html(searchBoxInput("lg"));
+        $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
 
@@ -43,8 +43,8 @@ $('.js_searchHistory').bind('input propertychange', function () {
         $('.js_quick_search').remove();
         searchBoxWord($(this).val());
     } else {
-        $('.js_searchBox_xl').html(searchBoxInput("xl"));
-        $('.js_searchBox_lg').html(searchBoxInput("lg"));
+        $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
 });
@@ -170,14 +170,11 @@ function searchBoxWord(word) {
             async: true,
             success: function (data) {
                 $('.js_quick_search').remove();
-                if (screenWidth > 1199) {
-                    data = '<ul class="search-list-key">' + data + '</ul>';
-                    $('.js_searchBox_root').html(data).find('.search-list-key').show();
+                if(screenWidth > 1199){
+                    $('.js_search_list_bold').html(data);
                 }else{
-                    $('.js_searchBox_listShow').html(data);
+                    $('.js_searchBox_list_lg').html(data);
                 }
-            },
-            error: function (data) {
             }
         });
     }
@@ -199,18 +196,12 @@ function searchBoxInput(webSize) {
         } else {
             searchBoxHtml = '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookie + '">' + historyCookie + '</a></li>';
         }
-        if (webSize == "xl") {
-            searchBoxHtml = '<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>' +
-                '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
-        }
     } else {
         if (webSize == "xl") {
             searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修</a></li>' +
                 '<li><a href = "user.tongshuai.com/product_registe">产品注册</a></li>' +
                 '<li><a href = "/service/help">帮助中心</a></li>' +
                 '<li><a href = "/contact">联系我们</a></li>';
-            searchBoxHtml = '<div class="search-quick js_quick_search">快速链接</div>' +
-                '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
         }
     }
     return searchBoxHtml;
