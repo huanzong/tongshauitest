@@ -78,6 +78,7 @@ $('body').on('click', function (e) {
     }
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
+    $('.js_delete_history').parent().hide();
 });
 
 //搜索--lg
@@ -206,6 +207,7 @@ function searchBoxInput(webSize) {
     if (!isEmpty(historyCookie)) {
         $('.js_quick_search').hide();
         $('.js_delete_history').parent().show();
+        $('.js_searchBox_list_lg').show();
         if (historyCookie.indexOf(",") != -1) {
             var historyCookieArr = historyCookie.split(",");
             for (var i = 0; i < historyCookieArr.length; i++) {
