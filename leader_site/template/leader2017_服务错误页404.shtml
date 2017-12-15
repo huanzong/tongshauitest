@@ -25,9 +25,9 @@
             </div>
         </div>
         <div class="service_error_rightbox">
-            <!--<div class="service_error_errorbox service_unactivity2">-->
-                <!--<img class="service_error_errorimg" src="error404.png">-->
-            <!--</div>-->
+            <div class="service_error_errorbox service_unactivity2">
+                <img class="service_error_errorimg" src="error404.png">
+            </div>
             <div class="service_error_testbox">
                 <p class="service_error_describe">页面君奋不顾身的去流浪了...</p>
                 <p class="service_error_reasontitle">无法访问可能原因为：</p>
