@@ -473,7 +473,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="xl"/></div>
-                                        <div class="fontpoint-small">产品类型</div>
+                                        <div class="fontpoint-small">产品系列</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
@@ -485,7 +485,7 @@
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="kd"/></div>
-                                        <div class="fontpoint-small">宽度(mm)</div>
+                                        <div class="fontpoint-small">厚度(mm)</div>
                                     </div>
                                 </div>
                                 <div class="o_u o_df_1-5">
