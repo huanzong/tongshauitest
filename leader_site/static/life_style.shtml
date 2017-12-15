@@ -43,7 +43,7 @@
         <!-- 导航 End-->
         <div class="o_g">
             <div class="life-style-player js_playerBox">
-                <video  id="player" class="o_df-hide js_jchg_video player" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" controls preload="auto"  height="100%" ></video>
+                <video  id="player" class="o_df-hide js_jchg_video player" src="images/tongshuai_video.mp4" type="video/mp4" controls preload="auto"  height="100%" ></video>
                 <a href="javascript:;" class="iconfont icon-close js_styleLifevideoClose"></a>
             </div>
             <div class="life-style-video-box js_styleVideoBox">
@@ -93,7 +93,9 @@
             <!-- 优生活 start-->
             <div class="life-style-photo-box  js_lifeStylePhotoBox">
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12 js_lifeStylePhotoLeft  life-style-photo-list-left">
-                    <div class="photo-list-img  js_lifeStylePhotoCentent" ></div>
+                    <div class="photo-list-img  js_lifeStylePhotoCentent" >
+                        <img src="" alt="">
+                    </div>
                     <div class="life-style-photo-cur-text">
                         <img src="images/style_photo_1_text.png" alt="">
                     </div>
@@ -103,7 +105,10 @@
                     <div class="swiper-container js_lifeStyleGoodLifeSwipe">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_1.png) no-repeat ;">1</div>
+                                <!--<div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_1.png) no-repeat ;"></div>-->
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="images/style_photo_1.png" alt="">
+                                </div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>111我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
@@ -111,7 +116,10 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_2.png) no-repeat ;">2</div>
+                                <!--<div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_2.png) no-repeat ;">2</div>-->
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="images/style_photo_2.png" alt="">
+                                </div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>222我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
@@ -119,7 +127,10 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_3.png) no-repeat ; ">3</div>
+                                <!--<div class="photo-list-img js_lifeStylePhotoCentent" style=" background: url(images/style_photo_3.png) no-repeat ; ">3</div>-->
+                                <div class="photo-list-img js_lifeStylePhotoCentent">
+                                    <img src="images/style_photo_3.png" alt="">
+                                </div>
                                 <div class="life-style-photo-cur-text js_lifeStyelGoodLifeCont">
                                     <img src="images/style_photo_1_text.png" alt="">
                                     <p>333我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
@@ -131,7 +142,9 @@
                 </div>
                 <a href="javascript:;" class="o_u o_df_1-12 iconfont icon-arrow-jiantou-right js_photoRightBtn"></a>
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12  life-style-photo-list-right js_lifeStylePhotoRight">
-                    <div class="photo-list-img-2 js_lifeStylePhotoCentent"></div>
+                    <div class="photo-list-img-2 js_lifeStylePhotoCentent">
+                        <img src="" alt="">
+                    </div>
                 </div>
                 <div class="o_u o_df_2-12 o_lg_1-12 o_md_1-12 o_sm_1-12 o_xs_1-12"></div>
                 <div class="o_u o_df_8-12 o_lg_10-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
@@ -139,6 +152,18 @@
                         <img src="images/style_photo_1_text.png" alt="">
                         <p class="js_lifeStyelGoodLifeText">111我们将对生活的理解转化成产品语言，并注入每一件统帅产品的基因中</br>
                             希望家电这一长久陪伴于你的生活物品，可以与你完美契合，给你悠然惬意的生活</p>
+                    </div>
+                </div>
+
+                <div class="photo-back-border o_u o_df_2-2 ">
+                    <div class=" o_u o_df_2-12">
+                        <div class="photo-back-border-red"></div>
+                    </div>
+                    <div class=" o_u  o_df_8-12">
+                        <div class="photo-back-border-red"></div>
+                    </div>
+                    <div class="  o_u o_df_2-12">
+                        <div class=""></div>
                     </div>
                 </div>
             </div>
@@ -456,6 +481,9 @@
                     </li>
                 </ul>
                 <div class="o_u o_df_1-12  o_md_2-12"></div>
+                <div class="life-style-case-back-red">
+
+                </div>
             </div>
 
 
