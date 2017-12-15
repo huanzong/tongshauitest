@@ -113,7 +113,7 @@
                     </div>
                     <div class="o_u detail-nav-info">
                         <div class="nav-info-box">
-                            <a class="l-btn-sm l-btn-red nav-btn" class="" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">立即购买</a>
+                            <a class="l-btn-sm l-btn-red nav-btn js_buyNow" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">立即购买</a>
                         </div>
                     </div>
                 </div>
