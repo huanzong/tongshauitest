@@ -23,7 +23,7 @@ $(function(){
         $('.js_orderList>li').eq(2).addClass('cur').siblings().removeClass('cur');
     }
     else if('comment'==templet_orderway){
-        memberOrderNot();
+        notComment(1,10);
         $('.js_orderList>li').eq(3).addClass('cur').siblings().removeClass('cur');
     }
     else{

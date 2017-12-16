@@ -31,17 +31,17 @@
                         <!-- 内容区域 START-->
                         <div class="member-security-contbox js-contRightContBox">
                             <div class="member-security-table o_g">
-                                <div class="member-share-leftbox member-comment-leftbox o_u o_df_1-3 o_lg_11-12 o_md_11-12 o_sm_11-12 o_xs_11-12 ">
+                                <div class="member-share-leftbox member-comment-leftbox o_u o_df_1-3 o_lg_11-12 o_md_11-12 o_sm_11-12 o_xs_12-12 ">
                                     <div class="member-share-leftcont member-comment-leftcont ">
                                         <img src="images/compare_goods.PNG" alt="">
                                         <p class="o_u o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3">统帅323L大容量无霜冰箱 <br><span>BCD-323WLDPN</span></p>
                                     </div>
                                 </div>
-                                <div class="member-share-rightbox member-comment-rightbox o_u o_df_2-3 o_lg_11-12 o_md_11-12 o_sm_11-12 o_xs_11-12">
+                                <div class="member-share-rightbox member-comment-rightbox o_u o_df_2-3 o_lg_11-12 o_md_11-12 o_sm_11-12 o_xs_12-12">
                                     <div class="member-share-right-cont">
                                         <div class="member-share-score">
-                                            <p class="member-share-right-title  o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">整体评分<i>*</i></p>
-                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title  o_u    o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">整体评分<i>*</i></p>
+                                            <ul class="js_shareScoreImg member-share-right-score  o_u o_df_9-12  o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <li>
                                                     <a href="javascript:;" class="selected_g"><i class="iconfont icon-star-solid"></i></a>
                                                 </li>
@@ -60,8 +60,8 @@
                                             </ul>
                                         </div>
                                         <div class="member-comment-impress-box ">
-                                            <p class="member-share-right-title o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">买家印象<i>*</i></p>
-                                            <div class="member-comment-impress-cont js_commentImpressBtns o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title o_u  o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">买家印象<i>*</i></p>
+                                            <div class="member-comment-impress-cont js_commentImpressBtns o_u  o_df_9-12 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <a href="javascript:;" class="l-btn-sm l-btn-line2 select">服务很好</a>
                                                 <a href="javascript:;" class="l-btn-sm l-btn-line2">保鲜效果好</a>
                                                 <a href="javascript:;" class="l-btn-sm l-btn-line2">配送快速</a>
@@ -85,17 +85,17 @@
                                             </div>
                                         </div>
                                         <div class="member-share-evaluate ">
-                                            <p class="member-share-right-title o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">详细评价<i>*</i></p>
-                                            <div class="member-share-evaluate-val o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
-                                                <textarea class="js_EvaluateVal o_u o_df_5-6 o_lg_5-6 o_md_5-6 o_sm_5-6 o_xs_5-6"></textarea>
+                                            <p class="member-share-right-title o_u  o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">详细评价<i>*</i></p>
+                                            <div class="member-share-evaluate-val o_u o_df_9-12  o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                                <textarea class="js_EvaluateVal o_u  o_df_9-12 o_lg_5-6 o_md_5-6 o_sm_5-6 o_xs_5-6"></textarea>
                                                 <div class="member-share-evaluate-vallength">
                                                     <span class="js_EvaluateValLength">0</span><span>/500</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="member-share-photo ">
-                                            <p class="member-share-right-title  o_u o_df_2-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">照片分享<i>*</i></p>
-                                            <div class="member-share-photo-btn o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                            <p class="member-share-right-title  o_u  o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">照片分享<i>*</i></p>
+                                            <div class="member-share-photo-btn o_u  o_df_9-12  o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                                 <ul class="member-share-right-photo">
                                                     <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
                                                     <li class="member-share-photo-cur"><img src="images/user_img.jpg" alt=""><a href="javascript:;" class="js_sharePhotoDelect member-share-photo-delect">x</a></li>
@@ -112,11 +112,11 @@
                                             </div>
                                           
                                             <!--<p class="member-share-right-title"><span>*</span>整体评价</p>-->
-                                            <div class="o_u  o_df_2-6"></div>
-                                            <p class="member-share-photo-btn-down o_u o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">0/10  支持JPG、JPEG、PNG，大小不超过2MB</p>
+                                            <div class="o_u member-share-right-title o_df_2-6"></div>
+                                            <p class="member-share-photo-btn-down o_u   o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">0/10  支持JPG、JPEG、PNG，大小不超过2MB</p>
                                         </div>
-                                        <div class="o_u  o_df_2-6"></div>
-                                        <div class="member-share-right-getup o_u  o_df_4-6 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
+                                        <div class="o_u o_df_2-6  member-share-right-title"></div>
+                                        <div class="member-share-right-getup o_u o_df_9-12 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                             <a href="javascript:;" class=" js-memberShareGetUp  l-btn-normal l-btn-red o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2">提交</a>
                                         </div>
                                     </div>
