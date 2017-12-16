@@ -572,6 +572,9 @@ img {
             padding-top: 5px;
             li {
                 line-height: 40px;
+                overflow: hidden; /*自动隐藏文字*/
+                text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+                white-space: nowrap;/*强制不换行*/
             }
         }
         .search-list {
@@ -583,8 +586,9 @@ img {
             display: none;
             a{
                 color: #999;
-                span{
+                span,font{
                     color: #333;
+                    font-weight: bold;
                 }
             }
         }
@@ -1080,13 +1084,17 @@ img {
             display: none;
             padding: 10px 0 60px;
             border-top: 1px solid #eee;
-            li{
+            li,a{
                 background: #fff;
                 display: inline-block;
                 width: 100%;
                 line-height: 38px;
                 height: 38px;
-                color: #ccc;
+                color: #999;
+                font{
+                    font-weight: bold;
+                    color: #333;
+                }
             }
         }
     } //xs下，用户信息展示

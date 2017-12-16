@@ -19,6 +19,8 @@
       margin-top: 40px;
       input{
         height: 50px;
+        line-height: 0;
+        padding-right: 50px;
       }
       a{
         top: 14px !important;
@@ -63,16 +65,18 @@
       @media (min-width: 576px) and (max-width: 700px) {
         /* sm*/
         //width: 500px;
-        margin-top:10px;
+        margin-top:8px;
         padding-left: 0px;
         margin-bottom: 20px;
+        line-height: 28px;
       }
       @media (max-width: 575px) {
         /* xs*/
-        margin-top:10px;
+        margin-top:8px;
         padding-left: 0px;
         margin-bottom: 20px;
         font-size: 12px;
+        line-height: 28px;
         i{
           padding-right: 10px !important;
         }
@@ -525,4 +529,22 @@
   /* xs*/
   padding: 20px 0 55px 0;
 }
+}
+@media (min-width: 576px) and (max-width: 700px) {
+  /* sm*/
+  //width: 500px;
+  .sm-hide{
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  /* xs*/
+.xs-hide{
+  display: none;
+}
+}
+.pro-info-price-none{
+  font-size: 16px;
+  line-height: 30px;
+  color: #ccc;
 }

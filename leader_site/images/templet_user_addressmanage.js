@@ -13,7 +13,7 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-
+$('.js_inputCheck').focus(function(){$(this).css('border-color','#ccc');})
 
 var infotell=[];
 //固定电话号码错误显示逻辑
@@ -22,35 +22,43 @@ $('.js_addressPhoneInput').find('input').blur(function(){
     var nubName = $(this).parents('.js_addressPhoneInput').attr('data-type');
     var tellQuhao = /[1-9]([0-9]{2,3})/;
     var tellNub = /[1-9]([0-9]{7})/;
-    var tellNubs = /[1-9]([0-9]{1,7})/;
+    var tellNubs = /[1-9]/;
 if(inputVal.length==0){
     $(this).removeClass('Validform_error');
+    $(this).siblings('.js-addressMobError').html(' ');
+
 }else{
     if(nubName==1&&tellQuhao.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
+
     }else if(nubName==1&&!tellQuhao.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
     if(nubName==2&&tellNub.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
 
     }else if(nubName==2&&!tellNub.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
     if(nubName==3&&tellNubs.test(inputVal)){
         infotell[nubName-1] = inputVal;
         $(this).removeClass('Validform_error');
-
+        $(this).siblings('.js-addressMobError').html(' ');
     }else if(nubName==3&&!tellNubs.test(inputVal)){
         infotell[nubName-1] = "";
         $(this).addClass('Validform_error');
-
+        var errorText = $(this).attr('errormsg');
+        $(this).siblings('.js-addressMobError').html(errorText);
     }
 }
 
@@ -251,7 +259,6 @@ $("#js_area").change(function(){
 })
 
 //新增地址
-
 function saveUserAddress(){
     if(templet_isSubmiting){//正在提交
         globalShade2('正在提交，请稍后','3');
@@ -275,6 +282,7 @@ function saveUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
+    var roadCodeVal=$.trim($("#js_road option:selected").attr("roadCode"));
 
     if(phonequhaoVal&&phoneVal){
         var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
@@ -293,6 +301,7 @@ function saveUserAddress(){
         "cityId":cityCodeVal,
         "regionId":areaCodeVal,
         "regionDetail":addressVal,
+        "streetId":roadCodeVal,
         "telPhone":telPhoneVal
     }
     templet_isSubmiting=true;
@@ -308,11 +317,13 @@ function saveUserAddress(){
                 loadUserInfoList();//获取列表
                 resetForm();//重置表单
                 $(".js_form_addAddrManagement").hide();
+                templet_isSubmiting=false;
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2(responseT.resultMsg,2,2000);
+                templet_isSubmiting=false;
             }
-            templet_isSubmiting=false;
+
         },
         error_cb:function(responseT){
             var responseT = JSON.parse(responseT.responseText); //由JSON字符串转换为JSON对象
@@ -344,6 +355,7 @@ var address=$(".js_form_addAddrManagement").Validform({
 $(function(){
     address.ignore('#phonequhao,#phone,#phonefenjihao');
 
+    //电话号码验证规则
     $('.js-newMobile').blur(function(){
         var dataType =$(this).attr('data-type');
         var dataVal = $(this).val();
@@ -416,6 +428,14 @@ function loadUserInfoList(){
                         }
                     }
                     $(".js_lineInfo").html(addhtml);
+                    var obj={
+                        'obj':$('.member-address-addtext'),       //需要截取的对象，可以是同一class的多个对象
+                        'fontSize':'12',                         //截取对象的字体大小
+                        'lineNub':'2',                          //保留的行数
+                        'width':$('.member-address-addtext').width()    //非必填：对象的宽度（如果传入的对象不是动态汇入的此项可省略）
+                    };
+                    //调用截取方法
+                    textLength(obj)
 
                 }else{
                     $(".js_form_addAddrManagement").show();//显示"新增地址"表单
@@ -452,22 +472,22 @@ function resetForm(){
     $("#phonequhao").blur();
     $("#phone").blur();
     $("#phonefenjihao").blur();
-     $('.js-addressMobError').html(' ');
+     $('.Validform_wrong').html(' ');
     $('.Validform_error').removeClass('Validform_error');
  
 
 };
 
-$('.js-newMobile').blur(function(){
- 
-    var dataVal = $(this).val();
-    var inputNullText = $(this).attr('nullmsg');
-    console.log($(this).val());
-    if(!dataType&&dataVal.length==0){
-        $(this).addClass('Validform_error').attr('data-type',1);
-        $(this).siblings('.js-addressMobError').html(inputNullText)
-    }
-})
+//$('.js-newMobile').blur(function(){
+//
+//    var dataVal = $(this).val();
+//    var inputNullText = $(this).attr('nullmsg');
+//    console.log($(this).val());
+//    if(dataVal.length==0){
+//        $(this).addClass('Validform_error').attr('data-type',1);
+//        $(this).siblings('.js-addressMobError').html(inputNullText)
+//    }
+//})
 //设置默认地址
 $(".js_addressSetDefault").live("click",function(){
     var addressId=$(this).attr("addid");
@@ -831,6 +851,7 @@ function updateUserAddress(){
     var provinceCodeVal=$.trim($("#js_save option:selected").attr("shengCode"));
     var cityCodeVal=$.trim($("#js_city option:selected").attr("cityCode"));
     var areaCodeVal=$.trim($("#js_area option:selected").attr("areaCode"));
+    var roadCodeVal=$.trim($("#js_road option:selected").attr("roadCode"));
     if(phonequhaoVal&&phoneVal){
         var telPhoneVal=phonequhaoVal+";"+phoneVal+";"+phonefenjihaoVal;
     }else{
@@ -850,6 +871,7 @@ function updateUserAddress(){
         "provinceId":provinceCodeVal,
         "cityId":cityCodeVal,
         "regionId":areaCodeVal,
+        "streetId":roadCodeVal,
         "regionDetail":addressVal,
         "telPhone":telPhoneVal,
         "id":saveId
@@ -867,11 +889,12 @@ function updateUserAddress(){
                 loadUserInfoList();
                 $(".js_form_addAddrManagement").hide();
                 globalShade2("修改地址成功",1,2000);
+                templet_isSubmiting = false;
             } else {//添加地址失败
                 globalShade2(data.resultMsg,2,2000);
-
+                templet_isSubmiting = false;
             }
-            templet_isSubmiting = false;
+
         },
         error_cb: function () {
             globalShade2("添加地址错误,请稍后重试...",1,2000);

@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<div id="js-leftredlight" style="display: none;">我的订单</div>
 <div class="o_body">
     <div class="o_main">
         <div class="o_g">
@@ -36,7 +37,7 @@
                                     </div>
                                     <div class="o_u o_df_6-12 o_sm_2-2  o_xs_2-2 detail_cont_title_btn js-pay">
                                         <a href="javascript:;" class="l-btn-sm l-btn-red">付款</a>
-                                        <a href="javascript:;" class="l-btn-sm l-btn-line2">取消订单</a>
+                                        <a href="javascript:;" class="l-btn-sm l-btn-line2">取消</a>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +47,7 @@
                                 <!--<p class="o_u  o_df_6-12 o_sm_2-2 o_xs_2-2"><span>收货确认码：</span><i>169063</i></p>-->
                             </div>
                             <div class="o_u o_df_11-12 detail_cont_box js-goods">
-
+                                <!--o_u cur_after o_u cur-->
                                 <!--<div class="o_g order_content2_box">-->
                                 <!--<div class="o_u  o_df_11-12">-->
                                 <!--<div class="o_u o_df_2-12 order_content2_img">-->
@@ -72,20 +73,20 @@
                                     </div>
                                     <div class="o_u o_df_6-12 o_xs_2-2">
                                         <h3>支付信息</h3>
-                                        <p><span class="o_u o_xs_2-2">支付方式：</span><i class="o_u o_xs_2-2">支付宝支付</i></p>
+                                        <p><span class="o_u o_xs_2-2">支付方式：</span><i class="o_u o_xs_2-2 js-payType"></i></p>
                                         <p><span class="o_u o_xs_2-2">支付时间：</span><i class="o_u o_xs_2-2 js-payTime"></i></p>
                                     </div>
-                                    <p><span class="o_u o_xs_2-2">收货地址：</span><i class="o_u o_xs_2-2 "></i></p>
+                                    <p><span class="o_u o_xs_2-2">收货地址：</span><i class="o_u o_xs_2-2 js-address"></i></p>
                                     <div class="o_u o_df_6-12 o_xs_2-2">
                                         <h3>发票信息</h3>
-                                        <p><span class="o_u o_xs_2-2">发票类型：</span><i class="o_u o_xs_2-2">电子发票（个人）</i></p>
-                                        <p><span class="o_u o_xs_2-2">发票抬头：</span><i class="o_u o_xs_2-2">广州白云有限公司</i></p>
+                                        <p><span class="o_u o_xs_2-2">发票类型：</span><i class="o_u o_xs_2-2 js-invoiceType "></i></p>
+                                        <p><span class="o_u o_xs_2-2">发票抬头：</span><i class="o_u o_xs_2-2 js-invoiceTitle "></i></p>
                                     </div>
                                 </div>
                             </div>
                             <ul class="o_u o_df_11-12 detail_cont_down">
                                 <li class="o_u o_sm_2-2 o_xs_2-2 ">
-                                    <p><span>商品总额：</span><i>&yen;3589</i></p>
+                                    <p><span>商品总额：</span><i class="js-price"></i></p>
                                 </li>
                                 <!--<li class="o_u o_sm_2-2 o_xs_2-2 ">-->
                                 <!--<p><span>组合优惠：</span><i>&yen;199</i></p>-->
@@ -95,7 +96,7 @@
                                 <!--</li>-->
 
                                 <li class="o_u  o_lg_2-2  o_md_2-2 o_sm_2-2  o_xs_2-2 detail_cont_down_total">
-                                    <span>应付款金额：</span><i>&yen;3099</i>
+                                    <span>付款金额：</span><i class="js-price"></i>
                                 </li>
                             </ul>
                         </div>
@@ -118,5 +119,6 @@
 <!--<script type="text/javascript" src="images/swiper-3.4.2.jquery.min.js"></script>-->
 <script type="text/javascript" src="images/member_nav.js"></script>
 <script type="text/javascript" src="images/templet_member_orderdetail.js"></script>
+<script type="text/javascript" src="images/templet_member_nav.js"></script>
 </body>
 </html>

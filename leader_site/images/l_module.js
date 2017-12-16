@@ -253,7 +253,7 @@ $(function() {
                 beforePlusRule:function(num,$this){},//若终止执行操作，需return true
                 beforeMinusRule:function(num,$this){},//若终止执行操作，需return true
                 plusCallback:function(num,$this){},
-                minusCallback:function(num,$this){},
+                minusCallback:function(num,$this){}
             };
 
             //实际元素-用户定义
@@ -266,7 +266,7 @@ $(function() {
                 var ele = {
                     plusEle:$(this).find(elActive.plus),
                     minusEle:$(this).find(elActive.minus),
-                    inputEle:$(this).find(elActive.input),
+                    inputEle:$(this).find(elActive.input)
                 };
 
                 //加法
@@ -329,7 +329,6 @@ $(function() {
                 }
                 
             }).focus(function () {
-                console.log(text);
                 if($this.val() == $this.attr("ph")){
                     $this.val("");
                     $this.css('color','#666');
@@ -424,7 +423,6 @@ function addressAlert(add, callback){
             url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
             data: 'parentId=0',
             //error:function(data){
-            //    console.log(data);
             //},
             login:true,
             success_cb:function(data){
@@ -455,7 +453,6 @@ function addressAlert(add, callback){
                 url: siteConfig.domain + '/interaction-service/regionInfo/regionList/',
                 data: 'parentId=' + saveCode,
                 error: function (data) {
-                    console.log(data);
                 },
                 success: function (data) {
                     var contdata = data.data;
@@ -490,7 +487,6 @@ function addressAlert(add, callback){
             url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
             data: 'parentId='+cityCode,
             error:function(data){
-                console.log(data);
             },
             success:function(data){
                 var contdata = data.data;
@@ -647,3 +643,34 @@ function btnTimeOut(obj,time,timetext,callback){
       }
     },1000);
 }
+
+//文字截取方法
+var obj={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
+
+function textLength(obj){
+    var $obj = obj.obj;
+    var fontSize = obj.fontSize;
+    var lineNub = obj.lineNub;
+    if(!obj.objWidth){
+        var $objWidth = $obj.width();
+    }else{
+        var $objWidth = obj.width;
+    }
+    //如果对象是一个数组
+    if($obj.length>1){
+        for(var i = 0;i<$obj.length;i++){
+            var objCont =  $.trim($obj.eq(i).html());
+            var maxFontNub = parseInt($objWidth*lineNub/fontSize);
+            if(maxFontNub -4<= objCont.length){
+                $obj.eq(i).html(objCont.substring(0,maxFontNub-4)+'...');
+            }
+        }
+    }else if($obj.length==1){
+        var objCont = $obj.html();
+        var maxFontNub = parseInt($objWidth*lineNub/fontSize);
+        if(maxFontNub-4 <= objCont.length){
+            $obj.html(objCont.substring(0,maxFontNub-4)+'...');
+        }
+    }
+}
+

@@ -92,26 +92,7 @@ function initCookie() {
                 }
             }
 
-            //互斥不同类别的 找到所有的对比框
-            /*if (noCompareChannel != "") {
-                $(".o_u.o_df_1-2.o_xs-hide.btn").each(function () {
-                    var pType_ = $(this).attr("data-chnid");
-                    var isChecked_ = $(this).hasClass("uncontrast");
-                    if (isChecked_) {
-                        if (pType != pType_) {
-                            $(this).removeClass("uncontrast");
-                            $(this).attr("auto", "0");
-                            $(this).find("span").html("对比");
-                            $(this).find("i").removeClass("o-close").addClass("o-plus");
-                        }
-                    }
-                    if (pType != pType_ && pType != "") {
-                        $(this).addClass("lose");
-                        $(this).removeClass("js_contrast");
-                    }
 
-                });
-            }*/
         } else {
             proObjList = [];
         }
@@ -126,7 +107,7 @@ function initLoadCookie() {
         if (proObjList.length > 0) {
             for (var i = 0; i < proObjList.length; i++) {
                 var product = proObjList[i];
-                compareHtml += '<li class="js_compareLi">' +
+                compareHtml += '<li class="js_compareLi o_u o_df_1-5">' +
                     '<div class="compare-product-img" id="' + product.id + '" data-chanid="' + product.channelid + '">' +
                     '<a href="'+product.url+'"><img src="' + product.img + '"></a>' +
                     '</div>' +
@@ -190,7 +171,7 @@ window.add_compare_flyOut_item = function ($obj) {
                 var price = $obj.attr('data-price');
                /* var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");*/
 
-                var compareHtml = '<li class="js_compareLi">' +
+                var compareHtml = '<li class="js_compareLi o_u o_df_1-5">' +
                     '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
                     '<a href="'+proUrl+'"><img src="' + proImg + '"></a>' +
                     '</div>' +
@@ -247,7 +228,7 @@ window.add_compare_flyOut_item = function ($obj) {
             var price = $obj.attr('data-price');
             /*var price = $.trim($obj.parent().parent().find(".pro-info-price").text()).replace(/\s+/g, "");*/
 
-            var compareHtml = '<li class="js_compareLi">' +
+            var compareHtml = '<li class="js_compareLi o_u o_df_1-5">' +
                 '<div class="compare-product-img" id="' + id + '" data-chanid="' + channelId + '">' +
                 '<a href="'+proUrl+'"><img src="' + proImg + '"></a>' +
                 '</div>' +

@@ -29,7 +29,7 @@ $(function(){
     var template_birthday;
     var template_loginName;
 
-    //页面加载时调个人信息
+    //页面加载时调个人信息。
     $.ajax({
         type: "get",
         url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
@@ -160,9 +160,11 @@ $(function(){
                 //头像放进去
                 if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
                     $("#js-imgleft").attr("src",'/images/user_img.jpg');
+                    $("#js-img700").attr("src",'/images/user_img.jpg');
                 }
                 else{
                     $("#js-imgleft").attr("src",data.data.headUrl);
+                    $("#js-img700").attr("src",data.data.headUrl);
                 }
             }
         }
@@ -342,12 +344,23 @@ $(function(){
         var templet_loginName=$.trim($('#js_loginName').val());
         var templet_sex=$.trim($('input[name="cc"]:checked').attr("data"));
         var templet_birthday=$.trim($('.js_Date').val());
+
         var templet_provinceName=$.trim($("#js_save  option:selected").text());
         var templet_provinceId=$.trim($("#js_save  option:selected").val());
         var templet_city=$.trim($("#js_city  option:selected").text());
         var templet_cityId=$.trim($("#js_city  option:selected").val());
         var templet_areaName=$.trim($("#js_area  option:selected").text());
         var templet_areaId=$.trim($("#js_area  option:selected").val());
+        if(templet_provinceName.indexOf("请选择")>-1){
+            templet_provinceName='';
+        }
+        if(templet_city.indexOf("请选择")>-1){
+            templet_city='';
+        }
+        if(templet_areaName.indexOf("请选择")>-1){
+            templet_areaName='';
+        }
+
 
         if( $('.js_personalistwrongbox_user').hasClass('personalist-wrong-box') || templet_loginName==''){
             return;

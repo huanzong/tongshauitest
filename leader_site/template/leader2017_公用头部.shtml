@@ -2,34 +2,34 @@
 	<!-- 一级导航 -->
 	<!-- logo -->
 	<div class="o_u o_df_2-12 o_xs_3-12">
-		<div class="nav-logo">
-			<a class="nav-logo" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />">
-				<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/logo.png" ignoreapd="true" />
-			</a>
-		</div>
+		<a class="nav-logo" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />">
+			<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/logo.png" ignoreapd="true" />
+		</a>
 	</div>
 	<!-- logo END -->
 	<!-- 导航栏目 轻产品/悠生活、服务、会员-->
 	<ul class="o_u o_df_7-12 o_df-center o_md-hide o_sm-hide o_xs-hide js_navSearchLgHide">
 		<li class="nav-column js_column" column='0'>
-			<div class="nav-column-box1"></div>
-			<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/nav-pro.gif" class="o_lg-hide" ignoreapd="true" />
+			<a href="javascript:;">
+				<div class="nav-column-box1"></div>
+				<img src="images/nav-pro.gif" class="o_lg-hide">
+			</a>
 		</li>
 		<li class="nav-column js_column" column='1'>
 
 			<a href="<trs_viewdatas id='悠生活'><trs_viewdata field='link'/></trs_viewdatas>">
-			<div class="nav-column-box2"></div>
-			<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/nav-life.gif" class="o_lg-hide" ignoreapd="true" />
+				<div class="nav-column-box2"></div>
+				<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/nav-life.gif" class="o_lg-hide" ignoreapd="true" />
 			</a>
 		</li>
 		<li class="nav-column js_column" column='2'>
 			<a href="<trs_viewdatas id='会员'><trs_viewdata field='link'/></trs_viewdatas>">
-			<div class="nav-column-box3"></div>
+				<div class="nav-column-box3"></div>
 			</a>
 		</li>
 		<li class="nav-column js_column" column='3'>
 			<a href="<trs_viewdatas id='服务'><trs_viewdata field='link'/></trs_viewdatas>">
-			<div class="nav-column-box4"></div>
+				<div class="nav-column-box4"></div>
 			</a>
 		</li>
 	</ul>
@@ -47,6 +47,11 @@
                         <li>我是搜索结果</li>
                         <li>我是搜索结果</li>
                     -->
+				</ul>
+				<ul class="search-list-key js_search_list_bold">
+					<!--<li><a>我是搜索<font>结果</font></a></li>
+					<li><a>我是搜索<font>结果</font></a></li>
+					<li><a>我是搜索<font>结果</font></a></li>-->
 				</ul>
 			</div>
 		</div>
@@ -135,12 +140,12 @@
 				<a href="javascript:;" class="js_nav-md" data-show=1>轻产品<i class="iconfont icon-plus"></i></a>
 				<ul class="nav-mdbox-second js_navMdboxSecond">
 					<trs_viewdatas id="轻产品">
-					<li>
-						<a href="<trs_viewdata field='link'/>">
-							<div class="nav-mdbox-icon icon<trs_rowno/>"></div>
-							<div class="nav-mdbox-name"><trs_viewdata field='title'/></div>
-						</a>
-					</li>
+						<li>
+							<a href="<trs_viewdata field='link'/>">
+								<div class="nav-mdbox-icon icon<trs_rowno/>"></div>
+								<div class="nav-mdbox-name"><trs_viewdata field='title'/></div>
+							</a>
+						</li>
 					</trs_viewdatas>
 				</ul>
 			</li>
@@ -153,8 +158,8 @@
 
 	<!-- 搜索框 lg以下分辨率 -->
 	<div class="o_u o_df_10-12 o_xs_2-2 nav-searchbox-lg js_navSearchLg">
-		<div class="o_u o_df_2-12 o_df-hide o_xs-show"></div>
-		<input type="text" name="" class="o_u o_df_8-10 o_xs_7-12 js_searchHistory" phtype="1" ph="搜索产品、服务、帮助..." />
+		<div class="o_u o_df_1-12 o_df-hide o_xs-show"></div>
+		<input type="text" name="" class="o_u o_df_8-10 o_xs_10-12 js_searchHistory" phtype="1" ph="搜索产品、服务、帮助..." />
 		<div class="o_u o_df_2-10 o_df-center nax-xs-close">
 			<i class="iconfont icon-close js_navSearchClose"></i>
 		</div>
@@ -164,8 +169,8 @@
 
 	<!-- 搜索结果：lg分辨率 -->
 	<ul class="o_u o_df_2-2 nav-searchresult-lg js_navSearchLg js_searchBox js_searchBox_lg">
-		<div class="o_u o_df_2-12"></div>
-		<div class="o_u o_df_8-12 js_searchBox_root">
+		<div class="o_u o_df_2-12 o_xs_1-12"></div>
+		<div class="o_u o_df_8-12 o_xs_10-12 js_searchBox_root">
 			<div class="searchresult-quick js_searchBoxQuick_lg">
 				<span>快捷链接：</span>
 				<a href="javascript:;">在线保修</a>
@@ -183,7 +188,7 @@
                 -->
 			</ul>
 		</div>
-		<div class="o_u o_df_2-12"></div>
+		<div class="o_u o_df_2-12 o_xs_1-12"></div>
 	</ul>
 	<!-- 搜索结果：大屏 END -->
 
@@ -192,15 +197,48 @@
 		<trs_viewdatas id="轻产品">
 			<li class="second-column o_df-center">
 				<a href="<trs_viewdata field='link'/>">
-				<div class="second-column-i">
-					<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic'><TRS_VIEWDATAAPPENDIX  FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" />
-				</div>
-				<div class="second-column-name"><trs_viewdata field="title"/></div>
+					<div class="second-column-i">
+						<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic'><TRS_VIEWDATAAPPENDIX  FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" />
+					</div>
+					<div class="second-column-name"><trs_viewdata field="title"/></div>
 				</a>
 			</li>
 		</trs_viewdatas>
 	</ul>
-
+	<!--<ul class="o_u o_df_2-2 nav-second o_df-center js_column_show">
+		<li class="second-column o_df-center">
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">悠生活栏目</div>
+			</a>
+		</li>
+		<li class="second-column o_df-center">
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">悠生活栏目</div>
+			</a>
+		</li>
+		<li class="second-column o_df-center">
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">悠生活栏目</div>
+			</a>
+		</li>
+		<li class="second-column o_df-center">
+			<a href="javascript:;">
+				<div class="second-column-i">
+					<img src="images/nav_icon1.png">
+				</div>
+				<div class="second-column-name">轻产品栏目</div>
+			</a>
+		</li>
+	</ul>-->
 	<!-- 二级导航 End -->
 	<!-- xs下，用户信息展示 -->
 	<ul class="o_u o_df_2-2 nav-usermsg-xs js_usermsg_xs">

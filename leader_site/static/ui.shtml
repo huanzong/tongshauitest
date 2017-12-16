@@ -31,6 +31,7 @@
             <li><a href="ui.shtml#ui_add">弹窗:地址弹窗</a></li>
             <li><a href="ui.shtml#ui_timeout">发送按钮倒计时控件</a></li>
             <li><a href="ui.shtml#ui_scroll">scroll滚动条</a></li>
+            <li><a href="ui.shtml#ui_fontlength">文字长度截取</a></li>
             <li><a href="ui.shtml#ui_iconfont">IconFont 图标</a></li>
         </ul>
     </div>
@@ -716,7 +717,7 @@
                           <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
                           <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
                       </div>
-                      <div class="js_landInputBox">
+                      <div class="js_addInputBox">
                           <div class="land-cont-normal-input o_g">
                               <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
                           </div>
@@ -816,6 +817,40 @@
         </textarea>
     </div>
     <!-- 滚动条 END -->
+
+    <!-- 多行文字截取 -->
+    <div class="main markdown" id="ui_fontlength">
+        <h1>多行文字截取</h1>
+    </div>
+    <div class="main markdown small-padding">
+
+        <a href="javascript:;" class="l-btn-normal l-btn-orange testtimeout" onclick="textLength(obj)" >点击成3行</a>
+
+        <div style="height:100px;width: 500px;">
+            <p class="js_fontLength" style="padding-bottom: 15px;">我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end</p>
+        </div>
+        <h3>------------HTML-------------</h3>
+        <textarea>
+            <div style="height:100px;width: 500px;">
+
+                <p class="js_fontLength" style="font-size: 14px;">我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end</p>
+
+            </div>
+        </textarea>
+        <h3>------------JS-------------</h3>
+        <textarea>
+                    var obj={
+                            'obj':$('.js_fontLength'),                //需要截取的对象，可以是同一class的多个对象
+                            'fontSize':'14',                         //截取对象的字体大小
+                            'lineNub':'3',                          //保留的行数
+                            'width':$('.js_fontLength').width()    //非必填：对象的宽度（如果传入的对象不是动态汇入的此项可省略）
+                            };
+
+            //调用方法
+            textLength(obj)
+        </textarea>
+    </div>
+
     <!-- iconfont -->
     <div id="ui_iconfont"></div>
     <!--#include virtual="demo_fontclass.shtml"-->
@@ -826,5 +861,9 @@
 <script type="text/javascript" src="images/jquery.jUploader-1.01.min.js"></script>
 <script type="text/javascript" src="images/l_dateTime.js"></script>
 <script type="text/javascript" src="images/ui.js"></script>
+    <script>
+        var obj={'obj':$('.js_fontLength'),'fontSize':'14','lineNub':'3','width':$('.js_fontLength').width()};
+
+    </script>
 </body>
 </html>

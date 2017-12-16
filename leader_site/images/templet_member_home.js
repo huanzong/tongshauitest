@@ -20,8 +20,6 @@ $(function(){
             //大于575显示两个 小于575显示一个
             if($(window).width()<=575){
                 smallfreshen(templet_entities);
-
-
             }else{
                 freshenA(templet_entities);
             }
