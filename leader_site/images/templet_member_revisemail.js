@@ -285,7 +285,9 @@ $(function(){
                 login:true,
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
-                        if (jQuery.trim(data).indexOf("200")>-1) {}
+                        if (jQuery.trim(data).indexOf("200")>-1) {
+                            btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码',templet_blur );
+                        }
                         else if (jQuery.trim(data).indexOf("newEmail_can_not_be_null")>-1){
                             if($('.js-newEmailerror').hasClass('Validform_right')){
                                 $('.js-newEmailerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱不能为空');
