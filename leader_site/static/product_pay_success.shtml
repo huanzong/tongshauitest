@@ -35,8 +35,16 @@
                 <div class="pay-sure">
                     <div class="iconfont icon-success-solid pay-success-icon"></div>
                     <div class="pay-success-tit">支付成功</div>
-                    <div class="pay-success-order">订单号：8887777789076665</div>
-                    <div class="pay-success-order">支付金额：<span class="pay-success-price">￥8887</span></div>
+                    <div class="pay-success-order">订单号：<span class="js-order-no">8887777789076665</span></div>
+                    <div class="pay-success-order">支付金额：<span class="pay-success-price js-total-amount">￥8887</span></div>
+                    <div class="pay-success-gomyorder">
+                    	<span>
+                    		<span id="pay-success-after" class="pay-success-after js-interval">5</span><span>s</span>
+                    	</span>后前往
+                    	<a href="javascript:;" class="pay-success-goorder js-router-to">
+                    		我的订单
+                    	</a>
+                    </div>
                 </div>
             </div>
             <!-- 支付成功 END -->
