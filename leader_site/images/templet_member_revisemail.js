@@ -273,7 +273,6 @@ $(function(){
             var templet_blur = function(){
                 $('.js-newEmail').blur();
             }
-            btnTimeOut($('.js-getinfo'),'120',' 重新获取验证码',templet_blur );
             //  个人中心绑定邮箱发送验证码接口
             $.ajax({
                 dataType: "text",
