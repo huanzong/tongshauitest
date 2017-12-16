@@ -176,7 +176,7 @@
                                 </div>
                             </div>
                             <div class="particulars-detail">
-                                <div class="old-price">￥98034</div>
+                                <div class="old-price">￥98034.09</div>
                                 <div class="corrent-price"><sub>￥</sub>98034</div>
                                 <div class="particulars-capacity">
                                     <span class="capacity-tit">容量：</span>
@@ -505,7 +505,24 @@
                 <div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
                 <div class="o_u o_df_4-12 bg-f8">
                     <div class="detail-sellpoint js_oHerlSize">
-                        <div class="swiper-container js_swiperSellPoint">
+                        <!-- 轮播缩略图 -->
+                        <div class="swiper-icon">
+                            <div class="icon-table">
+                                <div class="icon-table-cell js_sellpointSwiper_icon">
+                                    <a class="icon-box active" icon-index='0'>
+                                        <img src="images/ignore_prodetail7.jpg">
+                                    </a>
+                                    <a class="icon-box" icon-index='1'>
+                                        <img src="images/ignore_prodetail7.jpg">
+                                    </a>
+                                    <a class="icon-box" icon-index='2'>
+                                        <img src="images/ignore_prodetail7.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 轮播缩略图 END -->
+                        <div class="swiper-container js_swiperSellPoint o_md-hide o_sm-hide o_xs-hide">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="images/ignore_prodetail7.jpg">
@@ -515,6 +532,32 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="images/ignore_prodetail7.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 循环体 新增-md/sm/xs核心卖点机构 -->
+                        <div class="detail-sellpoint-fontXS o_df-hide o_md-show o_sm-show o_xs-show">
+                            <img src="images/ignore_prodetail7.jpg">
+                            <div class="sellpoint-fontXS-box">
+                                <div class="sellpoint-table">
+                                    <div class="sellpoint-table-cell">
+                                        <div class="describe1">如初生11</div>
+                                        <div class="describe2">风冷无霜更新鲜</div>
+                                        <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 循环体 新增-md/sm/xs核心卖点机构 END -->
+                        <div class="detail-sellpoint-fontXS o_df-hide o_md-show o_sm-show o_xs-show">
+                            <img src="images/ignore_prodetail7.jpg">
+                            <div class="sellpoint-fontXS-box">
+                                <div class="sellpoint-table">
+                                    <div class="sellpoint-table-cell">
+                                        <div class="describe1">如初生11</div>
+                                        <div class="describe2">风冷无霜更新鲜</div>
+                                        <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -544,7 +587,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="o_u o_df_1-12 js_oHerl">
+                <div class="o_u o_df_1-12 js_oHerl o_md-hide o_sm-hide o_xs-hide">
                     <a class="js_swiperSellPointNext js_center">
                         <img src="images/detail_icon.PNG">
                     </a>
