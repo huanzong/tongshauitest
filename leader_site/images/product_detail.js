@@ -780,9 +780,9 @@ $(function() {
 
         // 当前页面商品信息
         var goodsInfo = [{
-            "inSkuCode": "1234-sku",
+            "inSkuCode": "650000",
             "quantity": 1,
-            "regionCode": 2212
+            "regionCode": $('.js-delivery-address').attr('areaCode') || ''
         }]
         
         if (istrsidssdssotoken()) {
@@ -795,7 +795,7 @@ $(function() {
                 success_cb: function(data){
                     if (data.isSuccess) {
                         // 保存成功跳转购物车页面
-                        window.location.href = "./product_trolley_server.shtml"
+                        window.location.href = siteConfig.trolleyUrl
                     }
                 },
                 error_cb: function(jqXHR, textStatus, errorThrown) {
@@ -830,8 +830,48 @@ $(function() {
             });
 
             // 保存成功跳转购物车页面
-            window.location.href = "./product_trolley_server.shtml"            
+            window.location.href = siteConfig.trolleyUrl    
         }
     
     })
+
+    regionServer.regionInfo()
+    
 });
+
+
+var regionServer = {
+    regionInfo: function (){
+        leaderServer.getIpAddress().then(function(data){
+            var params = {
+                provinceName: data.content.address_detail.province,
+                cityName: data.content.address_detail.city
+            }
+            leaderServer.regionInfo(params).then(function(address){
+                var add = {
+                    'save': address.data.provinceName,
+                    'city': address.data.cityName,
+                    'area': address.data.areaName,
+                    'savecode': address.data.provinceName,
+                    'citycode': address.data.cityCode,
+                    'areacode': address.data.areaCode,
+                }
+
+                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(1).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+                
+                /**
+                 * @param {*} regionData 
+                 * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
+                 */
+                var addressCallback = function (regionData) {
+                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(1).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                    $('.js_addShadeTop').hide()
+                }
+
+                $('.js-delivery-address span').on('click', function(){
+                    addressAlert(add, addressCallback)        
+                })
+            })
+        })
+    }
+}

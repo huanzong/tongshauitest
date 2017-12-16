@@ -17,7 +17,12 @@
          */
          userUrl: "http://tuser.tongshuai.com",//用于获取用户信息
          domain: "http://test.tongshuai.com",//本地
-         apiUrl: "http://test.tongshuai.com/buy"//本地
+         apiUrl: "http://test.tongshuai.com/buy",//本地
+
+        // 本地流程
+        trolleyUrl: "./product_trolley_server.shtml", // 购物车
+        orderConfirmUrl: "./product_orderconfirm.shtml", // 确认订单
+        orderListUrl: "./member_order.shtml", // 订单列表
 
     };
 </script>
