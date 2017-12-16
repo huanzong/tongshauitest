@@ -395,7 +395,7 @@ $('.js_addClose').click(function(){
 /*
 * 公用地址弹窗
 * */
-function addressAlert(add){
+function addressAlert(add, callback){
     $('.js_addShadeTop').show();
     $('.js_addContBox').show();
     var addressSave,addressCity,addressArea,savecode_used;
@@ -417,7 +417,7 @@ function addressAlert(add){
     }
     //$('.js_addInputBox>div').eq(0).show().siblings().hide();
     //获取省份并汇入
-    if(!add.savecode){
+    // if(!add.savecode){
         $.ajax({
             type:'GET',
             url:siteConfig.domain + '/interaction-service/regionInfo/regionList/',
@@ -438,7 +438,9 @@ function addressAlert(add){
             }
 
         })
-    }
+    // }
+
+    // 选择省
     $('.js_alertAddress_save_cont>li').live('click',function() {
         $('.js_addType').attr('data-alt',2);
         saveText = $(this).html();
@@ -473,6 +475,8 @@ function addressAlert(add){
             addAleatBtn(1);
         }
     });
+
+    // 选择市
     $('.js_alertAddress_ctiy_cont>li').live('click',function(){
         $('.js_addType').attr('data-alt',3);
         cityText =  $(this).html();
@@ -503,6 +507,8 @@ function addressAlert(add){
         addAleatBtn(2);
         return false;
     });
+
+    // 选择区
     $('.js_alertAddress_area_cont>li').live('click',function(){
         areaText =  $(this).html();
         areaCode = $(this).attr('data-code');
@@ -510,14 +516,24 @@ function addressAlert(add){
         $('.js_alertAddress_area').show().html(areaText).attr('data-code','areaCode');
         var addressJson = { "saveText": saveText, "saveCode":saveCode,"cityText": cityText, "cityCode":cityCode, "areaText": areaText,"areaCode": areaCode }
         addAleatBtn(3);
+        
+        var params = {
+            'provinceName': saveText,
+            'cityName': cityText,
+            'areaName': areaText
+        }
+        leaderServer.regionInfo(params).then(function(data){
+            if(data.isSuccess){
+                if (callback) {
+                    callback(data.data)
+                }
+            }
+        })
+
         return addressJson;
-
     });
-
-
-
-
 }
+
 function addAleatBtn(index){
     $('.js_addType>div').eq(index).addClass('cur').siblings().removeClass('cur');
     $('.js_addInputBox>div').eq(index).show().siblings().hide();
