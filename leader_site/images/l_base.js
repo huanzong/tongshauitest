@@ -69,7 +69,7 @@ jQuery.ajaxSetup({
 var leaderServer = {
     //根据ip地址获取用户地址
     getIpAddress: function(){
-        $.ajax({
+        return $.ajax({
             url:'http://api.map.baidu.com/location/ip?ak=qT3FXMgALhVQia2XiGKhmeAQ',
             type:'get',
             success_cb:function(data){
@@ -84,7 +84,20 @@ var leaderServer = {
                 return false;
             }
         });
+    },
+    // 转换地址
+    regionInfo: function(data) {
+        return $.ajax({
+            type: "get",
+            url: siteConfig.domain + '/interaction-service/regionInfo/regionInfo',
+            dataType:"json",
+            data: data,
+            success_cb: function(address){
+                return address
+            }
+        })
     }
+    
 };
 
 

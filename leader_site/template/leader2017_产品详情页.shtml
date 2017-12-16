@@ -189,7 +189,7 @@
                                     <span class="capacity-box">798L</span>
                                 </div>-->
                                 <div class="particulars-delivery">
-                                    <div class="delivery-address">
+                                    <div class="delivery-address js-delivery-address">
                                         <span class="address-tit">配送至：</span>
                                         <span>山东省 青岛市 崂山区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
@@ -200,7 +200,7 @@
                                     </div>
                                 </div>
                                 <div class="particulars-btn">
-                                    <a href="javascript:;" class="l-btn-normal l-btn-red" productId="<trs_viewdata field='metadataid'/>">加入购物车</a>
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-disable" productId="<trs_viewdata field='metadataid'/>">加入购物车</a>
                                 </div>
 
                                 <div class="particulars-buy-tit">品牌旗舰店购买：</div>
@@ -1473,6 +1473,35 @@
             </div>
         </div>
     </div>
+    <!-- 配送地址 -->
+    <div class="o_g land-shade  land-shade-top js_addShadeTop">
+        <div class="land-box land-box-address js_addContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <span>配送至：</span>
+                <i class="js_alertAddress_save">浙江</i>
+                <i class="js_alertAddress_city">杭州市</i>
+                <i class="js_alertAddress_area">西湖区</i>
+                <a href="" class="o_u iconfont icon-close js_addClose"></a>
+            </div>
+            <div class="js_addType" data-alt="1">
+                <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
+            </div>
+            <div class="js_addInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 配送地址 end -->
     <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品对比详情页json" EXT="json" ></TRS_PAGEGENERATE>-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品口碑详情页" EXT="comment" ></TRS_PAGEGENERATE>-->

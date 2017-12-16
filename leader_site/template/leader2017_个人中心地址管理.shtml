@@ -49,10 +49,10 @@
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">手机<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressMobile">
-                                                <form class="ui_validForm js_ui_validForm">
+                                                <!--<form class="ui_validForm js_ui_validForm">-->
                                                     <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不得为空" id="mobile"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
-                                                </form>
+                                                <!--</form>-->
                                             </div>
                                         </div>
                                     </div>
