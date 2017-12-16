@@ -64,10 +64,15 @@ $('.js-alertTrue').click(function(){
 
 
 
+//地址详情框选中颜色控制
 
 $(function(){
     $('.js_inputCheck').focus(function(){
-    $(this).css('border-color','#f39800');
+        if(!$(this).hasClass('Validform_error')){
+            $(this).css('border-color','#ccc')
+        }else{
+            $(this).css('border-color','#f39800');
+        }
         $(this).blur(function(){
             if ($(this).siblings('.Validform_wrong').length!=0){
                 $(this).css('border-color','#f39800');
