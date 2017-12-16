@@ -13,7 +13,8 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-$('.js_inputCheck').focus(function(){$(this).css('border-color','#ccc');})
+
+
 
 var infotell=[];
 //固定电话号码错误显示逻辑
