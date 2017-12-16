@@ -478,16 +478,15 @@ $(function() {
     $('.js_bannerSwiperClose').on('click', function() {
         $('.js_specificsBoxShow').fadeOut(1000);
     });
-    $('.js_specificsShow').on('click', function() {
-        $('.js_specificsBoxShow').fadeIn(1000);
-        swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
-            // loop: true,
-            // autoplay: 3000,
-            updateOnImagesReady: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            watchActiveIndex: true,
-            onFirstInit: function(swiper) {
+
+    swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
+        // loop: true,
+        // autoplay: 3000,
+        updateOnImagesReady: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        watchActiveIndex: true,
+        onFirstInit: function(swiper) {
 
 
                 $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
@@ -518,8 +517,13 @@ $(function() {
                 $('.js_bannerSwiperPage .pagination-box').removeClass('active');
                 $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
 
-            }
-        });
+        }
+    });
+
+
+    $('.js_specificsShow').on('click', function() {
+        $('.js_specificsBoxShow').fadeIn(1000);
+        swiper.bannerSwiper.reInit()
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
