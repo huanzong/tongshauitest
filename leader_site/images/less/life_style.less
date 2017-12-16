@@ -142,7 +142,7 @@
 //     background-size:  auto 100%;
 // }
 .life-style-photo-box {
-    padding: 0 0 55px 0;
+    //padding: 0 0 55px 0;
     margin-top: -25px;
     position: relative;
 }
@@ -176,6 +176,7 @@
 
 .life-style-photo-cur-text {
     text-align: center;
+    margin: 0 0 90px 0 ;
     >img {
         padding: 55px 0 20px 0;
     }
@@ -300,6 +301,9 @@
 @media (min-width: 701px) and (max-width: 991px) {
 	/* md*/
     height: auto;
+    ul{
+        text-align: center;
+    }
 
 }
 @media (min-width: 576px) and (max-width: 700px) {
@@ -845,6 +849,10 @@
         left: -60px;
         top: 80px;
         z-index: 1;
+        @media (min-width: 992px) and (max-width: 1199px) {
+            /* lg*/
+            display: none;
+        }
         >img {
             opacity: 0.2;
             filter: alpha(opacity=20);
@@ -1130,7 +1138,7 @@
                     overflow:hidden;
                      white-space:nowrap;
                     //text-overflow: none;
-                    width: 200px;
+                    width: 100%;
                     //white-space:nowrap;
                     text-overflow: ellipsis;
                 }
@@ -1404,6 +1412,7 @@
     top: 0;
     left: 0;
     height: 100%;
+    white-space:nowrap;
     >div{
         border-right: 1px solid #eee;
         //margin-right: -1px;
@@ -1440,7 +1449,7 @@
     bottom: 0;
     right: -1px;
     border-right: 1px solid @l-red;
-    height: 200px;
+    height: 165px;
     width: 100%;
     @media (min-width: 992px) and (max-width: 1199px) {
         /* lg*/
@@ -1469,4 +1478,23 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+        display: none;
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        display: none;
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+        display: none;
+
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+        display: none;
+
+    }
 }
