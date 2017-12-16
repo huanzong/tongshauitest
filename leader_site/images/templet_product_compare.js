@@ -110,7 +110,7 @@ jQuery(function () {
                         if (!!parameterList_in_this_group[j][0]) {
                             html_tr_part1 = parameterList_in_this_group[j][0];
                             //开始一行比较
-                            html += '<li class="productPropertiesShowLi">;
+                            html += '<li class="productPropertiesShowLi">'
                             //前边标题
                             html += '<div class="o_u o_df_1-5 table_compareBoxL">';
                             html += ' <div class="compare_th">';
