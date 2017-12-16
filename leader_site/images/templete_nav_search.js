@@ -144,7 +144,13 @@ $('.js_searchHistory').keydown(function (e) {
 function jumpToProductSearch() {
     var channelId = '273690';
     var historyCookie = $.cookie('historyCookie');
-    var searchWord = $.trim($('.js_searchHistory').val());
+    var searchWord;
+    if(screenWidth > 1199){
+        searchWord = $.trim($('.js_searchHistory').val());
+    }else{
+        searchWord = $.trim($('.js_searchHistory_lg').val());
+    }
+
     if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
         if (isEmpty(historyCookie)) {
             $.cookie('historyCookie', searchWord, {path: '/'});
@@ -206,6 +212,7 @@ function searchBoxInput(webSize) {
     var searchBoxHtml = "";
     if (!isEmpty(historyCookie)) {
         $('.js_quick_search').hide();
+        $('.js_searchBoxQuick_lg').hide();
         $('.js_delete_history').parent().show();
         $('.js_searchBox_list_lg').show();
         if (historyCookie.indexOf(",") != -1) {

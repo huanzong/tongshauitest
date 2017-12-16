@@ -158,13 +158,14 @@
 	<!-- 导航 md End -->
 
 	<!-- 搜索框 lg以下分辨率 -->
-	<div class="o_u o_df_10-12 o_xs_2-2 nav-searchbox-lg js_navSearchLg">
+	<form class="o_u o_df_10-12 o_xs_2-2 nav-searchbox-lg js_navSearchLg" action="#" target="testif">
 		<div class="o_u o_df_1-12 o_df-hide o_xs-show"></div>
-		<input type="text" name="" class="o_u o_df_8-10 o_xs_10-12 js_searchHistory" phtype="1" ph="搜索产品、服务、帮助..." />
+		<input type="text" name="" class="o_u o_df_8-10 o_xs_10-12 js_searchHistory js_searchHistory_lg" phtype="1" ph="搜索产品、服务、帮助..." />
 		<div class="o_u o_df_2-10 o_df-center nax-xs-close">
 			<i class="iconfont icon-close js_navSearchClose"></i>
 		</div>
-	</div>
+		<iframe name="testif" style="display: none;"></iframe>
+	</form>
 	<!-- 搜索框 lg以下分辨率 END -->
 	<!-- 一级导航 End -->
 
