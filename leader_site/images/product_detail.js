@@ -486,6 +486,7 @@ $(function() {
         centeredSlides: true,
         slidesPerView: 3,
         watchActiveIndex: true,
+        calculateHeight : true,//Swiper根据slides内容计算容器高度。
         onFirstInit: function(swiper) {
 
 
