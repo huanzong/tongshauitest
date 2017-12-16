@@ -421,7 +421,8 @@
           padding-bottom: 10px;
           sub{
             position: relative;
-            top: -5px;
+            top: -7px;
+            font-size: 20px;
           }
         }
       }
@@ -455,14 +456,14 @@
           font-size: 12px;
           border-radius: 30px;
           line-height: 30px;
-          &.active{
+          &.active,&:hover{
             color: @l-red;
             border: 1px solid @l-red;
           }
-          @media (min-width:1200px) {
-            &:hover{
-              color: @l-red;
-              border: 1px solid @l-red;
+          &:hover{
+            @media (max-width:1199px) {
+              color: #ccc;
+              border: 1px solid #ccc;
             }
           }
         }
@@ -618,15 +619,27 @@
             .activity-float{
               display: block;
             }
-          }
-          @media (min-width:1200px) {
-
-            &:hover{
-              .icon-font i,.icon-font-info {
-                color: @l-orange;
+            .icon-font i{
+              color: #fff!important;
+            }
+            .icon-font{
+              background: @l-red!important;
+            }
+            .icon-font-info{
+              color: @l-red!important;
+            }
+            @media (max-width: 1199px){
+              .icon-font-info {
+                color: #999;
               }
-              .icon-font{
-                border-color: @l-orange;
+              .icon-font i{
+                color: #ccc;
+              }
+            }
+            .icon-font{
+              border-color: @l-orange;
+              @media (max-width: 1199px){
+                border-color: #eee;
               }
             }
           }
@@ -789,13 +802,8 @@
           border-radius: 58px;
           text-align: center;
           margin: 0 5px;
-          &.active{
+          &.active,&:hover{
             border: 2px solid @l-red;
-          }
-          @media (min-width: 1200px) {
-            &:hover{
-              border: 2px solid @l-red;
-            }
           }
           img{
             padding-top: 9px;
@@ -1333,9 +1341,7 @@
     padding-bottom: 20px;
   }
   .swiper-container{
-    @media (min-width: 1200px) {
-      height: 600px;
-    }
+    height: 600px;
     @media (min-width: 992px) and (max-width: 1199px){
       height: 500px;
     }
@@ -1460,13 +1466,15 @@
     }
     .praise-con{
       margin-bottom: 30px;
-      @media (min-width: 992px){
-        position: relative;
-        margin: 0 15px;
+      position: relative;
+      margin: 0 15px;
+      min-height: 250px;
+      @media (max-width: 1199px) {
         min-height: 360px;
       }
-      @media (min-width: 1200px) {
-        min-height: 250px;
+      @media (max-width: 991px){
+        margin: 0;
+        min-height: auto;
       }
       border: 1px solid #eee;
       border-radius: 5px;
