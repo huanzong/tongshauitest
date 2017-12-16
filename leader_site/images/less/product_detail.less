@@ -466,6 +466,7 @@
               border: 1px solid #ccc;
             }
           }
+            
         }
       }
       .particulars-delivery{//配送
@@ -477,7 +478,9 @@
           .address-tit{
             color: #666;
           }
+          i{
             vertical-align: middle;
+            color: #ccc;
             padding-left: 5px;
           }
         }
@@ -761,29 +764,44 @@
         position: relative;
         top: -90px;
         width: 100%;
-        height: 626px;
+        // height: 626px;
+        position: absolute;
+        top: 0;
+        bottom: 150px;
+
         @media (min-width: 992px) and (max-width: 1199px) {
           top: 50px;
         }
         @media (max-width: 991px) {
           width: 175%;
-          left: -30%;
+          left: -37%;
         }
         .swiper-slide{
+          display: table;
+
+          a {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+          }
+
           img{
-            position: absolute;
-            top: 50%;
-            max-width: 100%;
-            margin-top: -143px;height: 286px;
+            // position: absolute;
+            // top: 50%;
+            // max-width: 100%;
+            // margin-top: -143px;
+            // height: 286px;
+            display: inline-block;
           }
         }
 
         .swiper-slide-active{
           img{
-            position: absolute;
-            top: 50%;
-            max-width: 100%;
+            // position: absolute;
+            // top: 50%;
+            // max-width: 100%;
             // margin-top: -200px;height: 400px;
+            display: inline-block;
           }
         }
       }
@@ -811,18 +829,30 @@
         }
       }
       .pagination-prev{
-        left: 26%;
+        left: 27%;
       }
       .pagination-next{
         right: 29%;
       }
+
+      @media (max-width: 991px) {
+        .pagination-prev{
+          left: 10%;
+        }
+        .pagination-next{
+          right: 12%;
+        }
+      }
+        
+
       .pagination-next,.pagination-prev{
         position: absolute;
         z-index: 5;
         cursor: pointer;
-        top: 200px;
+        top: 40%;
+          // top: 200px;
         @media (min-width: 992px) and (max-width: 1199px) {
-          top: 340px;
+          top: 40%;
         }
         i{
           font-size: 40px;
