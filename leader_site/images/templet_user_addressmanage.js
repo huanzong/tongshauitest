@@ -321,7 +321,7 @@ function saveUserAddress(){
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2(responseT.resultMsg,2,2000);
-                templet_isSubmiting=true;
+                templet_isSubmiting=false;
             }
 
         },
@@ -892,7 +892,7 @@ function updateUserAddress(){
                 templet_isSubmiting = false;
             } else {//添加地址失败
                 globalShade2(data.resultMsg,2,2000);
-                templet_isSubmiting = true;
+                templet_isSubmiting = false;
             }
 
         },
