@@ -93,6 +93,7 @@
         });
     });
 
+
     function productdata1(templet_entities) {
         $('.prolist div.recommend-pro').remove();
         var templet_addhtml = '<div class="recommend-pro"><div class="o_g">';
