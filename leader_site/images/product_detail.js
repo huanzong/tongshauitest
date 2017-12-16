@@ -524,10 +524,8 @@ $(function() {
 
     $('.js_specificsShow').on('click', function() {
         $('.js_specificsBoxShow').fadeIn(1000);
-        setTimeout(function(){
-            swiper.bannerSwiper.reInit()
-        },3000)
-
+        swiper.bannerSwiper.reInit()
+        
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
