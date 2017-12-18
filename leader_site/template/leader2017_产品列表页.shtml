@@ -258,7 +258,7 @@
 									id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top" 
 									data-id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top" 
 									data-link="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>" 
-									data-thumb="<TRS_VIEWAPPENDIX INDEX='0' MODE='PIC'  FIELD= '_RECURL' UrlIsAbs='TRUE'></TRS_VIEWAPPENDIX>" 
+									data-thumb="<TRS_VIEWAPPENDIX INDEX='0' MODE='PIC'  FIELD= '_RECURL' UrlIsAbs='TRUE'></TRS_VIEW>"
 									data-name="<TRS_VIEWDATA  FIELD='pname' AUTOLINK='false'/>" 
 									data-type="<TRS_VIEWDATA  FIELD='modelno' AUTOLINK='false'/>" 
 									data-chnid="<TRS_VIEWDATA field='CHANNELID' />">
