@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </trs_viewdatas>
-                    <trs_viewdatas id="了解会员权益" num="1" startpos="2">
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="1">
                         <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 " style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text">
@@ -132,7 +132,7 @@
                             <trs_channel id='了解会员权益' AUTOLINK="false"/>
                         </p>
                     </div>
-                    <trs_viewdatas id="了解会员权益" num="1" startpos="1">
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="2">
                         <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text o_u o_df_11-12">
