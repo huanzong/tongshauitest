@@ -10,24 +10,24 @@
             </span>
 			<ul>
 				<li>
-					<a href="">联系我们</a>
+					<span>联系我们</span>
 				</li>
 				<li>
-					<a href="">帮助中心</a>
+					<span>帮助中心</span>
 				</li>
 				<li>
-					<a href="">服务条款</a>
+					<span>服务条款</span>
 				</li>
 				<li>
-					<a href="">法律声明</a>
+					<span>法律声明</span>
 				</li>
 			</ul>
 			<div class="footer_middle_copy">
 				<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
 				<div class="footer_copy_img_box">
-					<span href="http://cdn09.ehaier.com/v5/images/yingyezhizhao.png" class="footer_copy_img1"></span>
-					<span href="" class="footer_copy_img2"></span>
-					<span href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></span>
+					<span class="footer_copy_img1"></span>
+					<span class="footer_copy_img2"></span>
+					<a href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></a>
 				</div>
 			</div>
 			<!--<span class="copy_service">服务条款33333</span>-->
