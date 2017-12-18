@@ -10,13 +10,17 @@ $(function() {
      	var screenWidth = document.body.offsetWidth;
 		var screenHeight = document.body.offsetHeight;
 		var navH=$(".detail-nav-height").offset().top;
+        paramImgCenter($(".js_structbg"));
     }
 
-
-    $(".js_structbg").css('margin-left','-424px');
-    setTimeout(function(){
-        $(".js_structbg").oBgCover().init();//激活方法
-    },500);
+    //顶部图片居中
+    function paramImgCenter($ele){
+        $ele.css('height',$ele.parent().height());
+        if($ele.width()>$ele.parent().width()){
+            $ele.css('width','100%');
+        }
+    }
+    paramImgCenter($(".js_structbg"));
     var navH=$(".detail-nav-height").offset().top;
     $('.js_buyNow').hide();
      //详情导航的fix定位
