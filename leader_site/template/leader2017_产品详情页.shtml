@@ -1400,15 +1400,15 @@
             <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
             <!--激活登陆弹窗按钮添加class js_landBtn -->
             <!-- 产品对比 -->
-            <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide">
+            <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide" style="display: none;" >
                 <div class="compare-title">
                     产品对比
                     <div class="compare-spread js_compareBoxShow" data-show=0>
                         展开<i class="iconfont icon-arrow-line-up"></i>
                     </div>
                 </div>
-                <ul >
-                    <div class="o_g compare-list js_compareBox">
+                <ul class="compare-list">
+                    <div class="o_g js_compareBox">
                         <li class="o_u o_df_1-5 o_df-right compare-button-clear">
                             <div class="compare-link compareButton">
                                 <a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
