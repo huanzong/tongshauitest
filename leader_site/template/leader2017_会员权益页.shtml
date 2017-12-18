@@ -170,6 +170,7 @@
                 </div>
             </div>
         </div>
+
         <div class="memeber-bottom o_g">
             <div class="o_u o_df_11-12">
                 <h3>
@@ -228,7 +229,6 @@
             }
         }, 2000)
 
-
         $("#memberqybanner li").eq(0).addClass("list-share");  //第一个li
         $("#memberqybanner li").eq(1).addClass("list-endorsement");//第二个li
         $("#memberqybanner li").eq(2).addClass("list-interact");  //第三个li
@@ -237,7 +237,7 @@
         selectmember();
         for(var i = 0;i< $('.member-conter-text-down').length;i++){
             if($('.member-conter-text-down').eq(i).find('i').length>1){
-                $('.member-conter-text-down').eq(1).find('i').addClass('md-hide')
+                $('.member-conter-text-down').find('i').eq(1).addClass('md-hide')
             }
         }
 

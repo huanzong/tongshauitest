@@ -92,7 +92,7 @@ $(function(){
     function createJCrop(flag) {
         if (flag == 0) {
             //非IE下创建
-            $('#target').Jcrop({
+          $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
                     aspectRatio: 1,
@@ -116,7 +116,7 @@ $(function(){
         } else {
             //IE下创建
 
-            var api = $('#target').Jcrop({
+             jcrop_api = $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
                     aspectRatio: 1,
@@ -124,18 +124,18 @@ $(function(){
                     boxHeight:photoBoxWidth,
                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
                 }
-                ,function(){
-                    // Use the API to get the real image size
-
-            // Store the API in the jcrop_api variable
-            var bounds = this.getBounds();
-            boundx = bounds[0];
-            boundy = bounds[1];
-            // Store the API in the jcrop_api variable
-            jcrop_api = this;
+            //    ,function(){
+            //        // Use the API to get the real image size
+            //
+            //// Store the API in the jcrop_api variable
+            //var bounds = this.getBounds();
+            //boundx = bounds[0];
+            //boundy = bounds[1];
+            //// Store the API in the jcrop_api variable
+            //jcrop_api = this;
             // Move the preview into the jcrop container for css positioning
 
-        }
+        //}
     );
         }
     }
@@ -233,11 +233,9 @@ $(function(){
         onComplete: function(name, data) {
 
             if (data.isSuccess) {
-
 //      隐藏永恒显示弹窗
                 $('.js_popUpBox2').hide();
                 $("body").css({overflow:"auto"});
-
                 $('.js-uploadPhoto').hide();
                 $('.js-modifyPhoto').show();
                 $('.js-modifyPhotoBtn').show();
@@ -254,11 +252,26 @@ $(function(){
                         imgsWb = photoBoxWidth/imgsW;
                         imgsHnow = imgsH*imgsWb;
 //      初始化更改选择框内图片
+//
+//
+//                        if (isIE()) {
+//                            //是IE浏览器
+//                            createJCrop(1);
+//                        } else {
+//                            ////单独判断IE10
+//                            //if (document.documentMode == 10) {
+//                            //    createJCrop(1);
+//                            //} else
+//                            //非IE浏览器
+//                            createJCrop(0);
+//                        }
+
+
                         jcrop_api.setImage(templet_pic, function(){
                             jcrop_api.setOptions({
                                 outerImage: templet_pic,
                                 //setSelect: [ 60, 60, 260, 260 ]
-                                setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
                             })
                         });
@@ -273,7 +286,7 @@ $(function(){
                             jcrop_api.setOptions({
                                 outerImage: templet_pic,
                                 //setSelect: [ 60, 60, 260, 260 ]
-                                setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
                             })
                         });

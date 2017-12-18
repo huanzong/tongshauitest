@@ -110,16 +110,16 @@
             </span>
             <ul>
                 <li>
-                    <a href="<trs_channel id='404' field='_recurl' UrlIsAbs='true'/>">联系我们</a>
+                    <span>联系我们</span>
                 </li>
                 <li>
-                    <a href="<trs_channel id='404' field='_recurl' UrlIsAbs='true'/>">帮助中心</a>
+                    <span>帮助中心</span>
                 </li>
                 <li>
-                    <a href="<trs_channel id='404' field='_recurl' UrlIsAbs='true'/>">服务条款</a>
+                    <a href="<trs_channel id='服务条款' field='_recurl' UrlIsAbs='true'/>">服务条款</a>
                 </li>
                 <li>
-                    <a href="<trs_channel id='404' field='_recurl' UrlIsAbs='true'/>">法律声明</a>
+                    <span>法律声明</span>
                 </li>
             </ul>
             <div class="footer_middle_copy">
