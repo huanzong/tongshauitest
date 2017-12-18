@@ -1993,6 +1993,7 @@
   }
 }
 //产品对比
+//产品对比
 .prolist-compare{
   display: block;
   position: fixed;
@@ -2002,7 +2003,7 @@
   background: #fff;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  z-index: 10;
+  z-index: 2;
   color: #333;
   font-size: 12px;
   @media(max-width: 1199px){
@@ -2020,21 +2021,26 @@
       position: absolute;
       top: 0;
       right: 9.09%;
-      line-height: 40px;
+      line-height: 41px;
       font-size: 12px;
       color: #333;
+      .iconfont{
+        position: relative;
+          left: 5px;
+          top: 1px;
+          font-size: 12px;
+      }
     }
   }
 
 
   .compare-list{
-    display: none;
+    // display: none;
     border-left: 1px solid #eee;
-    margin-left: 8.33%;
+    margin: 0 8.33%;
     li{
       position: relative;
       display: inline-block;
-      width: 17.9%;
       min-height: 100px;
       border-right: 1px solid #eee;
       vertical-align: top;
@@ -2053,7 +2059,9 @@
         }
       }
       .compare-link{
+        font-size: 12px;
         display: block;
+        text-align: center;
         .l-btn-red{
           min-width: 96px;
           margin-top: 20px;
@@ -2091,6 +2099,9 @@
       }
       .clear{
         display: block;
+      }
+      &.compare-button-clear{
+        border-left: 1px solid #eee;
       }
     }
   }
