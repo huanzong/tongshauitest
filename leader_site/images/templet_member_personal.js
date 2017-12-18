@@ -40,7 +40,7 @@ $(function(){
 
 
                 //loginName 需要在这里判断一下他是不是之前修改过 如果没修改过就是TEXT 修改过是不能填写的
-                var loginName_regexp=/^H\d{3}R\d{13}$/;
+                var loginName_regexp=/^ts\d{6}$/;
 
                 template_loginName=jQuery.trim(data.data.loginName);
                 $('#js_loginName').val(template_loginName);
