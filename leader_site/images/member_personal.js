@@ -100,18 +100,18 @@ $(function(){
                     boxHeight:photoBoxWidth,
                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
                 }
-                ,function(){
-                    // Use the API to get the real image size
-
-                    // Store the API in the jcrop_api variable
-                    var bounds = this.getBounds();
-                    boundx = bounds[0];
-                    boundy = bounds[1];
-                    // Store the API in the jcrop_api variable
-                    jcrop_api = this;
-                    // Move the preview into the jcrop container for css positioning
-
-                }
+                //,function(){
+                //    // Use the API to get the real image size
+                //
+                //    // Store the API in the jcrop_api variable
+                //    var bounds = this.getBounds();
+                //    boundx = bounds[0];
+                //    boundy = bounds[1];
+                //    // Store the API in the jcrop_api variable
+                //    jcrop_api = this;
+                //    // Move the preview into the jcrop container for css positioning
+                //
+                //}
             );
         } else {
             //IE下创建
@@ -124,18 +124,18 @@ $(function(){
                     boxHeight:photoBoxWidth,
                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
                 }
-                ,function(){
-                    // Use the API to get the real image size
-
-            // Store the API in the jcrop_api variable
-            var bounds = this.getBounds();
-            boundx = bounds[0];
-            boundy = bounds[1];
-            // Store the API in the jcrop_api variable
-            jcrop_api = this;
-            // Move the preview into the jcrop container for css positioning
-
-        }
+        //        ,function(){
+        //            // Use the API to get the real image size
+        //
+        //    // Store the API in the jcrop_api variable
+        //    var bounds = this.getBounds();
+        //    boundx = bounds[0];
+        //    boundy = bounds[1];
+        //    // Store the API in the jcrop_api variable
+        //    jcrop_api = this;
+        //    // Move the preview into the jcrop container for css positioning
+        //
+        //}
     );
         }
     }
@@ -233,11 +233,9 @@ $(function(){
         onComplete: function(name, data) {
 
             if (data.isSuccess) {
-
 //      隐藏永恒显示弹窗
                 $('.js_popUpBox2').hide();
                 $("body").css({overflow:"auto"});
-
                 $('.js-uploadPhoto').hide();
                 $('.js-modifyPhoto').show();
                 $('.js-modifyPhotoBtn').show();
