@@ -60,8 +60,10 @@ if(templet_recommend==0){
 }
 
 //精选推荐手机端添加class
-$(".js_recommend").find('a').eq(2).addClass("o_md-hide o_sm-hide o_xs-hide");
-$(".js_recommend").find('a').eq(3).addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
+$(".js_recommend").find('a').eq(0).removeClass("o_df-hide");
+$(".js_recommend").find('a').eq(1).removeClass("o_df-hide");
+$(".js_recommend").find('a').eq(2).removeClass("o_df-hide").addClass("o_md-hide o_sm-hide o_xs-hide");
+$(".js_recommend").find('a').eq(3).removeClass("o_df-hide").addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
 //精选推荐切换
 
 $('.js_recomChange').click(function(){
