@@ -63,16 +63,69 @@ $(function(){
         ysize = $pcnt.height();
     var imgs = new Image();
     var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
-    $('#target').Jcrop({
-            onChange: updatePreview,
-            onSelect: updatePreview,
-            aspectRatio: 1,
-            boxWidth:photoBoxWidth,
-            boxHeight:photoBoxWidth,
-            setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
-        }
-        ,function(){
-            // Use the API to get the real image size
+
+
+
+
+    function isIE()
+    {
+        if(!!window.ActiveXObject || "ActiveXObject" in window)
+            return true;
+        else
+            return false;
+    }
+
+
+    if (isIE()) {
+        //是IE浏览器
+        createJCrop(1);
+    } else {
+        ////单独判断IE10
+        //if (document.documentMode == 10) {
+        //    createJCrop(1);
+        //} else
+        //非IE浏览器
+            createJCrop(0);
+    }
+
+
+    function createJCrop(flag) {
+        if (flag == 0) {
+            //非IE下创建
+            $('#target').Jcrop({
+                    onChange: updatePreview,
+                    onSelect: updatePreview,
+                    aspectRatio: 1,
+                    boxWidth:photoBoxWidth,
+                    boxHeight:photoBoxWidth,
+                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                }
+                ,function(){
+                    // Use the API to get the real image size
+
+                    // Store the API in the jcrop_api variable
+                    var bounds = this.getBounds();
+                    boundx = bounds[0];
+                    boundy = bounds[1];
+                    // Store the API in the jcrop_api variable
+                    jcrop_api = this;
+                    // Move the preview into the jcrop container for css positioning
+
+                }
+            );
+        } else {
+            //IE下创建
+
+            var api = $('#target').Jcrop({
+                    onChange: updatePreview,
+                    onSelect: updatePreview,
+                    aspectRatio: 1,
+                    boxWidth:photoBoxWidth,
+                    boxHeight:photoBoxWidth,
+                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                }
+                ,function(){
+                    // Use the API to get the real image size
 
             // Store the API in the jcrop_api variable
             var bounds = this.getBounds();
@@ -84,6 +137,8 @@ $(function(){
 
         }
     );
+        }
+    }
     function updatePreview(coords){
         if (parseInt(coords.w) > 0) {
             var rx = 180 / coords.w;
@@ -222,7 +277,9 @@ $(function(){
 
                             })
                         });
-
+                         var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+                        $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+                        console.log(photoBoxWidth-photoBoxHeight)
                         $(".jcrop-preview").attr("src",templet_pic);
 
                     }

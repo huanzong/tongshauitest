@@ -38,9 +38,9 @@
 		<div class="o_g product-search-result ">
 			<div class=" o_u o_df_10-12  product-search-result-title js-searchXuanXK">
 				<p class="o_u o_xs_12-12">搜索结果：</p>
-				<a href="javascript:;" class="cur">产品（<span>77</span>）</a>
-				<a href="javascript:;">服务（<span>22</span>）</a>
-				<a href="javascript:;">新闻（<span>11</span>）</a>
+				<a href="javascript:;" class="cur"><i>产品（</i><span>77</span><i>）</i></a>
+				<a href="javascript:;"><i>服务（</i><span>22</span><i>）</i></a>
+				<a href="javascript:;"><i>新闻（</i><span>11</span><i>）</i></a>
 			</div>
 
 		</div>
