@@ -469,8 +469,13 @@ $(function() {
 
 
     //产品参数-结构图居中
-    $(".js_structbg").oBgCover().init(); //激活方法
-    $(".js_structbg").css('margin-left', '-424px');
+    function paramImgCenter($ele){
+        $ele.css('height',$ele.parent().height());
+        if($ele.width()>$ele.parent().width()){
+            $ele.css('width','100%');
+        }
+    }
+    paramImgCenter($(".js_structbg"));
 
     $(".js_swiperPreferential .js_checkbox").jq_qvote();
 
@@ -486,37 +491,37 @@ $(function() {
         centeredSlides: true,
         slidesPerView: 3,
         watchActiveIndex: true,
-        calculateHeight : true,//Swiper根据slides内容计算容器高度。
+        // calculateHeight : true,//Swiper根据slides内容计算容器高度
         onFirstInit: function(swiper) {
 
 
-                $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
+            $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
 
-                // var index = swiper.activeLoopIndex;
-                var index = swiper.activeIndex;
+            // var index = swiper.activeLoopIndex;
+            var index = swiper.activeIndex;
 
-                $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                    'width': '100%'
-                }, 500);
+            $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+                'width': '100%'
+            }, 500);
 
-                $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                    'width': '55%'
-                });
+            $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+                'width': '55%'
+            });
 
-            },
-            onSlideChangeEnd: function(swiper) {
-                var index = swiper.activeLoopIndex;
+        },
+        onSlideChangeEnd: function(swiper) {
+            var index = swiper.activeLoopIndex;
 
-                $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                    'width': '100%'
-                }, 500);
+            $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+                'width': '100%'
+            }, 500);
 
-                $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                    'width': '55%'
-                });
+            $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+                'width': '55%'
+            });
 
-                $('.js_bannerSwiperPage .pagination-box').removeClass('active');
-                $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
+            $('.js_bannerSwiperPage .pagination-box').removeClass('active');
+            $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
 
         }
     });
@@ -524,8 +529,9 @@ $(function() {
 
     $('.js_specificsShow').on('click', function() {
         $('.js_specificsBoxShow').fadeIn(1000);
+        swiper.bannerSwiper.params.calculateHeight = true;
+
         swiper.bannerSwiper.reInit()
-        
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
@@ -609,6 +615,9 @@ $(function() {
         if(screenWidth>575){
             swiper.moreSwiper.reInit();
         }
+
+        //产品参数-结构图居中
+        paramImgCenter($(".js_structbg"));
 
     }
 
