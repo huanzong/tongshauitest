@@ -347,16 +347,20 @@ function noneShaiXuan(currentClass) {
     if (currentClass == ".sole-type") {
         noneShaiXuan = $(".js_screenClick").find(".filter-line");
 
-        if (noneShaiXuan.length == '' || noneShaiXuan.length == 0) {
-            $(".js_listNavhide").hide();
+        if (noneShaiXuan.length != '' && noneShaiXuan.length > 0) {
+            if (document.body.offsetWidth < 1200 ) {
+                $(".js_listNavhide").show();
+            }
         } /*else {
             $(".js_listNavhide").show();
         }*/
     } else {
         noneShaiXuan = $(".layer-list").find("li");
 
-        if (noneShaiXuan.length == '' || noneShaiXuan.length == 0) {
-            $(".js_listMobileNavhide").hide();
+        if (noneShaiXuan.length != '' && noneShaiXuan.length > 0) {
+            if (document.body.offsetWidth < 1200 ) {
+                $(".js_listMobileNavhide").show();
+            }
         } /*else {
             $(".js_listMobileNavhide").show();
         }*/
