@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻标题 - 统帅官网</title>
+
+		<%=base%>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<!--#include virtual="public/head.shtml"-->
+		<link rel="stylesheet" type="text/css" href="images/news_detail.css">
+	</head>
+
+	<body>
+
+		<div class="o_body">
+			<div class="o_main">
+				<!-- 导航 -->
+				<!--#include virtual="public/nav.shtml"-->
+				<!-- 导航 End-->
+				<!--头部导航-->
+				<div class="o_g news_detail_head">
+					<div class="o_u o_df_1-12">
+
+					</div>
+					<div class="o_u o_df_10-12">
+						<a href="javascript:;" class="news_index news_padding_right">首页</a>
+						<i class="iconfont icon-arrow-line-right news_padding_right"></i>
+						<a href="javascript:;" class="news_leader news_padding_right">关于统帅</a>
+						<i class="iconfont icon-arrow-line-right news_padding_right"></i>
+						<a href="javascript:;" class="news_detail news_padding_right">新闻详情</a>
+					</div>
+				</div>
+				<!--头部导航END-->
+				<!--新闻内容-->
+				<div class="o_g news_detail_content">
+					<div class="o_u o_df_2-12 o_md_1-12 o_sm_1-12 o_xs_1-12">
+
+					</div>
+					<div class="o_u o_df_8-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
+						<div class="news_title">
+							薛之谦全国巡演指定统帅电器为唯一家电合作品牌
+						</div>
+						<div class="news_item">
+							<span class="news_item_date news_item_padding news_item_mid">2017-08-21</span>
+							<span class="news_item_line news_item_padding news_item_mid"></span>
+							<span class="news_item_step news_item_room news_item_mid">分享到 :</span>
+							<a href="javascript:;" class="news_item_room news_item_mid">
+								<i class="iconfont icon-share-weibo"></i>
+							</a>
+							<a href="javascript:;" class=" news_item_mid">
+								<i class="iconfont icon-share-weixin"></i>
+							</a>
+						</div>
+						<div class="news_content_top">
+							薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。4月6日薛之谦“我好像在哪见过你”2017全国巡演新闻发布会在北京举行，宣布演唱会全面启动。出道12年的薛之谦首次全国巡演消息一出，变受到谦迷的极大关注，这也令薛之谦“我好像在哪见过你”2017全国巡回演唱会指定唯一家电合作品牌——统帅电器名声大噪。不难看出，这是统帅电器发力跨界合作进行资源共享的又一次成功尝试，将增加统帅电器在年轻社群的曝光度，助力统帅电器年轻化品牌的深耕落地
+						</div>
+						<div class="news_content_pic">
+							<img src="images/news_detail.png" />
+						</div>
+						<div class="news_content_bottom">
+							近年来，随着90后、95后新生代年轻群体大学毕业、进入社会、成家立业，逐渐成为了当下家电市场的消费主力军。他们对于家电的个性化需求正在悄然改变家电市场格局。意图迎合市场结构变革，统帅电器进行战略转型，率先提出“轻时尚”家电理念势在抢占年轻市场占有率。经可靠数据统计，薛之谦的粉丝中90后、95后等年轻群体占比超过70%，因而此次参与薛之谦巡回演唱会，则是统帅电器进军年轻社群的又一次尝试，通过打响在年轻群体中的知名度，提高品牌声量，探寻潜在的用户资源。
+						</div>
+						<div class="news_content_bottom">
+							统帅电器方在发布会中宣布，将全程参与薛之谦“我好像在哪见过你”2017全国巡回演唱会。从演唱会前夕起，统帅电器便展开“用歌曲换门票”的品牌互动，并将持续通过“用故事换门票”、“用合影换门票”、“用造型换门票”以及“用段子换门票”等形式多样的互动方式，发酵统帅电器各产线的明星产品优势。以统帅电器洗衣机的互动为例，统帅电器邀请粉丝亲自动手在洗衣机上搭建平衡造型，通过网友投票方式选出幸运粉丝获赠演唱会门票。这不仅将满足粉丝亲临现场观看偶像演唱会的愿望，还为统帅电器洗衣机的安静平稳做足了“广告”。
+						</div>
+						<div class="news_content_bottom">
+							其实在此之前，统帅电器已经在深耕年轻市场方面取得了不俗的成绩。统帅电器冰箱曾联手国内首档公路美食真人秀《星厨集结号》，实现了综艺圈首秀，借助美食节目将中字格局冰箱巧妙植入，为品牌成功开辟出一条新渠道。
+						</div>
+					</div>
+				</div>
+				<!--新闻内容END-->
+				<div class="o_g">
+					<div class="o_u o_df_1-12">
+						
+					</div>
+					<div class="o_u o_df_10-12 news_line">
+						
+					</div>
+				</div>
+				<!--新闻底部-->
+				<div class="o_g news_detail_bottom">
+					<div class="o_u o_df_1-12">
+						
+					</div>
+					<div class="o_u o_df_10-12">
+						<div class="o_g o_df-show o_sm-hide o_xs-hide">
+							<div class="o_u o_df_1-2">
+								<div class="news_bottom_left">
+									<a href="javascript:;" class="news_bottom_title">上一篇：</a>
+									<a href="javascript:;" class="news_bottom_item">统帅发布智能冰箱“馨厨” 搭建冰箱生态圈</a>
+								</div>
+							</div>
+							<div class="o_u o_df_1-2 ">
+								<div class="news_bottom_right">
+									<a href="javascript:;" class="news_bottom_title">下一篇：</a>
+									<a href="javascript:;" class="news_bottom_item">解码统帅电器：开创家电定制里程碑</a>
+								</div>
+							</div>
+						</div>
+						<div class="o_g o_df-hide o_sm-show o_xs-show">
+							<div class="o_u o_df_1-2">
+								<div class="news_bottom_left">
+									<a href="javascript:;" class="news_bottom_title">上一篇</a>
+								</div>
+							</div>
+							<div class="o_u o_df_1-2 ">
+								<div class="news_bottom_right">
+									<a href="javascript:;" class="news_bottom_title">下一篇</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--新闻底部END-->
+				<!--#include virtual="public/footer.shtml"-->
+			</div>
+		</div>
+		<!--#include virtual="public/foot.shtml"-->
+		<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+	</body>
+
+</html>
