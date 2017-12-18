@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-	<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==">
+	<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not="true">
 		<trs_channels id="owner" startpos="1" num="1">
 		<trs_viewdatas>
 			<title><TRS_ViewData Field="title" /></title>
@@ -11,7 +11,7 @@
 		</TRS_ViewDatas>
 	</trs_channels>
 	</TRS_CONDITION>
-	<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="==">
+	<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
 		<trs_channels id="parent" startpos="1" num="1">
 			<trs_viewdatas>
 				<title><TRS_ViewData Field="title" /></title>
