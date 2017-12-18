@@ -61,45 +61,44 @@
 						</div>
 					</div>
 					<!--新闻列表标题END-->
-					<div class="">
-						<!--新闻列表有图片-->
-						<div class="o_g news_list">
-							<div class="o_u o_df_1-12">
-							</div>
-							<div class="o_u o_df_10-12">
-								<div class="news_list_tip">
-									<div class="news_tip_pic mews_mid">
-										<div class="news_pic">
-											<a href="javascript:;">
-												<img src="images/news_pic1.png" />
-											</a>
-										</div>
-									</div>
-									<div class="news_txt mews_mid">
-										<div class="news_tip_text mews_mid">
-											<div class="news_text">
-												<a href="javascript:;">
-													<p class="news_tip_title">薛之谦全国巡演指定统帅电器为唯一家电合作品牌</p>
-												</a>
-												<p class="news_tip_content">薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。</p>
-											</div>
-										</div>
-										<div class="news_tip_date mews_mid">
-											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
-												<div class="news_date_day">08-20</div>
-												<div class="news_date_year">2017</div>
-											</div>
-											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
-												<span class="news_date_year">2017-</span>
-												<span class="news_date_day">08-20</span>
-											</div>
-										</div>
-									</div>
-									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-										<a class="news_icon" href="javascript:;">
-											<i class="iconfont icon-arrow-jiantou-right"></i>
+					<!--新闻列表有图片-->
+					<div class="o_g news_list">
+						<div class="o_u o_df_1-12">
+						</div>
+						<div class="o_u o_df_10-12">
+							<div class="news_list_tip">
+								<div class="news_tip_pic mews_mid">
+									<div class="news_pic">
+										<a href="javascript:;">
+											<img src="images/news_pic1.png" />
 										</a>
 									</div>
+								</div>
+								<div class="news_txt mews_mid">
+									<div class="news_tip_text mews_mid">
+										<div class="news_text">
+											<a href="javascript:;">
+												<p class="news_tip_title">薛之谦全国巡演指定统帅电器为唯一家电合作品牌</p>
+											</a>
+											<p class="news_tip_content">薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。</p>
+										</div>
+									</div>
+									<div class="news_tip_date mews_mid">
+										<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+											<div class="news_date_day">08-20</div>
+											<div class="news_date_year">2017</div>
+										</div>
+										<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+											<span class="news_date_year">2017-</span>
+											<span class="news_date_day">08-20</span>
+										</div>
+									</div>
+								</div>
+								<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+									<a class="news_icon" href="javascript:;">
+										<i class="iconfont icon-arrow-jiantou-right"></i>
+									</a>
+								</div>
 
 								</div>
 							</div>
@@ -250,48 +249,47 @@
 										</a>
 									</div>
 
-								</div>
 							</div>
 						</div>
 					</div>
-					<div class="o_df-show o_sm-hide o_xs-hide">
-						<div class="o_g news_list">
-							<div class="o_u o_df_1-12">
-							</div>
-							<div class="o_u o_df_10-12">
-								<div class="news_list_tip">
-									<div class="news_tip_pic mews_mid">
-										<div class="news_pic">
-											<a href="javascript:;">
-												<img src="images/news_pic3.png" />
-											</a>
-										</div>
-									</div>
-									<div class="news_txt">
-										<div class="news_tip_text mews_mid">
-											<div class="news_text">
-												<a href="javascript:;">
-													<p class="news_tip_title">薛之谦全国巡演指定统帅电器为唯一家电合作品牌</p>
-												</a>
-												<p class="news_tip_content">薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。</p>
-											</div>
-										</div>
-										<div class="news_tip_date mews_mid">
-											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
-												<div class="news_date_day">08-20</div>
-												<div class="news_date_year">2017</div>
-											</div>
-											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
-												<span class="news_date_year">2017-</span>
-												<span class="news_date_day">08-20</span>
-											</div>
-										</div>
-									</div>
-									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-										<a class="news_icon" href="javascript:;">
-											<i class="iconfont icon-arrow-jiantou-right"></i>
+
+					<div class="o_g news_list">
+						<div class="o_u o_df_1-12">
+						</div>
+						<div class="o_u o_df_10-12">
+							<div class="news_list_tip">
+								<div class="news_tip_pic mews_mid">
+									<div class="news_pic">
+										<a href="javascript:;">
+											<img src="images/news_pic3.png" />
 										</a>
 									</div>
+								</div>
+								<div class="news_txt">
+									<div class="news_tip_text mews_mid">
+										<div class="news_text">
+											<a href="javascript:;">
+												<p class="news_tip_title">薛之谦全国巡演指定统帅电器为唯一家电合作品牌</p>
+											</a>
+											<p class="news_tip_content">薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。</p>
+										</div>
+									</div>
+									<div class="news_tip_date mews_mid">
+										<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+											<div class="news_date_day">08-20</div>
+											<div class="news_date_year">2017</div>
+										</div>
+										<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+											<span class="news_date_year">2017-</span>
+											<span class="news_date_day">08-20</span>
+										</div>
+									</div>
+								</div>
+								<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+									<a class="news_icon" href="javascript:;">
+										<i class="iconfont icon-arrow-jiantou-right"></i>
+									</a>
+								</div>
 
 								</div>
 							</div>
@@ -439,10 +437,10 @@
 										</a>
 									</div>
 
-								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 
 				<!--新闻中心列表END-->
