@@ -92,14 +92,17 @@
                              alt="">
                     </a>
                 </div>
-                <div class="o_u o_df_12-12 life-video-back-border">
+                <div class=" o_g life-video-back-border js_lifeVideoBorder">white-space:nowrap
+                    <div class="o_u o_df_2-12 o_xs_3-12 js_BannnerLeftClick" style="display: none"></div>
+                    <div class="o_u o_df_2-12 o_xs_3-12 js_BannnerLeftClickSib "></div>
+                    <div class="o_u o_df_2-12 sm-hide js_bannerRightHover"></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12 js_bannerRightHoverHide"></div>
+                    <div class="o_u o_df_2-12  o_xs_4-12 back-gray js_bannerNoHover"></div>
+                    <div class="o_u o_df_1-12 o_xs_1-12 js_bannerRightHoverHide"></div>
+                    <div class="o_u o_df_2-12 js_bannerRightHoverShow" style="display: none"></div>
+                    <div class="o_u o_df_2-12 sm-hide js_bannerLeftHover"></div>
                     <div class="o_u o_df_2-12 o_xs_3-12"></div>
-                    <div class="o_u o_df_2-12 sm-hide"></div>
-                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
-                    <div class="o_u o_df_2-12  o_xs_4-12 back-gray "></div>
-                    <div class="o_u o_df_1-12 o_xs_1-12"></div>
-                    <div class="o_u o_df_2-12 sm-hide"></div>
-                    <div class="o_u o_df_2-12 o_xs_3-12"></div>
+                    <div class="o_u o_df_2-12 o_xs_3-12 js_BannnerRightClick" style="display: none"></div>
                 </div>
             </div>
         </trs_viewdatas>
@@ -188,11 +191,11 @@
                     <h4>18</h4>
                     <span>大设计中心</span>
                 </li>
-                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
                     <h4>28</h4>
                     <span>个国际研发机构</span>
                 </li>
-                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
                     <h4>300<sup>+</sup></h4>
                     <span>位国际设计师</span>
                 </li>
@@ -213,11 +216,11 @@
                     <h4>300<sup>+</sup></h4>
                     <span>万㎡仓储资源</span>
                 </li>
-                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
                     <h4>6000<sup>+</sup></h4>
                     <span>家服务售后网点</span>
                 </li>
-                <li class="o_u o_df_12-12 o_md_6-12 o_sm_6-12 o_xs_6-12">
+                <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
                     <h4>24<sup>+</sup></h4>
                     <span>小时响应</span>
                 </li>
@@ -477,7 +480,7 @@
                     <a href="javascript:;"
                        class="iconfont  life-style-create-btn icon-arrow-jiantou-left  js_lifeStyleCreateLeftBtn"></a>
                 </div>
-                <div class="o_u life-style-create-cont o_sm_10-12 o_xs_10-12">
+                <div class="o_u life-style-create-cont js_lifeStyleCont o_sm_10-12 o_xs_10-12">
                     <div>
                         <div class="create-title-img ">
                             <img src="images/life-style-create-cont-title.png" width="100%" alt="">
