@@ -183,16 +183,27 @@
   }
   .recommend-box{
     border-radius: 8px;
+
     .recommend-pro{
+  .recommend-pro-info{
+    vertical-align: middle;
+    text-align:left;
+  }
+
       @media (min-width: 992px) and (max-width: 1199px) {
         /* lg*/
         text-align: center;
-        img{
-          padding: 30px 0 15px 0!important;
+        a{
+          img{
+            width: 100px;
+            height: 100px;
+            padding: 30px 0 15px 0!important;
+          }
         }
         .recommend-pro-info{
-          display: block!important;
-          padding: 0px 0px 22px 0px!important;
+          text-align: left;
+          //display: block!important;
+          //padding: 0px 0px 22px 0px!important;
         }
 
       }
@@ -200,15 +211,12 @@
         /* md*/
         //width: 240px;
         text-align: center;
-        .recommend-pro-info{
-          display: block;
-        }
-        img{
-          padding: 30px 0 15px 0 !important;
-        }
-        .recommend-pro-info{
-          display: block!important;
-          padding: 0px 0px 22px 0px!important;
+        a{
+          img{
+            width: 100px;
+            height: 100px;
+            padding: 30px 0 15px 0!important;
+          }
         }
       }
       @media (min-width: 576px) and (max-width: 700px) {
@@ -216,29 +224,30 @@
         //width: 500px;
         text-align: center;
         .recommend-pro-info{
-          display: block;
-        }
-        img{
-          padding: 30px 0 15px 0px!important;
-        }
+          text-align: center;
 
-        .recommend-pro-info{
-          display: block!important;
-          padding: 0px 0px 22px 0px!important;
+        }
+        a{
+          img{
+            width: 100px;
+            height: 100px;
+            padding: 30px 0 15px 0!important;
+          }
         }
       }
       @media (max-width: 575px) {
         /* xs*/
         text-align: center;
         .recommend-pro-info{
-          display: block;
+          text-align: center;
+
         }
-        img{
-          padding: 30px 0 15px 0px !important;
-        }
-        .recommend-pro-info{
-          display: block!important;
-          padding: 0px 0px 22px 0px!important;
+        a{
+          img{
+            width: 100px;
+            height: 100px;
+            padding: 30px 0 15px 0!important;
+          }
         }
       }
     }
