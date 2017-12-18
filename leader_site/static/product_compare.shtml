@@ -120,8 +120,8 @@
 			    	<div class="o_u o_df_10-12">
 			    		<ul class="compare_table">
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						活动
@@ -139,8 +139,8 @@
 			    				</div>
 			    			</li>
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						用户满意度
@@ -157,7 +157,7 @@
 			    					</div>
 			    				</div>
 			    			</li>
-			    			<li class="border-none">
+			    			<li>
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						用户印象
@@ -199,8 +199,8 @@
 			    	<div class="o_u o_df_10-12">
 			    		<ul class="compare_table">
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						类别
@@ -218,8 +218,8 @@
 			    				</div>
 			    			</li>
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						箱门结构
@@ -237,8 +237,8 @@
 			    				</div>
 			    			</li>
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						总容积（升）
@@ -257,8 +257,8 @@
 			    			</li>
 
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						类别
@@ -276,8 +276,8 @@
 			    				</div>
 			    			</li>
 			    			<li>
-			    				<div class="white-left"></div>
-			    				<div class="white-right"></div>
+			    				<!-- <div class="white-left"></div> -->
+			    				<!-- <div class="white-right"></div> -->
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						箱门结构
@@ -295,7 +295,7 @@
 			    				</div>
 			    			</li>
 
-			    			<li class="border-none">
+			    			<li>
 			    				<div class="o_u o_df_1-5">
 			    					<div class="compare_th">
 			    						总容积（升）

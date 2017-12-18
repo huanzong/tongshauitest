@@ -7,6 +7,9 @@ $(function () {
     }else if(windowWidth>700){
         var navHeight = 100;
 
+    }else if(windowWidth<576){
+     var titleWidth =  $('.js_lifeStyleCreateTop').width();
+        $('.js_lifeStyleCreateTop').find('li').css('width',titleWidth/3)
     }
     var styleVideoHeight = $('.js_styleVideoCont').height();
     var styleVudeoPading = (windowHeight - navHeight - styleVideoHeight) / 2;
@@ -92,14 +95,17 @@ $(function () {
             if (windowWidth < 1199 && windowWidth > 991) {
                 var type = $(this).attr('data-alt');
                 if (type == 'false') {
+                    $(this).attr('data-alt', 'true');
                     $('.js_styleVideoContRight').hide();
                     $(this).css({'width': '33.33333337%', 'background-position': 'left top'});
-                    $(this).attr('data-alt', 'true');
+                    $('.js_BannnerLeftClick').show();
+                    $('.js_BannnerRightClick').hide();
                 } else {
-                    $(this).css({'width': '16.66666667%', 'background-position': 'right top'});
                     $(this).attr('data-alt', 'false');
+                    $(this).css({'width': '16.66666667%', 'background-position': 'right top'});
                     $('.js_styleVideoContRight').show();
-
+                    $('.js_BannnerLeftClick').hide();
+                    $('.js_BannnerRightClick').show();
                 }
             }
         }
@@ -109,19 +115,25 @@ $(function () {
             if (windowWidth < 1199 && windowWidth > 991) {
                 var type = $(this).attr('data-alt');
                 if (type == 'false') {
+                    $(this).attr('data-alt', 'true');
                     $('.js_styleVideoContLeft').hide();
                     $(this).css({'width': '33.33333337%', 'background-position': 'left top'});
-                    $(this).attr('data-alt', 'true');
-                    $('.js_bannerRightHover').addClass('back-gray').siblings().removeClass('back-gray');
-                    $('.js_bannerRightHoverHide').hide();
-                    $('.js_bannerRightHoverShow').show();
+                    $('.js_BannnerLeftClick').hide();
+                    $('.js_BannnerLeftClickSib').hide();
+                    $('.js_BannnerRightClick').show();
+                    return;
                 } else {
-                    $(this).css({'width': '16.66666667%', 'background-position': 'right top'});
                     $(this).attr('data-alt', 'false');
+                    $(this).css({'width': '16.66666667%', 'background-position': 'right top'});
                     $('.js_styleVideoContLeft').show();
-                    $('.js_bannerNoHover').addClass('back-gray').siblings().removeClass('back-gray');
-                    $('.js_bannerRightHoverHide').show();
-                    $('.js_bannerRightHoverShow').hide();
+                    $('.js_BannnerLeftClickSib').show();
+                    $('.js_BannnerLeftClick').hide();
+                    $('.js_BannnerRightClick').hide();
+
+
+
+                    return;
+
                 }
             }
         }
@@ -137,7 +149,8 @@ $(function () {
         "top": maxImgHeight / 8 + 'px'
     })
     if (windowWidth > 1199) {
-        $('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+        //$('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+        $('.js_superiorityBox').height( $('.js_superiorityCenter').height());
 
     }
 
