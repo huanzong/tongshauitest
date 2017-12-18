@@ -16,7 +16,7 @@
 					<span>帮助中心</span>
 				</li>
 				<li>
-					<span>服务条款</span>
+					<a href="javascript:;">服务条款</a>
 				</li>
 				<li>
 					<span>法律声明</span>
