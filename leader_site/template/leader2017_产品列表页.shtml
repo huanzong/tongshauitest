@@ -163,7 +163,7 @@
 							</TRS_CHANNELS>
 							</TRS_CONDITION>
 						</div>
-						<a class="more js_listNavShowMore js_listMobileNavhide" data-flag=0>
+						<a class="more js_listNavShowMore js_listMobileNavhide" data-flag=0 style="display: none">
 							<span class="o_df-hide o_xs-show">展开筛选项</span><span class="o_xs-hide">展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
 						</a>
 					</div>
@@ -195,70 +195,8 @@
 					</div>
 
 					<div class="list-filter js_screenClick">
-						<!-- <div class="filter-line">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line">
-							<div class="filter-sole mar-left">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line">
-							<div class="filter-sole mar-left">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line o_df-hide">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line o_df-hide">
-							<div class="filter-sole mar-left">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line o_df-hide">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div> -->
-						<a class="list-more js_listNavShowMore  js_listNavhide" data-flag=0>
+
+						<a class="list-more js_listNavShowMore  js_listNavhide" data-flag=0 style="display: none">
 							<span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
 						</a>
 					</div>
@@ -281,21 +219,7 @@
 						<span class="info">
 							共<span class="red js_dataNum"><TRS_CHANNEL ID="OWNER" FIELD="_DataCount" COUNTWHERE="WCMDocument.dockeywords='否' and WCMDocument.docstatus in (10,27)" /></span>款<trs_channel field="chnldesc" autolink="false"/>产品
 						</span>
-						<!--<div class="pro-group">
-							<div class="group-style">
-								<span>
-					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠" />
-					            </span>
-							</div>
-							<div class="group-style">
-								<span class="yellow">
-					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="唤醒初夏" />
-					            </span>
-					            <span class="group-info">套装满额送好礼</span>
-					            <span class="group-info o_xs-hide"> | </span>
-					            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right o_xs-hide"></i></a>
-							</div>
-						</div>-->
+
 					</div>
 				</div>
 				<div class="o_u o_df_1-12"></div>
@@ -543,11 +467,6 @@
 	    pager.render();
 	    //重写click方法  ajax取数据
 	    pager.onclick = function (currPageT) {
-	       /* pager.totalPage = pageCount;
-	        pager.currPage = currPageT;
-	        pager.pageCount = pageSize;
-	        pager.showPageCount = showPageNo;
-	        pager.render();*/
 	        if((currPageT-1)==0){
 	        	window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
 	        }else{
@@ -563,11 +482,6 @@
 	    pager.render();
 	    //重写click方法  ajax取数据
 	    pager.onclick = function (currPageT) {
-	       /* pager.totalPage = pageCount;
-	        pager.currPage = currPageT;
-	        pager.pageCount = pageSize;
-	        pager.showPageCount = showPageNo;
-	        pager.render();*/
 	        if((currPageT-1)==0){
 	        	window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
 	        }else{
