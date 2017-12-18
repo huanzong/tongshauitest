@@ -16,21 +16,24 @@
 	<body>
 		<div class="o_body">
 			<div class="o_main product-param">
-				<!-- 详情页导航 -->
-				<div class="detail-nav-height">
-					<div class="o_g o_md-hide o_sm-hide o_xs-hide detail-nav js_detailNav">
-						<div class="o_u o_df_1-12"></div>
-						<div class="o_u o_df_5-6">
-							<div class="detail-nav-head">
-								<div class="nav-head-con">
-									<img src="images/icon_01.png">
-									<div class="nav-head-info">
-										<div class="head-info-titcn">
-											<div class="head-info-box">
-												冰箱
-												<i class="iconfont icon-arrow-line-down"></i>
-											</div>
-											<!-- <div class="head-info-hover">
+				<!-- 导航 -->
+				<!--#include virtual="public/nav.shtml"-->
+				<!-- 导航 End-->
+				 <!-- 详情页导航 -->
+            <div class="detail-nav-height">
+                <div class="o_g o_md-hide o_sm-hide o_xs-hide detail-nav js_detailNav">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_5-6">
+                        <div class="detail-nav-head">
+                            <div class="nav-head-con">
+                                <img src="images/icon_01.png">
+                                <div class="nav-head-info">
+                                    <div class="head-info-titcn">
+                                        <div class="head-info-box">
+                                            冰箱
+                                            <i class="iconfont icon-arrow-line-down"></i>
+                                        </div>
+                                        <!-- <div class="head-info-hover">
                                             <div class="l-float-tops">
                                                 <div class="float_content">
                                                     <a href="javascript:;">特性</a>
