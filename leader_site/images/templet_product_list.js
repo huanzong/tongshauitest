@@ -223,10 +223,10 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     }
                     searchHtml += '<div class="pro-opporate">';
                     searchHtml += '<a class="pro-read">';
-                    searchHtml += '<span class="pro-read-i">';
+                    /*searchHtml += '<span class="pro-read-i">';
                     searchHtml += '<i class="iconfont icon-price-tag-solid1"></i>';
                     searchHtml += '</span>';
-                    searchHtml += '<span class="pro-read-font">订阅</span>';
+                    searchHtml += '<span class="pro-read-font">订阅</span>';*/
                     searchHtml += '</a>';
                     searchHtml += '<a class="pro-read l-fr js_compareAddProduct" auto="0" id="compare_' + returnData[i].MetaDataId + '_top" data-id="compare_' + returnData[i].MetaDataId + '_top" data-link="' + returnData[i].docpuburl + '" data-thumb="' + picUrl + '" data-name="' + cplx + '" data-type="' + returnData[i].modelno + '" data-chnid="' + returnData[i].ChannelId + '">';
                     searchHtml += '<span class="pro-read-font">对比</span>';
