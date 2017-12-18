@@ -63,7 +63,7 @@
 					<!--新闻列表标题END-->
 					<div class="">
 						<!--新闻列表有图片-->
-						<div class="o_g news_list active">
+						<div class="o_g news_list">
 							<div class="o_u o_df_1-12">
 							</div>
 							<div class="o_u o_df_10-12">
