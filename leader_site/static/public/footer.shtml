@@ -91,14 +91,23 @@
                 <a href="javascript:;"  class="iconfont icon-share-weixin"></a>
                 <a href="javascript:;" class="iconfont icon-share-weibo"></a>
             </span>
-            <ul>
-                <li><a href="">联系我们</a></li>
-                <li><a href="">帮助中心</a></li>
-                <li><a href="">服务条款</a></li>
-                <li><a href="">法律声明</a></li>
-            </ul>
-    		<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
-           <div class="footer_copy_img_box">
+			<ul>
+				<li>
+					<span>联系我们</span>
+				</li>
+				<li>
+					<span>帮助中心</span>
+				</li>
+				<li>
+					<span>服务条款</span>
+				</li>
+				<li>
+					<span>法律声明</span>
+				</li>
+			</ul>
+			<div class="footer_middle_copy">
+				<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
+				<div class="footer_copy_img_box">
 					<span class="footer_copy_img1"></span>
 					<span class="footer_copy_img2"></span>
                <a href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></a>
