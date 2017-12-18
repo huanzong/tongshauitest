@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻动态 - 统帅官网</title>
+
+		<%=base%>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<!--#include virtual="public/head.shtml"-->
+		<link rel="stylesheet" type="text/css" href="images/news_list.css">
+	</head>
+
+	<body>
+
+		<div class="o_body">
+			<div class="o_main">
+				<!-- 导航 -->
+				<!--#include virtual="public/nav.shtml"-->
+				<!-- 导航 End-->
+				<!--头部banner-->
+				<div class="news_list_banner">
+					<a href="javascript:;">
+						<img class="js_recPic" src="" df="images/news_banner_df.png" lg="images/news_banner_md.png" md="images/news_banner_md.png" sm="images/news_banner_sm.png" xs="images/news_banner_sm.png">
+						<div class="news_list_caption">
+							关于统帅
+						</div>
+					</a>
+				</div>
+				<!--头部bannerEND-->
+				<!--新闻中心列表-->
+				<div class="news_list_content">
+					<!--新闻列表标题-->
+					<div class="o_g news_list_head">
+						<div class="o_u o_df_1-12">
+						</div>
+						<div class="o_u o_df_10-12">
+							<div class="news_list_item">
+								<div class="o_g">
+									<div class="o_u o_df_1-2">
+										<a href="javascript:;">
+											<div class="news_list_title">
+												统帅品牌
+											</div>
+										</a>
+									</div>
+									<div class="o_u o_df_1-2">
+										<a href="javascript:;">
+											<div class="news_list_title active">
+												新闻动态
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="o_u o_df_1-12">
+
+						</div>
+					</div>
+					<!--新闻列表标题END-->
+					<div class="">
+						<!--新闻列表有图片-->
+						<div class="o_g news_list active">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_tip_pic mews_mid">
+										<div class="news_pic">
+											<a href="javascript:;">
+												<img src="images/news_pic1.png" />
+											</a>
+										</div>
+									</div>
+									<div class="news_txt mews_mid">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">薛之谦全国巡演指定统帅电器为唯一家电合作品牌</p>
+												</a>
+												<p class="news_tip_content">薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">08-20</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">08-20</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<!--新闻列表有图片END-->
+						<!--新闻列表无图片-->
+						<div class="o_g news_list news_nopic">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">统帅发布全新品牌形象 重新定义“轻时尚”家电</p>
+												</a>
+												<p class="news_tip_content">2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位承接年轻化战略转型2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位...</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">08-14</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">08-14</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<!--新闻列表无图片END-->
+						<div class="o_g news_list">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_tip_pic mews_mid">
+										<div class="news_pic">
+											<a href="javascript:;">
+												<img src="images/news_pic2.png" />
+											</a>
+										</div>
+									</div>
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">美国权威认证机构SIEMIC授予统帅“时尚家电创新奖”</p>
+												</a>
+												<p class="news_tip_content">9月26日，美国权威认证机构SIEMIC宣布，正式将“时尚家电创新奖”授予中国家电品牌统帅。据悉，SIEMIC旗下实验室对统帅。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">08-11</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">08-11</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="o_g news_list news_nopic">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">统帅发布全新品牌形象 重新定义“轻时尚”家电</p>
+												</a>
+												<p class="news_tip_content">2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位承接年轻化战略转型。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">05-12</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">05-12</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="o_g news_list news_nopic">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">统帅发布全新品牌形象 重新定义“轻时尚”家电</p>
+												</a>
+												<p class="news_tip_content">2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位承接年轻化战略转型。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">04-13</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">04-13</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="o_df-show o_sm-hide o_xs-hide">
+						<div class="o_g news_list">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_tip_pic mews_mid">
+										<div class="news_pic">
+											<a href="javascript:;">
+												<img src="images/news_pic3.png" />
+											</a>
+										</div>
+									</div>
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">薛之谦全国巡演指定统帅电器为唯一家电合作品牌</p>
+												</a>
+												<p class="news_tip_content">薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">08-20</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">08-20</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="o_g news_list news_nopic">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">统帅发布全新品牌形象 重新定义“轻时尚”家电</p>
+												</a>
+												<p class="news_tip_content">2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位承接年轻化战略转型2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位...</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">08-14</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">08-14</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="o_g news_list">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_tip_pic mews_mid">
+										<div class="news_pic">
+											<a href="javascript:;">
+												<img src="images/news_pic4.png" />
+											</a>
+										</div>
+									</div>
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">美国权威认证机构SIEMIC授予统帅“时尚家电创新奖”</p>
+												</a>
+												<p class="news_tip_content">9月26日，美国权威认证机构SIEMIC宣布，正式将“时尚家电创新奖”授予中国家电品牌统帅。据悉，SIEMIC旗下实验室对统帅。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">08-11</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">08-11</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="o_g news_list news_nopic">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">统帅发布全新品牌形象 重新定义“轻时尚”家电</p>
+												</a>
+												<p class="news_tip_content">2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位承接年轻化战略转型。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">05-12</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">05-12</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="o_g news_list news_nopic">
+							<div class="o_u o_df_1-12">
+							</div>
+							<div class="o_u o_df_10-12">
+								<div class="news_list_tip">
+									<div class="news_txt">
+										<div class="news_tip_text mews_mid">
+											<div class="news_text">
+												<a href="javascript:;">
+													<p class="news_tip_title">统帅发布全新品牌形象 重新定义“轻时尚”家电</p>
+												</a>
+												<p class="news_tip_content">2016年11月2日，统帅品牌转型发布会在青岛举办,正式发布了全新的品牌形象，将以“轻时尚家电开创者”的品牌定位承接年轻化战略转型。</p>
+											</div>
+										</div>
+										<div class="news_tip_date mews_mid">
+											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+												<div class="news_date_day">04-13</div>
+												<div class="news_date_year">2017</div>
+											</div>
+											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+												<span class="news_date_year">2017-</span>
+												<span class="news_date_day">04-13</span>
+											</div>
+										</div>
+									</div>
+									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+										<a class="news_icon" href="javascript:;">
+											<i class="iconfont icon-arrow-jiantou-right"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--新闻中心列表END-->
+				<!--分页-->
+				<div class="news_list_pagination">
+					<a class="l-pagination-prew">上一页</a>
+					<a class="l-pagination-pagenumber active">1</a>
+					<a class="l-pagination-pagenumber">2</a>
+					<a class="l-pagination-pagenumber">3</a>
+					<a class="l-pagination-pagenumber news_list_more">4</a>
+					<a class="l-pagination-pagenumber o_df-show o_xs-hide">5</a>
+					<a class="l-pagination-pagenumber o_df-show o_xs-hide">6</a>
+					<a class="l-pagination-next ">下一页</a>
+				</div>
+				<!--分页END-->
+
+				<!--#include virtual="public/footer.shtml"-->
+			</div>
+		</div>
+		<!--#include virtual="public/foot.shtml"-->
+		<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+		<script type="text/javascript" src="images/news_list.js"></script>
+	</body>
+
+</html>
