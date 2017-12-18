@@ -132,46 +132,104 @@
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
-                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img js_specificsShow" />
-                            </TRS_XAPPENDIXS>
-                            <div class="banner-pro-oppo o_df-hide o_xs-show">
-                                <!-- <div class="activity-icon active">
-                                    <div class="icon-font">
-                                        <i class="iconfont icon-star-solid"></i>
+                            <div class="banner-block">
+                                <div class="banner-pro-pic">
+                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img js_specificsShow" />
+                                    </TRS_XAPPENDIXS>
+                                    <div class="banner-pro-oppo o_df-hide o_xs-show">
+                                        <!-- <div class="activity-icon active">
+                                            <div class="icon-font">
+                                                <i class="iconfont icon-star-solid"></i>
+                                            </div>
+                                            <span class="icon-font-info">收藏</span>
+                                        </div>
+                                        <div class="activity-icon">
+                                            <div class="icon-font">
+                                                <i class="iconfont icon-price-tag-solid1"></i>
+                                            </div>
+                                            <span class="icon-font-info">订阅</span>
+                                        </div> -->
+                                        <div class="activity-icon">
+                                            <div class="icon-font">
+                                                <i class="iconfont icon-share-solid"></i>
+                                            </div>
+                                            <span class="icon-font-info">分享</span>
+                                            <!-- JiaThis Button BEGIN -->
+                                            <div class="l-float activity-float">
+                                                <div class="float-box float-blog jiathis_style_32x32">
+                                                    <a class="jiathis_button_tsina"></a>
+                                                </div>
+                                                <div class="float-box float-wechat jiathis_style_32x32">
+                                                    <a class="jiathis_button_weixin"></a>
+                                                </div>
+                                                <div class="float-box float-qq jiathis_style_32x32">
+                                                    <a class="jiathis_button_qzone"></a>
+                                                </div>
+                                            </div>
+                                            <!-- JiaThis Button END -->
+                                        </div>
                                     </div>
-                                    <span class="icon-font-info">收藏</span>
                                 </div>
-                                <div class="activity-icon">
-                                    <div class="icon-font">
-                                        <i class="iconfont icon-price-tag-solid1"></i>
+                                <!-- 首屏细节大图 详情弹层 -->
+                                <div class="detail-specifics js_specificsBoxShow">
+                                    <!-- 关闭按钮 -->
+                                    <div class="specifics-close js_bannerSwiperClose">
+                                        <i class="iconfont icon-fail-solid"></i>
                                     </div>
-                                    <span class="icon-font-info">订阅</span>
-                                </div> -->
-                                <div class="activity-icon">
-                                    <div class="icon-font">
-                                        <i class="iconfont icon-share-solid"></i>
+                                    <!-- 关闭按钮 END -->
+                                    <!-- 轮播 -->
+                                    <div class="swiper-container js_bannerSwiper">
+                                        <div class="swiper-wrapper">
+                                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                            <div class="swiper-slide swiper-slide-active">
+                                                <a href="javascript:;">
+                                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>">
+                                                </a>
+                                            </div>
+                                            </TRS_XAPPENDIXS>
+        
+                                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
+                                                </a>
+                                            </div>
+                                            </TRS_XAPPENDIXS>
+        
+                                        </div>
                                     </div>
-                                    <span class="icon-font-info">分享</span>
-                                    <!-- JiaThis Button BEGIN -->
-                                    <div class="l-float activity-float">
-                                        <div class="float-box float-blog jiathis_style_32x32">
-                                            <a class="jiathis_button_tsina"></a>
+                                    <!-- 轮播 END -->
+                                    <!-- 分页 -->
+                                    <div class="swiper-pagination js_bannerSwiperPage">
+                                        <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                        <div class="pagination-box" data-index="0">
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
                                         </div>
-                                        <div class="float-box float-wechat jiathis_style_32x32">
-                                            <a class="jiathis_button_weixin"></a>
-                                        </div>
-                                        <div class="float-box float-qq jiathis_style_32x32">
-                                            <a class="jiathis_button_qzone"></a>
-                                        </div>
+                                        </TRS_XAPPENDIXS>
+                                        <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
+                                            <div class="pagination-box" data-index=<TRS_ROWNO/>>
+                                                <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
+                                            </div>
+                                        </TRS_XAPPENDIXS>
                                     </div>
-                                    <!-- JiaThis Button END -->
+                                    <!-- 分页 END -->
+                                    <!-- 上一页/下一页 -->
+                                    <div class="pagination-prev js_bannerSwiperPrev">
+                                        <i class="iconfont icon-arrow-line-left"></i>
+                                    </div>
+                                    <div class="pagination-next js_bannerSwiperNext">
+                                        <i class="iconfont icon-arrow-line-right"></i>
+                                    </div>
+                                    <!-- 上一页/下一页 END -->
                                 </div>
                             </div>
-                            <div class="banner-pro-tit"><trs_viewdata field="pname"/></div>
-                            <div class="banner-pro-sub"><trs_viewdata field="modelno"/></div>
-                            <div class="banner-pro-info"><trs_viewdata field="cpms"/></div>
-                        </div>
+
+                            <div class="banner-pro-pic banner-pro-title">
+                                <div class="banner-pro-tit"><trs_viewdata field="pname"/></div>
+                                <div class="banner-pro-sub"><trs_viewdata field="modelno"/></div>
+                                <div class="banner-pro-info"><trs_viewdata field="cpms"/></div>
+                            </div>
                         <!-- 右边 -->
                         <div class="banner-particulars">
                             <div class="particulars-browse o_md-hide o_sm-hide o_xs-hide js_specificsShow">
@@ -352,57 +410,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 首屏细节大图 详情弹层 -->
-                        <div class="detail-specifics js_specificsBoxShow">
-                            <!-- 关闭按钮 -->
-                            <div class="specifics-close js_bannerSwiperClose">
-                                <i class="iconfont icon-fail-solid"></i>
-                            </div>
-                            <!-- 关闭按钮 END -->
-                            <!-- 轮播 -->
-                            <div class="swiper-container js_bannerSwiper">
-                                <div class="swiper-wrapper">
-                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                                    <div class="swiper-slide swiper-slide-active">
-                                        <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>">
-                                        </a>
-                                    </div>
-                                    </TRS_XAPPENDIXS>
-
-                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
-                                        </a>
-                                    </div>
-                                    </TRS_XAPPENDIXS>
-
-                                </div>
-                            </div>
-                            <!-- 轮播 END -->
-                            <!-- 分页 -->
-                            <div class="swiper-pagination js_bannerSwiperPage">
-                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                                <div class="pagination-box" data-index="0">
-                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
-                                </div>
-                                </TRS_XAPPENDIXS>
-                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
-                                    <div class="pagination-box" data-index=<TRS_ROWNO/>>
-                                        <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
-                                    </div>
-                                </TRS_XAPPENDIXS>
-                            </div>
-                            <!-- 分页 END -->
-                            <!-- 上一页/下一页 -->
-                            <div class="pagination-prev js_bannerSwiperPrev">
-                                <i class="iconfont icon-arrow-line-left"></i>
-                            </div>
-                            <div class="pagination-next js_bannerSwiperNext">
-                                <i class="iconfont icon-arrow-line-right"></i>
-                            </div>
-                            <!-- 上一页/下一页 END -->
+                        
+                            
                         </div>
                     </div>
                 </div>

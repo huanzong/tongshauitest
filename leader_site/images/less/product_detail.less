@@ -217,6 +217,10 @@
       text-align: center;
       margin: 0 auto;
 
+      .banner-block{
+        position: relative;
+      }
+
       .banner-pro-pic{
         text-align: center;
         margin: 0 auto;
@@ -227,9 +231,15 @@
         }
         @media (min-width: 701px) and (max-width: 991px) {
           width: 50%;
+          &.banner-pro-title {
+            height: 133px;
+          }
         }
         @media (min-width: 576px) and (max-width: 700px) {
           width: 66.67%;
+          &.banner-pro-title {
+            height: 133px;
+          }
         }
         @media (max-width: 575px) {
           width: 83.33%;
@@ -782,7 +792,7 @@
         // position: absolute;
         // top: 0;
         // bottom: 150px;
-
+        
         @media (min-width: 992px) and (max-width: 1199px) {
           top: 50px;
         }
@@ -790,9 +800,15 @@
           width: 175%;
           left: -37%;
         }
+
+        .swiper-wrapper {
+          height: 100% !important;
+        }
+
         .swiper-slide{
           display: table;
           max-height: 600px;
+          height: 100% !important;
 
           a {
             display: table-cell;
