@@ -235,7 +235,6 @@
         $("#memberqybanner li").eq(3).addClass("list-present");  //第四个li
 
         selectmember();
-
         for(var i = 0;i< $('.member-conter-text-down').length;i++){
             if($('.member-conter-text-down').eq(i).find('i').length>1){
                 $('.member-conter-text-down').eq(1).find('i').addClass('md-hide')
