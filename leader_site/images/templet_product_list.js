@@ -127,9 +127,9 @@ function readXmlFile(url) {
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(function(){initCookie()});
+            setTimeout(function(){initCookie()},100);
             //initCookie()
-            setTimeout(function(){initLoadCookie()});
+            setTimeout(function(){initLoadCookie()},100);
             //initLoadCookie()
             // }else{
             setTimeout(function(){noneShaiXuan(".list-btn")});
@@ -141,13 +141,13 @@ function readXmlFile(url) {
             //}
         },
         error: function () {
-            setTimeout(function(){noneShaiXuan(".sole-type")});
+            setTimeout(function(){noneShaiXuan(".sole-type")},100);
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(function(){initCookie()});
-            setTimeout(function(){initLoadCookie()});
-            setTimeout(function(){noneShaiXuan(".list-btn")})
+            setTimeout(function(){initCookie()},100);
+            setTimeout(function(){initLoadCookie()},100);
+            setTimeout(function(){noneShaiXuan(".list-btn")},100);
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
