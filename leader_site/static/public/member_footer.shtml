@@ -1,0 +1,37 @@
+<div class="o_g footer">
+	<div class="line-red"></div>
+	<div class="line"></div>
+	<div class="o_u o_df_1-12"></div>
+	<div class="o_u o_df_10-12">
+		<div class="footer_copy">
+			<span class="link">
+                <a href="javascript:;" class="iconfont icon-share-weibo" ></a>
+				<a href="javascript:;"  class="iconfont icon-share-weixin"></a>
+            </span>
+			<ul>
+				<li>
+					<a href="">联系我们</a>
+				</li>
+				<li>
+					<a href="">帮助中心</a>
+				</li>
+				<li>
+					<a href="">服务条款</a>
+				</li>
+				<li>
+					<a href="">法律声明</a>
+				</li>
+			</ul>
+			<div class="footer_middle_copy">
+				<span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
+				<div class="footer_copy_img_box">
+					<a href="http://cdn09.ehaier.com/v5/images/yingyezhizhao.png" class="footer_copy_img1"></a>
+					<a href="" class="footer_copy_img2"></a>
+					<a href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></a>
+				</div>
+			</div>
+			<!--<span class="copy_service">服务条款33333</span>-->
+		</div>
+	</div>
+	<div class="o_u o_df_1-12"></div>
+</div>
