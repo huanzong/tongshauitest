@@ -285,6 +285,25 @@
             .mews_mid {
                 vertical-align: middle;
             }
+            &:hover {
+                box-shadow: 9px 9px 25px #ccc;
+                .news_txt {
+                    .news_tip_text {
+                        .news_text {
+                            .news_tip_title {
+                                color: #b43d07;
+                            }
+                        }
+                    }
+                }
+                .news_tip_icon {
+                    .news_icon {
+                        .iconfont {
+                            color: #333;
+                        }
+                    }
+                }
+            }
         }
         &.news_nopic {
             .news_list_tip {
@@ -338,24 +357,22 @@
                         }
                     }
                 }
-            }
-        }
-        &.active {
-            .news_list_tip {
-                box-shadow: 9px 9px 25px #ccc;
-                .news_txt {
-                    .news_tip_text {
-                        .news_text {
-                            .news_tip_title {
-                                color: #b43d07;
+                &:hover {
+                    box-shadow: 9px 9px 25px #ccc;
+                    .news_txt {
+                        .news_tip_text {
+                            .news_text {
+                                .news_tip_title {
+                                    color: #b43d07;
+                                }
                             }
                         }
                     }
-                }
-                .news_tip_icon {
-                    .news_icon {
-                        .iconfont {
-                            color: #333;
+                    .news_tip_icon {
+                        .news_icon {
+                            .iconfont {
+                                color: #333;
+                            }
                         }
                     }
                 }
@@ -374,10 +391,11 @@
         }
     }
 }
-.footer{
-    .shop_phone{
-        span{
-            font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif!important;
+
+.footer {
+    .shop_phone {
+        span {
+            font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif!important;
         }
     }
 }
