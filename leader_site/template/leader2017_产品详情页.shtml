@@ -132,7 +132,7 @@
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
-                            <div style="position: relative">
+                            <div class="banner-block">
                                 <div class="banner-pro-pic">
                                     <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
                                     <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img js_specificsShow" />
@@ -225,7 +225,7 @@
                                 </div>
                             </div>
 
-                            <div class="banner-pro-pic">
+                            <div class="banner-pro-pic banner-pro-title">
                                 <div class="banner-pro-tit"><trs_viewdata field="pname"/></div>
                                 <div class="banner-pro-sub"><trs_viewdata field="modelno"/></div>
                                 <div class="banner-pro-info"><trs_viewdata field="cpms"/></div>

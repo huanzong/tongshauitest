@@ -131,7 +131,7 @@
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
-                            <div style="position: relative">
+                            <div class="banner-block">
                                 <div class="banner-pro-pic">
                                     <img src="images/compare_goods.PNG" class="banner-pro-img js_specificsShow">
                                     <div class="banner-pro-oppo o_df-hide o_xs-show">
@@ -218,7 +218,7 @@
                                 </div>
                             </div>
                             
-                            <div class="banner-pro-pic">
+                            <div class="banner-pro-pic banner-pro-title">
                                 <div class="banner-pro-tit">小型家用冰箱节能电冰箱</div>
                                 <div class="banner-pro-sub">GHEOJGOJE-GHEOGJ</div>
                                 <div class="banner-pro-info">米兰时尚灰棉被拿，啊感觉真的好厉害的样子，快来买吧！走过路过不要错过，来阿狸阿狸！不要给自己的人生留下遗憾！</div>
