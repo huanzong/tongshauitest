@@ -122,17 +122,17 @@ function readXmlFile(url) {
             //移动端筛选项初始化
             $(".layer-list").html(mobileHtml);
             //if (document.body.offsetWidth >= 1200 ) {
-            setTimeout(function(){noneShaiXuan(".sole-type")}, 1000);
+            setTimeout(function(){noneShaiXuan(".sole-type")});
             //noneShaiXuan(".sole-type")
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(function(){initCookie()}, 1000);
+            setTimeout(function(){initCookie()});
             //initCookie()
-            setTimeout(function(){initLoadCookie()}, 1000);
+            setTimeout(function(){initLoadCookie()});
             //initLoadCookie()
             // }else{
-            setTimeout(function(){noneShaiXuan(".list-btn")}, 1000);
+            setTimeout(function(){noneShaiXuan(".list-btn")});
             //noneShaiXuan(".list-btn")
             //移动端监听事件
             filterItemOnclick(".list-btn");
@@ -141,15 +141,15 @@ function readXmlFile(url) {
             //}
         },
         error: function () {
-            setTimeout(function(){noneShaiXuan(".sole-type")},1000);
+            setTimeout(function(){noneShaiXuan(".sole-type")});
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(function(){initCookie()}, 1000);
-            setTimeout(function(){initLoadCookie()}, 1000);
-            setTimeout(function(){noneShaiXuan(".list-btn");
+            setTimeout(function(){initCookie()});
+            setTimeout(function(){initLoadCookie()});
+            setTimeout(function(){noneShaiXuan(".list-btn")})
             //移动端监听事件
-            filterItemOnclick(".list-btn")},1000);
+            filterItemOnclick(".list-btn");
             //重置选择
             mobileResetButtonOnclick();
         }
