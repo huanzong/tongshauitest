@@ -3,9 +3,10 @@
 //登录页面样式
 .o_main{
     background: url(login_bg3.jpg);
-    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-	-moz-background-size:100% 100%;  
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_bg3.jpg',sizingMethod='scale')";
 	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	-webkit-background-size:100% 100%;
 	@media (max-width: 700px){
 		background: #fff;
 	}
@@ -56,12 +57,15 @@
 }
 .login-box{
 	border-radius: 7px;
-	background-color: #fff;
-	@media (min-width: 992px){
-    	background: url(login_bg.jpg) no-repeat;
-    	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size:50% 100%;  
-		background-size:50% 100%;
+	// background: url(login_bg.jpg) no-repeat;
+	background-image: url(login_bg.jpg);
+	background-repeat: no-repeat;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+	-moz-background-size:50% 100%;
+	background-size:50% 100%;
+	@media (max-width: 991px){
+		background-image: none;
+		background-color: #fff;
 	}
 	
 }
@@ -80,14 +84,14 @@
 	@media (min-width: 576px) and (max-width: 700px){
 		background: url(login_bg2.jpg) no-repeat;
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size: 100% 33%;  
-		background-size: 100% 33%;
+		-moz-background-size: 100% 240px;  
+		background-size: 100% 240px;
 	}
 	@media (max-width: 575px){
 		background: url(login_bg2.jpg) no-repeat;
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size: 100% 23%;  
-		background-size: 100% 23%;
+		-moz-background-size: 100% 130px;  
+		background-size: 100% 130px;
 	}
 	.logon-tab{
 		position: absolute;
@@ -154,12 +158,13 @@
 			width: 60%;
 		}
 		input{
-			width: 100%;
+			width: 90%;
 			border: 1px solid #ccc;
 			border-radius: 40px;
 			height: 40px;
 			line-height: 40px;
 			text-indent: 20px;
+			padding: 0 10% 0 0;
 			
 		}
 		i{
@@ -224,9 +229,10 @@
 		}
 	}
 	.login-reg{
-		@media (min-width:701px) {
-			position: absolute;
-			bottom: 40px;
+		position: absolute;
+		bottom: 40px;
+		@media (max-width:700px) {
+			position:relative;
 		}
 		height: 1px;
 		width: 75%;
@@ -238,7 +244,7 @@
 			width: 60%;
 		}
 		@media (max-width: 575px){
-			margin: 50px 0 60px 12%;
+			// margin: 50px 0 60px 12%;
 			width: 75%;
 		}
 		a{
@@ -278,6 +284,13 @@
 		.float_content{
 			height: auto;
 			line-height: 18px;
+		}
+	}
+}
+.login-form{
+	.o_borderbox{
+		input{
+			width: 100%;
 		}
 	}
 }
