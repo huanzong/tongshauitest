@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </trs_viewdatas>
-                    <trs_viewdatas id="了解会员权益" num="1" startpos="1">
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="2">
                         <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 " style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text">
@@ -132,7 +132,7 @@
                             <trs_channel id='了解会员权益' AUTOLINK="false"/>
                         </p>
                     </div>
-                    <trs_viewdatas id="了解会员权益" num="1" startpos="2">
+                    <trs_viewdatas id="了解会员权益" num="1" startpos="1">
                         <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text o_u o_df_11-12">
@@ -235,6 +235,12 @@
         $("#memberqybanner li").eq(3).addClass("list-present");  //第四个li
 
         selectmember();
+        for(var i = 0;i< $('.member-conter-text-down').length;i++){
+            if($('.member-conter-text-down').eq(i).find('i').length>1){
+                $('.member-conter-text-down').eq(1).find('i').addClass('md-hide')
+            }
+        }
+
     })
 
     function selectmember() {
@@ -243,12 +249,15 @@
                 $(".member_"+i).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
-                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>');
+                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
+
             }
             if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
                 $(".member_"+i).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
             }
         }
+
+
     }
 
 </script>

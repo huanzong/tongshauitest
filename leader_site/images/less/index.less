@@ -938,12 +938,33 @@
 }
 
 .entrance-fontbox{
+  position: relative;
   filter:alpha(opacity=0);
   -moz-opacity:0;
   -khtml-opacity: 0;
   opacity: 0;
   height: 215px;
   margin-top: 100px;
+  .ectrance-page{
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    right: -33%;
+    bottom: 50px;
+    @media(max-width: 700px){
+      display: block;
+    }
+    @media (max-width:575px){
+      right: -8%;
+    }
+    a{
+      padding: 0 3px;
+      color: #333;
+      &.active{
+        color: @l-red;
+      }
+    }
+  }
 }
 
 .index-entrance-row .swiper-slide .o_g {
@@ -1071,6 +1092,7 @@
     top: 50%;
     width: 10px;
     height: 20px;
+    cursor: pointer;
     @media (max-width: 991px){
       top: 31%;
     }
