@@ -10,16 +10,16 @@
             </span>
 			<ul>
 				<li>
-					<a href="">联系我们</a>
+					<span>联系我们</span>
 				</li>
 				<li>
-					<a href="">帮助中心</a>
+					<span>帮助中心</span>
 				</li>
 				<li>
-					<a href="">服务条款</a>
+					<span>服务条款</span>
 				</li>
 				<li>
-					<a href="">法律声明</a>
+					<span>法律声明</span>
 				</li>
 			</ul>
 			<div class="footer_middle_copy">
