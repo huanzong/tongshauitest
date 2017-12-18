@@ -43,19 +43,17 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">手机<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressMobile">
-                                                <form class="ui_validForm js_ui_validForm">
+                                                <!--<form class="ui_validForm js_ui_validForm">-->
                                                     <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" id="mobile"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
-                                                </form>
+                                                <!--</form>-->
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">电话</div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
@@ -69,7 +67,6 @@
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput"  data-type="2">
                                                     <input type="text" name="" ph="电话号" data-normal="1" value="" id="phone" datatype="n8-8" ignore="ignore"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位的号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
-
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2" style='padding-right: 2px'>
@@ -80,7 +77,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">详细地址<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
@@ -125,12 +121,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <p class="Validform_checktip Validform_wrong Validform_right js-newMobileerror"><i class="iconfont icon-information-solid"></i>详细地址不得为空</p>
                                         </div>
-
                                     </div>
-
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
@@ -149,7 +142,6 @@
                                             </div>
                                         </div>
                                     </div>-->
-
                                     <!-- 增加地址或者更改地址时的样式 -->
                                     <div class="o_g member-address-list">
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
@@ -162,30 +154,28 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </form>
 
                             <div class="memeber-address-list-box js_lineInfo">
                                 <div class="member-addressbox o_g js_memberAddressList">
                                     <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox">
-                                 <div class="member-addresslistbox">
-
-                                <div class="member-address-name">王可可</div>
-                                 <div class="member-address-mobnumber">155****5555</div>
-                                  <div class="member-address-addtext1">山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路</div>
-                                 <div class="member-address-btnbox">
-                                     <i class="iconfont icon-pencil-solid"></i>
-                                     <a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>
-                                     <div class="member-address-line"></div>
-                                     <a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>
-                                     </div>
-                                 <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
-                                 <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a></div>
-                                 </div>
-                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox">
                                         <div class="member-addresslistbox">
 
+                                            <div class="member-address-name">王可可</div>
+                                            <div class="member-address-mobnumber">155****5555</div>
+                                            <div class="member-address-addtext1">山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路山东省青岛市黄岛区长江中路</div>
+                                            <div class="member-address-btnbox">
+                                                <i class="iconfont icon-pencil-solid"></i>
+                                                <a href="javascript:;" onclick="getAddressInfo('+id+')" class="js_amendBtn">修改</a>
+                                                <div class="member-address-line"></div>
+                                                <a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>
+                                            </div>
+                                            <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
+                                            <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a></div>
+                                    </div>
+                                    <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 js_addressBox">
+                                        <div class="member-addresslistbox">
                                             <div class="member-address-name">王可可</div>
                                             <div class="member-address-mobnumber">155****5555</div>
                                             <div class="member-address-addtext">山东省青岛市黄岛区长江中路</div>
@@ -196,9 +186,10 @@
                                                 <a href="javascript:;" onclick="deleteAddress('+id+')">删除</a>
                                             </div>
                                             <span class="l-tag-radius l-tag-blue member-address-tab">默认地址</span>
-                                            <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a></div>
+                                            <a href="javascript:;" class="l-btn-sm l-btn-line2 member-address-fitaddbtn js_addressSetDefault" addid="'+id+'">设为默认</a>
+                                        </div>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                             <!-- 地址管理 End-->
                         </div>

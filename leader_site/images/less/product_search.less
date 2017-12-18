@@ -9,11 +9,10 @@
   text-align: center;
   .product-search-head-cont{
 
-
     text-align: left;
     .l-input{
 
-      font-size: 14px;
+      font-size: 0;
       color: #999;
       width: 480px;
       margin-top: 40px;
@@ -21,9 +20,13 @@
         height: 50px;
         line-height: 0;
         padding-right: 50px;
+        font-size: 14px;
       }
       a{
-        top: 14px !important;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        top: 0 !important;
       }
       @media (min-width: 992px) and (max-width: 1199px) {
         /* lg*/
@@ -101,6 +104,17 @@
 .product-search-result{
   text-align: center;
   padding-top: 60px;
+  @media (min-width: 576px) and (max-width: 700px) {
+    /* sm*/
+    padding-top: 50px;
+
+  }
+  @media (max-width: 575px) {
+    /* xs*/
+    padding-top: 30px;
+  }
+
+
   .product-search-result-title{
     border-bottom: 1px solid #eee;
     padding-bottom: 25px;
@@ -446,6 +460,9 @@
       border-left: 1px solid #ddd;
       display: inline-block;
       margin-bottom: 15px;
+      a{
+        color: #999 ;
+      }
     }
     :first-child{
       border: none;
