@@ -27,7 +27,7 @@
 				<div class="footer_copy_img_box">
 					<span href="http://cdn09.ehaier.com/v5/images/yingyezhizhao.png" class="footer_copy_img1"></span>
 					<span href="" class="footer_copy_img2"></span>
-					<span href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></span>
+					<a href="http://www.miitbeian.gov.cn " class="footer_copy_img3"></a>
 				</div>
 			</div>
 			<!--<span class="copy_service">服务条款33333</span>-->
