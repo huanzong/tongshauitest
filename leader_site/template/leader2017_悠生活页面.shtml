@@ -488,7 +488,7 @@
                             <span class="o_u o_sm_12-12 o_xs_12-12"><trs_channel id='系列产品推荐' AUTOLINK="false"/>：</span>
                             <div class="js_lifeStyleCreateTop product-list-title-box o_u o_sm_12-12 o_xs_12-12">
                                 <ul id="series_name" class="swiper-wrapper o_u o_sm_12-12 o_xs_12-12">
-                                    <trs_viewdatas id="系列产品推荐" num="3" startpos="0">
+                                    <trs_viewdatas id="系列产品推荐" num="5" startpos="0">
                                         <li class="o_u swiper-slide">
                                             <trs_viewdata field='series_title'/>
                                         </li>

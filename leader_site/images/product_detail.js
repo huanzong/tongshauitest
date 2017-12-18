@@ -478,16 +478,16 @@ $(function() {
     $('.js_bannerSwiperClose').on('click', function() {
         $('.js_specificsBoxShow').fadeOut(1000);
     });
-    $('.js_specificsShow').on('click', function() {
-        $('.js_specificsBoxShow').fadeIn(1000);
-        swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
-            // loop: true,
-            // autoplay: 3000,
-            updateOnImagesReady: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            watchActiveIndex: true,
-            onFirstInit: function(swiper) {
+
+    swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
+        // loop: true,
+        // autoplay: 3000,
+        updateOnImagesReady: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        watchActiveIndex: true,
+        calculateHeight : true,//Swiper根据slides内容计算容器高度。
+        onFirstInit: function(swiper) {
 
 
                 $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
@@ -496,13 +496,11 @@ $(function() {
                 var index = swiper.activeIndex;
 
                 $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                    'margin-top': '-200px',
-                    'height': '400px'
+                    'width': '100%'
                 }, 500);
 
                 $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                    'margin-top': '-143px',
-                    'height': '286px'
+                    'width': '55%'
                 });
 
             },
@@ -510,33 +508,36 @@ $(function() {
                 var index = swiper.activeLoopIndex;
 
                 $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                    'margin-top': '-200px',
-                    'height': '400px'
+                    'width': '100%'
                 }, 500);
 
                 $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                    'margin-top': '-143px',
-                    'height': '286px'
+                    'width': '55%'
                 });
 
                 $('.js_bannerSwiperPage .pagination-box').removeClass('active');
                 $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
 
-            }
-        });
+        }
+    });
+
+
+    $('.js_specificsShow').on('click', function() {
+        $('.js_specificsBoxShow').fadeIn(1000);
+        swiper.bannerSwiper.reInit()
+        
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
 
             swiper.bannerSwiper.swipeTo(parseInt(index), 1000, false);
+            
             $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                'margin-top': '-200px',
-                'height': '400px'
+                'width': '100%'
             }, 500);
 
             $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                'margin-top': '-143px',
-                'height': '286px'
+                'width': '55%'
             });
 
             $(this).siblings('.pagination-box').removeClass('active');

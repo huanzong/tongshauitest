@@ -161,7 +161,7 @@ $(function(){
             var templet_blur = function(){
                 $('.js-newMobile').blur();
             }
-            btnTimeOut($('.js-getinfo'),'60',' 重新获取验证码',templet_blur );
+
             //  个人中心绑定手机号发送验证码接口
             $.ajax({
                 dataType: "text",
@@ -174,7 +174,7 @@ $(function(){
                 success_cb: function(data){
                     if (jQuery.trim(data).length > 0) {
                         if (jQuery.trim(data).indexOf("200")>-1) {
-
+                            btnTimeOut($('.js-getinfo'),'60',' 重新获取验证码',templet_blur );
                         }
                         else if (jQuery.trim(data).indexOf("newMobile_can_not_be_null")>-1){
                             if($('.js-newMobileerror').hasClass('Validform_right')){
