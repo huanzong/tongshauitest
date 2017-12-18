@@ -59,7 +59,7 @@
 					</div>
 					<!--新闻列表标题END-->
 					<div>
-						<TRS_DOCUMENTS ID="新闻动态" NUM="5" STARTPOS="0" AUTOMORE="FALSE">
+						<TRS_DOCUMENTS ID="新闻动态" NUM="10" STARTPOS="0" AUTOMORE="FALSE">
 						<div class="o_g news_list <TRS_ViewData Field='newspicture'>
 						<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
 						news_nopic
@@ -114,64 +114,8 @@
 						</div>
 						</TRS_DOCUMENTS>
 					</div>
-					<div class="o_df-show o_sm-hide o_xs-hide">
-						<TRS_DOCUMENTS ID="新闻动态" NUM="5" STARTPOS="5" AUTOMORE="FALSE">
-						<div class="o_g news_list <TRS_ViewData Field='newspicture'>
-						<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
-						news_nopic
-						</TRS_CONDITION>
-						<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
-						</TRS_CONDITION>
-						</TRS_ViewData>">
-							<div class="o_u o_df_1-12">
-							</div>
-							<div class="o_u o_df_10-12">
-								<div class="news_list_tip">
-									<TRS_ViewData Field='newspicture'>
-										<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
-										</TRS_CONDITION>
-										<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
-											<div class="news_tip_pic mews_mid">
-												<div class="news_pic">
-													<a href="javascript:;">
-														<img src="<TRS_ViewData Field='newspicture'/>" />
-													</a>
-												</div>
-											</div>
-										</TRS_CONDITION>
-									</TRS_ViewData>">
-									<div class="news_txt">
-										<div class="news_tip_text mews_mid">
-											<div class="news_text">
-												<a href="javascript:;">
-													<p class="news_tip_title"><trs_viewdata field='newsheadline'/></p>
-												</a>
-												<p class="news_tip_content"><TRS_ViewData Field='newstext'/></p>
-											</div>
-										</div>
-										<div class="news_tip_date mews_mid">
-											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
-												<div class="news_date_day"><trs_viewdata field='newsdata' DATEFORMAT="MM-dd" /></div>
-												<div class="news_date_year"><trs_viewdata field='newsdata' DATEFORMAT="yyyy" /></div>
-											</div>
-											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
-												<span class="news_date_year"><trs_viewdata field='newsdata' DATEFORMAT="yyyy" />-</span>
-												<span class="news_date_day"><trs_viewdata field='newsdata' DATEFORMAT="MM-dd" /></span>
-											</div>
-										</div>
-									</div>
-									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-										<a class="news_icon" href="javascript:;">
-											<i class="iconfont icon-arrow-jiantou-right"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						</TRS_DOCUMENTS>
-					</div>
-				</div>
 
+				</div>
 				<!--新闻中心列表END-->
 				<!--分页-->
 				<div class="news_list_pagination">
