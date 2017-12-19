@@ -208,6 +208,7 @@
             </div>
             <!-- 商品列表 END -->
 
+            <div class="trolley-footer-position">
             <!-- 购物车底部 -->
             <div class="o_g trolley-footer">
                 <div class="o_u o_df_1-12"></div>
@@ -235,6 +236,7 @@
             <!-- 购物车底部 END -->
 
             <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+            </div>
         </div>
     </div>
     <!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
