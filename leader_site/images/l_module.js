@@ -226,8 +226,8 @@ $(function() {
                         $this.css('color','#666');
                         //表单校验时触发
                         if(!$this.attr('phtype')){
-                            $this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
-                             $this.css('border','1px solid #ccc');
+                            //$this.hasClass('Validform_error')?$this.css('border','1px solid #f39800'):$this.css('border','1px solid #ccc');
+                            // $this.css('border','1px solid #ccc');
                         }
                     },300);
                 }).focus(function () {
