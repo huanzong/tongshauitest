@@ -872,14 +872,14 @@ var regionServer = {
                     'areacode': address.data.areaCode,
                 }
 
-                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(1).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(2).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
                 
                 /**
                  * @param {*} regionData 
                  * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
                  */
                 var addressCallback = function (regionData) {
-                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(1).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(2).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
                     $('.js_addShadeTop').hide()
                 }
 
