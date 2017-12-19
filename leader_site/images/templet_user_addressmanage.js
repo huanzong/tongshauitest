@@ -95,6 +95,7 @@ $(".js-alertTrue").click(function(){
 
 });
 $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地址列表
+    $('.js_addressTitle').html('添加新地址');
     templet_text = '确定取消添加？';
     $(".js_btnSubmit").attr("type",1);
     $(".js_form_addAddrManagement").show();
