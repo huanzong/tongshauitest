@@ -395,7 +395,7 @@ $(function() {
   swiper.entrabceSwiper = new Swiper ('.js_swiperEntrabce', {
 
     loop: true,
-    autoplay: 5000,
+    // autoplay: 5000,
     initialSlide: 0,
     calculateHeight : true,
     autoplayDisableOnInteraction : false,//用户操作之后，不禁止autoplay
