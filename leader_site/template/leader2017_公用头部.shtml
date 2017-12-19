@@ -261,7 +261,7 @@
 			<a href="javascript:;"><span>我的产品</span><i class="iconfont icon-arrow-line-right"></i></a>
 		</li>-->
 		<li class="nav-quip">
-			<a href="javascript:;">退出登录</a>
+			<a href="javascript:;" id="header_logout3">退出登录</a>
 		</li>
 	</ul>
 
