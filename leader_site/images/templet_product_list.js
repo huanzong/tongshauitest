@@ -100,7 +100,7 @@ function readXmlFile(url) {
                 html += '<span class="sole-title" tag="' + itemId + '" inputName="' + searchItemName + '">' + filterTypeName + '：</span>';
                 //移动端
                 mobileHtml += ' <li><span class="list-tit" tag="' + itemId + '" inputName="' + searchItemName + '">' + filterTypeName + '：</span>';
-                mobileHtml += '<div class="list-line">';
+                mobileHtml += '<div class="list-line clearfix">';
                 //解析option
                 $(this).find("option").each(function (index1) {
                     filterItemName = $(this).attr("name");
