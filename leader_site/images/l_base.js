@@ -343,6 +343,8 @@ function userLoginStatus() {
             $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
             $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
             $("#header_logout,#header_logout2,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+            //获取头像
+            getUserHeadImg();
         } else {
             //同域cookie存在，但是 haieruser 没有取出值，去请求haier_ssosession.jsp获取当前登录用户
             var surl = "/ids/ts/ssosession.jsp";
@@ -361,6 +363,8 @@ function userLoginStatus() {
                         $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
                         $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
                         $("#header_logout,#header_logout2 ,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+                        //获取头像
+                        getUserHeadImg();
                     } else {
                         // if (window.innerWidth == undefined || window.innerWidth >= 768) {
                         //     if (returnUrl.indexOf("club.casarte.com") > -1) {
@@ -555,4 +559,23 @@ function getRequest() {
         }
     }
     return theRequest;
+}
+//获取当前用户头像
+function getUserHeadImg(){
+    $.ajax({
+        type: "get",
+        url: siteConfig.userUrl+"/hshop-user/front/user/userInfo/",
+        login:true,
+        success_cb: function(data){
+            if (jQuery.trim(data).length > 0) {
+                //头像
+                if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
+                    $(".js_userMsgXs").attr("src",'/images/user_img.jpg');
+                }
+                else{
+                    $(".js_userMsgXs").attr("src",data.data.headUrl);
+                }
+            }
+        }
+    });
 }
