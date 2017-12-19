@@ -78,24 +78,24 @@ $(function() {
         // scrollbar: '.swiper-scrollbar'
     });
 
-    //更多选择
-    swiper.moreSwiper = new Swiper('.js_swiperMore1', {
-        loop: true,
-        autoplay: 5000,
+    // //更多选择
+    // swiper.moreSwiper = new Swiper('.js_swiperMore1', {
+    //     loop: true,
+    //     autoplay: 5000,
 
-        slidesPerView: 3,//滑动展示个数
-        centeredSlides: true,
-        slidesPerGroup: 1,//每次滑动移动个数
-        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
+    //     slidesPerView: 3,//滑动展示个数
+    //     centeredSlides: true,
+    //     slidesPerGroup: 1,//每次滑动移动个数
+    //     // calculateHeight : true,//Swiper根据slides内容计算容器高度。
 
-    });
+    // });
 
-    $('.js_swiperMore_prev').click(function(){
-        swiper.moreSwiper.swipePrev(); 
-    });
-    $('.js_swiperMore_next').click(function(){
-        swiper.moreSwiper.swipeNext(); 
-    });
+    // $('.js_swiperMore_prev').click(function(){
+    //     swiper.moreSwiper.swipePrev(); 
+    // });
+    // $('.js_swiperMore_next').click(function(){
+    //     swiper.moreSwiper.swipeNext(); 
+    // });
 
     init();
 
@@ -632,9 +632,9 @@ $(function() {
         }, 1000);
 
         //更多选择
-        if(screenWidth>575){
-            swiper.moreSwiper.reInit();
-        }
+        // if(screenWidth>575){
+        //     swiper.moreSwiper.reInit();
+        // }
 
         //产品参数-结构图居中
         paramImgCenter($(".js_structbg"));
