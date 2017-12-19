@@ -115,7 +115,7 @@
 			<li>
 				<a href="javascript:;" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/">
 					<i class="iconfont icon-shoppingcart"></i>
-					<sub></sub>
+					<!--<sub></sub>-->
 				</a>
 			</li>
 			<li>
