@@ -386,6 +386,10 @@ img {
                 padding-top: 0px;
                 width: 100%;
                 margin-left: 0px;
+                padding-bottom: 50px;
+            }
+            @media (max-width:575px){
+                padding-bottom: 30px;
             }
         }
         .footer_copy_text{
@@ -399,7 +403,8 @@ img {
         }
 
         ul{
-            display: inline-block;
+             display: inline-block;
+            vertical-align: middle;
             margin-right: 45px;
             @media (max-width: 991px){
                 text-align: center;
@@ -411,20 +416,23 @@ img {
 
             li{
                 display: inline-block;
-                a{
+                vertical-align: middle;
+                span,a{
                     padding: 0 15px;
                     border-left: 1px solid #eee;
                     color: #666;
                     font-size: 12px;
+                    display: inline;
                     @media (max-width:575px){
                         padding: 0 7px;
                     }
                 }
             }
              :first-child {
-                a {
+                span,a {
                     padding-left: 0;
                     border-left: none;
+                    display: inline;
                     @media (max-width:991px){
                         padding-left: 15px;
                     }
@@ -435,7 +443,8 @@ img {
             }
         }
         .footer_middle_copy{
-            display: inline-block;
+             display: inline-block;
+            vertical-align: middle;
             @media (max-width:1199px){
                 display: block;
             }
@@ -453,19 +462,25 @@ img {
             display: block;
             float: right;
             padding-top:9px;
+            display: inline-block;
+            vertical-align: middle;
             @media (min-width: 1199px){
             float:right;
             padding-top:9px;
             }
             @media (min-width: 992px) and (max-width:1199px){
                 float: right;
-                padding-top:16px;
+                padding-top:23px;
             }
             @media (max-width: 991px){
                 text-align: center;
                 padding-top: 30px;
                 line-height: 65px;
                 float: none;
+                display: block;
+            }
+            @media (max-width:575px){
+                padding-top: 10px;
             }
             a{
                 //padding-left: 10px;

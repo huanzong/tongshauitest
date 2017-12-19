@@ -1,592 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<trs_channels id="owner" startpos="1" num="1">
-<trs_viewdatas>
-<title><TRS_ViewData Field="title" /></title>
-<meta name="keywords" content="<TRS_ViewData Field='Keywords' />" />
-<meta name="description" content="<TRS_ViewData Field='Description' />" />
-</TRS_ViewDatas>
-</trs_channels>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-	<meta name="format-detection" content="telephone=no, email=no" />
-	<!--#include file="${ROOT_PATH}public/style/css.shtml"-->
-	<link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">
-	<link rel="stylesheet" type="text/css" href="../site5/product_list.css">
-<style type="text/css">
-		.displayFilter{color: #ccc;cursor: default;}
-	</style>
+    <meta charset="UTF-8">
+    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not="true">
+        <trs_channels id="owner" startpos="1" num="1">
+            <trs_viewdatas>
+                <title><TRS_ViewData Field="title" /></title>
+                <meta name="keywords" content="<TRS_ViewData Field='Keywords' />" />
+                <meta name="description" content="<TRS_ViewData Field='Description' />" />
+            </TRS_ViewDatas>
+        </trs_channels>
+    </TRS_CONDITION>
+    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+        <trs_channels id="parent" startpos="1" num="1">
+            <trs_viewdatas>
+                <title><TRS_ViewData Field="title" /></title>
+                <meta name="keywords" content="<TRS_ViewData Field='Keywords' />" />
+                <meta name="description" content="<TRS_ViewData Field='Description' />" />
+            </TRS_ViewDatas>
+        </trs_channels>
+    </TRS_CONDITION>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../site5/product_list.css">
+    <style type="text/css">
+        .displayFilter{color: #ccc;cursor: default;}
+    </style>
 </head>
 
 <body>
-	<div class="o_body">
-        <div class="o_main">
+<div class="o_body">
+    <div class="o_main">
         <!-- 首屏动画 -->
-	        <!-- <div class="o_g js_animateLine">
-	        	<div class="index_animate">
-	        					<div class="index_animateBox">
-	        						<span></span>
-	        					</div>
-	        					<div class="index_animateBox">
-	        						<span></span>
-	        					</div>
-	        					<div class="index_animateBox">
-	        						<span></span>
-	        					</div> 
-	        					<div class="index_animateBox">
-	        						<span></span>
-	        					</div>
-	        					<div class="index_animateBox">
-	        						<span></span>
-	        					</div>
-	        					<div class="index_animateBox"></div>
-	        				</div>
-	        </div> -->
-	    <!-- 首屏动画 END -->
-	    <!-- 导航 -->
-	    <!--#include file="${ROOT_PATH}public/header/header.shtml"-->	
-	    <!-- 导航 End-->
+        <!-- <div class="o_g js_animateLine">
+            <div class="index_animate">
+                            <div class="index_animateBox">
+                                <span></span>
+                            </div>
+                            <div class="index_animateBox">
+                                <span></span>
+                            </div>
+                            <div class="index_animateBox">
+                                <span></span>
+                            </div>
+                            <div class="index_animateBox">
+                                <span></span>
+                            </div>
+                            <div class="index_animateBox">
+                                <span></span>
+                            </div>
+                            <div class="index_animateBox"></div>
+                        </div>
+        </div> -->
+        <!-- 首屏动画 END -->
+        <!-- 导航 -->
+        <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+        <!-- 导航 End-->
 
-		<!-- 导航 列表页 -->
-			<div class="o_g list-nav">
-				<div class="o_u o_df_2-2 list-nav-img">
-				<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-					<trs_channels id="owner" num="1" startpos="0">
-					<trs_viewdatas id="owner" num="1">
-					<img src="<trs_viewdata field='banner'/>" class="o_u o_df_2-2 js_bannerImg" />
-					<div class="list-nav-type">
-						<div class="nav-type-img">
-							<img src="<trs_viewdata field='icon'/>" />
-						</div>
-						<div class="nav-type-en"><trs_viewdata field='epro'/></div>
-						<div class="nav-type-china"><trs_viewdata field='proname'/></div>
-					</div>
-					</trs_viewdatas>
-					</trs_channels>
-				</TRS_CONDITION>
-				<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-					<trs_channels id="parent" num="1" startpos="0">
-					<trs_viewdatas id="owner" num="1">
-					<img src="<trs_viewdata field='banner'/>" class="o_u o_df_2-2 js_bannerImg" />
-					<div class="list-nav-type">
-						<div class="nav-type-img">
-							<img src="<trs_viewdata field='icon'/>" />
-						</div>
-						<div class="nav-type-en"><trs_viewdata field='epro'/></div>
-						<div class="nav-type-china"><trs_viewdata field='proname'/></div>
-					</div>
-					</trs_viewdatas>
-					</trs_channels>
-				</TRS_CONDITION>
-				</div>
-				<div class="o_u o_df_1-12"></div>
-				<div class="o_u o_df_10-12">
-					<div class="list-kind-box">
-						<div class="list-kind">
-							<div class="list-kind-icon">
-							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-								<TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
-							</TRS_CONDITION>
-							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-								<TRS_CHANNELLOGO id='parent' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
-							</TRS_CONDITION>
-							</div>
-							<div class="list-kind-font">
-							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-								<span class="list-kind-china"><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/><i class="iconfont icon-arrow-line-down"></i><i class="iconfont icon-arrow-line-up"></i></span>
-								<trs_channels id='owner' num="1" startpos='1'>
-								<trs_viewdatas num="1">
-								<span class="list-kind-english"><trs_viewdata field='epro'/></span>
-								</trs_viewdatas>
-								</trs_channels>
-							</TRS_CONDITION>
-							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-								<span class="list-kind-china"><TRS_CHANNEL id="parent" FIELD="CHNLDESC" AUTOLINK='FALSE'/><i class="iconfont icon-arrow-line-down"></i><i class="iconfont icon-arrow-line-up"></i></span>
-								<trs_channels id='parent' num="1" startpos='1'>
-								<trs_viewdatas num="1">
-								<span class="list-kind-english"><trs_viewdata field='epro'/></span>
-								</trs_viewdatas>
-								</trs_channels>
-							</TRS_CONDITION>
+        <!-- 导航 列表页 -->
+        <div class="o_g list-nav">
+            <div class="o_u o_df_2-2 list-nav-img">
+                <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+                    <trs_channels id="owner" num="1" startpos="0">
+                        <trs_viewdatas id="owner" num="1">
+                            <img src="<trs_viewdata field='banner'/>" class="o_u o_df_2-2 js_bannerImg" />
+                            <div class="list-nav-type">
+                                <div class="nav-type-img">
+                                    <img src="<trs_viewdata field='icon'/>" />
+                                </div>
+                                <div class="nav-type-en"><trs_viewdata field='epro'/></div>
+                                <div class="nav-type-china"><trs_viewdata field='proname'/></div>
+                            </div>
+                        </trs_viewdatas>
+                    </trs_channels>
+                </TRS_CONDITION>
+                <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+                    <trs_channels id="parent" num="1" startpos="0">
+                        <trs_viewdatas id="owner" num="1">
+                            <img src="<trs_viewdata field='banner'/>" class="o_u o_df_2-2 js_bannerImg" />
+                            <div class="list-nav-type">
+                                <div class="nav-type-img">
+                                    <img src="<trs_viewdata field='icon'/>" />
+                                </div>
+                                <div class="nav-type-en"><trs_viewdata field='epro'/></div>
+                                <div class="nav-type-china"><trs_viewdata field='proname'/></div>
+                            </div>
+                        </trs_viewdatas>
+                    </trs_channels>
+                </TRS_CONDITION>
+            </div>
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <div class="list-kind-box">
+                    <div class="list-kind">
+                        <div class="list-kind-icon">
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+                                <TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
+                            </TRS_CONDITION>
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+                                <TRS_CHANNELLOGO id='parent' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
+                            </TRS_CONDITION>
+                        </div>
+                        <div class="list-kind-font">
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+                                <span class="list-kind-china"><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/><i class="iconfont icon-arrow-line-down"></i><i class="iconfont icon-arrow-line-up"></i></span>
+                                <trs_channels id='owner' num="1" startpos='1'>
+                                    <trs_viewdatas num="1">
+                                        <span class="list-kind-english"><trs_viewdata field='epro'/></span>
+                                    </trs_viewdatas>
+                                </trs_channels>
+                            </TRS_CONDITION>
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+                                <span class="list-kind-china"><TRS_CHANNEL id="parent" FIELD="CHNLDESC" AUTOLINK='FALSE'/><i class="iconfont icon-arrow-line-down"></i><i class="iconfont icon-arrow-line-up"></i></span>
+                                <trs_channels id='parent' num="1" startpos='1'>
+                                    <trs_viewdatas num="1">
+                                        <span class="list-kind-english"><trs_viewdata field='epro'/></span>
+                                    </trs_viewdatas>
+                                </trs_channels>
+                            </TRS_CONDITION>
 
-							</div>
-							<div class="list-kind-line o_md-hide o_sm-hide o_xs-hide"></div>
-							<ul class="float-list">
-								<div class="triangle"></div>
-								<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-								<trs_channels id="parent" startpos='2' num='7'>
-								<li>
-									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
-										<TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
-										<span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
-									</a>
-								</li>
-								</trs_channels>
-								</TRS_CONDITION>
+                        </div>
+                        <div class="list-kind-line o_md-hide o_sm-hide o_xs-hide"></div>
+                        <ul class="float-list">
+                            <div class="triangle"></div>
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+                                <trs_channels id="parent" startpos='2' num='7'>
+                                    <li>
+                                        <a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
+                                            <TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
+                                            <span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
+                                        </a>
+                                    </li>
+                                </trs_channels>
+                            </TRS_CONDITION>
 
-								<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-								<trs_channels id="parent.parent" startpos='2' num='7'>
-								<li>
-									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
-										<TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
-										<span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
-									</a>
-								</li>
-								</trs_channels>
-								</TRS_CONDITION>
-							</ul>
-						</div>
-						<div class="list-type o_md-hide o_sm-hide o_xs-hide js_proNameBox">
-						    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==" >
-							<a class="nav-link active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>">全部</a>
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+                                <trs_channels id="parent.parent" startpos='2' num='7'>
+                                    <li>
+                                        <a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
+                                            <TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
+                                            <span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
+                                        </a>
+                                    </li>
+                                </trs_channels>
+                            </TRS_CONDITION>
+                        </ul>
+                    </div>
+                    <div class="list-type o_md-hide o_sm-hide o_xs-hide js_proNameBox">
+                        <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==" >
+                            <a class="nav-link active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>">全部</a>
                             <TRS_CHANNELS ID="owner" STARTPOS="3">
-							<a class="nav-link"  channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
-							</TRS_CHANNELS>
-							</TRS_CONDITION>
+                                <a class="nav-link"  channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
+                            </TRS_CHANNELS>
+                        </TRS_CONDITION>
 
-							<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-							<a class="nav-link active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='parent'/>" href="<TRS_CHANNEL id='parent' FIELD='_RECURL'  URLISABS='true'/>">全部</a>
+                        <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+                            <a class="nav-link active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='parent'/>" href="<TRS_CHANNEL id='parent' FIELD='_RECURL'  URLISABS='true'/>">全部</a>
                             <TRS_CHANNELS ID="parent" STARTPOS="3">
-							<a class="nav-link"  channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
-							</TRS_CHANNELS>
-							</TRS_CONDITION>
-						</div>
-						<a class="more js_listNavShowMore js_listMobileNavhide" data-flag=0>
-							<span class="o_df-hide o_xs-show">展开筛选项</span><span class="o_xs-hide">展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
-						</a>
-					</div>
-					<div class="list-categray o_df-hide o_md-show o_sm-show o_xs-show js_proNameBox2">
-						<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==" >
-							<a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL FIELD='_RECURL' URLISABS='true'/>">全部</a>
-							<TRS_CHANNELS ID="owner" STARTPOS="3">
-								<a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
-							</TRS_CHANNELS>
-						</TRS_CONDITION>
+                                <a class="nav-link"  channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
+                            </TRS_CHANNELS>
+                        </TRS_CONDITION>
+                    </div>
+                    <a class="more js_listNavShowMore js_listMobileNavhide" data-flag=0 >
+                        <span class="o_df-hide o_xs-show">展开筛选项</span><span class="o_xs-hide">展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
+                    </a>
+                </div>
+                <div class="list-categray o_df-hide o_md-show o_sm-show o_xs-show js_proNameBox2">
+                    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@chnldesc" OPERATOR="==" >
+                        <a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>" href="<TRS_CHANNEL FIELD='_RECURL' URLISABS='true'/>">全部</a>
+                        <TRS_CHANNELS ID="owner" STARTPOS="3">
+                            <a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
+                        </TRS_CHANNELS>
+                    </TRS_CONDITION>
 
-						<TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" >
-						<a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='parent'/>" href="<TRS_CHANNEL id='parent' FIELD='_RECURL' URLISABS='true'/>">全部</a>
-						<TRS_CHANNELS ID="parent" STARTPOS="3">
-						<a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
-						</TRS_CHANNELS>
-						</TRS_CONDITION>
-					</div>
-					<!-- sku -->
-					
-					<div class="list-filter-select" style="display:none">
-						<div class="list-select-deletebox">
-							<a class="list-select-deleteall js_deleteAll">全部删除</a>
-						</div>
-						<div class="list-select-bgbox js_filter">
+                    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" >
+                        <a class="active" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='parent'/>" href="<TRS_CHANNEL id='parent' FIELD='_RECURL' URLISABS='true'/>">全部</a>
+                        <TRS_CHANNELS ID="parent" STARTPOS="3">
+                            <a href="<TRS_CHANNEL  FIELD='_RECURL' URLISABS='true'/>" channelid="<TRS_CHANNEL FIELD='channelid' AUTOLINK='false' ID='owner'/>"><TRS_CHANNEL FIELD='CHNLDESC' AUTOLINK='FALSE'/></a>
+                        </TRS_CHANNELS>
+                    </TRS_CONDITION>
+                </div>
+                <!-- sku -->
+
+                <div class="list-filter-select" style="display:none">
+                    <div class="list-select-deletebox">
+                        <a class="list-select-deleteall js_deleteAll">全部删除</a>
+                    </div>
+                    <div class="list-select-bgbox js_filter">
 
 
-						</div>
-					</div>
+                    </div>
+                </div>
 
-					<div class="list-filter js_screenClick">
-						<!-- <div class="filter-line">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line">
-							<div class="filter-sole mar-left">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line">
-							<div class="filter-sole mar-left">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line o_df-hide">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line o_df-hide">
-							<div class="filter-sole mar-left">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div>
-						<div class="filter-line o_df-hide">
-							<div class="filter-sole mar-right">
-								<span class="sole-title">箱门结构：</span>
-								<span class="sole-type">单门</span>
-								<span class="sole-type">双门</span>
-								<span class="sole-type">三门</span>
-								<span class="sole-type">多门</span>
-							</div>
-						</div> -->
-						<a class="list-more js_listNavShowMore  js_listNavhide" data-flag=0>
-							<span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
-						</a>
-					</div>
-					<!-- sku END -->
-				</div>
-				<div class="o_u o_df_1-12"></div>
-			</div>
-		<!-- 导航 列表页 END -->
+                <div class="list-filter js_screenClick">
+                    <!-- <div class="filter-line">
+                        <div class="filter-sole mar-right">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div>
+                    <div class="filter-line">
+                        <div class="filter-sole mar-left">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div>
+                    <div class="filter-line">
+                        <div class="filter-sole mar-right">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div>
+                    <div class="filter-line">
+                        <div class="filter-sole mar-left">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div>
+                    <div class="filter-line o_df-hide">
+                        <div class="filter-sole mar-right">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div>
+                    <div class="filter-line o_df-hide">
+                        <div class="filter-sole mar-left">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div>
+                    <div class="filter-line o_df-hide">
+                        <div class="filter-sole mar-right">
+                            <span class="sole-title">箱门结构：</span>
+                            <span class="sole-type">单门</span>
+                            <span class="sole-type">双门</span>
+                            <span class="sole-type">三门</span>
+                            <span class="sole-type">多门</span>
+                        </div>
+                    </div> -->
+                    <a class="list-more js_listNavShowMore  js_listNavhide" data-flag=0 >
+                        <span>展开全部筛选项</span>&nbsp;<i class="iconfont icon-plus"></i>
+                    </a>
+                </div>
+                <!-- sku END -->
+            </div>
+            <div class="o_u o_df_1-12"></div>
+        </div>
+        <!-- 导航 列表页 END -->
 
-		<!-- 产品列表-头部 -->
-			<div class="o_g prduct-title">
-				<div class="o_u o_df_1-12"></div>
-				<div class="o_u o_df_10-12">
-					<div class="prolist-top">
-						<a class="font">上市时间<i class="iconfont icon-arrow-refresh-down"></i></a>
-						<span class="line"></span>
-						<a class="font">人气<i class="iconfont l-none icon-arrow-refresh-down"></i></a>
-						<span class="line"></span>
-						<a class="font">价格<i class="iconfont l-none"></i></a>
-						<span class="info">
+        <!-- 产品列表-头部 -->
+        <div class="o_g prduct-title">
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <div class="prolist-top">
+                    <a class="font">上市时间<i class="iconfont icon-arrow-refresh-down"></i></a>
+                    <span class="line"></span>
+                    <a class="font">人气<i class="iconfont l-none icon-arrow-refresh-down"></i></a>
+                    <span class="line"></span>
+                    <a class="font">价格<i class="iconfont l-none"></i></a>
+                    <span class="info">
 							共<span class="red js_dataNum"><TRS_CHANNEL ID="OWNER" FIELD="_DataCount" COUNTWHERE="WCMDocument.dockeywords='否' and WCMDocument.docstatus in (10,27)" /></span>款<trs_channel field="chnldesc" autolink="false"/>产品
 						</span>
-						<!--<div class="pro-group">
-							<div class="group-style">
-								<span>
-					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠" />
-					            </span>
-							</div>
-							<div class="group-style">
-								<span class="yellow">
-					            	<input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="唤醒初夏" />
-					            </span>
-					            <span class="group-info">套装满额送好礼</span>
-					            <span class="group-info o_xs-hide"> | </span>
-					            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right o_xs-hide"></i></a>
-							</div>
-						</div>-->
-					</div>
-				</div>
-				<div class="o_u o_df_1-12"></div>
-			</div>
-		<!-- 产品列表-头部 END -->
+                    <!--<div class="pro-group">
+                        <div class="group-style">
+                            <span>
+                                <input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="组合优惠" />
+                            </span>
+                        </div>
+                        <div class="group-style">
+                            <span class="yellow">
+                                <input class="js_proGroup" type="checkbox" checked="true" data-notnull="true" value="唤醒初夏" />
+                            </span>
+                            <span class="group-info">套装满额送好礼</span>
+                            <span class="group-info o_xs-hide"> | </span>
+                            <a><span>前往活动会场 </span><i class="iconfont icon-arrow-line-right o_xs-hide"></i></a>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="o_u o_df_1-12"></div>
+        </div>
+        <!-- 产品列表-头部 END -->
 
-		<!-- 产品列表 -->
-			<div class="o_g product-list">
-				<!-- <div class=""> -->
-				<div class="o_u o_df_1-12"></div>
-				<div class="o_u o_df_10-12">
-					<div class="prolist-con"> 
-						<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  PAGESIZE="24" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc">
-						<div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
-							<div class="prolist-box">
-								<trs_viewdata field="rqcp">
-								<TRS_CONDITION REFERENCE="是" CONDITION="@rqcp" OPERATOR="contain">
-								<span class="l-tag-radius l-tag-green pro-tag">人气</span>
-								</TRS_CONDITION>
-								<TRS_CONDITION REFERENCE="是" CONDITION="@rqcp" OPERATOR="contain" not="true">
-								<trs_viewdata field="shangshishijian">
-								<TRS_NEWICON FIELD="shangshishijian" TIME="180d">
-								<span class="l-tag-radius l-tag-blue pro-tag">新品</span>
-								</TRS_NEWICON>
-								</trs_viewdata>
-								</TRS_CONDITION>
-								</trs_viewdata>
-								<div class="pro-opporate">
-									<a class="pro-read">
-										<!--<span class="pro-read-i">
-											<i class="iconfont icon-price-tag-solid1"></i>
-										</span>-->
-										<!--<span class="pro-read-font">订阅</span>-->
-									</a>
-									<a class="pro-read l-fr js_compareAddProduct" auto="0" 
-									id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top" 
-									data-id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top" 
-									data-link="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>" 
-									data-thumb="<TRS_VIEWAPPENDIX INDEX='0' MODE='PIC'  FIELD= '_RECURL' UrlIsAbs='TRUE'></TRS_VIEWAPPENDIX>" 
-									data-name="<TRS_VIEWDATA  FIELD='pname' AUTOLINK='false'/>" 
-									data-type="<TRS_VIEWDATA  FIELD='modelno' AUTOLINK='false'/>" 
-									data-chnid="<TRS_VIEWDATA field='CHANNELID' />">
-										<span class="pro-read-font">对比</span>
-										<span class="pro-read-i">
+        <!-- 产品列表 -->
+        <div class="o_g product-list">
+            <!-- <div class=""> -->
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <div class="prolist-con">
+                    <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind"  PAGESIZE="24" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc">
+                        <div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+                            <div class="prolist-box">
+                                <trs_viewdata field="rqcp">
+                                    <TRS_CONDITION REFERENCE="是" CONDITION="@rqcp" OPERATOR="contain">
+                                        <span class="l-tag-radius l-tag-green pro-tag">人气</span>
+                                    </TRS_CONDITION>
+                                    <TRS_CONDITION REFERENCE="是" CONDITION="@rqcp" OPERATOR="contain" not="true">
+                                        <trs_viewdata field="shangshishijian">
+                                            <TRS_NEWICON FIELD="shangshishijian" TIME="180d">
+                                                <span class="l-tag-radius l-tag-blue pro-tag">新品</span>
+                                            </TRS_NEWICON>
+                                        </trs_viewdata>
+                                    </TRS_CONDITION>
+                                </trs_viewdata>
+                                <div class="pro-opporate">
+                                    <a class="pro-read">
+                                        <!--<span class="pro-read-i">
+                                            <i class="iconfont icon-price-tag-solid1"></i>
+                                        </span>-->
+                                        <!--<span class="pro-read-font">订阅</span>-->
+                                    </a>
+                                    <a class="pro-read l-fr js_compareAddProduct" auto="0"
+                                       id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top"
+                                       data-id="compare_<TRS_VIEWDATA AUTOFORMATTYPE='HTML' AUTOFORMAT='true' FIELD='MetaDataId'>产品id</TRS_VIEWDATA>_top"
+                                       data-link="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>"
+                                       data-thumb="<TRS_VIEWAPPENDIX INDEX='0' MODE='PIC'  FIELD= '_RECURL' UrlIsAbs='TRUE'></TRS_VIEWAPPENDIX>"
+                                       data-name="<TRS_VIEWDATA  FIELD='pname' AUTOLINK='false'/>"
+                                       data-type="<TRS_VIEWDATA  FIELD='modelno' AUTOLINK='false'/>"
+                                       data-chnid="<TRS_VIEWDATA field='CHANNELID' />">
+                                        <span class="pro-read-font">对比</span>
+                                        <span class="pro-read-i">
 											<i class="iconfont icon-contrast-solid"></i>
 										</span>
-									</a>
-								</div>
+                                    </a>
+                                </div>
 
-								<a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>" class="pro-info-box">
-								        <!--<TRS_APPENDIX INDEX="0" MODE='PIC' WIDTH='200'/>-->
-									<TRS_XAPPENDIXS MODE='PIC' num="1"><img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'  width='200'/>" /></TRS_XAPPENDIXS>
-									<!-- <TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC" WIDTH="200">图片</TRS_VIEWAPPENDIX> -->
+                                <a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>" class="pro-info-box">
+                                    <!--<TRS_APPENDIX INDEX="0" MODE='PIC' WIDTH='200'/>-->
+                                    <TRS_XAPPENDIXS MODE='PIC' num="1"><img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'  width='200'/>" /></TRS_XAPPENDIXS>
+                                    <!-- <TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" FIELD="_RECURL" MODE="PIC" WIDTH="200">图片</TRS_VIEWAPPENDIX> -->
 
-									<div class="pro-info-title">
-										<trs_viewdata field="pname"/>
-									</div>
-									<div class="pro-info-mark">
-										<trs_viewdata field="modelno"/>
-									</div>
-									<div class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>
-									  ¥<span><trs_viewdata field="price"/></span>
-									</div>
-									<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-									<!--<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>-->
-								</a>
-								<!--活动暂时隐藏-->
-								<!-- <div class="pro-activity">
-									<i class="iconfont icon-arrow-line-left l-fl"></i>
-									<span>唤醒初夏</span>
-									<i class="iconfont icon-arrow-line-right l-fr"></i>
-								</div> -->
-							</div>
-						</div>
-						</TRS_DOCUMENTS>
-						<!-- <div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
-							<div class="prolist-box">
-								<span class="l-tag-radius l-tag-green pro-tag">人气</span>
-								<div class="pro-opporate">
-									<a class="pro-read">
-										<span class="pro-read-i">
-											<i class="iconfont icon-price-tag-solid1"></i>
-										</span>
-										<span class="pro-read-font">订阅</span>
-									</a>
-									<a class="pro-read l-fr">
-										<span class="pro-read-font">对比</span>
-										<span class="pro-read-i">
-											<i class="iconfont icon-contrast-solid"></i>
-										</span>
-									</a>
-								</div>
-								<a href="javascript:;" class="pro-info-box">
-									<img src="../site5/compare_goods.PNG" />
-									<div class="pro-info-title">
-										双开门<br>海尔真诚到永远冰箱
-									</div>
-									<div class="pro-info-mark">
-										HJOGJJEJG-797908
-									</div>
-									<div class="pro-info-price">
-										￥19889
-									</div>
-									<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
-									<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
-								</a>
-								<div class="pro-activity">
-									<i class="iconfont icon-arrow-line-left l-fl"></i>
-									<span>唤醒初夏</span>
-									<i class="iconfont icon-arrow-line-right l-fr"></i>
-								</div>
-							</div>
-						</div> -->
-					</div>
-					
-				</div>
-				<!-- </div> -->
-			</div>
-		<!-- 产品列表 END -->
-		<!-- 分页 -->
-			<div class="o_g product-listpage pageMax o_sm-hide o_xs-hide">
-                
+                                    <div class="pro-info-title">
+                                        <trs_viewdata field="pname"/>
+                                    </div>
+                                    <div class="pro-info-mark">
+                                        <trs_viewdata field="modelno"/>
+                                    </div>
+                                    <div class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>
+                                        ¥<span><trs_viewdata field="price"/></span>
+                                    </div>
+                                    <span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+                                    <!--<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>-->
+                                </a>
+                                <!--活动暂时隐藏-->
+                                <!-- <div class="pro-activity">
+                                    <i class="iconfont icon-arrow-line-left l-fl"></i>
+                                    <span>唤醒初夏</span>
+                                    <i class="iconfont icon-arrow-line-right l-fr"></i>
+                                </div> -->
+                            </div>
+                        </div>
+                    </TRS_DOCUMENTS>
+                    <!-- <div class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_2-2 o_xs_2-2">
+                        <div class="prolist-box">
+                            <span class="l-tag-radius l-tag-green pro-tag">人气</span>
+                            <div class="pro-opporate">
+                                <a class="pro-read">
+                                    <span class="pro-read-i">
+                                        <i class="iconfont icon-price-tag-solid1"></i>
+                                    </span>
+                                    <span class="pro-read-font">订阅</span>
+                                </a>
+                                <a class="pro-read l-fr">
+                                    <span class="pro-read-font">对比</span>
+                                    <span class="pro-read-i">
+                                        <i class="iconfont icon-contrast-solid"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            <a href="javascript:;" class="pro-info-box">
+                                <img src="../site5/compare_goods.PNG" />
+                                <div class="pro-info-title">
+                                    双开门<br>海尔真诚到永远冰箱
+                                </div>
+                                <div class="pro-info-mark">
+                                    HJOGJJEJG-797908
+                                </div>
+                                <div class="pro-info-price">
+                                    ￥19889
+                                </div>
+                                <span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>
+                                <span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span>
+                            </a>
+                            <div class="pro-activity">
+                                <i class="iconfont icon-arrow-line-left l-fl"></i>
+                                <span>唤醒初夏</span>
+                                <i class="iconfont icon-arrow-line-right l-fr"></i>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
             </div>
-			<div class="o_g product-listpage pageMiddle o_df-hide o_sm-show">
-                
+            <!-- </div> -->
+        </div>
+        <!-- 产品列表 END -->
+        <!-- 分页 -->
+        <div class="o_g product-listpage pageMax o_sm-hide o_xs-hide">
+
+        </div>
+        <div class="o_g product-listpage pageMiddle o_df-hide o_sm-show">
+
+        </div>
+        <div class="o_g product-listpage pageMobile o_df-hide o_xs-show">
+
+        </div>
+
+        <!-- 分页 END -->
+
+        <!-- 精品推荐 -->
+        <div class="o_g product-recommend">
+            <div class="o_u o_df_1-12"></div>
+            <div class="o_u o_df_10-12">
+                <div class="recommend-box">
+                    <div class="recommend-title">
+                        精选推荐
+                        <i class="iconfont icon-refresh-solid recommend-reload js_recomChange"></i>
+                    </div>
+                    <div class="recommend-pro">
+                        <div class="o_g js_recommend">
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
+                                <trs_channel id="parent" AUTOLINK='false'>
+                                    <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
+                                        <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_df-hide" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
+                                            <img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
+                                            <div class="recommend-pro-info">
+                                                <span class="pro-info-title"><trs_viewdata field="pname"/></span>
+                                                <span class="pro-info-type"><trs_viewdata field="modelno"/></span>
+                                                <span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
+                                            </div>
+                                        </a>
+                                    </TRS_DOCUMENTS>
+                                </trs_channel>
+                            </TRS_CONDITION>
+                            <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
+                                <TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
+                                    <a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_df-hide" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
+                                        <img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
+                                        <div class="recommend-pro-info">
+                                            <span class="pro-info-title"><trs_viewdata field="pname"/></span>
+                                            <span class="pro-info-type"><trs_viewdata field="modelno"/></span>
+                                            <span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
+                                        </div>
+                                    </a>
+                                </TRS_DOCUMENTS>
+                            </TRS_CONDITION>
+                        </div>
+                    </div>
+                </div>
             </div>
-			<div class="o_g product-listpage pageMobile o_df-hide o_xs-show">
-                
+        </div>
+        <!-- 精品推荐 END -->
+        <!-- 背景间隔 -->
+        <div class="o_g prolist-bg"></div>
+        <!-- 背景间隔 END -->
+        <!-- 产品对比 -->
+        <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide" style="display: none;" >
+            <div class="compare-title">
+                产品对比
+                <div class="compare-spread js_compareBoxShow" data-show=0>
+                    展开<i class="iconfont icon-arrow-line-up"></i>
+                </div>
             </div>
+            <ul class="compare-list">
+                <div class="o_g js_compareBox">
+                    <li class="o_u o_df_1-5 o_df-right compare-button-clear">
+                        <div class="compare-link compareButton">
+                            <a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
+                        </div>
+                        <div class="compare-link">
+                            <a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- 产品对比 END -->
+        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+        <!-- 弹层-筛选项 -->
+        <div class="o_g list-layer js_layerShowMore js_ignorAnimate">
+            <div class="o_u o_df_5-12 o_md_4-12 o_sm_3-12 o_xs_2-12 layer-bg"></div>
+            <div class="o_u o_df_7-12 o_md_8-12 o_sm_9-12 o_xs_10-12 layer-box">
+                <div class="layer-tit">
+                    筛选项
+                    <a class="iconfont icon-close layer-close js_layerClose"></a>
+                </div>
+                <ul class="layer-list">
 
-		<!-- 分页 END -->
+                </ul>
+                <div class="layer-list-btn">
+                    <a href="javascript:;" class="list-btn-reset">重置</a>
+                    <a href="javascript:;" class="list-btn-finish js_layerClose">完成</a>
+                </div>
+            </div>
+        </div>
+        <!-- 弹层-筛选项 END -->
+    </div>
+</div>
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="../site5/templet_pagination.js"></script>
+<script type="text/javascript" src="../site5/templet_product_list_template.js"></script>
+<script type="text/javascript" src="../site5/templet_product_list.js"></script>
+<script type="text/javascript" src="../site5/templet_product_list_compare.js"></script>
+<script type="text/javascript" src="../site5/product_list.js"></script>
+<script type="text/javascript" src="../site5/query_product_price.js"></script>
+<script>
+    var template_url="<TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain'><trs_channel id='parent' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION><TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain' not='true'><trs_channel id='owner' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION>"
+    var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';
 
-		<!-- 精品推荐 -->
-			<div class="o_g product-recommend">
-				<div class="o_u o_df_1-12"></div>
-				<div class="o_u o_df_10-12">
-					<div class="recommend-box">
-						<div class="recommend-title">
-							精选推荐
-							<i class="iconfont icon-refresh-solid recommend-reload js_recomChange"></i>
-						</div>
-						<div class="recommend-pro">
-							<div class="o_g js_recommend">
-							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain">
-							    <trs_channel id="parent" AUTOLINK='false'>
-								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
-									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC" >图片</TRS_VIEWAPPENDIX>' />
-									<div class="recommend-pro-info">
-										<span class="pro-info-title"><trs_viewdata field="pname"/></span>
-										<span class="pro-info-type"><trs_viewdata field="modelno"/></span>
-										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
-									</div>
-								</a>
-							    </TRS_DOCUMENTS>
-							    </trs_channel>
-							    </TRS_CONDITION>
-							    <TRS_CONDITION REFERENCE="热水器~厨电" CONDITION="@parent.chnldesc" OPERATOR="contain" not='true'>
-								<TRS_DOCUMENTS ID="OWNER"  SELECT="DocKind" where="WCMDocument.dockeywords='否'" ORDER="WCMDocument.DOCABSTRACT desc" num="4">
-								<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>">
-									<img src='<TRS_VIEWAPPENDIX INDEX="0"  UPLOAD="TRUE" UrlIsAbs="true" FIELD="_RECURL" MODE="PIC">图片</TRS_VIEWAPPENDIX>' />
-									<div class="recommend-pro-info">
-										<span class="pro-info-title"><trs_viewdata field="pname"/></span>
-										<span class="pro-info-type"><trs_viewdata field="modelno"/></span>
-										<span class="pro-info-price js_minPrice" sku_value='<trs_viewdata field="sku_values"/>'>￥<span><trs_viewdata field="price"/></span></span>
-									</div>
-								</a>
-							    </TRS_DOCUMENTS>
-							    </TRS_CONDITION>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- 精品推荐 END -->
-		<!-- 背景间隔 -->
-			<div class="o_g prolist-bg"></div>
-		<!-- 背景间隔 END -->
-		<!-- 产品对比 -->
-			<div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide" style="display: none;" >
-				<div class="compare-title">
-					产品对比
-					<div class="compare-spread js_compareBoxShow" data-show=0>
-						展开<i class="iconfont icon-arrow-line-up"></i>
-					</div>
-				</div>
-				<ul class="compare-list">
-					<div class="o_g js_compareBox">
-						<li class="o_u o_df_1-5 o_df-right compare-button-clear">
-							<div class="compare-link compareButton">
-								<a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
-							</div>
-							<div class="compare-link">
-								<a href="javascript:;" class="link-clear js_compareClose">清空对比栏</a>
-							</div>
-						</li>
-					</div>
-				</ul>
-			</div>
-		<!-- 产品对比 END -->
-		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
-		<div class="product-footer-height o_lg-hide o_md-hide o_sm-hide o_xs-hide"></div>
-	    <!-- 弹层-筛选项 -->
-	    	<div class="o_g list-layer js_layerShowMore js_ignorAnimate">
-	    		<div class="o_u o_df_5-12 o_md_4-12 o_sm_3-12 o_xs_2-12 layer-bg"></div>
-	    		<div class="o_u o_df_7-12 o_md_8-12 o_sm_9-12 o_xs_10-12 layer-box">
-	    			<div class="layer-tit">
-	    				筛选项
-	    				<a class="iconfont icon-close layer-close js_layerClose"></a>
-	    			</div>
-	    			<ul class="layer-list">
-	    				
-	    			</ul>
-	    			<div class="layer-list-btn">
-							<a href="javascript:;" class="list-btn-reset">重置</a>
-							<a href="javascript:;" class="list-btn-finish js_layerClose">完成</a>
-	    			</div>
-	    		</div>
-	    	</div>
-	    <!-- 弹层-筛选项 END -->
-		</div>
-	</div>
-	<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-	<script type="text/javascript" src="../site5/swiper-3.4.2.jquery.min.js"></script>
-    <script type="text/javascript" src="../site5/templet_pagination.js"></script>
-    <script type="text/javascript" src="../site5/templet_product_list_template.js"></script>
-    <script type="text/javascript" src="../site5/templet_product_list.js"></script>
-    <script type="text/javascript" src="../site5/templet_product_list_compare.js"></script>
-    <script type="text/javascript" src="../site5/product_list.js"></script>
-    <script type="text/javascript" src="../site5/query_product_price.js"></script>
-    <script>
-    	var template_url="<TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain'><trs_channel id='parent' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION><TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain' not='true'><trs_channel id='owner' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION>"
-    	var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';
+    cur();
+    //var pagehtml = createPageHTMLS(${PAGE_COUNT}, "${PAGE_NAME}", "${PAGE_EXT}",${RECORD_COUNT},7);
+    //if(undefined != pagehtml ){$(".leader_pager").html(pagehtml);}
+    //paginationInit( ${PAGE_INDEX},${PAGE_COUNT},24,".product-listpage.pageMax",8,"${PAGE_NAME}","${PAGE_EXT}");
 
-    	cur();
-		//var pagehtml = createPageHTMLS(${PAGE_COUNT}, "${PAGE_NAME}", "${PAGE_EXT}",${RECORD_COUNT},7);
-		//if(undefined != pagehtml ){$(".leader_pager").html(pagehtml);}
-		//paginationInit( ${PAGE_INDEX},${PAGE_COUNT},24,".product-listpage.pageMax",8,"${PAGE_NAME}","${PAGE_EXT}");
+    //PC端分页
+    var pager = new pagination(".product-listpage.pageMax");
+    pager.currPage = ${PAGE_INDEX}+1;
+    pager.totalPage = ${PAGE_COUNT};
+    pager.pageCount = 24;
+    pager.showPageCount = 8;
+    pager.render();
+    //重写click方法  ajax取数据
+    pager.onclick = function (currPageT) {
+        /* pager.totalPage = pageCount;
+         pager.currPage = currPageT;
+         pager.pageCount = pageSize;
+         pager.showPageCount = showPageNo;
+         pager.render();*/
+        if((currPageT-1)==0){
+            window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
+        }else{
+            window.location.href="${PAGE_NAME}"+"_"+(currPageT-1)+".${PAGE_EXT}";
+        }
+    };
+    //SM端分页
+    var pager = new pagination(".product-listpage.pageMiddle");
+    pager.currPage = ${PAGE_INDEX}+1;
+    pager.totalPage = ${PAGE_COUNT};
+    pager.pageCount = 24;
+    pager.showPageCount = 6;
+    pager.render();
+    //重写click方法  ajax取数据
+    pager.onclick = function (currPageT) {
+        /* pager.totalPage = pageCount;
+         pager.currPage = currPageT;
+         pager.pageCount = pageSize;
+         pager.showPageCount = showPageNo;
+         pager.render();*/
+        if((currPageT-1)==0){
+            window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
+        }else{
+            window.location.href="${PAGE_NAME}"+"_"+(currPageT-1)+".${PAGE_EXT}";
+        }
 
-		//PC端分页
-	    var pager = new pagination(".product-listpage.pageMax");
-	    pager.currPage = ${PAGE_INDEX}+1;
-	    pager.totalPage = ${PAGE_COUNT};
-	    pager.pageCount = 24;
-	    pager.showPageCount = 8;
-	    pager.render();
-	    //重写click方法  ajax取数据
-	    pager.onclick = function (currPageT) {
-	       /* pager.totalPage = pageCount;
-	        pager.currPage = currPageT;
-	        pager.pageCount = pageSize;
-	        pager.showPageCount = showPageNo;
-	        pager.render();*/
-	        if((currPageT-1)==0){
-	        	window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
-	        }else{
-	        	window.location.href="${PAGE_NAME}"+"_"+(currPageT-1)+".${PAGE_EXT}";
-	        }
-	    };
-	    //SM端分页
-	    var pager = new pagination(".product-listpage.pageMiddle");
-	    pager.currPage = ${PAGE_INDEX}+1;
-	    pager.totalPage = ${PAGE_COUNT};
-	    pager.pageCount = 24;
-	    pager.showPageCount = 6;
-	    pager.render();
-	    //重写click方法  ajax取数据
-	    pager.onclick = function (currPageT) {
-	       /* pager.totalPage = pageCount;
-	        pager.currPage = currPageT;
-	        pager.pageCount = pageSize;
-	        pager.showPageCount = showPageNo;
-	        pager.render();*/
-	        if((currPageT-1)==0){
-	        	window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
-	        }else{
-	        	window.location.href="${PAGE_NAME}"+"_"+(currPageT-1)+".${PAGE_EXT}";
-	        }
-	        
-	    };
-	    //XS端分页
-	    var pager = new pagination(".product-listpage.pageMobile");
-	    pager.currPage = ${PAGE_INDEX}+1;
-	    pager.totalPage = ${PAGE_COUNT};
-	    pager.pageCount = 24;
-	    pager.showPageCount = 3;
-	    pager.render();
-	    //重写click方法  ajax取数据
-	    pager.onclick = function (currPageT) {
-	       /* pager.totalPage = pageCount;
-	        pager.currPage = currPageT;
-	        pager.pageCount = pageSize;
-	        pager.showPageCount = showPageNo;
-	        pager.render();*/
-	        if((currPageT-1)==0){
-	        	window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
-	        }else{
-	        	window.location.href="${PAGE_NAME}"+"_"+(currPageT-1)+".${PAGE_EXT}";
-	        }
-	    };
+    };
+    //XS端分页
+    var pager = new pagination(".product-listpage.pageMobile");
+    pager.currPage = ${PAGE_INDEX}+1;
+    pager.totalPage = ${PAGE_COUNT};
+    pager.pageCount = 24;
+    pager.showPageCount = 3;
+    pager.render();
+    //重写click方法  ajax取数据
+    pager.onclick = function (currPageT) {
+        /* pager.totalPage = pageCount;
+         pager.currPage = currPageT;
+         pager.pageCount = pageSize;
+         pager.showPageCount = showPageNo;
+         pager.render();*/
+        if((currPageT-1)==0){
+            window.location.href="${PAGE_NAME}"+".${PAGE_EXT}";
+        }else{
+            window.location.href="${PAGE_NAME}"+"_"+(currPageT-1)+".${PAGE_EXT}";
+        }
+    };
 
-	</script>
+</script>
 
 
 

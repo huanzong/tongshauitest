@@ -16,8 +16,8 @@ $(function() {
         var inputBoxHeight = $('.js_firstStep').height();
         var footBoxHeight = $('.js_footBox').height();
         var inputBoxWidth = $('.js_firstStep').width();
-        var positionLeft = (windowWidth-inputBoxWidth)/2;
-        var positionTop = (windowHeight-inputBoxHeight-footBoxHeight)/2;
+        var positionLeft = (windowWidth - inputBoxWidth) / 2;
+        var positionTop = (windowHeight - inputBoxHeight) / 2;
         var topShift;
         if(windowWidth>991){
             topShift=30;
@@ -58,14 +58,11 @@ $(function() {
                 return;
             }
             var password = $.trim($(this).val());
-            if( "" == password || "6-16位，数字，字母或符合的组合" == password || null == password){
-                $(this).addClass("o_df-hide");
-                $("#js_loginPassword").removeClass("o_df-hide");
-                $("#js_loginPassword").focus();
+            if ("" == password || "6-16位，数字，字母或符合的组合" == password || null == password) {
+                $(this).addClass("o_df-hide").removeClass("color");
+                $("#js_loginPassword").removeClass("o_df-hide").focus();
                 return;
             }
-            $(this).addClass("o_df-hide");
-            $("#js_loginPassword").removeClass("o_df-hide").focus();
         });
 
         //密码离开事件,更改密码框类型为文本
@@ -77,7 +74,7 @@ $(function() {
             var password = $.trim($(this).val());
             if( "" == password || "6-16位，数字，字母或符合的组合" == password || null == password){
                 $("#js_loginPassword").addClass("o_df-hide");
-                $("#js_loginPassword2").removeClass("o_df-hide").val("6-16位，数字，字母或符合的组合").css('color','rgb(204, 204, 204)');
+                $("#js_loginPassword2").addClass("color").removeClass("o_df-hide").val("6-16位，数字，字母或符合的组合");
             }
         });
 
@@ -145,15 +142,21 @@ $(function() {
     $(".js_passwordSwitch").oToggle(function (self) {
         self.removeClass("icon-eye-close-solid").addClass("icon-eye-open-solid");
         var passwordVal = $("#js_loginPassword").val();
-        $("#js_loginPassword2").val(passwordVal).removeClass("o_df-hide").css({"color": "rgb(102, 102, 102)"});
+        if(passwordVal == ''){
+            passwordVal ='6-16位，数字，字母或符合的组合';
+        }
+        $("#js_loginPassword2").val(passwordVal).removeClass("o_df-hide").addClass("color");
         $("#js_loginPassword").addClass("o_df-hide");
         self.parent().addClass("open");
     },function (self) {
         self.addClass("icon-eye-close-solid").removeClass("icon-eye-open-solid");
         $("#js_loginPassword").removeClass("o_df-hide");
-        $("#js_loginPassword2").addClass("o_df-hide");
+        $("#js_loginPassword2").addClass("o_df-hide").removeClass("color");
         self.parent().removeClass("open");
         var passwordVal = $("#js_loginPassword2").val();
+        if(passwordVal == '6-16位，数字，字母或符合的组合'){
+            passwordVal = ''
+        }
         $("#js_loginPassword").val(passwordVal)
     });
     //下拉菜单初始化

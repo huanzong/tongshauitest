@@ -7,6 +7,16 @@ $(function(){
 
     $('.lose').css('background-color','#ccc');
 
+    var windowWidth = $(window).width();
+    if(windowWidth>1199){
+      var photoBoxWidth = 350;
+    }else if(windowWidth<1200&&windowWidth>991){
+        var photoBoxWidth = 300;
+
+    }else if(windowWidth<992) {
+        var photoBoxWidth = 250;
+
+    }
 
 //    用户名判定
     var nubreg =/^[0-9]*$/;
@@ -41,25 +51,54 @@ $(function(){
     });
 
 
-            // Create variables (in this scope) to hold the API and image size
-            var jcrop_api,
-                boundx,
-                boundy,
-            // Grab some information about the preview pane
-                $preview = $('#preview-pane'),
-                $pcnt = $('#preview-pane .preview-container'),
-                $pimg = $('#preview-pane .preview-container img'),
-                xsize = $pcnt.width(),
-                ysize = $pcnt.height();
+    // Create variables (in this scope) to hold the API and image size
+    var jcrop_api,
+        boundx,
+        boundy,
+    // Grab some information about the preview pane
+        $preview = $('#preview-pane'),
+        $pcnt = $('#preview-pane .preview-container'),
+        $pimg = $('#preview-pane .preview-container img'),
+        xsize = $pcnt.width(),
+        ysize = $pcnt.height();
     var imgs = new Image();
     var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
-            $('#target').Jcrop({
+
+
+
+
+    function isIE()
+    {
+        if(!!window.ActiveXObject || "ActiveXObject" in window)
+            return true;
+        else
+            return false;
+    }
+
+
+    if (isIE()) {
+        //是IE浏览器
+        createJCrop(1);
+    } else {
+        ////单独判断IE10
+        //if (document.documentMode == 10) {
+        //    createJCrop(1);
+        //} else
+        //非IE浏览器
+            createJCrop(0);
+    }
+
+
+    function createJCrop(flag) {
+        if (flag == 0) {
+            //非IE下创建
+          $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
                     aspectRatio: 1,
-                    boxWidth:300,
-                    boxHeight:300,
-                    setSelect: [ 60, 60, 260, 260 ]
+                    boxWidth:photoBoxWidth,
+                    boxHeight:photoBoxWidth,
+                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
                 }
                 ,function(){
                     // Use the API to get the real image size
@@ -74,30 +113,55 @@ $(function(){
 
                 }
             );
-            function updatePreview(coords){
-                if (parseInt(coords.w) > 0) {
-                    var rx = 180 / coords.w;
-                    var ry = 180 / coords.h;
-                    $('#js-imgsplit').css({
-                        //width: Math.round(rx * boundx) + 'px',
-                        //height: Math.round(ry * boundy) + 'px',
-                        //
-                        ////    width: Math.round(rx * imgsW) + 'px',
-                        ////height: Math.round(ry * imgsH) + 'px',
-                        ////'max-width':'300px',
-                        ////'max-height':'300px',
-                        ////width: Math.round($('.js-rightimg').width()) + 'px',
-                        ////height: Math.round($('.js-rightimg').height()) + 'px',
-                        //    marginLeft: '-' + Math.round(rx * c.x) + 'px',
-                        //    marginTop: '-' + Math.round(ry * c.y) + 'px'
-                        width:Math.round(rx *300) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
-                        height:Math.round(rx * 300) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
-                        marginLeft:"-" + Math.round(rx * coords.x)+ "px",
-                        marginTop:"-" + Math.round(ry *coords.y) + "px"
-                        }
-                    );
+        } else {
+            //IE下创建
+
+             jcrop_api = $('#target').Jcrop({
+                    onChange: updatePreview,
+                    onSelect: updatePreview,
+                    aspectRatio: 1,
+                    boxWidth:photoBoxWidth,
+                    boxHeight:photoBoxWidth,
+                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
                 }
-            };
+            //    ,function(){
+            //        // Use the API to get the real image size
+            //
+            //// Store the API in the jcrop_api variable
+            //var bounds = this.getBounds();
+            //boundx = bounds[0];
+            //boundy = bounds[1];
+            //// Store the API in the jcrop_api variable
+            //jcrop_api = this;
+            // Move the preview into the jcrop container for css positioning
+
+        //}
+    );
+        }
+    }
+    function updatePreview(coords){
+        if (parseInt(coords.w) > 0) {
+            var rx = 180 / coords.w;
+            var ry = 180 / coords.h;
+            $('#js-imgsplit').css({
+                    //width: Math.round(rx * boundx) + 'px',
+                    //height: Math.round(ry * boundy) + 'px',
+                    ////    width: Math.round(rx * imgsW) + 'px',
+                    ////height: Math.round(ry * imgsH) + 'px',
+                    ////'max-width':'300px',
+                    ////'max-height':'300px',
+                    ////width: Math.round($('.js-rightimg').width()) + 'px',
+                    ////height: Math.round($('.js-rightimg').height()) + 'px',
+                    //    marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                    //    marginTop: '-' + Math.round(ry * c.y) + 'px'
+                    width:Math.round(rx *photoBoxWidth) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
+                    height:Math.round(rx * photoBoxWidth) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
+                    marginLeft:"-" + Math.round(rx * coords.x)+ "px",
+                    marginTop:"-" + Math.round(ry *coords.y) + "px"
+                }
+            );
+        }
+    };
 
 //    时间控件
 
@@ -106,7 +170,7 @@ $(function(){
         $('.datetimepicker').css('left',left+50);
     })
 
-    if (window.innerWidth ==     undefined || window.innerWidth > 1199) {
+    if (window.innerWidth == undefined || window.innerWidth > 1199) {
         $(".js_Date").datetimepicker({
             language: 'zh-CN',      //语言
             weekStart: 0,           //一周从哪一天开始
@@ -139,110 +203,133 @@ $(function(){
 
 //    上传组件
 
-$.jUploader.setDefaults({
-    cancelable: true, // 可取消上传
-    allowedExtensions: ['jpg', 'png','jpeg'], // 只允许上传图片
-    messages: {
-        upload: '上传',
-        cancel: '取消',
-        emptyFile: "{file} 为空，请选择一个文件.",
-        //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
-        invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
-        onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
-    }
-});
-$.jUploader({
-    fileField: 'file',
-    fillsize:'2',
-    button: "js_imgUpload", // 这里设置按钮id
-    action: '/hshop-user/front/user/uploadHeadPic',//这里写地址
-    // 开始上传事件
-
-    onUpload: function(data) {
-        // console.log(data,111);
-        if(data){
-            globalShade2('图片上传中，请耐心等待....',4,'forever');
+    $.jUploader.setDefaults({
+        cancelable: true, // 可取消上传
+        allowedExtensions: ['jpg', 'png','jpeg'], // 只允许上传图片
+        messages: {
+            upload: '上传',
+            cancel: '取消',
+            emptyFile: "{file} 为空，请选择一个文件.",
+            //invalidExtension: "{file} 后缀名不合法. 只有 {extensions} 是允许的.",
+            invalidExtension: "只能上传后缀名是 {extensions} 的图片。",
+            onLeave: "文件正在上传，如果你现在离开，上传将会被取消。"
         }
+    });
+    $.jUploader({
+        fileField: 'file',
+        fillsize:'2',
+        button: "js_imgUpload", // 这里设置按钮id
+        action: '/hshop-user/front/user/uploadHeadPic',//这里写地址
+        // 开始上传事件
 
-    },
+        onUpload: function(data) {
+            // console.log(data,111);
+            if(data){
+                globalShade2('图片上传中，请耐心等待....',4,'forever');
+            }
+
+        },
 //      上传完成事件
-    onComplete: function(name, data) {
+        onComplete: function(name, data) {
 
-        if (data.isSuccess) {
-
+            if (data.isSuccess) {
 //      隐藏永恒显示弹窗
-            $('.js_popUpBox2').hide();
-            $("body").css({overflow:"auto"});
+                $('.js_popUpBox2').hide();
+                $("body").css({overflow:"auto"});
+                $('.js-uploadPhoto').hide();
+                $('.js-modifyPhoto').show();
+                $('.js-modifyPhotoBtn').show();
+                templet_pic='/tongshuaifile'+$.trim(data.data);
 
-            $('.js-uploadPhoto').hide();
-            $('.js-modifyPhoto').show();
-            $('.js-modifyPhotoBtn').show();
-            templet_pic='/tongshuaifile'+$.trim(data.data);
+                //图片加载完成后获取图片信息
 
-            //图片加载完成后获取图片信息
-
-             imgs.src = '/tongshuaifile'+$.trim(data.data);
-            imgs.onload = function(){
-                imgsW=imgs.width;
-                imgsH = imgs.height;
-                //bounds=[imgsW,imgsH];
-                if(imgsW>imgsH){
-                    imgsWb = 300/imgsW;
-                    imgsHnow = imgsH*imgsWb;
+                imgs.src = '/tongshuaifile'+$.trim(data.data);
+                imgs.onload = function(){
+                    imgsW=imgs.width;
+                    imgsH = imgs.height;
+                    //bounds=[imgsW,imgsH];
+                    //if(imgsW>imgsH){
+                    //    imgsWb = photoBoxWidth/imgsW;
+                    //    imgsHnow = imgsH*imgsWb;
 //      初始化更改选择框内图片
-                    jcrop_api.setImage(templet_pic, function(){
-                         jcrop_api.setOptions({
-                            outerImage: templet_pic,
-                            setSelect: [ 60, 60, 260, 260 ]
-                        })
-                    });
 
-                    $(".jcrop-preview").attr("src",templet_pic);
+                        if(!isIE()){
+                            jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setOptions({
+                                    outerImage: templet_pic,
+                                    //setSelect: [ 60, 60, 260, 260 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
-                }else{
-                    imgsWb = 300/imgsH;
-                    imgsWnow = imgsW*imgsWb;
-//      初始化更改选择框内图片
-                    jcrop_api.setImage(templet_pic, function(){
-                         jcrop_api.setOptions({
-                            outerImage: templet_pic,
-                            setSelect: [ 60, 60, 260, 260 ]
-                        })
-                    });
+                                })
+                            });
+                            $(".jcrop-preview").attr("src",templet_pic);
 
-                    $(".jcrop-preview").attr("src",templet_pic);
+                        }else{
+                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.85,'width':photoBoxWidth*0.85})
+                            $(".jcrop-preview").attr("src",templet_pic);
 
-                }
-            };
+                            //jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setOptions({
+                                    //outerImage: templet_pic,
+                                    //setSelect: [ 60, 60, 260, 260 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
-        } else {
+                                //})
+                            });
+
+                        }
+
+
+                     var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+                     $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+//                    }else{
+//                        imgsWb = photoBoxWidth/imgsH;
+//                        imgsWnow = imgsW*imgsWb;
+////      初始化更改选择框内图片
+////                        jcrop_api.setImage(templet_pic, function(){
+//                            jcrop_api.setOptions({
+//                                outerImage: templet_pic
+//                                //setSelect: [ 60, 60, 260, 260 ]
+//                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+//
+//                            //})
+//                        });
+//                         var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+//                        $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+//                        console.log(photoBoxWidth-photoBoxHeight)
+//                        $(".jcrop-preview").attr("src",templet_pic);
+//
+//                    }
+                };
+
+            } else {
 //      上传头像失败出现弹窗
 //            alert(111);
-            globalShade2('图片上传失败，请稍后再试',2);
-        }
+                globalShade2('图片上传失败，请稍后再试',2);
+            }
 
-    },
+        },
 //      系统信息显示（例如后缀名不合法）
-    showMessage: function(message) {
-        alert(message);
-    },
+        showMessage: function(message) {
+            alert(message);
+        },
 //      取消上传事件
-    onCancel: function(fileName) {},
-    debug: true
-});
+        onCancel: function(fileName) {},
+        debug: true
+    });
 
 
 //      个人信息
-$('.js-personalinfotab').click( function () {
-    var tabNmu =$(this).index();
-    $('.js-personalinfotabcont').hide();
-    $('.js-personalinfotabcont').eq(tabNmu).show()
-    $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
-    $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
-    $('.js-uploadPhoto').show();
-    $('.js-modifyPhoto').hide();
-    $('.js-modifyPhotoBtn').hide();
-})
+    $('.js-personalinfotab').click( function () {
+        var tabNmu =$(this).index();
+        $('.js-personalinfotabcont').hide();
+        $('.js-personalinfotabcont').eq(tabNmu).show()
+        $('.js-personalinfotab').removeClass('cur').eq(tabNmu).addClass('cur');
+        $('.js-personalinfotabcont').removeClass('cur').eq(tabNmu).addClass('cur');
+        $('.js-uploadPhoto').show();
+        $('.js-modifyPhoto').hide();
+        $('.js-modifyPhotoBtn').hide();
+    })
 
 //      点击取消
     $('.js-imgcancel').unbind().click( function () {
@@ -259,18 +346,29 @@ $('.js-personalinfotab').click( function () {
 //      点击上传图片
     $('#getupimg').unbind().click( function () {
 
-        var imgSize = jcrop_api.tellSelect();
+        if(!isIE()){
+            var imgSize = jcrop_api.tellSelect();
+        }else{
+            var imgSize = {
+                'x':$(".jcrop-holder >div").position().left,
+                'y':$(".jcrop-holder >div").position().top,
+                'w':$(".jcrop-holder >div").width(),
+                'h':$(".jcrop-holder >div").height()
+            }
+        }
+
+
         // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
             type: "get",
             data: {
-                    "picX": parseInt(imgSize.x),
-                    "picY": parseInt(imgSize.y),
-                     "width": parseInt(imgSize.w*(imgsW/300)),
-                     "height": parseInt(imgSize.h*(imgsH/300)),                     
-            
-                     "userHeadPic": imgs.src
+                "picX": parseInt(imgSize.x),
+                "picY": parseInt(imgSize.y),
+                "width": parseInt(imgSize.w*(imgsW/photoBoxWidth)),
+                "height": parseInt(imgSize.h*(imgsH/photoBoxWidth)),
+
+                "userHeadPic": imgs.src
             },
             success_cb: function (data) {
                 if (data.isSuccess) {
