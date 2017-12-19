@@ -60,7 +60,7 @@
 			<a class="login" id="header_login">登录</a>
 			<span class="line"></span>
 			<a class="login" id="header_reg">注册</a>
-			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车</a>
+			<a class="nav-chart" href="/cart/"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车</a>
 		</div>
 		<div class="nav-user o_df-hide" id="header_loginDiv">
 			<div class="login nav-zindex1">
@@ -79,7 +79,7 @@
 					</li>
 				</ul>
 			</div>
-			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车<span>34</span></a>
+			<a class="nav-chart" href="/cart/"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车<span></span></a>
 		</div>
 	</div>
 	<!-- 用户信息栏 sf/xl分辨率 END -->
@@ -116,7 +116,7 @@
 			<li>
 				<a href="javascript:;">
 					<i class="iconfont icon-shoppingcart"></i>
-					<sub>84</sub>
+					<sub></sub>
 				</a>
 			</li>
 			<li>
