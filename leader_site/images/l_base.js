@@ -339,7 +339,8 @@ function userLoginStatus() {
         if (ck_loginUserName != null && ck_loginUserName != '') {
             var logusername = subHZString(ck_loginUserName, 7, '...');
             //从cookie中读取当前登录用户
-            $("#header_loginDiv .login span").before(logusername);
+            //$("#header_loginDiv .login span").before(logusername);
+            $("#header_loginDiv .login").prepend(logusername);
             $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
             $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
             $("#header_logout,#header_logout2,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
@@ -359,7 +360,8 @@ function userLoginStatus() {
                         var loginUser = $.trim(returnData);
                         var logusername = subHZString(loginUser, 7, '...');
                         //从cookie中读取当前登录用户
-                        $("#header_loginDiv .login span").before(logusername);
+                        //$("#header_loginDiv .login span").before(logusername);
+                        $("#header_loginDiv .login").prepend(logusername);
                         $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
                         $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
                         $("#header_logout,#header_logout2 ,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
