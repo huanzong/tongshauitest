@@ -35,7 +35,7 @@
       /* xs*/
       height: 120px;
       background: url('reg_bg_top2.JPG') no-repeat top center;
-      background-size:  100% 120px ;
+      background-size:  800px 120px ;
     }
   }
   .mail_register_bkright{
@@ -113,10 +113,15 @@
     left: 0;
     right: 0;
     margin: auto;
-    height: 600px;
+    height: 550px;
 
     box-shadow: 0px 0px 7px 0px #eee;
-    >div{
+
+    @media (min-width: 576px) and (max-width: 991px) {
+      height: 600px;
+    }
+
+      >div{
       img{
         margin:  40px 0 20px 0;
       }
@@ -157,18 +162,18 @@
           border-radius: 60px;
         }
         >h2{
-          margin:0  0 70px  0;
+          margin:0  0 50px  0;
         }
       }
       @media (min-width: 576px) and (max-width: 700px) {
         /* sm*/
         >img{
-          margin: -40px 0 0 0;
+          margin: -40px 0 20px 0;
           border: 10px solid #fff;
           border-radius: 60px;
         }
         >h2{
-          margin:0  0 70px  0;
+          margin:0  0 50px  0;
         }
       }
       @media (max-width: 575px) {
@@ -257,11 +262,15 @@
   //  vertical-align: baseline;
   //
   //}
-  @media (min-width: 576px) and (max-width: 991px) {
+  @media (min-width: 701px) and (max-width: 991px) {
+    /* md*/
+    margin:130px 0 0 0;
+  }
+  @media (min-width: 576px) and (max-width: 700px) {
     /* md*/
     margin:160px 0 0 0;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 575px) {
     /* md*/
     margin:30px 0 0 0;
   }
@@ -271,8 +280,8 @@
 
 .mail-problem{
   display: inline-block;
-  height: 18px;
-  width: 18px;
-  background: url(problem.png) no-repeat center;
-  padding-left: 10px;
+  height: 40px;
+  width: 40px;
+  background: url(problem.png) no-repeat  center top  ;
+ //margin-left: 10px;
 }
