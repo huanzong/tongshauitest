@@ -113,7 +113,7 @@
 				<!-- 已登录展示 END -->
 			</li>
 			<li>
-				<a href="javascript:;" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/">
+				<a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/">
 					<i class="iconfont icon-shoppingcart"></i>
 					<!--<sub></sub>-->
 				</a>
