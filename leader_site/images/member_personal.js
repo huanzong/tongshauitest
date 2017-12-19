@@ -9,7 +9,7 @@ $(function(){
 
     var windowWidth = $(window).width();
     if(windowWidth>1199){
-      var photoBoxWidth = 350;
+      var photoBoxWidth = 310;
     }else if(windowWidth<1200&&windowWidth>991){
         var photoBoxWidth = 300;
 
@@ -92,7 +92,7 @@ $(function(){
     function createJCrop(flag) {
         if (flag == 0) {
             //非IE下创建
-            $('#target').Jcrop({
+          $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
                     aspectRatio: 1,
@@ -116,7 +116,7 @@ $(function(){
         } else {
             //IE下创建
 
-            var api = $('#target').Jcrop({
+             jcrop_api = $('#target').Jcrop({
                     onChange: updatePreview,
                     onSelect: updatePreview,
                     aspectRatio: 1,
@@ -124,18 +124,18 @@ $(function(){
                     boxHeight:photoBoxWidth,
                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
                 }
-                ,function(){
-                    // Use the API to get the real image size
-
-            // Store the API in the jcrop_api variable
-            var bounds = this.getBounds();
-            boundx = bounds[0];
-            boundy = bounds[1];
-            // Store the API in the jcrop_api variable
-            jcrop_api = this;
+            //    ,function(){
+            //        // Use the API to get the real image size
+            //
+            //// Store the API in the jcrop_api variable
+            //var bounds = this.getBounds();
+            //boundx = bounds[0];
+            //boundy = bounds[1];
+            //// Store the API in the jcrop_api variable
+            //jcrop_api = this;
             // Move the preview into the jcrop container for css positioning
 
-        }
+        //}
     );
         }
     }
@@ -233,11 +233,9 @@ $(function(){
         onComplete: function(name, data) {
 
             if (data.isSuccess) {
-
 //      隐藏永恒显示弹窗
                 $('.js_popUpBox2').hide();
                 $("body").css({overflow:"auto"});
-
                 $('.js-uploadPhoto').hide();
                 $('.js-modifyPhoto').show();
                 $('.js-modifyPhotoBtn').show();
@@ -250,39 +248,58 @@ $(function(){
                     imgsW=imgs.width;
                     imgsH = imgs.height;
                     //bounds=[imgsW,imgsH];
-                    if(imgsW>imgsH){
-                        imgsWb = photoBoxWidth/imgsW;
-                        imgsHnow = imgsH*imgsWb;
+                    //if(imgsW>imgsH){
+                    //    imgsWb = photoBoxWidth/imgsW;
+                    //    imgsHnow = imgsH*imgsWb;
 //      初始化更改选择框内图片
-                        jcrop_api.setImage(templet_pic, function(){
-                            jcrop_api.setOptions({
-                                outerImage: templet_pic,
-                                //setSelect: [ 60, 60, 260, 260 ]
-                                setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
-                            })
-                        });
+                        if(!isIE()){
+                            jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setOptions({
+                                    outerImage: templet_pic,
+                                    //setSelect: [ 60, 60, 260, 260 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
-                        $(".jcrop-preview").attr("src",templet_pic);
+                                })
+                            });
+                            $(".jcrop-preview").attr("src",templet_pic);
 
-                    }else{
-                        imgsWb = photoBoxWidth/imgsH;
-                        imgsWnow = imgsW*imgsWb;
-//      初始化更改选择框内图片
-                        jcrop_api.setImage(templet_pic, function(){
-                            jcrop_api.setOptions({
-                                outerImage: templet_pic,
-                                //setSelect: [ 60, 60, 260, 260 ]
-                                setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                        }else{
+                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.85,'width':photoBoxWidth*0.85})
+                            $(".jcrop-preview").attr("src",templet_pic);
 
-                            })
-                        });
-                         var photoBoxHeight = $('.jcrop-holder').parent('li').height();
-                        $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
-                        console.log(photoBoxWidth-photoBoxHeight)
-                        $(".jcrop-preview").attr("src",templet_pic);
+                            //jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setOptions({
+                                    //outerImage: templet_pic,
+                                    //setSelect: [ 60, 60, 260, 260 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
-                    }
+                                //})
+                            });
+
+                        }
+
+
+                     var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+                     $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+//                    }else{
+//                        imgsWb = photoBoxWidth/imgsH;
+//                        imgsWnow = imgsW*imgsWb;
+////      初始化更改选择框内图片
+////                        jcrop_api.setImage(templet_pic, function(){
+//                            jcrop_api.setOptions({
+//                                outerImage: templet_pic
+//                                //setSelect: [ 60, 60, 260, 260 ]
+//                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+//
+//                            //})
+//                        });
+//                         var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+//                        $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+//                        console.log(photoBoxWidth-photoBoxHeight)
+//                        $(".jcrop-preview").attr("src",templet_pic);
+//
+//                    }
                 };
 
             } else {
@@ -329,7 +346,18 @@ $(function(){
 //      点击上传图片
     $('#getupimg').unbind().click( function () {
 
-        var imgSize = jcrop_api.tellSelect();
+        if(!isIE()){
+            var imgSize = jcrop_api.tellSelect();
+        }else{
+            var imgSize = {
+                'x':$(".jcrop-holder >div").position().left,
+                'y':$(".jcrop-holder >div").position().top,
+                'w':$(".jcrop-holder >div").width(),
+                'h':$(".jcrop-holder >div").height()
+            }
+        }
+
+
         // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",

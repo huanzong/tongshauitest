@@ -98,26 +98,41 @@
     <div class="o_u o_df_1-12"></div>
 </div>-->
 
-<div>
-    <div class="o_g footer"><div class="personal_footer_copy">
-        <p>Copyright © 2016 Haier Group Leader.All rights reserved 鲁ICP备09096283</p>
-
-    </div></div>
+<div class="o_g footer">
+    <div class="line-red"></div>
+    <div class="line"></div>
+    <div class="o_u o_df_1-12"></div>
+    <div class="o_u o_df_10-12">
+        <div class="footer_copy">
+			<span class="link">
+                <a href="javascript:;" class="iconfont icon-share-weibo" ></a>
+				<a href="javascript:;"  class="iconfont icon-share-weixin"></a>
+            </span>
+            <ul>
+                <li>
+                    <span>联系我们</span>
+                </li>
+                <li>
+                    <span>帮助中心</span>
+                </li>
+                <li>
+                    <a href="<trs_channel id='服务条款' field='_recurl' UrlIsAbs='true'/>">服务条款</a>
+                </li>
+                <li>
+                    <span>法律声明</span>
+                </li>
+            </ul>
+            <div class="footer_middle_copy">
+                <span class="o_u footer_copy_text">Copyright &copy; 2016 Haier Group Leader. All rights reserved 鲁ICP备09096283</span>
+                <div class="footer_copy_img_box">
+                    <span class="footer_copy_img1"></span>
+                    <span class="footer_copy_img2"></span>
+                    <a href="http://www.miitbeian.gov.cn/" class="footer_copy_img3"></a>
+                </div>
+            </div>
+            <!--<span class="copy_service">服务条款33333</span>-->
+        </div>
+    </div>
+    <div class="o_u o_df_1-12"></div>
 </div>
-
-
-<script>
-    //判断当前是否存在同域cookie
-    function istrsidssdssotoken(){
-        var trsidssdssotoken = "ssotoken";//同域Cookie
-        var sdssotoken = $.cookie(trsidssdssotoken);
-        if(sdssotoken!=null){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-
-</script>
 
