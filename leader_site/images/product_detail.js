@@ -612,9 +612,9 @@ $(function() {
         }, 1000);
 
         //更多选择
-        if(screenWidth>575){
-            swiper.moreSwiper.reInit();
-        }
+        // if(screenWidth>575){
+        //     swiper.moreSwiper.reInit();
+        // }
 
         //产品参数-结构图居中
         paramImgCenter($(".js_structbg"));
