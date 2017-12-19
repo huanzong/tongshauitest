@@ -267,10 +267,10 @@ $(function(){
                         }else{
                             $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.85,'width':photoBoxWidth*0.85})
                             $(".jcrop-preview").attr("src",templet_pic);
-
+                            $('.js_selectWf').attr("src",templet_pic);
                             //jcrop_api.setImage(templet_pic, function(){
                                 jcrop_api.setOptions({
-                                    outerImage: templet_pic,
+                                    //outerImage: templet_pic,
                                     //setSelect: [ 60, 60, 260, 260 ]
                                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
