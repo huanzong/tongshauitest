@@ -4,7 +4,7 @@ $(function() {
 
     //文字卖点
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
-        slidesPerView : 'auto',
+        slidesPerView : 'auto'
     });
     $('.js_fontSwiperPrev').on('click',function(){
         swiper.fontSwiper.swipePrev();
