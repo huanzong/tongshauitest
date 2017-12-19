@@ -88,19 +88,24 @@ $(function(){
         //$('.js_memberNavMiddleBtn').css('line-height', $(window).height()+'px')
     }
 
-    if(windowW<576){
-        $('.js_memberNavLeft').height('60px');
-    }
-    if(windowW>992){
+    //if(windowW<576){
+    //    $('.js_memberNavLeft').height('60px');
+    //}
+    if(windowW>991){
         if($('js-membercontboxs-2')){
             $('.js_memberNavRight').width(windowW-245) ;
         }
         var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-20;
         $('.js-membercontboxs').width(rightBoxWidth);
 
-    }else{
+    }else if(windowW<992 && windowW>575){
+        $('.js-membercontboxs').width($(window).width()-$('.js_memberNavLeft').width()-$('.js_memberNavMiddleBtn').width()-5);
+        //$(window).width()
         //$('.js-membercontboxs').width(windowW-$('.js_memberNavLeft').width()-$('.js_memberNavMiddleBtn').width()-20);
-        $('.js-membercontboxs').width($(window).width()-$('.js_memberNavLeft').width()-$('.js_memberNavMiddle').width()-20);
+        //$('.js-membercontboxs').width($(window).width()-$('.js_memberNavLeft').width()-$('.js_memberNavMiddle').width()-20);
+    }else if(windowW<576){
+        $('.js-membercontboxs').width('100%');
+        $('.js_memberNavLeft').css('height','60px');
     }
     //else if(windowW>700&&windowW<992){
     //    if($('js-membercontboxs-2')){
@@ -124,11 +129,19 @@ $(function(){
 
     $(window).resize(function() {
         var windowW = $(window).width();
-        if(windowW>575){
-            //$('.js-membercontboxs').width(windowW-$('.js_memberNavLeft').width()-$('.js_memberNavMiddleBtn').width()-20);
-            $('.js-membercontboxs').width($(window).width()-$('.js_memberNavLeft').width()-$('.js_memberNavMiddle').width()-20);
+        if(windowW>991){
+            if($('js-membercontboxs-2')){
+                $('.js_memberNavRight').width(windowW-245) ;
+            }
+            var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-20;
+            $('.js-membercontboxs').width(rightBoxWidth);
 
-        }else{
+        }else if(windowW<992 && windowW>575){
+            $('.js-membercontboxs').width($(window).width()-$('.js_memberNavLeft').width()-$('.js_memberNavMiddleBtn').width()-5);
+            //$(window).width()
+            //$('.js-membercontboxs').width(windowW-$('.js_memberNavLeft').width()-$('.js_memberNavMiddleBtn').width()-20);
+            //$('.js-membercontboxs').width($(window).width()-$('.js_memberNavLeft').width()-$('.js_memberNavMiddle').width()-20);
+        }else if(windowW<576){
             $('.js-membercontboxs').width('100%');
             $('.js_memberNavLeft').css('height','60px');
         }
