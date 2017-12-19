@@ -253,7 +253,7 @@ $(function(){
                     //    imgsHnow = imgsH*imgsWb;
 //      初始化更改选择框内图片
 
-                        if(isIE()){
+                        if(!isIE()){
                             jcrop_api.setImage(templet_pic, function(){
                                 jcrop_api.setOptions({
                                     outerImage: templet_pic,
@@ -346,7 +346,18 @@ $(function(){
 //      点击上传图片
     $('#getupimg').unbind().click( function () {
 
-        var imgSize = jcrop_api.tellSelect();
+        if(!isIE()){
+            var imgSize = jcrop_api.tellSelect();
+        }else{
+            var imgSize = {
+                'x':$(".jcrop-holder >div").position().left,
+                'y':$(".jcrop-holder >div").position().top,
+                'w':$(".jcrop-holder >div").width(),
+                'h':$(".jcrop-holder >div").height()
+            }
+        }
+
+
         // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
