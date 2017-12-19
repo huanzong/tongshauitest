@@ -117,17 +117,6 @@ $('.js_navSearchClose').on('click', function () {
 
 });
 
-//展示导航菜单
-$('.js_menuShow').on('click', function () {
-    if ($(this).hasClass('icon-menu')) {
-        $(this).removeClass('icon-menu').addClass('icon-close');
-        $('.js_navMdShow').show();
-    } else {
-        $(this).removeClass('icon-close').addClass('icon-menu');
-        $('.js_navMdShow').hide();
-    }
-});
-
 //点击搜索按钮全文搜索
 $('.js_jumpto_product_search').on('click', function () {
     jumpToProductSearch();
