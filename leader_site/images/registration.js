@@ -56,6 +56,9 @@ $(function() {
     });
 
 
+
+
+
 // 表单初始化
 //    var address=$(".js_regType_phone").Validform({
 //        tiptype:3,

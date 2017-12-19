@@ -1,0 +1,178 @@
+@import "l_variable";
+* {
+    font-family: "Microsoft YaHei"!important;
+}
+//头部
+.news_detail_head {
+    background-color: #f8f8f8;
+    height: 50px;
+    line-height: 50px;
+    .news_padding_right {
+        padding-right: 15px;
+    }
+    a {
+        font-size: 12px;
+        &.news_index {
+            color: #666;
+        }
+        &.news_leader {
+            color: #666;
+        }
+        &.news_detail {
+            color: #999;
+        }
+    }
+    i {
+        font-size: 10px;
+        color: #999;
+    }
+}
+
+//新闻详情的内容
+.news_detail_content {
+    padding: 63px 0 45px 0;
+    @media (max-width: 700px) {
+        padding: 33px 0 30px 0;
+    }
+    .news_title {
+        font-size: 28px;
+        color: #333;
+        @media (max-width: 700px) {
+            font-size: 20px;
+            color: #333;
+        }
+    }
+    .news_item {
+        padding: 27px 0 36px 0;
+        border-bottom: 1px solid #ccc;
+        .news_item_date {
+            font-size: 16px;
+            color: #999;
+            font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif!important;
+            @media (max-width: 700px) {
+                font-size: 14px;
+            }
+        }
+        .news_item_line {
+            border-left: 1px solid #ccc;
+            height: 14px;
+            @media (max-width: 700px) {
+                height: 12px;
+            }
+        }
+        .news_item_step {
+            font-size: 14px;
+            color: #999;
+            @media (max-width: 700px) {
+                font-size: 12px;
+            }
+        }
+        a {
+            .iconfont {
+                font-size: 22px;
+                color: #919191;
+            }
+        }
+        .news_item_padding {
+            padding-right: 20px;
+            @media (max-width: 575px) {
+                padding-right: 15px;
+            }
+        }
+        .news_item_room {
+            padding-right: 12px;
+        }
+        .news_item_mid {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .news_content_top {
+        font-size: 16px;
+        color: #666;
+        line-height: 28px;
+        padding: 36px 0;
+        @media (max-width: 700px) {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+    .news_content_pic {
+        margin-bottom: 36px;
+        img {
+            width: 100%;
+            max-height: 550px;
+            min-height: 130px;
+        }
+    }
+    .news_content_bottom {
+        font-size: 16px;
+        color: #666;
+        line-height: 28px;
+        padding-bottom: 10px;
+        @media (max-width: 700px) {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}
+
+.news_line {
+    border-bottom: 1px solid #ccc;
+}
+
+//新闻底部
+.news_detail_bottom {
+    padding: 24px 0 92px 0;
+    .news_bottom_left {
+        text-align: left;
+        .news_bottom_title {
+            font-size: 14px;
+            color: #999;
+            display: inline-block;
+            @media (max-width: 700px) {
+                color: #666;
+            }
+        }
+        .news_bottom_item {
+            font-size: 14px;
+            color: #333;
+            display: inline-block;
+            @media (max-width: 991px) and (min-width:701px) {
+                width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .news_bottom_right {
+        text-align: right;
+        .news_bottom_title {
+            font-size: 14px;
+            color: #999;
+            display: inline-block;
+            @media (max-width: 700px) {
+                color: #666;
+            }
+        }
+        .news_bottom_item {
+            display: inline-block;
+            font-size: 14px;
+            color: #333;
+            @media (max-width: 991px) and (min-width:701px) {
+                width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+.footer{
+    .shop_phone{
+        span{
+            font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif!important;
+        }
+    }
+}

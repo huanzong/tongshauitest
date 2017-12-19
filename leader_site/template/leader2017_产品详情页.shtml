@@ -132,46 +132,104 @@
                     <div class="detail-banner">
                         <!-- 中间 -->
                         <div class="banner-pro">
-                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img js_specificsShow" />
-                            </TRS_XAPPENDIXS>
-                            <div class="banner-pro-oppo o_df-hide o_xs-show">
-                                <!-- <div class="activity-icon active">
-                                    <div class="icon-font">
-                                        <i class="iconfont icon-star-solid"></i>
+                            <div class="banner-block">
+                                <div class="banner-pro-pic">
+                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>" class="banner-pro-img js_specificsShow" />
+                                    </TRS_XAPPENDIXS>
+                                    <div class="banner-pro-oppo o_df-hide o_xs-show">
+                                        <!-- <div class="activity-icon active">
+                                            <div class="icon-font">
+                                                <i class="iconfont icon-star-solid"></i>
+                                            </div>
+                                            <span class="icon-font-info">收藏</span>
+                                        </div>
+                                        <div class="activity-icon">
+                                            <div class="icon-font">
+                                                <i class="iconfont icon-price-tag-solid1"></i>
+                                            </div>
+                                            <span class="icon-font-info">订阅</span>
+                                        </div> -->
+                                        <div class="activity-icon">
+                                            <div class="icon-font">
+                                                <i class="iconfont icon-share-solid"></i>
+                                            </div>
+                                            <span class="icon-font-info">分享</span>
+                                            <!-- JiaThis Button BEGIN -->
+                                            <div class="l-float activity-float">
+                                                <div class="float-box float-blog jiathis_style_32x32">
+                                                    <a class="jiathis_button_tsina"></a>
+                                                </div>
+                                                <div class="float-box float-wechat jiathis_style_32x32">
+                                                    <a class="jiathis_button_weixin"></a>
+                                                </div>
+                                                <div class="float-box float-qq jiathis_style_32x32">
+                                                    <a class="jiathis_button_qzone"></a>
+                                                </div>
+                                            </div>
+                                            <!-- JiaThis Button END -->
+                                        </div>
                                     </div>
-                                    <span class="icon-font-info">收藏</span>
                                 </div>
-                                <div class="activity-icon">
-                                    <div class="icon-font">
-                                        <i class="iconfont icon-price-tag-solid1"></i>
+                                <!-- 首屏细节大图 详情弹层 -->
+                                <div class="detail-specifics js_specificsBoxShow">
+                                    <!-- 关闭按钮 -->
+                                    <div class="specifics-close js_bannerSwiperClose">
+                                        <i class="iconfont icon-fail-solid"></i>
                                     </div>
-                                    <span class="icon-font-info">订阅</span>
-                                </div> -->
-                                <div class="activity-icon">
-                                    <div class="icon-font">
-                                        <i class="iconfont icon-share-solid"></i>
+                                    <!-- 关闭按钮 END -->
+                                    <!-- 轮播 -->
+                                    <div class="swiper-container js_bannerSwiper">
+                                        <div class="swiper-wrapper">
+                                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                            <div class="swiper-slide swiper-slide-active">
+                                                <a href="javascript:;">
+                                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>">
+                                                </a>
+                                            </div>
+                                            </TRS_XAPPENDIXS>
+        
+                                            <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
+                                                </a>
+                                            </div>
+                                            </TRS_XAPPENDIXS>
+        
+                                        </div>
                                     </div>
-                                    <span class="icon-font-info">分享</span>
-                                    <!-- JiaThis Button BEGIN -->
-                                    <div class="l-float activity-float">
-                                        <div class="float-box float-blog jiathis_style_32x32">
-                                            <a class="jiathis_button_tsina"></a>
+                                    <!-- 轮播 END -->
+                                    <!-- 分页 -->
+                                    <div class="swiper-pagination js_bannerSwiperPage">
+                                        <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
+                                        <div class="pagination-box" data-index="0">
+                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
                                         </div>
-                                        <div class="float-box float-wechat jiathis_style_32x32">
-                                            <a class="jiathis_button_weixin"></a>
-                                        </div>
-                                        <div class="float-box float-qq jiathis_style_32x32">
-                                            <a class="jiathis_button_qzone"></a>
-                                        </div>
+                                        </TRS_XAPPENDIXS>
+                                        <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
+                                            <div class="pagination-box" data-index=<TRS_ROWNO/>>
+                                                <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
+                                            </div>
+                                        </TRS_XAPPENDIXS>
                                     </div>
-                                    <!-- JiaThis Button END -->
+                                    <!-- 分页 END -->
+                                    <!-- 上一页/下一页 -->
+                                    <div class="pagination-prev js_bannerSwiperPrev">
+                                        <i class="iconfont icon-arrow-line-left"></i>
+                                    </div>
+                                    <div class="pagination-next js_bannerSwiperNext">
+                                        <i class="iconfont icon-arrow-line-right"></i>
+                                    </div>
+                                    <!-- 上一页/下一页 END -->
                                 </div>
                             </div>
-                            <div class="banner-pro-tit"><trs_viewdata field="pname"/></div>
-                            <div class="banner-pro-sub"><trs_viewdata field="modelno"/></div>
-                            <div class="banner-pro-info"><trs_viewdata field="cpms"/></div>
-                        </div>
+
+                            <div class="banner-pro-pic banner-pro-title">
+                                <div class="banner-pro-tit"><trs_viewdata field="pname"/></div>
+                                <div class="banner-pro-sub"><trs_viewdata field="modelno"/></div>
+                                <div class="banner-pro-info"><trs_viewdata field="cpms"/></div>
+                            </div>
                         <!-- 右边 -->
                         <div class="banner-particulars">
                             <div class="particulars-browse o_md-hide o_sm-hide o_xs-hide js_specificsShow">
@@ -189,18 +247,19 @@
                                     <span class="capacity-box">798L</span>
                                 </div>-->
                                 <div class="particulars-delivery">
-                                    <div class="delivery-address">
+                                    <div class="delivery-address js-delivery-address">
+                                        <span style="margin-right:10px;">无货</span>
                                         <span class="address-tit">配送至：</span>
                                         <span>山东省 青岛市 崂山区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
-                                    <div class="delivery-time">
+                                    <!-- <div class="delivery-time">
                                         <span>有货</span>
                                         <span>，预计</span>
                                         <span>02月89日（周五）22点送达</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="particulars-btn">
-                                    <a href="javascript:;" class="l-btn-normal l-btn-red" productId="<trs_viewdata field='metadataid'/>">加入购物车</a>
+                                    <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-disable" productId="<trs_viewdata field='metadataid'/>">加入购物车</a>
                                 </div>
 
                                 <div class="particulars-buy-tit">品牌旗舰店购买：</div>
@@ -293,7 +352,7 @@
                                         7月31日-8月20日
                                     </div>
                                     <div class="activity-con-info">
-                                        套购慢件最高3000，满减赠扫地机器人
+                                        套购满减最高3000，满减赠扫地机器人
                                     </div>
                                 </div>
                                 <div class="activity-con-small">
@@ -352,57 +411,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 首屏细节大图 详情弹层 -->
-                        <div class="detail-specifics js_specificsBoxShow">
-                            <!-- 关闭按钮 -->
-                            <div class="specifics-close js_bannerSwiperClose">
-                                <i class="iconfont icon-fail-solid"></i>
-                            </div>
-                            <!-- 关闭按钮 END -->
-                            <!-- 轮播 -->
-                            <div class="swiper-container js_bannerSwiper">
-                                <div class="swiper-wrapper">
-                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                                    <div class="swiper-slide swiper-slide-active">
-                                        <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE' width='1000'/>">
-                                        </a>
-                                    </div>
-                                    </TRS_XAPPENDIXS>
-
-                                    <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
-                                        </a>
-                                    </div>
-                                    </TRS_XAPPENDIXS>
-
-                                </div>
-                            </div>
-                            <!-- 轮播 END -->
-                            <!-- 分页 -->
-                            <div class="swiper-pagination js_bannerSwiperPage">
-                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='0' num="1">
-                                <div class="pagination-box" data-index="0">
-                                    <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
-                                </div>
-                                </TRS_XAPPENDIXS>
-                                <TRS_XAPPENDIXS MODE='PIC' STARTPOS='1'>
-                                    <div class="pagination-box" data-index=<TRS_ROWNO/>>
-                                        <img src="<TRS_XAPPENDIX FIELD='_RECURL' UPLOAD='TRUE' UrlIsAbs='TRUE'/>">
-                                    </div>
-                                </TRS_XAPPENDIXS>
-                            </div>
-                            <!-- 分页 END -->
-                            <!-- 上一页/下一页 -->
-                            <div class="pagination-prev js_bannerSwiperPrev">
-                                <i class="iconfont icon-arrow-line-left"></i>
-                            </div>
-                            <div class="pagination-next js_bannerSwiperNext">
-                                <i class="iconfont icon-arrow-line-right"></i>
-                            </div>
-                            <!-- 上一页/下一页 END -->
+                        
+                            
                         </div>
                     </div>
                 </div>
@@ -473,8 +483,8 @@
                                     </div>
                                 </div>
                                 </TRS_CONDITION>
-                                <!--洗衣机-->
-                                <TRS_CONDITION REFERENCE='滚筒洗衣机~波轮洗衣机' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                <!--滚筒洗衣机-->
+                                <TRS_CONDITION REFERENCE='滚筒洗衣机' CONDITION='@parent.chnldesc' OPERATOR="contain">
                                 <div class="o_u o_df_1-5">
                                     <div class="fontpoint-box">
                                         <div class="fontpoint-bold"><trs_viewdata field="xl"/></div>
@@ -499,6 +509,27 @@
                                         <div class="fontpoint-small">能效等级</div>
                                     </div>
                                 </div>
+                                </TRS_CONDITION>
+                                <!--波轮洗衣机-->
+                                <TRS_CONDITION REFERENCE='波轮洗衣机' CONDITION='@parent.chnldesc' OPERATOR="contain">
+                                    <div class="o_u o_df_1-5">
+                                        <div class="fontpoint-box">
+                                            <div class="fontpoint-bold"><trs_viewdata field="xl"/></div>
+                                            <div class="fontpoint-small">产品系列</div>
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-5">
+                                        <div class="fontpoint-box">
+                                            <div class="fontpoint-bold"><trs_viewdata field="xdrl"/></div>
+                                            <div class="fontpoint-small">洗涤容量(KG)</div>
+                                        </div>
+                                    </div>
+                                    <div class="o_u o_df_1-5">
+                                        <div class="fontpoint-box border-none">
+                                            <div class="fontpoint-bold"><trs_viewdata field="nxdj"/></div>
+                                            <div class="fontpoint-small">能效等级</div>
+                                        </div>
+                                    </div>
                                 </TRS_CONDITION>
                                 <!--电热水器-->
                                 <TRS_CONDITION REFERENCE='电热水器' CONDITION='@parent.chnldesc' OPERATOR="contain">
@@ -1370,15 +1401,15 @@
             <!--<a href="javascript:;" class="js_landBtn"  style="font-size: 14px;">登陆按钮</a>-->
             <!--激活登陆弹窗按钮添加class js_landBtn -->
             <!-- 产品对比 -->
-            <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide">
+            <div class="prolist-compare o_lg-hide o_md-hide o_sm-hide  o_xs-hide" style="display: none;" >
                 <div class="compare-title">
                     产品对比
                     <div class="compare-spread js_compareBoxShow" data-show=0>
                         展开<i class="iconfont icon-arrow-line-up"></i>
                     </div>
                 </div>
-                <ul >
-                    <div class="o_g compare-list js_compareBox">
+                <ul class="compare-list">
+                    <div class="o_g js_compareBox">
                         <li class="o_u o_df_1-5 o_df-right compare-button-clear">
                             <div class="compare-link compareButton">
                                 <a href="javascript:;" class="l-btn-sm l-btn-red">对比</a>
@@ -1452,6 +1483,35 @@
             </div>
         </div>
     </div>
+    <!-- 配送地址 -->
+    <div class="o_g land-shade  land-shade-top js_addShadeTop">
+        <div class="land-box land-box-address js_addContBox">
+            <div class="land-cont-title alert-cont-title o_u">
+                <span>配送至：</span>
+                <i class="js_alertAddress_save">浙江</i>
+                <i class="js_alertAddress_city">杭州市</i>
+                <i class="js_alertAddress_area">西湖区</i>
+                <a href="" class="o_u iconfont icon-close js_addClose"></a>
+            </div>
+            <div class="js_addType" data-alt="1">
+                <div class="land-cont-type-normal o_u o_df_1-3 cur">省份</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">城市</div>
+                <div class="land-cont-type-phone o_u o_df_1-3">县区</div>
+            </div>
+            <div class="js_addInputBox">
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_save_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_ctiy_cont "></ul>
+                </div>
+                <div class="land-cont-normal-input o_g">
+                    <ul class="o_u o_df_11-12  js_alertAddress_area_cont "></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 配送地址 end -->
     <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品对比详情页json" EXT="json" ></TRS_PAGEGENERATE>-->
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品口碑详情页" EXT="comment" ></TRS_PAGEGENERATE>-->

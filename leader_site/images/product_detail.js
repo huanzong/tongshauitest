@@ -1,7 +1,6 @@
+//用来存放所有轮播
+var swiper = {};//为了template加载数据方便所以提出
 $(function() {
-    
-    //用来存放所有轮播
-    var swiper = {};
 
     //文字卖点
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
@@ -82,7 +81,7 @@ $(function() {
     //更多选择
     swiper.moreSwiper = new Swiper('.js_swiperMore1', {
         loop: true,
-        autoplay: 1000,
+        autoplay: 5000,
 
         slidesPerView: 3,//滑动展示个数
         centeredSlides: true,
@@ -469,8 +468,13 @@ $(function() {
 
 
     //产品参数-结构图居中
-    $(".js_structbg").oBgCover().init(); //激活方法
-    $(".js_structbg").css('margin-left', '-424px');
+    function paramImgCenter($ele){
+        $ele.css('height',$ele.parent().height());
+        if($ele.width()>$ele.parent().width()){
+            $ele.css('width','100%');
+        }
+    }
+    paramImgCenter($(".js_structbg"));
 
     $(".js_swiperPreferential .js_checkbox").jq_qvote();
 
@@ -478,65 +482,88 @@ $(function() {
     $('.js_bannerSwiperClose').on('click', function() {
         $('.js_specificsBoxShow').fadeOut(1000);
     });
+
+    swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
+        // loop: true,
+        // autoplay: 3000,
+        updateOnImagesReady: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        watchActiveIndex: true,
+        // calculateHeight : true,//Swiper根据slides内容计算容器高度
+        onFirstInit: function(swiper) {
+
+
+            $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
+
+            // var index = swiper.activeLoopIndex;
+            var index = swiper.activeIndex;
+
+            $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+                'width': '100%'
+            }, 500);
+
+            $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+                'width': '55%'
+            });
+
+        },
+        onSlideChangeEnd: function(swiper) {
+            var index = swiper.activeLoopIndex;
+
+            $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
+                'width': '100%'
+            }, 500);
+
+            $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
+                'width': '55%'
+            });
+
+            $('.js_bannerSwiperPage .pagination-box').removeClass('active');
+            $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
+            
+
+            $('.js_bannerSwiperPage .pagination-box').hide()
+
+            var showArr = []
+            if (index < 1) {
+                showArr = [0, 1, 2, 3]
+            } else if (index > $('.js_bannerSwiperPage .pagination-box').length - 3) {
+                showArr = [$('.js_bannerSwiperPage .pagination-box').length-1, $('.js_bannerSwiperPage .pagination-box').length-2, $('.js_bannerSwiperPage .pagination-box').length-3, $('.js_bannerSwiperPage .pagination-box').length-4]
+            } else {
+                showArr = [index-1, index, index+1, index+2]
+            }
+
+            // $('.js_bannerSwiperPage .pagination-box').eq(index).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index+1).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index+2).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index-1).css('display','inline-block')
+            for (let i = 0; i < showArr.length; i++) {
+                $('.js_bannerSwiperPage .pagination-box').eq(showArr[i]).css('display','inline-block')            
+            }
+
+        }
+    });
+
+
     $('.js_specificsShow').on('click', function() {
         $('.js_specificsBoxShow').fadeIn(1000);
-        swiper.bannerSwiper = new Swiper('.js_bannerSwiper', {
-            // loop: true,
-            // autoplay: 3000,
-            updateOnImagesReady: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            watchActiveIndex: true,
-            onFirstInit: function(swiper) {
+        swiper.bannerSwiper.params.calculateHeight = true;
 
-
-                $('.js_bannerSwiperPage').find('.pagination-box').eq(0).addClass('active');
-
-                // var index = swiper.activeLoopIndex;
-                var index = swiper.activeIndex;
-
-                $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                    'margin-top': '-200px',
-                    'height': '400px'
-                }, 500);
-
-                $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                    'margin-top': '-143px',
-                    'height': '286px'
-                });
-
-            },
-            onSlideChangeEnd: function(swiper) {
-                var index = swiper.activeLoopIndex;
-
-                $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                    'margin-top': '-200px',
-                    'height': '400px'
-                }, 500);
-
-                $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                    'margin-top': '-143px',
-                    'height': '286px'
-                });
-
-                $('.js_bannerSwiperPage .pagination-box').removeClass('active');
-                $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
-
-            }
-        });
+        swiper.bannerSwiper.reInit();
+        swiper.bannerSwiper.swipeNext();
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
 
             swiper.bannerSwiper.swipeTo(parseInt(index), 1000, false);
+            
             $('.js_bannerSwiper .swiper-slide-active').find('img').animate({
-                'margin-top': '-200px',
-                'height': '400px'
+                'width': '100%'
             }, 500);
 
             $('.js_bannerSwiper .swiper-slide').not('.swiper-slide-active').find('img').css({
-                'margin-top': '-143px',
-                'height': '286px'
+                'width': '55%'
             });
 
             $(this).siblings('.pagination-box').removeClass('active');
@@ -605,9 +632,12 @@ $(function() {
         }, 1000);
 
         //更多选择
-        if(screenWidth>575){
-            swiper.moreSwiper.reInit();
-        }
+        // if(screenWidth>575){
+        //     swiper.moreSwiper.reInit();
+        // }
+
+        //产品参数-结构图居中
+        paramImgCenter($(".js_structbg"));
 
     }
 
@@ -765,6 +795,13 @@ $(function() {
 
     });
 
+    //分享按钮-移动端
+    $('.activity-icon').mouseenter(function(){
+        $(this).find('.activity-float').show();
+    }).mouseleave(function(){
+        $(this).find('.activity-float').hide();
+    });
+
     /**
      * 加入购物车
      * 
@@ -780,9 +817,9 @@ $(function() {
 
         // 当前页面商品信息
         var goodsInfo = [{
-            "inSkuCode": "1234-sku",
+            "inSkuCode": "650000",
             "quantity": 1,
-            "regionCode": 2212
+            "regionCode": $('.js-delivery-address').attr('areaCode') || ''
         }]
         
         if (istrsidssdssotoken()) {
@@ -795,7 +832,7 @@ $(function() {
                 success_cb: function(data){
                     if (data.isSuccess) {
                         // 保存成功跳转购物车页面
-                        window.location.href = "./product_trolley_server.shtml"
+                        window.location.href = siteConfig.trolleyUrl
                     }
                 },
                 error_cb: function(jqXHR, textStatus, errorThrown) {
@@ -830,8 +867,48 @@ $(function() {
             });
 
             // 保存成功跳转购物车页面
-            window.location.href = "./product_trolley_server.shtml"            
+            window.location.href = siteConfig.trolleyUrl    
         }
     
     })
+
+    regionServer.regionInfo()
+    
 });
+
+
+var regionServer = {
+    regionInfo: function (){
+        leaderServer.getIpAddress().then(function(data){
+            var params = {
+                provinceName: data.content.address_detail.province,
+                cityName: data.content.address_detail.city
+            }
+            leaderServer.regionInfo(params).then(function(address){
+                var add = {
+                    'save': address.data.provinceName,
+                    'city': address.data.cityName,
+                    'area': address.data.areaName,
+                    'savecode': address.data.provinceName,
+                    'citycode': address.data.cityCode,
+                    'areacode': address.data.areaCode,
+                }
+
+                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(2).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+                
+                /**
+                 * @param {*} regionData 
+                 * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
+                 */
+                var addressCallback = function (regionData) {
+                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(2).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                    $('.js_addShadeTop').hide()
+                }
+
+                $('.js-delivery-address span').on('click', function(){
+                    addressAlert(add, addressCallback)        
+                })
+            })
+        })
+    }
+}

@@ -88,25 +88,25 @@ $(function() {
       $('.js_bannerSwiperFont1').fadeOut();
       $('.js_bannerSwiperFont1').eq(1).fadeIn(100);
 
-      if (screenWidth <= 991) {
-        var marginValue = screenWidth>700?'60px':'75px 25px';
-        $('.js_bannerSwiper .swiper-slide').each(function(){
-          $(this).find('img').css({
-            'width': '80%'
-          });
-        })
+      // if (screenWidth <= 991) {
+        // var marginValue = screenWidth>700?'60px':'75px 25px';
+        // $('.js_bannerSwiper .swiper-slide').each(function(){
+        //   $(this).find('img').css({
+        //     'width': '80%'
+        //   });
+        // })
         
         // $('.js_bannerSwiper .swiper-slide').stop(true);
         // $('.js_bannerSwiper .swiper-slide').eq(2).find('a').animate({
           // 'margin': 0
         // }, 500);
-      }
+      // }
     },
     onImagesReady: function () {
-      setTimeout(function(){
-        $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
-        $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
-      },500)
+      // setTimeout(function(){
+      //   $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
+      //   $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
+      // },500)
     }
   });
 

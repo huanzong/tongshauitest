@@ -13,7 +13,8 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-$('.js_inputCheck').focus(function(){$(this).css('border-color','#ccc');})
+
+
 
 var infotell=[];
 //固定电话号码错误显示逻辑
@@ -321,7 +322,7 @@ function saveUserAddress(){
                 /*globalShade2("添加成功",1,2000);*/
             }else{//添加地址失败
                 globalShade2(responseT.resultMsg,2,2000);
-                templet_isSubmiting=true;
+                templet_isSubmiting=false;
             }
 
         },
@@ -892,7 +893,7 @@ function updateUserAddress(){
                 templet_isSubmiting = false;
             } else {//添加地址失败
                 globalShade2(data.resultMsg,2,2000);
-                templet_isSubmiting = true;
+                templet_isSubmiting = false;
             }
 
         },

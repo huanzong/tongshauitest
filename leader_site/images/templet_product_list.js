@@ -122,17 +122,17 @@ function readXmlFile(url) {
             //移动端筛选项初始化
             $(".layer-list").html(mobileHtml);
             //if (document.body.offsetWidth >= 1200 ) {
-            setTimeout(function(){noneShaiXuan(".sole-type")}, 1000);
+            setTimeout(function(){noneShaiXuan(".sole-type")});
             //noneShaiXuan(".sole-type")
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(function(){initCookie()}, 1000);
+            setTimeout(function(){initCookie()},100);
             //initCookie()
-            setTimeout(function(){initLoadCookie()}, 1000);
+            setTimeout(function(){initLoadCookie()},100);
             //initLoadCookie()
             // }else{
-            setTimeout(function(){noneShaiXuan(".list-btn")}, 1000);
+            setTimeout(function(){noneShaiXuan(".list-btn")});
             //noneShaiXuan(".list-btn")
             //移动端监听事件
             filterItemOnclick(".list-btn");
@@ -141,13 +141,13 @@ function readXmlFile(url) {
             //}
         },
         error: function () {
-            noneShaiXuan(".sole-type");
+            setTimeout(function(){noneShaiXuan(".sole-type")},100);
             //pc端监听事件
             filterItemOnclick(".sole-type");
             //对比初始化函数
-            setTimeout(function(){initCookie()}, 1000);
-            setTimeout(function(){initLoadCookie()}, 1000);
-            noneShaiXuan(".list-btn");
+            setTimeout(function(){initCookie()},100);
+            setTimeout(function(){initLoadCookie()},100);
+            setTimeout(function(){noneShaiXuan(".list-btn")},100);
             //移动端监听事件
             filterItemOnclick(".list-btn");
             //重置选择
@@ -223,10 +223,10 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     }
                     searchHtml += '<div class="pro-opporate">';
                     searchHtml += '<a class="pro-read">';
-                    searchHtml += '<span class="pro-read-i">';
+                    /*searchHtml += '<span class="pro-read-i">';
                     searchHtml += '<i class="iconfont icon-price-tag-solid1"></i>';
                     searchHtml += '</span>';
-                    searchHtml += '<span class="pro-read-font">订阅</span>';
+                    searchHtml += '<span class="pro-read-font">订阅</span>';*/
                     searchHtml += '</a>';
                     searchHtml += '<a class="pro-read l-fr js_compareAddProduct" auto="0" id="compare_' + returnData[i].MetaDataId + '_top" data-id="compare_' + returnData[i].MetaDataId + '_top" data-link="' + returnData[i].docpuburl + '" data-thumb="' + picUrl + '" data-name="' + cplx + '" data-type="' + returnData[i].modelno + '" data-chnid="' + returnData[i].ChannelId + '">';
                     searchHtml += '<span class="pro-read-font">对比</span>';
@@ -478,7 +478,7 @@ function displayFilterItem(filterItemList, currentClass) {
  * 拼接已筛选的筛选项
  */
 function appendFilterItemShowBar(showName, inputName, query, id) {
-    $(".list-filter-select").css('display', 'block');
+    $(".list-filter-select").css('display', 'inline-block');
     var itemShowBar = "";
     itemShowBar += '<div class="list-select-bg" inputName="' + inputName + '" query="' + query + '" itemId="' + id + '" itemName="' + showName + '">';
     itemShowBar += ' <span class="list-select-test">' + showName + '</span>';
@@ -522,7 +522,7 @@ function hideFilterItemHeadShow() {
 
 //顶部显示筛选选中头部
 function showFilterItemHeadShow() {
-    $(".list-filter-select").css('display', 'none');
+    $(".list-filter-select").css('display', 'inline-block');
 }
 
 //判断是否是最后一个选中标签

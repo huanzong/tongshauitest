@@ -170,6 +170,7 @@
                 </div>
             </div>
         </div>
+
         <div class="memeber-bottom o_g">
             <div class="o_u o_df_11-12">
                 <h3>
@@ -228,13 +229,18 @@
             }
         }, 2000)
 
-
         $("#memberqybanner li").eq(0).addClass("list-share");  //第一个li
         $("#memberqybanner li").eq(1).addClass("list-endorsement");//第二个li
         $("#memberqybanner li").eq(2).addClass("list-interact");  //第三个li
         $("#memberqybanner li").eq(3).addClass("list-present");  //第四个li
 
         selectmember();
+        for(var i = 0;i< $('.member-conter-text-down').length;i++){
+            if($('.member-conter-text-down').eq(i).find('i').length>1){
+                $('.member-conter-text-down').find('i').eq(1).addClass('md-hide')
+            }
+        }
+
     })
 
     function selectmember() {
@@ -243,12 +249,15 @@
                 $(".member_"+i).append('<div class="o_u member-ordinary-vip-min"><strong></strong></span><span>普通会员</span></div><i>|</i>');
             }
             if ($(".member_"+i).attr("pic").indexOf("银卡") > -1) {
-                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i class="md-hide">|</i>');
+                $(".member_"+i).append('<div class="o_u  member-silvery-vip-min"><strong></strong><span>银卡会员</span></div><i>|</i>');
+
             }
             if ($(".member_"+i).attr("pic").indexOf("金卡") > -1) {
                 $(".member_"+i).append('<div class="o_u member-golden-vip-min"><strong></strong><span>金卡会员</span></div>');
             }
         }
+
+
     }
 
 </script>

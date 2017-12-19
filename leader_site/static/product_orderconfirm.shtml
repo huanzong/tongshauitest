@@ -66,6 +66,9 @@
                 <form action="" class="js_orderUserInforBox">
                     <ul class="product-ordercon-box  js_orderconBox o_u o_df_2-2">
                         <li>
+                            <input type="text" class="l-none" name="" id="regionId"  value="" data-normal="1"/>
+                        </li>
+                        <li>
                             <div class="o_u o_df_2-12"></div>
                             <div class="o_u o_df_2-12   o_sm_11-12  o_xs_11-12 product-ordercon-list-title">
                                 <p><span>*</span><i>联系人姓名</i></p>
@@ -112,6 +115,9 @@
                                         <div class="selectbox">
                                             <div class="">
                                                 <select name="" id="js_orderConfirmSave"  autotext="省">
+                                                    <option value="0">--山东--</option>
+                                                    <option value="1">北京</option>
+                                                    <option value="2">上海</option>
                                                 </select>
 
                                             </div>
@@ -222,16 +228,16 @@
                 <!-- 收获地址 END -->
 
                 <!-- 支付方式 -->
-                <div class="product-ordercon-title o_u o_df_2-2">
+                <!-- <div class="product-ordercon-title o_u o_df_2-2">
                     <h4 class="o_u">支付方式</h4>
                 </div>
                 <div class="product-ordercon-payment">
                     <p>在线支付（支持支付宝）</p>
-                </div>
+                </div> -->
                 <!-- 支付方式 END -->
 
                 <!-- 配送时间 -->
-                <div class="product-ordercon-title o_u o_df_2-2">
+                <!-- <div class="product-ordercon-title o_u o_df_2-2">
                     <h4 class="o_u">配送时间</h4>
                 </div>
                 <div class="product-ordercon-time-box js_orderconTime">
@@ -263,7 +269,7 @@
                                 <div class=" o_u o_df_5-12 o_md_2-2 o_sm_2-2 o_xs_2-2">
                                     <div class="o_u o_df_11-12  o_sm_2-2 o_xs_2-2">
                                         <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-2 ">
-                                            <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red      js_orderConfirmGetUpData">保存</a>
+                                            <a href="javascript:;" class=" o_u o_df_11-12 l-btn-normal l-btn-red l-btn-red js_orderConfirmGetUpData">保存</a>
                                         </div>
                                         <div class="o_u o_df_1-3 o_lg_1-3 o_md_1-3 o_sm_1-3 o_xs_2-2 ">
                                             <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_appointmentClose " onclick="globalShade('确定取消收藏？')">取消</a>
@@ -275,7 +281,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
                 <!-- 配送时间 END -->
 
                 <!-- 发票信息 -->
@@ -284,19 +290,19 @@
                 </div>
 
                 <div class="product-ordercon-invoice-box js_orderconInvoiceBox ">
-                    <div class="o_u o_sm_2-3 o_xs_2-3 ">
+                    <!-- <div class="o_u o_sm_2-3 o_xs_2-3 ">
                         <p class="o_u o_sm_2-2 o_xs_2-2">发票类型：<span>电子发票（个人）</span></p>
                         <p class="o_u o_sm_2-2 o_xs_2-2">发票抬头： <span>王柯科</span></p>
                         <p class="o_u o_sm_2-2 o_xs_2-2">发票内容： <span>商品明细</span></p>
                     </div>
-                    <a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a>
+                    <a href="javascript:;" class="js_orderconSetInaoice iconfont icon-pencil-solid"> <span>修改</span> </a> -->
                 </div>
                 <ul class="o_g product-ordercon-setInvoice js_orderconInvoiceSet" style="display: none">
                     <li class="o_u o_df_2-2 o_sm_10-12  o_xs_10-12">
                         <p class="ordercon-setInvoice-list-title o_u o_df_1-3 o_sm_2-2 o_xs_2-2"><span>*</span>发票类型<i>*</i></p>
                         <div class="ordercon-setInvoice-list-cont o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
                             <span><input  type="radio" checked  class="js_radio" name="invoice" value="电子发票"></span>
-                            <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span>
+                            <!-- <span><input  type="radio"    class="js_radio" name="invoice" value="增值税发票" ></span> -->
                             <p>1. 电子发票是国家税务局机关认可的有效凭证，与纸质发票具有同等法律效力</p>
                             <p>2. 电子发票开具后，将不可更改发票信息及更其他种类发票</p>
                             <p>3. 如需纸质发票，可在“个人中心-我的订单”中下载后打印</p>
@@ -306,14 +312,20 @@
                     <li  class="o_u o_df_2-2  o_sm_10-12  o_xs_10-12">
                         <p class="ordercon-setInvoice-list-title o_u o_df_1-3 o_sm_2-2 o_xs_2-2"><span>*</span>发票抬头类型<i>*</i></p>
                         <div class=" o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
-                            <span><input  type="radio" checked   class="js_radio" name="invoicetop" value="个人"></span>
+                            <span><input  type="radio" checked  class="js_radio" name="invoicetop" value="个人"></span>
                             <span><input  type="radio" class="js_radio" name="invoicetop" value="公司" ></span>
                         </div>
                     </li>
                     <li class="o_u o_df_2-2   o_sm_10-12  o_xs_10-12">
                         <p class="ordercon-setInvoice-list-title o_u o_df_1-3 o_sm_2-2 o_xs_2-2"><span>*</span>发票抬头<i>*</i></p>
                         <div class="l-input o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
-                            <input  type="text" class="o_u o_df_12-12 o_sm_11-12 o_xs_11-12" name="" ph="请填写发票抬头" value="">
+                            <input  type="text" class="o_u o_df_12-12 o_sm_11-12 o_xs_11-12 js-invoice-head" name="" ph="请填写发票抬头" value="">
+                        </div>
+                    </li>
+                    <li class="o_u o_df_2-2  o_sm_10-12  o_xs_10-12 js-ein l-none">
+                        <p class="ordercon-setInvoice-list-title o_u o_df_1-3 o_sm_2-2 o_xs_2-2"><span>*</span>税号<i>*</i></p>
+                        <div class="l-input o_u o_df_1-2 o_sm_2-2 o_xs_2-2">
+                            <input  type="text" class="o_u o_df_12-12 o_sm_11-12 o_xs_11-12 js-invoice-code" name="" ph="请填写税号" value="">
                         </div>
                     </li>
                     <li class="o_u o_df_2-2 o_sm_10-12 o_xs_10-12">
@@ -327,7 +339,7 @@
                         <div class="o_u o_df_1-3 "></div>
                         <div class="o_u o_df_4-10 o_md_6-12 o_sm_11-12   o_xs_11-12 ordercon-setInvoice-list-btn">
                             <div class="o_u o_df_2-3 o_lg_2-3 o_md_7-12 o_sm_2-3 o_xs_11-12 ">
-                                <a href="javascript:;" class=" o_u o_df_11-12 o_xs_11-12 l-btn-normal l-btn-red l-btn-red  js_orderConfirmGetUpData">保存</a>
+                                <a href="javascript:;" class=" o_u o_df_11-12 o_xs_11-12 l-btn-normal l-btn-red l-btn-red js-save-invoice">保存</a>
                             </div>
                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_5-12 o_sm_1-3 o_xs_11-12 ">
                                 <a href="javascript:;" class=" o_u o_df_11-12  l-btn-normal l-btn-line2 product-ordercon-list-btn js_orderconSetBtnClose " onclick="globalShade('确定取消设定吗？')">取消</a>
@@ -340,8 +352,8 @@
                 <div class="product-ordercon-title o_u o_df_2-2">
                     <h4 class="o_u">商品清单及优惠</h4><a href=""  class="o_u"><span class=" iconfont icon-arrow-line-left"></span>返回购物车</a>
                 </div>
-                <div class="product-orderconfirm-prolist-box">
-                    <div class="product-orderconfirm-prolist-title">
+                <div class="product-orderconfirm-prolist-box js-orderconfirm-prolist">
+                    <!-- <div class="product-orderconfirm-prolist-title">
                         <i class="o_u  o_sm_11-12 o_xs_11-12">【劲爽大作战，统帅小清新】套装满减最高减3000，满赠送扫地机器人</i>
                     </div>
                     <div class="product-orderconfirm-prolist-cont">
@@ -361,7 +373,6 @@
                         </div>
 
                     </div>
-                    <!--无货商品添加 class product-nogoods -->
                     <div class="product-orderconfirm-prolist-cont product-nogoods">
                         <div class="o_u o_df_1-10 o_lg_2-10 o_md_2-12 o_sm_2-12 o_xs_2-12  order-prolist-cont-img">
                             <img src="images/compare_goods.PNG" alt="">
@@ -461,12 +472,12 @@
                     </div>
                     <div class="product-orderconfirm-prolist-title">
                         <i>【套餐】大容量冰箱 BCD-455WLDPC + 对开双门冰箱  BCD-455WLDPC</i>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!--商品清单及优惠 END-->
                 <!--赠品-->
-                <div class="product-orderconfirm-give-box">
+                <!-- <div class="product-orderconfirm-give-box">
                     <div class="o_u  o_df_11-12 product-orderconfirm-give-list">
                         <div class="orderconfirm-give-list-left o_u o_df_6-12 o_md_12-12 o_sm_2-2 o_xs_2-2">
 
@@ -510,15 +521,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--赠品 END-->
                 <!--计算商品价格-->
                 <div class="product-orderconfirm-price">
                     <ul class="orderconfirm-price-list o_u o_df_2-2 ">
                        <li>
-                           <p><span>5</span>件商品，合计：</p><i>&yen;6198</i>
+                           <p class="js-count"><span>5</span>件商品，合计：</p><i>&yen;6198</i>
                        </li>
-                        <li>
+                        <!-- <li>
                             <p>套餐优惠：</p><i>&yen;6198</i>
                         </li>
                         <li>
@@ -526,20 +537,20 @@
                         </li>
                         <li>
                             <p>运费：</p><i>&yen;6198</i>
-                        </li>
+                        </li> -->
                     </ul>
 
                 </div>
                 <!--计算商品价格 END-->
                 <div class="product-orderconfirm-total">
-                    <span>应付总额:</span><i>&yen;2299</i>
+                    <span>应付总额:</span><i class="js-sumPayable">&yen;2299</i>
                 </div>
-                <div class="product-orderconfirm-address">
+                <div class="product-orderconfirm-address js-product-orderconfirm-address">
                     <p><span>寄送至：</span> 山东省 青岛市 黄岛区 长江中路与嘉陵江东路交汇处2号9907室</p>
                     <p><span>收件人：</span>王柯科  157****3370</p>
                 </div>
                 <div class="product-orderconfirm-btn">
-                    <a href="javascript:;" class="l-btn-lg l-btn-red o_u o_xs_2-2">提交订单</a>
+                    <a href="javascript:;" class="l-btn-lg l-btn-red o_u o_xs_2-2 js-sub-order">提交订单</a>
                 </div>
             </div>
 

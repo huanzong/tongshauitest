@@ -57,6 +57,7 @@ $('.js_searchHistory').bind('input propertychange', function () {
 
         searchBoxWord($(this).val());
     } else {
+        $('.js_searchBoxQuick_lg').show();
         $('.js_quick_search').show();
         $('.js_searchBox_list_xl').show();
         $('.js_search_list_bold').hide();
@@ -78,6 +79,7 @@ $('body').on('click', function (e) {
     }
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
+    $('.js_delete_history').parent().hide();
 });
 
 //搜索--lg
@@ -116,17 +118,6 @@ $('.js_navSearchClose').on('click', function () {
 
 });
 
-//展示导航菜单
-$('.js_menuShow').on('click', function () {
-    if ($(this).hasClass('icon-menu')) {
-        $(this).removeClass('icon-menu').addClass('icon-close');
-        $('.js_navMdShow').show();
-    } else {
-        $(this).removeClass('icon-close').addClass('icon-menu');
-        $('.js_navMdShow').hide();
-    }
-});
-
 //点击搜索按钮全文搜索
 $('.js_jumpto_product_search').on('click', function () {
     jumpToProductSearch();
@@ -143,7 +134,13 @@ $('.js_searchHistory').keydown(function (e) {
 function jumpToProductSearch() {
     var channelId = '273690';
     var historyCookie = $.cookie('historyCookie');
-    var searchWord = $.trim($('.js_searchHistory').val());
+    var searchWord;
+    if(screenWidth > 1199){
+        searchWord = $.trim($('.js_searchHistory').val());
+    }else{
+        searchWord = $.trim($('.js_searchHistory_lg').val());
+    }
+
     if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
         if (isEmpty(historyCookie)) {
             $.cookie('historyCookie', searchWord, {path: '/'});
@@ -205,7 +202,9 @@ function searchBoxInput(webSize) {
     var searchBoxHtml = "";
     if (!isEmpty(historyCookie)) {
         $('.js_quick_search').hide();
-        $('.js_delete_history').show();
+        $('.js_searchBoxQuick_lg').hide();
+        $('.js_delete_history').parent().show();
+        $('.js_searchBox_list_lg').show();
         if (historyCookie.indexOf(",") != -1) {
             var historyCookieArr = historyCookie.split(",");
             for (var i = 0; i < historyCookieArr.length; i++) {
@@ -217,6 +216,7 @@ function searchBoxInput(webSize) {
             searchBoxHtml = '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookie + '">' + historyCookie + '</a></li>';
         }
     } else {
+        $('.js_delete_history').parent().hide();
         if (webSize == "xl") {
             searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修</a></li>' +
                 '<li><a href = "user.tongshuai.com/product_registe">产品注册</a></li>' +
