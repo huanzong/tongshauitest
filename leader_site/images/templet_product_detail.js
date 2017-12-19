@@ -93,6 +93,7 @@ if(morePro==0||morePro<3){
             }
             $(".js_moreProA").html(mroeproA);
             $(".js_moreProB").html(mroeproB);
+            swiper.moreSwiper.reInit();
 
         }
     });
