@@ -74,6 +74,7 @@
                 </div>
             </div>
             <!-- 配送 END -->
+            
 
             <!-- 商品列表-表头 -->
             <div class="o_g trolley-tablehead">
@@ -103,6 +104,14 @@
                 </div>
             </div>
             <!-- 商品列表-表头 END -->
+
+            <!-- 购物车无商品 -->
+            <div class="o_g empty-trolley-pro-list">
+                <img src="images/share_nothing.png"  alt="">
+                <p>还没有任何商品，快去挑选吧</p>
+                <div>
+                </div>
+            </div>
 
             <!-- 商品列表 -->
             <div class="o_g trolley-pro-list">
@@ -201,33 +210,35 @@
             </div>
             <!-- 商品列表 END -->
 
-            <!-- 购物车底部 -->
-            <div class="o_g trolley-footer">
-                <div class="o_u o_df_1-12"></div>
-                <div class="o_u o_df_5-12 o_lg_1-12 o_md_1-12 o_sm_1-6 o_xs_1-6">
-                    <div class="l-checkbox trolley-footer-check">
-                        <input class="js_checkbox js-checked-all" type="checkbox" data-notnull="true" value="全选">
-                    </div>
-                </div>
-                <div class="o_u o_df_3-12 o_lg_1-2 o_md_1-2 o_sm_5-12 o_xs_5-12">
-                    <div class="trolley-footer-total">
-                        <div class="footer-total-num o_sm-hide o_xs-hide">
-                            共<span class="js-product-num">6</span>件商品，已选择<span class="js-selectd-num">0</span>件
-                        </div>
-                        <div class="footer-total-price js-total-amount">
-                            <span>合计：</span>￥0
+            <div class="trolley-footer-position">
+                <!-- 购物车底部 -->
+                <div class="o_g trolley-footer">
+                    <div class="o_u o_df_1-12"></div>
+                    <div class="o_u o_df_5-12 o_lg_1-12 o_md_1-12 o_sm_1-6 o_xs_1-6">
+                        <div class="l-checkbox trolley-footer-check">
+                            <input class="js_checkbox js-checked-all" type="checkbox" data-notnull="true" value="全选">
                         </div>
                     </div>
-                </div>
-                <div class="o_u o_df_2-12 o_lg_3-12 o_md_3-12 o_sm_1-4 o_xs_1-4">
-                    <div class="trolley-footer-btn">
-                        <a href="javascript:;" class="l-btn-lg l-btn-red js-pay">去结算</a>
+                    <div class="o_u o_df_3-12 o_lg_1-2 o_md_1-2 o_sm_5-12 o_xs_5-12">
+                        <div class="trolley-footer-total">
+                            <div class="footer-total-num o_sm-hide o_xs-hide">
+                                共<span class="js-product-num">6</span>件商品，已选择<span class="js-selectd-num">0</span>件
+                            </div>
+                            <div class="footer-total-price js-total-amount">
+                                <span>合计：</span>￥0
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_u o_df_2-12 o_lg_3-12 o_md_3-12 o_sm_1-4 o_xs_1-4">
+                        <div class="trolley-footer-btn">
+                            <a href="javascript:;" class="l-btn-lg l-btn-red js-pay">去结算</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- 购物车底部 END -->
+                <!-- 购物车底部 END -->
 
-            <!--#include virtual="public/footer.shtml"-->
+                <!--#include virtual="public/member_footer.shtml"-->
+            </div>
         </div>
     </div>
 
