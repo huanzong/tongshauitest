@@ -9,7 +9,7 @@ $(function(){
 
     var windowWidth = $(window).width();
     if(windowWidth>1199){
-      var photoBoxWidth = 350;
+      var photoBoxWidth = 310;
     }else if(windowWidth<1200&&windowWidth>991){
         var photoBoxWidth = 300;
 
@@ -270,7 +270,7 @@ $(function(){
 
                             //jcrop_api.setImage(templet_pic, function(){
                                 jcrop_api.setOptions({
-                                    //outerImage: templet_pic,
+                                    outerImage: templet_pic,
                                     //setSelect: [ 60, 60, 260, 260 ]
                                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
