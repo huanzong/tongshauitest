@@ -103,6 +103,10 @@ function initNavClick() {
             $('.js_listNavShowMore').find('span').text('展开筛选项');
             $('.js_listNavShowMore').find('i').removeClass('icon-close').addClass('icon-plus');
         });
+         $(document.body).css({
+            "overflow-x":"hidden",
+            "overflow-y":"hidden"
+         });
 
     }
 
