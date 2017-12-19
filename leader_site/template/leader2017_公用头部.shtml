@@ -96,7 +96,7 @@
 
 				<!-- 已登录展示 -->
 				<div class="user-headimg o_df-hide" id="header_loginDiv2">
-					<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/user_img.jpg" class="user-img js_userMsgXs" ignoreapd="true" />
+					<img src="" class="user-img js_userMsgXs" ignoreapd="true" />
 					<!--<span></span>-->
 					<ul class="nav-user-column">
 						<li><a href="http://tuser.tongshuai.com/user/">个人中心</a></li>
@@ -113,7 +113,7 @@
 				<!-- 已登录展示 END -->
 			</li>
 			<li>
-				<a href="javascript:;" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/">
+				<a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/">
 					<i class="iconfont icon-shoppingcart"></i>
 					<!--<sub></sub>-->
 				</a>

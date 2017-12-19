@@ -1,141 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>新闻动态 - 统帅官网</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-		<meta name="format-detection" content="telephone=no, email=no" />
-		<!--#include file="${ROOT_PATH}public/style/css.shtml"-->
-		<link rel="stylesheet" type="text/css" href="news_list.css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>新闻动态 - 统帅官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <link rel="stylesheet" type="text/css" href="news_list.css">
+</head>
 
-	<body>
+<body>
 
-		<div class="o_body">
-			<div class="o_main">
-				<!-- 导航 -->
-				<!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-				<!-- 导航 End-->
-				<!--头部banner-->
-				<div class="news_list_banner">
-					<a href="javascript:;">
-						<img class="js_recPic" src="" df="news_banner_df.png" lg="news_banner_md.png" md="news_banner_md.png" sm="news_banner_sm.png" xs="images/news_banner_sm.png">
-						<div class="news_list_caption">
-							<trs_channel id='关于统帅' AUTOLINK="false"/>
-						</div>
-					</a>
-				</div>
-				<!--头部bannerEND-->
-				<!--新闻中心列表-->
-				<div class="news_list_content">
-					<!--新闻列表标题-->
-					<div class="o_g news_list_head">
-						<div class="o_u o_df_1-12">
-						</div>
-						<div class="o_u o_df_10-12">
-							<div class="news_list_item">
-								<div class="o_g">
-									<div class="o_u o_df_1-2">
-										<a href="javascript:;">
-											<div class="news_list_title">
-												统帅品牌
-											</div>
-										</a>
-									</div>
-									<div class="o_u o_df_1-2">
-										<a href="javascript:;">
-											<div class="news_list_title active">
-												<trs_channel id='新闻动态' AUTOLINK="false"/>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="o_u o_df_1-12">
+<div class="o_body">
+    <div class="o_main">
+        <!-- 导航 -->
+        <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+        <!-- 导航 End-->
+        <!--头部banner-->
+        <div class="news_list_banner">
+            <a href="javascript:;">
+                <img class="js_recPic" src="" df="news_banner_df.png" lg="news_banner_md.png" md="news_banner_md.png"
+                     sm="news_banner_sm.png" xs="images/news_banner_sm.png">
+                <div class="news_list_caption">
+                    <trs_channel id='关于统帅' AUTOLINK="false"/>
+                </div>
+            </a>
+        </div>
+        <!--头部bannerEND-->
+        <!--新闻中心列表-->
+        <div class="news_list_content">
+            <!--新闻列表标题-->
+            <div class="o_g news_list_head">
+                <div class="o_u o_df_1-12">
+                </div>
+                <div class="o_u o_df_10-12">
+                    <div class="news_list_item">
+                        <div class="o_g">
+                            <div class="o_u o_df_1-2">
+                                <a href="javascript:;">
+                                    <div class="news_list_title">
+                                        统帅品牌
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="o_u o_df_1-2">
+                                <a href="javascript:;">
+                                    <div class="news_list_title active">
+                                        <trs_channel id='新闻动态' AUTOLINK="false"/>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_u o_df_1-12">
 
-						</div>
-					</div>
-					<!--新闻列表标题END-->
-					<div>
-						<TRS_DOCUMENTS ID="新闻动态" PAGESIZE="10" STARTPOS="0" AUTOMORE="FALSE">
-						<div class="o_g news_list <TRS_ViewData Field='newspicture'>
-						<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
-						news_nopic
-						</TRS_CONDITION>
-						<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
-						</TRS_CONDITION>
-						</TRS_ViewData>">
-							<div class="o_u o_df_1-12">
-							</div>
-							<div class="o_u o_df_10-12">
-								<div class="news_list_tip">
-									<TRS_ViewData Field='newspicture'>
-										<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
-										</TRS_CONDITION>
-										<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
-											<div class="news_tip_pic mews_mid">
-												<div class="news_pic">
-													<a href="javascript:;">
-														<img src="<TRS_ViewData Field='newspicture'/>" />
-													</a>
-												</div>
-											</div>
-										</TRS_CONDITION>
-									</TRS_ViewData>">
-									<div class="news_txt mews_mid">
-										<div class="news_tip_text mews_mid">
-											<div class="news_text">
-												<a href="javascript:;">
-                                                    <p class="news_tip_title"><TRS_DOCUMENT  field='DOCTITLE'></TRS_DOCUMENT></p>
-												</a>
-												<p class="news_tip_content"><TRS_DOCUMENT  field='DOCCONTENT'></TRS_DOCUMENT></p>
-											</div>
-										</div>
-										<div class="news_tip_date mews_mid">
-											<div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
-												<div class="news_date_day"><trs_viewdata field='newsdata' DATEFORMAT="MM-dd" /></div>
-												<div class="news_date_year"><trs_viewdata field='newsdata' DATEFORMAT="yyyy" /></div>
-											</div>
-											<div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
-												<span class="news_date_year"><trs_viewdata field='newsdata' DATEFORMAT="yyyy" />-</span>
-												<span class="news_date_day"><trs_viewdata field='newsdata' DATEFORMAT="MM-dd" /></span>
-											</div>
-										</div>
-									</div>
-									<div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-										<a class="news_icon" href="javascript:;">
-											<i class="iconfont icon-arrow-jiantou-right"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						</TRS_DOCUMENTS>
-					</div>
+                </div>
+            </div>
+            <!--新闻列表标题END-->
+            <div>
+                <TRS_DOCUMENTS ID="新闻动态" PAGESIZE="10" SELECT="DocKind" STARTPOS="0" AUTOMORE="FALSE">
+                    <div class="o_g news_list <TRS_ViewData Field='newspicture'>
+							<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
+							news_nopic
+							</TRS_CONDITION>
+							<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
+							</TRS_CONDITION>
+							</TRS_ViewData>">
+                        <div class="o_u o_df_1-12">
+                        </div>
+                        <div class="o_u o_df_10-12">
+                            <div class="news_list_tip">
+                                <TRS_ViewData Field='newspicture'>
+                                    <TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
+                                    </TRS_CONDITION>
+                                    <TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
+                                        <div class="news_tip_pic mews_mid">
+                                            <div class="news_pic">
+                                                <a href="javascript:;">
+                                                    <img src="<TRS_ViewData Field='newspicture'/>"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </TRS_CONDITION>
+                                </TRS_ViewData>
+                                ">
+                                <div class="news_txt mews_mid">
+                                    <div class="news_tip_text mews_mid">
+                                        <div class="news_text">
+                                            <a href="javascript:;">
+                                                <p class="news_tip_title">
+                                                    <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
+                                                </p>
+                                            </a>
+                                            <p class="news_tip_content">
+                                                <TRS_DOCUMENT field='DOCCONTENT' FILTEREDITORCSS='true'></TRS_DOCUMENT>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="news_tip_date mews_mid">
+                                        <div class="news_date o_df-show o_md-hide o_sm-hide o_xs-hide">
+                                            <div class="news_date_day">
+                                                <trs_viewdata field='newsdata' DATEFORMAT="MM-dd"/>
+                                            </div>
+                                            <div class="news_date_year">
+                                                <trs_viewdata field='newsdata' DATEFORMAT="yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="news_date o_df-hide o_md-show o_sm-show o_xs-show">
+                                            <span class="news_date_year"><trs_viewdata field='newsdata'
+                                                                                       DATEFORMAT="yyyy"/>-</span>
+                                            <span class="news_date_day"><trs_viewdata field='newsdata'
+                                                                                      DATEFORMAT="MM-dd"/></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+                                    <a class="news_icon" href="javascript:;">
+                                        <i class="iconfont icon-arrow-jiantou-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </TRS_DOCUMENTS>
+            </div>
 
-				</div>
-				<!--新闻中心列表END-->
-				<!--分页-->
-				<div class="news_list_pagination">
-					<a class="l-pagination-prew">上一页</a>
-					<a class="l-pagination-pagenumber active">1</a>
-					<a class="l-pagination-pagenumber">2</a>
-					<a class="l-pagination-pagenumber">3</a>
-					<a class="l-pagination-pagenumber news_list_more">4</a>
-					<a class="l-pagination-pagenumber o_df-show o_xs-hide">5</a>
-					<a class="l-pagination-pagenumber o_df-show o_xs-hide">6</a>
-					<a class="l-pagination-next ">下一页</a>
-				</div>
-				<!--分页END-->
+        </div>
+        <!--新闻中心列表END-->
+        <!--分页-->
+        <div id="sub" class="news_list_pagination">
 
-				<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
-			</div>
-		</div>
-		<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-		<script type="text/javascript" src="validform_v5.3.2_min.js"></script>
-		<script type="text/javascript" src="news_list.js"></script>
-	</body>
+        </div>
+        <!--分页END-->
+
+
+        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+    </div>
+</div>
+
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<script type="text/javascript" src="validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="news_list.js"></script>
+<script>
+    $(function () {
+        $("#sub").append("<a id='firstsub' class='l-pagination-prew'>上一页</a>");
+        createPageHTML(${PAGE_COUNT}, ${PAGE_INDEX}, "${PAGE_NAME}", "${PAGE_EXT}")
+        $("#sub").append("<a id='lastsub' class='l-pagination-next'>下一页</a>");
+
+        var page =${PAGE_INDEX}+1;
+        $(".l-pagination-pagenumber").removeClass("active");
+        $("#sub").find('a').eq(page).addClass("active");
+
+        $("#firstsub").click(function () {
+            var page =${PAGE_INDEX};
+            if (page == 0 || page == 1) {
+                $("#firstsub").attr('href', '${PAGE_NAME}' + '.' + '${PAGE_EXT}');
+            } else {
+                page = page - 1;
+                $("#firstsub").attr('href', '${PAGE_NAME}' + '_' + page + '.' + '${PAGE_EXT}');
+            }
+
+        });
+
+        $("#lastsub").click(function () {
+            var page =${PAGE_INDEX};
+            if (page < ${PAGE_COUNT} -1) {
+                page = page + 1;
+                $("#lastsub").attr('href', '${PAGE_NAME}' + '_' + page + '.' + '${PAGE_EXT}');
+            }
+
+        });
+
+    })
+
+    function createPageHTML(_nPageCount, _nCurrIndex, _sPageName, _sPageExt) {
+        if (_nPageCount == null || _nPageCount <= 1) {
+            return;
+        }
+        var nCurrIndex = _nCurrIndex || 0;
+        for (var i = 0; i < _nPageCount; i++) {
+            var sPageName = (i == 0 ? _sPageName : (_sPageName + "_" + i)) + "." + _sPageExt;
+            if (nCurrIndex == i) {
+                $("#sub").append("<a class='l-pagination-pagenumber'>" + (i + 1) + "</a>");
+            } else {
+                $("#sub").append("<a class='l-pagination-pagenumber' href=" + sPageName + ">" + (i + 1) + "</a>");
+            }
+        }
+    }
+
+</script>
+</body>
 
 </html>

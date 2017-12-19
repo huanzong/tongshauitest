@@ -74,6 +74,7 @@
                 </div>
             </div>
             <!-- 配送 END -->
+            
 
             <!-- 商品列表-表头 -->
             <div class="o_g trolley-tablehead">
@@ -103,6 +104,14 @@
                 </div>
             </div>
             <!-- 商品列表-表头 END -->
+
+            <!-- 购物车无商品 -->
+            <div class="o_g empty-trolley-pro-list">
+                <img src="images/share_nothing.png"  alt="">
+                <p>还没有任何商品，快去挑选吧</p>
+                <div>
+                </div>
+            </div>
 
             <!-- 商品列表 -->
             <div class="o_g trolley-pro-list">
@@ -227,7 +236,7 @@
             </div>
             <!-- 购物车底部 END -->
 
-            <!--#include virtual="public/footer.shtml"-->
+            <!--#include virtual="public/member_footer.shtml"-->
         </div>
     </div>
 
