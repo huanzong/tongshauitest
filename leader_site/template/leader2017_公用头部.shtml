@@ -41,8 +41,7 @@
 			<i class="iconfont icon-search js_jumpto_product_search"></i>
 			<div class="search-result nav-zindex2 js_searchBox js_searchBox_xl js_searchBox_root">
 				<div class="search-quick js_quick_search">快速链接</div>
-				<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>
-				<ul class="search-list js_searchBox_list_xl">
+				<ul class="search-list js_searchBox_listShow">
 					<!--
                         <li>我是搜索结果</li>
                         <li>我是搜索结果</li>
@@ -60,11 +59,11 @@
 			<a class="login" id="header_login">登录</a>
 			<span class="line"></span>
 			<a class="login" id="header_reg">注册</a>
-			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车</a>
+			<a class="nav-chart" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车</a>
 		</div>
 		<div class="nav-user o_df-hide" id="header_loginDiv">
 			<div class="login nav-zindex1">
-				<span></span>
+				<!--<span></span>-->
 				<i class="iconfont icon-arrow-sanjiao-down-s nav-userdown"></i>
 				<i class="iconfont icon-arrow-sanjiao-up-s nav-userup"></i>
 				<ul class="nav-user-column">
@@ -79,7 +78,7 @@
 					</li>
 				</ul>
 			</div>
-			<a class="nav-chart"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车<span>34</span></a>
+			<a class="nav-chart" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/"><i class="iconfont icon-shoppingcart"></i>&nbsp;&nbsp;我的购物车<span></span></a>
 		</div>
 	</div>
 	<!-- 用户信息栏 sf/xl分辨率 END -->
@@ -91,14 +90,14 @@
 				<!-- 未登录展示 -->
 				<a href="javascript:;" id="header_logoutA">
 					<i class="iconfont icon-member"></i>
-					<span></span>
+					<!--<span></span>-->
 				</a>
 				<!-- 未登录展示 END -->
 
 				<!-- 已登录展示 -->
 				<div class="user-headimg o_df-hide" id="header_loginDiv2">
 					<img src="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />images/user_img.jpg" class="user-img js_userMsgXs" ignoreapd="true" />
-					<span></span>
+					<!--<span></span>-->
 					<ul class="nav-user-column">
 						<li><a href="http://tuser.tongshuai.com/user/">个人中心</a></li>
 						<!--<li><a href="javascript:;">消息<i class="point"></i></a></li>-->
@@ -114,9 +113,9 @@
 				<!-- 已登录展示 END -->
 			</li>
 			<li>
-				<a href="javascript:;">
+				<a href="javascript:;" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />cart/">
 					<i class="iconfont icon-shoppingcart"></i>
-					<sub>84</sub>
+					<sub></sub>
 				</a>
 			</li>
 			<li>
@@ -158,14 +157,13 @@
 	<!-- 导航 md End -->
 
 	<!-- 搜索框 lg以下分辨率 -->
-	<form class="o_u o_df_10-12 o_xs_2-2 nav-searchbox-lg js_navSearchLg" action="#" target="testif">
+	<div class="o_u o_df_10-12 o_xs_2-2 nav-searchbox-lg js_navSearchLg">
 		<div class="o_u o_df_1-12 o_df-hide o_xs-show"></div>
-		<input type="text" name="" class="o_u o_df_8-10 o_xs_10-12 js_searchHistory js_searchHistory_lg" phtype="1" ph="搜索产品、服务、帮助..." />
+		<input type="text" name="" class="o_u o_df_8-10 o_xs_10-12 js_searchHistory" phtype="1" ph="搜索产品、服务、帮助..." />
 		<div class="o_u o_df_2-10 o_df-center nax-xs-close">
 			<i class="iconfont icon-close js_navSearchClose"></i>
 		</div>
-		<iframe name="testif" style="display: none;"></iframe>
-	</form>
+	</div>
 	<!-- 搜索框 lg以下分辨率 END -->
 	<!-- 一级导航 End -->
 
@@ -180,8 +178,7 @@
 				<a href="javascript:;">帮助中心</a>
 				<a href="javascript:;">联系我们</a>
 			</div>
-			<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>
-			<ul class="searchresult-result js_searchBox js_searchBox_lg js_searchBox_list_lg">
+			<ul class="searchresult-result js_searchBox js_searchBox_lg js_searchBox_listShow">
 				<!--
                     <li>搜索结果</li>
                     <li>搜索结果</li>
