@@ -270,7 +270,7 @@ $(function(){
 
                             //jcrop_api.setImage(templet_pic, function(){
                                 jcrop_api.setOptions({
-                                    outerImage: templet_pic,
+                                    //outerImage: templet_pic,
                                     //setSelect: [ 60, 60, 260, 260 ]
                                     setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 
