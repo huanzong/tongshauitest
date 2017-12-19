@@ -11,6 +11,14 @@ $(function(){
         $('.prolist-box').css('border','1px solid #eee');
     }
 
+    $('.js_search_input').bind('input propertychange', function() {
+        //进行相关操作
+        var inputValue = $(this).val();
+        if(inputValue.length>25){
+            $(this).val(inputValue.substring(0,25));
+        }
+    });
+
     $('.js-searchXuanXK').children('a').click(function(){
         $(this).addClass('cur').siblings().removeClass('cur');
     });
