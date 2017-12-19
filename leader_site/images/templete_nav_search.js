@@ -23,17 +23,25 @@ $('.js_searchHistory').bind('input propertychange', function () {
         } else {
             $('.js_searchBox_lg').show();
         }
+
         $('.js_searchBoxQuick_lg').hide();
+        $('.js_quick_search').hide();
+        $('.js_searchBox_list_xl').hide();
+        $('.js_search_list_bold').show();
+
         searchBoxWord($(this).val());
     } else {
         $('.js_searchBoxQuick_lg').show();
-        $('.js_searchBox_xl').html(searchBoxInput("xl"));
-        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        $('.js_quick_search').show();
+        $('.js_searchBox_list_xl').show();
+        $('.js_search_list_bold').hide();
+        $('.js_searchBox_list_lg').hide();
+
+        $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
-// }).on('blur', function () {
-//     $('.js_searchBox').hide();
-//     $('.js_searchBoxQuick_lg').show();
+
 }).on('focus', function () {
     if (screenWidth > 1199) {
         $('.js_searchBox_xl').show();
@@ -42,33 +50,37 @@ $('.js_searchHistory').bind('input propertychange', function () {
     }
     $('.js_searchBoxQuick_lg').hide();
     if ($(this).val() && $(this).val() != "搜索产品、服务、帮助...") {
-        $('.js_quick_search').remove();
+
+        $('.js_quick_search').hide();
+        $('.js_searchBox_list_xl').hide();
+        $('.js_search_list_bold').show();
+
         searchBoxWord($(this).val());
     } else {
-        $('.js_searchBox_xl').html(searchBoxInput("xl"));
-        $('.js_searchBox_listShow').html(searchBoxInput("lg"));
+        $('.js_searchBoxQuick_lg').show();
+        $('.js_quick_search').show();
+        $('.js_searchBox_list_xl').show();
+        $('.js_search_list_bold').hide();
+        $('.js_searchBox_list_lg').hide();
+
+        $('.js_searchBox_list_xl').html(searchBoxInput("xl"));
+        $('.js_searchBox_list_lg').html(searchBoxInput("lg"));
         deleteHistory();
     }
 });
 
 $('body').on('click', function (e) {
-    // if($(e.target).hasClass('js_searchHistory')){
-    //     return false;
-    // }
-    // $('.js_searchBox').hide();
-    // $('.js_searchBoxQuick_lg').show();
-    if(!$(e.target).hasClass('js_userMsgXs')){
+    if (!$(e.target).hasClass('js_userMsgXs')) {
         $('.js_usermsg_xs').hide();
     }
     //搜索历史浮层点击按钮确认
-    if($(e.target).hasClass('js_searchHistory')){
+    if ($(e.target).hasClass('js_searchHistory')) {
         return false;
     }
     $('.js_searchBox').hide();
     $('.js_searchBoxQuick_lg').show();
+    $('.js_delete_history').parent().hide();
 });
-
-// $(".js_searchHistory").off( "click", "**" );//没有值时，xl搜索栏闪现bug
 
 //搜索--lg
 $('.js_search_lg').on('click', function () {
@@ -106,17 +118,6 @@ $('.js_navSearchClose').on('click', function () {
 
 });
 
-//展示导航菜单
-$('.js_menuShow').on('click', function () {
-    if ($(this).hasClass('icon-menu')) {
-        $(this).removeClass('icon-menu').addClass('icon-close');
-        $('.js_navMdShow').show();
-    } else {
-        $(this).removeClass('icon-close').addClass('icon-menu');
-        $('.js_navMdShow').hide();
-    }
-});
-
 //点击搜索按钮全文搜索
 $('.js_jumpto_product_search').on('click', function () {
     jumpToProductSearch();
@@ -124,7 +125,7 @@ $('.js_jumpto_product_search').on('click', function () {
 
 //回车键搜索
 $('.js_searchHistory').keydown(function (e) {
-    if(e.which == 13){
+    if (e.which == 13) {
         jumpToProductSearch();
     }
 });
@@ -133,7 +134,13 @@ $('.js_searchHistory').keydown(function (e) {
 function jumpToProductSearch() {
     var channelId = '273690';
     var historyCookie = $.cookie('historyCookie');
-    var searchWord = $.trim($('.js_searchHistory').val());
+    var searchWord;
+    if(screenWidth > 1199){
+        searchWord = $.trim($('.js_searchHistory').val());
+    }else{
+        searchWord = $.trim($('.js_searchHistory_lg').val());
+    }
+
     if (!isEmpty(searchWord) && searchWord != "搜索产品、服务、帮助...") {
         if (isEmpty(historyCookie)) {
             $.cookie('historyCookie', searchWord, {path: '/'});
@@ -178,10 +185,11 @@ function searchBoxWord(word) {
             dataType: "html",
             async: true,
             success: function (data) {
-                $('.js_quick_search').remove();
-                $('.js_searchBox_root').html(data);
-            },
-            error: function (data) {
+                if(screenWidth > 1199){
+                    $('.js_search_list_bold').html(data);
+                }else{
+                    $('.js_searchBox_list_lg').html(data);
+                }
             }
         });
     }
@@ -193,6 +201,10 @@ function searchBoxInput(webSize) {
     historyCookie = filterSymbol(historyCookie);
     var searchBoxHtml = "";
     if (!isEmpty(historyCookie)) {
+        $('.js_quick_search').hide();
+        $('.js_searchBoxQuick_lg').hide();
+        $('.js_delete_history').parent().show();
+        $('.js_searchBox_list_lg').show();
         if (historyCookie.indexOf(",") != -1) {
             var historyCookieArr = historyCookie.split(",");
             for (var i = 0; i < historyCookieArr.length; i++) {
@@ -203,18 +215,13 @@ function searchBoxInput(webSize) {
         } else {
             searchBoxHtml = '<li><a href="/was5/web/search?channelid=273690&searchword=' + historyCookie + '">' + historyCookie + '</a></li>';
         }
-        if (webSize == "xl") {
-            searchBoxHtml = '<div class="search-quick js_quick_search">搜索历史<a href="javascript:void(0);" class="js_delete_history">清空历史</a></div>' +
-                '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
-        }
     } else {
-        searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修<a/></li>' +
-            '<li><a href = "user.tongshuai.com/product_registe">产品注册<a/></li>' +
-            '<li><a href = "/service/help">帮助中心<a/></li>' +
-            '<li><a href = "/contact">联系我们<a/></li>';
+        $('.js_delete_history').parent().hide();
         if (webSize == "xl") {
-            searchBoxHtml = '<div class="search-quick js_quick_search">快速链接</div>' +
-                '<ul class="search-list js_searchBox_listShow">' + searchBoxHtml + '</ul>';
+            searchBoxHtml = '<li><a href = "/service/installation_and_maintenance">在线保修</a></li>' +
+                '<li><a href = "user.tongshuai.com/product_registe">产品注册</a></li>' +
+                '<li><a href = "/service/help">帮助中心</a></li>' +
+                '<li><a href = "/contact">联系我们</a></li>';
         }
     }
     return searchBoxHtml;
