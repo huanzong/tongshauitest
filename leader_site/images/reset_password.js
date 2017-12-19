@@ -58,7 +58,7 @@ $(function() {
                 return;
             }
             var password = $.trim($(this).val());
-            if ("" == password || "6-16位，数字，字母或符合的组合" == password || null == password) {
+            if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
                 $(this).addClass("o_df-hide").removeClass("color");
                 $("#js_loginPassword").removeClass("o_df-hide").focus();
                 return;
@@ -72,7 +72,7 @@ $(function() {
                 return;
             }
             var password = $.trim($(this).val());
-            if( "" == password || "6-16位，数字，字母或符合的组合" == password || null == password){
+            if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
                 $("#js_loginPassword").addClass("o_df-hide");
                 $("#js_loginPassword2").addClass("color").removeClass("o_df-hide").val("6-16位，数字，字母或符合的组合");
             }
@@ -143,7 +143,7 @@ $(function() {
         self.removeClass("icon-eye-close-solid").addClass("icon-eye-open-solid");
         var passwordVal = $("#js_loginPassword").val();
         if(passwordVal == ''){
-            passwordVal ='6-16位，数字，字母或符合的组合';
+            passwordVal ='6-16位数字、字母或符号的组合';
         }
         $("#js_loginPassword2").val(passwordVal).removeClass("o_df-hide").addClass("color");
         $("#js_loginPassword").addClass("o_df-hide");
@@ -154,7 +154,7 @@ $(function() {
         $("#js_loginPassword2").addClass("o_df-hide").removeClass("color");
         self.parent().removeClass("open");
         var passwordVal = $("#js_loginPassword2").val();
-        if(passwordVal == '6-16位，数字，字母或符合的组合'){
+        if(passwordVal == '6-16位数字、字母或符号的组合'){
             passwordVal = ''
         }
         $("#js_loginPassword").val(passwordVal)
