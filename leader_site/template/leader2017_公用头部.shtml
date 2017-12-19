@@ -246,13 +246,13 @@
 	<!-- xs下，用户信息展示 -->
 	<ul class="o_u o_df_2-2 nav-usermsg-xs js_usermsg_xs">
 		<li>
-			<a href="javascript:;"><span>个人中心</span><i class="iconfont icon-arrow-line-right"></i></a>
+			<a href="http://tuser.tongshuai.com/user/"><span>个人中心</span><i class="iconfont icon-arrow-line-right"></i></a>
 		</li>
 		<!--<li>
 			<a href="javascript:;"><span>消息<em></em></span><i class="iconfont icon-arrow-line-right"></i></a>
 		</li>-->
 		<li>
-			<a href="javascript:;"><span>我的订单</span><i class="iconfont icon-arrow-line-right"></i></a>
+			<a href="http://tuser.tongshuai.com/order/"><span>我的订单</span><i class="iconfont icon-arrow-line-right"></i></a>
 		</li>
 		<!--<li>
 			<a href="javascript:;"><span>我的优惠券</span><i class="iconfont icon-arrow-line-right"></i></a>
