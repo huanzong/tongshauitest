@@ -81,7 +81,7 @@ $(function() {
     //更多选择
     swiper.moreSwiper = new Swiper('.js_swiperMore1', {
         loop: true,
-        autoplay: 1000,
+        autoplay: 5000,
 
         slidesPerView: 3,//滑动展示个数
         centeredSlides: true,
@@ -776,8 +776,10 @@ $(function() {
     });
 
     //分享按钮-移动端
-    $('.activity-icon').on('hover',function(){
+    $('.activity-icon').mouseenter(function(){
         $(this).find('.activity-float').show();
+    }).mouseleave(function(){
+        $(this).find('.activity-float').hide();
     });
 
     /**
