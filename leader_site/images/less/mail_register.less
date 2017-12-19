@@ -8,8 +8,12 @@
   }
   .mail_register_bkleft{
     width: 1200px;
-    height: 100vh;
-    background: url('email_bg_left.jpg') no-repeat top left;
+    //height: 100vh;
+    background-image:url('email_bg_left.jpg') ;
+    background-repeat:no-repeat;
+    background-position:top left ;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size: auto 850px;
     background-size:  auto 850px ;
 
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -21,28 +25,50 @@
     @media (min-width: 701px) and (max-width: 991px) {
       /* md*/
       height: 350px;
-      background: url('reg_bg_top1.png') no-repeat top center;
-      background-size:  100% 350px ;
-
+      background-image:url('reg_bg_top1.jpg') ;
+      background-repeat:no-repeat;
+      background-position:top center ;
+      filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+      -moz-background-size: 100% 350px;
+      background-size: 100% 350px;
     }
     @media (min-width: 576px) and (max-width: 700px) {
       /* sm*/
       height: 260px;
-      background: url('reg_bg_top1.png') no-repeat top center;
-      background-size:  100% 260px ;
+      //background: url('reg_bg_top1.png') no-repeat top center;
+      //background-size:  100% 260px ;
+      background-image:url('reg_bg_top1.png') ;
+      background-repeat:no-repeat;
+      background-position:top center ;
+      filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+      -moz-background-size:100% 260px ;
+      background-size: 100% 260px ;
     }
     @media (max-width: 575px) {
       /* xs*/
       height: 120px;
-      background: url('reg_bg_top2.JPG') no-repeat top center;
-      background-size:  800px 120px ;
+      //background: url('reg_bg_top2.JPG') no-repeat top center;
+      //background-size:  800px 120px ;
+      background-image:url('reg_bg_top2.JPG') ;
+      background-repeat:no-repeat;
+      background-position:top center ;
+      filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+      -moz-background-size: 800px 120px  ;
+      background-size: 800px 120px  ;
+
     }
   }
   .mail_register_bkright{
-    background: url('email_bg_right.png') no-repeat center right;
+    //background: url('email_bg_right.png') no-repeat center right;
     width: 200px;
-    height: 100vh;
+    //height: 100vh;
     //background-size:200px  auto ;
+    background-image:url('email_bg_right.png') ;
+    background-repeat:no-repeat;
+    background-position:center right ;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size: 800px 120px  ;
+    background-size: 800px 120px  ;
     @media (min-width: 992px) and (max-width: 1199px) {
       /* lg*/
       height: 700px;
