@@ -95,7 +95,7 @@ $(function(){
         if($('js-membercontboxs-2')){
             $('.js_memberNavRight').width(windowW-245) ;
         }
-        var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-20;
+        var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-5;
         $('.js-membercontboxs').width(rightBoxWidth);
 
     }else if(windowW<992 && windowW>575){
@@ -133,7 +133,7 @@ $(function(){
             if($('js-membercontboxs-2')){
                 $('.js_memberNavRight').width(windowW-245) ;
             }
-            var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-20;
+            var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-5;
             $('.js-membercontboxs').width(rightBoxWidth);
 
         }else if(windowW<992 && windowW>575){
