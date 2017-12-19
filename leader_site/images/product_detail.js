@@ -1,7 +1,6 @@
+//用来存放所有轮播
+var swiper = {};//为了template加载数据方便所以提出
 $(function() {
-    
-    //用来存放所有轮播
-    var swiper = {};
 
     //文字卖点
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
@@ -531,7 +530,8 @@ $(function() {
         $('.js_specificsBoxShow').fadeIn(1000);
         swiper.bannerSwiper.params.calculateHeight = true;
 
-        swiper.bannerSwiper.reInit()
+        swiper.bannerSwiper.reInit();
+        swiper.bannerSwiper.swipeNext();
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
@@ -773,6 +773,11 @@ $(function() {
         showAllError: true,
         ajaxPost: true
 
+    });
+
+    //分享按钮-移动端
+    $('.activity-icon').on('hover',function(){
+        $(this).find('.activity-float').show();
     });
 
     /**

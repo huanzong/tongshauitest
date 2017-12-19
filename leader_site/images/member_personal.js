@@ -9,7 +9,7 @@ $(function(){
 
     var windowWidth = $(window).width();
     if(windowWidth>1199){
-      var photoBoxWidth = 350;
+      var photoBoxWidth = 310;
     }else if(windowWidth<1200&&windowWidth>991){
         var photoBoxWidth = 300;
 
