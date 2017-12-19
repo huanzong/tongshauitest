@@ -3,6 +3,14 @@
  */
 
 $(function(){
+
+    if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0")
+    {
+        //alert("IE 8.0");
+        $('.js_search_input').addClass('ie8-input');
+        $('.prolist-box').css('border','1px solid #eee');
+    }
+
     $('.js-searchXuanXK').children('a').click(function(){
         $(this).addClass('cur').siblings().removeClass('cur');
     });
