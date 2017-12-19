@@ -248,7 +248,7 @@
                                 </div>-->
                                 <div class="particulars-delivery">
                                     <div class="delivery-address js-delivery-address">
-                                        <span style="margin-right:10px;">有货</span>
+                                        <span style="margin-right:10px;">无货</span>
                                         <span class="address-tit">配送至：</span>
                                         <span>山东省 青岛市 崂山区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
