@@ -93,7 +93,30 @@ if(morePro==0||morePro<3){
             }
             $(".js_moreProA").html(mroeproA);
             $(".js_moreProB").html(mroeproB);
-            swiper.moreSwiper.reInit();
+            // swiper.moreSwiper.reInit();
+
+            //更多选择
+            var screenWidth = document.body.offsetWidth;
+            if (screenWidth > 575) {
+                // swiper.moreSwiper = new Swiper('.js_swiperMore1', {
+                var moreSwiper = new Swiper('.js_swiperMore1', {
+                    loop: true,
+                    autoplay: 5000,
+                    slidesPerView: 3,//滑动展示个数
+                    centeredSlides: true,
+                    slidesPerGroup: 1,//每次滑动移动个数
+                    // calculateHeight : true,//Swiper根据slides内容计算容器高度。
+    
+                });
+    
+                $('.js_swiperMore_prev').click(function(){
+                    moreSwiper.swipePrev(); 
+                });
+                $('.js_swiperMore_next').click(function(){
+                    moreSwiper.swipeNext(); 
+                });
+            }
+           
 
         }
     });

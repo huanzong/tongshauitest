@@ -78,24 +78,24 @@ $(function() {
         // scrollbar: '.swiper-scrollbar'
     });
 
-    //更多选择
-    swiper.moreSwiper = new Swiper('.js_swiperMore1', {
-        loop: true,
-        autoplay: 1000,
+    // //更多选择
+    // swiper.moreSwiper = new Swiper('.js_swiperMore1', {
+    //     loop: true,
+    //     autoplay: 5000,
 
-        slidesPerView: 3,//滑动展示个数
-        centeredSlides: true,
-        slidesPerGroup: 1,//每次滑动移动个数
-        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
+    //     slidesPerView: 3,//滑动展示个数
+    //     centeredSlides: true,
+    //     slidesPerGroup: 1,//每次滑动移动个数
+    //     // calculateHeight : true,//Swiper根据slides内容计算容器高度。
 
-    });
+    // });
 
-    $('.js_swiperMore_prev').click(function(){
-        swiper.moreSwiper.swipePrev(); 
-    });
-    $('.js_swiperMore_next').click(function(){
-        swiper.moreSwiper.swipeNext(); 
-    });
+    // $('.js_swiperMore_prev').click(function(){
+    //     swiper.moreSwiper.swipePrev(); 
+    // });
+    // $('.js_swiperMore_next').click(function(){
+    //     swiper.moreSwiper.swipeNext(); 
+    // });
 
     init();
 
@@ -521,6 +521,26 @@ $(function() {
 
             $('.js_bannerSwiperPage .pagination-box').removeClass('active');
             $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
+            
+
+            $('.js_bannerSwiperPage .pagination-box').hide()
+
+            var showArr = []
+            if (index < 1) {
+                showArr = [0, 1, 2, 3]
+            } else if (index > $('.js_bannerSwiperPage .pagination-box').length - 3) {
+                showArr = [$('.js_bannerSwiperPage .pagination-box').length-1, $('.js_bannerSwiperPage .pagination-box').length-2, $('.js_bannerSwiperPage .pagination-box').length-3, $('.js_bannerSwiperPage .pagination-box').length-4]
+            } else {
+                showArr = [index-1, index, index+1, index+2]
+            }
+
+            // $('.js_bannerSwiperPage .pagination-box').eq(index).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index+1).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index+2).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index-1).css('display','inline-block')
+            for (let i = 0; i < showArr.length; i++) {
+                $('.js_bannerSwiperPage .pagination-box').eq(showArr[i]).css('display','inline-block')            
+            }
 
         }
     });
@@ -612,9 +632,9 @@ $(function() {
         }, 1000);
 
         //更多选择
-        if(screenWidth>575){
-            swiper.moreSwiper.reInit();
-        }
+        // if(screenWidth>575){
+        //     swiper.moreSwiper.reInit();
+        // }
 
         //产品参数-结构图居中
         paramImgCenter($(".js_structbg"));
@@ -776,8 +796,10 @@ $(function() {
     });
 
     //分享按钮-移动端
-    $('.activity-icon').on('hover',function(){
+    $('.activity-icon').mouseenter(function(){
         $(this).find('.activity-float').show();
+    }).mouseleave(function(){
+        $(this).find('.activity-float').hide();
     });
 
     /**

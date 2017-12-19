@@ -117,7 +117,7 @@
 		}
 		.list-kind-icon{
 			display: inline-block;
-			padding: 10px;
+			padding: 11px;
 			font-size: 0;
 			img{
 				width: 46px;
@@ -794,6 +794,9 @@
 		.layer-list{
 			display: block;
 			padding: 10px 30px 0;
+			@media (max-width: 575px) {
+                padding: 10px 10% 0 10%;
+            }
 			& > li{
 				position: relative;
 				font-size: 14px;
@@ -822,6 +825,9 @@
 						color: #666;
 						border: 1px solid #ccc;
 						background: #fff;
+						margin-right: 10px;
+						font-size: 12px;
+						float: left;
 					}
 					// .list-btn:hover{
 					// 	background: @l-red;
@@ -837,6 +843,17 @@
 						border: 1px solid #ccc;
 						color: #ccc;
 					}
+					&.clearfix:after{
+                        content:"";
+                        height:0;
+                        line-height:0;
+                        display:block;
+                        visibility:hidden;
+                        clear: both;
+                         }
+                    &.clearfix{
+                        zoom:1;
+                    }
 				}
 			}
 		}
