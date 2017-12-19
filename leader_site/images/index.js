@@ -88,19 +88,19 @@ $(function() {
       $('.js_bannerSwiperFont1').fadeOut();
       $('.js_bannerSwiperFont1').eq(1).fadeIn(100);
 
-      if (screenWidth <= 991) {
-        var marginValue = screenWidth>700?'60px':'75px 25px';
-        $('.js_bannerSwiper .swiper-slide').each(function(){
-          $(this).find('img').css({
-            'width': '80%'
-          });
-        })
+      // if (screenWidth <= 991) {
+        // var marginValue = screenWidth>700?'60px':'75px 25px';
+        // $('.js_bannerSwiper .swiper-slide').each(function(){
+        //   $(this).find('img').css({
+        //     'width': '80%'
+        //   });
+        // })
         
         // $('.js_bannerSwiper .swiper-slide').stop(true);
         // $('.js_bannerSwiper .swiper-slide').eq(2).find('a').animate({
           // 'margin': 0
         // }, 500);
-      }
+      // }
     },
     onImagesReady: function () {
       // setTimeout(function(){
@@ -306,6 +306,7 @@ $(function() {
     loop: true,
     autoplay: 5000,
     updateOnImagesReady: true,
+    calculateHeight : true,
     onFirstInit: function(swiper){
       var index = swiper.activeLoopIndex;
       $('.js_recommendFont').stop()

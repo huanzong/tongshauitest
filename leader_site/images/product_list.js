@@ -91,9 +91,13 @@ function initNavClick() {
         $('.js_layerShowMore').show();
         $('.js_layerClose').on('click', function () {
             $('.js_layerShowMore').hide();
-            $('.js_listNavShowMore').find('span').text('展开全部筛选项');
+            $('.js_listNavShowMore').find('span').text('展开筛选项');
             $('.js_listNavShowMore').find('i').removeClass('icon-close').addClass('icon-plus');
         });
+         $(document.body).css({
+            "overflow-x":"hidden",
+            "overflow-y":"hidden"
+         });
 
     }
 
