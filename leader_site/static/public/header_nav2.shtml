@@ -1,4 +1,4 @@
-                <div class="o_u o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
+                <div class="o_u   o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
                     <div class="o_u o_df_9-12 o_lg_2-2 o_xs_2-2">
                         <div class="memeber-nav-logo o_u o_xs_2-12">
                             <img src="images/l_logo.png" alt="">
@@ -7,7 +7,6 @@
                             个人中心
                         </div>
                         <div class="o_u o_xs_1-12"></div>
-
                         <div class="memeber-nav-userinfo o_u o_xs_2-12">
                             <img src="images/member_navhd_img.jpg" alt="">
                             <p class="js_navUserId">15024865424@sina.com</p>

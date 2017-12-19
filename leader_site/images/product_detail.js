@@ -1,7 +1,6 @@
+//用来存放所有轮播
+var swiper = {};//为了template加载数据方便所以提出
 $(function() {
-    
-    //用来存放所有轮播
-    var swiper = {};
 
     //文字卖点
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
@@ -79,24 +78,24 @@ $(function() {
         // scrollbar: '.swiper-scrollbar'
     });
 
-    //更多选择
-    swiper.moreSwiper = new Swiper('.js_swiperMore1', {
-        loop: true,
-        autoplay: 1000,
+    // //更多选择
+    // swiper.moreSwiper = new Swiper('.js_swiperMore1', {
+    //     loop: true,
+    //     autoplay: 5000,
 
-        slidesPerView: 3,//滑动展示个数
-        centeredSlides: true,
-        slidesPerGroup: 1,//每次滑动移动个数
-        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
+    //     slidesPerView: 3,//滑动展示个数
+    //     centeredSlides: true,
+    //     slidesPerGroup: 1,//每次滑动移动个数
+    //     // calculateHeight : true,//Swiper根据slides内容计算容器高度。
 
-    });
+    // });
 
-    $('.js_swiperMore_prev').click(function(){
-        swiper.moreSwiper.swipePrev(); 
-    });
-    $('.js_swiperMore_next').click(function(){
-        swiper.moreSwiper.swipeNext(); 
-    });
+    // $('.js_swiperMore_prev').click(function(){
+    //     swiper.moreSwiper.swipePrev(); 
+    // });
+    // $('.js_swiperMore_next').click(function(){
+    //     swiper.moreSwiper.swipeNext(); 
+    // });
 
     init();
 
@@ -522,6 +521,26 @@ $(function() {
 
             $('.js_bannerSwiperPage .pagination-box').removeClass('active');
             $('.js_bannerSwiperPage .pagination-box').eq(swiper.activeIndex).addClass('active');
+            
+
+            $('.js_bannerSwiperPage .pagination-box').hide()
+
+            var showArr = []
+            if (index < 1) {
+                showArr = [0, 1, 2, 3]
+            } else if (index > $('.js_bannerSwiperPage .pagination-box').length - 3) {
+                showArr = [$('.js_bannerSwiperPage .pagination-box').length-1, $('.js_bannerSwiperPage .pagination-box').length-2, $('.js_bannerSwiperPage .pagination-box').length-3, $('.js_bannerSwiperPage .pagination-box').length-4]
+            } else {
+                showArr = [index-1, index, index+1, index+2]
+            }
+
+            // $('.js_bannerSwiperPage .pagination-box').eq(index).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index+1).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index+2).css('display','inline-block')
+            // $('.js_bannerSwiperPage .pagination-box').eq(index-1).css('display','inline-block')
+            for (let i = 0; i < showArr.length; i++) {
+                $('.js_bannerSwiperPage .pagination-box').eq(showArr[i]).css('display','inline-block')            
+            }
 
         }
     });
@@ -531,7 +550,8 @@ $(function() {
         $('.js_specificsBoxShow').fadeIn(1000);
         swiper.bannerSwiper.params.calculateHeight = true;
 
-        swiper.bannerSwiper.reInit()
+        swiper.bannerSwiper.reInit();
+        swiper.bannerSwiper.swipeNext();
         //分页
         $('.js_bannerSwiperPage .pagination-box').click(function() {
             var index = $(this).attr('data-index');
@@ -612,9 +632,9 @@ $(function() {
         }, 1000);
 
         //更多选择
-        if(screenWidth>575){
-            swiper.moreSwiper.reInit();
-        }
+        // if(screenWidth>575){
+        //     swiper.moreSwiper.reInit();
+        // }
 
         //产品参数-结构图居中
         paramImgCenter($(".js_structbg"));
@@ -775,6 +795,13 @@ $(function() {
 
     });
 
+    //分享按钮-移动端
+    $('.activity-icon').mouseenter(function(){
+        $(this).find('.activity-float').show();
+    }).mouseleave(function(){
+        $(this).find('.activity-float').hide();
+    });
+
     /**
      * 加入购物车
      * 
@@ -867,14 +894,14 @@ var regionServer = {
                     'areacode': address.data.areaCode,
                 }
 
-                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(1).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(2).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
                 
                 /**
                  * @param {*} regionData 
                  * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
                  */
                 var addressCallback = function (regionData) {
-                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(1).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(2).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
                     $('.js_addShadeTop').hide()
                 }
 
