@@ -57,6 +57,11 @@
 <!--#include virtual="public/foot.shtml"-->
 
 <script type="text/javascript" src="images/reset_password.js"></script>
-
+<script>
+    $(function(){
+        $('.mail_register_bkleft').height($(window).height())
+        $('.mail_register_bkright').height($(window).height())
+    })
+</script>
 </body>
 </html>

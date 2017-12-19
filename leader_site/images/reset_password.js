@@ -1,10 +1,17 @@
 $(function() {
     init();
 
+
+
     $(window).resize(function() {
         init();
     });
     function init() {
+
+
+        $('.mail_register_bkleft').height($(window).height())
+        $('.mail_register_bkright').height($(window).height())
+
         //更改模块位置
         var windowWidth = $(window).width();
         var cenW = $(".js_center").width();

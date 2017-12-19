@@ -478,7 +478,7 @@ function displayFilterItem(filterItemList, currentClass) {
  * 拼接已筛选的筛选项
  */
 function appendFilterItemShowBar(showName, inputName, query, id) {
-    $(".list-filter-select").css('display', 'block');
+    $(".list-filter-select").css('display', 'inline-block');
     var itemShowBar = "";
     itemShowBar += '<div class="list-select-bg" inputName="' + inputName + '" query="' + query + '" itemId="' + id + '" itemName="' + showName + '">';
     itemShowBar += ' <span class="list-select-test">' + showName + '</span>';
@@ -522,7 +522,7 @@ function hideFilterItemHeadShow() {
 
 //顶部显示筛选选中头部
 function showFilterItemHeadShow() {
-    $(".list-filter-select").css('display', 'none');
+    $(".list-filter-select").css('display', 'inline-block');
 }
 
 //判断是否是最后一个选中标签
