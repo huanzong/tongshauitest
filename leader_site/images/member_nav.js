@@ -92,6 +92,9 @@ $(function(){
         $('.js_memberNavLeft').height('60px');
     }
     if(windowW>992){
+        if($('js-membercontboxs-2')){
+            $('.js_memberNavRight').width(windowW-245) ;
+        }
         var rightBoxWidth = windowW-240-$('.js_memberNavLeft').width()-20;
         $('.js-membercontboxs').width(rightBoxWidth);
 
