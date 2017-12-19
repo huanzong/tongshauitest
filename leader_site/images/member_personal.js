@@ -248,54 +248,58 @@ $(function(){
                     imgsW=imgs.width;
                     imgsH = imgs.height;
                     //bounds=[imgsW,imgsH];
-                    if(imgsW>imgsH){
-                        imgsWb = photoBoxWidth/imgsW;
-                        imgsHnow = imgsH*imgsWb;
+                    //if(imgsW>imgsH){
+                    //    imgsWb = photoBoxWidth/imgsW;
+                    //    imgsHnow = imgsH*imgsWb;
 //      初始化更改选择框内图片
+
+                        if(!isIE()){
+                            jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setOptions({
+                                    outerImage: templet_pic,
+                                    //setSelect: [ 60, 60, 260, 260 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+
+                                })
+                            });
+                            $(".jcrop-preview").attr("src",templet_pic);
+
+                        }else{
+                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.2,'width':photoBoxWidth*0.2})
+                            $(".jcrop-preview").attr("src",templet_pic);
+
+                            //jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setOptions({
+                                    //outerImage: templet_pic,
+                                    //setSelect: [ 60, 60, 260, 260 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+
+                                //})
+                            });
+
+                        }
+
+
+                     var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+                     $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+//                    }else{
+//                        imgsWb = photoBoxWidth/imgsH;
+//                        imgsWnow = imgsW*imgsWb;
+////      初始化更改选择框内图片
+////                        jcrop_api.setImage(templet_pic, function(){
+//                            jcrop_api.setOptions({
+//                                outerImage: templet_pic
+//                                //setSelect: [ 60, 60, 260, 260 ]
+//                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
 //
+//                            //})
+//                        });
+//                         var photoBoxHeight = $('.jcrop-holder').parent('li').height();
+//                        $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
+//                        console.log(photoBoxWidth-photoBoxHeight)
+//                        $(".jcrop-preview").attr("src",templet_pic);
 //
-//                        if (isIE()) {
-//                            //是IE浏览器
-//                            createJCrop(1);
-//                        } else {
-//                            ////单独判断IE10
-//                            //if (document.documentMode == 10) {
-//                            //    createJCrop(1);
-//                            //} else
-//                            //非IE浏览器
-//                            createJCrop(0);
-//                        }
-
-
-                        jcrop_api.setImage(templet_pic, function(){
-                            jcrop_api.setOptions({
-                                outerImage: templet_pic,
-                                //setSelect: [ 60, 60, 260, 260 ]
-                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
-
-                            })
-                        });
-
-                        $(".jcrop-preview").attr("src",templet_pic);
-
-                    }else{
-                        imgsWb = photoBoxWidth/imgsH;
-                        imgsWnow = imgsW*imgsWb;
-//      初始化更改选择框内图片
-                        jcrop_api.setImage(templet_pic, function(){
-                            jcrop_api.setOptions({
-                                outerImage: templet_pic,
-                                //setSelect: [ 60, 60, 260, 260 ]
-                                //setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
-
-                            })
-                        });
-                         var photoBoxHeight = $('.jcrop-holder').parent('li').height();
-                        $('.jcrop-holder').css('margin-top', (photoBoxHeight-photoBoxWidth)/2+'px');
-                        console.log(photoBoxWidth-photoBoxHeight)
-                        $(".jcrop-preview").attr("src",templet_pic);
-
-                    }
+//                    }
                 };
 
             } else {
@@ -342,7 +346,18 @@ $(function(){
 //      点击上传图片
     $('#getupimg').unbind().click( function () {
 
-        var imgSize = jcrop_api.tellSelect();
+        if(!isIE()){
+            var imgSize = jcrop_api.tellSelect();
+        }else{
+            var imgSize = {
+                'x':$(".jcrop-holder >div").position().left,
+                'y':$(".jcrop-holder >div").position().top,
+                'w':$(".jcrop-holder >div").width(),
+                'h':$(".jcrop-holder >div").height()
+            }
+        }
+
+
         // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
