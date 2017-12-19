@@ -11,7 +11,7 @@
 	<!--#include virtual="public/head.shtml"-->
 	<link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css">
 	<link rel="stylesheet" type="text/css" href="images/product_list.css">
-	<link rel="stylesheet" type="text/css" href="./iconfont.css">
+	<link rel="stylesheet" type="text/css" href="images/iconfont.css">
 </head>
 
 <body>
@@ -891,7 +891,7 @@
 	    			<ul class="layer-list">
 	    				<li>
 	    					<span class="list-tit">箱门结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn disabled">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -905,7 +905,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">箱门结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -914,7 +914,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -923,7 +923,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">箱门结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -932,7 +932,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">箱门结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -946,7 +946,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">箱门结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -955,7 +955,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
@@ -964,7 +964,7 @@
 	    				</li>
 	    				<li>
 	    					<span class="list-tit">箱门结构：</span>
-	    					<div class="list-line">
+	    					<div class="list-line clearfix">
 	    						<a class="l-btn-sm list-btn active">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
 	    						<a class="l-btn-sm list-btn">按钮</a>
