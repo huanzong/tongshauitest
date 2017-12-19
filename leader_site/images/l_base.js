@@ -111,6 +111,10 @@ $(function () {
         // $ele.siblings().hide();
         $ele.siblings().addClass('l-opacity0');
 
+        var screenWidth = document.body.offsetWidth;
+        if(screenWidth<=575){
+            $ele.find('.index_animateBox').css('width','25%');
+        }
         setTimeout(function () {
             $ele.find('span').eq(0).animate({
                 height: "100%"
@@ -131,11 +135,13 @@ $(function () {
                 height: "100%"
             }, t);
         }, 800);
-        setTimeout(function () {
-            $ele.find('span').eq(4).animate({
-                height: "100%"
-            }, t);
-        }, 1000);
+        if(screenWidth>575){
+            setTimeout(function () {
+                $ele.find('span').eq(4).animate({
+                    height: "100%"
+                }, t);
+            }, 1000);
+        }
         var showTime = 200 * ($ele.find('span').size() + 1);
         setTimeout(function () {
             $ele.find('.index_animate').css('z-index', '-11');
@@ -144,7 +150,7 @@ $(function () {
                 'filter':'alpha(opacity=1)',
                 '-moz-opacity':'1',
                 '-khtml-opacity':'1',
-                'opacity': '1'
+                'opacity': '1' 
             }, t);
             // $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
             // $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
@@ -316,7 +322,6 @@ $(function () {
 
 });
 
-
 //加载导航头的登录状态
 function userLoginStatus() {
     var regFrom = "tongshuai";
@@ -337,7 +342,7 @@ function userLoginStatus() {
             $("#header_loginDiv .login span").before(logusername);
             $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
             $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
-            $("#header_logout,#header_logout2").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+            $("#header_logout,#header_logout2,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
         } else {
             //同域cookie存在，但是 haieruser 没有取出值，去请求haier_ssosession.jsp获取当前登录用户
             var surl = "/ids/ts/ssosession.jsp";
@@ -355,7 +360,7 @@ function userLoginStatus() {
                         $("#header_loginDiv .login span").before(logusername);
                         $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
                         $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
-                        $("#header_logout,#header_logout2").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+                        $("#header_logout,#header_logout2 ,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
                     } else {
                         // if (window.innerWidth == undefined || window.innerWidth >= 768) {
                         //     if (returnUrl.indexOf("club.casarte.com") > -1) {
