@@ -57,6 +57,7 @@ $('.js_searchHistory').bind('input propertychange', function () {
 
         searchBoxWord($(this).val());
     } else {
+        $('.js_searchBoxQuick_lg').show();
         $('.js_quick_search').show();
         $('.js_searchBox_list_xl').show();
         $('.js_search_list_bold').hide();
