@@ -1,5 +1,5 @@
 
-<div class="o_u o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
+<div class="o_u  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
     <div class="o_u o_df_9-12 o_lg_2-2 o_xs_2-2">
         <a href="http://test.tongshuai.com/"><div class="memeber-nav-logo o_u o_xs_2-12">
             <img src="../images/l_logo.png" alt=""  ignoreapd="1" >
@@ -29,7 +29,8 @@
         <div class="o_u o_xs_2-12 iconfont icon-menu memeber-nav-top-btn js_navxsbtn" data-alt="1"></div>
     </div>
 </div>
-<div class="o_u o_df_2-12 o_lg_3-12 o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle js_memberNavMiddle">
+<div class="o_u   o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle js_memberNavMiddle">
+    <!--<div class="o_u o_df_2-12 o_lg_3-12 o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle js_memberNavMiddle">-->
     <div class="o_u o_df_6-10 o_xs_2-3 memeber-nav-middle-listbox">
         <ul id="js-navul">
             <li class="memeber-nav-middle-title">个人信息</li>
