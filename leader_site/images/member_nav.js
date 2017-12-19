@@ -95,7 +95,7 @@ $(function(){
         if($('.js-membercontboxs-2')){
             $('.js_memberNavRight').width(windowW-$('.js_memberNavLeft').width()-5) ;
         }
-        var rightBoxWidth = windowW-245-$('.js_memberNavLeft').width()-10;
+        var rightBoxWidth = windowW-245-$('.js_memberNavLeft').width()-20;
         $('.js-membercontboxs').width(rightBoxWidth);
 
     }else if(windowW<992 && windowW>575){
@@ -133,7 +133,7 @@ $(function(){
             if($('.js-membercontboxs-2')){
                 $('.js_memberNavRight').width(windowW-$('.js_memberNavLeft').width()-5) ;
             }
-            var rightBoxWidth = windowW-245-$('.js_memberNavLeft').width()-10;
+            var rightBoxWidth = windowW-245-$('.js_memberNavLeft').width()-20;
             $('.js-membercontboxs').width(rightBoxWidth);
 
         }else if(windowW<992 && windowW>575){
