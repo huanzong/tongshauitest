@@ -248,14 +248,15 @@
                                 </div>-->
                                 <div class="particulars-delivery">
                                     <div class="delivery-address js-delivery-address">
+                                        <span style="margin-right:10px;">有货</span>
                                         <span class="address-tit">配送至：</span>
                                         <span>山东省 青岛市 崂山区<i class="iconfont icon-arrow-line-down"></i></span>
                                     </div>
-                                    <div class="delivery-time">
+                                    <!-- <div class="delivery-time">
                                         <span>有货</span>
                                         <span>，预计</span>
                                         <span>02月89日（周五）22点送达</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="particulars-btn">
                                     <a href="javascript:;" class="l-btn-normal l-btn-red l-btn-disable" productId="<trs_viewdata field='metadataid'/>">加入购物车</a>
