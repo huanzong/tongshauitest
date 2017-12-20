@@ -41,4 +41,4 @@ jxl.log
 
 # less 生成的 css
 
-./**/ui.css
+*/**/ui.css
