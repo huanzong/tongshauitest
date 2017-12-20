@@ -70,15 +70,10 @@ var leaderServer = {
     //根据ip地址获取用户地址
     getIpAddress: function(){
         return $.ajax({
-            url:'http://api.map.baidu.com/location/ip?ak=qT3FXMgALhVQia2XiGKhmeAQ',
+            url: siteConfig.domain + '/interaction-service/regionInfo/defaultRegion',
             type:'get',
             success_cb:function(data){
-                if(data.status==0){
-                    return data.content.address;
-                }else{
-                    return false;
-                }
-                
+                return data
             },
             error_cb:function(data){
                 return false;
