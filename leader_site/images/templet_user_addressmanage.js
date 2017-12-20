@@ -906,7 +906,9 @@ function updateUserAddress(){
 
     return bool;
 }
-
+$(function(){
+    $('.o_Dropdown ').mouseout(function(){return });//省市区去掉鼠标移除事件
+})
 
 
 
