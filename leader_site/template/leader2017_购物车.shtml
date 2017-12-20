@@ -46,14 +46,14 @@
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
                     <div class="trolley-logo">
-                        <img src="images/l_logo.png">
+                        <a href="http://test.tongshuai.com"><img src="images/l_logo.png"></a>
                     </div>
                     <div class="trolley-title">
                         购物车
                     </div>
-                    <a href="javascript:;" target="_blank" rel="noopener" class="trolley-username js_userName">
-                        胖大海
-                    </a>
+                    <span class="trolley-username js_userName">
+                        <!-- 胖大海 -->
+                    </span>
                 </div>
             </div>
             <!-- 头部 END -->
