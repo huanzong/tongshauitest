@@ -150,7 +150,7 @@
 					</trs_viewdatas>
 				</ul>
 			</li>
-			<li><a href="<trs_viewdatas id='悠生活'><trs_viewdata field='link'/></trs_viewdatas>">优生活<i class="iconfont icon-arrow-line-right"></i></a></li>
+			<li><a href="<trs_viewdatas id='悠生活'><trs_viewdata field='link'/></trs_viewdatas>">悠生活<i class="iconfont icon-arrow-line-right"></i></a></li>
 			<li><a href="<trs_viewdatas id='会员'><trs_viewdata field='link'/></trs_viewdatas>">会员<i class="iconfont icon-arrow-line-right"></i></a></li>
 			<li><a href="<trs_viewdatas id='服务'><trs_viewdata field='link'/></trs_viewdatas>">服务<i class="iconfont icon-arrow-line-right"></i></a></li>
 		</ul>
