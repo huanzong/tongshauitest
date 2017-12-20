@@ -424,7 +424,6 @@ function addressAlert(add, callback){
             data: 'parentId=0',
             //error:function(data){
             //},
-            login:true,
             success_cb:function(data){
                 var contdata = data.data;
                 if(data.isSuccess){
