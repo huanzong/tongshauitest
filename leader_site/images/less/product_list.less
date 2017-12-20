@@ -780,7 +780,7 @@
 		.layer-tit{
 			text-indent: 30px;
 			line-height: 70px;
-			font-size: 14px;
+			font-size: 20px;
 			color: #333;
 			border-bottom: 1px solid #eee;
 		}
@@ -810,6 +810,7 @@
 					min-width: 80px;
 					line-height: 72px;
 					color: #999;
+					font-size: 14px;
 					@media (max-width:575px){
 					    line-height: 58px;
 					}
@@ -819,6 +820,9 @@
 					margin-left: 80px;
 					padding-top: 20px;
 					padding-bottom: 10px;
+					@media (max-width:700px) and (min-width:576px){
+					    margin-left: 22.22%;
+					}
 					@media (max-width: 575px) {
 						margin-left: 0;
     					padding-top: 55px;
@@ -833,6 +837,18 @@
 						margin-right: 10px;
 						font-size: 12px;
 						float: left;
+						@media (max-width:700px) and (min-width:576x){
+						    min-width: 30px;
+						}
+						@media (max-width:660px) and (min-width:576x){
+                           padding: 0 14px;
+                        }
+						@media (max-width:440px){
+						    padding: 0 10px;
+						}
+						@media (max-width:340px){
+                            margin-right: 4px;
+                        }
 					}
 					// .list-btn:hover{
 					// 	background: @l-red;
