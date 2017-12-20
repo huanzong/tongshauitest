@@ -58,10 +58,10 @@
 							<a class="nav-type" data-nav="js_design" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_design">设计
 								<div class="line"></div>
 							</a>
-							<a class="nav-type" data-nav="js_params" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params">参数
+							<a class="nav-type active" data-nav="js_params" href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params">参数
 								<div class="line"></div>
 							</a>
-							<a class="nav-type active js_comment" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
+							<a class="nav-type js_comment" data-nav="js_praise" href="javascript:;">口碑(<span></span>)
 								<div class="line"></div>
 							</a>
 							<!-- <a class="nav-type" data-nav="js_favourable" href="javascript:;">优惠组合
@@ -202,19 +202,22 @@
   var templet_Arry=[
       <TRS_XVIEWFIELDGROUPS STARTPOS="1" PARENTNAME="规格参数">
       [
-      <TRS_VIEWFIELDS>
-      <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">
-      [ "<TRS_VIEWFIELD FIELD="AnotherName"></TRS_VIEWFIELD>","<TRS_VIEWDATA FIELD="${@DBFieldName}" DELIM="/"ISLABEL="true"></TRS_VIEWDATA>"],
-  </TRS_VIEWDATA>
-  </TRS_VIEWFIELDS>
-  ["GroupName","<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>"]
-  ]<TRS_IsNotLastRecord>,</TRS_IsNotLastRecord>
-  </TRS_XVIEWFIELDGROUPS>
+		  <TRS_VIEWFIELDS>
+			  <TRS_VIEWDATA FIELD="${@DBFieldName}" PARSEIFNOTNULL="true">
+			  [ "<TRS_VIEWFIELD FIELD="AnotherName"></TRS_VIEWFIELD>","<TRS_VIEWDATA FIELD="${@DBFieldName}" DELIM="/"ISLABEL="true"></TRS_VIEWDATA>"],
+			  </TRS_VIEWDATA>
+		  </TRS_VIEWFIELDS>
+          ["GroupName","<TRS_XVIEWFIELDGROUP FIELD="GroupName"></TRS_XVIEWFIELDGROUP>"]
+      ]<TRS_IsNotLastRecord>,</TRS_IsNotLastRecord>
+      </TRS_XVIEWFIELDGROUPS>
   ];
 
   function templet_init(){
 
     for (var i = 0; i<templet_Arry.length; i++) {
+        if(templet_Arry[i].length<=1){
+            continue;
+		}
       var templet_s=getLength(templet_Arry[i])-1;
       var templet_chu=parseInt(templet_s/2);
       var templet_yu=getLength(templet_Arry[i])%2;
