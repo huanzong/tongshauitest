@@ -97,7 +97,7 @@ $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地
     $(".js_btnSubmit").attr("type",1);
     $(".js_form_addAddrManagement").show();
     resetForm();
-    $('.lose').css('background-color','#fff');
+    //$('.lose').css('background-color','#fff');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
 })
 var templet_pageNo=1;
@@ -601,7 +601,7 @@ var saveId="";
 function getAddressInfo(id){
     templet_text = '确定取消修改？';
     $('.js_addressTitle').html('修改地址');
-    $('.lose').css('background-color','#fff');
+    //$('.lose').css('background-color','#fff');
     $(window).scrollTop($('.member-security-tit').height())
     $(".js_btnSubmit").attr("type",2);
     saveId=id;

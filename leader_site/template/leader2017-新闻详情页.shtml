@@ -23,9 +23,9 @@
 
 					</div>
 					<div class="o_u o_df_10-12">
-						<a href="javascript:;" class="news_index news_padding_right">首页</a>
+						<a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />" class="news_index news_padding_right">首页</a>
 						<i class="iconfont icon-arrow-line-right news_padding_right"></i>
-						<a href="javascript:;" class="news_leader news_padding_right">关于统帅</a>
+						<a href="<TRS_CHANNEL id='新闻动态' UrlIsAbs='true' FIELD='_RECURL' />" class="news_leader news_padding_right">关于统帅</a>
 						<i class="iconfont icon-arrow-line-right news_padding_right"></i>
 						<a href="javascript:;" class="news_detail news_padding_right">新闻详情</a>
 					</div>
@@ -44,10 +44,10 @@
 							<span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd" /></span>
 							<span class="news_item_line news_item_padding news_item_mid"></span>
 							<span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-							<a href="javascript:;" class="news_item_room news_item_mid">
+							<a href="javascript:;" class="news_item_room news_item_mid jiathis_button_tsina">
 								<i class="iconfont icon-share-weibo"></i>
 							</a>
-							<a href="javascript:;" class=" news_item_mid">
+							<a href="javascript:;" class=" news_item_mid jiathis_button_weixin">
 								<i class="iconfont icon-share-weixin"></i>
 							</a>
 						</div>
@@ -113,6 +113,7 @@
 		</div>
 		<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 		<script type="text/javascript" src="validform_v5.3.2_min.js"></script>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
 	</body>
 
 </html>
