@@ -289,7 +289,22 @@
         });
         return combined;
     })
- 
+
+    gulp.task("lessBuildAll",function(){
+        var combined = combiner.obj([
+            gulp.src("./images/less/*.less"),
+            sourcemaps.init(),
+            less(),
+            cssmin(),
+            sourcemaps.write('./maps'),
+            gulp.dest("./images")
+        ]);
+
+        combined.on('error', function(){
+            console.error.bind(console)
+        });
+        return combined;
+    })
 
     // 开启本地 Web 服务器功能
     gulp.task('webserver-static', function() {
@@ -353,6 +368,7 @@
     gulp.task('debug', ['clean-preview'], function(a) {
         gulp.run('contenttask-watch');
         gulp.run('webserver-static');
+        gulp.run('lessBuildAll');
         gulp.run('lesstask');
     });
 
