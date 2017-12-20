@@ -320,8 +320,8 @@ $(function () {
      */
     var ipAddress = leaderServer.getIpAddress().then(function (data) {
         var params = {
-            provinceName: data.content.address_detail.province,
-            cityName: data.content.address_detail.city
+            provinceName: data.data.provinceName,
+            cityName: data.data.cityName
         }
         leaderServer.regionInfo(params).then(function (address) {
             var add = {
