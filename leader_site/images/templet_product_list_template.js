@@ -60,10 +60,14 @@ if(templet_recommend==0){
 }
 
 //精选推荐手机端添加class
-$(".js_recommend").find('a').eq(0).removeClass("o_df-hide");
-$(".js_recommend").find('a').eq(1).removeClass("o_df-hide");
-$(".js_recommend").find('a').eq(2).removeClass("o_df-hide").addClass("o_md-hide o_sm-hide o_xs-hide");
-$(".js_recommend").find('a').eq(3).removeClass("o_df-hide").addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
+recomAddClass();
+function recomAddClass(){
+    $(".js_recommend").find('a').eq(0).removeClass("o_df-hide");
+    $(".js_recommend").find('a').eq(1).removeClass("o_df-hide");
+    $(".js_recommend").find('a').eq(2).removeClass("o_df-hide").addClass("o_md-hide o_sm-hide o_xs-hide");
+    $(".js_recommend").find('a').eq(3).removeClass("o_df-hide").addClass("o_lg-hide o_md-hide o_sm-hide o_xs-hide");
+}
+
 //精选推荐切换
 
 $('.js_recomChange').click(function(){
@@ -104,7 +108,7 @@ $('.js_recomChange').click(function(){
                             }
                         }
                     }*/
-                    recommendData += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + dochref + '">';
+                    recommendData += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_df-hide" href="' + dochref + '">';
                     recommendData += '<img src="' + pic + '"/>';
                     recommendData += '<div class="recommend-pro-info">';
                     recommendData += '<span class="pro-info-title">' + pname + '</span>';
@@ -114,6 +118,7 @@ $('.js_recomChange').click(function(){
 
                 }
                 $(".js_recommend").html(recommendData);
+                recomAddClass();
             }
         }
     });

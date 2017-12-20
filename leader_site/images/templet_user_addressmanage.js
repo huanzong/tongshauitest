@@ -13,8 +13,6 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-$('.o_Dropdown ').hover(function(){return },function(){return })//省市区去掉鼠标移除事件
-
 var infotell=[];
 //固定电话号码错误显示逻辑
 $('.js_addressPhoneInput').find('input').blur(function(){
@@ -174,6 +172,7 @@ function buildCity(){
                 templet_select_qu.lose();
                 templet_select_road.init();
                 templet_select_road.lose();
+                $('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
             }
         },
         error_cb:function(){}
@@ -208,6 +207,7 @@ function buildArea(){
                 $("#js_road").html("");
                 templet_select_road.init();
                 templet_select_road.lose();
+                $('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
             }
 
         },
@@ -240,6 +240,7 @@ function buildRoad(){
                     }
                 }
                 templet_select_road.init();
+                $('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
             }
         },
         error_cb:function(){}
@@ -361,7 +362,6 @@ $(function(){
         var dataType =$(this).attr('data-type');
         var dataVal = $(this).val();
         var inputNullText = $(this).attr('nullmsg');
-        console.log($(this).val());
         if(dataVal.length==0){
             $(this).addClass('Validform_error').attr('data-type',1);
             $(this).siblings('.js-addressMobError').html(inputNullText)
@@ -572,7 +572,7 @@ $(document).on("click",".deleteAddress",function(){
     $(".js-alertTrue").off().on('click',function(){//确定删除按钮
         $.ajax({
             url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
-            type:"get",
+            type:"post",
             dataType: "json",
             data:{"id": addressId},
             login:true,
