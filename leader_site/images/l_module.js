@@ -396,6 +396,7 @@ $('.js_addClose').click(function(){
 * 公用地址弹窗
 * */
 function addressAlert(add, callback){
+    $('.js_addType').find('div').removeClass('cur').eq(0).addClass('cur')
     $('.js_addShadeTop').show();
     $('.js_addContBox').show();
     var addressSave,addressCity,addressArea,savecode_used;
