@@ -539,7 +539,7 @@ $(function() {
             // $('.js_bannerSwiperPage .pagination-box').eq(index+2).css('display','inline-block')
             // $('.js_bannerSwiperPage .pagination-box').eq(index-1).css('display','inline-block')
             for (let i = 0; i < showArr.length; i++) {
-                $('.js_bannerSwiperPage .pagination-box').eq(showArr[i]).css('display','inline-block')            
+                $('.js_bannerSwiperPage .pagination-box').eq(showArr[i]).css('display','inline-block');         
             }
 
         }
