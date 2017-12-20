@@ -13,8 +13,7 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-
-
+$('.o_Dropdown ').hover(function(){return },function(){return })//省市区去掉鼠标移除事件
 
 var infotell=[];
 //固定电话号码错误显示逻辑
@@ -320,7 +319,7 @@ function saveUserAddress(){
                 resetForm();//重置表单
                 $(".js_form_addAddrManagement").hide();
                 templet_isSubmiting=false;
-                /*globalShade2("添加成功",1,2000);*/
+                globalShade2("添加地址成功",2,2000);
             }else{//添加地址失败
                 globalShade2(responseT.resultMsg,2,2000);
                 templet_isSubmiting=false;
