@@ -60,7 +60,7 @@
             </div>
             <!--新闻列表标题END-->
             <div>
-                <TRS_DOCUMENTS ID="新闻动态" PAGESIZE="1" SELECT="DocKind" STARTPOS="0" AUTOMORE="FALSE">
+                <TRS_DOCUMENTS ID="新闻动态" PAGESIZE="10" SELECT="DocKind" STARTPOS="0" AUTOMORE="FALSE">
                     <div class="o_g news_list <TRS_ViewData Field='newspicture'>
 							<TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank'>
 							news_nopic
