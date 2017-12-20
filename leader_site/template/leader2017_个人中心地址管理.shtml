@@ -39,7 +39,7 @@
                                         <div class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname">联系人姓名<span>*</span></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressUserName">
-                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入联系人的姓名"  value=""   maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>联系人姓名不正确" nullmsg="<i class='iconfont icon-information-solid'></i>联系人姓名不得为空" id="realName"/>
+                                                <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入联系人的姓名"  value=""   maxlength="8" datatype="s2-8"  errormsg="<i class='iconfont icon-information-solid'></i>联系人姓名不得为空" nullmsg="<i class='iconfont icon-information-solid'></i>联系人姓名不得为空" id="realName"/>
                                                 <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                             </div>
                                         </div>
@@ -50,7 +50,7 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressMobile">
                                                 <!--<form class="ui_validForm js_ui_validForm">-->
-                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不得为空" id="mobile"/>
+                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不得为空" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不得为空" id="mobile"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 <!--</form>-->
                                             </div>
@@ -135,7 +135,7 @@
                                         <div class="o_u o_u o_df_1-5 o_lg_1-5 o_md_1-5 o_sm_2-2 o_xs_2-2 member-address-listname"></div>
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listtextareabox">
                                             <div class="l-textarea member-address-textareabox">
-                                                <textarea  class="js_addressDetailedCont js_inputCheck"  data-normal="1" name="" maxlength="100" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>请输入正确地址" nullmsg="<i class='iconfont icon-information-solid'></i>详细地址不得为空" id="address" ></textarea>
+                                                <textarea  class="js_addressDetailedCont js_inputCheck"  data-normal="1" name="" maxlength="100" ph="尽可能详尽地填写楼号、楼层、门牌号" datatype="s1-100"  errormsg="<i class='iconfont icon-information-solid'></i>详细地址不得为空" nullmsg="<i class='iconfont icon-information-solid'></i>详细地址不得为空" id="address" ></textarea>
                                                 <p class="Validform_checktip Validform_wrong   js-addressMobError" style=" line-height: 35px;font-size: 12px;color: #f39800;"></p>
                                             </div>
                                         </div>
