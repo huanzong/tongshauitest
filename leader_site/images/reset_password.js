@@ -81,7 +81,7 @@ $(function() {
             var password = $.trim($(this).val());
             if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
                 $("#js_loginPassword").addClass("o_df-hide");
-                $("#js_loginPassword2").addClass("color").removeClass("o_df-hide").val("6-16位，数字，字母或符合的组合");
+                $("#js_loginPassword2").addClass("color").removeClass("o_df-hide");
             }
         });
 
