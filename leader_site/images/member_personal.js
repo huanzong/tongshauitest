@@ -361,7 +361,6 @@ $(function(){
         // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
-            type: "get",
             data: {
                 "picX": parseInt(imgSize.x),
                 "picY": parseInt(imgSize.y),
