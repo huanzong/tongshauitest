@@ -48,6 +48,32 @@
 //    globalShade()
 //})
 
+$('#phonequhao').onChange(function(){
+    var inputValue = $(this).val();
+    if(typeof (inputValue)=='number'){
+        $(this).addClass('member-address-input')
+    }else{
+        $(this).removeClass('member-address-input')
+    }
+})
+$('#phonefenjihao').onChange(function(){
+    var inputValue = $(this).val();
+    if(typeof (inputValue)=='number'){
+        $(this).addClass('member-address-input')
+    }else{
+        $(this).removeClass('member-address-input')
+    }
+})
+$('#phone').onChange(function(){
+    var inputValue = $(this).val();
+    if(typeof (inputValue)=='number'){
+        $(this).addClass('member-address-input')
+    }else{
+        $(this).removeClass('member-address-input')
+    }
+})
+//,#phone,#
+
 
 //点击弹窗的确认与取消按钮
 $('.js-alertClose').click(function(){
