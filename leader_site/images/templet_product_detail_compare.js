@@ -8,8 +8,11 @@ $(function () {
     //xml中获取tableName
 
     //对比初始化函数
-    setTimeout(initCookie(), 1000);
-    setTimeout(initLoadCookie(), 1000);
+    //setTimeout(initCookie(), 1000);
+    //setTimeout(initLoadCookie(), 1000);
+    setTimeout(function(){initCookie()},1000);
+    setTimeout(function(){initLoadCookie()},1000);
+
 
     //对比栏显示隐藏
     $('.js_compareBoxShow').on('click', function () {
@@ -255,7 +258,6 @@ window.add_compare_flyOut_item = function ($obj) {
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
             $(".js_compareAddProduct").find("span").html("已对比");
-
         }
         //删除对比选项监听
         deleteCompareItem();

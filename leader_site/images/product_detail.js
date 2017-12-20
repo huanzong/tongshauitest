@@ -881,8 +881,8 @@ var regionServer = {
     regionInfo: function (){
         leaderServer.getIpAddress().then(function(data){
             var params = {
-                provinceName: data.content.address_detail.province,
-                cityName: data.content.address_detail.city
+                provinceName: data.data.provinceName,
+                cityName: data.data.cityName
             }
             leaderServer.regionInfo(params).then(function(address){
                 var add = {
@@ -894,14 +894,14 @@ var regionServer = {
                     'areacode': address.data.areaCode,
                 }
 
-                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(2).text(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName)
+                $('.js-delivery-address').attr('areaCode', address.data.areaCode).find('span').eq(2).html(address.data.provinceName + ' ' + address.data.cityName + ' ' + address.data.areaName + '<i class="iconfont icon-arrow-line-down"></i>')
                 
                 /**
                  * @param {*} regionData 
                  * { "areaCode":2450, "areaName":"崂山区", "cityCode":173, "cityName":"青岛", "code":null, "provinceCode":16, "provinceName":"山东" }
                  */
                 var addressCallback = function (regionData) {
-                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(2).text(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName)
+                    $('.js-delivery-address').attr('areaCode', regionData.areaCode).find('span').eq(2).html(regionData.provinceName + ' ' + regionData.cityName + ' ' + regionData.areaName + '<i class="iconfont icon-arrow-line-down"></i>')
                     $('.js_addShadeTop').hide()
                 }
 

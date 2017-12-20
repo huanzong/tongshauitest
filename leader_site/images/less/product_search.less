@@ -18,9 +18,13 @@
       margin-top: 40px;
       input{
         height: 50px;
-        line-height: 50px;
-        padding-right: 50px;
+        line-height: 15px;
+        //padding-right: 50px;
+        //padding:25px 50px  25px 0;
         font-size: 14px;
+      }
+      .ie8-input{
+        line-height: 50px;
       }
       a{
         display: inline-block;
@@ -163,12 +167,9 @@
     .cur{
       color:@l-red ;
     }
-
   }
-
 }
 .product-search-downleft,.product-search-downright{
-
   width: 96%;
   @media (min-width: 576px) and (max-width: 700px) {
     /* sm*/
@@ -179,26 +180,34 @@
     /* xs*/
     width: 100%;
     margin-top: 34px;
-
   }
   .recommend-box{
     border-radius: 8px;
 
     .recommend-pro{
+      >div{
+        >a{
+          margin:40px 0 ;
+        }
+      }
+      img{
+        width: 100%!important;
+        height: auto!important;
+        padding: 0!important;
+        vertical-align:middle;
+      }
   .recommend-pro-info{
     vertical-align: middle;
     text-align:left;
+    padding: 0!important;
+
   }
 
       @media (min-width: 992px) and (max-width: 1199px) {
         /* lg*/
         text-align: center;
         a{
-          img{
-            width: 100px;
-            height: 100px;
-            padding: 30px 0 15px 0!important;
-          }
+
         }
         .recommend-pro-info{
           text-align: left;
@@ -383,6 +392,7 @@
 }
 .product-recommend{
   padding-bottom: 40px;
+  min-height: 265px;
 }
 
 .prdouct-search-service-list{
@@ -573,4 +583,7 @@
   font-size: 16px;
   line-height: 30px;
   color: #ccc;
+}
+.product-list .prolist-con .prolist-box{
+  margin: 0 15px 45px;
 }

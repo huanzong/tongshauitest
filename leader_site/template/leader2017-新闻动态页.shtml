@@ -21,7 +21,7 @@
         <div class="news_list_banner">
             <a href="javascript:;">
                 <img class="js_recPic" src="" df="news_banner_df.png" lg="news_banner_md.png" md="news_banner_md.png"
-                     sm="news_banner_sm.png" xs="images/news_banner_sm.png">
+                     sm="news_banner_sm.png" xs="news_banner_sm.png">
                 <div class="news_list_caption">
                     <trs_channel id='关于统帅' AUTOLINK="false"/>
                 </div>
@@ -78,7 +78,7 @@
                                     <TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
                                         <div class="news_tip_pic mews_mid">
                                             <div class="news_pic">
-                                                <a href="javascript:;">
+                                                <a href="<TRS_DOCUMENT field='_RECURL'>">
                                                     <img src="<TRS_ViewData Field='newspicture'/>"/>
                                                 </a>
                                             </div>
@@ -88,9 +88,9 @@
                                 <div class="news_txt mews_mid">
                                     <div class="news_tip_text mews_mid">
                                         <div class="news_text">
-                                            <a href="javascript:;">
+                                            <a href="<TRS_DOCUMENT field='_RECURL'></TRS_DOCUMENT>">
                                                 <p class="news_tip_title">
-                                                    <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
+                                                    <TRS_ViewData field='DOCTITLE' AUTOLINK="false" />
                                                 </p>
                                             </a>
                                             <p class="news_tip_content">
@@ -116,7 +116,7 @@
                                     </div>
                                 </div>
                                 <div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-                                    <a class="news_icon" href="javascript:;">
+                                    <a class="news_icon" href="<TRS_DOCUMENT field='_RECURL'>">
                                         <i class="iconfont icon-arrow-jiantou-right"></i>
                                     </a>
                                 </div>
@@ -125,7 +125,6 @@
                     </div>
                 </TRS_DOCUMENTS>
             </div>
-
         </div>
         <!--新闻中心列表END-->
         <!--分页-->

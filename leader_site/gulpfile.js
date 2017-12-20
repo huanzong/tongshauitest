@@ -75,13 +75,13 @@
 
 
     // js压缩发布
-    gulp.task('jstask-min', function() {
-        return gulp.src(['./images/member_nav.js', './images/templet_member_nav.js'])
+    gulp.task('jstask-min', ['jstask'], function() {
+        return gulp.src('./build/*.js')
             // 合并js
-            .pipe(concat('templet_member_nav.min.js'))
+            .pipe(concat('main.min.js'))
             // 压缩js
-            // .pipe(uglify())
-            .pipe(gulp.dest('./images'));
+            .pipe(uglify())
+            .pipe(gulp.dest('./build'));
     });
 
 
@@ -263,6 +263,33 @@
         return gulp.watch('./images/less/*.less', ['testLess']);
     });
 
+    gulp.task("less-build",function(){
+        var changeFileArr = []
+        var fileArr = []
+        if (options.file) {
+            changeFileArr = options.file.split(',')
+            for (var i = 0; i < changeFileArr.length; i++) {
+                if (changeFileArr[i].indexOf('/less/') > 0) {
+                    fileArr.push('../' + changeFileArr[i])
+                }
+            }
+        }
+
+        var combined = combiner.obj([
+            gulp.src(fileArr),
+            sourcemaps.init(),
+            less(),
+            cssmin(),
+            sourcemaps.write('./maps'),
+            gulp.dest("./images")
+        ]);
+
+        combined.on('error', function(){
+            console.error.bind(console)
+        });
+        return combined;
+    })
+ 
 
     // 开启本地 Web 服务器功能
     gulp.task('webserver-static', function() {
