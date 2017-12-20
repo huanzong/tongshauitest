@@ -352,7 +352,8 @@ $(function () {
                 addressAlert(add, addressCallback)
             })
 
-            skuInit()
+            // 加载购物车商品信息 一期暂时隐藏
+            // skuInit()
         })
 
     })
