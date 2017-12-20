@@ -78,7 +78,7 @@
                                     <TRS_CONDITION CONDITION='${@newspicture}' OPERATOR='blank' NOT='true'>
                                         <div class="news_tip_pic mews_mid">
                                             <div class="news_pic">
-                                                <a href="<TRS_DOCUMENT field='_RECURL'>">
+                                                <a href="<TRS_DOCUMENT field='_RECURL'></TRS_DOCUMENTS>">
                                                     <img src="<TRS_ViewData Field='newspicture'/>"/>
                                                 </a>
                                             </div>
@@ -116,7 +116,7 @@
                                     </div>
                                 </div>
                                 <div class="news_tip_icon mews_mid o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-                                    <a class="news_icon" href="<TRS_DOCUMENT field='_RECURL'>">
+                                    <a class="news_icon" href="<TRS_DOCUMENT field='_RECURL'></TRS_DOCUMENTS>">
                                         <i class="iconfont icon-arrow-jiantou-right"></i>
                                     </a>
                                 </div>
