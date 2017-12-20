@@ -38,3 +38,7 @@ jxl.log
 */.project
 */.sublime-gulp.cache
 *.stackdump
+
+# less 生成的 css
+
+./**/ui.css
