@@ -172,6 +172,7 @@ function buildCity(){
                 templet_select_qu.lose();
                 templet_select_road.init();
                 templet_select_road.lose();
+                $('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
             }
         },
         error_cb:function(){}
@@ -206,6 +207,7 @@ function buildArea(){
                 $("#js_road").html("");
                 templet_select_road.init();
                 templet_select_road.lose();
+                $('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
             }
 
         },
@@ -238,6 +240,7 @@ function buildRoad(){
                     }
                 }
                 templet_select_road.init();
+                $('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
             }
         },
         error_cb:function(){}
@@ -256,7 +259,7 @@ $("#js_city").change(function(){
 $("#js_area").change(function(){
     buildRoad();
 })
-$('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
+
 //新增地址
 function saveUserAddress(){
     if(templet_isSubmiting){//正在提交
