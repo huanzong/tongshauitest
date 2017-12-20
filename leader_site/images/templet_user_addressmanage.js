@@ -907,9 +907,8 @@ function updateUserAddress(){
     return bool;
 }
 $(function(){
-    $('.o_Dropdown ').hover(function(){return },function(){return });//去电hover效果
+    $('.o_Dropdown ').mouseout(function(){return });//省市区去掉鼠标移除事件
 })
-
 
 
 

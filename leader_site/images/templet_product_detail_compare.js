@@ -14,7 +14,6 @@ $(function () {
     setTimeout(function(){initLoadCookie()},1000);
 
 
-
     //对比栏显示隐藏
     $('.js_compareBoxShow').on('click', function () {
         if (parseInt($(this).attr('data-show'))) {
@@ -259,7 +258,6 @@ window.add_compare_flyOut_item = function ($obj) {
             var objString = JSON.stringify(proObjList);
             $.cookie('leaderProCookie', objString, {path: '/'});
             $(".js_compareAddProduct").find("span").html("已对比");
-
         }
         //删除对比选项监听
         deleteCompareItem();
