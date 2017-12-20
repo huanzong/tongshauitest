@@ -22,7 +22,7 @@ $(function() {
         autoplay: 1000,
         slidesPerView: 1,//滑动展示个数
         centeredSlides: true,
-        slidesPerGroup: 1,//每次滑动移动个数
+        slidesPerGroup: 1//每次滑动移动个数
         // calculateHeight : true,//Swiper根据slides内容计算容器高度。
     });
     //多图轮播，单图不轮播
