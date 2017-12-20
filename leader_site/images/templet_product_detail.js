@@ -104,7 +104,7 @@ if(morePro==0||morePro<3){
                     autoplay: 5000,
                     slidesPerView: 3,//滑动展示个数
                     centeredSlides: true,
-                    slidesPerGroup: 1,//每次滑动移动个数
+                    slidesPerGroup: 1//每次滑动移动个数
                     // calculateHeight : true,//Swiper根据slides内容计算容器高度。
     
                 });
