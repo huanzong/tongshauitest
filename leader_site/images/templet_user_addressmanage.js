@@ -319,7 +319,7 @@ function saveUserAddress(){
                 resetForm();//重置表单
                 $(".js_form_addAddrManagement").hide();
                 templet_isSubmiting=false;
-                globalShade2("添加地址成功",2,2000);
+                globalShade2("添加地址成功",1,2000);
             }else{//添加地址失败
                 globalShade2(responseT.resultMsg,2,2000);
                 templet_isSubmiting=false;
