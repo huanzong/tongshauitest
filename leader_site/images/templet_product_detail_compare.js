@@ -8,8 +8,11 @@ $(function () {
     //xml中获取tableName
 
     //对比初始化函数
-    setTimeout(initCookie(), 1000);
-    setTimeout(initLoadCookie(), 1000);
+    //setTimeout(initCookie(), 1000);
+    //setTimeout(initLoadCookie(), 1000);
+    setTimeout(function(){initCookie()},1000);
+    setTimeout(function(){initLoadCookie()},1000);
+
 
     //对比栏显示隐藏
     $('.js_compareBoxShow').on('click', function () {
