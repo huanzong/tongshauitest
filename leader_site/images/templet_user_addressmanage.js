@@ -906,6 +906,9 @@ function updateUserAddress(){
 
     return bool;
 }
+$(function(){
+    $('.o_Dropdown ').hover(function(){return },function(){return });//去电hover效果
+})
 
 
 
