@@ -370,6 +370,7 @@ $(function(){
 
                 "userHeadPic": imgs.src
             },
+            csrf:true,
             success_cb: function (data) {
                 if (data.isSuccess) {
 
