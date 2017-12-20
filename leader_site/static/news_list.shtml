@@ -477,14 +477,35 @@
 				<!--新闻中心列表END-->
 				<!--分页-->
 				<div class="news_list_pagination">
-					<a class="l-pagination-prew">上一页</a>
-					<a class="l-pagination-pagenumber active">1</a>
-					<a class="l-pagination-pagenumber">2</a>
-					<a class="l-pagination-pagenumber">3</a>
-					<a class="l-pagination-pagenumber news_list_more">4</a>
-					<a class="l-pagination-pagenumber o_df-show o_xs-hide">5</a>
-					<a class="l-pagination-pagenumber o_df-show o_xs-hide">6</a>
-					<a class="l-pagination-next ">下一页</a>
+					<div class="o_df-show o_sm-hide o_xs-hide">
+						<a class="l-pagination-prew">上一页</a>
+						<a class="l-pagination-pagenumber active">1</a>
+						<a class="l-pagination-pagenumber">2</a>
+						<a class="l-pagination-pagenumber">3</a>
+						<a class="l-pagination-pagenumber">4</a>
+						<a class="l-pagination-pagenumber">5</a>
+						<a class="l-pagination-pagenumber">6</a>
+						<a class="l-pagination-pagenumber">7</a>
+						<a class="l-pagination-pagenumber">8</a>
+						<a class="l-pagination-next ">下一页</a>
+					</div>
+					<div class="o_df-hide o_sm-show o_xs-hide">
+						<a class="l-pagination-prew">上一页</a>
+						<a class="l-pagination-pagenumber active">1</a>
+						<a class="l-pagination-pagenumber">2</a>
+						<a class="l-pagination-pagenumber">3</a>
+						<a class="l-pagination-pagenumber">4</a>
+						<a class="l-pagination-pagenumber">5</a>
+						<a class="l-pagination-pagenumber">6</a>
+						<a class="l-pagination-next ">下一页</a>
+					</div>
+					<div class="o_df-hide o_sm-hide o_xs-show">
+						<a class="l-pagination-prew">上一页</a>
+						<a class="l-pagination-pagenumber active">1</a>
+						<a class="l-pagination-pagenumber">2</a>
+						<a class="l-pagination-pagenumber">3</a>
+						<a class="l-pagination-next ">下一页</a>
+					</div>
 				</div>
 				<!--分页END-->
 
