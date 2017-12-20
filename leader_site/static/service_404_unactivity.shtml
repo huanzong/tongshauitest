@@ -35,10 +35,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- 精品推荐 1-->
 		<div class="service_marginbotton service_marginbotton_unactivity">
 
 		</div>
-		<!-- 精品推荐 1-->
 		<div class="o_g product-recommend">
 			<div class="o_u o_df_1-12"></div>
 			<div class="o_u o_df_10-12">
@@ -112,7 +112,10 @@
 		</div>
 		<!-- 精品推荐 END -->
 		<!-- 精品推荐 2-->
-		<!--<div class="o_g product-recommend">
+		<!--<div class="service_marginbotton">
+
+		</div>
+		<div class="o_g product-recommend">
 			<div class="o_u o_df_1-12"></div>
 			<div class="o_u o_df_10-12">
 				<div class="recommend-box border_radius_service">
