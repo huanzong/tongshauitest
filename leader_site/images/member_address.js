@@ -48,7 +48,7 @@
 //    globalShade()
 //})
 
-$('#phonequhao').onChange(function(){
+/*$('#phonequhao').onChange(function(){
     var inputValue = $(this).val();
     if(typeof (inputValue)=='number'){
         $(this).addClass('member-address-input')
@@ -71,7 +71,7 @@ $('#phone').onChange(function(){
     }else{
         $(this).removeClass('member-address-input')
     }
-})
+})*/
 //,#phone,#
 
 
