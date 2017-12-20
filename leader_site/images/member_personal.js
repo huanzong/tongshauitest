@@ -27,7 +27,7 @@ $(function(){
     var imgX,imgY,imgW;
 
     $('.js_member input').blur(function(){
-        var username =  $('.js_member input').val();
+        var username =  $.trim($('.js_member input').val());
         if(username.length>3&&username.length<21){
             $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
             if(!nubreg.test(username)){
