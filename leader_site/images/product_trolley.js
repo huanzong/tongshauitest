@@ -13,8 +13,6 @@ $(function () {
                 data: data,
                 success_cb: function (data) {
                     if (data.isSuccess) {
-                        console.log(data)
-                        console.log(skuCodesObj)
                         //测试数据
                         // var data = trolleyListData;
 
@@ -27,10 +25,16 @@ $(function () {
                             n.skuShowVO['cartGoodId'] = cartGoodId;
                         })
 
+                        if (trolleyData.length > 0) {
+                           $('.empty-trolley-pro-list').hide();
+                           $('.js-trolley-footer').show();
+                        }
+
                         $('.js-product-num').text(trolleyData.length)
                         $(".js_trolleyListData").setTemplateElement("template-items");
                         $(".js_trolleyListData").processTemplate(trolleyData);
-
+                        
+                        
                         trolleyDatafun();
                     }
 
