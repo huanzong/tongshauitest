@@ -13,8 +13,6 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-$('.o_Dropdown ').hover(function(){return },function(){return })//省市区去掉鼠标移除事件
-
 var infotell=[];
 //固定电话号码错误显示逻辑
 $('.js_addressPhoneInput').find('input').blur(function(){
@@ -258,7 +256,7 @@ $("#js_city").change(function(){
 $("#js_area").change(function(){
     buildRoad();
 })
-
+$('.o_Dropdown').off('mouseleave');//省市区去掉hover效果
 //新增地址
 function saveUserAddress(){
     if(templet_isSubmiting){//正在提交
