@@ -42,3 +42,34 @@ jxl.log
 # less 生成的 css
 
 */**/ui.css
+*/**/index.css
+*/**/l_base.css
+*/**/l_module.css
+*/**/l_obox_set.css
+*/**/l_obox.css
+*/**/l_result.css
+*/**/l_variable.css
+*/**/life_style.css
+*/**/login.css
+*/**/member_nav.css
+*/**/member_order.css
+*/**/mail_register.css
+*/**/member_orderdetail.css
+*/**/member-center.css
+*/**/member.css
+*/**/news_detail.css
+*/**/news_list.css
+*/**/product_compare.css
+*/**/product_detail.css
+*/**/product_list.css
+*/**/product_orderconfirm.css
+*/**/product_param.css
+*/**/product_pay_success.css
+*/**/product_pay.css
+*/**/product_praise.css
+*/**/product_search.css
+*/**/product_trolley.css
+*/**/registration.css
+*/**/reset_password.css
+*/**/service.css
+*/**/verificate_email.css
