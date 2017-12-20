@@ -1353,7 +1353,6 @@
 
 					.member-security-safelevel {
 						display: inline-block;
-						width: 145px;
 						height: 24px;
 						margin: 28px 0 28px;
 						float: left;
@@ -1370,16 +1369,24 @@
 						}
 						@media (min-width: 992px) and (max-width: 1199px) {
 							/* lg*/
+							width: 145px;
+
 						}
 						@media (min-width: 701px) and (max-width: 991px) {
 							/* md*/
+							width: 145px;
+
 						}
 						@media (min-width: 576px) and (max-width: 700px) {
 							/* sm*/
 							margin: 18px 0 5px;
+							width: 145px;
+
 						}
 						@media (max-width: 575px) {
 							/* xs*/
+							width: 145px;
+
 							margin: 18px 0 5px;
 						}
 
@@ -5254,8 +5261,12 @@
 
 
 }
-
-#phonequhao,#phone,#phonefenjihao{
-	text-indent: 0;
-	text-align: center;
+.member-address-input{
+		text-indent: 0 !important;
+		text-align: center!important;
 }
+
+//#phonequhao,#phone,#phonefenjihao{
+//	text-indent: 0;
+//	text-align: center;
+//}
