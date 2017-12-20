@@ -46,14 +46,14 @@
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
                     <div class="trolley-logo">
-                        <img src="images/l_logo.png">
+                        <a href="http://test.tongshuai.com"><img src="images/l_logo.png"></a>
                     </div>
                     <div class="trolley-title">
                         购物车
                     </div>
-                    <a href="javascript:;" target="_blank" rel="noopener" class="trolley-username js_userName">
-                        胖大海
-                    </a>
+                    <span class="trolley-username js_userName">
+                        <!-- 胖大海 -->
+                    </span>
                 </div>
             </div>
             <!-- 头部 END -->
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <!-- 配送 END -->
-
+            
             <!-- 商品列表-表头 -->
             <div class="o_g trolley-tablehead">
                 <div class="o_u o_df_1-12"></div>
@@ -103,6 +103,14 @@
             </div>
             <!-- 商品列表-表头 END -->
 
+            <!-- 购物车无商品 -->
+            <div class="o_g empty-trolley-pro-list">
+                <img src="images/share_nothing.png"  alt="">
+                <p>还没有任何商品，快去挑选吧</p>
+                <div>
+                </div>
+            </div> 
+
             <!-- 商品列表 -->
             <div class="o_g">
                 <div class="o_u o_df_1-12"></div>
@@ -112,7 +120,7 @@
                     <!-- 购物车商品列表：数据循环 END -->
 
                     <!-- 单个商品-有货 -->
-                    <div class="trolley-prolist">
+                    <!-- <div class="trolley-prolist">
                         <div class="o_g trolley-product">
                             <div class="o_u o_df_3-5 o_md_1-2 o_xs_2-2">
                                 <div class="l-checkbox trolley-product-check">
@@ -155,10 +163,10 @@
                                 <a href="javascript:;" class="trolley-price-edit js_edit" data-oppo='edit'>编辑</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 单个商品-有货 END -->
                     <!-- 单个商品-无货 -->
-                    <div class="trolley-prolist trolley-pro-none">
+                    <!-- <div class="trolley-prolist trolley-pro-none">
                         <div class="o_g trolley-product">
                             <div class="o_u o_df_3-5 o_md_1-2">
                                 <div class="trolley-product-uncheck">
@@ -193,15 +201,16 @@
                                 <a href="javascript:;" class="trolley-price-delete">删除</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 单个商品-无货 END -->
 
                 </div>
             </div>
             <!-- 商品列表 END -->
 
+            <div class="trolley-footer-position">
             <!-- 购物车底部 -->
-            <div class="o_g trolley-footer">
+            <div class="o_g trolley-footer l-none js-trolley-footer">
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_5-12 o_lg_1-12 o_md_1-12 o_sm_1-6 o_xs_1-6">
                     <div class="l-checkbox trolley-footer-check">
@@ -211,10 +220,10 @@
                 <div class="o_u o_df_3-12 o_lg_1-2 o_md_1-2 o_sm_5-12 o_xs_5-12">
                     <div class="trolley-footer-total">
                         <div class="footer-total-num o_sm-hide o_xs-hide">
-                            共<span>6</span>件商品，已选择<span>1</span>件
+                            共<span>6</span>件商品，已选择<span>0</span>件
                         </div>
                         <div class="footer-total-price">
-                            <span>合计：</span>￥88899
+                            <span>合计：</span>￥0
                         </div>
                     </div>
                 </div>
@@ -227,6 +236,7 @@
             <!-- 购物车底部 END -->
 
             <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+            </div>
         </div>
     </div>
     <!--#include file="${ROOT_PATH}public/style/js_35.shtml"-->
@@ -237,7 +247,7 @@
     <p style="display:none">
         <textarea id="template-items">
             {#foreach $T as item}
-            <div class="trolley-prolist">
+            <div class="trolley-prolist" cartId="{$T.item.skuShowVO.cartGoodId}" inSkuCode="{$T.item.skuShowVO.inSkuCode}">
                 <div class="o_g trolley-product">
                     <div class="o_u o_df_3-5 o_md_1-2 o_xs_2-2">
                         <div class="l-checkbox trolley-product-check">
@@ -272,7 +282,7 @@
                         </div>
                     </div>
                     <div class="o_u o_df_1-10 o_lg-hide o_md-hide o_sm-hide o_xs-hide">
-                        <div class="trolley-price-total">￥{$T.item.skuShowVO.salePrice*5 || '暂无'}</div>
+                        <div class="trolley-price-total">￥{$T.item.skuShowVO.salePrice*$T.item.skuShowVO.quantity || '暂无'}</div>
                     </div>
                     <div class="o_u o_df_1-10 o_xs-hide">
                         <a href="javascript:;" class="trolley-price-delete js_proDelete" data-cartGoodId="{$T.item.skuShowVO.cartGoodId}">删除</a>
