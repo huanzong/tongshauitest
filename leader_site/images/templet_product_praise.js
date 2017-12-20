@@ -49,7 +49,7 @@ function initContent(data,curPage,pageSize){
           commentNone+='<div class="o_u o_df_1-12"></div>';
           commentNone+='<div class="prise_no_item"><img src="/images/no_praise.png"/></div>';
           commentNone+='<div class="prise_no_item">';
-          commentNone+='<span class="prise_no_tip">暂时还没有任何买家评价哦</span></div></div></div>';
+          commentNone+='<span class="prise_no_tip">暂时还没有任何买家评价哦</span></div></div>';
           $(".product-prise-header").after(commentNone);
           $(".js_comment1").hide();
 
