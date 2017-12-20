@@ -571,7 +571,7 @@ $(document).on("click",".deleteAddress",function(){
     $(".js-alertTrue").off().on('click',function(){//确定删除按钮
         $.ajax({
             url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
-            type:"get",
+            type:"post",
             dataType: "json",
             data:{"id": addressId},
             login:true,

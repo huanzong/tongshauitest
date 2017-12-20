@@ -336,23 +336,27 @@ $(function() {
             $(".js_buyhtml .js_box").eq(i).attr("id", i + 'F').addClass("o_df-hide");
             $(".js_buyhtml .js_box").eq(0).removeClass("o_df-hide");
             var text = $(".js_buyhtml .js_box").eq(i).find(".js_tag").text();
-            if(document.body.offsetWidth>991){
-                if(i == 0){
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
+            text = $.trim(text);
+            if(text.length){
+                if(document.body.offsetWidth>991){
+                    if(i == 0){
+                       
+                            btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal alive" data-index='+i+'>'+text+'</a>';
+                        
+                    }else{
+                            btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
+
+                    }
+                    $(".js_foldlsit_btn").html(btnhtml);
                 }else{
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-normal" data-index='+i+'>'+text+'</a>';
+                    if(i == 0){
+                        btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2 alive" data-index='+i+'>'+text+'</a>';
+                    }else{
+                        btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2" data-index='+i+'>'+text+'</a>';
+                    }
+                    $(".js_foldoverNav_btn").html(btnhtml);
                 }
-                $(".js_foldlsit_btn").html(btnhtml);
-            }else{
-                if(i == 0){
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2 alive" data-index='+i+'>'+text+'</a>';
-                }else{
-                    btnhtml += '<a href="'+url+'#'+i+'F" name="'+i+'F" class="l-btn-sm l-btn-line2" data-index='+i+'>'+text+'</a>';
-                }
-                $(".js_foldoverNav_btn").html(btnhtml);
             }
-
-
         }
 
         //初始化左侧按钮定位
