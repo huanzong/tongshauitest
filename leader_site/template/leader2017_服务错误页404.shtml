@@ -102,7 +102,13 @@
             var templet_docpuburl = templet_entities[i].docpuburl;
             var templet_location = templet_docpuburl.lastIndexOf("\/");
             var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_entities[i].appfile;
-            templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + templet_docpuburl + '">';
+            if(i==2){
+                templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide" href="' + templet_docpuburl + '">';
+            }else if(i==3){
+                templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide" href="' + templet_docpuburl + '">';
+            }else{
+                templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + templet_docpuburl + '">';
+            }
             templet_addhtml += '<img src="' + templet_picUrl + '"/><div class="recommend-pro-info">';
             templet_addhtml += '<span class="pro-info-title">' + templet_entities[i].pname + '</span> ';
             templet_addhtml += '<span class="pro-info-type">' + templet_entities[i].modelno + '</span>';
@@ -121,7 +127,13 @@
             var templet_docpuburl = templet_entities[i].docpuburl;
             var templet_location = templet_docpuburl.lastIndexOf("\/");
             var templet_picUrl = templet_docpuburl.substring(0, templet_location + 1) + templet_entities[i].appfile;
-            templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + templet_docpuburl + '">';
+            if(i==6){
+                templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_md-hide o_sm-hide o_xs-hide" href="' + templet_docpuburl + '">';
+            }else if(i==7){
+                templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_lg-hide o_md-hide o_sm-hide o_xs-hide" href="' + templet_docpuburl + '">';
+            }else{
+                templet_addhtml += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + templet_docpuburl + '">';
+            }
             templet_addhtml += '<img src="' + templet_picUrl + '"/><div class="recommend-pro-info">';
             templet_addhtml += '<span class="pro-info-title">' + templet_entities[i].pname + '</span> ';
             templet_addhtml += '<span class="pro-info-type">' + templet_entities[i].modelno + '</span>';
