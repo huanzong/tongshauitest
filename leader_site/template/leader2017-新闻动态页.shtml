@@ -88,7 +88,7 @@
                                 <div class="news_txt mews_mid">
                                     <div class="news_tip_text mews_mid">
                                         <div class="news_text">
-                                            <a href="<TRS_ViewData field='_RECSURL' />">
+                                            <a href="<TRS_DOCUMENT field='_RECURL'></TRS_DOCUMENT>">
                                                 <p class="news_tip_title">
                                                     <TRS_ViewData field='DOCTITLE' AUTOLINK="false" />
                                                 </p>
