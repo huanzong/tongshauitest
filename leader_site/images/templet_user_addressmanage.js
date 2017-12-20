@@ -361,7 +361,6 @@ $(function(){
         var dataType =$(this).attr('data-type');
         var dataVal = $(this).val();
         var inputNullText = $(this).attr('nullmsg');
-        console.log($(this).val());
         if(dataVal.length==0){
             $(this).addClass('Validform_error').attr('data-type',1);
             $(this).siblings('.js-addressMobError').html(inputNullText)
@@ -572,7 +571,7 @@ $(document).on("click",".deleteAddress",function(){
     $(".js-alertTrue").off().on('click',function(){//确定删除按钮
         $.ajax({
             url:siteConfig.userUrl+"/hshop-user/front/userRegion/deleteRegion",
-            type:"get",
+            type:"post",
             dataType: "json",
             data:{"id": addressId},
             login:true,
