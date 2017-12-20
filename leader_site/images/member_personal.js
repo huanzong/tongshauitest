@@ -361,7 +361,6 @@ $(function(){
         // console.log(imgSize);
         $.ajax({
             url: siteConfig.userUrl+"/hshop-user/front/user/updateHeadPic",
-            type: "get",
             data: {
                 "picX": parseInt(imgSize.x),
                 "picY": parseInt(imgSize.y),
@@ -383,7 +382,7 @@ $(function(){
                     $('.js-modifyPhoto').hide();
                     $('.js-modifyPhotoBtn').hide();
                     $("#js-imgleft").attr("src",data.data);
-                    location.reload();
+                    window.location.href ='/info?to=header'
                 }
                 else{
 //      上传头像失败出现弹窗
