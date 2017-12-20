@@ -21,7 +21,7 @@
         <div class="news_list_banner">
             <a href="javascript:;">
                 <img class="js_recPic" src="" df="news_banner_df.png" lg="news_banner_md.png" md="news_banner_md.png"
-                     sm="news_banner_sm.png" xs="images/news_banner_sm.png">
+                     sm="news_banner_sm.png" xs="news_banner_sm.png">
                 <div class="news_list_caption">
                     <trs_channel id='关于统帅' AUTOLINK="false"/>
                 </div>
@@ -88,9 +88,9 @@
                                 <div class="news_txt mews_mid">
                                     <div class="news_tip_text mews_mid">
                                         <div class="news_text">
-                                            <a href="javascript:;">
+                                            <a href="<TRS_ViewData Field='_RECURL' />">
                                                 <p class="news_tip_title">
-                                                    <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
+                                                    <TRS_ViewData Field='DOCTITLE' AUTOLINK="false" />
                                                 </p>
                                             </a>
                                             <p class="news_tip_content">
