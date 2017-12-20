@@ -108,7 +108,7 @@ $('.js_recomChange').click(function(){
                             }
                         }
                     }*/
-                    recommendData += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2" href="' + dochref + '">';
+                    recommendData += '<a class="o_u o_df_1-4 o_lg_1-3 o_md_1-2 o_sm_1-2 o_xs_1-2 o_df-hide" href="' + dochref + '">';
                     recommendData += '<img src="' + pic + '"/>';
                     recommendData += '<div class="recommend-pro-info">';
                     recommendData += '<span class="pro-info-title">' + pname + '</span>';
@@ -117,8 +117,8 @@ $('.js_recomChange').click(function(){
                     recommendData += '</div></a>';
 
                 }
-                recomAddClass();
                 $(".js_recommend").html(recommendData);
+                recomAddClass();
             }
         }
     });
