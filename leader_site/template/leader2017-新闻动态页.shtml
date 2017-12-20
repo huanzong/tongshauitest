@@ -94,7 +94,7 @@
                                                 </p>
                                             </a>
                                             <p class="news_tip_content">
-                                                <TRS_ViewData field='DOCCONTENT' />
+                                                <TRS_DOCUMENT field='DOCCONTENT'></TRS_DOCUMENT>
                                             </p>
                                         </div>
                                     </div>
