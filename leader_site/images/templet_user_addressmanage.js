@@ -13,8 +13,7 @@ var templet_pageSize=10;
 var templet_isSubmiting=false;
 loadUserInfoList();//获取用户地址列表
 
-
-
+$('.o_Dropdown ').hover(function(){return },function(){return })//省市区去掉鼠标移除事件
 
 var infotell=[];
 //固定电话号码错误显示逻辑
@@ -906,9 +905,7 @@ function updateUserAddress(){
 
     return bool;
 }
-$(function(){
-    $('.o_Dropdown ').hover(function(){return },function(){return })//省市区去掉鼠标移除事件
-})
+
 
 
 
