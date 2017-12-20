@@ -185,6 +185,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                 var returnData = data.data.productList.entities;
                 var allPageCount = data.data.productList.pageCount;
                 var currentPageNo = data.data.productList.pageNo;
+                var showPageCount = data.data.productList.entityCount;
                 //var currentPageNo = data.data.productList.pageS;
                 //if (returnData.length >= 1) {
                 for (var i = 0; i < returnData.length; i++) {
@@ -250,7 +251,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     searchHtml += '</div>';
                 }
                 //设置总数
-                $(".red").html(returnData.length);
+                $(".red").html(showPageCount);
                 $(".prolist-con").html(searchHtml);
                 //PC
                 if (document.body.offsetWidth >= 1200) {
