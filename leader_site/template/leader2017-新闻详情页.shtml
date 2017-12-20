@@ -52,7 +52,7 @@
 							</a>
 						</div>
 						<div class="news_content_top">
-							<TRS_DOCUMENT  field='DOCCONTENT' FILTEREDITORCSS='true'></TRS_DOCUMENT>
+							<TRS_ViewData  field='doccontent'/>
 						</div>
 					</div>
 				</div>
