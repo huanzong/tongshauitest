@@ -48,7 +48,7 @@
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
                                                     <span>*</span>用户名
                                                 </div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox">
+                                                <div class="o_u o_df_2-3 o_df_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox">
                                                     <div class="l-input o_u o_df_2-2 member-personalinfo-allinput js_member">
                                                         <input id="js_loginName" type="text" name="" ph="" value="" />
                                                     </div>
@@ -65,9 +65,9 @@
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
                                                    性别
                                                 </div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
-                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男" data="1" /></span>
-                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2" /></span>
+                                                <div class="o_u o_df_2-3 o_df_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-sex">
+                                                    <span class="o_u o_df_1-5 o_lg_1-5 o_md_1-5 "><input type="radio" id="js_genderboy" class="js_sex" checked name="cc" value="男"  data="1"></span>
+                                                    <span class="o_u o_df_1-2 o_lg_1-2 o_md_1-2  "><input type="radio" class="js_sex" id="js_gendergirl" name="cc" value="女" data="2"></span>
                                                 </div>
 
 
@@ -76,7 +76,7 @@
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname ">
                                                     生日
                                                 </div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g info-date-input" style="text-align: left">
+                                                <div class="o_u o_df_2-3 o_df_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g info-date-input" style="text-align: left">
                                                     <div class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 l-input" >
                                                         <input type="text" name="" class="js_Date o_u personalinfo-date o_df_2-2 l-btn-normal l-btn-line2" data-date="1" readonly="readonly"  style="cursor: pointer;"> <span class="iconfont icon-events "></span>
                                                     </div>
@@ -111,7 +111,7 @@
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname">
                                                     居住地
                                                 </div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox  o_g">
+                                                <div class="o_u o_df_2-3 o_df_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox  o_g">
                                                     <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-personalinfo-textarea3-1 info-address-input">
                                                         <div class="selectbox">
                                                             <div class="member-personalinfo-inputbox">
@@ -151,7 +151,7 @@
 
                                             <div class="o_g member-personalinfo-list">
                                                 <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2 member-personalinfo-listname"></div>
-                                                <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
+                                                <div class="o_u o_df_2-3 o_df_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
                                                     <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-3 o_xs_2-3 member-personalinfo-savebtn">
                                                         <a href="javascript:;" class="l-btn-normal l-btn-red js_personalinfoBtn js-preserve">保存</a>
                                                     </div>
