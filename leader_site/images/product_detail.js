@@ -22,7 +22,7 @@ $(function() {
         autoplay: 1000,
         slidesPerView: 1,//滑动展示个数
         centeredSlides: true,
-        slidesPerGroup: 1,//每次滑动移动个数
+        slidesPerGroup: 1//每次滑动移动个数
         // calculateHeight : true,//Swiper根据slides内容计算容器高度。
     });
     //多图轮播，单图不轮播
@@ -303,17 +303,30 @@ $(function() {
                 $('.js_foldoverNav').css('height', htmlImgH);
             }
         }
+        if (document.body.offsetWidth <= 991) {
+            var anchorHref = $('.js_foldoverSwiper').find('a').eq(0).attr('href')
+        }else{
+           var anchorHref = $('.js_foldlist').find('a').eq(0).attr('href')
+        }
         if (anchor == '') {
             if (document.body.offsetWidth <= 991) {
-                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
+                if( anchorHref != undefined || anchorHref != null){
+                    location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href');
+                }
             }else{
-                location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+                if( anchorHref != undefined || anchorHref != null){
+                    location.href = $('.js_foldlist').find('a').eq(0).attr('href');
+                }
             }
         } else {
             if (document.body.offsetWidth <= 991) {
-                location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href').replace(anchor, '#0F');
+                if( anchorHref != undefined || anchorHref != null){
+                    location.href = $('.js_foldoverSwiper').find('a').eq(0).attr('href').replace(anchor, '#0F');
+                }
             } else {
-                location.href = $('.js_foldlist').find('a').eq(0).attr('href').replace(anchor, '#0F');
+                if( anchorHref != undefined || anchorHref != null){
+                    location.href = $('.js_foldlist').find('a').eq(0).attr('href').replace(anchor, '#0F');
+                }
             }
         }
 
