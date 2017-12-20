@@ -232,7 +232,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                     searchHtml += '<a class="pro-read l-fr js_compareAddProduct" auto="0" id="compare_' + returnData[i].MetaDataId + '_top" data-id="compare_' + returnData[i].MetaDataId + '_top" data-link="' + returnData[i].docpuburl + '" data-thumb="' + picUrl + '" data-name="' + cplx + '" data-type="' + returnData[i].modelno + '" data-chnid="' + returnData[i].ChannelId + '">';
                     searchHtml += '<span class="pro-read-font">对比</span>';
                     searchHtml += '<span class="pro-read-i">';
-                    searchHtml += '<i class="iconfont icon-d-solid"></i>';
+                    searchHtml += '<i class="iconfont icon-contrast-solid"></i>';
                     searchHtml += '</span>';
                     searchHtml += '</a>';
                     searchHtml += '</div>';
