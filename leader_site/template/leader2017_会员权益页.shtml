@@ -77,7 +77,8 @@
             </ul>
         </div>
         <div class="member-center js_memberCenterBox o_g">
-            <div class="o_u o_df_4-12 member-center-left"></div>
+            <div class="o_u o_df_4-12 o_sm_2-12  o_xs_2-12 member-center-left"></div>
+            <div class="o_u o_df_2-12 o_sm_show "></div>
             <div class="o_u o_df_2-12"></div>
             <div class="o_u o_df_2-12"></div>
             <div class="o_u o_df_2-12 member-center-border">
