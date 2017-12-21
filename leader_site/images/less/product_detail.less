@@ -1417,50 +1417,120 @@
     width: 100%;
   }
   .detail-scene1-img{
+    img{
+      width: 130px;
+      height: 130px;
+      margin-top: 65px;
+    }
+
+
+    @media (max-width:1199px) {
+      img{
+        width: 120px;
+        height: 120px;
+        margin-top: 65px;
+      }
+    }
+
+
+    @media (max-width:991px) {
+      img{
+        width: 360px;
+        height: 360px;
+      }
+    }   
+    
+    @media (max-width:700px) {
+      img{
+        width: 300px;
+        height: 300px;
+      }
+    } 
+    
+
     @media (max-width: 575px) {
       display: block;
-      width: 180px;
+      width: 220px;
       padding:0;
       margin: 0 auto;
+
       img{
-        width: 100%;
+        width: 220px;
+        height: 220px;
       }
     }
   }
+
+  .swiper-slide-active{
+    .detail-scene1-img{
+      img{
+        width: 266px;
+        height: 266px;
+        margin-top: 0;
+      }
+
+
+      @media (max-width:1199px) {
+        img{
+          width: 220px;
+          height: 220px;
+        }
+      }
+
+
+      @media (max-width:991px) {
+        img{
+          width: 360px;
+          height: 360px;
+        }
+      }   
+      
+      @media (max-width:700px) {
+        img{
+          width: 300px;
+          height: 300px;
+        }
+      } 
+      
+
+      @media (max-width: 575px) {
+        display: block;
+        width: 220px;
+        padding:0;
+        margin: 0 auto;
+
+        img{
+          width: 220px;
+          height: 220px;
+        }
+      }
+    }
+  }
+
   .detail-more-price{
     padding-bottom: 20px;
   }
   .swiper-container{
-    height: 600px;
-    @media (min-width: 992px) and (max-width: 1199px){
-      height: 500px;
+    height: 450px;
+    
+    @media (max-width: 991px){
+      height: 550px;
     }
-    @media (min-width: 900px) and (max-width: 991px){
-      min-height: 750px;
+
+    @media (max-width: 991px){
+      height: 450px;
     }
-    @media (min-width: 800px) and (max-width: 899px){
-      min-height: 700px;
-    }
-    @media (min-width: 700px) and (max-width: 799px){
-      min-height: 560px;
-    }
-    @media (min-width: 600px) and (max-width: 699px){
-      min-height: 500px;
-    }
-    @media (min-width: 576px) and (max-width: 599px){
-      min-height: 460px;
-    }
+    
   }
   .swiper-slide{
     text-align: center;
     .detail-scene1-img{
-      padding: 60px 60px 0;
-      img{
-        width: 100%;
-      }
+      // padding: 60px 60px 0;
+
+
       @media (max-width:991px) {
         display: none;
-        padding: 0 60px;
+        // padding: 0 60px;
       }
     }
     .detail-more-info{

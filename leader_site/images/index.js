@@ -290,7 +290,8 @@ $(function() {
 
   $('.o_sm-show .js_recommendPage').each(function(i,n){
     var htmlStr = '';
-    for(var j=$('.js_recommendFont1').length-1;j>=0;j--){
+    // for(var j=$('.js_recommendFont1').length-1;j>=0;j--){
+    for(var j=0;j<$('.js_recommendFont1').length;j++){
       if(i==j){
         htmlStr += '<span class="active" data-index='+(j+1)+'>0'+(j+1)+'</span>';
       }else{
@@ -365,7 +366,6 @@ $(function() {
   //分页
   $('.js_entrancePage').each(function(i,n){
     var htmlStr = '';
-
     for(var j=$('.js_entrancePage').length-1;j>=0;j--){
       if(i==j){
         htmlStr += '<div class="page-num active" data-index='+(j+1)+'>0'+(j+1)+'</div>';
