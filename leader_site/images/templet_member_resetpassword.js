@@ -139,6 +139,7 @@ $(function(){
         if($('.js-sendmobile').hasClass('l-btn-disable')) {
             return;
         }
+
         btnTimeOut($('.js-sendmobile'),'60',' 重新获取验证码');
 
         $.ajax({
@@ -151,6 +152,14 @@ $(function(){
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
+                    else if (jQuery.trim(data).indexOf("请1分钟后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请1分钟后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
+                    else if (jQuery.trim(data).indexOf("请24小时后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请24小时后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
                     else{
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
@@ -177,6 +186,14 @@ $(function(){
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
+                    else if (jQuery.trim(data).indexOf("请1分钟后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请1分钟后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
+                    else if (jQuery.trim(data).indexOf("请24小时后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请24小时后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
                     else{
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
@@ -289,7 +306,7 @@ $(function(){
             flag++;
         }
         if (flag < 2) {
-            result = "需要数字、字母或字符2种组合以上";
+            result = "需要数字、字母或字符2种以上组合";
         }
         return result;
     }
