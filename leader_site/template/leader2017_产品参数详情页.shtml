@@ -29,6 +29,7 @@
 									<div class="head-info-box">
 										<TRS_CHANNEL id="parent" FIELD="CHNLDESC" AUTOLINK='FALSE'/>
 										<i class="iconfont icon-arrow-line-down"></i>
+										<i class="iconfont icon-arrow-line-up"></i>
 									</div>
 									<!-- <div class="head-info-hover">
                                     <div class="l-float-tops">
@@ -49,6 +50,17 @@
 								<div class="head-info-titen"><trs_viewdata field='modelno'/></div>
 							</div>
 						</div>
+						<ul class="float-list">
+							<div class="triangle"></div>
+							<trs_channels id="parent" startpos='2' num='7'>
+								<li>
+									<a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
+										<TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
+										<span><TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK='FALSE'/></span>
+									</a>
+								</li>
+							</trs_channels>
+						</ul>
 					</div>
 					<div class="o_u detail-nav-info">
 						<div class="nav-info-box js_navLink">
