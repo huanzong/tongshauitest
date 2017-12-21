@@ -29,7 +29,7 @@ $(function () {
             var type = $(this).attr('data-alt');
             if (type == 'false') {
                 $('.js_styleVideoContLeft').hide();
-                $(this).css({'width': '50%', 'background-position': 'right top'});
+                $(this).css({'width': '50%'});
                 $(this).attr('data-alt', 'true');
                 $('.js_bannerRightHover').addClass('back-gray').siblings().removeClass('back-gray');
                 $('.js_bannerRightHoverHide').hide();
@@ -42,7 +42,7 @@ $(function () {
     }, function () {
         if (windowWidth > 1199) {
             $('.js_styleVideoContLeft').show();
-            $(this).css({'width': '25%', 'background-position': 'left top'});
+            $(this).css({'width': '25%'});
             $(this).attr('data-alt', 'false');
             $('.js_bannerNoHover').addClass('back-gray').siblings().removeClass('back-gray');
             $('.js_bannerRightHoverHide').show();
@@ -308,36 +308,32 @@ $(function () {
                  player.pause();
                  $(".js_playerBox ").hide();
                  $('.js_styleVideoBox').show();
+
+                 if(windowWidth>991){
+                     $('.video-cont-center').css({width: '50%'});
+                     $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
+                     $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
+                 }
+
              });
 
              var userAgent = navigator.userAgent;
              var player = new MediaElementPlayer('#player');
              $(".js_lifeStylePlay ").on('click', function () {
-                 videoMethod();
-                 $('.js_styleVideoBox').hide();
-                 $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-                 $("#player ").removeClass("o_df-hide ");
-                 var playerID = document.getElementById('player');
-                 playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                 function onVideoProgressUpdate(e) {
-                     var percentageBuffered = 0;
-                     if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                         percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                     } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                         percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                     }
-                     if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                         if (percentageBuffered <= 0.4) {
-                             $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                         } else {
-                             playerID.play();
-                             $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                         }
-                     }
+                 var setTime;
+                 if(windowWidth>991){
+                     setTime = '600';
+                     $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
+                     $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
+                     $('.video-cont-center').css({width: '100%'});
+                 }else{
+                     setTime = '0';
                  }
-
-                 if (!$ie8) {
-                     player.play();
+                 setTimeout(function(){
+                     videoMethod();
+                     $('.js_styleVideoBox').hide();
+                     $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+                     $("#player ").removeClass("o_df-hide ");
                      var playerID = document.getElementById('player');
                      playerID.addEventListener('progress', onVideoProgressUpdate, false);
                      function onVideoProgressUpdate(e) {
@@ -356,7 +352,32 @@ $(function () {
                              }
                          }
                      }
-                 }
+
+                     if (!$ie8) {
+                         player.play();
+                         var playerID = document.getElementById('player');
+                         playerID.addEventListener('progress', onVideoProgressUpdate, false);
+                         function onVideoProgressUpdate(e) {
+                             var percentageBuffered = 0;
+                             if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
+                                 percentageBuffered = playerID.buffered.end(0) / playerID.duration;
+                             } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
+                                 percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
+                             }
+                             if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
+                                 if (percentageBuffered <= 0.4) {
+                                     $(".mejs-overlay-loading ").parent().css("display ", "block ");
+                                 } else {
+                                     playerID.play();
+                                     $(".mejs-overlay-loading ").parent().css("display ", "none ");
+                                 }
+                             }
+                         }
+                     }
+                 },setTime)
+
+
+
              });
          }else{
              $(".js_lifeStylePlay ").on('click', function (){
@@ -385,6 +406,14 @@ $(function () {
                      $(".js_playerBox ").hide();
                      $('.js_styleVideoBox').show();
                      $('.js_videoMdShow').show();
+
+
+                     if(windowWidth>991){
+                         $('.video-cont-center').css({width: '50%'});
+                         $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
+                         $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
+                     }
+
 
                  });
 
