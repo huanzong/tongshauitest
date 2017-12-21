@@ -355,10 +355,10 @@ $(function(){
         if(templet_provinceName=='省'){
             templet_provinceName='';
         }
-        if(templet_city=='市'>-1){
+        if(templet_city=='市'){
             templet_city='';
         }
-        if(templet_areaName=='区'>-1){
+        if(templet_areaName=='区'){
             templet_areaName='';
         }
 
