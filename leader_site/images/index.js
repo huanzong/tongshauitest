@@ -147,7 +147,7 @@ $(function() {
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
     updateOnImagesReady : true,
-    autoplay: 5000,
+    // autoplay: 5000,
     // centeredSlides : true,
     calculateHeight : true,
     slidesPerView: 3,
