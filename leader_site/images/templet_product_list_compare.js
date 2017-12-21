@@ -67,7 +67,7 @@ function initCookie() {
             //解析，其实里边有最多4个的数据详情
             proObjList = JSON.parse(proCookie);
             var pType = "";
-            for (var i = 0; i < proObjList.length; i++) {
+            for (var i = proObjList.length-1; i < 0; i--) {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
                 $("#" + product.id).attr("auto", "1");
