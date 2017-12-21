@@ -212,20 +212,25 @@
             var bannerpic2=result[1];
 
         if(windowWidth>1199){
-            $(".js_memberCenterBanner").css("background-image",'url("'+bannerpic2+'")');
+            $('.js_memberCenterBanner').width(windowWidth-400+'px')
+        }else if(windowWidth<1200&&windowWidth>991){
+            $('.js_memberCenterBanner').width(windowWidth-340+'px')
+
+        }else if(windowWidth<992&&windowWidth>700){
+            $('.js_memberCenterBanner').width(windowWidth-310+'px')
+        }
+
+
+
+        if(windowWidth>1199){
             //这里放小图
             //images/member-center-bannermin.jpg
-            $('.js_memberCenterBanner').width(windowWidth-405+'px')
+            $(".js_memberCenterBanner").css("background-image",'url("'+bannerpic2+'")');
+
         }else{
             $(".js_memberCenterBanner").css('background-image','url("'+bannerpic1+'")');
             //这里放大图
             //images/member-center-banner.jpg
-            if(windowWidth>991){
-                $('.js_memberCenterBanner').width(windowWidth-340+'px')
-            }else if(windowWidth>700){
-                $('.js_memberCenterBanner').width(windowWidth-310+'px')
-
-            }
         }
 
         setTimeout(function () {
