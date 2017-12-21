@@ -40,35 +40,40 @@
 						<div class="news_title">
 							<TRS_DOCUMENT  field='DOCTITLE'></TRS_DOCUMENT>
 						</div>
-						<div class="news_item">
-							<span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd" /></span>
-							<span class="news_item_line news_item_padding news_item_mid"></span>
-							<span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-							<a class="news_item_room news_item_mid jiathis_button_tools_2">
-								<i class="iconfont icon-share-weibo"></i>
-							</a>
-							<a class="news_item_mid jiathis_button_tools_4">
-								<i class="iconfont icon-share-weixin"></i>
-							</a>
+						<!--<div class="news_item">-->
+							<!--<span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd" /></span>-->
+							<!--<span class="news_item_line news_item_padding news_item_mid"></span>-->
+							<!--<span class="news_item_step news_item_room news_item_mid">分享到 :</span>-->
+							<!--<a class="news_item_room news_item_mid">-->
+								<!--<i class="iconfont icon-share-weibo"></i>-->
+							<!--</a>-->
+							<!--<a class="news_item_mid">-->
+								<!--<i class="iconfont icon-share-weixin"></i>-->
+							<!--</a>-->
+						<!--</div>-->
+
+						<div class="activity-icon">
+							<div class="icon-font">
+								<i class="iconfont icon-share-solid"></i>
+							</div>
+							<span class="icon-font-info">分享</span>
+							<div class="l-float activity-float">
+								<div class="float-box float-blog jiathis_style_32x32">
+									<a class="jiathis_button_tsina">
+										<i class="iconfont icon-share-weibo"></i>
+									</a>
+								</div>
+								<div class="float-box float-wechat jiathis_style_32x32">
+									<a class="jiathis_button_weixin">
+										<i class="iconfont icon-share-weixin"></i>
+									</a>
+								</div>
+								<div class="float-box float-qq jiathis_style_32x32">
+									<a class="jiathis_button_qzone"></a>
+								</div>
+							</div>
 						</div>
 
-						<!--<div class="activity-icon">-->
-							<!--<div class="icon-font">-->
-								<!--<i class="iconfont icon-share-solid"></i>-->
-							<!--</div>-->
-							<!--<span class="icon-font-info">分享</span>-->
-							<!--<div class="l-float activity-float">-->
-								<!--<div class="float-box float-blog jiathis_style_32x32">-->
-									<!--<a class="jiathis_button_tsina"></a>-->
-								<!--</div>-->
-								<!--<div class="float-box float-wechat jiathis_style_32x32">-->
-									<!--<a class="jiathis_button_weixin"></a>-->
-								<!--</div>-->
-								<!--<div class="float-box float-qq jiathis_style_32x32">-->
-									<!--<a class="jiathis_button_qzone"></a>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
 						<div class="news_content_top">
 							<TRS_ViewData  field='doccontent'/>
 						</div>
