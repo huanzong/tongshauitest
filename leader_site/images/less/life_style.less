@@ -821,6 +821,7 @@
 
 .life-style-case-photo {
     position: relative;
+    box-shadow: 0 0 25px 0 #ccc;
     >img {
         width: 100%;
         position: relative;
@@ -1038,6 +1039,32 @@
     background: url(life-style-create-background.png) no-repeat top center;
     background-size:  100% auto;
     position: relative;
+
+    @media (min-width: 1200px) and (max-width: 1450px){
+        background-size: auto  100% ;
+
+    }
+
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        /* lg*/
+        background-size: auto  100% ;
+
+    }
+    @media (min-width: 701px) and (max-width: 991px) {
+        /* md*/
+        background-size: auto  100% ;
+
+    }
+    @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+
+    }
+
     .life-style-create-cont-box {
         position: absolute;
         top: 0;
