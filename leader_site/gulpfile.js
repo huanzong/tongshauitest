@@ -266,7 +266,7 @@
     gulp.task("less-build",function(){
         var changeFileArr = []
         var fileArr = []
-        if (options.file) {
+        if (options.file && options.file.indexOf('less') > 0) {
             changeFileArr = options.file.split(',')
             for (var i = 0; i < changeFileArr.length; i++) {
                 if (changeFileArr[i].indexOf('/less/') > 0) {
