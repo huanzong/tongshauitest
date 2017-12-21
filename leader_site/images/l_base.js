@@ -1,3 +1,5 @@
+//a:hover伪类在ios移动端浏览器内无效
+document.body.addEventListener('touchstart',function(){});
 /**
  * ajax初始化
  */
