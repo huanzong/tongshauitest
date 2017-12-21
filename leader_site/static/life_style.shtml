@@ -17,26 +17,26 @@
 <body class=" ">
     <div class="o_main">
                 <!-- 首屏动画 -->
-            <div class="o_g js_animateLine">
-                <div class="index_animate">
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox">
-                        <span></span>
-                    </div>
-                    <div class="index_animateBox"></div>
-                </div>
-            </div>
+            <!--<div class="o_g js_animateLine">-->
+                <!--<div class="index_animate">-->
+                    <!--<div class="index_animateBox">-->
+                        <!--<span></span>-->
+                    <!--</div>-->
+                    <!--<div class="index_animateBox">-->
+                        <!--<span></span>-->
+                    <!--</div>-->
+                    <!--<div class="index_animateBox">-->
+                        <!--<span></span>-->
+                    <!--</div>-->
+                    <!--<div class="index_animateBox">-->
+                        <!--<span></span>-->
+                    <!--</div>-->
+                    <!--<div class="index_animateBox">-->
+                        <!--<span></span>-->
+                    <!--</div>-->
+                    <!--<div class="index_animateBox"></div>-->
+                <!--</div>-->
+            <!--</div>-->
         <!-- 首屏动画 END -->
         <!-- 导航 -->
             <!--#include virtual="public/nav.shtml"-->
