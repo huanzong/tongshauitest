@@ -55,10 +55,15 @@
                     <TRS_ViewData field='doccontent'/>
                 </div>
 
-                <div class="jiathis_style_32x32" style="display: none">
-                    <a class="jiathis_button_tsina"></a>
-                    <a class="jiathis_button_weixin"></a>
+                <div class="l-float activity-float" style="display: none">
+                    <div class="float-box float-blog jiathis_style_32x32">
+                        <a class="jiathis_button_tsina"></a>
+                    </div>
+                    <div class="float-box float-wechat jiathis_style_32x32">
+                        <a class="jiathis_button_weixin"></a>
+                    </div>
                 </div>
+
             </div>
         </div>
         <!--新闻内容END-->
