@@ -922,7 +922,24 @@ var regionServer = {
                     $('.js_addShadeTop').hide()
                 }
 
+                $('.js_alertAddress_save').text(add.save)
+                $('.js_alertAddress_city').text(add.city),
+                $('.js_alertAddress_area').text(add.area),
+                $('.js_alertAddress_save').attr('data-code',add.savecode),
+                $('.js_alertAddress_city').attr('data-code',add.citycode),
+                $('.js_alertAddress_area').attr('data-code',add.areacode)
+
+
                 $('.js-delivery-address span').on('click', function(){
+                    var addArr = $('.js-delivery-address').find('span').eq(2).text().split(' ')
+                    var add = {
+                        'save': $('.js_alertAddress_save').text(),
+                        'city': $('.js_alertAddress_city').text(),
+                        'area': $('.js_alertAddress_area').text(),
+                        'savecode': $('.js_alertAddress_save').attr('data-code'),
+                        'citycode': $('.js_alertAddress_city').attr('data-code'),
+                        'areacode': $('.js_alertAddress_area').attr('data-code')
+                    }
                     addressAlert(add, addressCallback)        
                 })
             })
