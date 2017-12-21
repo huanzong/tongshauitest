@@ -95,7 +95,7 @@ function initLoadCookie() {
     //因为初始化cookie中将proObjlist这个添加 所以在这直接使用
     if (proObjList != null) {
         if (proObjList.length > 0) {
-            for (var i = proObjList.length-1; i < 0; i--) {
+            for (var i = proObjList.length-1; i >= 0; i--) {
                 var product = proObjList[i];
                 compareHtml += '<li class="o_u o_df_1-5">' +
                     '<div class="compare-product-img" id="' + product.id + '" data-chanid="' + product.channelid + '">' +
