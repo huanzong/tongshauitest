@@ -173,6 +173,21 @@
             height: 460px;
             border-right: 1px solid red;
             margin-right: 1px;
+            @media (min-width: 701px) and (max-width: 991px) {
+                /* md*/
+             display: none;
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+                /* sm*/
+                display: none;
+
+            }
+            @media (max-width: 575px) {
+                /* xs*/
+                display: none;
+
+            }
+
         }
     }
 
@@ -222,7 +237,7 @@
             /* xs*/
             right: 0;
             left: 0;
-          
+
             bottom: initial;
         }
         .member-content-1 {
