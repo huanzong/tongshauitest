@@ -99,6 +99,7 @@ $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地
     resetForm();
     //$('.lose').css('background-color','#fff');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮
+    $('.o_Dropdown').off('mouseleave');
 })
 var templet_pageNo=1;
 var templet_pageSize=10;
