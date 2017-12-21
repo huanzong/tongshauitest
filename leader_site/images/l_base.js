@@ -143,7 +143,7 @@ $(function () {
         setTimeout(function () {
             $ele.find('.index_animate').css('z-index', '-11');
             // $ele.siblings(":not(.js_ignorAnimate)").removeClass('l-opacity0');
-            $ele.siblings(":not(.js_ignorAnimate)").animate({
+            $ele.siblings(":not(.js_ignorAnimate)").not('.l-nav').animate({
                 'filter':'alpha(opacity=1)',
                 '-moz-opacity':'1',
                 '-khtml-opacity':'1',
@@ -154,7 +154,7 @@ $(function () {
         }, showTime);
     }
 
-    lineAnimate($('.js_animateLine'), 1000);
+    lineAnimate($('.js_animateLine'), 500);
 
 
     $(window).resize(function () {
