@@ -17,9 +17,9 @@ $(function () {
     //对比栏显示隐藏
     $('.js_compareBoxShow').on('click', function () {
         if (parseInt($(this).attr('data-show'))) {
-            hideCompareFlowLayout();
+            hideCompareFlow();
         } else {
-            showCompareFlowLayout();
+            showCompareFlow();
         }
     });
 })
@@ -123,14 +123,12 @@ function initLoadCookie() {
                     '</li>';
             }
             //$('.js_compareBox').remove("li");
-            showCompareFlow();
             showCompareFlowLayout();
             $('.js_compareBox').prepend(compareHtml);
             //删除对比选项监听
             deleteCompareItem();
             deleteAllCompareItem();
         } else {
-            hideCompareFlow();
             hideCompareFlowLayout();
             //删除对比选项监听
             deleteCompareItem();
@@ -410,7 +408,7 @@ function addCompareOnclick() {
             //加入商品对比列表的模板,
             add_compare_flyOut_item($thisObj);
             //显示对比栏
-            showCompareFlow();
+            showCompareFlowLayout();
         }else if(isCompare==1){//已对比
             remove_compare_fLayout_item($thisObj);
         }
