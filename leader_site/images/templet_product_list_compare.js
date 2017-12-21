@@ -67,7 +67,7 @@ function initCookie() {
             //解析，其实里边有最多4个的数据详情
             proObjList = JSON.parse(proCookie);
             var pType = "";
-            for (var i = proObjList.length-1; i < 0; i--) {
+            for (var i = 0; i < proObjList.length; i++) {
                 //进页面以后循环将cookie里边保存的产品添加到页面上
                 var product = proObjList[i];
                 $("#" + product.id).attr("auto", "1");
@@ -95,7 +95,7 @@ function initLoadCookie() {
     //因为初始化cookie中将proObjlist这个添加 所以在这直接使用
     if (proObjList != null) {
         if (proObjList.length > 0) {
-            for (var i = 0; i < proObjList.length; i++) {
+            for (var i = proObjList.length-1; i < 0; i--) {
                 var product = proObjList[i];
                 compareHtml += '<li class="o_u o_df_1-5">' +
                     '<div class="compare-product-img" id="' + product.id + '" data-chanid="' + product.channelid + '">' +
