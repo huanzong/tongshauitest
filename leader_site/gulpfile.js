@@ -289,7 +289,7 @@
         });
         return combined;
     })
- 
+
     gulp.task("lessBuildAll",function(){
         var combined = combiner.obj([
             gulp.src("./images/less/*.less"),

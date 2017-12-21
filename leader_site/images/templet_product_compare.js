@@ -275,7 +275,8 @@ jQuery(function () {
             }
             ;//end for
 
-        }//end function add2Compare(order_index,$pObj)
+        }
+        //end function add2Compare(order_index,$pObj)
 
         //START function reDrawCompArea()//重绘产品比较区域
         function reDrawCompArea() {

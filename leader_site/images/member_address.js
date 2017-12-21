@@ -48,7 +48,7 @@
 //    globalShade()
 //})
 
-$('#phonequhao').onChange(function(){
+$('#phonequhao').change(function(){
     var inputValue = $(this).val();
     if(typeof (inputValue)=='number'){
         $(this).addClass('member-address-input')
@@ -56,7 +56,7 @@ $('#phonequhao').onChange(function(){
         $(this).removeClass('member-address-input')
     }
 })
-$('#phonefenjihao').onChange(function(){
+$('#phonefenjihao').change(function(){
     var inputValue = $(this).val();
     if(typeof (inputValue)=='number'){
         $(this).addClass('member-address-input')
@@ -64,7 +64,7 @@ $('#phonefenjihao').onChange(function(){
         $(this).removeClass('member-address-input')
     }
 })
-$('#phone').onChange(function(){
+$('#phone').change(function(){
     var inputValue = $(this).val();
     if(typeof (inputValue)=='number'){
         $(this).addClass('member-address-input')

@@ -152,7 +152,13 @@
                                                             <a href="javascript:;" class="iconfont icon-refresh-solid js-freshen"></a>
                                                         </div>
                                                     </div>
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
 
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
+                                                    <div class="o_u o_df_1-2 o_lg_1-2 o_sm_1-2 o_xs_1-2 ">
+                                                            <a class="o_u o_df_1-2 o_lg_1-3 o_md_1-3 o_sm_3-3 o_xs_3-3">
+                                                            <div class="member-home-down-info o_u o_df_1-2 o_lg_2-3 o_md_2-3 o_sm_3-3 o_xs_2-2">
                                                 </div>
                                             </div>
                                             <!--<div class="o_u o_df_1-12"></div>-->
@@ -162,8 +168,6 @@
                                         <!-- 精品推荐 END -->
 
                                         <!--全部订单 END-->
-
-
                                     </div>
                                 </div>
                                 <!-- 个人信息 End-->
@@ -173,8 +177,6 @@
                     </div>
                 </div>
             </div>
-
-
             <!-- 右侧内容 End-->
         </div>
         <!--#include virtual="public/personal_footer.shtml"-->

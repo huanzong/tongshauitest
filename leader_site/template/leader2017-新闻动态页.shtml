@@ -94,7 +94,7 @@
                                                 </p>
                                             </a>
                                             <p class="news_tip_content">
-                                                <TRS_DOCUMENT field='DOCCONTENT' FILTEREDITORCSS='true'></TRS_DOCUMENT>
+                                                <TRS_DOCUMENT field='DOCCONTENT'></TRS_DOCUMENT>
                                             </p>
                                         </div>
                                     </div>
@@ -153,33 +153,6 @@
 <script type="text/javascript" src="templet_pagination.js"></script>
 <script>
     $(function () {
-        // $("#sub").append("<a id='firstsub' class='l-pagination-prew'>上一页</a>");
-        // createPageHTML(${PAGE_COUNT}, ${PAGE_INDEX}, "${PAGE_NAME}", "${PAGE_EXT}")
-        // $("#sub").append("<a id='lastsub' class='l-pagination-next'>下一页</a>");
-        //
-        // var page =${PAGE_INDEX}+1;
-        // $(".l-pagination-pagenumber").removeClass("active");
-        // $("#sub").find('a').eq(page).addClass("active");
-        //
-        // $("#firstsub").click(function () {
-        //     var page =${PAGE_INDEX};
-        //     if (page == 0 || page == 1) {
-        //         $("#firstsub").attr('href', '${PAGE_NAME}' + '.' + '${PAGE_EXT}');
-        //     } else {
-        //         page = page - 1;
-        //         $("#firstsub").attr('href', '${PAGE_NAME}' + '_' + page + '.' + '${PAGE_EXT}');
-        //     }
-        //
-        // });
-        //
-        // $("#lastsub").click(function () {
-        //     var page =${PAGE_INDEX};
-        //     if (page < ${PAGE_COUNT} -1) {
-        //         page = page + 1;
-        //         $("#lastsub").attr('href', '${PAGE_NAME}' + '_' + page + '.' + '${PAGE_EXT}');
-        //     }
-        //
-        // });
 
         //PC端分页
         var pager = new pagination("#sub div.pageMax");
@@ -249,21 +222,6 @@
 
 
     })
-
-    // function createPageHTML(_nPageCount, _nCurrIndex, _sPageName, _sPageExt) {
-    //     if (_nPageCount == null || _nPageCount <= 1) {
-    //         return;
-    //     }
-    //     var nCurrIndex = _nCurrIndex || 0;
-    //     for (var i = 0; i < _nPageCount; i++) {
-    //         var sPageName = (i == 0 ? _sPageName : (_sPageName + "_" + i)) + "." + _sPageExt;
-    //         if (nCurrIndex == i) {
-    //             $("#sub").append("<a class='l-pagination-pagenumber'>" + (i + 1) + "</a>");
-    //         } else {
-    //             $("#sub").append("<a class='l-pagination-pagenumber' href=" + sPageName + ">" + (i + 1) + "</a>");
-    //         }
-    //     }
-    // }
 
 </script>
 </body>

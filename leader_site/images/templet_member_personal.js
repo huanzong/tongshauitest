@@ -20,6 +20,7 @@ $(function(){
     var templet_select_sheng=$("#js_save").oSelect();
     var templet_select_shi=$("#js_city").oSelect();
     var templet_select_qu=$("#js_area").oSelect();
+    $(".js_sex").jq_qvote();
 
     var template_sex;//性别
     //省市区
@@ -67,7 +68,7 @@ $(function(){
                     $("#js_gendergirl").attr("checked",false);
                 }
 
-                $(".js_sex").jq_qvote();
+
 
                 //生日放进去
                 template_birthday=jQuery.trim(data.data.birthday);
@@ -87,7 +88,7 @@ $(function(){
                         if(data.isSuccess){
                             var provinceList=data.data;
                             $("#js_save").html("");
-                            $("#js_save").append('<option value="">--请选择省份--</option>');
+                            $("#js_save").append('<option value="">省</option>');
                             if(provinceList!=null){
                                 for(var i=0; i<provinceList.length; i++){
                                     var isSelected="";
@@ -112,7 +113,7 @@ $(function(){
                                         if(data.isSuccess){
                                             var provinceList=data.data;
                                             $("#js_city").html("");
-                                            $("#js_city").append('<option value="">--请选择城市--</option>');
+                                            $("#js_city").append('<option value="">市</option>');
                                             if(provinceList!=null){
                                                 for(var i=0; i<provinceList.length; i++){
                                                     var isSelected="";
@@ -134,7 +135,7 @@ $(function(){
                                                     if(data.isSuccess){
                                                         var provinceList=data.data;
                                                         $("#js_area").html("");
-                                                        $("#js_area").append('<option value="">--请选择区--</option>');
+                                                        $("#js_area").append('<option value="">区</option>');
                                                         if(provinceList!=null){
                                                             for(var i=0; i<provinceList.length; i++){
                                                                 var isSelected="";
@@ -184,7 +185,7 @@ $(function(){
                 if(data.isSuccess){
                     var provinceList=data.data;
                     $("#js_city").html("");
-                    $("#js_city").append('<option value="">--请选择城市--</option>');
+                    $("#js_city").append('<option value="">市</option>');
                     if(provinceList!=null){
                         for(var i=0; i<provinceList.length; i++){
                             var provinceEach=' <option value="'+provinceList[i].regionCode+'">'+provinceList[i].regionName+'</option>';
@@ -218,7 +219,7 @@ $(function(){
                 if(data.isSuccess){
                     var provinceList=data.data;
                     $("#js_area").html("");
-                    $("#js_area").append('<option value="">--请选择区--</option>');
+                    $("#js_area").append('<option value="">区</option>');
                     if(provinceList!=null){
                         for(var i=0; i<provinceList.length; i++){
                             var provinceEach=' <option value="'+provinceList[i].regionCode+'">'+provinceList[i].regionName+'</option>';
@@ -246,7 +247,7 @@ $(function(){
         $('.js_Date').val(template_birthday);
         $("#js_save").html("");
         templet_select_sheng.init();
-        templet_select_sheng.lose();
+        // templet_select_sheng.lose();
         $("#js_city").html("");
         templet_select_shi.init();
         templet_select_shi.lose();
@@ -263,7 +264,7 @@ $(function(){
                 if(data.isSuccess){
                     var provinceList=data.data;
                     $("#js_save").html("");
-                    $("#js_save").append('<option value="">--请选择省份--</option>');
+                    $("#js_save").append('<option value="">省</option>');
                     if(provinceList!=null){
                         for(var i=0; i<provinceList.length; i++){
                             var isSelected="";
@@ -286,7 +287,7 @@ $(function(){
                                 if(data.isSuccess){
                                     var provinceList=data.data;
                                     $("#js_city").html("");
-                                    $("#js_city").append('<option value="">--请选择城市--</option>');
+                                    $("#js_city").append('<option value="">市</option>');
                                     if(provinceList!=null){
                                         for(var i=0; i<provinceList.length; i++){
                                             var isSelected="";
@@ -308,7 +309,7 @@ $(function(){
                                             if(data.isSuccess){
                                                 var provinceList=data.data;
                                                 $("#js_area").html("");
-                                                $("#js_area").append('<option value="">--请选择区--</option>');
+                                                $("#js_area").append('<option value="">区</option>');
                                                 if(provinceList!=null){
                                                     for(var i=0; i<provinceList.length; i++){
                                                         var isSelected="";
@@ -351,13 +352,13 @@ $(function(){
         var templet_cityId=$.trim($("#js_city  option:selected").val());
         var templet_areaName=$.trim($("#js_area  option:selected").text());
         var templet_areaId=$.trim($("#js_area  option:selected").val());
-        if(templet_provinceName.indexOf("请选择")>-1){
+        if(templet_provinceName=='省'){
             templet_provinceName='';
         }
-        if(templet_city.indexOf("请选择")>-1){
+        if(templet_city=='市'>-1){
             templet_city='';
         }
-        if(templet_areaName.indexOf("请选择")>-1){
+        if(templet_areaName=='区'>-1){
             templet_areaName='';
         }
 
