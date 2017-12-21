@@ -237,9 +237,16 @@ $(function () {
     $('.js_lifeStyleCreateTop li').click(function () {
         $(this).addClass('cur').siblings().removeClass('cur');
         var $index = $(this).index();
+        var className = '.js_lifeStyleCreateSwipe_'+($index+1);
         $('.js_lifeStyleCreateSwipe').eq($index).show().siblings('.js_lifeStyleCreateSwipe').hide();
         $('.js_lifeStyleCreateTitle').eq($index).show().siblings('p').hide();
-
+       if($(className).find('li').length>1){
+           $('.js_lifeStyleCreateLeftBtn').show();
+           $('.js_lifeStyleCreateRightBtn').show();
+       }else{
+           $('.js_lifeStyleCreateLeftBtn').hide();
+           $('.js_lifeStyleCreateRightBtn').hide();
+       }
     })
 
 

@@ -99,7 +99,7 @@
                                         <a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_features" data-nav="js_features">特性</a>
                                         <a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_design" data-nav="js_design">设计</a>
                                         <a href="<TRS_VIEWDATA FIELD='_RECURL' UrlIsAbs='true'></TRS_VIEWDATA>?urls=js_params" data-nav="js_params">参数</a>
-                                        <a href="javascript:;" class="js_comment" data-nav="js_praise">口碑(<span></span>)</a>
+                                        <a href="javascript:;" class="js_comment js_commentNum" data-nav="js_praise">口碑(<span></span>)</a>
                                         <!--<a href="javascript:;" data-nav="js_favourable">优惠组合</a>
                                         <a href="javascript:;">配送与服务</a>-->
                                     </div>
