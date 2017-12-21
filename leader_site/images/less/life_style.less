@@ -481,9 +481,24 @@
         }
     }
     .superiority-left2 {
-        background: url(style_life_superiority_3min.jpg) no-repeat center;
-            background-size: auto 100%;
-             @media (min-width: 701px) and (max-width: 991px) {
+        background-image: url(http://test.tongshuai.com/images/style_life_superiority_3min.jpg);
+        background-repeat:no-repeat;
+        background-position: top center;
+
+        -moz-background-size:100% 100%;
+        -webkit-background-size:100% 100%;
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test.tongshuai.com/images/style_life_superiority_3min.jpg',sizingMethod='scale')";
+        background-size: cover;
+        //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        //        src='style_life_superiority_3min.jpg',
+        //        sizingMethod='scale');
+        ////filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='test.jpg',  sizingMethod='scale');
+        //background-size:100% 100%;
+
+
+
+
+        @media (min-width: 701px) and (max-width: 991px) {
             /* md*/
             background-size: 100% auto;
         }
