@@ -47,6 +47,7 @@ $(function(){
             $('.js_phoneCodeYz').show();
             $('.js_emailCodeYz').hide();
             $('.js-sendmobile').show();
+            $('.js-sendmobile').removeClass('l-btn-disable');
             $('.js-sendmail').hide();
             $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
             if($.trim($('.js_phoneCodeYz').val()).length==6){
@@ -55,19 +56,24 @@ $(function(){
                 $('.js_subimGetUp').addClass('l-btn-disable');
             }
         }
-        if(val==2)
+        else if(val==2)
         {
             $('.js-send').html('邮箱验证');
             $('.js_emailCodeYz').show();
             $('.js_phoneCodeYz').hide();
             $('.js-sendmobile').hide();
             $('.js-sendmail').show();
+            $('.js-sendmail').removeClass('l-btn-disable');
             $('.js-mobileCodeerror').addClass('Validform_right').removeClass('Validform_wrong');
             if($.trim($('.js_emailCodeYz').val()).length==6){
                 $('.js_subimGetUp').removeClass('l-btn-disable');
             }else{
                 $('.js_subimGetUp').addClass('l-btn-disable');
             }
+        }
+        else{
+            $('.js-sendmobile').addClass('l-btn-disable');
+            $('.js-sendmail').addClass('l-btn-disable');
         }
     }
 //点击发送短信验证码
