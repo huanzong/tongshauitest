@@ -246,7 +246,7 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
                         searchHtml += '<div class="pro-info-price"></div>';
                     }
                     searchHtml += '<span class="l-btn-sm l-btn-red pro-info-buy">立即购买</span>';
-                    searchHtml += '<span class="l-btn-sm l-btn-line2 pro-info-take">订阅</span></a>';
+                    searchHtml += '</a>';
                     searchHtml += '</div>';
                     searchHtml += '</div>';
                 }
