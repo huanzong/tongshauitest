@@ -215,10 +215,17 @@
             $(".js_memberCenterBanner").css("background-image",'url("'+bannerpic2+'")');
             //这里放小图
             //images/member-center-bannermin.jpg
+            $('.js_memberCenterBanner').width(windowWidth-405+'px')
         }else{
             $(".js_memberCenterBanner").css('background-image','url("'+bannerpic1+'")');
             //这里放大图
             //images/member-center-banner.jpg
+            if(windowWidth>991){
+                $('.js_memberCenterBanner').width(windowWidth-340+'px')
+            }else if(windowWidth>700){
+                $('.js_memberCenterBanner').width(windowWidth-310+'px')
+
+            }
         }
 
         setTimeout(function () {
