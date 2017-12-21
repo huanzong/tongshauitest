@@ -1,4 +1,87 @@
 $(function() {
+    var screenWidth = document.body.offsetWidth;
+    if (screenWidth > 991) {
+      setTimeout(function(){
+        $('.index-banner').animate({
+          'margin-left': 0
+        },1500,'swing')
+  
+        $('.index-banner-shadow-bottom').animate({
+          'right': 0
+        },1500,'swing',function(){
+          $('.index-banner-shadow').fadeOut()
+        })
+
+        setTimeout(function(){
+          $('.l-nav').animate({
+            'opacity': 1
+          }, 700)
+        },800)
+      },600)
+    }
+    
+    
+
+    $('.enter-con').hover(function(){
+      $(this).removeClass('off').addClass('on')
+    },function(){
+      $(this).removeClass('on').addClass('off')
+    })
+
+    /**
+     * 数字滚动
+     */
+    $('.js-scroll-num').each(function(index){
+      var dataNum = $(this).attr('data-num')
+      for (let i = 0; i <  dataNum.length; i++) {
+        $(this).append('<div num="'+dataNum[i]+'"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>')
+      }
+    })
+
+    /**
+     * 
+     * @desc 获取滚动条距顶部的距离
+     */
+    function getScrollTop() {
+      return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    }
+
+    if (document.body.clientHeight > $('.index-enter').offset().top) {
+      if ($('.index-enter').not('.js-inited').length > 0) {
+        $('.index-enter').addClass('js-inited');
+        var inSenceTimer = setInterval(function(){
+          $('.enter-con').not('.in-sence').not('.enter-con-xs').eq(0).addClass('in-sence')
+          if ($('.enter-con').not('.in-sence').length == 0) {
+            clearInterval(inSenceTimer)
+          }
+        },500);
+      }
+    }
+
+    $(window).scroll(function () {  
+        if (document.body.clientHeight + getScrollTop() > $('.index-about').offset().top + 500) {
+          if($('.js-scroll-num').not('.js-inited').length > 0){
+            $('.js-scroll-num').find('div').each(function(){
+              $(this).addClass('js-inited')
+              $(this).find('span').eq(0).animate({
+                'margin-top': -46 * $(this).attr('num') + 'px'
+              },1000)
+            })
+          }
+        }
+        
+        if (document.body.clientHeight + getScrollTop() > $('.index-enter').offset().top + 60) {
+          if ($('.index-enter').not('.js-inited').length > 0) {
+            $('.index-enter').addClass('js-inited');
+            var inSenceTimer = setInterval(function(){
+              $('.enter-con').not('.in-sence').not('.enter-con-xs').eq(0).addClass('in-sence')
+              if ($('.enter-con').not('.in-sence').length == 0) {
+                clearInterval(inSenceTimer)
+              }
+            },500);
+          }
+        }
+    });  
 
   function init() {
 
@@ -75,7 +158,7 @@ $(function() {
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
     updateOnImagesReady : true,
-    autoplay: 5000,
+    // autoplay: 5000,
     // centeredSlides : true,
     calculateHeight : true,
     slidesPerView: 3,
@@ -107,6 +190,9 @@ $(function() {
       //   $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
       //   $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
       // },500)
+      $('.js_bannerInfo').oHrel({
+        obj:'$(this).next()'
+      }).init();
     }
   });
 
@@ -185,6 +271,9 @@ $(function() {
       //分页
       $('.js_bannerSwiperPage .page-num').removeClass('active');
       $('.js_bannerSwiperPage .page-num').eq(indexPage-1-index).addClass('active');
+
+      $('.js_bannerSwiperPage .page-num').find('.red-line').removeClass('active')
+      $('.js_bannerSwiperPage .page-num.active').find('.red-line').addClass('active')
     };
   }
 
@@ -204,16 +293,16 @@ $(function() {
   // },2000);
 
 
-	setTimeout(function(){
+	// setTimeout(function(){
 
-		//banner左侧高度跟随
-    $('.js_bannerInfo').oHrel({
-      obj:'$(this).next()'
-    }).init();
-    //banner左侧文字居中
-    // $(".js_bannnerCenter").oBoxCenter().init();
+	// 	//banner左侧高度跟随
+  //   $('.js_bannerInfo').oHrel({
+  //     obj:'$(this).next()'
+  //   }).init();
+  //   //banner左侧文字居中
+  //   // $(".js_bannnerCenter").oBoxCenter().init();
 
-	},1000);
+	// },1000);
   
   /**
    * 首页顶部轮播 pgaer 实践
