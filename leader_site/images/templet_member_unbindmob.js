@@ -96,6 +96,14 @@ $(function(){
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
                     }
+                    else if (jQuery.trim(data).indexOf("请1分钟后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请1分钟后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
+                    else if (jQuery.trim(data).indexOf("请24小时后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请24小时后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
                 }
             }
         })
@@ -124,6 +132,14 @@ $(function(){
                     else if (jQuery.trim(data).indexOf("create_confirm_error")>-1){
                         $('.js_subimGetUp').addClass('l-btn-disable');
                         $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送失败').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
+                    else if (jQuery.trim(data).indexOf("请1分钟后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请1分钟后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
+                    else if (jQuery.trim(data).indexOf("请24小时后重试")>-1){
+                        $('.js_subimGetUp').addClass('l-btn-disable');
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请24小时后重试').addClass('Validform_wrong').removeClass('Validform_right');
                     }
                 }
             }
