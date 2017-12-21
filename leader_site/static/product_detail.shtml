@@ -77,6 +77,51 @@
                                     <div class="head-info-titen">JIGEJOJ-12800</div>
                                 </div>
                             </div>
+                            <ul class="float-list">
+                                <div class="triangle"></div>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_01.png">
+                                        <span>冰箱</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_02.png">
+                                        <span>洗衣机</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_03.png">
+                                        <span>冰柜</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_04.png">
+                                        <span>空调</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_05.png">
+                                        <span>热水器</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_06.png">
+                                        <span>厨电</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="images/icon_07.png">
+                                        <span>电视</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="o_u detail-nav-info">
                             <div class="nav-info-box js_navLink">
