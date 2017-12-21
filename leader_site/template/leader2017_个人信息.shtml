@@ -209,7 +209,7 @@
                                         <div class="o_g member-personalinfo-list2  js-modifyPhotoBtn">
                                             <div class="o_u o_df_2-3 o_lg_2-3 o_md_2-3 o_sm_2-2 o_xs_2-2 member-personalinfo-listiptbox o_g">
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2 member-personalinfo-upimg">
-                                                    <a href="javascript:;" class="l-btn-normal l-btn-red o_df_2-3" id="getupimg">上传图片</a>
+                                                    <a href="javascript:;" class="l-btn-normal l-btn-red o_df_2-3" id="getupimg">保存图片</a>
                                                 </div>
                                                 <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_1-2 o_xs_1-2  member-personalinfo-over">
                                                     <a href="javascript:;" class="l-btn-normal l-btn-line2 js-imgcancel">取消</a>
