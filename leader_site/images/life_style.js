@@ -218,6 +218,8 @@ $(function () {
     if (windowWidth > 991) {
         $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'});
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
+        $('.js_lifeStyleCaseText').css({'height': lifeCasePhotoH});
+
     } else {
         //$('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
         $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':(lifeCasePhotoHMd-$('.js_lifeStyleCasePhoto').height())/2})
@@ -226,17 +228,25 @@ $(function () {
       //alert(lifeCasePhotoHMd);
         $('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
         $('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+        $('.js_lifeStyleCaseText').css({'height':'270px','margin-top':'30px'});
+
     }
-    $('.js_lifeStyleCaseText').css({'height': lifeCasePhotoH});
 
 
     // 创造优生活title
     $('.js_lifeStyleCreateTop li').click(function () {
         $(this).addClass('cur').siblings().removeClass('cur');
         var $index = $(this).index();
+        var className = '.js_lifeStyleCreateSwipe_'+($index+1);
         $('.js_lifeStyleCreateSwipe').eq($index).show().siblings('.js_lifeStyleCreateSwipe').hide();
         $('.js_lifeStyleCreateTitle').eq($index).show().siblings('p').hide();
-
+       if($(className).find('li').length>1){
+           $('.js_lifeStyleCreateLeftBtn').show();
+           $('.js_lifeStyleCreateRightBtn').show();
+       }else{
+           $('.js_lifeStyleCreateLeftBtn').hide();
+           $('.js_lifeStyleCreateRightBtn').hide();
+       }
     })
 
 
