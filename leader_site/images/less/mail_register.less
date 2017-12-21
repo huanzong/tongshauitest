@@ -26,7 +26,7 @@
       /* md*/
 
       height: 350px;
-      background-image:url('reg_bg_top1.jpg') ;
+      background-image:url('reg_bg_top1.png') ;
       background-repeat:no-repeat;
       background-position:top center ;
       filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
@@ -47,7 +47,7 @@
     }
     @media (max-width: 575px) {
       /* xs*/
-      height: 120px;
+      height: 120px !important;
       //background: url('reg_bg_top2.JPG') no-repeat top center;
       //background-size:  800px 120px ;
       background-image:url('reg_bg_top2.JPG') ;
@@ -176,6 +176,20 @@
             text-align: center;
             color: #fff;
             margin: 45px 0 20px 0;
+            width: 360px;
+            @media (min-width: 701px) and (max-width: 991px) {
+              /* md*/
+              width: 60%;
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+              /* sm*/
+              width: 80%;
+
+            }
+            @media (max-width: 575px) {
+              width: 80%;
+
+            }
           }
         }
 
@@ -223,6 +237,7 @@
     .mail_register_cont_time{
       font-size: 12px;
       color: #666666;
+      margin-top: 20px;
       span{
         color: @l-orange;
       }
@@ -250,8 +265,8 @@
     }
   }
   .login_footer{
-    position: absolute;
-    bottom: 0;
+    //position: absolute;
+    //bottom: 0;
     //background: #fff;
     @media (max-width: 575px) {
       /* xs*/
@@ -293,11 +308,11 @@
   //}
   @media (min-width: 701px) and (max-width: 991px) {
     /* md*/
-    margin:130px 0 0 0;
+    margin:160px 0 0 0;
   }
   @media (min-width: 576px) and (max-width: 700px) {
     /* md*/
-    margin:160px 0 0 0;
+    margin:140px 0 0 0;
   }
   @media (max-width: 575px) {
     /* md*/
@@ -316,8 +331,9 @@
 }
 
 .mail_register_log_btn{
-  height: 120px;
+  text-align: center;
+  height: 105px;
   >span{
-    display: inline-block;
+    display: block;
   }
 }

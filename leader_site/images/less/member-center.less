@@ -213,12 +213,16 @@
         }
         @media (min-width: 576px) and (max-width: 700px) {
             /* sm*/
-            // right: 0;
+             right: 0;
+            left: 0;
+
             bottom: initial;
         }
         @media (max-width: 575px) {
             /* xs*/
-            right: initial;
+            right: 0;
+            left: 0;
+          
             bottom: initial;
         }
         .member-content-1 {
@@ -399,7 +403,7 @@
             i {
                 display: inline-block;
                 font-size: 12px;
-                color: #666;
+                color: #ccc;
                 margin: 0 20px;
             }
 
@@ -722,10 +726,12 @@
             @media (min-width: 576px) and (max-width: 700px) {
             /* sm*/
               width: 100%;
+                max-width: 105px;
         }
         @media (max-width: 575px) {
             /* xs*/
               width: 100%;
+            max-width: 105px;
         }
         }
     }
