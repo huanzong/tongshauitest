@@ -158,6 +158,9 @@ function readXmlFile(url) {
 
 //检索产品方法
 function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchTerm) {
+    if(_tableName == "" || _tableName == undefined || _tableName == " "){
+        _tableName = table_name;
+    }
     var searchHtml = "";
     $.ajax({
         type: "get",
