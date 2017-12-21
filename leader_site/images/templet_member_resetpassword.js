@@ -104,10 +104,10 @@ $(function(){
     $("#js_resetpassword").change(function() { SelectChange(); });
     function SelectChange(){
         var val=$("#js_resetpassword").val();
-        if(val==1)
-        {
+        if(val==1) {
             $('.js-send').html('短信验证');
             $('.js_phoneCodeYz').show();
+            $('.js-sendmobile').removeClass('l-btn-disable');
             $('.js_emailCodeYz').hide();
             $('.js-sendmobile').show();
             $('.js-sendmail').hide();
@@ -117,11 +117,10 @@ $(function(){
             }else{
                 $('.js_subimGetUp').addClass('l-btn-disable');
             }
-        }
-        if(val==2)
-        {
+        } else if(val==2) {
             $('.js-send').html('邮箱验证');
             $('.js_emailCodeYz').show();
+            $('.js-sendmail').removeClass('l-btn-disable');
             $('.js_phoneCodeYz').hide();
             $('.js-sendmobile').hide();
             $('.js-sendmail').show();
@@ -131,6 +130,9 @@ $(function(){
             }else{
                 $('.js_subimGetUp').addClass('l-btn-disable');
             }
+        }else{
+            $('.js-sendmobile').addClass('l-btn-disable');
+            $('.js-sendmail').addClass('l-btn-disable');
         }
     }
 
