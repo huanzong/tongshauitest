@@ -187,13 +187,13 @@ $(function() {
       // }
     },
     onImagesReady: function () {
-      // setTimeout(function(){
+      setTimeout(function(){
       //   $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
       //   $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
-      // },500)
-      $('.js_bannerInfo').oHrel({
-        obj:'$(this).next()'
-      }).init();
+        $('.js_bannerInfo').oHrel({
+          obj:'$(this).next()'
+        }).init();
+      },1000)      
     }
   });
 
