@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="UTF-8">
-			
+
 	<trs_viewdatas id="首页">
-		<title><TRS_ViewData Field="title" /></title>
+		<title>
+			<TRS_ViewData Field="title" />
+		</title>
 		<meta name="keywords" content="<TRS_ViewData Field='Keywords' />" />
 		<meta name="description" content="<TRS_ViewData Field='Description' />" />
 	</TRS_ViewDatas>
@@ -13,219 +16,238 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-Compatible" content ="IE=edge,chrome=1" />
-	<meta http-equiv="X-UA-Compatible" content="IE=10;IE=9; IE=8; IE=7; IE=EDGE"><!-- ie强制不使用兼容试图 -->
-	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=10;IE=9; IE=8; IE=7; IE=EDGE">
+	<!-- ie强制不使用兼容试图 -->
+
 	<!--#include file="${ROOT_PATH}public/style/css.shtml"-->
 	<!-- <link rel="stylesheet" type="text/css" href="../site5/swiper-3.4.2.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="../site5/index.css">
 </head>
 
 <body>
-<div class="o_body">
-	<div class="o_main">
-		<!-- 首屏动画 -->
-		<div class="o_g js_animateLine">
-			<div class="index_animate">
-				<div class="index_animateBox">
-					<span></span>
-				</div>
-				<div class="index_animateBox">
-					<span></span>
-				</div>
-				<div class="index_animateBox">
-					<span></span>
-				</div>
-				<div class="index_animateBox">
-					<span></span>
-				</div>
-				<div class="index_animateBox">
-					<span></span>
-				</div>
-				<div class="index_animateBox"></div>
-			</div>
-		</div>
-		<!-- 首屏动画 End -->
-
-		<!-- 导航 -->
-		<!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-		<!-- 导航 End-->
-
-		<!-- 首页banner -->
-		<div class="o_g index-banner">
-			<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
-				<!-- banner文字循环体 -->
-				<trs_viewdatas id="首页banner" num="5">
-					<div class="banner-middle-box js_bannerSwiperFont">
-                        		<div>
-						<div class="info-main">
-							<div class="js_bannnerCenter">
-								<span><trs_viewdata field="m_title" num="21" TRUNCATEDFLAG=""/></span>
-							</div>
-						</div>
-						<div class="info-main">
-							<div class="js_bannnerCenter">
-								<span><trs_viewdata field="m2_title" num="21" TRUNCATEDFLAG=""/></span>
-							</div>
-						</div>
-						<div class="info-sub">
-							<div class="js_bannnerCenter">
-								<span><trs_viewdata field="f_title" num="37" TRUNCATEDFLAG=""/></span>
-							</div>
-						</div>
+	<div class="o_body">
+		<div class="o_main">
+			<!-- 首屏动画 -->
+			<div class="o_g js_animateLine">
+				<div class="index_animate">
+					<div class="index_animateBox">
+						<span></span>
 					</div>
+					<div class="index_animateBox">
+						<span></span>
 					</div>
-				</trs_viewdatas>
-				<!-- banner文字循环体 End-->
-				<!-- banner 分页 不需要循环-->
-				<div class="banner-page js_bannerSwiperPage"> </div>
-				<!-- banner 分页 不需要循环 END-->
-
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox">
+						<span></span>
+					</div>
+					<div class="index_animateBox"></div>
+				</div>
 			</div>
-			<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
-				<div class="banner-img">
-					<div class="swiper-container js_bannerSwiper">
-						<div class="swiper-wrapper">
-							<trs_viewdatas id="首页banner" num="5">
-								<div class="swiper-slide">
-									<a href="<trs_viewdata field='link'/>" target="_blank">
-										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" sm="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
-									</a>
+			<!-- 首屏动画 End -->
+
+			<!-- 导航 -->
+			<!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+			<!-- 导航 End-->
+
+			<!-- 首页banner -->
+			<div class="index-banner-box js-index-banner-box">
+				<div class="index-banner-shadow"></div>
+				<div class="o_g index-banner">
+					<div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
+						<!-- banner文字循环体 -->
+						<trs_viewdatas id="首页banner" num="5">
+							<div class="banner-middle-box js_bannerSwiperFont">
+								<div>
+									<div class="info-main">
+										<div class="js_bannnerCenter">
+											<span>
+												<trs_viewdata field="m_title" num="21" TRUNCATEDFLAG="" />
+											</span>
+										</div>
+									</div>
+									<div class="info-main">
+										<div class="js_bannnerCenter">
+											<span>
+												<trs_viewdata field="m2_title" num="21" TRUNCATEDFLAG="" />
+											</span>
+										</div>
+									</div>
+									<div class="info-sub">
+										<div class="js_bannnerCenter">
+											<span>
+												<trs_viewdata field="f_title" num="37" TRUNCATEDFLAG="" />
+											</span>
+										</div>
+									</div>
 								</div>
-							</trs_viewdatas>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
-				<!-- 循环体 -->
-				<trs_viewdatas id="首页banner" num="5">
-					<div class="o_u o_df_2-2 js_bannerSwiperFont1">
-						<div class="banner-big"><trs_viewdata field="m_title" num="21"/></div>
-						<div class="banner-big"><trs_viewdata field="m2_title" num="21"/></div>
-						<div class="banner-small"><trs_viewdata field="f_title" num="37"/></div>
-					</div>
-				</trs_viewdatas>
-				<!-- 循环体 END -->
-			</div>
-		</div>
-		<!-- 首页banner END -->
+							</div>
+						</trs_viewdatas>
+						<!-- banner文字循环体 End-->
+						<!-- banner 分页 不需要循环-->
+						<div class="banner-page js_bannerSwiperPage"> </div>
+						<!-- banner 分页 不需要循环 END-->
 
-		<!-- 统帅入口 -->
-		<div class="o_g index-enter">
-			<trs_viewdatas id="产线分类" startpos="0" num="6">
-				<a class="enter-con" href="<trs_viewdata field='link'/>"  target="_blank">
-					<div class="enter-con-icon <trs_viewdata field='icon_class'/>">
-						<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
 					</div>
-					<div class="enter-con-china o_df-hide o_xs-show"><trs_viewdata field='pro_name'/></div>
-					<div class="enter-con-en"><trs_viewdata field='eng_name'/></div>
-					<div class="enter-con-china o_xs-hide"><trs_viewdata field='pro_name'/></div>
-					<div class="enter-con-point o_xs-hide">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</a>
-			</trs_viewdatas>
-			<div class="enter-con enter-con-xs js_enterShow">
-				<i class="iconfont icon-icon_left enter-corner-left"></i>
-			</div>
-			<trs_viewdatas id="产线分类" startpos="6" num="1">
-				<a class="enter-con" href="<trs_viewdata field='link'/>"  target="_blank">
-					<div class="enter-con-icon <trs_viewdata field='icon_class'/>">
-						<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"/>
-					</div>
-					<div class="enter-con-china o_df-hide o_xs-show"><trs_viewdata field='pro_name'/></div>
-					<div class="enter-con-en"><trs_viewdata field='eng_name'/></div>
-					<div class="enter-con-china o_xs-hide"><trs_viewdata field='pro_name'/></div>
-					<div class="enter-con-point o_xs-hide">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</a>
-			</trs_viewdatas>
-			<div class="enter-con enter-con-xs js_enterShow">
-				<i class="iconfont icon-icon enter-corner-right"></i>
-			</div>
-			<!-- 以下是超过7个，默认隐藏的产线入口 -->
-			<trs_viewdatas id="产线分类" startpos="7">
-				<a class="enter-con l-none js_enterShow" href="<trs_viewdata field='link'/>"  target="_blank">
-					<div class="enter-con-icon <trs_viewdata field='icon_class'/>">
-						<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"/>
-					</div>
-					<div class="enter-con-china o_df-hide o_xs-show"><trs_viewdata field='pro_name'/></div>
-					<div class="enter-con-en"><trs_viewdata field='eng_name'/></div>
-					<div class="enter-con-china o_xs-hide"><trs_viewdata field='pro_name'/></div>
-					<div class="enter-con-point o_xs-hide">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</a>
-			</trs_viewdatas>
-			<!-- 以下是超过7个，默认隐藏的产线入口 END -->
-		</div>
-		<a class="index-enter-more js_enterMore" data-type="more">
-			展开全部产品分类 +
-		</a>
-		<!-- 统帅入口 END -->
-
-		<!-- 推荐产品 -->
-		<div class="o_g index-recommend">
-			<div class="recommend-bg o_sm-hide o_xs-hide"></div>
-			<div class="o_u o_df_1-6 o_md_1-12 o_sm-hide o_xs-hide">
-				<div class="recommend-img-small">
-					<!-- <img src="../site5/index_rec_next1.JPG" class="" /> -->
-					<trs_viewdatas id="产品推荐" num="1">
-						<img class="recommend-img-next js_recImgSmall js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
-					</trs_viewdatas>
-				</div>
-			</div>
-			<div class="o_u o_df_1-3 o_md_5-12 o_sm-hide o_xs-hide">
-				<!-- 循环体 -->
-				<trs_viewdatas id="产品推荐" num="5">
-					<div class="recommend-info js_recommendFont">
-						<div class="info-title"><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="32" TRUNCATEDFLAG=""/></div>
-						<div class="info-con">
-							<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG=""/>
-						</div>
-						<a class="info-more" href="<trs_viewdata field='link'/>" target="_blank">
-							<span></span>
-							<span></span>
-							<span></span>
-						</a>
-						<div class="info-page js_recommendPage">
-
-						</div>
-					</div>
-				</trs_viewdatas>
-				<!-- 循环体 End -->
-			</div>
-			<div class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2 recommend-main">
-				<div class="recommend-main-bg js_recommendHerobg"></div>
-				<div class="rec-swiper-btn rec-swiper-prev js_swiperRecMainPrev"></div>
-				<div class="rec-swiper-btn rec-swiper-next js_swiperRecMainNext"></div>
-				<div class="recommend-main-box js_recommendHero">
-					<div class="swiper-container js_swiperRecMain">
-						<div class="swiper-wrapper">
-							<trs_viewdatas id="产品推荐" num="5">
-								<div class="swiper-slide">
-									<a href="<trs_viewdata field='link'/>" target="_blank">
-										<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
-									</a>
+					<div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
+						<div class="banner-img">
+							<div class="swiper-container js_bannerSwiper">
+								<div class="swiper-wrapper">
+									<trs_viewdatas id="首页banner" num="5">
+										<div class="swiper-slide">
+											<a href="<trs_viewdata field='link'/>" target="_blank">
+												<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+												 md="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+												 sm="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+												 xs="<TRS_VIEWDATAAPPENDIXS FIELD='small_banner' ><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+												/>
+											</a>
+										</div>
+									</trs_viewdatas>
 								</div>
-							</trs_viewdatas>
+							</div>
+                            <div class="index-banner-shadow-bottom"></div>
 						</div>
 					</div>
+					<div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
+						<!-- 循环体 -->
+						<trs_viewdatas id="首页banner" num="5">
+							<div class="o_u o_df_2-2 js_bannerSwiperFont1">
+								<div class="banner-big">
+									<trs_viewdata field="m_title" num="21" />
+								</div>
+								<div class="banner-big">
+									<trs_viewdata field="m2_title" num="21" />
+								</div>
+								<div class="banner-small">
+									<trs_viewdata field="f_title" num="37" />
+								</div>
+							</div>
+						</trs_viewdatas>
+						<!-- 循环体 END -->
+					</div>
 				</div>
-				<div class="recommend-main-info o_df-hide o_sm-show o_xs-show">
+			</div>
+			<!-- 首页banner END -->
+
+			<!-- 统帅入口 -->
+			<div class="o_g index-enter">
+				<trs_viewdatas id="产线分类" startpos="0" num="6">
+					<a class="enter-con" href="<trs_viewdata field='link'/>" target="_blank">
+						<div>
+							<div class="enter-con-icon <trs_viewdata field='icon_class'/>"></div>
+							<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+						</div>
+						<div class="enter-con-china o_df-hide o_xs-show">
+							<trs_viewdata field='pro_name' />
+						</div>
+						<div class="enter-con-en">
+							<trs_viewdata field='eng_name' />
+						</div>
+						<div class="enter-con-china o_xs-hide">
+							<trs_viewdata field='pro_name' />
+						</div>
+						<div class="enter-con-point o_df-hide o_xl-show">
+							<span class="typing_loader"></span>
+						</div>
+						<div class="enter-con-point o_xs-hide  o_xl-hide">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</a>
+				</trs_viewdatas>
+				<div class="enter-con enter-con-xs js_enterShow">
+					<i class="iconfont icon-icon_left enter-corner-left"></i>
+				</div>
+				<trs_viewdatas id="产线分类" startpos="6" num="1">
+					<a class="enter-con" href="<trs_viewdata field='link'/>" target="_blank">
+						<div>
+							<div class="enter-con-icon <trs_viewdata field='icon_class'/>"></div>
+							<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+						</div>
+						<div class="enter-con-china o_df-hide o_xs-show">
+							<trs_viewdata field='pro_name' />
+						</div>
+						<div class="enter-con-en">
+							<trs_viewdata field='eng_name' />
+						</div>
+						<div class="enter-con-china o_xs-hide">
+							<trs_viewdata field='pro_name' />
+						</div>
+						<div class="enter-con-point o_df-hide o_xl-show">
+							<span class="typing_loader"></span>
+						</div>
+						<div class="enter-con-point o_xs-hide o_xl-hide">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</a>
+				</trs_viewdatas>
+				<div class="enter-con enter-con-xs js_enterShow">
+					<i class="iconfont icon-icon enter-corner-right"></i>
+				</div>
+				<!-- 以下是超过7个，默认隐藏的产线入口 -->
+				<trs_viewdatas id="产线分类" startpos="7">
+					<a class="enter-con l-none js_enterShow" href="<trs_viewdata field='link'/>" target="_blank">
+						<div>
+							<div class="enter-con-icon <trs_viewdata field='icon_class'/>"></div>
+							<img src="<TRS_VIEWDATAAPPENDIXS FIELD='icon'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+						</div>
+						<div class="enter-con-china o_df-hide o_xs-show">
+							<trs_viewdata field='pro_name' />
+						</div>
+						<div class="enter-con-en">
+							<trs_viewdata field='eng_name' />
+						</div>
+						<div class="enter-con-china o_xs-hide">
+							<trs_viewdata field='pro_name' />
+						</div>
+						<div class="enter-con-point o_df-hide o_xl-show">
+							<span class="typing_loader"></span>
+						</div>
+						<div class="enter-con-point o_xs-hide o_xl-hide">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</a>
+				</trs_viewdatas>
+				<!-- 以下是超过7个，默认隐藏的产线入口 END -->
+			</div>
+			<a class="index-enter-more js_enterMore" data-type="more">
+				展开全部产品分类 +
+			</a>
+			<!-- 统帅入口 END -->
+
+			<!-- 推荐产品 -->
+			<div class="o_g index-recommend">
+				<div class="recommend-bg o_sm-hide o_xs-hide"></div>
+				<div class="o_u o_df_1-6 o_md_1-12 o_sm-hide o_xs-hide">
+					<div class="recommend-img-small">
+						<!-- <img src="../site5/index_rec_next1.JPG" class="" /> -->
+						<trs_viewdatas id="产品推荐" num="1">
+							<img class="recommend-img-next js_recImgSmall js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+							 md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+							/>
+						</trs_viewdatas>
+					</div>
+				</div>
+				<div class="o_u o_df_1-3 o_md_5-12 o_sm-hide o_xs-hide">
+					<!-- 循环体 -->
 					<trs_viewdatas id="产品推荐" num="5">
-						<div class="js_recommendFont1">
-							<div class="info-title"><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="32" TRUNCATEDFLAG=""/></div>
+						<div class="recommend-info js_recommendFont">
+							<div class="info-title">
+								<trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="32" TRUNCATEDFLAG="" />
+							</div>
 							<div class="info-con">
-								<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG=""/>
+								<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG="" />
 							</div>
 							<a class="info-more" href="<trs_viewdata field='link'/>" target="_blank">
 								<span></span>
@@ -237,155 +259,210 @@
 							</div>
 						</div>
 					</trs_viewdatas>
+					<!-- 循环体 End -->
+				</div>
+				<div class="o_u o_df_1-2 o_sm_2-2 o_xs_2-2 recommend-main">
+					<div class="recommend-main-bg js_recommendHerobg"></div>
+					<div class="rec-swiper-btn rec-swiper-prev js_swiperRecMainPrev"></div>
+					<div class="rec-swiper-btn rec-swiper-next js_swiperRecMainNext"></div>
+					<div class="recommend-main-box js_recommendHero">
+						<div class="swiper-container js_swiperRecMain">
+							<div class="swiper-wrapper">
+								<trs_viewdatas id="产品推荐" num="5">
+									<div class="swiper-slide">
+										<a href="<trs_viewdata field='link'/>" target="_blank">
+											<img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+											 md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+											/>
+										</a>
+									</div>
+								</trs_viewdatas>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-main-info o_df-hide o_sm-show o_xs-show">
+						<trs_viewdatas id="产品推荐" num="5">
+							<div class="js_recommendFont1">
+								<div class="info-title">
+									<trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="32" TRUNCATEDFLAG="" />
+								</div>
+								<div class="info-con">
+									<trs_viewdata field='f_title' num="80" TRUNCATEDFLAG="" />
+								</div>
+								<a class="info-more" href="<trs_viewdata field='link'/>" target="_blank">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+								<div class="info-page js_recommendPage">
+
+								</div>
+							</div>
+						</trs_viewdatas>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- 推荐产品 END -->
+	</div>
+	<!-- 推荐产品 END -->
 
-		<!-- 首页入口 -->
-		<div class="o_g index-entrance">
-			<div class="o_u o_df_1-12 o_sm-hide o_xs-hide">
-				<div class="rec-swiper-btn rec-swiper-prev js_swiperEntrabcePrev"></div>
-			</div>
-			<div class="o_u o_df_10-12 o_sm_12-12 o_xs_12-12">
-				<div class="index-entrance-row">
-					<div class="swiper-container js_swiperEntrabce" >
-						<div class="swiper-wrapper">
-							<trs_viewdatas id='首页入口' num="5">
-								<div class="swiper-slide">
-									<div class="o_g">
-										<div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
-											<div class="l-padding">
-												<a href="<trs_viewdata field='link'/>" target="_blank">
-													<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic1'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+	<!-- 首页入口 -->
+	<div class="o_g index-entrance">
+		<div class="o_u o_df_1-12 o_sm-hide o_xs-hide">
+			<div class="rec-swiper-btn rec-swiper-prev js_swiperEntrabcePrev"></div>
+		</div>
+		<div class="o_u o_df_10-12 o_sm_12-12 o_xs_12-12">
+			<div class="index-entrance-row">
+				<div class="swiper-container js_swiperEntrabce">
+					<div class="swiper-wrapper">
+						<trs_viewdatas id='首页入口' num="5">
+							<div class="swiper-slide">
+								<div class="o_g">
+									<div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
+										<div class="l-padding">
+											<a href="<trs_viewdata field='link'/>" target="_blank">
+												<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic1'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" />
+											</a>
+											<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
+												<h3>
+													<trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num='28' TRUNCATEDFLAG="" />
+												</h3>
+												<p>
+													<trs_viewdata field='f_title' num="100" TRUNCATEDFLAG="" />
+												</p>
+												<a class="info-more" href="<trs_viewdata field='link'/>">
+													<span></span>
+													<span></span>
+													<span></span>
 												</a>
-												<div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
-													<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num='28' TRUNCATEDFLAG=""/></h3>
-													<p><trs_viewdata field='f_title' num="100" TRUNCATEDFLAG=""/></p>
-													<a class="info-more" href="<trs_viewdata field='link'/>">
-														<span></span>
-														<span></span>
-														<span></span>
-													</a>
-												</div>
 											</div>
 										</div>
-										<div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
-											<div class="entrance-page o_md-hide">
-												<div class="entrance-page-line">
-													<div class="entrance-line-red"></div>
-												</div>
-												<div class="entrance-page-num js_entrancePage">
-													<trs_viewdatas id='首页入口' num="5">
-														<!-- <div class="page-num" data-index="<TRS_ROWNO/>">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div>-->
-													</trs_viewdatas>
-
-												</div>
+									</div>
+									<div class="o_u o_df_7-12 o_sm-hide o_xs-hide">
+										<div class="entrance-page o_md-hide">
+											<div class="entrance-page-line">
+												<div class="entrance-line-red"></div>
 											</div>
-											<div class="l-padding">
-												<div class="o_u entrance-img2">
+											<div class="entrance-page-num js_entrancePage">
+												<trs_viewdatas id='首页入口' num="5">
+													<!-- <div class="page-num" data-index="<TRS_ROWNO/>">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div>-->
+												</trs_viewdatas>
+
+											</div>
+										</div>
+										<div class="l-padding">
+											<div class="o_u entrance-img2">
+												<a href="<trs_viewdata field='link'/>" target="_blank">
+													<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic2'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%"
+													/>
+												</a>
+											</div>
+											<br>
+											<div class="index-entrance-bottom o_sm-hide o_xs-hide">
+												<div class="o_df-hide o_md-show entrance-page">
+													<div class="entrance-page-line">
+														<div class="entrance-line-red"></div>
+													</div>
+													<div class="entrance-page-num js_entrancePage1">
+														<trs_viewdatas id='首页入口' num="5">
+															<!-- <div class="page-num" data-index="<TRS_ROWNO/>">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div> -->
+														</trs_viewdatas>
+
+													</div>
+												</div>
+												<div class="o_u entrance-img3">
 													<a href="<trs_viewdata field='link'/>" target="_blank">
-														<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic2'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%" />
+														<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic3'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%"
+														/>
 													</a>
 												</div>
-												<br>
-												<div class="index-entrance-bottom o_sm-hide o_xs-hide">
-													<div class="o_df-hide o_md-show entrance-page">
-														<div class="entrance-page-line">
-															<div class="entrance-line-red"></div>
-														</div>
-														<div class="entrance-page-num js_entrancePage1">
-															<trs_viewdatas id='首页入口' num="5">
-																<!-- <div class="page-num" data-index="<TRS_ROWNO/>">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div> -->
-															</trs_viewdatas>
-
-														</div>
-													</div>
-													<div class="o_u entrance-img3">
-														<a href="<trs_viewdata field='link'/>" target="_blank">
-															<img src="<TRS_VIEWDATAAPPENDIXS FIELD='pic3'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>" style="width: 100%" />
-														</a>
-													</div>
-													<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 17%;vertical-align: bottom;">
-														<h3><trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="28" TRUNCATEDFLAG=""/></h3>
-														<p><trs_viewdata field='f_title' num="100" TRUNCATEDFLAG=""/></p>
-														<a class="info-more"  href="<trs_viewdata field='link'/>" target="_blank">
-															<span></span>
-															<span></span>
-															<span></span>
-														</a>
-													</div>
+												<div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 17%;vertical-align: bottom;">
+													<h3>
+														<trs_viewdata field='title' AUTOFORMATTYPE='HTML' AUTOFORMAT='true' num="28" TRUNCATEDFLAG="" />
+													</h3>
+													<p>
+														<trs_viewdata field='f_title' num="100" TRUNCATEDFLAG="" />
+													</p>
+													<a class="info-more" href="<trs_viewdata field='link'/>" target="_blank">
+														<span></span>
+														<span></span>
+														<span></span>
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</trs_viewdatas>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="o_u o_df_1-12">
-				<div class="rec-swiper-btn rec-swiper-next js_swiperEntrabceNext"></div>
-			</div>
-		</div>
-		<!-- 首页入口 END -->
-
-		<!-- 关于统帅 -->
-		<div class="o_g index-about">
-			<div class="o_g index-about-bg o_sm-hide o_xs-hide">
-				<div class="o_u o_df_4-12 o_lg_6-12 o_md_6-12">
-					<span></span>
-				</div>
-			</div>
-			<div class="o_u o_df_1-12"></div>
-			<div class="o_u o_df_10-12">
-				<div class="o_g">
-					<div class="o_u o_df_4-10 o_lg_1-2 o_md_1-2 o_sm_3-5 o_xs_3-4 index-about-data">
-						<div class="o_u o_df-hide o_sm-show o_xs-show about-select-sm">
-							<div class="about-china">选择统帅</div>
-							<a class="about-en" href="javascript:;">WHY CHOOSE US</a>
-						</div>
-						<trs_viewdatas id="品牌推荐" num="6">
-							<a class="about-data-box" href="<trs_viewdata field='link'/>" target="_blank">
-								<div class="data-title"><trs_viewdata field='title'/></div>
-								<div class="data-num"><trs_viewdata field='num'/></div>
-							</a>
+							</div>
 						</trs_viewdatas>
 					</div>
-					<div class="o_u o_df_6-10 o_lg_1-2 o_md_1-2 o_sm_1-3 o_xs_1-2 index-about-select">
-						<div class="o_u o_df_1-6 o_lg_2-5 o_md_2-5 o_sm_hide o_xs-hide"></div>
-						<div class="o_u o_df_5-6 o_lg_3-5 o_md_3-5 o_sm_2-2 o_xs_2-2">
-							<div class="about-bg-gray">
-								<div class="about-font o_sm-hide o_xs-hide">
-									<div class="about-china">选择统帅</div>
-									<a class="about-en" href="/life/"  target="_blank">WHY CHOOSE US</a>
-								</div>
-								<i class="iconfont icon-icon about-icon"></i>
+				</div>
+			</div>
+		</div>
+		<div class="o_u o_df_1-12">
+			<div class="rec-swiper-btn rec-swiper-next js_swiperEntrabceNext"></div>
+		</div>
+	</div>
+	<!-- 首页入口 END -->
+
+	<!-- 关于统帅 -->
+	<div class="o_g index-about">
+		<div class="o_g index-about-bg o_sm-hide o_xs-hide">
+			<div class="o_u o_df_4-12 o_lg_6-12 o_md_6-12">
+				<span></span>
+			</div>
+		</div>
+		<div class="o_u o_df_1-12"></div>
+		<div class="o_u o_df_10-12">
+			<div class="o_g">
+				<div class="o_u o_df_4-10 o_lg_1-2 o_md_1-2 o_sm_3-5 o_xs_3-4 index-about-data">
+					<div class="o_u o_df-hide o_sm-show o_xs-show about-select-sm">
+						<div class="about-china">选择统帅</div>
+						<a class="about-en" href="javascript:;">WHY CHOOSE US</a>
+					</div>
+					<trs_viewdatas id="品牌推荐" num="6">
+						<a class="about-data-box" href="<trs_viewdata field='link'/>" target="_blank">
+							<div class="data-title">
+								<trs_viewdata field='title' />
 							</div>
+							<div class="data-num js-scroll-num" data-num="<trs_viewdata field='num'/>"></div>
+						</a>
+					</trs_viewdatas>
+				</div>
+				<div class="o_u o_df_6-10 o_lg_1-2 o_md_1-2 o_sm_1-3 o_xs_1-2 index-about-select">
+					<div class="o_u o_df_1-6 o_lg_2-5 o_md_2-5 o_sm_hide o_xs-hide"></div>
+					<div class="o_u o_df_5-6 o_lg_3-5 o_md_3-5 o_sm_2-2 o_xs_2-2">
+						<div class="about-bg-gray">
+							<div class="about-font o_sm-hide o_xs-hide">
+								<div class="about-china">选择统帅</div>
+								<a class="about-en" href="/life/" target="_blank">WHY CHOOSE US</a>
+							</div>
+							<i class="iconfont icon-icon about-icon"></i>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- 关于统帅 END -->
-
-		<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
 	</div>
-</div>
-<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-<script type="text/javascript" src="../site5/idangerous.swiper2.7.6.js"></script>
-<script type="text/javascript" src="../site5/index.js"></script>
-<script>
-	$(function(){
-	    var templat_num=<TRS_CHANNEL ID='产线分类' FIELD='_DataCount'/>;
-        if(window.innerWidth<1200){
-            if(templat_num<8){
-                $(".js_enterMore").hide();
-			}
-		}
-	})
+	<!-- 关于统帅 END -->
 
-</script>
+	<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+	</div>
+	</div>
+	<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+	<script type="text/javascript" src="../site5/idangerous.swiper2.7.6.js"></script>
+	<script type="text/javascript" src="../site5/index.js"></script>
+	<script>
+		$(function () {
+			var templat_num = <TRS_CHANNEL ID='产线分类' FIELD='_DataCount' />;
+			if (window.innerWidth < 1200) {
+				if (templat_num < 8) {
+					$(".js_enterMore").hide();
+				}
+			}
+		})
+
+	</script>
 </body>
+
 </html>
