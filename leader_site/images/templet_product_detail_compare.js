@@ -17,9 +17,9 @@ $(function () {
     //对比栏显示隐藏
     $('.js_compareBoxShow').on('click', function () {
         if (parseInt($(this).attr('data-show'))) {
-            hideCompareFlow();
+            hideCompareFlowLayout();
         } else {
-            showCompareFlow();
+            showCompareFlowLayout();
         }
     });
 })
@@ -123,12 +123,14 @@ function initLoadCookie() {
                     '</li>';
             }
             //$('.js_compareBox').remove("li");
+            showCompareFlow();
             showCompareFlowLayout();
             $('.js_compareBox').prepend(compareHtml);
             //删除对比选项监听
             deleteCompareItem();
             deleteAllCompareItem();
         } else {
+            hideCompareFlow();
             hideCompareFlowLayout();
             //删除对比选项监听
             deleteCompareItem();
@@ -292,6 +294,7 @@ window.remove_compare_fLayout_item = function ($obj) {
     });
 
     if ($list.find('.js_compareLi').length <= 0) {
+        hideCompareFlow();
         hideCompareFlowLayout();
         //删除cookie里面的相应数据,未点比较按钮时删除cookie
         for (var i = 0; i < proObjList.length; i++) {
@@ -408,6 +411,7 @@ function addCompareOnclick() {
             //加入商品对比列表的模板,
             add_compare_flyOut_item($thisObj);
             //显示对比栏
+            showCompareFlow();
             showCompareFlowLayout();
         }else if(isCompare==1){//已对比
             remove_compare_fLayout_item($thisObj);
@@ -482,14 +486,14 @@ function deleteAllCompareItem() {
 
 //显示对比浮层
 function showCompareFlowLayout(){
-    $('.prolist-compare').show();
+    //$('.prolist-compare').show();
     $('.js_compareBox').show();
     $('.js_compareBoxShow').attr('data-show', 1);
     $('.js_compareBoxShow').html('隐藏<i class="iconfont icon-arrow-line-down"></i>');
 }
 //隐藏对比浮层
 function hideCompareFlowLayout(){
-    $('.prolist-compare').hide();
+    //$('.prolist-compare').hide();
     $('.js_compareBox').hide();
     $('.js_compareBoxShow').attr('data-show', 0);
     $('.js_compareBoxShow').html('展开<i class="iconfont icon-arrow-line-up"></i>');
