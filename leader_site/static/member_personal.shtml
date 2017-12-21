@@ -237,7 +237,7 @@
             <p class="o_u  js_popUpText"></p>
         </div>
     </div>
-    <!--#include virtual="public/personal_footer.shtml"-->
+    <!--#include virtual="public/member_footer.shtml"-->
 </div>
 </div>
 <!--#include virtual="public/foot.shtml"-->

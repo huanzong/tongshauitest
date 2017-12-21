@@ -21,10 +21,17 @@
             <!-- 右侧内容 START-->
             <!--o_df_2-12  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2-->
             <div class="o_u o_df_10-12 o_lg_11-12 o_md_11-12  o_sm_10-12 o_xs_2-2 js_memberNavRight ">
-                <div class="memeber-homenav-top" >
-                    <p>MY ACCOUNT</p>
-                    <h2>统帅用户中心</h2>memeber-homenav-top
-                    <div class="iconfont icon-icon "></div>
+                <div class="memeber-homenav-top o_df-show o_md-hide o_xs-hide o_sm-hide" >
+                    <img class="pic" src="images/member_home-title.jpg">
+                    <div class="txt">
+                        <div class=o_table>
+                            <div class="o_cell">
+                                <p>MY ACCOUNT</p>
+                                <h2>统帅用户中心</h2>
+                            </div>
+                        </div>
+                         <div class="iconfont icon-icon "></div>
+                    </div>
                 </div>
                 <div class="o_u  o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle  memeber-nav-middle2 js_memberNavMiddle ">
                     <!--<div class="o_u o_df_2-12 o_lg_3-12 o_md_4-12 o_sm_5-12 o_xs_1-2  memeber-nav-middle  memeber-nav-middle2 js_memberNavMiddle ">-->
@@ -54,10 +61,23 @@
                 </div>
 
                 <div class="o_u o_df_10-12  o_xs_2-2 js-membercontboxs js-membercontboxs-2" style="position: relative;z-index: 14">
-                    <div class="memeber-homenav-top-md" >
+                   <!--  <div class="memeber-homenav-top-md" >
                         <p>MY ACCOUNT</p>
                         <h2>统帅用户中心</h2>
                         <div class="iconfont icon-icon "></div>
+                    </div> -->
+                    <div class="memeber-homenav-top  o_df-hide o_md-show o_xs-show o_sm-show" >
+                        <img class="pic o_df-hide o_md-show" src="images/member_home_title_md.jpg">
+                        <img class="pic o_df-hide o_sm-show o_xs-show" src="images/member_home_title_smxs.jpg">
+                        <div class="txt">
+                            <div class=o_table>
+                                <div class="o_cell">
+                                    <p>MY ACCOUNT</p>
+                                    <h2>统帅用户中心</h2>
+                                </div>
+                            </div>
+                             <div class="iconfont icon-icon "></div>
+                        </div>
                     </div>
                     <div class="land-shade js_navshade" style="display: none;"></div>
                     <div class="o_u o_df_12-12 member-home-cont member-security js-membercontbox">
@@ -179,7 +199,7 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/personal_footer.shtml"-->
+        <!--#include virtual="public/member_footer.shtml"-->
 
     </div>
 </div>
