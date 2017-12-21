@@ -80,7 +80,7 @@
                             </div>
                             <ul class="float-list">
                                 <div class="triangle"></div>
-                                <trs_channels id="parent" startpos='2' num='7'>
+                                <trs_channels id="parent.parent" startpos='2' num='7'>
                                     <li>
                                         <a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
                                             <TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
