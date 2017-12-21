@@ -149,10 +149,14 @@ $(function () {
         "top": maxImgHeight / 8 + 'px'
     })
     if (windowWidth > 1199) {
-        //$('.js_superiorityBox').height(windowWidth / 3 / 0.75);
-        $('.js_superiorityBox').height( $('.js_superiorityCenter').height());
+        $('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+
+
 
     }
+    //else{
+    //    $('.js_superiorityBox').height( $('.js_superiorityCenter').height());
+    //}
 
 
     $('.js_videoMdImgMin').height($('.js_videoMdImgMax').height())
