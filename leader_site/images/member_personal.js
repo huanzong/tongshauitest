@@ -182,7 +182,8 @@ $(function(){
             forceParse: true,       //解析输入值
             format: "yyyy-mm-dd",   // 日期格式
             pickerPosition: "bottom-left",
-            // startDate: new Date()     // 开始时间
+            startDate: '1940-01-01',// 开始时间
+            endDate: new Date()     // 最大时间
         });
     }else{
         $('.js_Date').mobiscroll().date({
@@ -191,7 +192,7 @@ $(function(){
             display: 'center',
             dateFormat: 'yyyy-mm-dd', // 日期格式
             dateOrder: 'yymmdd',      //面板中日期排列格式
-            // minDate:new Date()        //  最小时间
+            maxDate:new Date()        //  最大时间
         });
     }
 

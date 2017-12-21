@@ -417,7 +417,7 @@
         top: 0;
         right: 0;
         z-index: 9;
-
+        display: none;
       }
       ul{
           padding: 10px 0 200px 0;
@@ -486,52 +486,114 @@
   }
 }
 .memeber-homenav-top{
-  background: url(member_home_title.jpg) no-repeat center;
+  //background: url(mber_home_title.jpg) no-repeat center;
+  //background: url(member_home-title.jpg) no-repeat center;
   height: 120px;
-  background-size: auto 100% ;
+  width:100%;
+  //background-size: auto 100% ;
   position: relative;
-
-  >div{
-    color: @l-red;
-    font-size: 35px;
+  .pic{
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -1000px;
+    left: 50%;
+    width: 2000px;
   }
-  p{
-    font-size: 16px;
-    color: #ccc;
-    padding: 35px 0 0 60px;
+  .txt{
+    width:100%;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    .o_cell{
+      text-align: left;
+      padding-left: 60px;
+    }
+    p{
+      font-size: 16px;
+      color: #333;
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+    }
+    h2{
+      font-size: 28px;
+      color: #333;
+    }
+    .iconfont{
+      color: @l-red;
+      font-size: 32px;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+    
   }
-  h2{
-    font-size: 28px;
-    color: #333;
-    padding: 0px 0 0 60px;
-  }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) and (max-width: 1199px) {/*lg*/
+      //background-size:1200px 120px ;
 
-    background-size:1200px 120px ;
-
-
   }
-  @media (min-width: 701px) and (max-width: 991px) {
-    /* md*/
-    display: none;
+  @media (min-width: 701px) and (max-width: 991px) {/* md*/
+    .txt{
+      .o_cell{
+        padding-left: 45px;
+      }
+      h2{
+        font-size:24px;
+      }
+    }
   }
-  @media (min-width: 576px) and (max-width: 700px) {
-    /* sm*/
-    display: none;
-
+  @media (min-width: 576px) and (max-width: 700px) {/* sm*/
+    height: 100px;
+    .pic{
+      margin-top: -50px;
+      margin-left: -500px;
+      width: 1000px;
+    }
+    .txt{
+      height:100px;
+      .o_cell{
+        padding-left: 45px;
+      }
+      p{
+        font-size:12px;
+      }
+      h2{
+        font-size:20px;
+      }
+      .iconfont{
+        right: 15px;
+        bottom: 15px;
+        font-size:24px;
+      }
+    }
   }
-  @media (max-width: 575px) {
-    /* xs*/
-    display: none;
+  @media (max-width: 575px) {/* xs*/
+    height: 100px;
+    .pic{
+      margin-top: -50px;
+      margin-left: -500px;
+      width: 1000px;
+    }
+    .txt{
+      height:100px;
+      p{
+        font-size: 12px;
+      }
+      h2{
+        font-size: 20px;
 
+      }
+      .iconfont{
+        display: none;
+      }
+    }
   }
 }
 .memeber-homenav-top-md{
   display: none;
-  background: url(member_home_title.jpg) no-repeat center;
+  //background: url(member_home_title.jpg) no-repeat center;
+  background: url(member_home_title_md.jpg) no-repeat center;
   height: 120px;
   position: relative;
   text-align: left;
@@ -569,7 +631,8 @@
     /* sm*/
     display: block;
     height: 100px;
-    background: url(member_home_title_min.png) no-repeat left center ;
+    //background: url(member_home_title_min.png) no-repeat left center ;
+    background: url(member_home_title_smxs.jpg) no-repeat left center ;
     background-size: 100% 100%;
     >p{
       padding: 32px 0 0 45px ;
@@ -591,7 +654,8 @@
     height: 100px;
 
     display: block;
-    background: url(member_home_title_min.png) no-repeat center center ;
+    //background: url(member_home_title_min.png) no-repeat center center ;
+    background: url(member_home_title_smxs.jpg) no-repeat center center ;
     background-size: 575px auto;
     >p{
       padding: 32px 0 0 45px ;
