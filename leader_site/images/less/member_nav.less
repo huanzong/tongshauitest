@@ -488,7 +488,7 @@
 .memeber-homenav-top{
   background: url(member_home_title.jpg) no-repeat center;
   height: 120px;
-  background-size: 100% 100%;
+  background-size: auto 100% ;
   position: relative;
 
   >div{
@@ -509,7 +509,10 @@
     padding: 0px 0 0 60px;
   }
   @media (min-width: 992px) and (max-width: 1199px) {
-    /* lg*/
+
+    background-size:1200px 120px ;
+
+
   }
   @media (min-width: 701px) and (max-width: 991px) {
     /* md*/
@@ -567,7 +570,7 @@
     display: block;
     height: 100px;
     background: url(member_home_title_min.png) no-repeat left center ;
-    background-size: 100% auto;
+    background-size: 100% 100%;
     >p{
       padding: 32px 0 0 45px ;
       font-size: 12px;
