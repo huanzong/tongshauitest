@@ -219,8 +219,6 @@
             $('.js_memberCenterBanner').width(windowWidth-310+'px')
         }
 
-
-
         if(windowWidth>1199){
             //这里放小图
             //images/member-center-bannermin.jpg
