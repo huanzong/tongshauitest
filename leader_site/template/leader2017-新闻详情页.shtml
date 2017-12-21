@@ -41,12 +41,11 @@
                 <div class="news_title">
                     <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
                 </div>
-                <div class="news_item">
-                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata'
-                                                                                               DATEFORMAT="yyyy-MM-dd"/></span>
+                <div class="news_item jiathis_style_32x32">
+                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd"/></span>
                     <span class="news_item_line news_item_padding news_item_mid"></span>
                     <span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-                    <a class="news_item_room news_item_mid " title="分享到微博">
+                    <a class="news_item_room news_item_mid" title="分享到微博">
                         <!--<i class="iconfont icon-share-weibo"></i>-->
                         <span class="jiathis_txt jiathis_separator iconfont icon-share-weibo jtico_tsina"></span>
                     </a>
@@ -55,13 +54,11 @@
                         <span class="jiathis_txt jiathis_separator iconfont icon-share-weixin jtico_weixin"></span>
                     </a>
                 </div>
-
                 <div class="news_content_top">
                     <TRS_ViewData field='doccontent'/>
                 </div>
             </div>
         </div>
-
         <!--新闻内容END-->
         <div class="o_g">
             <div class="o_u o_df_1-12">
@@ -72,6 +69,7 @@
             </div>
         </div>
         <!--新闻底部-->
+
         <div class="o_g news_detail_bottom">
             <div class="o_u o_df_1-12">
 
