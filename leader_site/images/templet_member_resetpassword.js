@@ -104,8 +104,7 @@ $(function(){
     $("#js_resetpassword").change(function() { SelectChange(); });
     function SelectChange(){
         var val=$("#js_resetpassword").val();
-        if(val==1)
-        {
+        if(val==1) {
             $('.js-send').html('短信验证');
             $('.js_phoneCodeYz').show();
             $('.js_emailCodeYz').hide();
@@ -117,9 +116,7 @@ $(function(){
             }else{
                 $('.js_subimGetUp').addClass('l-btn-disable');
             }
-        }
-        if(val==2)
-        {
+        } else if(val==2) {
             $('.js-send').html('邮箱验证');
             $('.js_emailCodeYz').show();
             $('.js_phoneCodeYz').hide();
@@ -131,6 +128,9 @@ $(function(){
             }else{
                 $('.js_subimGetUp').addClass('l-btn-disable');
             }
+        }else{
+
+
         }
     }
 
