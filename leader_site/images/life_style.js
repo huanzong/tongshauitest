@@ -376,7 +376,8 @@ $(function () {
     var mySwiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: 2000,
-        cssWidthAndHeight: true,
+        //cssWidthAndHeight: true,
+        calculateHeight : true,
         autoplayDisableOnInteraction: false, //手动滑动图片后是否停止滚动轮播
         onSlideChangeStart: function (swiper) {
             var dataType =  $('.js_lifeStylePhotoBox').attr('data-type');
@@ -436,7 +437,8 @@ $(function () {
             loop: true,
             autoplay: 5000,
             simulateTouch: false,
-            cssWidthAndHeight: true,
+            //cssWidthAndHeight: true,
+            calculateHeight : true,
             autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
             onSlideChangeStart: function (swiper) {
                 var bannerIndex = $('.js_lifeStyleVideoSwipe').find('.swiper-slide-active').attr('data-index');
@@ -461,7 +463,8 @@ $(function () {
             loop: true,
             autoplay: 5000,
             simulateTouch: true,
-            cssWidthAndHeight: true,
+            //cssWidthAndHeight: true,
+            calculateHeight : true,
             autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
             onSlideChangeStart: function (swiper) {
                 var dataType = $('.js_superiorityBox').attr('data-type');
@@ -484,12 +487,19 @@ $(function () {
                 }
             }
         })
+
+
+
+
+
+
 // 核心优势 轮播
         var superioritySwiperRight = new Swiper('.js_superioritySwiperRight', {
             loop: true,
             autoplay: 5000,
             simulateTouch: false,
-            cssWidthAndHeight: true,
+            //cssWidthAndHeight: true,
+            calculateHeight : true,
             autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
             onSlideChangeStart: function (swiper) {
             }
@@ -582,7 +592,8 @@ setTimeout(function(){
                 simulateTouch: false,
                    slidesPerView:2,
                    slidesPerGroup : 2,
-                cssWidthAndHeight: true,
+                   //cssWidthAndHeight: true,
+                   calculateHeight : true,
                 autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
                 onSlideChangeStart: function (swiper) {
 
