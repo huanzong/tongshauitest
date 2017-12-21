@@ -520,12 +520,16 @@
     }
     .superiority-left-min {
      position: absolute;
-     left: -60%;
+     //left: -60%;
      img {
          opacity: .2;
          filter: alpha(opacity=20);
-         width: 100%;
+         width: auto;
      }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            /* lg*/
+            //left: -60%;
+        }
      @media (min-width: 992px) and (max-width: 1199px) {
     /* lg*/
     display: none;
@@ -549,11 +553,11 @@
 
  .superiority-right-min {
      position: absolute;
-     right: -60%;
+     //right: -60%;
      img {
          opacity: .2;
          filter: alpha(opacity=20);
-         width: 100%;
+         width: auto;
      }
           @media (min-width: 992px) and (max-width: 1199px) {
     /* lg*/
@@ -653,16 +657,16 @@
     .iconfont {
         font-size: 30px;
         position: absolute;
-        height: 640px;
+        //height: 640px;
         width: 40px;
-        line-height: 640px;
+        //line-height: 640px;
         color: #000;
         text-align: center;
     }
 
     .icon-arrow-jiantou-left {
         top: 0;
-        right: 0px;
+        left: 0;
         @media (min-width: 992px) and (max-width: 1199px) {
             /* lg*/
             display: none;
@@ -683,7 +687,7 @@
 
     .icon-arrow-jiantou-right {
         top: 0;
-        left: 0px;
+        right: 0;
         @media (min-width: 992px) and (max-width: 1199px) {
             /* lg*/
             display: none;
@@ -709,7 +713,8 @@
             z-index: 2;
         }
     }
-    .superiority-left-box{ 
+    .superiority-left-box{
+        height: 100%;
         overflow: hidden;
         position: relative;
         @media (max-width: 575px) {

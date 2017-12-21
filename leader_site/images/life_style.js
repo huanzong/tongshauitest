@@ -193,18 +193,30 @@ $(function () {
 //核心优势
 
     $('.js_lifeStyleSuperiorityL').height(windowWidth / 3 / 0.75);
-    $('.js_superiorityLeftMin').css({"height": windowWidth / 3, "top": (windowWidth / 3 / 0.75 - windowWidth / 3) / 2});
     $('.js_lifeStyleSuperiorityLDown').css({
         "height": windowWidth / 3,
         "top": (windowWidth / 3 / 0.75 - windowWidth / 3) / 2
     });
-    $('.js_liftSuperiorityLeft').height(windowWidth / 3 / 0.75);
-    $('.js_liftSuperiorityRight').height(windowWidth / 3 / 0.75);
 
+    $('.js_superioritySwiperLeft').css({'height':windowWidth/9*4});
+    $('.js_superioritySwiperRight').css({'height':windowWidth/9*4});
+    $('.js_superiorityLeftMin').css({  "top": (windowWidth / 3 / 0.75 - windowWidth / 3) / 2 });
+
+
+    if(windowWidth>1199){
+        $('.js_superiorityRightBtn').css({"height": windowWidth / 3,'line-height': windowWidth / 3+'px'});
+        $('.js_superiorityLeftBtn').css({"height": windowWidth / 3,'line-height': windowWidth / 3+'px'});
+        $('.js_superiorityLeftMin').css({'height':windowWidth/3+'px'})
+        $('.js_superiorityLeftMin').eq(0).css({'left':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').eq(2).css({'left':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').eq(1).css({'right':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').eq(3).css({'right':(windowWidth/3-66)+'px'})
+
+    }
 
 // 设置lift-style-case 图片切换按钮高度
     if (windowWidth > 991) {
-        $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
+        $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'});
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
     } else {
         //$('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
@@ -458,7 +470,9 @@ $(function () {
 
 
 
+
 // 核心优势 轮播
+
         var superioritySwiperLeft = new Swiper('.js_superioritySwiperLeft', {
             loop: true,
             autoplay: 5000,
