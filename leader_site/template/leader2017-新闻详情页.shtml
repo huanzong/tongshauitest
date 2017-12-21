@@ -1,120 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>新闻标题 - 统帅官网</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-		<meta name="format-detection" content="telephone=no, email=no" />
-		<!--#include file="${ROOT_PATH}public/style/css.shtml"-->
-		<link rel="stylesheet" type="text/css" href="news_detail.css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>新闻标题 - 统帅官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
+    <link rel="stylesheet" type="text/css" href="news_detail.css">
+</head>
 
-	<body>
+<body>
 
-		<div class="o_body">
-			<div class="o_main">
-				<!-- 导航 -->
-				<!--#include file="${ROOT_PATH}public/header/header.shtml"-->
-				<!-- 导航 End-->
-				<!--头部导航-->
-				<div class="o_g news_detail_head">
-					<div class="o_u o_df_1-12">
+<div class="o_body">
+    <div class="o_main">
+        <!-- 导航 -->
+        <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
+        <!-- 导航 End-->
+        <!--头部导航-->
+        <div class="o_g news_detail_head">
+            <div class="o_u o_df_1-12">
 
-					</div>
-					<div class="o_u o_df_10-12">
-						<a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />" class="news_index news_padding_right">首页</a>
-						<i class="iconfont icon-arrow-line-right news_padding_right"></i>
-						<a href="<TRS_CHANNEL id='新闻动态' UrlIsAbs='true' FIELD='_RECURL' />" class="news_leader news_padding_right">关于统帅</a>
-						<i class="iconfont icon-arrow-line-right news_padding_right"></i>
-						<a href="javascript:;" class="news_detail news_padding_right">新闻详情</a>
-					</div>
-				</div>
-				<!--头部导航END-->
-				<!--新闻内容-->
-				<div class="o_g news_detail_content">
-					<div class="o_u o_df_2-12 o_md_1-12 o_sm_1-12 o_xs_1-12">
+            </div>
+            <div class="o_u o_df_10-12">
+                <a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />" class="news_index news_padding_right">首页</a>
+                <i class="iconfont icon-arrow-line-right news_padding_right"></i>
+                <a href="<TRS_CHANNEL id='新闻动态' UrlIsAbs='true' FIELD='_RECURL' />"
+                   class="news_leader news_padding_right">关于统帅</a>
+                <i class="iconfont icon-arrow-line-right news_padding_right"></i>
+                <a href="javascript:;" class="news_detail news_padding_right">新闻详情</a>
+            </div>
+        </div>
+        <!--头部导航END-->
+        <!--新闻内容-->
+        <div class="o_g news_detail_content">
+            <div class="o_u o_df_2-12 o_md_1-12 o_sm_1-12 o_xs_1-12">
 
-					</div>
-					<div class="o_u o_df_8-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
-						<div class="news_title">
-							<TRS_DOCUMENT  field='DOCTITLE'></TRS_DOCUMENT>
-						</div>
-						<div class="news_item jiathis_style_32x32">
-							<span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd" /></span>
-							<span class="news_item_line news_item_padding news_item_mid"></span>
-							<span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-							<a class="news_item_room news_item_mid jiathis_button_tsina">
-								<i class="iconfont icon-share-weibo"></i>
-							</a>
-							<a class=" news_item_mid jiathis_button_weixin">
-								<i class="iconfont icon-share-weixin"></i>
-							</a>
-						</div>
-						<div class="news_content_top">
-							<TRS_ViewData  field='doccontent'/>
-						</div>
-					</div>
-				</div>
+            </div>
+            <div id="ckepop" class="o_u o_df_8-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
+                <div class="news_title">
+                    <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
+                </div>
+                <div class="news_item">
+                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata'
+                                                                                               DATEFORMAT="yyyy-MM-dd"/></span>
+                    <span class="news_item_line news_item_padding news_item_mid"></span>
+                    <span class="news_item_step news_item_room news_item_mid">分享到 :</span>
+                    <a class="news_item_room news_item_mid " title="分享到微博">
+                        <!--<i class="iconfont icon-share-weibo"></i>-->
+                        <span class="jiathis_txt jiathis_separator iconfont icon-share-weibo jtico_tsina"></span>
+                    </a>
+                    <a class="news_item_mid " title="分享到微信">
+                        <!--<i class="iconfont icon-share-weixin"></i>-->
+                        <span class="jiathis_txt jiathis_separator iconfont icon-share-weixin jtico_weixin"></span>
+                    </a>
+                </div>
 
-				<!--新闻内容END-->
-				<div class="o_g">
-					<div class="o_u o_df_1-12">
-						
-					</div>
-					<div class="o_u o_df_10-12 news_line">
-						
-					</div>
-				</div>
-				<!--新闻底部-->
-				<div class="o_g news_detail_bottom">
-					<div class="o_u o_df_1-12">
-						
-					</div>
-					<div class="o_u o_df_10-12">
-						<div class="o_g o_df-show o_sm-hide o_xs-hide">
-							<div class="o_u o_df_1-2">
-								<div class="news_bottom_left">
-									<TRS_PREDOCUMENTS>
-									<a href="<TRS_Document Field='_RecURL'/>" class="news_bottom_title">上一篇：</a>
-									<a href="<TRS_Document Field='_RecURL'/>" class="news_bottom_item"><TRS_Document Field='DocTitle' AutoLink='false' AUTOCOLOR='false'/></a>
-									</TRS_PREDOCUMENTS>
-								</div>
-							</div>
-							<div class="o_u o_df_1-2 ">
-								<div class="news_bottom_right">
-									<TRS_NextDocuments>
-									<a href="<TRS_Document Field='_RecURL' AUTOCOLOR='false'/>" class="news_bottom_title">下一篇：</a>
-									<a href="<TRS_Document Field='_RecURL' AUTOCOLOR='false'/>" class="news_bottom_item"><TRS_Document Field='DocTitle' AutoLink='false' AUTOCOLOR='false'/></a>
-									</TRS_NextDocuments>
-								</div>
-							</div>
-						</div>
-						<div class="o_g o_df-hide o_sm-show o_xs-show">
-							<div class="o_u o_df_1-2">
-								<div class="news_bottom_left">
-									<TRS_PREDOCUMENTS>
-									<a href="<TRS_Document Field='_RecURL'/>" class="news_bottom_title">上一篇</a>
-									</TRS_PREDOCUMENTS>
-								</div>
-							</div>
-							<div class="o_u o_df_1-2 ">
-								<div class="news_bottom_right">
-									<TRS_NextDocuments>
-									<a href="<TRS_Document Field='_RecURL' AUTOCOLOR='false'/>" class="news_bottom_title">下一篇</a>
-									</TRS_NextDocuments>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--新闻底部END-->
-				<!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
-			</div>
-		</div>
-		<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
-		<script type="text/javascript" src="validform_v5.3.2_min.js"></script>
-		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
-	</body>
+                <div class="news_content_top">
+                    <TRS_ViewData field='doccontent'/>
+                </div>
+            </div>
+        </div>
+
+        <!--新闻内容END-->
+        <div class="o_g">
+            <div class="o_u o_df_1-12">
+
+            </div>
+            <div class="o_u o_df_10-12 news_line">
+
+            </div>
+        </div>
+        <!--新闻底部-->
+        <div class="o_g news_detail_bottom">
+            <div class="o_u o_df_1-12">
+
+            </div>
+            <div class="o_u o_df_10-12">
+                <div class="o_g o_df-show o_sm-hide o_xs-hide">
+                    <div class="o_u o_df_1-2">
+                        <div class="news_bottom_left">
+                            <TRS_PREDOCUMENTS>
+                                <a href="<TRS_Document Field='_RecURL'/>" class="news_bottom_title">上一篇：</a>
+                                <a href="<TRS_Document Field='_RecURL'/>" class="news_bottom_item">
+                                    <TRS_Document Field='DocTitle' AutoLink='false' AUTOCOLOR='false'/>
+                                </a>
+                            </TRS_PREDOCUMENTS>
+                        </div>
+                    </div>
+                    <div class="o_u o_df_1-2 ">
+                        <div class="news_bottom_right">
+                            <TRS_NextDocuments>
+                                <a href="<TRS_Document Field='_RecURL' AUTOCOLOR='false'/>" class="news_bottom_title">下一篇：</a>
+                                <a href="<TRS_Document Field='_RecURL' AUTOCOLOR='false'/>" class="news_bottom_item">
+                                    <TRS_Document Field='DocTitle' AutoLink='false' AUTOCOLOR='false'/>
+                                </a>
+                            </TRS_NextDocuments>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_g o_df-hide o_sm-show o_xs-show">
+                    <div class="o_u o_df_1-2">
+                        <div class="news_bottom_left">
+                            <TRS_PREDOCUMENTS>
+                                <a href="<TRS_Document Field='_RecURL'/>" class="news_bottom_title">上一篇</a>
+                            </TRS_PREDOCUMENTS>
+                        </div>
+                    </div>
+                    <div class="o_u o_df_1-2 ">
+                        <div class="news_bottom_right">
+                            <TRS_NextDocuments>
+                                <a href="<TRS_Document Field='_RecURL' AUTOCOLOR='false'/>" class="news_bottom_title">下一篇</a>
+                            </TRS_NextDocuments>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--新闻底部END-->
+        <!--#include file="${ROOT_PATH}public/footer/footer.shtml"-->
+    </div>
+</div>
+
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
+<script type="text/javascript" src="validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
+</body>
 
 </html>
