@@ -158,6 +158,9 @@ function readXmlFile(url) {
 
 //检索产品方法
 function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchTerm) {
+    if(isNull(_tableName)){
+        _tableName = table_name;
+    }
     var searchHtml = "";
     $.ajax({
         type: "get",
@@ -175,13 +178,18 @@ function search(sword, _tableName, _xmlPath, _curPage, _pageSize, order, searchT
         success: function (data) {
 
             if (data.isSuccess) {
-                var filterItemList = data.data.filter.optionGroup;
-                //互斥操作
-                if (document.body.offsetWidth >= 1200) {
-                    displayFilterItem(filterItemList, ".sole-type");
-                } else {
-                    displayFilterItem(filterItemList, ".list-btn");
+                var filterItemList ;
+                if(!isNull(data.data.filter)){
+                    filterItemList= data.data.filter.optionGroup;
+                    //互斥操作
+                    if (document.body.offsetWidth >= 1200) {
+                        displayFilterItem(filterItemList, ".sole-type");
+                    } else {
+                        displayFilterItem(filterItemList, ".list-btn");
+                    }
                 }
+
+
                 var returnData = data.data.productList.entities;
                 var allPageCount = data.data.productList.pageCount;
                 var currentPageNo = data.data.productList.pageNo;
@@ -576,4 +584,12 @@ function mobileResetButtonOnclick() {
     });
 }
 
+function isNull(str){
+    if(str == "" || str == undefined || str == " " || str == null || str == "null"){
+        return true;
+    }
+    return false;
+}
+
 //初始化筛选器===================================结束
+

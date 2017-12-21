@@ -41,182 +41,212 @@
             <!--#include virtual="public/nav.shtml"-->
             <!-- 导航 End-->
             <!-- 首页banner -->
-            <div class="o_g index-banner">
-                <div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
-                    <!-- banner文字循环体 -->
-                    <div class="banner-middle-box js_bannerSwiperFont">
-                        <div>
-                            <div class="info-main">
-                                <div>
-                                    <span>在这个做作的时代11</span>
+            <div class="index-banner-box js-index-banner-box">
+                <div class="index-banner-shadow"></div>
+                <div class="o_g index-banner">
+                    <div class="o_u o_df_1-6 banner-info o_md-hide o_sm-hide o_xs-hide js_bannerInfo">
+                        <!-- banner文字循环体 -->
+                        <div class="banner-middle-box js_bannerSwiperFont">
+                            <div>
+                                <div class="info-main">
+                                    <div>
+                                        <span>在这个做作的时代111111</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="info-main">
-                                <div>
-                                    <span>海尔真诚到永远真诚到</span>
+                                <div class="info-main">
+                                    <div>
+                                        <span>海尔真诚到永远真诚到</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="info-sub">
-                                <div>
-                                    <span>在这个做作的时代</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-middle-box js_bannerSwiperFont">
-                        <div>
-                            <div class="info-main">
-                                <div>
-                                    <span>在这个做作的时代22</span>
-                                </div>
-                            </div>
-                            <div class="info-main">
-                                <div>
-                                    <span>海尔真诚到永远真诚到</span>
-                                </div>
-                            </div>
-                            <div class="info-sub">
-                                <div>
-                                    <span>在这个做作的时代</span>
+                                <div class="info-sub">
+                                    <div>
+                                        <span>在这个做作的时代</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- banner文字循环体 End-->
-                    <!-- banner 分页 不需要循环-->
-                    <div class="banner-page js_bannerSwiperPage">
-                        <!-- <div class="page-num" data-index=2>
-                            <div class="line">
-                                <div class="red-line"></div>
-                            </div>
-                            <div class="num">02</div>
-                        </div>
-                        <div class="page-num active" data-index=1>
-                            <div class="line">
-                                <div class="red-line"></div>
-                            </div>
-                            <div class="num">01</div>
-                        </div> -->
-                        <!-- <div class="page-num" data-index=3>
-                            <div class="line">
-                                <div class="red-line"></div>
-                            </div>
-                            <div class="num">03</div>
-                        </div> -->
-                    </div>
-                    <!-- banner 分页 不需要循环 END-->
-                </div>
-                <div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
-                    <div class="banner-img">
-                        <div class="swiper-container js_bannerSwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="javascript:;">
-                                        <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
-                                        <!-- <img class="js_bg" src="images/index_banner.JPG"> -->
-                                    </a>
+                        <div class="banner-middle-box js_bannerSwiperFont">
+                            <div>
+                                <div class="info-main">
+                                    <div>
+                                        <span>在这个做作的时代2211111</span>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <a href="javascript:;">
-                                        <img class="js_recPic" src="" df="images/index_banner2.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
-                                        <!-- <img class="js_bg" src="images/index_banner2.JPG"> -->
-                                    </a>
+                                <div class="info-main">
+                                    <div>
+                                        <span>海尔真诚到永远真诚到</span>
+                                    </div>
+                                </div>
+                                <div class="info-sub">
+                                    <div>
+                                        <span>在这个做作的时代</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- banner文字循环体 End-->
+                        <!-- banner 分页 不需要循环-->
+                        <div class="banner-page js_bannerSwiperPage">
+                            <!-- <div class="page-num" data-index=2>
+                                <div class="line">
+                                    <div class="red-line"></div>
+                                </div>
+                                <div class="num">02</div>
+                            </div>
+                            <div class="page-num active" data-index=1>
+                                <div class="line">
+                                    <div class="red-line"></div>
+                                </div>
+                                <div class="num">01</div>
+                            </div> -->
+                            <!-- <div class="page-num" data-index=3>
+                                <div class="line">
+                                    <div class="red-line"></div>
+                                </div>
+                                <div class="num">03</div>
+                            </div> -->
+                        </div>
+                        <!-- banner 分页 不需要循环 END-->
                     </div>
-                </div>
-                <div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
-                    <!-- 循环体 -->
-                    <div class="o_u o_df_2-2 js_bannerSwiperFont1">
-                        <div class="banner-big">在这个做作的时代11</div>
-                        <div class="banner-big">我选择做最真实的自己</div>
-                        <div class="banner-small">我只选择统帅统帅</div>
+                    <div class="o_u o_df_3-4 o_md_2-2 o_sm_2-2 o_xs_2-2 js_bannerInfoOHerl">
+                        <div class="banner-img">
+                            <div class="swiper-container js_bannerSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="javascript:;">
+                                            <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
+                                            <!-- <img class="js_bg" src="images/index_banner.JPG"> -->
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:;">
+                                            <img class="js_recPic" src="" df="images/index_banner2.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
+                                            <!-- <img class="js_bg" src="images/index_banner2.JPG"> -->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="index-banner-shadow-bottom"></div>
+                            
+                        </div>
                     </div>
-                    <div class="o_u o_df_2-2 js_bannerSwiperFont1">
-                        <div class="banner-big">在这个做作的时代22</div>
-                        <div class="banner-big">我选择做最真实的自己</div>
-                        <div class="banner-small">我只选择统帅统帅</div>
+                    <div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
+                        <!-- 循环体 -->
+                        <div class="o_u o_df_2-2 js_bannerSwiperFont1">
+                            <div class="banner-big">在这个做作的时代11</div>
+                            <div class="banner-big">我选择做最真实的自己</div>
+                            <div class="banner-small">我只选择统帅统帅</div>
+                        </div>
+                        <div class="o_u o_df_2-2 js_bannerSwiperFont1">
+                            <div class="banner-big">在这个做作的时代22</div>
+                            <div class="banner-big">我选择做最真实的自己</div>
+                            <div class="banner-small">我只选择统帅统帅</div>
+                        </div>
+                        <!-- 循环体 END -->
                     </div>
-                    <!-- 循环体 END -->
                 </div>
             </div>
             <!-- 首页banner END -->
             <!-- 统帅入口 -->
             <div class="o_g index-enter">
                 <a class="enter-con">
-                    <div class="enter-con-icon icon1">
+                    <div>
+                        <div class="enter-con-icon icon1"> </div>
                         <img src="images/index_enter1.png">
                     </div>
+                    
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </a>
                 <a class="enter-con">
-                    <div class="enter-con-icon icon2">
+                    <div>
+                        <div class="enter-con-icon icon2"></div>
                         <img src="images/index_enter1.png">
                     </div>
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </a>
                 <a class="enter-con">
-                    <div class="enter-con-icon icon3">
+                    <div>
+                        <div class="enter-con-icon icon3"></div>
                         <img src="images/index_enter1.png">
                     </div>
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </a>
                 <a class="enter-con">
-                    <div class="enter-con-icon icon4">
+                    <div>
+                        <div class="enter-con-icon icon4"></div>
                         <img src="images/index_enter1.png">
                     </div>
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </a>
                 <a class="enter-con">
-                    <div class="enter-con-icon icon5">
+                    <div>
+                        <div class="enter-con-icon icon5"></div>
                         <img src="images/index_enter1.png">
                     </div>
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </a>
                 <a class="enter-con">
-                    <div class="enter-con-icon icon6">
+                    <div>
+                        <div class="enter-con-icon icon6"></div>
                         <img src="images/index_enter1.png">
                     </div>
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -226,13 +256,17 @@
                     <i class="iconfont icon-icon_left enter-corner-left"></i>
                 </div>
                 <a class="enter-con">
-                    <div class="enter-con-icon icon7">
+                    <div>
+                        <div class="enter-con-icon icon7"></div>
                         <img src="images/index_enter1.png">
                     </div>
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -249,7 +283,10 @@
                     <div class="enter-con-china o_df-hide o_xs-show">冰箱</div>
                     <div class="enter-con-en">REFRIGERATOR</div>
                     <div class="enter-con-china o_xs-hide">冰箱</div>
-                    <div class="enter-con-point o_xs-hide">
+                    <div class="enter-con-point o_df-hide o_xl-show">
+                        <span class="typing_loader"></span>
+                    </div>
+                    <div class="enter-con-point o_xs-hide o_xl-hide">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -578,27 +615,27 @@
                             </div>
                             <a class="about-data-box">
                                 <div class="data-title">国家研发机构</div>
-                                <div class="data-num">43</div>
+                                <div class="data-num js-scroll-num" data-num="93"></div>
                             </a>
                             <a class="about-data-box">
                                 <div class="data-title">国家研发机构</div>
-                                <div class="data-num">38</div>
+                                <div class="data-num js-scroll-num" data-num="38"></div>
                             </a>
                             <a class="about-data-box">
                                 <div class="data-title">国家研发机构</div>
-                                <div class="data-num">38</div>
+                                <div class="data-num js-scroll-num" data-num="43"></div>
                             </a>
                             <a class="about-data-box">
                                 <div class="data-title">国家研发机构</div>
-                                <div class="data-num">38</div>
+                                <div class="data-num js-scroll-num" data-num="67"></div>
                             </a>
                             <a class="about-data-box">
                                 <div class="data-title">国家研发机构</div>
-                                <div class="data-num">38</div>
+                                <div class="data-num js-scroll-num" data-num="21"></div>
                             </a>
                             <a class="about-data-box">
                                 <div class="data-title">国家研发机构</div>
-                                <div class="data-num">38</div>
+                                <div class="data-num js-scroll-num" data-num="19"></div>
                             </a>
                         </div>
                         <div class="o_u o_df_6-10 o_lg_1-2 o_md_1-2 o_sm_1-3 o_xs_1-2 index-about-select">
