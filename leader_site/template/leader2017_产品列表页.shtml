@@ -526,6 +526,7 @@
 <script type="text/javascript" src="../site5/product_list.js"></script>
 <script type="text/javascript" src="../site5/query_product_price.js"></script>
 <script>
+    var table_name ="<TRS_CHANNEL FIELD='viewTableName' AUTOLINK='false'></TRS_CHANNEL>";
     var template_url="<TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain'><trs_channel id='parent' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION><TRS_CONDITION REFERENCE='热水器~厨电' CONDITION='@parent.chnldesc' OPERATOR='contain' not='true'><trs_channel id='owner' field='_recurl' UrlIsAbs='true'/></TRS_CONDITION>"
     var chnlid_owner ='<TRS_CHANNEL FIELD="channelid" AUTOLINK="false" ID="owner"></TRS_CHANNEL>';
 
