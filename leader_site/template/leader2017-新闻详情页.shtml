@@ -44,10 +44,10 @@
 							<span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd" /></span>
 							<span class="news_item_line news_item_padding news_item_mid"></span>
 							<span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-							<a class="news_item_room news_item_mid jiathis_button_tsina">
+							<a class="news_item_room news_item_mid jiathis_button_tools_2">
 								<i class="iconfont icon-share-weibo"></i>
 							</a>
-							<a class="news_item_mid jiathis_button_weixin">
+							<a class="news_item_mid jiathis_button_tools_4">
 								<i class="iconfont icon-share-weixin"></i>
 							</a>
 						</div>
