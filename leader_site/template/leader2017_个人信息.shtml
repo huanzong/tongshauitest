@@ -57,7 +57,7 @@
                                                 </div>
                                                 <div class=" personalist-right js_personalistwrongbox_user ">
                                                     <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_user">
+                                                    <p class="o_u o_df_2-3 o_lg_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_user">
                                                         用户名不可为空！</p>
                                                 </div>
                                             </div>
@@ -102,7 +102,7 @@
                                                 </div>
                                                 <div class=" js_personalistwrongbox_data personalist-right">
                                                     <div class="o_u o_df_1-4 o_lg_1-4 o_md_1-4 o_sm_2-2 o_xs_2-2"></div>
-                                                    <p class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
+                                                    <p class="o_u o_df_2-3 o_lg_2-3 o_md_1-2 o_sm_2-2 o_xs_2-2 iconfont icon-information-solid personalist-wrong js_personawrong_data">
                                                         用户名不可为空！</p>
                                                 </div>
                                             </div>
