@@ -399,7 +399,8 @@ function addressAlert(add, callback){
     $('.js_addType').find('div').removeClass('cur').eq(0).addClass('cur')
     $('.js_addShadeTop').show();
     $('.js_addContBox').show();
-    var addressSave,addressCity,addressArea,savecode_used;
+    var addressSave = ""
+    var addressCity,addressArea,savecode_used;
     //判定传入值是否存在
     if(!add){
         $('.js_alertAddress_save').html('北京').attr('data-code','1');

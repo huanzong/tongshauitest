@@ -20,6 +20,17 @@
         }
         //background: url(style_life_video_right.png) no-repeat left top;
     }
+
+    .left_click{
+        position: absolute;
+
+        left: 0;
+    }
+    .right_click{
+        position: absolute;
+
+        right: 0;
+    }
     @media (min-width: 701px) and (max-width: 991px) {
         /* md*/
         .video-cont-left,
@@ -155,7 +166,7 @@
 
 .life-style-photo-list-center {
     text-align: center;
-
+    box-shadow: 0 0 25px 0 #ccc;
 
     .photo-list-img {
         // height: 50%;
@@ -481,9 +492,24 @@
         }
     }
     .superiority-left2 {
-        background: url(style_life_superiority_3min.jpg) no-repeat center;
-            background-size: auto 100%;
-             @media (min-width: 701px) and (max-width: 991px) {
+        background-image: url(http://test.tongshuai.com/images/style_life_superiority_3min.jpg);
+        background-repeat:no-repeat;
+        background-position: top center;
+
+        -moz-background-size:100% 100%;
+        -webkit-background-size:100% 100%;
+        filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test.tongshuai.com/images/style_life_superiority_3min.jpg',sizingMethod='scale')";
+        background-size: cover;
+        //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        //        src='style_life_superiority_3min.jpg',
+        //        sizingMethod='scale');
+        ////filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='test.jpg',  sizingMethod='scale');
+        //background-size:100% 100%;
+
+
+
+
+        @media (min-width: 701px) and (max-width: 991px) {
             /* md*/
             background-size: 100% auto;
         }
@@ -520,12 +546,16 @@
     }
     .superiority-left-min {
      position: absolute;
-     left: -60%;
+     //left: -60%;
      img {
          opacity: .2;
          filter: alpha(opacity=20);
-         width: 100%;
+         width: auto;
      }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            /* lg*/
+            //left: -60%;
+        }
      @media (min-width: 992px) and (max-width: 1199px) {
     /* lg*/
     display: none;
@@ -549,11 +579,11 @@
 
  .superiority-right-min {
      position: absolute;
-     right: -60%;
+     //right: -60%;
      img {
          opacity: .2;
          filter: alpha(opacity=20);
-         width: 100%;
+         width: auto;
      }
           @media (min-width: 992px) and (max-width: 1199px) {
     /* lg*/
@@ -653,16 +683,16 @@
     .iconfont {
         font-size: 30px;
         position: absolute;
-        height: 640px;
+        //height: 640px;
         width: 40px;
-        line-height: 640px;
+        //line-height: 640px;
         color: #000;
         text-align: center;
     }
 
     .icon-arrow-jiantou-left {
         top: 0;
-        right: 0px;
+        left: 0;
         @media (min-width: 992px) and (max-width: 1199px) {
             /* lg*/
             display: none;
@@ -683,7 +713,7 @@
 
     .icon-arrow-jiantou-right {
         top: 0;
-        left: 0px;
+        right: 0;
         @media (min-width: 992px) and (max-width: 1199px) {
             /* lg*/
             display: none;
@@ -709,7 +739,8 @@
             z-index: 2;
         }
     }
-    .superiority-left-box{ 
+    .superiority-left-box{
+        height: 100%;
         overflow: hidden;
         position: relative;
         @media (max-width: 575px) {

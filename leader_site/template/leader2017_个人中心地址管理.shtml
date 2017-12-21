@@ -25,6 +25,7 @@
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
                 <div class="o_u o_df_12-12 member-security js-membercontbox">
                     <div class="member-security-width js-securityheight">
+                        <div class="land-shade js_navshade" style="display: none;"></div>
                         <div class="member-security-tit">
                             <p>地址管理</p>
                             <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn" style="display: none;">新增地址</a>
@@ -50,7 +51,7 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox">
                                             <div class="l-input member-address-allinput js-addressMobile">
                                                 <!--<form class="ui_validForm js_ui_validForm">-->
-                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不得为空" id="mobile"/>
+                                                    <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 js-bindmobinput js-newMobile" data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value="" onkeyup="this.value=this.value.replace(/\D/g,'')"  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不得为空" id="mobile"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 <!--</form>-->
                                             </div>
@@ -62,13 +63,13 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput" data-type="1">
-                                                    <input type="text" name="" ph="区号" data-normal="1" ignore="ignore" value="" datatype="n3-4"  id="phonequhao"    maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位的区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
+                                                    <input type="text" name="" ph="区号" data-normal="1" ignore="ignore" value="" onkeyup="this.value=this.value.replace(/\D/g,'')" datatype="n3-4"  id="phonequhao"    maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput"  data-type="2">
-                                                    <input type="text" name="" ph="电话号" data-normal="1" ignore="ignore"  value="" id="phone" datatype="n8-8"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位的号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
+                                                    <input type="text" name="" ph="电话号" data-normal="1" ignore="ignore"  value="" onkeyup="this.value=this.value.replace(/\D/g,'')" id="phone" datatype="n8-8"  maxlength="8" errormsg="<i class='iconfont icon-information-solid'></i>请输入8位电话号码" nullmsg="<span  class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>

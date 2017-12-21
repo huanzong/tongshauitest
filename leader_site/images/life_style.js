@@ -29,7 +29,7 @@ $(function () {
             var type = $(this).attr('data-alt');
             if (type == 'false') {
                 $('.js_styleVideoContLeft').hide();
-                $(this).css({'width': '50%', 'background-position': 'right top'});
+                $(this).css({'width': '50%'});
                 $(this).attr('data-alt', 'true');
                 $('.js_bannerRightHover').addClass('back-gray').siblings().removeClass('back-gray');
                 $('.js_bannerRightHoverHide').hide();
@@ -42,7 +42,7 @@ $(function () {
     }, function () {
         if (windowWidth > 1199) {
             $('.js_styleVideoContLeft').show();
-            $(this).css({'width': '25%', 'background-position': 'left top'});
+            $(this).css({'width': '25%'});
             $(this).attr('data-alt', 'false');
             $('.js_bannerNoHover').addClass('back-gray').siblings().removeClass('back-gray');
             $('.js_bannerRightHoverHide').show();
@@ -193,19 +193,33 @@ $(function () {
 //核心优势
 
     $('.js_lifeStyleSuperiorityL').height(windowWidth / 3 / 0.75);
-    $('.js_superiorityLeftMin').css({"height": windowWidth / 3, "top": (windowWidth / 3 / 0.75 - windowWidth / 3) / 2});
     $('.js_lifeStyleSuperiorityLDown').css({
         "height": windowWidth / 3,
         "top": (windowWidth / 3 / 0.75 - windowWidth / 3) / 2
     });
-    $('.js_liftSuperiorityLeft').height(windowWidth / 3 / 0.75);
-    $('.js_liftSuperiorityRight').height(windowWidth / 3 / 0.75);
 
+    $('.js_superioritySwiperLeft').css({'height':windowWidth/9*4});
+    $('.js_superioritySwiperRight').css({'height':windowWidth/9*4});
+    $('.js_superiorityLeftMin').css({  "top": (windowWidth / 3 / 0.75 - windowWidth / 3) / 2 });
+
+
+    if(windowWidth>1199){
+        $('.js_superiorityRightBtn').css({"height": windowWidth / 3,'line-height': windowWidth / 3+'px'});
+        $('.js_superiorityLeftBtn').css({"height": windowWidth / 3,'line-height': windowWidth / 3+'px'});
+        $('.js_superiorityLeftMin').css({'height':windowWidth/3+'px'})
+        $('.js_superiorityLeftMin').eq(0).css({'left':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').eq(2).css({'left':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').eq(1).css({'right':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').eq(3).css({'right':(windowWidth/3-66)+'px'})
+
+    }
 
 // 设置lift-style-case 图片切换按钮高度
     if (windowWidth > 991) {
-        $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
+        $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'});
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoH, "line-height": lifeCasePhotoH + 'px'})
+        $('.js_lifeStyleCaseText').css({'height': lifeCasePhotoH});
+
     } else {
         //$('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
         $('.js_lifeStyleCaseLeft').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':(lifeCasePhotoHMd-$('.js_lifeStyleCasePhoto').height())/2})
@@ -214,17 +228,25 @@ $(function () {
       //alert(lifeCasePhotoHMd);
         $('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
         $('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+        $('.js_lifeStyleCaseText').css({'height':'270px','margin-top':'30px'});
+
     }
-    $('.js_lifeStyleCaseText').css({'height': lifeCasePhotoH});
 
 
     // 创造优生活title
     $('.js_lifeStyleCreateTop li').click(function () {
         $(this).addClass('cur').siblings().removeClass('cur');
         var $index = $(this).index();
+        var className = '.js_lifeStyleCreateSwipe_'+($index+1);
         $('.js_lifeStyleCreateSwipe').eq($index).show().siblings('.js_lifeStyleCreateSwipe').hide();
         $('.js_lifeStyleCreateTitle').eq($index).show().siblings('p').hide();
-
+       if($(className).find('li').length>1){
+           $('.js_lifeStyleCreateLeftBtn').show();
+           $('.js_lifeStyleCreateRightBtn').show();
+       }else{
+           $('.js_lifeStyleCreateLeftBtn').hide();
+           $('.js_lifeStyleCreateRightBtn').hide();
+       }
     })
 
 
@@ -286,36 +308,32 @@ $(function () {
                  player.pause();
                  $(".js_playerBox ").hide();
                  $('.js_styleVideoBox').show();
+
+                 if(windowWidth>991){
+                     $('.video-cont-center').css({width: '50%'});
+                     $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
+                     $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
+                 }
+
              });
 
              var userAgent = navigator.userAgent;
              var player = new MediaElementPlayer('#player');
              $(".js_lifeStylePlay ").on('click', function () {
-                 videoMethod();
-                 $('.js_styleVideoBox').hide();
-                 $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-                 $("#player ").removeClass("o_df-hide ");
-                 var playerID = document.getElementById('player');
-                 playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                 function onVideoProgressUpdate(e) {
-                     var percentageBuffered = 0;
-                     if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                         percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                     } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                         percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                     }
-                     if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                         if (percentageBuffered <= 0.4) {
-                             $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                         } else {
-                             playerID.play();
-                             $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                         }
-                     }
+                 var setTime;
+                 if(windowWidth>991){
+                     setTime = '600';
+                     $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
+                     $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
+                     $('.video-cont-center').css({width: '100%'});
+                 }else{
+                     setTime = '0';
                  }
-
-                 if (!$ie8) {
-                     player.play();
+                 setTimeout(function(){
+                     videoMethod();
+                     $('.js_styleVideoBox').hide();
+                     $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+                     $("#player ").removeClass("o_df-hide ");
                      var playerID = document.getElementById('player');
                      playerID.addEventListener('progress', onVideoProgressUpdate, false);
                      function onVideoProgressUpdate(e) {
@@ -334,7 +352,32 @@ $(function () {
                              }
                          }
                      }
-                 }
+
+                     if (!$ie8) {
+                         player.play();
+                         var playerID = document.getElementById('player');
+                         playerID.addEventListener('progress', onVideoProgressUpdate, false);
+                         function onVideoProgressUpdate(e) {
+                             var percentageBuffered = 0;
+                             if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
+                                 percentageBuffered = playerID.buffered.end(0) / playerID.duration;
+                             } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
+                                 percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
+                             }
+                             if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
+                                 if (percentageBuffered <= 0.4) {
+                                     $(".mejs-overlay-loading ").parent().css("display ", "block ");
+                                 } else {
+                                     playerID.play();
+                                     $(".mejs-overlay-loading ").parent().css("display ", "none ");
+                                 }
+                             }
+                         }
+                     }
+                 },setTime)
+
+
+
              });
          }else{
              $(".js_lifeStylePlay ").on('click', function (){
@@ -363,6 +406,14 @@ $(function () {
                      $(".js_playerBox ").hide();
                      $('.js_styleVideoBox').show();
                      $('.js_videoMdShow').show();
+
+
+                     if(windowWidth>991){
+                         $('.video-cont-center').css({width: '50%'});
+                         $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
+                         $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
+                     }
+
 
                  });
 
@@ -458,7 +509,9 @@ $(function () {
 
 
 
+
 // 核心优势 轮播
+
         var superioritySwiperLeft = new Swiper('.js_superioritySwiperLeft', {
             loop: true,
             autoplay: 5000,

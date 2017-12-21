@@ -77,7 +77,8 @@
             </ul>
         </div>
         <div class="member-center js_memberCenterBox o_g">
-            <div class="o_u o_df_4-12 member-center-left"></div>
+            <div class="o_u o_df_4-12 o_sm_2-12  o_xs_2-12 member-center-left"></div>
+            <div class="o_u o_df_2-12 o_sm_show "></div>
             <div class="o_u o_df_2-12"></div>
             <div class="o_u o_df_2-12"></div>
             <div class="o_u o_df_2-12 member-center-border">
@@ -93,7 +94,7 @@
                         <div class="member-content-1 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style='background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text">
-                                <div class=" o_u o_df_11-12">
+                                <div class=" o_u ">
                                     <h5>
                                         <trs_viewdata field='maintitle'/>
                                     </h5>
@@ -111,7 +112,7 @@
                         <div class="member-content-3 o_u o_md_11-12 o_sm_11-12 o_xs_12-12 " style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text">
-                                <div class=" o_u o_df_11-12">
+                                <div class=" o_u ">
                                     <h5>
                                         <trs_viewdata field='maintitle'/>
                                     </h5>
@@ -135,7 +136,7 @@
                     <trs_viewdatas id="了解会员权益" num="1" startpos="2">
                         <div class="member-content-2 o_u o_md_11-12 o_sm_11-12 o_xs_12-12" style=' background: url("<TRS_VIEWDATAAPPENDIXS FIELD="picture"><TRS_VIEWDATAAPPENDIX FIELD="" UrlIsAbs="TRUE"/></TRS_VIEWDATAAPPENDIXS>") no-repeat center;'>
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
-                            <div class="member-conter-text o_u o_df_11-12">
+                            <div class="member-conter-text ">
                                 <h5>
                                     <trs_viewdata field='maintitle'/>
                                 </h5>
@@ -153,7 +154,7 @@
                             <!-- <div class="member-content-4md"></div> -->
                             <img class="member-content-md" src="<trs_viewdata field='picture2'/>" alt="" />
                             <div class="member-conter-text  ">
-                                <div class=" o_u o_df_11-12">
+                                <div class=" o_u ">
                                     <h5>
                                         <trs_viewdata field='maintitle'/>
                                     </h5>
