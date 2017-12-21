@@ -989,10 +989,11 @@
                 <div class="detail-scene">
                     <div class="swiper-container js_sceneSwiper">
                         <div class="swiper-wrapper">
+                            <TRS_VIEWDATAAPPENDIXS FIELD="cpcjt">
                             <div class="swiper-slide">
-                                <img class="js_scenePicture" src="" df="" xs="" sm="" md="" alt="" />
+                                <img class="js_scenePicture" src="" df="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" xs="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" sm="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" md="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" alt="" />
                             </div>
-
+                            </TRS_VIEWDATAAPPENDIXS>
                         </div>
                     </div>
                 </div>
@@ -1545,7 +1546,7 @@
         var templet_commentUrl='';//口碑页面
         var templet_parameterUrl='';//参数页面
         var templet_dsly='<TRS_VIEWDATAAPPENDIXS FIELD="dsly"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/></TRS_VIEWDATAAPPENDIXS>';//电商拉页
-        var templet_cpcjt='<TRS_VIEWDATAAPPENDIXS FIELD="cpcjt"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/><TRS_IsNotLastRecord>~</TRS_IsNotLastRecord></TRS_VIEWDATAAPPENDIXS>';//产品场景图
+        //var templet_cpcjt='<TRS_VIEWDATAAPPENDIXS FIELD="cpcjt"><TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/><TRS_IsNotLastRecord>~</TRS_IsNotLastRecord></TRS_VIEWDATAAPPENDIXS>';//产品场景图
         //产品参数链接
         var templet_detailNum=templet_detailUrl.lastIndexOf(".");
         templet_detailUrl=templet_detailUrl.substring(0,templet_detailNum);
@@ -1563,7 +1564,7 @@
             $(".particulars-buy-tit").hide();
         }
 
-        if(templet_cpcjt ==""||templet_cpcjt==null){//产品场景图
+        /*if(templet_cpcjt ==""||templet_cpcjt==null){//产品场景图
             $(".js_cpcjt").hide();
         }else{
             templet_cpcjt=templet_cpcjt.split("~");
@@ -1578,7 +1579,7 @@
                 $(".js_cpcjt").find("img").attr("xs",templet_cpcjt[1]);
             }
 
-        }
+        }*/
 
 
 
