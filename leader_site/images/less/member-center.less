@@ -36,13 +36,12 @@
     p {
         color: #666;
         font-size: 16px;
-        margin: 25px 0 30px 0;
+        margin: 15px 0 25px 0;
     }
     a {
         font-size: 16px;
         color: #fff;
         // width: 130px;
-
     }
 }
 
@@ -113,6 +112,7 @@
                 color: @l-red;
                 text-align: center;
                 cursor: not-allowed;
+                padding: 0 10px;
             }
         }
     }
@@ -149,13 +149,13 @@
 @media (max-width: 575px) {
     /* xs*/
     height: auto;
-
+    background: #fff;
 }
 }
 
 
 .member-center {
-    height: 840px;
+    height: 910px;
     position: relative;
     .member-center-left {
         background: #f8f8f8;
@@ -220,7 +220,7 @@
         //right: 0;
         bottom: 0;
         margin: auto;
-        height: 685px;
+        height: 730px;
         @media (min-width: 701px) and (max-width: 991px) {
             /* md*/
             top: 80px;
@@ -306,12 +306,14 @@
 
         .member-center-title {
             h3 {
-                font-size: 72px;
+                font-size: 92px;
                 color: #f7f7f7;
                 text-align: left;
-                padding: 0 0 0 80px;
+                padding: 0 0 0 70px;
+                white-space:nowrap;
             }
             p {
+                margin-top: -20px;
                 font-size: 32px;
                 color: #666;
                 padding: 0 0 30px 80px;
@@ -327,12 +329,12 @@
         .member-center-boxright {
             text-align: left;
             >div {
-                text-align: center;
+                text-align: left;
             }
         }
         .member-conter-text {
-            text-align: center;
-            margin: 80px 0 0 0;
+            text-align: left;
+            margin: 80px 0 0 20px;
             .member-conter-text-down {
                 text-align: left;
                 >div {
@@ -595,6 +597,7 @@
     text-align: center;
     height: 475px;
     position: relative;
+    background-size: 2000px 480px;
     z-index: 9;
         @media (max-width: 575px) {
           /* xs*/
@@ -959,4 +962,20 @@
     }
 
 
+}
+.o_sm_show{
+    display: none;
+    @media (min-width: 576px) and (max-width: 700px) {
+        /* sm*/
+
+        display: inline-block;
+
+    }
+    @media (max-width: 575px) {
+        /* xs*/
+
+        display: inline-block;
+
+
+    }
 }
