@@ -62,11 +62,11 @@
 									<a class="jiathis_button_tsina">
 										<i class="iconfont icon-share-weibo"></i>
 									</a>
-								</div>
-								<div class="float-box float-wechat jiathis_style_32x32">
+
 									<a class="jiathis_button_tools_4">
 										<i class="iconfont icon-share-weixin"></i>
 									</a>
+
 								</div>
 							</div>
 						</div>
