@@ -57,7 +57,7 @@
 
                                     <div>
                                         <select name="" id="js_resetpassword"  autotext="">
-                                            <option value="0">--验证邮箱是否正确--</option>
+                                            <option value="0">--修改密码安全验证--</option>
 
                                         </select>
                                     </div>

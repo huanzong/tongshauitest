@@ -65,6 +65,12 @@ $(function(){
             success_cb: function(data){
                 if (jQuery.trim(data).length > 0) {
                     if (jQuery.trim(data).indexOf("200")>-1) {}
+                    else if (jQuery.trim(data).indexOf("请1分钟后重试")>-1){
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请1分钟后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
+                    else if (jQuery.trim(data).indexOf("请24小时后重试")>-1){
+                        $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请24小时后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                    }
                     else{
                         $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
                         $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>发送验证码失败');
@@ -205,6 +211,12 @@ $(function(){
                             else{
                                 $('.js-newEmailerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>发送失败');
                             }
+                        }
+                        else if (jQuery.trim(data).indexOf("请1分钟后重试")>-1){
+                            $('.js-newEmailerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请1分钟后重试').addClass('Validform_wrong').removeClass('Validform_right');
+                        }
+                        else if (jQuery.trim(data).indexOf("请24小时后重试")>-1){
+                            $('.js-newEmailerror').html('<i class=\'iconfont icon-information-solid\'></i>您的操作太频繁了，请24小时后重试').addClass('Validform_wrong').removeClass('Validform_right');
                         }
                     }
                 }
