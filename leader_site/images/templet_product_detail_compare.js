@@ -411,7 +411,6 @@ function addCompareOnclick() {
             add_compare_flyOut_item($thisObj);
             //显示对比栏
             showCompareFlow();
-            showCompareFlowLayout();
         }else if(isCompare==1){//已对比
             remove_compare_fLayout_item($thisObj);
         }
