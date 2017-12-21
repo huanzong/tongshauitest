@@ -294,6 +294,7 @@ window.remove_compare_fLayout_item = function ($obj) {
     });
 
     if ($list.find('.js_compareLi').length <= 0) {
+        hideCompareFlow();
         hideCompareFlowLayout();
         //删除cookie里面的相应数据,未点比较按钮时删除cookie
         for (var i = 0; i < proObjList.length; i++) {
@@ -411,6 +412,7 @@ function addCompareOnclick() {
             add_compare_flyOut_item($thisObj);
             //显示对比栏
             showCompareFlow();
+            showCompareFlowLayout();
         }else if(isCompare==1){//已对比
             remove_compare_fLayout_item($thisObj);
         }
