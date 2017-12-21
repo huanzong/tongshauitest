@@ -52,7 +52,7 @@
                         <a href="javascript:;">成为会员</a>
                     </div>
                 </div>
-                <ul class="o_u o_df_3-12 o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
+                <ul class="o_u   o_md_5-12 o_sm_6-6 o_xs_6-6 membercenter-list">
                     <li class="list-share o_u o_df_12-12 o_sm_6-12 o_xs_6-6 " style='  background: url("images/member-center-share.png") no-repeat center right;'>
                         <div class="membercenter-list-cont">
                             <h4>乐分享</h4>
