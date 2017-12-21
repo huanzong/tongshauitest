@@ -352,13 +352,13 @@ $(function(){
         var templet_cityId=$.trim($("#js_city  option:selected").val());
         var templet_areaName=$.trim($("#js_area  option:selected").text());
         var templet_areaId=$.trim($("#js_area  option:selected").val());
-        if(templet_provinceName.indexOf("请选择")>-1){
+        if(templet_provinceName=='省'){
             templet_provinceName='';
         }
-        if(templet_city.indexOf("请选择")>-1){
+        if(templet_city=='市'>-1){
             templet_city='';
         }
-        if(templet_areaName.indexOf("请选择")>-1){
+        if(templet_areaName=='区'>-1){
             templet_areaName='';
         }
 
