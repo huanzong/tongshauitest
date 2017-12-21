@@ -25,6 +25,7 @@
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
                 <div class="o_u o_df_12-12 member-security js-membercontbox">
                     <div class="member-security-width js-securityheight">
+                        <div class="land-shade js_navshade" style="display: none;"></div>
                         <div class="member-security-tit">
                             <p>地址管理</p>
                             <a href="javascript:;" class="l-btn-normal l-btn-red js_memberAddressBtn" style="display: none;">新增地址</a>
