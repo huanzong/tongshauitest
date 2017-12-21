@@ -36,6 +36,7 @@
       span{
         word-wrap:break-word;
         word-break:break-all;
+        display: block;
       }
     }
     .info-sub{
@@ -528,7 +529,7 @@
   }
   .recommend-main{
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
 
     @media (min-width: 1770px) {
       height: 1060px;
@@ -571,6 +572,9 @@
       }
       img{
         margin: 0;
+      }
+      .swiper-container{
+        box-shadow: 0 0 20px #b9b7b7;
       }
     }
     .rec-swiper-btn{
@@ -626,7 +630,7 @@
       }
     }
     .recommend-main-bg{
-      z-index: -1;
+      z-index: 0;
       position: absolute;
       top: 210px;
       right: 0;
@@ -794,6 +798,8 @@
     }
   }
   .index-about-data{
+    position: relative;
+    z-index: 1;
     @media (max-width: 400px) {
       width: 100%!important;
     }
@@ -857,7 +863,7 @@
       position: absolute;
       top: 60px;
       right: 0;
-      z-index: -1;
+      z-index: 0;
     }
     .about-bg-gray{
       position: relative;
@@ -943,6 +949,9 @@
 .l-padding{
   margin: 0 15px;
   position: relative;
+  a img{
+    box-shadow: 0 0 20px #b9b7b7;
+  }
 }
 
 .entrance-fontbox{
