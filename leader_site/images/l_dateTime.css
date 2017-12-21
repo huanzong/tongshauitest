@@ -20,7 +20,7 @@
 }
 @media (max-width: 767px){
     /*绉诲姩绔椂闂存彃浠�*/
-    .dwbg{max-width: 100%!important;}
+    .dwbg{max-width: 100%!important;z-index: 1002;}
     .dwc {display: inline-block;width: 100%; }
     .dw.dwbg{left: 0px; margin-left: 0px;margin-top: -141.5px;}
     .dwwr{max-width: 100%;}

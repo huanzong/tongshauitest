@@ -199,7 +199,7 @@
             </div>
             <!-- 右侧内容 End-->
         </div>
-        <!--#include virtual="public/personal_footer.shtml"-->
+        <!--#include virtual="public/member_footer.shtml"-->
 
 
     </div>
