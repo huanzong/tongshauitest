@@ -515,7 +515,9 @@ $(function () {
         loop: true,
         autoplay: 5000,
         simulateTouch: false,
-        cssWidthAndHeight: true,
+        //cssWidthAndHeight: true,
+        calculateHeight : true,
+
         autoplayDisableOnInteraction: false,//手动滑动图片后是否停止滚动轮播
         onSlideChangeStart: function (swiper) {
 
