@@ -54,7 +54,6 @@
                         <span class="jiathis_txt jiathis_separator iconfont icon-share-weixin jtico_weixin"></span>
                     </a>
                 </div>
-
                 <div class="news_content_top">
                     <TRS_ViewData field='doccontent'/>
                 </div>
