@@ -53,9 +53,9 @@
 						<!--</div>-->
 
 						<div class="activity-icon">
-							<div class="icon-font">
-								<i class="iconfont icon-share-solid"></i>
-							</div>
+							<!--<div class="icon-font">-->
+								<!--<i class="iconfont icon-share-solid"></i>-->
+							<!--</div>-->
 							<span class="icon-font-info">分享</span>
 							<div class="l-float activity-float">
 								<div class="float-box float-blog jiathis_style_32x32">
@@ -64,12 +64,9 @@
 									</a>
 								</div>
 								<div class="float-box float-wechat jiathis_style_32x32">
-									<a class="jiathis_button_weixin">
+									<a class="jiathis_button_tools_4">
 										<i class="iconfont icon-share-weixin"></i>
 									</a>
-								</div>
-								<div class="float-box float-qq jiathis_style_32x32">
-									<a class="jiathis_button_qzone"></a>
 								</div>
 							</div>
 						</div>
