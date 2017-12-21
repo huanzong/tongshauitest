@@ -80,7 +80,7 @@
                             </div>
                             <ul class="float-list">
                                 <div class="triangle"></div>
-                                <trs_channels id="parent" startpos='2' num='7'>
+                                <trs_channels id="parent.parent" startpos='2' num='7'>
                                     <li>
                                         <a href="<TRS_CHANNEL FIELD='_RECURL' AUTOLINK='FALSE' UrlIsAbs='true'/>">
                                             <TRS_CHANNELLOGO id='owner' INDEX=1 SHOWPIC='true' SHOWMODE='SHOWPIC'/>
@@ -991,7 +991,7 @@
                         <div class="swiper-wrapper">
                             <TRS_VIEWDATAAPPENDIXS FIELD="cpcjt">
                             <div class="swiper-slide">
-                                <img class="js_scenePicture" src="" df="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" xs="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" sm="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" md="<TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/>" alt="" />
+                                <img class="js_scenePicture" src='' df='<TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>' md='<TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>' sm='<TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>' xs='<TRS_VIEWDATAAPPENDIX FIELD="" URLISABS="true"/>' alt="" />
                             </div>
                             </TRS_VIEWDATAAPPENDIXS>
                         </div>
@@ -1585,6 +1585,24 @@
 
     </script>
     <script type="text/javascript" src="../site5/templet_product_detail.js"></script>
+    <!-- JiaThis Button BEGIN -->
+    <script type="text/javascript">
+        var jiathis_config={
+            pic:"",
+            summary:"",
+            siteNum:8,
+            sm:"tsina,qzone,douban,weixin,cqq,twitter,fb,linkedin",
+            appkey:{
+                "tsina":"2413070761",
+                "tqq":"801127250",
+                "renren":"02a810140e56450c8907b6de8c1677cf",
+                "kaixin001":"658605209749f040a7325d53719585eb",
+                "douban":"0dc955b486374567295c011d92a5d035"
+
+            },
+            hideMore:true
+        }
+    </script>
 
 </body>
 <!--<TRS_APPENDIX INDEX="0" MODE='PIC' WIDTH='200'/>-->
