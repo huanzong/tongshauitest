@@ -41,12 +41,11 @@
                 <div class="news_title">
                     <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
                 </div>
-                <div class="news_item">
-                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata'
-                                                                                               DATEFORMAT="yyyy-MM-dd"/></span>
+                <div class="news_item jiathis_style_32x32">
+                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd"/></span>
                     <span class="news_item_line news_item_padding news_item_mid"></span>
                     <span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-                    <a class="news_item_room news_item_mid " title="分享到微博">
+                    <a class="news_item_room news_item_mid" title="分享到微博">
                         <!--<i class="iconfont icon-share-weibo"></i>-->
                         <span class="jiathis_txt jiathis_separator iconfont icon-share-weibo jtico_tsina"></span>
                     </a>
