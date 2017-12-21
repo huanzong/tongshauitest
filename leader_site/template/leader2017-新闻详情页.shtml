@@ -40,19 +40,24 @@
                 <div class="news_title">
                     <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
                 </div>
-                <div class="news_item jiathis_style_32x32">
+                <div class="news_item">
                     <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd"/></span>
                     <span class="news_item_line news_item_padding news_item_mid"></span>
                     <span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-                    <a class="news_item_room news_item_mid jiathis_button_tsina">
+                    <a class="news_item_room news_item_mid ">
                         <i class="iconfont icon-share-weibo"></i>
                     </a>
-                    <a class=" news_item_mid jiathis_button_weixin">
+                    <a class=" news_item_mid ">
                         <i class="iconfont icon-share-weixin"></i>
                     </a>
                 </div>
                 <div class="news_content_top">
                     <TRS_ViewData field='doccontent'/>
+                </div>
+
+                <div class="jiathis_style_32x32" style="display: none">
+                    <a class="jiathis_button_tsina"></a>
+                    <a class="jiathis_button_weixin"></a>
                 </div>
             </div>
         </div>
@@ -119,21 +124,20 @@
 
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="validform_v5.3.2_min.js"></script>
-<!--<script type="text/javascript" >-->
-    <!--var jiathis_config={-->
-        <!--summary:"",-->
-        <!--pic:"pic1",-->
-        <!--showClose:true,-->
-        <!--shortUrl:false,-->
-        <!--hideMore:false,-->
-        <!--appkey: {-->
-            <!--"tsina": "新浪微博APPKEY",-->
-            <!--"weixin": "微信APPKEY",-->
-        <!--}-->
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".icon-share-weibo").bind("click", function () {
+            $(".jiathis_button_tsina").click();
+        });
 
-        <!--}-->
-<!--</script>-->
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
+        $(".icon-share-weixin").bind("click", function () {
+            $(".jiathis_button_weixin").click();
+        });
+    })
+
+
+</script>
 </body>
 
 </html>
