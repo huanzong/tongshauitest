@@ -573,6 +573,7 @@ function getUserHeadImg(){
         success_cb: function(data){
             if (jQuery.trim(data).length > 0) {
                 //头像
+                debugger
                 if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
                     $(".js_userMsgXs").prop("src",'/images/user_img.jpg');
                 }
