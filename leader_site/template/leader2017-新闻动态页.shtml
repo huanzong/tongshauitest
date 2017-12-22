@@ -17,12 +17,13 @@
         <!-- 导航 -->
         <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
         <!-- 导航 End-->
+
         <!--头部banner-->
         <div class="news_list_banner">
             <a href="javascript:;">
                 <trs_viewdatas id="关于统帅" num="1">
-                <img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='0' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" lg="news_banner_md.png" md="news_banner_md.png"
-                     sm="news_banner_sm.png" xs="news_banner_sm.png">
+                <img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='0' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" lg="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                     sm="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='2' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='2' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>">
                 </trs_viewdatas>
                 <div class="news_list_caption">
                     <trs_channel id='关于统帅' AUTOLINK="false"/>
