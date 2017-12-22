@@ -322,13 +322,13 @@ $(function () {
                 //player.play();
             },600)
 
-        $('audio,video').mediaelementplayer({
-            //mode: 'shim',
-            //success: function(player, node) {
-            //	$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-            //}
-            features: ['playpause','progress','volume','postroll']
-        });
+        //$('audio,video').mediaelementplayer({
+        //    //mode: 'shim',
+        //    //success: function(player, node) {
+        //    //	$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+        //    //}
+        //    features: ['playpause','progress','volume','postroll']
+        //});
         });
     //}
 
