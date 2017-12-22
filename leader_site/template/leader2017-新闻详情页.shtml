@@ -67,7 +67,6 @@
                 <div class="news_content_top">
                     <TRS_ViewData field='doccontent'/>
                 </div>
-
             </div>
         </div>
         <!--新闻内容END-->
