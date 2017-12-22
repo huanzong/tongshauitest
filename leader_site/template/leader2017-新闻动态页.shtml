@@ -17,19 +17,17 @@
         <!-- 导航 -->
         <!--#include file="${ROOT_PATH}public/header/header.shtml"-->
         <!-- 导航 End-->
-
         <!--头部banner-->
-        <div class="news_list_banner">
+        <trs_viewdatas id="关于统帅" num="1">
+        <div class="news_list_banner" pic="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/>,</TRS_VIEWDATAAPPENDIXS>">
             <a href="javascript:;">
-                <trs_viewdatas id="关于统帅" num="1">
-                <img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='0' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" lg="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
-                     sm="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='2' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='2' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>">
-                </trs_viewdatas>
+                <img class="js_recPic" src="" df="" lg="" md="" sm="" xs="">
                 <div class="news_list_caption">
                     <trs_channel id='关于统帅' AUTOLINK="false"/>
                 </div>
             </a>
         </div>
+        </trs_viewdatas>
         <!--头部bannerEND-->
         <!--新闻中心列表-->
         <div class="news_list_content">
@@ -156,6 +154,17 @@
 <script type="text/javascript" src="templet_pagination.js"></script>
 <script>
     $(function () {
+
+        var bannerpic=$(".news_list_banner").attr("pic");
+        var result=bannerpic.split(",");
+        var bannerpic1=result[0];
+        var bannerpic2=result[1];
+        var bannerpic3=result[2];
+        $(".js_recPic").attr("df",bannerpic1);
+        $(".js_recPic").attr("lg",bannerpic2);
+        $(".js_recPic").attr("md",bannerpic2);
+        $(".js_recPic").attr("sm",bannerpic3);
+        $(".js_recPic").attr("xs",bannerpic3);
 
         //PC端分页
         var pager = new pagination("#sub div.pageMax");
