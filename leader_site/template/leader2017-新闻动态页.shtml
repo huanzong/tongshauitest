@@ -148,6 +148,7 @@
     </div>
 </div>
 
+<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script>
     $(function () {
 
@@ -232,7 +233,6 @@
     })
 
 </script>
-<!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="validform_v5.3.2_min.js"></script>
 <script type="text/javascript" src="news_list.js"></script>
 <script type="text/javascript" src="templet_pagination.js"></script>
