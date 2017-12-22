@@ -129,13 +129,7 @@ $(function() {
 	//banner轮播
   var screenWidth = document.body.offsetWidth;
 
-  //响应式图片
-  $(".js_recPic").each(function(){
-    $(this).oPicture({
-        //自定义节点宽度
-        //sm:544,md:700,lg:992,xl:1200,
-    }).init();
-  });
+  
 
   var bannerHtmlStr = '';
   for(var j=$('.o_df_1-6.banner-info').find('.js_bannerSwiperFont').length-1;j>=0;j--){
@@ -572,6 +566,13 @@ $(function() {
 
 	// },2000);
 
+  //响应式图片
+  $(".js_recPic").each(function(){
+    $(this).oPicture({
+        //自定义节点宽度
+        //sm:544,md:700,lg:992,xl:1200,
+    }).init();
+  });
 
 
   init();

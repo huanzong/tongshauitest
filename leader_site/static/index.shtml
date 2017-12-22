@@ -114,13 +114,13 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-                                            <img class="js_recPic" src="" df="images/index_banner.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
+                                            <img class="js_recPic" src="images/img2-1.png" df="images/index_banner.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
                                             <!-- <img class="js_bg" src="images/index_banner.JPG"> -->
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-                                            <img class="js_recPic" src="" df="images/index_banner2.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
+                                            <img class="js_recPic" src="images/img2-1.png" df="images/index_banner2.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
                                             <!-- <img class="js_bg" src="images/index_banner2.JPG"> -->
                                         </a>
                                     </div>
@@ -344,12 +344,12 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <a href="javascript:;">
-							        	<img class="js_recPic" src="" df="images/index_rec_next1.JPG" md="images/index_rec_next3.JPG">
+							        	<img class="js_recPic" src="images/img3-4.png" df="images/index_rec_next1.JPG" md="images/index_rec_next3.JPG">
 							        </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="javascript:;">
-							        	<img class="js_recPic" src="" df="images/index_rec_next2.JPG" md="images/index_rec_next4.JPG">
+							        	<img class="js_recPic" src="images/img3-4.png" df="images/index_rec_next2.JPG" md="images/index_rec_next4.JPG">
 							        </a>
                                 </div>
                             </div>
@@ -408,7 +408,7 @@
                                         <div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
                                             <div class="l-padding">
                                                 <a href="javascript:;">
-						        					<img src="images/index_entrance01.jpg">
+						        					<img class="js_recPic" src="images/img3-4.png" df="images/index_entrance01.jpg">
 						        				</a>
                                                 <div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
                                                     <h3>你是我简单满足的小确幸1111</h3>
