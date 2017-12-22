@@ -38,20 +38,20 @@ $(function() {
     // 登录方式转换
     $('.js_regType').on('click',function(){
         var phoneType = $(this);
-        if(phoneType.prop('data-reg')){//当前手机注册，转为邮箱注册
+        if(phoneType.prop('data-reg')=="0"){//当前手机注册，转为邮箱注册
             $('.js_regType_tab').removeClass('icon-phone').addClass('icon-computer');
             $('.js_regType_phone').show();
             $('.js_regType_email').hide();
             $('.js_regType_tit').text('手机注册');
             $('.js_regType_float').text('使用邮箱注册');
-            $('.js_regType').prop('data-reg',0);
+            $('.js_regType').prop('data-reg',1);
         }else{
             $('.js_regType_tab').removeClass('icon-computer').addClass('icon-phone');
             $('.js_regType_email').show();
             $('.js_regType_phone').hide();
             $('.js_regType_tit').text('邮箱注册');
             $('.js_regType_float').text('使用手机注册');
-            $('.js_regType').prop('data-reg',1);
+            $('.js_regType').prop('data-reg',0);
         }
     });
 
