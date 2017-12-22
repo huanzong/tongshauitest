@@ -12,7 +12,7 @@ $(function() {
         // $('.js_regType_email').hide();
 
         var screenWidth = document.body.offsetWidth;
-        var screenHeight = document.body.offsetHeight;
+        var screenHeight = document.body.offsetHeight; 
         
         // var regHeight = $('.js_center').height();
 

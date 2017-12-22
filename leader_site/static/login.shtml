@@ -15,7 +15,7 @@
 <body>
     <div class="o_body">
         <div class="o_main">
-        	<div class="login_bg_left o_df-show o_md-hide o_sm-hide o_xs-hide">
+        	<div class="login_bg_left o_df-show o_md-hide o_sm-hide o_xs-hide ">
         		<img src="images/login_bg_df.png"/>
         	</div>
         	<div class="login_bg_left o_df-hide o_md-show">

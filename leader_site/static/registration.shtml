@@ -21,7 +21,7 @@
         	<div class="reg_bg_left o_df-hide o_lg-show">
         		<img src="images/reg_bg_left2.jpg"/>
         	</div>
-        	<div class="reg_bg_right o_df-show o_md-hide o_sm-hide o_xs-hide">
+        	<div class="reg_bg_right o_df-show o_md-hide o_sm-hide o_xs-hide ">
         		<img src="images/reg_bg_right.jpg"/>
         	</div>
             <div class="o_g register_height"> 

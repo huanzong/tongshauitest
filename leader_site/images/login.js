@@ -8,7 +8,7 @@ $(function() {
 
     function init() {
         var screenWidth = document.body.offsetWidth;
-        var screenHeight = document.body.offsetHeight;
+        var screenHeight = document.body.offsetHeight; 
     }
 
     //默认电脑登陆
