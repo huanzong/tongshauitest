@@ -62,26 +62,22 @@
                 }
             }), c.off(), r.css({"cursor": "pointer"}), i.css({display: "none"})
         }, i.resetting = function () {
-            isPC ? (c.on("click", function () {
-                if (('' + h.attr('style')).indexOf('height')<0) {
-                    h.css({"display": "inline-block", "width": r.width() - 30}), a.css({
-                        "z-index": "1",
-                        "height": p.height() + 80,
-                        "max-height": "280px"
-                    }).addClass("o_DropdownBox"), r.css({
-                        "background": "#e60012",
-                        "border-color": "#e60012"
-                    }), d.length <= x ? h.css("height", p.height()) : h.css("height", "200px"), b(r), i.bar.init()
+            var barInit = function(){
+                if(i.bar[0].resetScroll){
+                    return i.bar[0].resetScroll()
                 } else {
-                    h.css({"display": "inline-block", "width": r.width() - 30}), a.css({
-                        "z-index": "1",
-                        "height": p.height() + 80,
-                        "max-height": "280px"
-                    }).addClass("o_DropdownBox"), r.css({
-                        "background": "#e60012",
-                        "border-color": "#e60012"
-                    }), d.length <= x ? h.css("height", p.height()) : h.css("height", "200px"), b(r), i.bar[0].resetScroll()
+                    return i.bar.init()
                 }
+            }
+            isPC ? (c.on("click", function () {
+                h.css({"display": "inline-block", "width": r.width() - 30}), a.css({
+                    "z-index": "1",
+                    "height": p.height() + 80,
+                    "max-height": "280px"
+                }).addClass("o_DropdownBox"), r.css({
+                    "background": "#e60012",
+                    "border-color": "#e60012"
+                }), d.length <= x ? h.css("height", p.height()) : h.css("height", "200px"), b(r), barInit()
             }), r.hover(function () {
             }, function () {
                 h.css("display", "none"), a.css({
@@ -870,8 +866,9 @@
             var n = {step: 50, surplus: 7, vShowBar: !0, vPScroll: !0};
             t = $.extend(n, t);
             var s = $(this);
-            s.obj = $(this), s.parent = s.obj.parent(), s.win = $("<div class='o_scrollWin'>"), s.body = $("<div class='o_scrollbody'>"), s.barbox = $("<div class='o_barbox'>"), s.line = $("<span>"), s.step = t.step, s.bar = $("<div class='o_bar'>"), s.winH = null, s.bodyH = null, s.barH = null, s.barboxH = null, s.cha = 0, s.sScale = 1, s.sTop = 0, s.sTop_next = null, s.barT = null, s.bar.appendTo(s.barbox), s.line.appendTo(s.barbox), s.barbox.appendTo(s.win), s.obj.appendTo(s.body), s.body.appendTo(s.win), s.win.appendTo(s.parent), s.init = function () {
-                s.sTop = 0, s.bar.css("top", s.sTop + "px"), s.body.css("margin-top", s.sTop), s.win.css("padding-right", s.barbox.width() + "px"), s.winH = s.win.height(), s.bodyH = s.body.height(), s.barboxH = s.barbox.height(), s.sScale = s.barboxH / s.bodyH, s.cha = s.bodyH - s.winH, s.barH = s.barbox.height() / Math.max(s.bodyH / s.winH, 1), s.bar.css("height", s.barH + "px"), s.cha <= 0 ? (s.barbox.hide(), s.win.css("padding-right", "0px"), s.off()) : (s.barbox.show(), isPC ? (
+            s.obj = $(this), s.parent = s.obj.parent(), s.win = $("<div class='o_scrollWin'>"), s.body = $("<div class='o_scrollbody'>"), s.barbox = $("<div class='o_barbox'>"), s.line = $("<span>"), s.step = t.step, s.bar = $("<div class='o_bar'>"), s.winH = null, s.bodyH = null, s.barH = null, s.barboxH = null, s.cha = 0, s.sScale = 1, s.sTop = 0, s.sTop_next = null, s.barT = null, s.bar.appendTo(s.barbox), s.line.appendTo(s.barbox), s.barbox.appendTo(s.win), s.obj.appendTo(s.body), s.body.appendTo(s.win), s.win.appendTo(s.parent), 
+                s.init = function () {
+                    s.sTop = 0, s.bar.css("top", s.sTop + "px"), s.body.css("margin-top", s.sTop), s.win.css("padding-right", s.barbox.width() + "px"), s.winH = s.win.height(), s.bodyH = s.body.height(), s.barboxH = s.barbox.height(), s.sScale = s.barboxH / s.bodyH, s.cha = s.bodyH - s.winH, s.barH = s.barbox.height() / Math.max(s.bodyH / s.winH, 1), s.bar.css("height", s.barH + "px"), s.cha <= 0 ? (s.barbox.hide(), s.win.css("padding-right", "0px"), s.off()) : (s.barbox.show(), isPC ? (
                 s.resetScroll = function() {
                     s.sTop = 0, s.bar.css("top", s.sTop + "px"), s.body.css("margin-top", s.sTop), s.win.css("padding-right", s.barbox.width() + "px"), s.winH = s.win.height(), s.bodyH = s.body.height(), s.barboxH = s.barbox.height(), s.sScale = s.barboxH / s.bodyH, s.cha = s.bodyH - s.winH, s.barH = s.barbox.height() / Math.max(s.bodyH / s.winH, 1), s.bar.css("height", s.barH + "px")
                 }, 
