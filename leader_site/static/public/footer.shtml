@@ -89,7 +89,12 @@
 		<div class="footer_copy">
 			<span class="link">
                 <a href="javascript:;" class="iconfont icon-share-weibo"></a>
-				<a href="javascript:;"  class="iconfont icon-share-weixin"></a>
+				<a href="javascript:;"  class="iconfont icon-share-weixin">
+					<div class="l-float-top">
+						<img src="images/tongshuai_weixin.jpg"/>
+                        <p></p><i></i>
+                    </div>
+				</a>
             </span>
 			<ul>
 				<li>
