@@ -1,5 +1,5 @@
 //a:hover伪类在ios移动端浏览器内无效
-document.body.addEventListener('touchstart',function(){});
+document.body.addEventListener&&document.body.addEventListener('touchstart',function(){});
 /**
  * ajax初始化
  */
@@ -15,8 +15,7 @@ jQuery.ajaxSetup({
             request.abort();
             jumpToLoginPage();
         }
-	
-	    //csrf校验
+        //csrf校验
         if(this.csrf){
             var crm = Math.random();
             //判断语句，用于本地测试，请勿提交测试或生产
@@ -143,7 +142,7 @@ $(function () {
         setTimeout(function () {
             $ele.find('.index_animate').css('z-index', '-11');
             // $ele.siblings(":not(.js_ignorAnimate)").removeClass('l-opacity0');
-            $ele.siblings(":not(.js_ignorAnimate)").animate({
+            $ele.siblings(":not(.js_ignorAnimate)").not('.l-nav').animate({
                 'filter':'alpha(opacity=1)',
                 '-moz-opacity':'1',
                 '-khtml-opacity':'1',
@@ -152,9 +151,15 @@ $(function () {
             // $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
             // $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
         }, showTime);
+
+        setTimeout(function(){
+            $('.l-nav').animate({
+              'opacity': 1
+            }, 700)
+          },800)
     }
 
-    lineAnimate($('.js_animateLine'), 1000);
+    lineAnimate($('.js_animateLine'), 500);
 
 
     $(window).resize(function () {
