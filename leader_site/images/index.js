@@ -156,6 +156,7 @@ $(function() {
     loop: true,
     updateOnImagesReady : true,
     autoplay: 5000,
+    roundLengths : true,
     // centeredSlides : true,
     calculateHeight : true,
     slidesPerView: 3,
