@@ -344,7 +344,7 @@ var address=$(".js_form_addAddrManagement").Validform({
     showAllError:false,
     ignoreHidden:false,
     dragonfly:false,
-    callback:function(form){//验证后保存地址
+    beforeSubmit:function(form){//验证后保存地址
         var templet_type=$(".js_btnSubmit").attr("type");//判断保存和修改
         if(templet_type==1){
             saveUserAddress();
