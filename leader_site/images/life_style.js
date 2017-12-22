@@ -284,7 +284,9 @@ $(function () {
             $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
             $("#player ").removeClass("o_df-hide ").css('width','100%');
             setTimeout(function(){
-                $("#player")[0].play();
+                var player = new MediaElementPlayer('#player');
+                player.pause();
+                player.play();
             },600)
 
 
