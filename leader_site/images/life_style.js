@@ -312,7 +312,7 @@ $(function () {
             setTimeout(function(){
                 var player = new MediaElementPlayer('#player');
                 player.pause();
-                player.play();
+                //player.play();
             },600)
 
 
