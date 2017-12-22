@@ -305,19 +305,20 @@ $(function(){
 
 
 
-                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.8,'width':photoBoxWidth*0.8}).show();
+                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth,'width':photoBoxWidth}).show();
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
 
                             if(!$ie8){
-                                jcrop_api.setImage(templet_pic, function(){
+                                jcrop_api.setImage(templet_pic, function() {
                                     jcrop_api.setOptions({
                                         //outerImage: templet_pic,
                                         //setSelect: [ 60, 60, 260, 260 ]
-                                        setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
-                                
-                                    //})
-                                });
+                                        setSelect: [photoBoxWidth * 0.2, photoBoxWidth * 0.2, photoBoxWidth * 0.85, photoBoxWidth * 0.85]
+
+                                        //})
+                                    });
+                                })
                             }
                             //jcrop_api.setImage(templet_pic, function(){
                             //    jcrop_api.setOptions({
