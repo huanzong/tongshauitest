@@ -114,7 +114,7 @@ $(function(){
                     aspectRatio: 1,
                     boxWidth:photoBoxWidth,
                     boxHeight:photoBoxWidth,
-                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.8, photoBoxWidth*0.8 ]
                 }
                 ,function(){
                     // Use the API to get the real image size
@@ -138,7 +138,7 @@ $(function(){
                     aspectRatio: 1,
                     boxWidth:photoBoxWidth,
                     boxHeight:photoBoxWidth,
-                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.8, photoBoxWidth*0.8 ]
                 }
             //    ,function(){
             //        // Use the API to get the real image size
@@ -280,19 +280,20 @@ $(function(){
                                 jcrop_api.setOptions({
                                     outerImage: templet_pic,
                                     //setSelect: [ 60, 60, 260, 260 ]
-                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                                    setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.8, photoBoxWidth*0.8 ]
 
                                 })
                             });
                             $(".jcrop-preview").attr("src",templet_pic);
-                            
+
                             $(".jcrop-preview").show();
                             $('.js_selectWf').show();
                             $('.js-rightimg').show();
                         }else{
 
 
-                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.85,'width':photoBoxWidth*0.85}).show();
+
+                            $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.8,'width':photoBoxWidth*0.8}).show();
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
 
