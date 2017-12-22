@@ -294,6 +294,10 @@ $(function () {
         }
         })
 
+
+
+
+
     $(".js_lifeStylePlay").on("click",function(){
             $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
             $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
@@ -318,7 +322,13 @@ $(function () {
                 //player.play();
             },600)
 
-
+        //$('audio,video').mediaelementplayer({
+        //    //mode: 'shim',
+        //    //success: function(player, node) {
+        //    //	$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+        //    //}
+        //    features: ['playpause','progress','volume','postroll']
+        //});
         });
     //}
 
