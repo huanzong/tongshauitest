@@ -266,9 +266,35 @@ $(function () {
 
 
 
-    videoMethod();
+    //videoMethod();
     //if($("#player").length>=0){
-        $(".js_lifeStylePlay").on("click",function(){
+    //$('video').mediaelementplayer(/* Options */);
+    new MediaElement('player',{
+        showPosterWhenEnded: true,//显示海报
+        autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
+        iPadUseNativeControls: true,//强制iPad的原生控件
+        iPhoneUseNativeControls: true,//强制iPhone的本机控件
+        AndroidUseNativeControls: true,//强制Android的原生控件
+        usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
+        enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
+        alwaysShowControls: false,//播放时隐藏控件，鼠标不在视频上方
+        fullscreenText: '全屏',
+        hideVideoControlsOnLoad: true,//显示视频控制
+        hideVideoControlsOnPause:true,//暂停显示控件
+        success: function (mediaElement, domObject) {
+            // add event listener
+            mediaElement.addEventListener('timeupdate', function(e) {
+
+                document.getElementById('current-time').innerHTML = mediaElement.currentTime;
+
+            }, false);
+
+            // call the play method
+            mediaElement.play();
+        }
+        })
+
+    $(".js_lifeStylePlay").on("click",function(){
             $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
             $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
             $('.video-cont-center').css({width: '100%'});
@@ -390,25 +416,25 @@ $(function () {
     //</script>
 
 
-        function videoMethod(){
-            $('audio,video').mediaelementplayer({
-                success: function (media, player, node) {
-                    $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-                    //$('.mejs-overlay-button').trigger('click');
-                },
-                showPosterWhenEnded: true,//显示海报
-                autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
-                iPadUseNativeControls: true,//强制iPad的原生控件
-                iPhoneUseNativeControls: true,//强制iPhone的本机控件
-                AndroidUseNativeControls: true,//强制Android的原生控件
-                usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
-                enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
-                alwaysShowControls: false,//播放时隐藏控件，鼠标不在视频上方
-                fullscreenText: '全屏',
-                hideVideoControlsOnLoad: true,//显示视频控制
-                hideVideoControlsOnPause:true//暂停显示控件
-            });
-        }
+        //function videoMethod(){
+        //    $('audio,video').mediaelementplayer({
+        //        success: function (media, player, node) {
+        //            $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+        //            //$('.mejs-overlay-button').trigger('click');
+        //        },
+        //        showPosterWhenEnded: true,//显示海报
+        //        autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
+        //        iPadUseNativeControls: true,//强制iPad的原生控件
+        //        iPhoneUseNativeControls: true,//强制iPhone的本机控件
+        //        AndroidUseNativeControls: true,//强制Android的原生控件
+        //        usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
+        //        enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
+        //        alwaysShowControls: false,//播放时隐藏控件，鼠标不在视频上方
+        //        fullscreenText: '全屏',
+        //        hideVideoControlsOnLoad: true,//显示视频控制
+        //        hideVideoControlsOnPause:true//暂停显示控件
+        //    });
+        //}
 
 //暂时隐藏
 //    function pageScript() {
