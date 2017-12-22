@@ -48,8 +48,8 @@
                     <a class="news_item_room news_item_mid jiathis_button_tsina">
                         <i class="iconfont icon-share-weibo"></i>
                     </a>
-                    <a class=" news_item_mid ">
-                        <i class="iconfont icon-share-weixin jiathis_button_weixin"></i>
+                    <a class=" news_item_mid jiathis_button_weixin">
+                        <i class="iconfont icon-share-weixin "></i>
                     </a>
                 </div>
 
@@ -59,9 +59,6 @@
                     </div>
                     <div class="jiathis_style_32x32">
                         <a class="jiathis_button_weixin"></a>
-                    </div>
-                    <div class="jiathis_style_32x32">
-                        <a class="jiathis_button_qzone"></a>
                     </div>
                 </div>
 
