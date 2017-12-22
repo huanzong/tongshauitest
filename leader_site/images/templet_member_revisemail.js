@@ -445,11 +445,15 @@ $(function(){
                             }
                         }
                         else if (jQuery.trim(data).indexOf("绑定失败，错误码")  >-1){
-                            if($('.js-emailCodeerror').hasClass('Validform_right')){
-                                $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
-                            }
-                            else{
-                                $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
+                            if(jQuery.trim(data).indexOf("email_occupied")  >-1){
+                                $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>邮箱已被占用');
+                            }else{
+                                if($('.js-emailCodeerror').hasClass('Validform_right')){
+                                    $('.js-emailCodeerror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
+                                }
+                                else{
+                                    $('.js-emailCodeerror').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>绑定失败');
+                                }
                             }
                         }
                     }

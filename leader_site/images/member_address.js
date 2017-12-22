@@ -95,9 +95,9 @@ $('.js-alertTrue').click(function(){
 $(function(){
     $('.js_inputCheck').focus(function(){
         if(!$(this).hasClass('Validform_error')){
-            $(this).css('border-color','#ccc')
+            $(this).css('border-color','red')
         }else{
-            $(this).css('border-color','#f39800');
+            $(this).css('border-color','red');
         }
         $(this).blur(function(){
             if ($(this).siblings('.Validform_wrong').length!=0){
@@ -108,6 +108,20 @@ $(function(){
         })
 })
 
+
+
+    $('.js-bindmobinput').focus(function(){
+        //if(!$(this).hasClass('Validform_error')){
+            $(this).css('border-color','red !important')
+
+        $(this).blur(function(){
+            if ($(this).siblings('.Validform_wrong').length!=0){
+                $(this).css('border-color','#f39800');
+            }else{
+                $(this).css('border-color','#ccc');
+            }
+        })
+    })
     //address.ignore('#phonequhao,#phone,#phonefenjihao');
 
 

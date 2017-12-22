@@ -47,9 +47,10 @@
                                             </div>
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input  type="password" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 " data-normal="1" name="" ph="请输入密码"  maxlength="16"  value=""  datatype="*6-16"  errormsg="<i class='iconfont icon-information-solid'></i>密码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>密码不正确"/>
+                                                    <input type="text" name="password" maxlength="16" ph="6-16位数字、字母或符号的组合"  id="mobilePwd2"/>
+                                                    <input type="password" name="password" class="o_df-hide" ph="" maxlength="16" id="mobilePwd"/>
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
-                                                    <i class="iconfont icon-lock-solid"></i>
+                                                    <i class="iconfont icon-eye-close-solid js_passwordSwitch_mobile"></i>
                                                 </div>
                                             </div>
                                             <div class="reg-input o_df-hide">
@@ -95,7 +96,9 @@
                                             </div>
                                             <div class="reg-input">
                                                 <div class="l-input">
-                                                    <input type="password" name="" ph="6-16位，数字，字母或符号的密码组合" datatype="*6-16"  errormsg="<i class='iconfont icon-information-solid'></i>密码不得为空" nullmsg="<i class='iconfont icon-information-solid'></i>密码格式不正确">
+                                                    <input type="text" name="password" ph="6-16位，数字，字母或符号的密码组合" maxlength="16" id="emailPwd2"/>
+                                                    <input type="password" name="password" class="o_df-hide" maxlength="16" id="emailPwd"/>
+                                                    <i class="iconfont icon-eye-close-solid js_passwordSwitch_email"></i>
                                                     <p class="Validform_checktip"></p>
                                                 </div>
                                             </div>
