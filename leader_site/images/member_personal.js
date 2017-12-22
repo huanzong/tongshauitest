@@ -21,15 +21,15 @@ $(function(){
     $('.lose').css('background-color','#ccc');
 
     var windowWidth = $(window).width();
-    if(windowWidth>1199){
-      var photoBoxWidth = 310;
-    }else if(windowWidth<1200&&windowWidth>991){
-        var photoBoxWidth = 300;
-
-    }else if(windowWidth<992) {
-        var photoBoxWidth = 250;
-
-    }
+    //if(windowWidth>1199){
+    //  var photoBoxWidth = 310;
+    //}else if(windowWidth<1200&&windowWidth>991){
+    //    var photoBoxWidth = 300;
+    //
+    //}else if(windowWidth<992) {
+    //    var photoBoxWidth = 250;
+    //
+    //}
 
 //    用户名判定
     var nubreg =/^[0-9]*$/;
@@ -91,7 +91,7 @@ $(function(){
         ysize = $pcnt.height();
     var imgs = new Image();
     var imgsW,imgsH,imgsWb,imgsHnow,imgsWnow,nowX,nowY,nowImgW;
-
+   var  photoBoxWidth;
 
 
 
@@ -252,6 +252,7 @@ $(function(){
         // 开始上传事件
 
         onUpload: function(data) {
+
             // console.log(data,111);
             if(data){
                 globalShade2('图片上传中，请耐心等待....',4,'forever');
@@ -268,6 +269,11 @@ $(function(){
                 $('.js-uploadPhoto').hide();
                 $('.js-modifyPhoto').show();
                 $('.js-modifyPhotoBtn').show();
+
+                var photoW  = $('.js-modifyPhoto li').width();
+                var photoH  = $('.js-modifyPhoto').height();
+                photoBoxWidth = photoW>photoH?photoH:photoW;
+                
                 templet_pic='/tongshuaifile'+$.trim(data.data);
 
 
