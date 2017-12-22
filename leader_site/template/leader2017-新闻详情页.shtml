@@ -41,20 +41,29 @@
                     <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
                 </div>
                 <div class="news_item jiathis_style_32x32">
-                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata' DATEFORMAT="yyyy-MM-dd"/></span>
+                    <span class="news_item_date news_item_padding news_item_mid"><trs_viewdata field='newsdata'
+                                                                                               DATEFORMAT="yyyy-MM-dd"/></span>
                     <span class="news_item_line news_item_padding news_item_mid"></span>
                     <span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-                    <!--jiathis_style_32x32-->
-                    <!--jiathis_button_tsina-->
-                    <!--jiathis_button_
-                    -->
-                    <a href="javascript:;" class="news_item_room news_item_mid jiathis_button_tsina">
+                    <a class="news_item_room news_item_mid jiathis_button_tsina">
                         <i class="iconfont icon-share-weibo"></i>
                     </a>
-                    <a href="javascript:;" class=" news_item_mid jiathis_button_weixin">
-                        <i class="iconfont icon-share-weixin"></i>
+                    <a class=" news_item_mid ">
+                        <i class="iconfont icon-share-weixin jiathis_button_weixin"></i>
                     </a>
                 </div>
+                <div>
+                    <div class="jiathis_style_32x32">
+                        <a class="jiathis_button_tsina"></a>
+                    </div>
+                    <div class="jiathis_style_32x32">
+                        <a class="jiathis_button_weixin"></a>
+                    </div>
+                    <div class="jiathis_style_32x32">
+                        <a class="jiathis_button_qzone"></a>
+                    </div>
+                </div>
+
                 <div class="news_content_top">
                     <TRS_ViewData field='doccontent'/>
                 </div>
@@ -123,21 +132,37 @@
 
 <!--#include file="${ROOT_PATH}public/style/js.shtml"-->
 <script type="text/javascript" src="validform_v5.3.2_min.js"></script>
-<!--<script type="text/javascript" >-->
-    <!--var jiathis_config={-->
-        <!--summary:"",-->
-        <!--pic:"pic1",-->
-        <!--showClose:true,-->
-        <!--shortUrl:false,-->
-        <!--hideMore:false,-->
-        <!--appkey: {-->
-            <!--"tsina": "新浪微博APPKEY",-->
-            <!--"weixin": "微信APPKEY",-->
-        <!--}-->
-
-        <!--}-->
-<!--</script>-->
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".icon-share-weibo").bind("click", function () {
+            $(".jiathis_button_tsina").click();
+        });
+
+        $(".icon-share-weixin").bind("click", function () {
+            $(".jiathis_button_weixin").click();
+        });
+    })
+
+
+</script>
+<script type="text/javascript">
+    var jiathis_config={
+        pic:"",
+        summary:"",
+        siteNum:8,
+        sm:"tsina,qzone,douban,weixin,cqq,twitter,fb,linkedin",
+        appkey:{
+            "tsina":"2413070761",
+            "tqq":"801127250",
+            "renren":"02a810140e56450c8907b6de8c1677cf",
+            "kaixin001":"658605209749f040a7325d53719585eb",
+            "douban":"0dc955b486374567295c011d92a5d035"
+
+        },
+        hideMore:true
+    }
+</script>
 </body>
 
 </html>
