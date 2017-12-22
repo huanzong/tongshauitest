@@ -3629,45 +3629,195 @@ oPoint = {
         return $backEle;
     };
 
-    $.fn.oConfirm = function(t) {
-        defaults = {
-            info: "没有定义信息"
-        },
-        $p = $.extend(defaults, t);
-        var n = $(".o_body"),
-        o = {};
-        return o.openbtn = $("<span>"),
-        o.openbtn.attr("oData-popup", ".js_alertbox"),
-        o.autoInfo = $p.info,
-        o.callbackFn = null,
-        o.targetEle = null,
-        o.newClass = "",
-        o.box = $("<div class='o_popup o_alert js_alertbox'></div>"),
-        o.closeBtn = $("<span class='o_popupclose js_popupClose'><span>"),
-        o.contbox = $("<div class='cont'>"),
-        o.tool = $("<div class='tool'></div>"),
-        o.confirmBtn = $("<div class='o_bgbtn1 btn o_btn_df-sm js_confirm'><span>确定</span></div>"),
-        o.cancelBtn = $("<div class='o_linebtn1 btn o_btn_df-sm js_popupClose'><span>取消</span></div>"),
-        o.closeBtn.appendTo(o.box),
-        o.contbox.appendTo(o.box),
-        o.confirmBtn.appendTo(o.tool),
-        o.cancelBtn.appendTo(o.tool),
-        o.tool.appendTo(o.box),
-        n.after(o.box),
-        n.append(o.openbtn),
-        o.openbtn.oPopup({
-            confirmFn: function() {
-                o.callbackFn(o.targetEle)
+    $.fn.oPopupFn=function(){
+    var $this={};
+        $this.target=null;
+        $this.zz=$("<div class='o_shade'></div>");
+        $this.closeFn=null;
+        $this.top=0;
+        $this.absolute=false;
+        $this.closebtn=null;
+    $this.open=function(p){
+        $this.target=null;
+        $this.closeFn=null;
+        $this.absolute=false;
+        $this.absolute=null;
+        $this.closebtn=null;
+        if(p.target){
+            $this.target=$(p.target);
+            $this.closebtn=$this.target.find(".js_popupClose");
+
+            if($this.closebtn){
+                $this.closebtn.on("click",function(){
+                    $this.close();
+                });
             }
-        }),
-        o.open = function(t) {
-            o.callbackFn = null,
-            o.box.removeClass(o.newClass),
-            t ? (t.info ? o.contbox.html(t.info) : o.contbox.html(o.autoInfo), t.ele ? o.targetEle = t.ele: o.targetEle = null, t.callbackFn ? o.callbackFn = t.callbackFn: o.callbackFn = function() {},
-            t.addClass ? (o.newClass = t.addClass, o.box.addClass(o.newClass)) : o.newClass = "") : o.contbox.html(o.autoInfo),
-            o.openbtn.click()
-        },
-        o
+            if(p.closeFn){
+                $this.closeFn=p.closeFn;
+            }
+            if(p.absolute){
+                $this.absolute=p.absolute;
+            }
+
+            $this.zz.appendTo($(".o_body")).addClass("show");
+            $this.target.show().addClass("show");   
+            $this.init();
+        }
+    };
+
+    
+
+    $this.close=function(){
+        $this.target.addClass("hide");
+            $this.zz.removeClass("show");
+            setTimeout(function(){
+                $this.zz.detach();
+                $this.target.removeClass("hide").removeClass("show").hide();
+                if($this.closeFn!==null){
+                    $this.closeFn($this.target);
+                }
+                    
+            },300);
+    };
+
+    $this.init=function(){
+        var wH=$(window).height(),
+            dH=$(document).height(),
+            scrollH=$(window).scrollTop(),
+            objH=$this.target.height();
+        if(!$this.absolute){//不固定
+            if(objH<=wH){//小于
+                $this.top=(wH-objH)/2;
+                $this.target.css('top',$this.top).removeClass("absolute");
+            }else{//大于
+                if(scrollH+objH+30>dH){
+                    scrollH=dH-(objH+60);
+                    $("html,body").animate({scrollTop:scrollH},200);
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top).addClass("absolute");
+                }else{
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top).addClass("absolute");
+                }
+            }
+        }else{//固定
+            if(objH<=wH){
+                $this.top=scrollH+(wH-objH)/2;
+                $this.target.css('top',$this.top);
+            }else{
+                if(scrollH+objH+30>dH){
+                    scrollH=dH-(objH+60);
+                    $("html,body").animate({scrollTop:scrollH},200);
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top).addClass("absolute");
+                }else{
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top);
+                }
+            }
+        }
+    };
+    
+    return $this;
+};
+
+$.fn.oAlert=function(p){
+        defaults={"info":"没有定义信息"};
+        $p=$.extend(defaults,p);
+        var $body=$(".o_body"),
+            $this={};
+
+            $this.openbtn=$("<span>");
+            $this.openbtn.attr("oData-popup",".js_alertbox");
+            $this.autoInfo=$p.info;
+            $this.newClass="";
+
+            $this.box=$("<div class='o_popup o_alert js_alertbox'></div>");
+            $this.closeBtn=$("<span class='o_popupclose js_popupClose'><span>");
+            $this.contbox=$("<div class='cont'>");
+            $this.tool=$("<div class='tool'></div>");
+            $this.confirmBtn=$("<div class='o_bgbtn1 btn o_btn_df-sm js_popupClose'><span>确定</span></div>");
+
+            $this.closeBtn.appendTo($this.box);
+            $this.contbox.appendTo($this.box);
+            $this.confirmBtn.appendTo($this.tool);
+            $this.tool.appendTo($this.box);
+            $body.after($this.box);
+            $body.append($this.openbtn);
+
+            $this.openbtn.oPopup();
+            $this.open=function(p){
+
+                $this.box.removeClass($this.newClass);
+                p.info?$this.contbox.html(p.info):$this.contbox.html($this.autoInfo);
+                if(p.addClass){
+                        $this.newClass=p.addClass;
+                        $this.box.addClass($this.newClass);
+                    }else{
+                        $this.newClass="";
+                    }
+                
+                $this.openbtn.click();
+            };
+
+            return $this;
+    };
+
+    $.fn.oConfirm=function(p){
+        defaults={"info":"没有定义信息"};
+        $p=$.extend(defaults,p);
+        var $body=$(".o_body"),
+            $this={};
+
+            $this.openbtn=$("<span>");
+            $this.openbtn.attr("oData-popup",".js_alertbox");
+            $this.autoInfo=$p.info;
+            $this.callbackFn=null;
+            $this.targetEle=null;
+            $this.newClass="";
+
+            $this.box=$("<div class='o_popup o_alert js_alertbox'></div>");
+            $this.closeBtn=$("<span class='o_popupclose js_popupClose'><span>");
+            $this.contbox=$("<div class='cont'>");
+            $this.tool=$("<div class='tool'></div>");
+            $this.confirmBtn=$("<div class='o_bgbtn1 btn o_btn_df-sm js_confirm'><span>确定</span></div>");
+            $this.cancelBtn=$("<div class='o_linebtn1 btn o_btn_df-sm js_popupClose'><span>取消</span></div>");
+
+            $this.closeBtn.appendTo($this.box);
+            $this.contbox.appendTo($this.box);
+            $this.confirmBtn.appendTo($this.tool);
+            $this.cancelBtn.appendTo($this.tool);
+            $this.tool.appendTo($this.box);
+            $body.after($this.box);
+            $body.append($this.openbtn);
+
+            $this.openbtn.oPopup({
+                confirmFn:function(){
+                    $this.callbackFn($this.targetEle);
+                }
+            });
+            $this.open=function(p){
+                $this.callbackFn=null;
+                $this.box.removeClass($this.newClass);
+                if(p){
+                    p.info?$this.contbox.html(p.info):$this.contbox.html($this.autoInfo);
+                    p.ele?$this.targetEle=p.ele:$this.targetEle=null;
+                    p.callbackFn?$this.callbackFn=p.callbackFn:$this.callbackFn=function(){};
+                    if(p.addClass){
+                        $this.newClass=p.addClass;
+                        $this.box.addClass($this.newClass);
+                    }else{
+                        $this.newClass="";
+                    }
+            
+                }else{
+                    $this.contbox.html($this.autoInfo);
+                }
+                
+                $this.openbtn.click();
+            };
+
+            return $this;
     };
 
     
