@@ -574,10 +574,10 @@ function getUserHeadImg(){
             if (jQuery.trim(data).length > 0) {
                 //头像
                 if(data.data.headUrl==null || data.data.headUrl=='' || data.data.headUrl=='null'){
-                    $(".js_userMsgXs").attr("src",'/images/user_img.jpg');
+                    $(".js_userMsgXs").prop("src",'/images/user_img.jpg');
                 }
                 else{
-                    $(".js_userMsgXs").attr("src",data.data.headUrl);
+                    $(".js_userMsgXs").prop("src",data.data.headUrl);
                 }
             }
         }
