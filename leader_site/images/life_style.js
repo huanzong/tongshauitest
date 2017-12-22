@@ -251,21 +251,143 @@ $(function () {
 
 
 //视频
-    $ie8 = false;
+//    $ie8 = false;
+//
+//    var browser = navigator.appName;
+//    if (browser == "Microsoft Internet Explorer") {
+//        var b_version = navigator.appVersion;
+//        var version = b_version.split(";");
+//        var trim_Version = version[1].replace(/[ ]/g, "");
+//        if (trim_Version == "MSIE8.0") {
+//            $ie8 = true;
+//        }
+//    }
 
-    var browser = navigator.appName;
-    if (browser == "Microsoft Internet Explorer") {
-        var b_version = navigator.appVersion;
-        var version = b_version.split(";");
-        var trim_Version = version[1].replace(/[ ]/g, "");
-        if (trim_Version == "MSIE8.0") {
-            $ie8 = true;
-        }
-    }
 
 
-    pageScript();
 
+    videoMethod();
+    //if($("#player").length>=0){
+        $(".js_lifeStylePlay").on("click",function(){
+            $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
+            $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
+            $('.video-cont-center').css({width: '100%'});
+
+
+                if(windowWidth>991){
+                     $('.js_styleVideoBox').hide();
+                 }else{
+                     $('.js_videoMdShow').hide();
+                     var navHeight = $('.l-opacity0').height();
+                     $(document).scrollTop(navHeight);
+                 }
+            $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+            $("#player ").removeClass("o_df-hide ").css('width','100%');
+            setTimeout(function(){
+                var player = new MediaElementPlayer('#player');
+                player.pause();
+                player.play();
+            },600)
+
+
+        });
+    //}
+
+    //if(window.innerWidth == undefined || window.innerWidth > 1199) {
+    //    var player = new MediaElementPlayer('#player');
+    //    $(".js_stop").on('click', function () {
+    //        player.pause();
+    //    });
+    //}else{
+    //    $(".js_stop").on("click",function(){
+    //        $("#player")[0].pause();
+    //    });
+    //}
+    //$('audio,video').mediaelementplayer({
+    //
+    //    features: ['playpause','progress','volume','postroll']
+    //});
+    //pageScript();
+    //<script type="text/javascript">
+    //
+    //
+    //
+    //    $(function(){
+    //        /*$('audio,video').mediaelementplayer({
+    //         //mode: 'shim',
+    //         success: function(player, node) {
+    //         $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+    //         }
+    //         });*/
+    //        //延时加载sidebar.js
+    //        setTimeout(function(){
+    //            loadSrc("http://image.casarte.com/casarte/images/c_index.js");
+    //            loadSrc("http://image.casarte.com/casarte/images/sidebar.js")
+    //        },1000);
+    //
+    //        $(".js_showad").off();
+    //        $(".js_showad").click(function(){
+    //            if($(this).attr('href')=='javascript:;'){
+    //                var videohref= $(this).attr("vid");
+    //                var vidtitle=$(this).attr("vid_title");
+    //                var vidpic=$(this).attr("vid_pic");
+    //                $(".cui_popup").find("video").attr("src",videohref);
+    //                $(".cui_popup").find(".span_title").html(vidtitle);
+    //                $(".cui_popup").find("video").attr("poster",vidpic);
+    //                popup('#f_ad');
+    //            }
+    //        });
+    //
+    //
+    //
+    //        //获取pc移动链接
+    //        $(".pcmlink").each(function(){
+    //            var mlink=$(this).find("a").eq(0).attr("href");
+    //            var pclink=$(this).find("a").eq(2).attr("href");
+    //            if(mlink==""){
+    //                $(this).find("a").eq(0).attr("href",pclink);
+    //                $(this).find("a").eq(1).attr("href",pclink);
+    //            }
+    //        })
+    //    });
+
+    //setTimeout(function(){
+    //    /*loadSrc("http://image.casarte.com/casarte/images/mediaelementplayer.min.css");*/
+    //    loadSrc("http://www.casarte.com/images/mediaelement-and-player.min.js",function(){
+    //        //控制视频播放
+    //        if($("#player1").length>=0){
+    //            $(".js_showad").on("click",function(){
+    //                $("#player1")[0].play();
+    //            });
+    //        }
+    //
+    //        if(window.innerWidth == undefined || window.innerWidth > 1199) {
+    //         videoMethod();
+    //            var player = new MediaElementPlayer('#player1');
+    //            $(".js_styleLifevideoClose").on('click', function () {
+    //
+    //                player.pause();
+    //            });
+    //        }else{
+    //            $(".js_stop").on("click",function(){
+    //                $("#player1")[0].pause();
+    //            });
+    //        }
+    //        $('audio,video').mediaelementplayer({
+    //            //mode: 'shim',
+    //            //success: function(player, node) {
+    //            //	$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+    //            //}
+    //            features: ['playpause','progress','volume','postroll']
+    //        });
+    //    });
+    //},1000);
+    //function otherScript(){}
+    //function pageScript(){}
+    //$().ready(function(){
+    //
+    //})
+    //</script>
 
 
         function videoMethod(){
@@ -288,119 +410,154 @@ $(function () {
             });
         }
 
-
-    function pageScript() {
-
-         if (window.innerWidth == undefined || window.innerWidth > 1199) {
-             var player1 = new MediaElementPlayer('#player1');
-             var player = new MediaElementPlayer('#player');
-             $(".js_styleLifevideoClose ").on('click', function () {
-                 player.pause();
-                 $(".js_playerBox ").hide();
-                 $('.js_styleVideoBox').show();
-
-                 if(windowWidth>991){
-                     $('.video-cont-center').css({width: '50%'});
-                     $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
-                     $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
-                 }
-
-             });
-
-             var userAgent = navigator.userAgent;
-             $(".js_lifeStylePlay ").on('click', function () {
-                 videoMethod();
-                 var setTime;
-                 if(windowWidth>991){
-                     setTime = '600';
-                     $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
-                     $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
-                     $('.video-cont-center').css({width: '100%'});
-                 }else{
-                     setTime = '0';
-                 }
-                 setTimeout(function(){
-                     //videoMethod();
-                     $('.js_styleVideoBox').hide();
-                     $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-                     $("#player ").removeClass("o_df-hide ");
-                     var playerID = document.getElementById('player');
-                     playerID.addEventListener('progress', onVideoProgressUpdate, false);
-
-
-                     if (!$ie8) {
-                         var player = new MediaElementPlayer('#player');
-                         player.play();
-                         var playerID = document.getElementById('player');
-                         playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                         function onVideoProgressUpdate(e) {
-                             var percentageBuffered = 0;
-                             if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                                 percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                             } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                                 percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                             }
-                             if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                                 if (percentageBuffered <= 0.4) {
-                                     $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                                 } else {
-                                     playerID.play();
-                                     $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                                 }
-                             }
-                         }
-                     }else{
-                         var player = new mediaelementplayer('#player');
-                         player.pause();
-                         //player.setSrc('tongshuai_video.mp4');
-                         player.load();
-                         player.play();
-                     }
-                 },setTime)
-
-             });
-         }else{
-             $(".js_lifeStylePlay ").on('click', function (){
-               var videoSrc =  $(this).attr('data-src');
-                 $("#player").attr("src", videoSrc).removeClass("o_df-hide");
-                 if(windowWidth>991){
-                     $('.js_styleVideoBox').hide();
-                 }else{
-                     $('.js_videoMdShow').hide();
-                     var navHeight = $('.l-opacity0').height();
-                     $(document).scrollTop(navHeight);
-                 }
-
-
-
-                 // $(this).hide();
-                 $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-                 $("#player ").removeClass("o_df-hide ").css('width','100%');
-                 videoMethod();
-                 setTimeout(function () {
-                     $("#player")[0].play();
-                 }, 500);
-                 $(".js_styleLifevideoClose ").on('click', function () {
-                     var player = new MediaElementPlayer('#player');
-                     player.pause();
-                     $(".js_playerBox ").hide();
-                     $('.js_styleVideoBox').show();
-                     $('.js_videoMdShow').show();
-
-
-                     if(windowWidth>991){
-                         $('.video-cont-center').css({width: '50%'});
-                         $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
-                         $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
-                     }
-
-
-                 });
-
-             })
-         }
-    }
-
+//暂时隐藏
+//    function pageScript() {
+//
+//         if (window.innerWidth == undefined || window.innerWidth > 1199) {
+//             var player1 = new MediaElementPlayer('#player1');
+//             var player = new MediaElementPlayer('#player');
+//             $(".js_styleLifevideoClose ").on('click', function () {
+//                 player.pause();
+//                 $(".js_playerBox ").hide();
+//                 $('.js_styleVideoBox').show();
+//
+//                 if(windowWidth>991){
+//                     $('.video-cont-center').css({width: '50%'});
+//                     $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
+//                     $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
+//                 }
+//
+//             });
+//
+//             var userAgent = navigator.userAgent;
+//             $(".js_lifeStylePlay ").on('click', function () {
+//
+//
+//
+//
+//                 videoMethod();
+//                 var setTime;
+//                 if(windowWidth>991){
+//                     setTime = '600';
+//                     $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
+//                     $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
+//                     $('.video-cont-center').css({width: '100%'});
+//                 }else{
+//                     setTime = '0';
+//                 }
+//                 setTimeout(function(){
+//
+//                     $('.js_styleVideoBox').hide();
+//                     $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+//                     $("#player ").removeClass("o_df-hide");
+//
+//                     if ($ie8){
+//                         //videoMethod();
+//                             var player = new mediaelementplayer('#player');
+//                             player.pause();
+//                             //player.setSrc('tongshuai_video.mp4');
+//                             player.load();
+//                             player.play();
+//                     }else{
+//                         //videoMethod();
+//
+//                         var playerID = document.getElementById('player');
+//                         playerID.addEventListener('progress', onVideoProgressUpdate, false);
+//                         var player = new MediaElementPlayer('#player');
+//                         player.play();
+//
+//
+//                             function onVideoProgressUpdate(e) {
+//                                 var percentageBuffered = 0;
+//                                 if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
+//                                     percentageBuffered = playerID.buffered.end(0) / playerID.duration;
+//                                 } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
+//                                     percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
+//                                 }
+//                                 if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
+//                                     if (percentageBuffered <= 0.4) {
+//                                         $(".mejs-overlay-loading ").parent().css("display ", "block ");
+//                                     } else {
+//                                         playerID.play();
+//                                         $(".mejs-overlay-loading ").parent().css("display ", "none ");
+//                                     }
+//                                 }
+//                             }
+//                     }
+//                     //
+//                     //if (!$ie8) {
+//                     //    var player = new MediaElementPlayer('#player');
+//                     //    player.play();
+//                     //    var playerID = document.getElementById('player');
+//                     //    playerID.addEventListener('progress', onVideoProgressUpdate, false);
+//                     //    function onVideoProgressUpdate(e) {
+//                     //        var percentageBuffered = 0;
+//                     //        if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
+//                     //            percentageBuffered = playerID.buffered.end(0) / playerID.duration;
+//                     //        } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
+//                     //            percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
+//                     //        }
+//                     //        if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
+//                     //            if (percentageBuffered <= 0.4) {
+//                     //                $(".mejs-overlay-loading ").parent().css("display ", "block ");
+//                     //            } else {
+//                     //                playerID.play();
+//                     //                $(".mejs-overlay-loading ").parent().css("display ", "none ");
+//                     //            }
+//                     //        }
+//                     //    }
+//                     //}else{
+//                     //    var player = new mediaelementplayer('#player');
+//                     //    player.pause();
+//                     //    //player.setSrc('tongshuai_video.mp4');
+//                     //    player.load();
+//                     //    player.play();
+//                     //}
+//                 },setTime)
+//
+//             });
+//         }else{
+//             $(".js_lifeStylePlay ").on('click', function (){
+//               var videoSrc =  $(this).attr('data-src');
+//                 $("#player").attr("src", videoSrc).removeClass("o_df-hide");
+//                 if(windowWidth>991){
+//                     $('.js_styleVideoBox').hide();
+//                 }else{
+//                     $('.js_videoMdShow').hide();
+//                     var navHeight = $('.l-opacity0').height();
+//                     $(document).scrollTop(navHeight);
+//                 }
+//
+//
+//
+//                 // $(this).hide();
+//                 $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+//                 $("#player ").removeClass("o_df-hide ").css('width','100%');
+//                 videoMethod();
+//                 setTimeout(function () {
+//                     $("#player")[0].play();
+//                 }, 500);
+//                 $(".js_styleLifevideoClose ").on('click', function () {
+//                     var player = new MediaElementPlayer('#player');
+//                     player.pause();
+//                     $(".js_playerBox ").hide();
+//                     $('.js_styleVideoBox').show();
+//                     $('.js_videoMdShow').show();
+//
+//
+//                     if(windowWidth>991){
+//                         $('.video-cont-center').css({width: '50%'});
+//                         $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
+//                         $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
+//                     }
+//
+//
+//                 });
+//
+//             })
+//         }
+//    }
+//暂时隐藏
 
 // 优生活轮播
 

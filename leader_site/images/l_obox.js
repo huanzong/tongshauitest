@@ -1,1086 +1,3863 @@
-!function (win, doc, $) {
+oPoint = {
+    sm: 543,
+    md: 699,
+    lg: 991,
+    xl: 1199
+};
+(function (win, doc, $) {
+    //判断浏览器
+    // function IETester(userAgent){
+    //  var UA =  userAgent || navigator.userAgent;
+    //  if(/msie/i.test(UA)){
+    //      return UA.match(/msie (\d+\.\d+)/i)[1];
+    //  }else if(~UA.toLowerCase().indexOf('trident') && ~UA.indexOf('rv')){
+    //      return UA.match(/rv:(\d+\.\d+)/)[1];
+    //  }
+    //  return false;
+    // }
+
+    isIe = (navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0);
+    // isOpera=$.browser.opera;
+    // isSafari=$.browser.safari;
+    isIe11 = ie11();
+    isIe8 = isIe && navigator.userAgent.indexOf("MSIE 8.0") > 0 && !isIe11;
+    isIe9 = isIe && navigator.userAgent.indexOf("MSIE 9.0") > 0 && !isIe11;
+    isPC = isPCFn();
+    isUC = isUCFn();
+    isFirefox = isFoxFn();
+    isTouch = canTouch();
+
     function ie11() {
-        return !(!Object.hasOwnProperty.call(win, "ActiveXObject") || win.ActiveXObject)
+        if (Object.hasOwnProperty.call(win, "ActiveXObject") && !win.ActiveXObject) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function isFoxFn() {
-        return navigator.userAgent.indexOf("Firefox") >= 0
+        if (navigator.userAgent.indexOf('Firefox') >= 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
+
 
     function canTouch() {
-        var t = {};
-        return t.isSupportTouch = "ontouchend" in doc, t.isEvent = t.isSupportTouch ? "touchstart" : "click", "touchstart" == t.isEvent
-    }
-
-    function isUcFn() {
-        var t = navigator.userAgent;
-        return navigator.userAgent.indexOf("UCBrowser") > -1 || t.indexOf("Android") > -1 || t.indexOf("Linux") > -1
-    }
-
-    function isPcFn() {
-        for (var t = navigator.userAgent, n = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"), o = !0, s = 0; s < n.length; s++)if (t.indexOf(n[s]) > 0) {
-            o = !1;
-            break
+        var touchObj = {};
+        touchObj.isSupportTouch = "ontouchend" in doc ? true : false;
+        touchObj.isEvent = touchObj.isSupportTouch ? "touchstart" : "click";
+        if (touchObj.isEvent == "touchstart") {
+            return true;
+        } else {
+            return false;
         }
-        return o
     }
 
-    isIe = navigator.userAgent.indexOf("MSIE") >= 0 && navigator.userAgent.indexOf("Opera") < 0, isIe11 = ie11(), isIe8 = isIe && navigator.userAgent.indexOf("MSIE 8.0") > 0 && !isIe11, isIe9 = isIe && navigator.userAgent.indexOf("MSIE 9.0") > 0 && !isIe11, isPC = isPcFn(), isUC = isUcFn(), isFirefox = isFoxFn(), isTouch = canTouch(), $.fn.oClear = function () {
+    function isUCFn() {
+        var u = navigator.userAgent;
+        if (navigator.userAgent.indexOf('UCBrowser') > -1 || u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //alert(isUC)
+    function isPCFn() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    $.fn.oClear = function () {
         $(this).contents().filter(function () {
-            3 === $(this)[0].nodeType && $(this).remove()
-        })
-    }, $.fn.oSelect = function (t) {
-        var n, o = {
-            go: !0, showLenght: 5, cont: $(this).parent(), openfn: function () {
-            }, closefn: function () {
+            if ($(this)[0].nodeType === 3) {
+                $(this).remove();
             }
-        }, s = $.extend(o, t), i = $(this), e = i.attr("autotext"), a = s.cont, r = $("<div>").addClass("o_Dropdown"), l = $("<i>").addClass("i_down"), c = $("<span>").addClass("name").html(e), h = $("<div>").addClass("list"), p = $("<ul>"), d = i.find("option"), u = i.find("optgroup"), f = $("<li>"), m = $("<h2>"), g = $("<span>"), x = s.showLenght, b = s.openfn, v = s.closefn;
-        s.go;
-        return r.css("cursor", "pointer"), a.css({position: "relative", "z-index": "0"}), d.each(function (t) {
-            if (t > 0 && $(this).attr("selected")) {
-                var n = $(this).html();
-                return c.html(n), !1
-            }
-        }), p.appendTo(h), r.append(l).append(c).append(h), i.before(r).css("display", "none"), i.appendTo(r), i.bar = p.oScrollBar(), r.addClass("lose"), i.init = function () {
-            i.lose(), p.find("li").last().css("border", "none"), p.find("li").on("click", function (t) {
-                $(this).addClass("cur").siblings().removeClass("cur"), $i = p.find("li").index(this), d = i.find("option"), d.attr("selected", !1).eq($i + 1).attr("selected", !0), $val = $(this).find("span").html(), h.css("display", "none"), a.css({"z-index": "0","height": "auto"}).removeClass("o_DropdownBox"), r.css({"background": "#fff","border-color": "#ccc" }),c.html($val), i.change(), t.stopPropagation()
-            }), isPC || r.on("change", "select", function (t) {
-                var n = $(this).find("option:selected").html();
-                c.html(n)
-            }), i.resetting(), r.removeClass("lose")
-        }, i.lose = function () {
-            r.addClass("lose"), r.attr("style", ""), d = i.find("option"), u = i.find("optgroup"), p.html(""), c.html(e), u.length > 0 ? u.each(function () {
-                var t = $(this).attr("label"), o = m.clone();
-                o.html(t), p.append(o), $(this).find("option").each(function () {
-                    var t = $(this).html(), o = f.clone(), s = g.clone();
-                    $(this).attr("selected") && (t = $(this).html(), c.html(t), n = d.index(this), o.addClass("cur")), s.html(t), o.append(s), p.append(o)
-                })
-            }) : d.each(function (t) {
-                if (t > 0) {
-                    var o = $(this).html(), s = f.clone(), i = g.clone();
-                    $(this).attr("selected") && (o = $(this).html(), c.html(o), n = d.index(this), s.addClass("cur")), i.html(o), s.append(i), p.append(s)
+        });
+    };
+
+    $.fn.oSelect = function (p) {
+        var defaults = {
+            "go": true,
+            showLenght: 5,
+            cont: $(this).parent(),
+            openfn: function () {},
+            closefn: function () {}
+        };
+        var $p = $.extend(defaults, p);
+        var $this = $(this),
+            $autotext = $this.attr("autotext"),
+            $cont = $p.cont,
+            $box = $("<div>").addClass("o_Dropdown"),
+            $ico = $("<i>").addClass("i_down"),
+            $name = $("<span>").addClass("name").html($autotext),
+            $listbox = $("<div>").addClass("list"),
+            $ul = $("<ul>"),
+            $option = $this.find("option"),
+            $optGroup = $this.find("optgroup"),
+            $li = $("<li>"),
+            $h2 = $("<h2>"),
+            $span = $("<span>"),
+            $showLenght = $p.showLenght,
+            $autoi,
+            $openfn = $p.openfn,
+            $closefn = $p.closefn,
+            $go = $p.go;
+        $box.css("cursor", "default");
+        $cont.css({
+            "position": "relative",
+            "z-index": "0"
+        });
+
+        $option.each(function (i) {
+            if (i > 0) {
+                if ($(this).attr("selected")) {
+                    var $val = $(this).html();
+                    $name.html($val);
+                    return false;
                 }
-            }), c.off(), r.css({"cursor": "pointer"}), i.css({display: "none"})
-        }, i.resetting = function () {
-            var barInit = function(){
-                if(i.bar[0].resetScroll){
-                    return i.bar[0].resetScroll()
-                } else {
-                    return i.bar.init()
-                }
             }
-            isPC ? (c.on("click", function () {
-                h.css({"display": "inline-block", "width": r.width() - 30}), a.css({
-                    "z-index": "1",
-                    "height": p.height() + 80,
-                    "max-height": "280px"
-                }).addClass("o_DropdownBox"), r.css({
-                    "background": "#e60012",
-                    "border-color": "#e60012"
-                }), d.length <= x ? h.css("height", p.height()) : h.css("height", "200px"), b(r), barInit()
-            }), r.hover(function () {
-            }, function () {
-                h.css("display", "none"), a.css({
+        });
+
+        $ul.appendTo($listbox);
+        $box.append($ico).append($name).append($listbox);
+        $this.before($box).css("display", "none");
+        $this.appendTo($box);
+
+        $this.bar = $ul.oScrollBar();
+        $box.addClass("lose");
+
+        $this.init = function () {
+            $this.lose();
+            $ul.find("li").on("click", function (e) {
+                //$ul.find("li").removeClass("cur");
+                $(this).addClass("cur").siblings().removeClass("cur");
+                $i = $ul.find("li").index(this);
+                $option = $this.find("option");
+                $option.attr("selected", false).eq($i + 1).attr("selected", true);
+
+                $val = $(this).find("span").html();
+                $listbox.css("display", "none");
+                $cont.css({
                     "z-index": "0",
-                    "height": "auto"
-                }).removeClass("o_DropdownBox"), r.css({"background": "#fff", "border-color": "#ccc"}), v(r)
-            }), i.css({display: "none"})) : (c.off(), i.css({display: "block"}))
-        }, i
-    }, $.fn.oMenu = function (t) {
-        var n, o, s, i, e, a = {
-            menu: "",
-            mainbox: ".o_main",
-            linkage: !0,
-            btnbox: $(this),
-            zztop: 0,
-            openfn: null,
-            closefn: null,
-            menuwidth: null,
-            zzclass: "o_m_zz"
-        }, r = $.extend(a, t), l = $(this), c = $(r.mainbox), h = $("<div>").addClass(r.zzclass), p = r.linkage, d = $(r.btnbox), u = $(r.menu), f = r.menuwidth ? r.menuwidth : u.width();
-        return l.on("click", function () {
-            h.attr("style", "margin-top:" + r.zztop + "px"), o = Math.abs(parseFloat(c.css("left"))), s = Math.abs(parseFloat(c.css("right"))), i = parseFloat(u.css("left")), e = parseFloat(u.css("right")), p ? o > 0 || s > 0 ? ("left" == n ? (c.oCss3({
-                transform: "translate3d(" + Math.abs(i) + "px,0px,0px)",
-                "transition-duration": "0s"
-            }, !1), c.css({left: "0px"}), setTimeout(function () {
-                c.oCss3({transform: "translate3d(0px,0px,0px)", "transition-duration": "0.3s"}, !1)
-            }, 10), l.removezz(), r.closefn && r.closefn(l)) : "right" == n && (c.oCss3({
-                transform: "translate3d(" + -Math.abs(e) + "px,0px,0px)",
-                "transition-duration": "0s"
-            }, !1), c.css({right: "0px"}), setTimeout(function () {
-                c.oCss3({transform: "translate3d(0px,0px,0px)", "transition-duration": "0.3s"}, !1)
-            }, 10), l.removezz(), r.closefn && r.closefn(l)), l.removeClass("cur")) : (0 > e ? (c.oCss3({
-                transform: "translate3d(" + -Math.abs(e) + "px,0px,0px)",
-                "transition-duration": "0.3s"
-            }, !1), u.css({height: $(window).height()}), setTimeout(function () {
-                c.oCss3({
-                    transform: "translate3d(0px,0px,0px)",
-                    "transition-duration": "0.0s"
-                }, !1), c.css({right: Math.abs(e) + "px", position: "relative"}), n = "right"
-            }, 500), c.append(h), r.openfn && r.openfn(l)) : 0 > i && (c.oCss3({
-                transform: "translate3d(" + Math.abs(i) + "px,0px,0px)",
-                "transition-duration": "0.3s"
-            }, !1), u.css({height: $(window).height()}), setTimeout(function () {
-                c.oCss3({
-                    transform: "translate3d(0px,0px,0px)",
-                    "transition-duration": "0.0s"
-                }, !1), c.css({left: Math.abs(i) + "px", position: "relative"}), n = "left"
-            }, 500), c.append(h), r.openfn && r.openfn(l)), l.addClass("cur")) : 0 === i || 0 === e ? ("left" == n ? (u.oCss3({
-                transform: "translate3d(100%,0px,0px)",
-                "transition-duration": "0s"
-            }, !1), u.css({left: "-" + f + "px"}), setTimeout(function () {
-                u.oCss3({transform: "translate3d(0px,0px,0px)", "transition-duration": "0.3s"}, !1)
-            }, 10), d && d.stop().animate({marginLeft: 0}, 300), l.removezz(), r.closefn && r.closefn(l)) : "right" == n && (u.oCss3({
-                transform: "translate3d(-100%,0px,0px)",
-                "transition-duration": "0s"
-            }, !1), u.css({right: "-" + f + "px"}), setTimeout(function () {
-                u.oCss3({transform: "translate3d(0px,0px,0px)", "transition-duration": "0.3s"}, !1)
-            }, 10), d && d.stop().animate({marginRight: 0}, 300), l.removezz(), r.closefn && r.closefn(l)), l.removeClass("cur")) : (0 > e ? (u.oCss3({
-                transform: "translate3d(-100%,0px,0px)",
-                "transition-duration": "0.3s",
-                height: $(window).height() + "px"
-            }, !1), setTimeout(function () {
-                u.oCss3({
-                    transform: "translate3d(0px,0px,0px)",
-                    "transition-duration": "0s",
-                    height: $(window).height() + "px"
-                }, !1), u.css({right: "0px"}), n = "right"
-            }, 300), d && d.stop().animate({marginRight: f}, 300), c.append(h), r.openfn && r.openfn(l)) : 0 > i && (u.oCss3({
-                transform: "translate3d(100%,0px,0px)",
-                "transition-duration": "0.3s",
-                height: $(window).height() + "px"
-            }, !1), setTimeout(function () {
-                u.oCss3({
-                    transform: "translate3d(0px,0px,0px)",
-                    "transition-duration": "0s",
-                    height: $(window).height() + "px"
-                }, !1), u.css({left: "0px"}), n = "left"
-            }, 300), d && d.stop().animate({marginLeft: f}, 300), c.append(h), r.openfn && r.openfn(l)), l.addClass("cur"))
-        }), l.init = function () {
-            p ? c.attr("style", "") : (d && d.attr("style", ""), u.attr("style", "")), l.removeClass("cur").removezz()
-        }, $(window).resize(function () {
-            l.init()
-        }), l.removezz = function () {
-            h.oCss3({opacity: 0, "transition-duration": "0.5s"}, !1), setTimeout(function () {
-                h.detach()
-            }, 500)
-        }, h.click(function () {
-            l.click()
-        }), l.allback = function () {
-            p ? (c.animate({right: "0px"}, 300), h.detach(), l.removeClass("cur")) : ("left" == n ? (u.stop().animate({left: "-" + f}, 300), d.stop().animate({marginLeft: "0px"}, 300), h.detach()) : "right" == n && (u.stop().animate({right: "-" + f}, 300), d.stop().animate({marginRight: "0px"}, 300), h.detach()), l.removeClass("cur"))
-        }, l.menuback = function () {
-            p ? (c.animate({right: "0px"}, 300), h.remove(), l.removeClass("cur")) : ("left" == n ? (u.stop().animate({opacity: "0.5"}, 300, function () {
-                u.css({left: "-" + f, opacity: "1"})
-            }), h.detach()) : "right" == n && (u.stop().animate({opacity: "0.5"}, 300, function () {
-                u.css({right: "-" + f, opacity: "1"})
-            }), h.detach()), l.removeClass("cur"))
-        }, l
-    }, $.fn.oAutoH = function (t) {
-        var n, o = {
-            targetObj: window, inner: !1, callback: function () {
-            }, resize: !0, minH: !1
-        }, s = $.extend(o, t), i = $(this), e = $(s.targetObj), a = i.parent(), r = i.siblings(".o_fixH"), l = r, c = i.find(".o_H100");
-        return s.inner && (e = a), i.init = function () {
-            a.oClear(), n = e.height(), l.length > 0 && l.each(function () {
-                "none" !== $(this).css("display") && (n -= $(this).height())
-            }), s.minH ? i.css({"min-height": n + "px"}) : i.css({
-                "min-height": n + "px",
-                height: n + "px"
-            }), c.each(function () {
-                $(this).css("height", n + "px")
-            }), s.callback()
-        }, $(window).resize(function () {
-            s.resize && i.init()
-        }), i
-    }, $.fn.oAutoW = function (t) {
-        var n, o = {
-            obj1: $(this).prev(), obj2: $(this).next(), targetObj: $(this).parent(), callback: function () {
-            }, resize: !0
-        }, s = $.extend(o, t), i = $(this), e = (s.obj1 ? $(s.obj1) : 0, s.obj2 ? $(s.obj2) : 0, $(s.targetObj)), a = i.parent(), r = i.siblings(".o_fixW"), l = r;
-        return i.init = function () {
-            a.oClear(), n = Math.floor(e.width() - 1), l.each(function () {
-                "none" !== $(this).css("display") && (n -= $(this).width()), n = Math.floor(n), i.css({width: n + "px"})
-            }), s.callback()
-        }, $(window).resize(function () {
-            s.resize && i.init()
-        }), i
-    }, $.fn.oPicture = function (t) {
-        var n, o = {
-            sm: 544,
-            md: 700,
-            lg: 992,
-            xl: 1200
-        }, s = $.extend(o, t), i = $(this), e = s.sm, a = s.md, r = s.lg, l = s.xl, c = i.attr("xs"), h = i.attr("sm"), p = i.attr("md"), d = i.attr("lg"), u = i.attr("xl"), f = i.attr("df"), m = i.attr("ie8");
-        return i.init = function () {
-            return n = $(window).width(), isIe8 && void 0 !== m ? (i.attr("src", m), !1) : void(e > n ? void 0 === c ? i.attr("src", f) : i.attr("src", c) : n >= e && a > n ? void 0 === h ? i.attr("src", f) : i.attr("src", h) : n >= a && r > n ? void 0 === p ? i.attr("src", f) : i.attr("src", p) : n >= r && l > n ? void 0 === d ? i.attr("src", f) : i.attr("src", d) : n >= l && (void 0 === u ? i.attr("src", f) : i.attr("src", u)))
-        }, $(window).resize(function () {
-            i.init()
-        }), i
-    }, $.fn.oInputclear = function () {
-        var t = $(this).attr("autotext");
-        $(this).val(t), $(this).focus(function () {
-            $(this).val() == t && $(this).attr("value", "")
-        }), $(this).blur(function () {
-            "" === $(this).val() && $(this).val(t)
-        })
-    }, $.fn.oTextareaclear = function () {
-        var t = $(this).attr("autotext");
-        $(this).html(t), $(this).focus(function () {
-            $(this).html() === t && $(this).html("")
-        }), $(this).blur(function () {
-            "" === $(this).html() && $(this).html(t)
-        })
-    }, $.fn.oSlider = function (t) {
-        function n(t) {
-            return Math.floor(t) === t
+                     "height": "auto"
+                }).removeClass("o_DropdownBox");
+                $box.removeClass("o_back_red");
+                $name.html($val);
+                $this.change();
+                e.stopPropagation();
+            });
+            if (!isPC) {
+                $box.on("change", "select", function (e) {
+                    var $val = $(this).find("option:selected").html();
+                    //$i=$option.index($(this).find("option:selected"));
+                    //console.log($(this).find("option:selected").text())
+                    //$ul.find("li").removeClass("cur").eq($i-1).addClass("cur");
+                    $name.html($val);
+                });
+            }
+
+            $this.resetting();
+            $box.removeClass("lose");
+        };
+
+        $this.lose = function () {
+            $box.addClass("lose");
+            $box.attr("style", "");
+            $option = $this.find("option");
+            $optGroup = $this.find("optgroup");
+            $ul.html("");
+            $name.html($autotext);
+            if ($optGroup.length > 0) //有标题
+            {
+                $optGroup.each(function () {
+                    var tit = $(this).attr("label");
+                    var $h2_1 = $h2.clone();
+                    $h2_1.html(tit);
+                    $ul.append($h2_1);
+
+                    $(this).find("option").each(function () {
+                        var $val = $(this).html();
+                        var $li_1 = $li.clone();
+                        var $span_1 = $span.clone();
+                        if ($(this).attr("selected")) {
+                            $val = $(this).html();
+                            $name.html($val);
+                            $autoi = $option.index(this);
+                            $li_1.addClass("cur");
+                        }
+                        $span_1.html($val);
+                        $li_1.append($span_1);
+                        $ul.append($li_1);
+                    });
+
+                });
+
+            } else { //没有标题
+                $option.each(function (i) {
+                    if (i > 0) {
+                        var $val = $(this).html();
+                        var $li_1 = $li.clone();
+                        var $span_1 = $span.clone();
+                        if (i === 1) {
+                            // $li_1.addClass("cur");
+                            // $name.html($val);
+                        }
+                        if ($(this).attr("selected")) {
+                            $val = $(this).html();
+                            $name.html($val);
+                            $autoi = $option.index(this);
+                            $li_1.addClass("cur");
+                        }
+                        $span_1.html($val);
+                        $li_1.append($span_1);
+                        $ul.append($li_1);
+                    }
+                });
+            }
+
+            $name.off();
+            $box.css("cursor", "pointer");
+            $this.css({
+                display: "none"
+            });
+        };
+
+        $this.resetting = function () {
+            if (isPC) {
+                $name.on("click", function () {
+                
+                    $listbox.css({"display":"inline-block","width": $box.width() - 30});
+                    $cont.css({
+                        "z-index": "1",
+                        "height": $ul.height() + 80,
+                        "max-height": "280px"
+                    }).addClass("o_DropdownBox");
+                    if ($ul.height() <= 200) {
+                        $listbox.css("height", $ul.height());
+                    } else {
+                        $listbox.css("height", "200px");
+                    }
+                    $box.addClass("o_back_red");
+
+                    $openfn($box);
+                    $this.bar.init();
+                });
+                $box.hover(function () {}, function () {
+                    $listbox.css("display", "none");
+                    $cont.css({
+                        "z-index": "0",
+                         "height": "auto"
+                    }).removeClass("o_DropdownBox");
+                    $box.removeClass("o_back_red");
+                    $closefn($box);
+                });
+                $cont.hover(function(){},function(){
+                    $listbox.css("display", "none");
+                    $cont.css({
+                        "z-index": "0",
+                         "height": "auto"
+                    }).removeClass("o_DropdownBox");
+                    $box.removeClass("o_back_red");
+                    $closefn($box);
+                });
+                $this.css({
+                    display: "none"
+                });
+            } else {
+                $name.off();
+                $this.css({
+                    display: "block"
+                });
+            }
+        };
+
+        // $(window).resize(function(){
+        //  $this.resetting();
+        // });
+
+        return $this;
+    };
+
+    $.fn.oMenu = function (p) {
+        var defaults = {
+            "menu": "",
+            "mainbox": ".o_main",
+            "linkage": true,
+            /*"position":null,*/ "btnbox": $(this),
+            "zztop": 0,
+            "openfn": null,
+            "closefn": null,
+            "menuwidth": null,
+            "zzclass": "o_m_zz"
+        };
+        var $p = $.extend(defaults, p);
+        var $this = $(this),
+            $mainbox = $($p.mainbox),
+            $zz = $("<div>").addClass($p.zzclass),
+            $linkage = $p.linkage,
+            $btnbox = $($p.btnbox),
+            $menu = $($p.menu),
+            //$position=$p.position,
+            $menu_w = $p.menuwidth ? $p.menuwidth : $menu.width(),
+            $positionNum,
+            $direction,
+            $main_left,
+            $main_right,
+            $left,
+            $right;
+
+        //初始化方向
+        //$this.css("float",$position);
+
+
+        $this.on("click", function () {
+            $zz.attr("style", "margin-top:" + $p.zztop + "px");
+            $main_left = Math.abs(parseFloat($mainbox.css("left")));
+            $main_right = Math.abs(parseFloat($mainbox.css("right")));
+            $left = parseFloat($menu.css("left"));
+            $right = parseFloat($menu.css("right"));
+            if ($linkage) {
+                //联动
+
+                if ($main_left > 0 || $main_right > 0) {
+                    if ($direction == "left") {
+                        $mainbox.oCss3({
+                            "transform": "translate3d(" + Math.abs($left) + "px,0px,0px)",
+                            "transition-duration": "0s"
+                        }, false);
+                        $mainbox.css({
+                            left: "0px"
+                        });
+                        setTimeout(function () {
+                            $mainbox.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0.3s"
+                            }, false);
+                        }, 10);
+                        $this.removezz();
+                        if ($p.closefn) {
+                            $p.closefn($this);
+                        }
+
+                    } else if ($direction == "right") {
+                        $mainbox.oCss3({
+                            "transform": "translate3d(" + -Math.abs($right) + "px,0px,0px)",
+                            "transition-duration": "0s"
+                        }, false);
+                        $mainbox.css({
+                            right: "0px"
+                        });
+                        setTimeout(function () {
+                            $mainbox.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0.3s"
+                            }, false);
+                        }, 10);
+
+
+                        $this.removezz();
+                        if ($p.closefn) {
+                            $p.closefn($this);
+                        }
+                    }
+
+                    $this.removeClass("cur");
+
+                } else {
+                    //$mainbox.attr("style","");
+                    if ($right < 0) {
+                        $mainbox.oCss3({
+                            "transform": "translate3d(" + -Math.abs($right) + "px,0px,0px)",
+                            "transition-duration": "0.3s"
+                        }, false);
+                        $menu.css({
+                            height: $(window).height()
+                        });
+                        setTimeout(function () {
+                            $mainbox.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0.0s"
+                            }, false);
+                            $mainbox.css({
+                                "right": Math.abs($right) + "px",
+                                "position": "relative"
+                            });
+                            $direction = "right";
+                        }, 500);
+
+                        $mainbox.append($zz);
+                        if ($p.openfn) {
+                            $p.openfn($this);
+                        }
+
+                    } else if ($left < 0) {
+                        $mainbox.oCss3({
+                            "transform": "translate3d(" + Math.abs($left) + "px,0px,0px)",
+                            "transition-duration": "0.3s"
+                        }, false);
+                        $menu.css({
+                            height: $(window).height()
+                        });
+                        setTimeout(function () {
+                            $mainbox.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0.0s"
+                            }, false);
+                            $mainbox.css({
+                                "left": Math.abs($left) + "px",
+                                "position": "relative"
+                            });
+                            $direction = "left";
+                        }, 500);
+
+                        $mainbox.append($zz);
+                        if ($p.openfn) {
+                            $p.openfn($this);
+                        }
+                    }
+
+                    $this.addClass("cur");
+                }
+
+            } else {
+                if ($left === 0 || $right === 0) {
+                    if ($direction == "left") {
+                        $menu.oCss3({
+                            "transform": "translate3d(100%,0px,0px)",
+                            "transition-duration": "0s"
+                        }, false);
+                        $menu.css({
+                            "left": "-" + $menu_w + "px"
+                        });
+                        setTimeout(function () {
+                            $menu.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0.3s"
+                            }, false);
+                        }, 10);
+
+                        if ($btnbox) {
+                            $btnbox.stop().animate({
+                                marginLeft: 0
+                            }, 300);
+                        }
+                        $this.removezz();
+                        if ($p.closefn) {
+                            $p.closefn($this);
+                        }
+                    } else if ($direction == "right") {
+                        $menu.oCss3({
+                            "transform": "translate3d(-100%,0px,0px)",
+                            "transition-duration": "0s"
+                        }, false);
+                        $menu.css({
+                            "right": "-" + $menu_w + "px"
+                        });
+                        setTimeout(function () {
+                            $menu.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0.3s"
+                            }, false);
+                        }, 10);
+
+                        if ($btnbox) {
+                            $btnbox.stop().animate({
+                                marginRight: 0
+                            }, 300);
+                        }
+                        $this.removezz();
+                        if ($p.closefn) {
+                            $p.closefn($this);
+                        }
+                    }
+                    $this.removeClass("cur");
+                } else {
+
+                    if ($right < 0) {
+                        $menu.oCss3({
+                            "transform": "translate3d(-100%,0px,0px)",
+                            "transition-duration": "0.3s",
+                            height: $(window).height() + "px"
+                        }, false);
+                        setTimeout(function () {
+                            $menu.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0s",
+                                height: $(window).height() + "px"
+                            }, false);
+                            $menu.css({
+                                "right": "0px"
+                            });
+                            $direction = "right";
+                        }, 300);
+                        if ($btnbox) {
+                            $btnbox.stop().animate({
+                                marginRight: $menu_w
+                            }, 300);
+                        }
+                        $mainbox.append($zz);
+                        if ($p.openfn) {
+                            $p.openfn($this);
+                        }
+
+                    } else if ($left < 0) {
+                        $menu.oCss3({
+                            "transform": "translate3d(100%,0px,0px)",
+                            "transition-duration": "0.3s",
+                            height: $(window).height() + "px"
+                        }, false);
+                        setTimeout(function () {
+                            $menu.oCss3({
+                                "transform": "translate3d(0px,0px,0px)",
+                                "transition-duration": "0s",
+                                height: $(window).height() + "px"
+                            }, false);
+                            $menu.css({
+                                "left": "0px"
+                            });
+                            $direction = "left";
+                        }, 300);
+                        if ($btnbox) {
+                            $btnbox.stop().animate({
+                                marginLeft: $menu_w
+                            }, 300);
+                        }
+                        $mainbox.append($zz);
+                        if ($p.openfn) {
+                            $p.openfn($this);
+                        }
+                    }
+
+                    $this.addClass("cur");
+                }
+            }
+
+        });
+
+        $this.init = function () {
+            if ($linkage) {
+                $mainbox.attr("style", "");
+            } else {
+                if ($btnbox) {
+                    $btnbox.attr("style", "");
+                }
+                $menu.attr("style", "");
+            }
+            $this.removeClass("cur").removezz();
+        };
+        $(window).resize(function () {
+            $this.init();
+        });
+
+        $this.removezz = function () {
+            $zz.oCss3({
+                opacity: 0,
+                "transition-duration": "0.5s"
+            }, false);
+            setTimeout(function () {
+                $zz.detach();
+            }, 500);
+        };
+
+        $zz.click(function () {
+            $this.click();
+        });
+
+
+        $this.allback = function () {
+            if ($linkage) {
+                $mainbox.animate({
+                    right: "0px"
+                }, 300);
+                $zz.detach();
+                $this.removeClass("cur");
+            } else {
+                if ($direction == "left") {
+                    $menu.stop().animate({
+                        left: "-" + $menu_w
+                    }, 300);
+                    $btnbox.stop().animate({
+                        marginLeft: "0px"
+                    }, 300);
+                    //$mainbox.animate({left:"0px"},300);
+                    $zz.detach();
+
+                } else if ($direction == "right") {
+                    $menu.stop().animate({
+                        right: "-" + $menu_w
+                    }, 300);
+                    $btnbox.stop().animate({
+                        marginRight: "0px"
+                    }, 300);
+                    //$mainbox.animate({right:"0px"},300);
+                    $zz.detach();
+                }
+                $this.removeClass("cur");
+            }
+        };
+        $this.menuback = function () {
+            if ($linkage) {
+                $mainbox.animate({
+                    right: "0px"
+                }, 300);
+                $zz.remove();
+                $this.removeClass("cur");
+            } else {
+                if ($direction == "left") {
+                    $menu.stop().animate({
+                        opacity: "0.5"
+                    }, 300, function () {
+                        $menu.css({
+                            "left": "-" + $menu_w,
+                            "opacity": "1"
+                        });
+                    });
+                    //$btnbox.stop().animate({marginLeft:"0px"},300);
+                    //$mainbox.animate({left:"0px"},300);
+                    $zz.detach();
+
+                } else if ($direction == "right") {
+                    $menu.stop().animate({
+                        opacity: "0.5"
+                    }, 300, function () {
+                        $menu.css({
+                            "right": "-" + $menu_w,
+                            "opacity": "1"
+                        });
+                    });
+                    //$btnbox.stop().animate({marginRight:"0px"},300);
+                    //$mainbox.animate({right:"0px"},300);
+                    $zz.detach();
+                }
+                $this.removeClass("cur");
+            }
+        };
+        return $this;
+    };
+
+    $.fn.oAutoH = function (p) {
+        var defaults = {
+            "targetObj": window,
+            "inner": false,
+            callback: function () {},
+            resize: true,
+            minH: false
+        };
+        var $p = $.extend(defaults, p);
+        var $this = $(this),
+            $targetH_obj = $($p.targetObj),
+            $parent = $this.parent(),
+            $siblings = $this.siblings(".o_fixH"),
+            $fixbox_list = $siblings,
+            $this_h,
+            $innerH = 0,
+            $child_allH = $this.find(".o_H100");
+        if ($p.inner) {
+            $targetH_obj = $parent;
         }
 
+        $this.init = function () {
+            $parent.oClear();
+            $this_h = $targetH_obj.height();
+            if ($fixbox_list.length > 0) {
+                $fixbox_list.each(function () {
+                    if ($(this).css("display") !== "none") {
+                        $this_h -= $(this).height();
+                    }
+                });
+            }
+            if ($p.minH) {
+                $this.css({
+                    "min-height": $this_h + "px"
+                });
+            } else {
+                $this.css({
+                    "min-height": $this_h + "px",
+                    "height": $this_h + "px"
+                });
+            }
+
+
+            $child_allH.each(function () {
+                $(this).css("height", $this_h + "px");
+            });
+            $p.callback();
+        };
+        //$this.init();
+
+        $(window).resize(function () {
+            if ($p.resize && !isUC) {
+                $this.init();
+            }
+        });
+        return $this;
+    };
+
+    $.fn.oAutoW = function (p) {
+        var defaults = {
+            "obj1": $(this).prev(),
+            "obj2": $(this).next(),
+            "targetObj": $(this).parent(),
+            callback: function () {},
+            resize: true
+        };
+        var $p = $.extend(defaults, p);
+        var $this = $(this),
+            $obj1 = $p.obj1 ? $($p.obj1) : 0,
+            $obj2 = $p.obj2 ? $($p.obj2) : 0,
+            $targetW_obj = $($p.targetObj),
+            $parent = $this.parent(),
+            $siblings = $this.siblings(".o_fixW"),
+            $this_w,
+            $fixW_list = $siblings;
+
+        $this.init = function () {
+            $parent.oClear();
+            $this_w = Math.floor($targetW_obj.width() - 1);
+            //$this_w=document.body.clientWidth;
+            $fixW_list.each(function () {
+                if ($(this).css("display") !== "none") {
+                    $this_w -= $(this).width();
+                    //$(this).css("float","left");
+                }
+                $this_w = Math.floor($this_w);
+                $this.css({
+                    "width": $this_w + "px"
+                });
+                //$parent.css("font-size","0");
+            });
+            $p.callback();
+        };
+
+        $(window).resize(function () {
+            if ($p.resize) {
+                $this.init();
+            }
+        });
+        return $this;
+    };
+
+    $.fn.oPicture = function (p) {
+        var defaults = {
+            sm: oPoint.sm,
+            md: oPoint.md,
+            lg: oPoint.lg,
+            xl: oPoint.xl
+        };
+        var $p = $.extend(defaults, p);
+        var $this = $(this),
+            $window_w,
+            $sm = $p.sm,
+            $md = $p.md,
+            $lg = $p.lg,
+            $xl = $p.xl,
+            xsImg = $this.attr("xs"),
+            smImg = $this.attr("sm"),
+            mdImg = $this.attr("md"),
+            lgImg = $this.attr("lg"),
+            xlImg = $this.attr("xl"),
+            dfImg = $this.attr("df"),
+            ie8Img = $this.attr("ie8");
+
+        $this.init = function () {
+            $window_w = $(window).width();
+            if (isIe8 && ie8Img !== undefined) {
+                $this.attr("src", ie8Img);
+                return false;
+            }
+
+            if ($window_w < $sm + 1) {
+                if (xsImg === undefined) {
+                    $this.attr("src", dfImg);
+                } else {
+                    $this.attr("src", xsImg);
+                }
+
+            } else if ($window_w >= $sm && $window_w < $md + 1) {
+                if (smImg === undefined) {
+                    $this.attr("src", dfImg);
+                } else {
+                    $this.attr("src", smImg);
+                }
+
+            } else if ($window_w >= $md && $window_w < $lg + 1) {
+                if (mdImg === undefined) {
+                    $this.attr("src", dfImg);
+                } else {
+                    $this.attr("src", mdImg);
+                }
+
+            } else if ($window_w >= $lg && $window_w < $xl + 1) {
+                if (lgImg === undefined) {
+                    $this.attr("src", dfImg);
+                } else {
+                    $this.attr("src", lgImg);
+                }
+            } else if ($window_w >= $xl) {
+                if (xlImg === undefined) {
+                    $this.attr("src", dfImg);
+                } else {
+                    $this.attr("src", xlImg);
+                }
+            }
+        };
+
+        $(window).resize(function () {
+            $this.init();
+        });
+
+        return $this;
+    };
+
+    $.fn.oInputclear = function () {
+        var autotext = $(this).attr("autotext");
+        $(this).val(autotext);
+        $(this).focus(function () {
+            if ($(this).val() == autotext) {
+                $(this).attr("value", "");
+            }
+        });
+        $(this).blur(function () {
+            if ($(this).val() === "") {
+                $(this).val(autotext);
+            }
+        });
+    };
+
+    $.fn.oTextareaclear = function () {
+        var autotext = $(this).attr("autotext");
+        $(this).html(autotext);
+
+        $(this).focus(function () {
+            if ($(this).html() === autotext) {
+                $(this).html("");
+            }
+        });
+        $(this).blur(function () {
+            if ($(this).html() === "") {
+                $(this).html(autotext);
+            }
+        });
+    };
+
+    $.fn.oSlider = function (p) {
         defaults = {
-            showBoxClass: "showbox",
-            autoWidth: !1,
-            loop: !1,
-            directionVertical: !1,
-            scrollbar: !1,
-            windowResize: !0,
-            pager: null,
-            touch: !0,
-            speed: !1,
-            pagerShow: !1,
-            touchClear: !1,
-            nextFn: null,
-            prevFn: null,
-            moveOne: !1,
-            moveTouch: !0,
-            playFn: null,
-            btnHobj: null
-        }, $p = $.extend(defaults, t), $(this).oCss3({transform: "translateZ(0)"}), $(this).oClear(), $(this).find("ul").oClear(), $(this).find("." + $p.showBoxClass).oClear();
-        var o, s, i, e, a, r, l, c, h, p = $(this), d = p.find("." + $p.showBoxClass), u = $(this).height(), f = d.find("ul"), m = f.find("li"), g = m.length, x = $p.moveOne, b = $p.moveTouch, v = null, w = $("<div>"), C = $p.directionVertical, T = "left", M = $p.loop, y = $p.scrollbar, Y = $p.autoWidth, X = p.find($p.pager), _ = $p.pagerShow, j = !0, z = $("<li></li>"), I = $p.windowResize, k = $p.touch, F = $p.speed, H = null, B = !0, A = $p.playFn, E = $p.nextFn, S = $p.prevFn, P = !1, O = 1, q = !1, D = !1, L = $p.btnHobj;
-        if (C && p.css("height", u + "px"), m.css("display", "inline-block"), C ? (T = "top", f.css({
+            "showBoxClass": "showbox",
+            "autoWidth": false,
+            "loop": false,
+            "directionVertical": false,
+            "scrollbar": false,
+            "windowResize": true,
+            "pager": null,
+            "touch": true,
+            speed: false,
+            "pagerShow": false,
+            "touchClear": false,
+            /*"gotoFn":null,*/ "nextFn": null,
+            "prevFn": null,
+            "moveOne": false,
+            "moveTouch": true,
+            "playFn": null,
+            "btnHobj": null
+        };
+        $p = $.extend(defaults, p);
+
+        $(this).oCss3({
+            "transform": "translateZ(0)"
+        });
+        $(this).oClear();
+        $(this).find("ul").oClear();
+        $(this).find("." + $p.showBoxClass).oClear();
+        var $this = $(this),
+            $showbox = $this.find("." + $p.showBoxClass),
+            $originalH = $(this).height(),
+            $cont = $showbox.find("ul"),
+            $li = $cont.find("li"),
+            $autoLi;
+            $this.amount_yuan=$li.length;
+        var $amount = $li.length,
+            $moveOne = $p.moveOne,
+            $moveTouch = $p.moveTouch,
+            $moveDistance = null,
+            $movebox = $("<div>"),
+            $nextLeft,
+            $directionVertical = $p.directionVertical,
+            $moveDirection = "left",
+            $loop = $p.loop,
+            $havescroll = $p.scrollbar,
+            $boxautoW = $p.autoWidth,
+            $pager = $this.find($p.pager),
+            $pagerShow = $p.pagerShow,
+            $showpage = 0,
+            $pagerNum,
+            $page /*=Math.ceil($amount/$showAmt)*/ ,
+            $yu = true,
+            $newli = $("<li></li>"),
+            $showWidth,
+            $showHeight,
+            $wResize = $p.windowResize,
+            $showHeigh,
+            $canTouch = $p.touch,
+            $speed = $p.speed,
+            $t,
+            $touchEvent = null,
+            $canMove = true,
+            $playFn = $p.playFn,
+            //$gotoFn=$p.gotoFn,
+            $nextFn = $p.nextFn,
+            $prevFn = $p.prevFn,
+            $added = false,
+            $touchI = 1,
+            $liW,
+            $pianyi,
+            $nextA,
+            $prevA,
+            $playing = false,
+            $active = false,
+            $btnHobj = $p.btnHobj;
+
+        if ($directionVertical) {
+            $this.css("height", $originalH + "px");
+        }
+
+        $li.css("display", "inline-block");
+
+        if ($directionVertical) {
+            $moveDirection = "top";
+            $cont.css({
                 "font-size": "0",
-                width: "100%",
-                display: "block"
-            })) : f.css({
+                "width": "100%",
+                "display": "inline"
+            });
+        } else {
+            $cont.css({
                 "font-size": "0",
                 "white-space": "nowrap",
-                width: "100%",
-                display: "block"
-            }), d.css({
-                overflow: "hidden",
-                position: "relative"
-            }), p.showAmt = 0, p.i = 0, p.prevBtn = $("<span class='btn_prev'></span>"), p.nextBtn = $("<span class='btn_next'></span>"), p.clickI = null, f.appendTo(w), w.appendTo(d), m.on("click", function () {
-                p.clickI = m.index(this)
-            }), M) {
-            var U = f.clone(), R = U.find("li"), W = R.clone();
-            R.on("click", function () {
-                p.clickI = R.index(this)
-            }), W.on("click", function () {
-                p.clickI = W.index(this)
-            })
+                "width": "100%",
+                "display": "inline"
+            });
         }
-        if (p.prepend(p.prevBtn), p.prepend(p.nextBtn), p.oNoSelect(), p.init = function () {
-                if (p.width() > 0) {
-                    C && (u = d.height(), p.css("height", u + "px")), w.attr("style", ""), f.css("margin-" + T, "0"), p.prevBtn.css({
-                        display: "inline-block",
-                        position: "absolute",
-                        "z-index": 1
-                    }), p.nextBtn.css({
-                        display: "inline-block",
-                        position: "absolute",
-                        "z-index": 1
-                    }), a = p.width() - p.prevBtn.width() - p.nextBtn.width(), r = C ? p.height() - p.prevBtn.height() - p.nextBtn.height() : d.height();
-                    for (var t = 0; t < m.length; t++)if (!m.eq(t).hasClass("cur")) {
-                        o = m.eq(t);
-                        break
-                    }
-                    if (C ? p.showAmt = Math.round(d.height() / (o.height() + parseInt(o.css("padding-top")) + parseInt(o.css("padding-bottom"))) - .4) : p.showAmt = Math.round(d.width() / (o.width() + parseInt(o.css("padding-left")) + parseInt(o.css("padding-right"))) - .4), $showPage = Math.ceil(g / p.showAmt), p.i = 0, w.css({
-                            position: "relative",
-                            left: "0px",
-                            top: "0px"
-                        }), n(F) && g > p.showAmt && isPC && p.hover(function () {
-                            p.stop()
-                        }, function () {
-                            p.play(F)
-                        }), g <= p.showAmt)return a = p.width(), d.css("width", ""), p.prevBtn.hide(), p.nextBtn.hide(), clearInterval(l), k && null !== H && (H.touchClear(), k = !1, H = null), X.empty(), !1;
-                    if (k = !0, j = x || b ? !1 : g % p.showAmt !== 0, m.attr("style", ""), Y && (C ? (d.css({height: r + "px"}), a = d.width(), f.find("li").css("height", Math.ceil(r / p.showAmt) + "px"), p.showHeightFn()) : (d.css({width: a + "px"}), p.prevBtn.css({
-                            position: "relative",
-                            "float": "left"
-                        }), p.nextBtn.css({
-                            position: "relative",
-                            "float": "right"
-                        }), r = d.height(), p.showWidthFn())), C ? null === L ? (p.prevBtn.css({width: d.width() + "px"}), p.nextBtn.css({width: d.width() + "px"})) : (p.prevBtn.css({width: p.find(L).eq(0).width() + "px"}), p.nextBtn.css({width: p.find(L).eq(0).width() + "px"})) : null === L ? (p.prevBtn.css({
-                            height: r + "px",
-                            "line-height": r + "px"
-                        }), p.nextBtn.css({
-                            height: r + "px",
-                            "line-height": r + "px"
-                        })) : (p.prevBtn.css({
-                            height: p.find(L).eq(0).height() + "px",
-                            "line-height": p.find(L).eq(0).height() + "px"
-                        }), p.nextBtn.css({
-                            height: p.find(L).eq(0).height() + "px",
-                            "line-height": p.find(L).eq(0).height() + "px"
-                        })), c = b || x ? C ? Math.ceil(o.height() + parseInt(o.css("padding-top")) + parseInt(o.css("padding-bottom"))) : Math.ceil(o.width() + parseInt(o.css("padding-left")) + parseInt(o.css("padding-right"))) : C ? d.height() : d.width(), x || b ? p.showAmt > 1 && !M ? (e = Math.ceil(g - p.showAmt + 1), i = g) : (e = g, i = g) : (e = Math.ceil(g / p.showAmt), i = e), x && (v = o.width()), M && !j ? (f.find("li").length == g && (p.removeLi(), p.addLi()), h = C ? -g * (o.height() + parseInt(o.css("padding-top")) + parseInt(o.css("padding-bottom"))) + "px" : -g * (o.width() + parseInt(o.css("padding-left")) + parseInt(o.css("padding-right"))) + "px", f.css("margin-" + T, h)) : (f.find("li").length > g && p.removeLi(), f.css("margin-" + T, "0px")), X) {
-                        X.empty();
-                        for (var t = 0; i > t; t++)if (_) {
-                            var s = z.clone(), y = m.eq(t).html();
-                            s.html(y), p.find(X).append(s)
-                        } else p.find(X).append(z.clone());
-                        p.find(X).find("li").eq(0).addClass("cur")
-                    }
-                    p.find(X).find("li").on("click", function () {
-                        var t = p.find(X).find("li").index($(this));
-                        t > e - 1 && (t = e - 1), p["goto"](t)
-                    }), n(F) && !q && p.play(F), k && null === H && (H = C ? d.oTouch({
-                        touchStart: function (t) {
-                            n(F) && q && p.stop(), D = !0
-                        }, touchMoveV: function (t) {
-                            e > 1 && (isIe8 || isIe9 || isUC ? null === v ? w.css("top", -p.i * c + (t.moveY - t.startY) + "px") : p.showAmt + p.i >= g ? w.css("top", -p.i * v + (t.moveY - t.startY) + "px") : w.css("top", -p.i * v + (t.moveY - t.startY) + "px") : null === v ? w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * c + (t.startY - t.moveY)) + "px,0px)",
-                                "transition-duration": "0s"
-                            }) : p.showAmt + p.i >= g ? w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * v + (t.startY - t.moveY)) + "px,0px)",
-                                "transition-duration": "0s"
-                            }) : w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * v + (t.startY - t.moveY)) + "px,0px)",
-                                "transition-duration": "0s"
-                            }))
-                        }, touchUp: function (t) {
-                            e > 1 && (t.startY - t.endY > 20 && B ? (O = Math.abs(Math.ceil((t.startY - t.endY) / c)), p.next()) : isIe8 || isIe9 || isUC ? null === v ? w.stop().animate({top: -p.i * c + "px"}, 300) : w.stop().animate({top: -p.i * v + "px"}, 300) : null === v ? w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * c) + "px,0px)",
-                                "transition-duration": "0.3s"
-                            }) : w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * v) + "px,0px)",
-                                "transition-duration": "0.3s"
-                            }))
-                        }, touchDown: function (t) {
-                            e > 1 && (t.startY - t.endY < -20 && B ? (O = Math.abs(Math.ceil((t.endY - t.startY) / c)), p.prev()) : isIe8 || isIe9 || isUC ? null === v ? w.stop().animate({top: -p.i * c + "px"}, 300) : w.stop().animate({top: -p.i * v + "px"}, 300) : null === v ? w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * c) + "px,0px)",
-                                "transition-duration": "0.3s"
-                            }) : w.oCss3({
-                                transform: "translate3d(0px," + -(p.i * v) + "px,0px)",
-                                "transition-duration": "0.3s"
-                            }))
-                        }, touchEnd: function () {
-                            isPC || n(F) && !q && p.play(F)
-                        }
-                    }) : d.oTouch({
-                        touchStart: function () {
-                            n(F) && q && p.stop(), D = !0
-                        }, touchMoveH: function (t) {
-                            e > 1 && (isIe8 || isIe9 || isUC ? null === v ? w.css("left", -p.i * c + (t.moveX - t.startX) + "px") : p.showAmt + p.i >= g ? w.css("left", -p.i * v + (t.moveX - t.startX) + "px") : w.css("left", -p.i * v + (t.moveX - t.startX) + "px") : null === v ? w.oCss3({
-                                transform: "translate3d(" + -(p.i * c + (t.startX - t.moveX)) + "px,0px,0px)",
-                                "transition-duration": "0s"
-                            }) : p.showAmt + p.i >= g ? w.oCss3({
-                                transform: "translate3d(" + -(p.i * v + (t.startX - t.moveX)) + "px,0px,0px)",
-                                "transition-duration": "0s"
-                            }) : w.oCss3({
-                                transform: "translate3d(" + -(p.i * v + (t.startX - t.moveX)) + "px,0px,0px)",
-                                "transition-duration": "0s"
-                            }))
-                        }, touchLeft: function (t) {
-                            e > 1 && (t.startX - t.endX > 50 && B ? (O = Math.abs(Math.ceil((t.startX - t.endX) / c)), p.next()) : isIe8 || isIe9 || isUC ? null === v ? w.stop().animate({left: -p.i * c + "px"}, 300) : w.stop().animate({left: -p.i * v + "px"}, 300) : null === v ? w.oCss3({
-                                transform: "translate3d(" + -(p.i * c) + "px,0px,0px)",
-                                "transition-duration": "0.3s"
-                            }) : w.oCss3({
-                                transform: "translate3d(" + -(p.i * v) + "px,0px,0px)",
-                                "transition-duration": "0.3s"
-                            }))
-                        }, touchRight: function (t) {
-                            e > 1 && (t.startX - t.endX < -50 && B ? (O = Math.abs(Math.ceil((t.endX - t.startX) / c)), p.prev()) : isIe8 || isIe9 || isUC ? null === v ? w.stop().animate({left: -p.i * c + "px"}, 300) : w.stop().animate({left: -p.i * v + "px"}, 300) : null === v ? w.oCss3({
-                                transform: "translate3d(" + -(p.i * c) + "px,0px,0px)",
-                                "transition-duration": "0.3s"
-                            }) : w.oCss3({
-                                transform: "translate3d(" + -(p.i * v) + "px,0px,0px)",
-                                "transition-duration": "0.3s"
-                            }))
-                        }, touchEnd: function () {
-                            isPC || n(F) && !q && p.play(F)
-                        }
-                    })), $p.touchClear && d.oTouch({clearE: !0}), p.pagerlist()
+
+        $showbox.css({
+            "overflow": "hidden",
+            "position": "relative"
+        });
+
+        $this.showAmt = 0;
+        $this.i = 0;
+        $this.prevBtn = $("<span class='btn_prev'></span>");
+        $this.nextBtn = $("<span class='btn_next'></span>");
+        $this.clickI = null;
+
+        $cont.appendTo($movebox);
+        $movebox.appendTo($showbox);
+        $li.on("click", function () {
+            $this.clickI = $li.index(this);
+        });
+        if ($loop) {
+            $movebox.addClass("o_font0");
+            var $clone = $cont.clone(),
+                $listers = $clone.find("li"),
+                $listers2 = $listers.clone();
+            $listers.on("click", function () {
+                $this.clickI = $listers.index(this);
+            });
+            $listers2.on("click", function () {
+                $this.clickI = $listers2.index(this);
+            });
+        }
+
+        function isInteger(obj) {
+            return Math.floor(obj) === obj;
+        }
+        $this.prepend($this.prevBtn);
+        $this.prepend($this.nextBtn);
+        $this.oNoSelect();
+
+        $this.init = function () {
+            $this.removeLi();
+            if ($this.width() > 0) {
+
+                if ($directionVertical) {
+                    $originalH = $showbox.height();
+                    $this.css("height", $originalH + "px");
                 }
-            }, p.play = function (t) {
-                setTimeout(function () {
-                    clearInterval(l), l = setInterval(function () {
-                        p.next()
-                    }, t), q = !0
-                }, 500)
-            }, p.showWidthFn = function () {
-                a % o.width() !== 0 && (a = Math.ceil(o.width()) * p.showAmt, d.css({width: a + "px"}), Y && (p.prevBtn.css("width", Math.floor((p.width() - a) / 2) + "px"), p.nextBtn.css("width", Math.floor((p.width() - a) / 2) + "px")))
-            }, p.showHeightFn = function () {
-                r % o.height() !== 0 && (r = Math.ceil(o.height()) * p.showAmt, d.css({height: r + "px"}), Y && (p.prevBtn.css("height", Math.floor((u - r) / 2) + "px"), p.nextBtn.css("height", Math.floor((u - r) / 2) + "px"), d.css({top: Math.floor((u - r) / 2) + "px"})))
-            }, p.stop = function () {
-                clearInterval(l), q = !1
-            }, p.change = function () {
-                m = d.find("li"), g = m.length, f = d.find("ul"), M && (U = f.clone(), R = U.find("li"), W = R.clone()), p.init()
-            }, p["goto"] = function (t) {
-                B = !1, M && !j ? (s = null === v ? -t * c + "px" : -t * v + "px", p.i = t, isIe8 || isIe9 || isUC ? C ? w.stop().animate({top: s}, 300, function () {
-                    t >= e ? w.css({top: -p.i * c}) : -1 >= t && w.css({top: -p.i * c})
-                }) : w.stop().animate({left: s}, 300, function () {
-                    t >= e ? w.css({left: -p.i * c}) : -1 >= t && w.css({left: -p.i * c})
-                }) : C ? w.oCss3({
-                    transform: "translate3d(0px," + s + ",0px)",
-                    "transition-duration": "0.3s"
-                }) : w.oCss3({
-                    transform: "translate3d(" + s + ",0px,0px)",
-                    "transition-duration": "0.3s"
-                }), t >= e ? (p.i = t - e, setTimeout(function () {
-                    isIe8 || isIe9 || isUC || (C ? w.oCss3({
-                        transform: "translate3d(0px," + -p.i * c + "px,0px)",
-                        "transition-duration": "0s"
-                    }) : w.oCss3({
-                        transform: "translate3d(" + -p.i * c + "px,0px,0px)",
-                        "transition-duration": "0s"
-                    })), !n(F) || isPC || q || p.play(F)
-                }, 200)) : -1 >= t ? (p.i = e + t, setTimeout(function () {
-                    isIe8 || isIe9 || isUC || (C ? w.oCss3({
-                        transform: "translate3d(0px," + -p.i * c + "px,0px)",
-                        "transition-duration": "0s"
-                    }) : w.oCss3({
-                        transform: "translate3d(" + -p.i * c + "px,0px,0px)",
-                        "transition-duration": "0s"
-                    })), !n(F) || isPC || q || p.play(F)
-                }, 200)) : setTimeout(function () {
-                    !n(F) || isPC || q || p.play(F)
-                }, 200), setTimeout(function () {
-                    B = !0
-                }, 300)) : (null === v ? s = t * c + "px" : (s = t * v + "px", p.showAmt + t > g && (s = (g - p.showAmt) / v + "px")), p.i = t, isIe8 || isIe9 || isUC ? C ? w.stop().animate({top: "-" + s}, 300, function () {
-                }) : w.stop().animate({left: "-" + s}, 300, function () {
-                }) : C ? w.oCss3({
-                    transform: "translate3d(0px,-" + s + ",0px)",
-                    "transition-duration": "0.3s"
-                }) : w.oCss3({
-                    transform: "translate3d(-" + s + ",0px,0px)",
-                    "transition-duration": "0.3s"
-                }), setTimeout(function () {
-                    B = !0, !n(F) || isPC || q || p.play(F)
-                }, 300)), p.prevOrNextFn(), null !== A && A({i: p.i, next: p.nextBtn, prev: p.prevBtn}), p.pagerlist()
-            }, p.prevOrNextFn = function () {
-                null !== E && $next ? E(p.i) : null !== S && $prev && S(p.i)
-            }, p.pagerlist = function () {
-                if (p.showAmt > 1)if (b || x)if (M) {
-                    X.find("li").removeClass("cur").removeClass("firstcur");
-                    for (var t = 0; t < p.showAmt; t++)p.i + t >= g ? X.find("li").eq(p.i - g + t).addClass("cur") : X.find("li").eq(p.i + t).addClass("cur");
-                    X.find("li").eq(p.i).addClass("firstcur")
+                //初始化 样式
+                $movebox.attr("style", "");
+                $cont.css("margin-" + $moveDirection, "0");
+                $this.prevBtn.css({
+                    "display": "inline-block",
+                    "position": "absolute",
+                    "z-index": 1
+                });
+                $this.nextBtn.css({
+                    "display": "inline-block",
+                    "position": "absolute",
+                    "z-index": 1
+                });
+                $showWidth = $this.width() - $this.prevBtn.width() - $this.nextBtn.width();
+                if ($directionVertical) {
+                    $showHeight = $this.height() - $this.prevBtn.height() - $this.nextBtn.height();
                 } else {
-                    X.find("li").removeClass("cur").removeClass("firstcur");
-                    for (var t = 0; t < p.showAmt; t++)p.i > g - p.showAmt ? X.find("li").eq(g - p.showAmt + t).addClass("cur") : X.find("li").eq(p.i + t).addClass("cur");
-                    X.find("li").eq(p.i).addClass("firstcur")
-                } else X.find("li").eq(p.i).addClass("cur").siblings().removeClass("cur"); else X.find("li").eq(p.i).addClass("cur").siblings().removeClass("cur");
-                M && (R.removeClass("cur").eq(p.i).addClass("cur"), W.removeClass("cur").eq(p.i).addClass("cur")), m.removeClass("cur").eq(p.i).addClass("cur"), O = 1
-            }, y) {
-            var N = $("<div class='scroll'></div>"), V = $("<span></span>");
-            N.append(V)
+                    $showHeight = $showbox.height();
+                }
+
+
+                for (var i = 0; i < $li.length; i++) {
+                    if (!$li.eq(i).hasClass('cur')) {
+                        $autoLi = $li.eq(i);
+                        break;
+                    }
+                }
+                
+                //重置显示个数
+                if ($directionVertical) {
+                    $this.showAmt = Math.round($showbox.height() / ($autoLi.height() + parseInt($autoLi.css("padding-top")) + parseInt($autoLi.css("padding-bottom"))) - 0.4);
+                    $amount=$this.amount_yuan<=Math.ceil($cont.height()/$autoLi.height())?$this.amount_yuan:Math.ceil($cont.height()/$autoLi.height());
+                } else {
+                    $this.showAmt = Math.round($showbox.width() / ($autoLi.width() + parseInt($autoLi.css("padding-left")) + parseInt($autoLi.css("padding-right"))) - 0.4);
+                    $amount=$this.amount_yuan<=Math.ceil($cont.width()/$autoLi.width())?$this.amount_yuan:Math.ceil($cont.width()/$autoLi.width());
+                }
+                //console.log($amount);
+                // if($p.moveNum!=null){
+                //  console.log($this.showAmt);
+                // }
+                //$movebox.attr("style","");
+                
+                $showPage = Math.ceil($amount / $this.showAmt);
+                $this.i = 0;
+                $movebox.css({
+                    "position": "relative",
+                    "left": "0px",
+                    "top": "0px"
+                });
+                if (isInteger($speed) && $amount > $this.showAmt) {
+                    if (isPC) {
+                        $this.hover(function () {
+                            $this.stop();
+                        }, function () {
+                            $this.play($speed);
+                        });
+                    }
+                }
+                //初始化计算
+                if ($amount <= $this.showAmt) {
+                    //如果 位置个数 >实际个数
+                    //$showbox.attr("style","").css({"position":"relative"/*,"text-align":"center"*/});
+                    $showWidth = $this.width();
+                    // if($amount<$this.showAmt){
+                    //  $li.css("width",$showWidth/$amount+"px");
+                    // }
+                    $showbox.css("width", "");
+                    // $movebox.css({"position":"absolute","left":"0px","top":"0px"});
+                    $this.prevBtn.hide();
+                    $this.nextBtn.hide();
+                    clearInterval($t);
+
+                    if ($canTouch && $touchEvent !== null) {
+                        $touchEvent.touchClear();
+                        $canTouch = false;
+                        $touchEvent = null;
+                    }
+                    $pager.empty();
+                    return false;
+
+                } else {
+
+                    $canTouch = true;
+                    //修改
+                    if ($moveOne || $moveTouch) {
+
+                        $yu = false;
+
+                    } else {
+                        if ($amount % $this.showAmt === 0) {
+                            $yu = false;
+                        } else {
+                            $yu = true;
+                        }
+                    }
+
+                    $li.attr("style", "");
+                    if ($boxautoW) {
+                        if ($directionVertical) {
+                            $showbox.css({
+                                "height": $showHeight + "px"
+                            });
+                            $showWidth = $showbox.width();
+                            $cont.find("li").css("height", Math.ceil($showHeight / $this.showAmt) + "px");
+                            $this.showHeightFn();
+                        } else {
+                            $showbox.css({
+                                "width": $showWidth + "px"
+                            });
+                            $this.prevBtn.css({
+                                "position": "relative",
+                                "float": "left"
+                            });
+                            $this.nextBtn.css({
+                                "position": "relative",
+                                "float": "right"
+                            });
+                            $showHeight = $showbox.height();
+                            $this.showWidthFn();
+                        }
+
+                    }
+                    if ($directionVertical) {
+                        if ($btnHobj === null) {
+                            $this.prevBtn.css({
+                                "width": $showbox.width() + "px"
+                            });
+                            $this.nextBtn.css({
+                                "width": $showbox.width() + "px"
+                            });
+                        } else {
+                            $this.prevBtn.css({
+                                "width": $this.find($btnHobj).eq(0).width() + "px"
+                            });
+                            $this.nextBtn.css({
+                                "width": $this.find($btnHobj).eq(0).width() + "px"
+                            });
+                        }
+                    } else {
+                        if ($btnHobj === null) {
+                            $this.prevBtn.css({
+                                "height": $showHeight + "px",
+                                "line-height": $showHeight + "px"
+                            });
+                            $this.nextBtn.css({
+                                "height": $showHeight + "px",
+                                "line-height": $showHeight + "px"
+                            });
+                        } else {
+                            $this.prevBtn.css({
+                                "height": $this.find($btnHobj).eq(0).height() + "px",
+                                "line-height": $this.find($btnHobj).eq(0).height() + "px"
+                            });
+                            $this.nextBtn.css({
+                                "height": $this.find($btnHobj).eq(0).height() + "px",
+                                "line-height": $this.find($btnHobj).eq(0).height() + "px"
+                            });
+                        }
+                    }
+                }
+
+
+                if ($moveTouch || $moveOne) {
+                    if ($directionVertical) {
+                        $liW = Math.ceil($autoLi.height() + parseInt($autoLi.css("padding-top")) + parseInt($autoLi.css("padding-bottom")));
+                    } else {
+                        $liW = Math.ceil($autoLi.width() + parseInt($autoLi.css("padding-left")) + parseInt($autoLi.css("padding-right")));
+                    }
+
+                } else {
+                    if ($directionVertical) {
+                        $liW = $showbox.height();
+                    } else {
+                        $liW = $showbox.width();
+                    }
+                }
+
+                if ($moveOne || $moveTouch) { /*移动1个 或 随机移动*/
+                    if ($this.showAmt > 1 && !$loop) {
+                        $page = Math.ceil(($amount - $this.showAmt + 1));
+                        $pagerNum = $amount;
+
+                    } else {
+                        $page = $amount;
+                        $pagerNum = $amount;
+                    }
+
+                } else { /*移动普通*/
+
+                    $page = Math.ceil($amount / $this.showAmt);
+                    $pagerNum = $page;
+                }
+
+
+                if ($moveOne) {
+                    $moveDistance = $autoLi.width();
+                }
+
+                if ($loop && !$yu) {
+                    if ($cont.find("li").length == $amount) {
+                        $this.removeLi();
+                        $this.addLi();
+                    }
+                    if ($directionVertical) {
+                        $pianyi = -$amount * ($autoLi.height() + parseInt($autoLi.css("padding-top")) + parseInt($autoLi.css("padding-bottom"))) + "px";
+                    } else {
+                        $pianyi = -$amount * ($autoLi.width() + parseInt($autoLi.css("padding-left")) + parseInt($autoLi.css("padding-right"))) + "px";
+                    }
+
+                    $cont.css("margin-" + $moveDirection, $pianyi);
+                } else {
+                    if ($cont.find("li").length > $amount) {
+                        $this.removeLi();
+                    }
+                    $cont.css("margin-" + $moveDirection, "0px");
+                }
+
+                //pager
+                if ($pager) {
+
+                    $pager.empty();
+                    for (var i = 0; i < $pagerNum; i++) {
+
+                        if ($pagerShow) {
+                            var $pagerli = $newli.clone();
+                            var img = $li.eq(i).html();
+                            $pagerli.html(img);
+                            $this.find($pager).append($pagerli);
+                        } else {
+                            $this.find($pager).append($newli.clone());
+                        }
+
+                    }
+                    $this.find($pager).find("li").eq(0).addClass("cur");
+                }
+
+                $this.find($pager).find("li").on("click", function () {
+                    var i = $this.find($pager).find("li").index($(this));
+                    if (i > $page - 1) {
+                        i = $page - 1;
+                    }
+                    $this.goto(i);
+                });
+
+                if (isInteger($speed) && !$playing) {
+                    $this.play($speed);
+                }
+
+                if ($canTouch && $touchEvent === null) {
+                    if ($directionVertical) { //纵向
+                        $touchEvent = $showbox.oTouch({
+                            touchStart: function ($p) {
+                                if (isInteger($speed) && $playing) {
+                                    $this.stop();
+                                }
+                                $active = true;
+                            },
+                            touchMoveV: function ($p) {
+
+                                if ($page > 1) {
+                                    if (isIe8 || isIe9 || isUC) {
+
+                                        if ($moveDistance === null) {
+
+                                            $movebox.css("top", -$this.i * $liW + ($p.moveY - $p.startY) + "px");
+                                        } else {
+                                            if ($this.showAmt + $this.i >= $amount) {
+                                                $movebox.css("top", -$this.i * $moveDistance + ($p.moveY - $p.startY) + "px");
+                                            } else {
+                                                $movebox.css("top", -$this.i * $moveDistance + ($p.moveY - $p.startY) + "px");
+                                            }
+                                        }
+
+                                    } else {
+
+                                        if ($moveDistance === null) {
+                                            $movebox.oCss3({
+                                                transform: "translate3d(0px," + -($this.i * $liW + ($p.startY - $p.moveY)) + "px,0px)",
+                                                "transition-duration": "0s"
+                                            });
+                                        } else {
+                                            if ($this.showAmt + $this.i >= $amount) {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(0px," + -($this.i * $moveDistance + ($p.startY - $p.moveY)) + "px,0px)",
+                                                    "transition-duration": "0s"
+                                                });
+                                            } else {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(0px," + -($this.i * $moveDistance + ($p.startY - $p.moveY)) + "px,0px)",
+                                                    "transition-duration": "0s"
+                                                });
+                                            }
+                                        }
+                                    }
+                                }
+
+                            },
+                            touchUp: function ($p) {
+
+                                if ($page > 1) {
+                                    if ($p.startY - $p.endY > 20 && $canMove) {
+                                        $touchI = Math.abs(Math.ceil(($p.startY - $p.endY) / $liW));
+                                        $this.next();
+                                    } else {
+
+                                        if (isIe8 || isIe9 || isUC) {
+                                            if ($moveDistance === null) {
+                                                $movebox.stop().animate({
+                                                    "top": -$this.i * $liW + "px"
+                                                }, 300);
+                                            } else {
+                                                $movebox.stop().animate({
+                                                    "top": -$this.i * $moveDistance + "px"
+                                                }, 300);
+                                            }
+
+                                        } else {
+                                            if ($moveDistance === null) {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(0px," + -($this.i * $liW) + "px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            } else {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(0px," + -($this.i * $moveDistance) + "px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            }
+                                        }
+
+                                    }
+
+                                    // if($gotoFn!==null){
+                                    //  $gotoFn($this.i);
+                                    // }
+                                }
+
+                            },
+                            touchDown: function ($p) {
+
+                                if ($page > 1) {
+
+                                    if ($p.startY - $p.endY < -20 && $canMove) {
+
+                                        $touchI = Math.abs(Math.ceil(($p.endY - $p.startY) / $liW));
+
+                                        $this.prev();
+                                    } else {
+                                        if (isIe8 || isIe9 || isUC) {
+                                            if ($moveDistance === null) {
+                                                $movebox.stop().animate({
+                                                    "top": -$this.i * $liW + "px"
+                                                }, 300);
+                                            } else {
+                                                $movebox.stop().animate({
+                                                    "top": -$this.i * $moveDistance + "px"
+                                                }, 300);
+                                            }
+
+                                        } else {
+
+                                            if ($moveDistance === null) {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(0px," + -($this.i * $liW) + "px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            } else {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(0px," + -($this.i * $moveDistance) + "px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            }
+                                        }
+
+                                    }
+                                    // if($gotoFn!==null){
+                                    //  $gotoFn($this.i);
+                                    // }
+                                }
+
+                            },
+                            touchEnd: function () {
+                                if (!isPC) {
+                                    if (isInteger($speed) && !$playing) {
+                                        $this.play($speed);
+                                    }
+                                }
+                            }
+                        });
+                    } else { //横向
+                        $touchEvent = $showbox.oTouch({
+                            touchStart: function () {
+                                if (isInteger($speed) && $playing) {
+                                    $this.stop();
+                                }
+                                $active = true;
+                            },
+                            touchMoveH: function ($p) {
+
+                                if ($page > 1) {
+                                    if (isIe8 || isIe9 || isUC) {
+                                        if ($moveDistance === null) {
+                                            $movebox.css("left", -$this.i * $liW + ($p.moveX - $p.startX) + "px");
+                                        } else {
+                                            if ($this.showAmt + $this.i >= $amount) {
+
+                                                $movebox.css("left", -$this.i * $moveDistance + ($p.moveX - $p.startX) + "px");
+                                            } else {
+                                                $movebox.css("left", -$this.i * $moveDistance + ($p.moveX - $p.startX) + "px");
+                                            }
+                                        }
+
+                                    } else {
+
+                                        if ($moveDistance === null) {
+                                            $movebox.oCss3({
+                                                transform: "translate3d(" + -($this.i * $liW + ($p.startX - $p.moveX)) + "px,0px,0px)",
+                                                "transition-duration": "0s"
+                                            });
+                                        } else {
+                                            if ($this.showAmt + $this.i >= $amount) {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(" + -($this.i * $moveDistance + ($p.startX - $p.moveX)) + "px,0px,0px)",
+                                                    "transition-duration": "0s"
+                                                });
+                                            } else {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(" + -($this.i * $moveDistance + ($p.startX - $p.moveX)) + "px,0px,0px)",
+                                                    "transition-duration": "0s"
+                                                });
+                                            }
+                                        }
+                                    }
+                                }
+
+                            },
+                            touchLeft: function ($p) {
+
+                                if ($page > 1) {
+                                    if ($p.startX - $p.endX > 50 && $canMove) {
+                                        $touchI = Math.abs(Math.ceil(($p.startX - $p.endX) / $liW));
+                                        $this.next();
+                                    } else {
+
+                                        if (isIe8 || isIe9 || isUC) {
+                                            if ($moveDistance === null) {
+                                                $movebox.stop().animate({
+                                                    "left": -$this.i * $liW + "px"
+                                                }, 300);
+                                            } else {
+                                                $movebox.stop().animate({
+                                                    "left": -$this.i * $moveDistance + "px"
+                                                }, 300);
+                                            }
+
+                                        } else {
+                                            if ($moveDistance === null) {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(" + -($this.i * $liW) + "px,0px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            } else {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(" + -($this.i * $moveDistance) + "px,0px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            }
+                                        }
+
+                                    }
+
+                                    // if($gotoFn!==null){
+                                    //  $gotoFn($this.i);
+                                    // }
+                                }
+
+                            },
+                            touchRight: function ($p) {
+
+                                if ($page > 1) {
+                                    if ($p.startX - $p.endX < -50 && $canMove) {
+                                        $touchI = Math.abs(Math.ceil(($p.endX - $p.startX) / $liW));
+
+                                        $this.prev();
+                                    } else {
+                                        if (isIe8 || isIe9 || isUC) {
+                                            if ($moveDistance === null) {
+                                                $movebox.stop().animate({
+                                                    "left": -$this.i * $liW + "px"
+                                                }, 300);
+                                            } else {
+                                                $movebox.stop().animate({
+                                                    "left": -$this.i * $moveDistance + "px"
+                                                }, 300);
+                                            }
+
+                                        } else {
+
+                                            if ($moveDistance === null) {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(" + -($this.i * $liW) + "px,0px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            } else {
+                                                $movebox.oCss3({
+                                                    transform: "translate3d(" + -($this.i * $moveDistance) + "px,0px,0px)",
+                                                    "transition-duration": "0.3s"
+                                                });
+                                            }
+                                        }
+
+                                    }
+                                    // if($gotoFn!==null){
+                                    //  $gotoFn($this.i);
+                                    // }
+                                }
+
+                            },
+                            touchEnd: function () {
+                                if (!isPC) {
+                                    if (isInteger($speed) && !$playing) {
+                                        $this.play($speed);
+                                    }
+                                }
+                            }
+                        });
+                    }
+
+                }
+                if ($p.touchClear) {
+                    $showbox.oTouch({
+                        "clearE": true
+                    });
+                }
+                //$this.oClear();
+                $this.pagerlist();
+            }
+        };
+
+        $this.play = function (t) {
+            setTimeout(function () {
+                clearInterval($t);
+                $t = setInterval(function () {
+                    //$touchI=1;
+                    $this.next();
+                }, t);
+                $playing = true;
+            }, 500);
+        };
+
+        $this.showWidthFn = function () { //显示区域宽度重置
+
+            if ($showWidth % $autoLi.width() !== 0) {
+                $showWidth = Math.ceil($autoLi.width()) * $this.showAmt;
+
+                $showbox.css({
+                    "width": $showWidth + "px"
+                });
+                if ($boxautoW) {
+                    $this.prevBtn.css("width", Math.floor(($this.width() - $showWidth) / 2) + "px");
+                    $this.nextBtn.css("width", Math.floor(($this.width() - $showWidth) / 2) + "px");
+                }
+            }
+        };
+        $this.showHeightFn = function () { //显示区域高度重置
+            if ($showHeight % $autoLi.height() !== 0) {
+                $showHeight = Math.ceil($autoLi.height()) * $this.showAmt;
+                $showbox.css({
+                    "height": $showHeight + "px"
+                });
+                if ($boxautoW) {
+                    $this.prevBtn.css("height", Math.floor(($originalH - $showHeight) / 2) + "px");
+                    $this.nextBtn.css("height", Math.floor(($originalH - $showHeight) / 2) + "px");
+                    $showbox.css({
+                        top: Math.floor(($originalH - $showHeight) / 2) + "px"
+                    });
+                }
+            }
+        };
+
+        $this.stop = function () {
+            clearInterval($t);
+            $playing = false;
+        };
+
+        $this.change = function () {
+            //初始化
+            $li = $showbox.find("li");
+            $amount = $li.length;
+            $cont = $showbox.find("ul");
+            if ($loop) {
+                $clone = $cont.clone();
+                $listers = $clone.find("li");
+                $listers2 = $listers.clone();
+            }
+            $this.init();
+        };
+
+        $this.goto = function (i) {
+            $canMove = false;
+            if ($loop && !$yu) {
+
+                //循环通常
+                if ($moveDistance === null) {
+                    $nextLeft = (-i * $liW) + "px";
+
+                } else {
+                    $nextLeft = (-i * $moveDistance) + "px";
+                    // if(/*$this.showAmt+*/i>=$amount){
+                    //  //$nextLeft=($amount-$this.showAmt)/$moveOne*$moveDistance+"px";
+                    // }
+                }
+                $this.i = i;
+
+                if (isIe8 || isIe9 || isUC) {
+                    if ($directionVertical) {
+                        $movebox.stop().animate({
+                            top: $nextLeft
+                        }, 300, function () {
+                            if (i >= $page) {
+                                $movebox.css({
+                                    top: -$this.i * $liW
+                                });
+                            } else if (i <= -1) {
+                                $movebox.css({
+                                    top: -$this.i * $liW
+                                });
+                            }
+                        });
+                    } else {
+                        $movebox.stop().animate({
+                            left: $nextLeft
+                        }, 300, function () {
+                            if (i >= $page) {
+                                $movebox.css({
+                                    left: -$this.i * $liW
+                                });
+                            } else if (i <= -1) {
+                                $movebox.css({
+                                    left: -$this.i * $liW
+                                });
+                            }
+                        });
+                    }
+
+                } else {
+                    if ($directionVertical) {
+                        $movebox.oCss3({
+                            transform: "translate3d(0px," + $nextLeft + ",0px)",
+                            "transition-duration": "0.3s"
+                        });
+                    } else {
+                        $movebox.oCss3({
+                            transform: "translate3d(" + $nextLeft + ",0px,0px)",
+                            "transition-duration": "0.3s"
+                        });
+                    }
+
+                }
+
+                if (i >= $page) {
+
+                    //$cont.css("margin-left",$pianyi);
+
+                    $this.i = i - $page;
+
+                    setTimeout(function () {
+                        //重置位置
+
+                        if (isIe8 || isIe9 || isUC) {
+                            //$movebox.css({left:-$this.i*$liW});
+
+
+                        } else {
+                            if ($directionVertical) {
+                                $movebox.oCss3({
+                                    transform: "translate3d(0px," + -$this.i * $liW + "px" + ",0px)",
+                                    "transition-duration": "0s"
+                                });
+                            } else {
+                                $movebox.oCss3({
+                                    transform: "translate3d(" + -$this.i * $liW + "px" + ",0px,0px)",
+                                    "transition-duration": "0s"
+                                });
+                            }
+                        }
+
+
+
+                        if (isInteger($speed) && !isPC && !$playing) {
+                            $this.play($speed);
+                        }
+
+                    }, 200);
+
+
+
+                } else if (i <= -1) {
+                    //$cont.css("margin-left",$pianyi);
+                    $this.i = $page + i;
+
+                    setTimeout(function () {
+                        //重置位置
+                        if (isIe8 || isIe9 || isUC) {
+                            //  $movebox.css({left:-$this.i*$liW+"px"});
+                        } else {
+                            if ($directionVertical) {
+                                $movebox.oCss3({
+                                    transform: "translate3d(0px," + -$this.i * $liW + "px" + ",0px)",
+                                    "transition-duration": "0s"
+                                });
+                            } else {
+                                $movebox.oCss3({
+                                    transform: "translate3d(" + -$this.i * $liW + "px" + ",0px,0px)",
+                                    "transition-duration": "0s"
+                                });
+                            }
+                        }
+
+
+                        if (isInteger($speed) && !isPC && !$playing) {
+                            $this.play($speed);
+                        }
+                    }, 200);
+
+                } else {
+
+                    setTimeout(function () {
+
+                        if (isInteger($speed) && !isPC && !$playing) {
+                            $this.play($speed);
+                        }
+                    }, 200);
+                }
+                setTimeout(function () {
+                    $canMove = true;
+                }, 300);
+
+            } else {
+
+                //不循环通常
+                if ($moveDistance === null) {
+                    $nextLeft = i * $liW + "px";
+                } else {
+                    $nextLeft = i * $moveDistance + "px";
+                    if ($this.showAmt + i > $amount) {
+                        $nextLeft = ($amount - $this.showAmt) / $moveDistance + "px";
+                    }
+                }
+
+                $this.i = i;
+                if (isIe8 || isIe9 || isUC) {
+                    if ($directionVertical) {
+                        $movebox.stop().animate({
+                            top: "-" + $nextLeft
+                        }, 300, function () {});
+                    } else {
+                        $movebox.stop().animate({
+                            left: "-" + $nextLeft
+                        }, 300, function () {});
+                    }
+
+                } else {
+                    if ($directionVertical) {
+                        $movebox.oCss3({
+                            transform: "translate3d(0px,-" + $nextLeft + ",0px)",
+                            "transition-duration": "0.3s"
+                        });
+                    } else {
+                        $movebox.oCss3({
+                            transform: "translate3d(-" + $nextLeft + ",0px,0px)",
+                            "transition-duration": "0.3s"
+                        });
+                    }
+
+                }
+
+
+                setTimeout(function () {
+                    $canMove = true;
+                    if (isInteger($speed) && !isPC && !$playing) {
+                        $this.play($speed);
+                    }
+                }, 300);
+
+            }
+            $this.prevOrNextFn();
+            if ($playFn !== null) {
+                $playFn({
+                    i: $this.i,
+                    next: $this.nextBtn,
+                    prev: $this.prevBtn
+                });
+            }
+
+            $this.pagerlist();
+
+        };
+
+        $this.prevOrNextFn = function () {
+            if ($nextFn !== null && $next) {
+                $nextFn($this.i);
+            } else if ($prevFn !== null && $prev) {
+                $prevFn($this.i);
+            }
+        };
+
+
+        $this.pagerlist = function () {
+            if ($this.showAmt > 1) {
+                if ($moveTouch || $moveOne) {
+                    if ($loop) {
+                        $pager.find("li").removeClass("cur").removeClass("firstcur");
+                        for (var i = 0; i < $this.showAmt; i++) {
+                            if ($this.i + i >= $amount) {
+                                $pager.find("li").eq($this.i - $amount + i).addClass("cur");
+                            } else {
+                                $pager.find("li").eq($this.i + i).addClass("cur");
+                            }
+                        }
+                        $pager.find("li").eq($this.i).addClass("firstcur");
+                    } else {
+                        $pager.find("li").removeClass("cur").removeClass("firstcur");
+                        for (var i = 0; i < $this.showAmt; i++) {
+                            if ($this.i > $amount - $this.showAmt) {
+                                $pager.find("li").eq($amount - $this.showAmt + i).addClass("cur");
+                            } else {
+                                $pager.find("li").eq($this.i + i).addClass("cur");
+                            }
+                        }
+                        $pager.find("li").eq($this.i).addClass("firstcur");
+                    }
+                } else {
+                    $pager.find("li").eq($this.i).addClass("cur").siblings().removeClass("cur");
+                }
+
+            } else {
+                $pager.find("li").eq($this.i).addClass("cur").siblings().removeClass("cur");
+            }
+
+            if ($loop) {
+                $listers.removeClass("cur").eq($this.i).addClass("cur");
+                $listers2.removeClass("cur").eq($this.i).addClass("cur");
+            }
+            $li.removeClass("cur").eq($this.i).addClass("cur");
+
+            $touchI = 1;
+
+        };
+
+
+        //轮播个数大于显示个数
+        if ($havescroll) {
+            var $scrollbar = $("<div class='scroll'></div>");
+            var $scrollmark = $("<span></span>");
+            $scrollbar.append($scrollmark);
+
         }
-        return p.addLi = function () {
-            P === !1 && (R.appendTo(f), W.appendTo(f), P = !0)
-        }, p.removeLi = function () {
-            P === !0 && (R.remove(), W.remove(), P = !1)
-        }, p.prevBtn.click(function () {
-            p.prev()
-        }), p.prev = function () {
-            $next = !1, $prev = !0, B && (x ? p.i-- : (O > p.showAmt ? p.showAmt : O, p.i -= O), M && !j ? p["goto"](p.i) : p.i < 0 ? (M && !j || (D ? (x ? p.i++ : p.i = 0, $prev = !1, D = !1) : p.i = e - 1), p["goto"](p.i)) : p["goto"](p.i))
-        }, p.nextBtn.click(function () {
-            p.next()
-        }), p.next = function () {
-            $next = !0, $prev = !1, B && (x ? p.i++ : (O > p.showAmt ? p.showAmt : O, p.i += O), M && !j ? (p["goto"](p.i), null !== E && E(p.i)) : p.i > e - 1 ? (M && !j || (D ? (x ? p.i-- : p.i = e - 1, $next = !1, D = !1) : p.i = 0), p["goto"](p.i)) : p["goto"](p.i))
-        }, I && $(window).resize(function () {
-            p.init()
-        }), p
-    }, $.fn.oHrel = function (p) {
-        var ele = $(this), backEle = [];
+
+        $this.addLi = function () {
+            if ($added === false) {
+                $listers.appendTo($cont);
+                $listers2.appendTo($cont);
+                $listers.on("click",function () {
+                    $this.clickI = $listers.index(this);
+                });
+                $listers2.on("click",function () {
+                    $this.clickI = $listers2.index(this);
+                });
+                $added = true;
+            }
+
+        };
+
+        $this.removeLi = function () {
+            if ($added === true) {
+                $listers.remove();
+                $listers2.remove();
+                $added = false;
+            }
+
+        };
+
+        $this.prevBtn.click(function () {
+            $this.prev();
+
+        });
+
+        $this.prev = function () {
+
+            $next = false;
+            $prev = true;
+            if ($canMove) {
+                if ($moveOne) {
+                    $this.i--;
+                } else {
+                    $touchI > $this.showAmt ? $this.showAmt : $touchI;
+                    $this.i -= $touchI;
+                }
+
+                if ($loop && !$yu) {
+                    $this.goto($this.i);
+
+                } else if ($this.i < 0) {
+                    if (!$loop || $yu) {
+                        if ($active) { //滑动触发第一个
+                            if ($moveOne) {
+                                $this.i++;
+                            } else {
+                                $this.i = 0;
+                            }
+                            $prev = false;
+                            $active = false;
+                        } else {
+                            $this.i = $page - 1;
+                        }
+                    }
+                    $this.goto($this.i);
+
+                } else {
+                    $this.goto($this.i);
+
+                }
+
+                // else if($gotoFn!==null){
+                //  $gotoFn($this.i);
+                // }
+            }
+        };
+
+        $this.nextBtn.click(function () {
+            //$touchI=1;
+            $this.next();
+        });
+
+        $this.next = function () {
+
+            $next = true;
+            $prev = false;
+            if ($canMove) {
+
+                if ($moveOne) {
+                    $this.i++;
+                } else {
+                    $touchI > $this.showAmt ? $this.showAmt : $touchI;
+                    $this.i += $touchI;
+                }
+
+                if ($loop && !$yu) { //循环
+                    $this.goto($this.i);
+                    if ($nextFn !== null) {
+                        $nextFn($this.i);
+                    }
+                } else if ($this.i > $page - 1) {
+                    if (!$loop || $yu) {
+                        if ($active) { //滑动触发最后一个
+                            if ($moveOne) {
+                                $this.i--;
+                            } else {
+                                $this.i = $page - 1;
+                            }
+                            $next = false;
+                            $active = false;
+                        } else {
+                            $this.i = 0;
+                        }
+
+                    } //else{
+                    //  $this.i=$page-1;
+                    //}
+                    $this.goto($this.i);
+                } else {
+                    $this.goto($this.i);
+
+                }
+
+                // else if($gotoFn!==null){
+                //  $gotoFn($this.i);
+                // }
+            }
+
+        };
+
+        if ($wResize) {
+            $(window).resize(function () {
+                $this.init();
+            });
+        }
+
+        return $this;
+    };
+
+    //高度跟随
+    $.fn.oHrel = function (p) {
+        var ele = $(this),
+            backEle = [];
         ele.each(function () {
-            var defaults = {resize: !0, obj: null}, $p = $.extend(defaults, p), $this = {};
-            $this.obj = $(this), null !== $this.obj.attr("obj") && ($this.target = $($this.obj.attr("obj"))), null !== $p.obj && ($this.target = eval($p.obj)), $this.h = 0, $this.init = function () {
-                $this.h = $this.target.height(), $this.obj.css("height", $this.h + "px")
-            }, $p.resize && $(window).resize(function () {
-                $this.init()
-            }), backEle.push($this)
+            var defaults = {
+                resize: true,
+                obj: null
+            };
+            var $p = $.extend(defaults, p);
+            var $this = {};
+            $this.obj = $(this);
+            if ($this.obj.attr("obj") !== null) {
+                $this.target = $($this.obj.attr("obj"));
+            }
+            if ($p.obj !== null) {
+                $this.target = eval($p.obj);
+            }
+            $this.h = 0;
+
+            $this.init = function () {
+                $this.h = $this.target.height();
+                $this.obj.css("height", $this.h + "px");
+            };
+
+            if ($p.resize) {
+                $(window).resize(function () {
+                    $this.init();
+                });
+            }
+            backEle.push($this);
         });
         var $backEle = $(backEle);
-        return $backEle.init = function (t) {
-            t ? backEle[t].init() : $backEle.each(function (t) {
-                backEle[t].init()
-            })
-        }, $backEle
-    }, $.fn.oCss3 = function (t, n) {
-        var o = $(this), s = "", i = ["-webkit-", "-o-", "-moz-"];
-        n === !1 && (s = o.attr("style"));
-        for (var e in t) {
-            s += ";" + e + ":" + t[e];
-            for (var a = 0; a < i.length; a++)s += ";" + i[a] + e + ":" + t[e]
+        $backEle.init = function (a) {
+            if (a) {
+                backEle[a].init();
+            } else {
+                $backEle.each(function (i) {
+                    backEle[i].init();
+                });
+            }
+        };
+        return $backEle;
+    };
+
+    $.fn.oCss3 = function ($p, a) {
+        var $this = $(this),
+            $style = "",
+            // $styleJson=jquery.press,
+            $qz = ["-webkit-", "-o-", "-moz-"];
+        if (a === false) {
+            $style = $this.attr("style");
         }
-        o.attr("style", s)
-    }, $.fn.oRotate = function (t) {
-        var n = $(this);
+        for (var o in $p) {
+            $style += ";" + o + ":" + $p[o];
+
+            for (var i = 0; i < $qz.length; i++) {
+                $style += ";" + $qz[i] + o + ":" + $p[o];
+            }
+        }
+        $this.attr("style", $style);
+    };
+
+    $.fn.oRotate = function ($p) {
+        var $this = $(this);
         if (isIe8) {
-            var o = Math.cos(t), s = -Math.sin(t), i = Math.sin(t), e = Math.cos(t), a = n.width(), r = n.height(), l = (-a / 2 * Math.cos(t) + r / 2 * Math.sin(t) + a / 2, -a / 2 * Math.sin(t) - r / 2 * Math.cos(t) + r / 2, n.attr("style"));
-            l += ";filter:progid:DXImageTransform.Microsoft.Matrix(M11=" + o + ",M12=" + s + ",M21=" + i + ",M22=" + e + ",SizingMethod='auto expand');", n.attr("style", l)
-        } else n.oCss3({transform: "rotate(" + t + "deg)"}, !1)
-    }, $.fn.oPopup = function (t) {
+            var m11 = Math.cos($p),
+                m12 = -Math.sin($p),
+                m21 = Math.sin($p),
+                m22 = Math.cos($p),
+                $width = $this.width(),
+                $height = $this.height(),
+                dx = -$width / 2 * Math.cos($p) + $height / 2 * Math.sin($p) + $width / 2,
+                dy = -$width / 2 * Math.sin($p) - $height / 2 * Math.cos($p) + $height / 2,
+                $style = $this.attr("style");
+            $style += ";filter:progid:DXImageTransform.Microsoft.Matrix(M11=" + m11 + ",M12=" + m12 + ",M21=" + m21 + ",M22=" + m22 + ",SizingMethod='auto expand');";
+            $this.attr("style", $style);
+        } else {
+            $this.oCss3({
+                "transform": "rotate(" + $p + "deg)"
+            }, false);
+        }
+    };
+
+    // $.fn.oAnimate=function($p){
+    //  defaults=({css:({}),speed:300});
+    //  var $this=$(this);
+    // }
+
+    $.fn.oPopup = function (p) {
+
         defaults = {
-            confirm: ".js_confirm",
-            confirmFn: null,
-            zz: "<div class='o_shade'></div>",
-            closeFn: null,
-            absolute: !1
-        }, $p = $.extend(defaults, t);
-        var n = $(this);
-        return n.obj = $(this), n.target = null, null !== $(this).attr("oData-popup") && (n.target = $($(this).attr("oData-popup"))), n.zz = $($p.zz), n.confirm = n.target.find($p.confirm), n.closebtn = n.target.find(".js_popupClose"), n.confirmFn = $p.confirmFn, n.closeFn = $p.closeFn, n.absolute = $p.absolute, n.top = 0, n.absolute && n.target.addClass("absolute"), n.on("click", function () {
-            n.open()
-        }), n.open = function () {
-            n.zz.appendTo($(".o_body")).addClass("show"), n.target.show().addClass("show"), n.confirm.length > 0 && (n.confirm.off(), n.confirm.on("click", function () {
-                n.closebtn.click(), n.confirmFn && n.confirmFn({selfEle: n.obj, targetEle: n.target, self: n})
-            })), n.init()
-        }, n.closebtn.on("click", function () {
-            n.close()
-        }), n.close = function () {
-            n.target.addClass("hide"), n.zz.removeClass("show"), setTimeout(function () {
-                n.zz.detach(), n.target.removeClass("hide").removeClass("show").hide(), null !== n.closeFn && n.closeFn(n.target)
-            }, 300)
-        }, n.init = function () {
-            var t = $(window).height(), o = $(document).height(), s = $(window).scrollTop(), i = n.target.height();
-            n.absolute ? t >= i ? (n.top = s + (t - i) / 2, n.target.css("top", n.top)) : s + i + 30 > o ? (s = o - (i + 60), $("html,body").animate({scrollTop: s}, 200), n.top = s + 30, n.target.css("top", n.top).addClass("absolute")) : (n.top = s + 30, n.target.css("top", n.top)) : t >= i ? (n.top = (t - i) / 2, n.target.css("top", n.top).removeClass("absolute")) : s + i + 30 > o ? (s = o - (i + 60), $("html,body").animate({scrollTop: s}, 200), n.top = s + 30, n.target.css("top", n.top).addClass("absolute")) : (n.top = s + 30, n.target.css("top", n.top).addClass("absolute"))
-        }, isPC && $(window).resize(function () {
-            n.init()
-        }), n
-    }, $.fn.oNoSelect = function () {
-        isIe ? isPC && ($(this).on("selectstart", function () {
-            return !1
-        }), $(this).on("drag", function () {
-            return !1
-        })) : $(this).oCss3({"user-select": "none"}, !1)
-    }, $.fn.oCutImg = function (t) {
-        defaults = {imgurl: [], showimg: "", min: 50, windowResize: !0}, $p = $.extend(defaults, t);
-        var n, o, s, i, e, a, r, l, c, h, p, d = $(this), u = $p.imgurl, f = $p.min, m = $($p.showimg), g = $("<div class='o_cutimgbox'>"), x = $("<div class='bgbox'>"), b = $("<div class='imgbox'>"), v = $("<div class='cutbox'>"), w = $("<div class='box'>"), C = $("<div class='controlbox'>"), T = $("<div class='control'>"), M = $("<div class='resize'>"), y = $("<img>"), Y = d.height(), X = d.width(), _ = i, j = 0;
-        y.attr("src", u[0]);
-        var z = y.clone(!0);
-        return d.changeImg = function (t) {
-            j = 0, u = t, y.attr("src", u[0]), z.attr("src", u[0])
-        }, d.rotate = function () {
-            j++, j > 3 && (j = 0), y.attr("src", u[j]), z.attr("src", u[j])
-        }, d.reset = function () {
-            y.appendTo(b), b.appendTo(x), z.appendTo(w), w.appendTo(v), M.appendTo(T), T.appendTo(C), g.append(x).append(v).append(C), d.append(g), b.attr("style", ""), z.attr("style", ""), b.attr("style", ""), y.attr("style", ""), n = z.height(), s = y.width(), o = y.height(), y.height() > d.height() && (o = d.height(), b.height(o), y.height(o), z.height(o), s = y.width()), c = s >= o ? "width" : "height", isIe && (y.attr("style", ""), b.attr("style", ""), "height" == c ? y.height() > Y && (y.height(Y), b.css({
-                height: y.height(),
-                width: "auto"
-            })) : "width" == c && y.width() > X && (y.width(X), b.css({
-                width: y.width(),
-                height: "auto"
-            })), s = y.width(), o = y.height()), i = s - o > 0 ? o : s, i = i < T.width() ? i : T.width(), _ = i, e = -Math.round((s - i) / 2), a = -Math.round((o - i) / 2), z.css({
-                width: s,
-                height: o,
-                left: e,
-                top: a
-            }), isIe8 ? (b.css({width: s, height: o}), v.css({
-                width: s,
-                height: o,
-                "margin-left": -Math.floor(s / 2),
-                "margin-top": -Math.floor(o / 2)
-            }), C.css({
-                width: s,
-                height: o,
-                "margin-left": -Math.floor(s / 2),
-                "margin-top": -Math.floor(o / 2)
-            })) : (b.css({width: s, height: o}), v.css({
-                width: s,
-                height: o,
-                "margin-left": -Math.round(s / 2),
-                "margin-top": -Math.floor(o / 2)
-            }), C.css({
-                width: s,
-                height: o,
-                "margin-left": -Math.round(s / 2),
-                "margin-top": -Math.floor(o / 2)
-            })), r = Math.round((s - i) / 2), l = Math.round((o - i) / 2), T.css({
-                width: i,
-                height: i,
-                left: r,
-                top: l
-            }), w.css({
-                width: i,
-                height: i,
-                left: r,
-                top: l
-            }), "width" == c ? h = o / i : "height" == c && (h = s / i), m.each(function () {
-                var t = $(this).parent().width() / i;
+            "confirm": ".js_confirm",
+            "confirmFn": null,
+            "zz": "<div class='o_shade'></div>",
+            "closeFn": null,
+            absolute: false
+        };
+        $p = $.extend(defaults, p);
+
+        var $this = $(this);
+        $this.obj = $(this);
+        $this.target = null;
+        if ($(this).attr("oData-popup") !== null) {
+            $this.target = $($(this).attr("oData-popup"));
+        }
+        $this.zz = $($p.zz);
+        $this.confirm = $this.target.find($p.confirm);
+        $this.closebtn = $this.target.find(".js_popupClose");
+        $this.confirmFn = $p.confirmFn;
+        $this.closeFn = $p.closeFn;
+        $this.absolute = $p.absolute;
+        $this.top = 0;
+
+        if ($this.absolute) {
+            $this.target.addClass("absolute");
+        }
+
+        $this.on("click", function () {
+            $this.open();
+        });
+
+        $this.open = function () {
+            $this.zz.appendTo($(".o_body")).addClass("show");
+            $this.target.show().addClass("show");
+
+            if ($this.confirm.length > 0) {
+                $this.confirm.off();
+                $this.confirm.on("click", function () {
+                    $this.closebtn.click();
+                    if ($this.confirmFn) {
+                        $this.confirmFn({
+                            selfEle: $this.obj,
+                            targetEle: $this.target,
+                            self: $this
+                        });
+                    }
+
+                });
+            }
+            $this.init();
+        };
+
+        $this.closebtn.on("click", function () {
+            $this.close();
+        });
+
+        $this.close = function () {
+            $this.target.addClass("hide");
+            $this.zz.removeClass("show");
+            setTimeout(function () {
+                $this.zz.detach();
+                $this.target.removeClass("hide").removeClass("show").hide();
+                if ($this.closeFn !== null) {
+                    $this.closeFn($this.target);
+                }
+
+            }, 300);
+        };
+
+        $this.init = function () {
+            var wH = $(window).height(),
+                dH = $(document).height(),
+                scrollH = $(window).scrollTop(),
+                objH = $this.target.height();
+            if (!$this.absolute) { //不固定
+                if (objH <= wH) { //小于
+                    $this.top = (wH - objH) / 2;
+                    $this.target.css('top', $this.top).removeClass("absolute");
+                } else { //大于
+                    if (scrollH + objH + 30 > dH) {
+                        scrollH = dH - (objH + 60);
+                        $("html,body").animate({
+                            scrollTop: scrollH
+                        }, 200);
+                        $this.top = scrollH + 30;
+                        $this.target.css('top', $this.top).addClass("absolute");
+                    } else {
+                        $this.top = scrollH + 30;
+                        $this.target.css('top', $this.top).addClass("absolute");
+                    }
+                }
+            } else { //固定
+                if (objH <= wH) {
+                    $this.top = scrollH + (wH - objH) / 2;
+                    $this.target.css('top', $this.top);
+                } else {
+                    if (scrollH + objH + 30 > dH) {
+                        scrollH = dH - (objH + 60);
+                        $("html,body").animate({
+                            scrollTop: scrollH
+                        }, 200);
+                        $this.top = scrollH + 30;
+                        $this.target.css('top', $this.top).addClass("absolute");
+                    } else {
+                        $this.top = scrollH + 30;
+                        $this.target.css('top', $this.top);
+                    }
+                }
+            }
+        };
+
+        if (isPC) {
+            $(window).resize(function () {
+                $this.init();
+            });
+        }
+
+        return $this;
+    };
+
+    // $.fn.oAlert=function(p){
+    //  defaults={"info":"没有信息"};
+    //  $p=$.extend(defaults,p);
+    //  var $body=$(".o_body"),
+    //      $this={};
+
+    //      $this.openbtn=$("<span>");
+    //      $this.openbtn.attr("href",".js_alertbox");
+    //      $this.info=$p.info;
+
+    //      $this.box=$("<div>");
+    //      $this.box.addClass("o_popup o_alert js_alertbox");
+
+    //      $this.closebtn=$("<span>");
+    //      $this.closebtn.addClass("o_popupclose js_popupClose");
+
+    //      $this.contbox=$("<div>");
+    //      $this.contbox.addClass("cont");
+
+    //      $this.closebtn.appendTo($this.box);
+    //      $this.contbox.appendTo($this.box);
+    //      $body.after($this.box);
+    //      $body.append($this.openbtn);
+
+    //      $this.openbtn.oPopup();
+    //      $this.open=function(info){
+    //          $this.contbox.html(info);
+    //          $this.openbtn.click();
+    //      };
+
+    //      return $this;
+    // };
+
+    $.fn.oNoSelect = function () {
+        if (!isIe) {
+            $(this).oCss3({
+                "user-select": "none"
+            }, false);
+        } else if (isPC) {
+
+            $(this).on("selectstart", function () {
+                return false;
+            });
+            $(this).on("drag", function () {
+                return false;
+            });
+        }
+    };
+
+    $.fn.oCutImg = function (p) {
+        defaults = {
+            "imgurl": [],
+            showimg: "",
+            min: 50,
+            "windowResize": true
+        };
+        $p = $.extend(defaults, p);
+        var $this = $(this),
+            $url = $p.imgurl,
+            $min = $p.min,
+            $showimg = $($p.showimg),
+            $mainbox = $("<div class='o_cutimgbox'>"),
+            $bgbox = $("<div class='bgbox'>"),
+            $imgbox = $("<div class='imgbox'>"),
+            $cutbox = $("<div class='cutbox'>"),
+            $cutimg = $("<div class='box'>"),
+            $controlbox = $("<div class='controlbox'>"),
+            $control = $("<div class='control'>"),
+            $resize = $("<div class='resize'>"),
+            $img = $("<img>"),
+            $maxH = $this.height(),
+            $maxW = $this.width(),
+            $maxCol = $colW,
+            $imgautoH,
+            $imgH,
+            $imgW,
+            $colW,
+            $imgL,
+            $imgT,
+            $curL,
+            $curT,
+            $longName,
+            $bl,
+            $showbl,
+            $degI = 0,
+            $cutInfo;
+
+
+        $img.attr("src", $url[0]);
+        var $img2 = $img.clone(true);
+
+        $this.changeImg = function (url) {
+            $degI = 0;
+            $url = url;
+            $img.attr("src", $url[0]);
+            $img2.attr("src", $url[0]);
+        };
+
+        $this.rotate = function () {
+            $degI++;
+            if ($degI > 3) {
+                $degI = 0;
+            }
+            $img.attr("src", $url[$degI]);
+            $img2.attr("src", $url[$degI]);
+
+        };
+
+        $this.reset = function () {
+            $img.appendTo($imgbox);
+            $imgbox.appendTo($bgbox);
+
+            $img2.appendTo($cutimg);
+            $cutimg.appendTo($cutbox);
+
+            $resize.appendTo($control);
+            $control.appendTo($controlbox);
+            $mainbox.append($bgbox).append($cutbox).append($controlbox);
+            $this.append($mainbox);
+
+            $imgbox.attr("style", "");
+            $img2.attr("style", "");
+            $imgbox.attr("style", "");
+            $img.attr("style", "");
+            $imgautoH = $img2.height();
+            $imgW = $img.width();
+            $imgH = $img.height();
+            if ($img.height() > $this.height()) {
+                $imgH = $this.height();
+                $imgbox.height($imgH);
+                $img.height($imgH);
+                $img2.height($imgH);
+                $imgW = $img.width();
+            }
+            $longName = $imgW >= $imgH ? "width" : "height";
+
+            if (isIe) {
+
+                $img.attr("style", "");
+                $imgbox.attr("style", "");
+                if ($longName == "height") {
+                    if ($img.height() > $maxH) {
+                        $img.height($maxH);
+                        $imgbox.css({
+                            "height": $img.height(),
+                            "width": "auto"
+                        });
+                    }
+                } else if ($longName == "width") {
+
+                    if ($img.width() > $maxW) {
+                        $img.width($maxW);
+                        $imgbox.css({
+                            "width": $img.width(),
+                            "height": "auto"
+                        });
+                    }
+                }
+                //ie重置
+                $imgW = $img.width();
+                $imgH = $img.height();
+
+            }
+            $colW = $imgW - $imgH > 0 ? $imgH : $imgW;
+            $colW = $colW < $control.width() ? $colW : $control.width();
+            $maxCol = $colW;
+
+            $imgL = -Math.round(($imgW - $colW) / 2);
+            $imgT = -Math.round(($imgH - $colW) / 2);
+            $img2.css({
+                "width": $imgW,
+                "height": $imgH,
+                "left": $imgL,
+                "top": $imgT
+            });
+
+            if (!isIe8) {
+                $imgbox.css({
+                    "width": $imgW,
+                    "height": $imgH
+                });
+                $cutbox.css({
+                    "width": $imgW,
+                    "height": $imgH,
+                    "margin-left": -Math.round($imgW / 2),
+                    "margin-top": -Math.floor($imgH / 2)
+                });
+                $controlbox.css({
+                    "width": $imgW,
+                    "height": $imgH,
+                    "margin-left": -Math.round($imgW / 2),
+                    "margin-top": -Math.floor($imgH / 2)
+                });
+            } else {
+                $imgbox.css({
+                    "width": $imgW,
+                    "height": $imgH
+                });
+                $cutbox.css({
+                    "width": $imgW,
+                    "height": $imgH,
+                    "margin-left": -Math.floor($imgW / 2),
+                    "margin-top": -Math.floor($imgH / 2)
+                });
+                $controlbox.css({
+                    "width": $imgW,
+                    "height": $imgH,
+                    "margin-left": -Math.floor($imgW / 2),
+                    "margin-top": -Math.floor($imgH / 2)
+                });
+            }
+
+
+            $curL = Math.round(($imgW - $colW) / 2);
+            $curT = Math.round(($imgH - $colW) / 2);
+            $control.css({
+                "width": $colW,
+                "height": $colW,
+                "left": $curL,
+                "top": $curT
+            });
+            $cutimg.css({
+                "width": $colW,
+                "height": $colW,
+                "left": $curL,
+                "top": $curT
+            });
+            //showimg
+            if ($longName == "width") {
+                $bl = $imgH / $colW;
+            } else if ($longName == "height") {
+                $bl = $imgW / $colW;
+            }
+
+            $showimg.each(function () {
+                var $bl2 = $(this).parent().width() / $colW;
                 $(this).parent().css({
-                    position: "relative",
-                    overflow: "hidden",
+                    "position": "relative",
+                    "overflow": "hidden",
                     "-webkit-transform": "translateZ(0)",
                     "-webkit-backface-visiblity": "hidden"
-                }), "width" == c ? $(this).attr("src", u[j]).css({
-                    position: "absolute",
-                    height: $(this).parent().width() * h,
-                    width: "auto",
-                    left: -r * t,
-                    top: -l * t
-                }) : "height" == c && $(this).attr("src", u[j]).css({
-                    position: "absolute",
-                    width: $(this).parent().width() * h,
-                    height: "auto",
-                    left: -r * t,
-                    top: -l * t
-                })
-            })
-        }, T.oTouch({
+                });
+                if ($longName == "width") {
+                    $(this).attr("src", $url[$degI]).css({
+                        "position": "absolute",
+                        "height": $(this).parent().width() * $bl,
+                        "width": "auto",
+                        "left": -$curL * $bl2,
+                        "top": -$curT * $bl2
+                    });
+                } else if ($longName == "height") {
+                    $(this).attr("src", $url[$degI]).css({
+                        "position": "absolute",
+                        "width": $(this).parent().width() * $bl,
+                        "height": "auto",
+                        "left": -$curL * $bl2,
+                        "top": -$curT * $bl2
+                    });
+                }
+            });
+
+        };
+
+        $control.oTouch({
             touchStart: function () {
-            }, touchMove: function (t) {
-                r + (t.moveX - t.startX) >= 0 && r + (t.moveX - t.startX) <= s - i ? (w.css({left: r + (t.moveX - t.startX)}), T.css({left: r + (t.moveX - t.startX)}), z.css({left: e - (t.moveX - t.startX)})) : r + (t.moveX - t.startX) < 0 ? (z.css({left: 0}), w.css({left: 0}), T.css({left: 0})) : r + (t.moveX - t.startX) > s - i && (z.css({left: i - s}), w.css({left: s - i}), T.css({left: s - i})), l + (t.moveY - t.startY) >= 0 && l + (t.moveY - t.startY) <= o - i ? (z.css({top: a - (t.moveY - t.startY)}), w.css({top: l + (t.moveY - t.startY)}), T.css({top: l + (t.moveY - t.startY)})) : l + (t.moveY - t.startY) < 0 ? (z.css({top: 0}), w.css({top: 0}), T.css({top: 0})) : l + (t.moveY - t.startY) > o - i && (z.css({top: i - o}), w.css({top: o - i}), T.css({top: o - i})), m.each(function () {
+
+            },
+            touchMove: function ($p) {
+                if ($curL + ($p.moveX - $p.startX) >= 0 && $curL + ($p.moveX - $p.startX) <= $imgW - $colW) {
+
+                    $cutimg.css({
+                        "left": $curL + ($p.moveX - $p.startX)
+                    });
+                    $control.css({
+                        "left": $curL + ($p.moveX - $p.startX)
+                    });
+                    $img2.css({
+                        "left": $imgL - ($p.moveX - $p.startX)
+                    });
+
+                } else if ($curL + ($p.moveX - $p.startX) < 0) {
+                    //小于
+                    $img2.css({
+                        "left": 0
+                    });
+                    $cutimg.css({
+                        "left": 0
+                    });
+                    $control.css({
+                        "left": 0
+                    });
+                } else if ($curL + ($p.moveX - $p.startX) > $imgW - $colW) {
+                    //大于
+                    $img2.css({
+                        "left": $colW - $imgW
+                    });
+                    $cutimg.css({
+                        "left": $imgW - $colW
+                    });
+                    $control.css({
+                        "left": $imgW - $colW
+                    });
+                }
+
+                if ($curT + ($p.moveY - $p.startY) >= 0 && $curT + ($p.moveY - $p.startY) <= $imgH - $colW) {
+                    $img2.css({
+                        "top": $imgT - ($p.moveY - $p.startY)
+                    });
+                    $cutimg.css({
+                        "top": $curT + ($p.moveY - $p.startY)
+                    });
+                    $control.css({
+                        "top": $curT + ($p.moveY - $p.startY)
+                    });
+                } else if ($curT + ($p.moveY - $p.startY) < 0) {
+                    $img2.css({
+                        "top": 0
+                    });
+                    $cutimg.css({
+                        "top": 0
+                    });
+                    $control.css({
+                        "top": 0
+                    });
+                } else if ($curT + ($p.moveY - $p.startY) > $imgH - $colW) {
+                    $img2.css({
+                        "top": $colW - $imgH
+                    });
+                    $cutimg.css({
+                        "top": $imgH - $colW
+                    });
+                    $control.css({
+                        "top": $imgH - $colW
+                    });
+                }
+
+                $showimg.each(function () {
                     $(this).css({
-                        left: z.position().left * ($(this).width() / z.width()),
-                        top: z.position().top * ($(this).width() / z.width())
-                    })
-                })
-            }, touchEnd: function (t) {
-                r = T.position().left, l = T.position().top, e = z.position().left, a = z.position().top
-            }, clearE: !0
-        }), M.oTouch({
-            touchStart: function (t) {
-            }, touchMove: function (t) {
-                var n = Math.abs(t.moveX - t.startX) > Math.abs(t.moveY - t.startY) ? t.moveX - t.startX : t.moveY - t.startY;
-                s >= i + n + r && o >= i + n + l && i + n >= f ? (T.css({width: i + n, height: i + n}), w.css({
-                    width: i + n,
-                    height: i + n
-                })) : i + n + r > s && o >= i + n + l ? (T.css({width: s - r, height: s - r}), w.css({
-                    width: s - r,
-                    height: s - r
-                })) : i + n + l > o && s >= i + n + r ? (T.css({width: o - l, height: o - l}), w.css({
-                    width: o - l,
-                    height: o - l
-                })) : f > i + n && (T.css({width: f, height: f}), w.css({
-                    width: f,
-                    height: f
-                })), "width" == c ? h = s / T.width() : "height" == c && (h = o / T.height()), m.each(function () {
-                    var t = $(this).parent().width() / T.width();
-                    "width" == c ? $(this).css({
-                        width: $(this).parent().width() * h,
-                        height: "auto",
-                        left: z.position().left * t,
-                        top: z.position().top * t
-                    }) : "height" == c && $(this).css({
-                        height: $(this).parent().width() * h,
-                        width: "auto",
-                        left: z.position().left * t,
-                        top: z.position().top * t
-                    })
-                })
-            }, touchEnd: function () {
-                i = T.width()
-            }, clearE: !0
-        }), d.init = function () {
-            y.load(function () {
-                d.reset()
-            })
-        }, $p.windowResize && $(window).resize(function () {
-            d.reset()
-        }), d.cut = function () {
-            var t = n / y.height();
-            return p = {
-                url: u[j] + "",
-                x: Math.floor(T.position().left * t),
-                y: Math.floor(T.position().top * t),
-                width: Math.floor(T.height() * t)
-            }
-        }, d
-    }, $.fn.oTouch = function (t) {
-        function n(t) {
-            var n = t.originalEvent.targetTouches[0];
-            a = n.pageX, r = n.pageY, u({self: d, startX: a, startY: r}), T = !1
+                        "left": $img2.position().left * ($(this).width() / $img2.width()),
+                        "top": $img2.position().top * ($(this).width() / $img2.width())
+                    });
+
+                });
+
+            },
+            touchEnd: function ($p) {
+                $curL = $control.position().left;
+                $curT = $control.position().top;
+                $imgL = $img2.position().left;
+                $imgT = $img2.position().top;
+            },
+            clearE: true
+        });
+
+        $resize.oTouch({
+            touchStart: function ($p) {
+
+            },
+            touchMove: function ($p) {
+
+                var m = Math.abs($p.moveX - $p.startX) > Math.abs($p.moveY - $p.startY) ? $p.moveX - $p.startX : $p.moveY - $p.startY;
+
+                if ($colW + m + $curL <= $imgW && $colW + m + $curT <= $imgH && $colW + m >= $min) {
+
+                    $control.css({
+                        "width": $colW + m,
+                        "height": $colW + m
+                    });
+                    $cutimg.css({
+                        "width": $colW + m,
+                        "height": $colW + m
+                    });
+
+                } else if ($colW + m + $curL > $imgW && $colW + m + $curT <= $imgH) {
+
+                    $control.css({
+                        "width": $imgW - $curL,
+                        "height": $imgW - $curL
+                    });
+                    $cutimg.css({
+                        "width": $imgW - $curL,
+                        "height": $imgW - $curL
+                    });
+
+                } else if ($colW + m + $curT > $imgH && $colW + m + $curL <= $imgW) {
+
+                    $control.css({
+                        "width": $imgH - $curT,
+                        "height": $imgH - $curT
+                    });
+                    $cutimg.css({
+                        "width": $imgH - $curT,
+                        "height": $imgH - $curT
+                    });
+
+                } else if ($colW + m < $min) {
+
+                    $control.css({
+                        "width": $min,
+                        "height": $min
+                    });
+                    $cutimg.css({
+                        "width": $min,
+                        "height": $min
+                    });
+
+                }
+
+                if ($longName == "width") {
+                    $bl = $imgW / $control.width();
+
+                } else if ($longName == "height") {
+                    $bl = $imgH / $control.height();
+                }
+
+                $showimg.each(function () {
+
+                    var bl = $(this).parent().width() / $control.width();
+
+                    if ($longName == "width") {
+                        $(this).css({
+                            "width": $(this).parent().width() * $bl,
+                            "height": "auto",
+                            "left": $img2.position().left * bl,
+                            "top": $img2.position().top * bl
+                        });
+
+                    } else if ($longName == "height") {
+                        $(this).css({
+                            "height": $(this).parent().width() * $bl,
+                            "width": "auto",
+                            "left": $img2.position().left * bl,
+                            "top": $img2.position().top * bl
+                        });
+                    }
+                });
+
+            },
+            touchEnd: function () {
+                $colW = $control.width();
+            },
+
+            clearE: true
+        });
+
+        $this.init = function () {
+            $img.load(function () {
+                $this.reset();
+            });
+        };
+
+        if ($p.windowResize) {
+            $(window).resize(function () {
+                $this.reset();
+            });
         }
 
-        function o(t) {
-            M && (t.stopPropagation(), t.preventDefault());
-            var n = t.originalEvent.targetTouches[0];
-            h = n.pageX, p = n.pageY, null !== f && (f({
-                self: d,
-                startX: a,
-                startY: r,
-                moveX: h,
-                moveY: p
-            }), T = !0), null !== m && Math.abs(h - a) > Math.abs(p - r) && Math.abs(h - a) > 1 && (m({
-                self: d,
-                startX: a,
-                startY: r,
-                moveX: h,
-                moveY: p
-            }), t.stopPropagation(), t.preventDefault(), T = !0), null !== g && Math.abs(h - a) < Math.abs(p - r) && Math.abs(p - r) > 1 && (g({
-                self: d,
-                startX: a,
-                startY: r,
-                moveX: h,
-                moveY: p
-            }), t.stopPropagation(), t.preventDefault(), T = !0)
-        }
+        $this.cut = function () {
+            var bl_auto = $imgautoH / $img.height();
+            $cutInfo = {
+                url: $url[$degI] + "",
+                x: Math.floor($control.position().left * bl_auto),
+                y: Math.floor($control.position().top * bl_auto),
+                width: Math.floor($control.height() * bl_auto)
+            };
+            return ($cutInfo);
+        };
+        return $this;
 
-        function s(t) {
-            var n = t.originalEvent.changedTouches[0];
-            l = n.pageX, c = n.pageY, T && (T = !1, -1 > a - l && b({
-                self: d,
-                startX: a,
-                endX: l,
-                startY: r,
-                endY: c
-            }), a - l > 1 && x({self: d, startX: a, endX: l, startY: r, endY: c}), r - c > 1 && v({
-                self: d,
-                startX: a,
-                endX: l,
-                startY: r,
-                endY: c
-            }), -1 > r - c && w({self: d, startX: a, endX: l, startY: r, endY: c}), C({
-                self: d,
-                startX: a,
-                endX: l,
-                startY: r,
-                endY: c
-            }))
-        }
+    };
 
-        function i(t) {
-            h = t.pageX, p = t.pageY, (h - a > 10 || -10 > h - a) && d.on("click", function () {
-                return !1
-            }), null !== f && (f({
-                self: d,
-                startX: a,
-                startY: r,
-                moveX: h,
-                moveY: p
-            }), t.stopPropagation(), t.preventDefault(), T = !0), null !== m && Math.abs(h - a) > Math.abs(p - r) && Math.abs(h - a) > 10 && (m({
-                self: d,
-                startX: a,
-                startY: r,
-                moveX: h,
-                moveY: p
-            }), t.stopPropagation(), t.preventDefault(), T = !0), null !== g && Math.abs(h - a) < Math.abs(p - r) && Math.abs(p - r) > 10 && (g({
-                self: d,
-                startX: a,
-                startY: r,
-                moveX: h,
-                moveY: p
-            }), t.stopPropagation(), t.preventDefault(), T = !0)
-        }
-
-        function e(t) {
-            $("body,html").off("mousemove"), $("body,html").off("mouseup"), l = t.pageX, c = t.pageY, -1 > a - l && b({
-                self: d,
-                startX: a,
-                endX: l,
-                startY: r,
-                endY: c
-            }), a - l > 1 && x({self: d, startX: a, endX: l, startY: r, endY: c}), r - c > 1 && v({
-                self: d,
-                startX: a,
-                endX: l,
-                startY: r,
-                endY: c
-            }), -1 > r - c && w({self: d, startX: a, endX: l, startY: r, endY: c}), C({
-                self: d,
-                startX: a,
-                endX: l,
-                startY: r,
-                endY: c
-            }), setTimeout(function () {
-                d.off("click")
-            }, 10)
-        }
-
+    $.fn.oTouch = function ($p) {
         defaults = {
-            clearE: !1, touchStart: function () {
-            }, touchMove: null, touchMoveH: null, touchMoveV: null, touchLeft: function () {
-            }, touchRight: function () {
-            }, touchUp: function () {
-            }, touchDown: function () {
-            }, touchEnd: function () {
+            "clearE": false,
+            "touchStart": function () {},
+            "touchMove": null,
+            "touchMoveH": null,
+            "touchMoveV": null,
+            "touchLeft": function () {},
+            "touchRight": function () {},
+            "touchUp": function () {},
+            "touchDown": function () {},
+            "touchEnd": function () {}
+        };
+        $p = $.extend(defaults, $p);
+        var $this = $(this),
+            $startX,
+            $startY,
+            $endX,
+            $endY,
+            $moveX,
+            $moveY,
+            $touchStart = $p.touchStart,
+            $touchMove = $p.touchMove,
+            $touchMoveH = $p.touchMoveH,
+            $touchMoveV = $p.touchMoveV,
+            $touchLeft = $p.touchLeft,
+            $touchRight = $p.touchRight,
+            $touchUp = $p.touchUp,
+            $touchDown = $p.touchDown,
+            $touchEnd = $p.touchEnd,
+            $cantouch = true,
+            $clearE = $p.clearE;
+
+        if ($this.length) {
+            if (!isPC /*|| isTouch*/ ) {
+
+                function touchStart(e) {
+                    // if($clearE){
+                    //  e.stopPropagation();
+                    //  e.preventDefault();}
+                    var touchE = e.originalEvent.targetTouches[0];
+                    $startX = touchE /*.targetTouches[0]*/ .pageX;
+                    $startY = touchE /*.targetTouches[0]*/ .pageY;
+                    $touchStart({
+                        self: $this,
+                        startX: $startX,
+                        startY: $startY
+                    });
+                    //$cantouch = false;
+                }
+
+                function touchMove(e) {
+                    
+                    if ($clearE) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                    }
+                    var touchE = e.originalEvent.targetTouches[0];
+                    $moveX = touchE /*.changedTouches[0]*/ .pageX;
+                    $moveY = touchE /*.changedTouches[0]*/ .pageY;
+                    if ($touchMove !== null) {
+                        $touchMove({
+                            self: $this,
+                            startX: $startX,
+                            startY: $startY,
+                            moveX: $moveX,
+                            moveY: $moveY
+                        });
+                        //$cantouch = true;
+                    }
+                    if ($touchMoveH !== null) {
+                        if (Math.abs($moveX - $startX) > Math.abs($moveY - $startY) && Math.abs($moveX - $startX) > 1) {
+                            $touchMoveH({
+                                self: $this,
+                                startX: $startX,
+                                startY: $startY,
+                                moveX: $moveX,
+                                moveY: $moveY
+                            });
+                            e.stopPropagation();
+                            e.preventDefault();
+                        //  $cantouch = true;
+                        }
+                    }
+                    if ($touchMoveV !== null) {
+                        if (Math.abs($moveX - $startX) < Math.abs($moveY - $startY) && Math.abs($moveY - $startY) > 1) {
+                            $touchMoveV({
+                                self: $this,
+                                startX: $startX,
+                                startY: $startY,
+                                moveX: $moveX,
+                                moveY: $moveY
+                            });
+                            e.stopPropagation();
+                            e.preventDefault();
+                        //  $cantouch = true;
+                        }
+                    }
+                    if($touchMoveV === null && $touchMoveH === null && $touchMove === null){
+                        //$cantouch = true;
+                    }
+                    
+                }
+
+                function touchEnd(e) {
+                    // if($clearE){
+                    //  e.stopPropagation();
+                    //  e.preventDefault();}
+                    var touchE = e.originalEvent.changedTouches[0];
+                    $endX = touchE /*.changedTouches[0]*/ .pageX;
+                    $endY = touchE /*.changedTouches[0]*/ .pageY;
+                    //$this[0].removeEventListener('touchend');
+                    //$this[0].removeEventListener('touchmove');
+                
+                    if ($cantouch) {
+                        
+                        //$cantouch = false;
+                        if ($startX - $endX < -1) {
+                            $touchRight({
+                                self: $this,
+                                startX: $startX,
+                                endX: $endX,
+                                startY: $startY,
+                                endY: $endY
+                            });
+                        }
+                        if ($startX - $endX > 1) {
+                            $touchLeft({
+                                self: $this,
+                                startX: $startX,
+                                endX: $endX,
+                                startY: $startY,
+                                endY: $endY
+                            });
+                        }
+                        if ($startY - $endY > 1) {
+                            $touchUp({
+                                self: $this,
+                                startX: $startX,
+                                endX: $endX,
+                                startY: $startY,
+                                endY: $endY
+                            });
+                        }
+                        if ($startY - $endY < -1) {
+                            $touchDown({
+                                self: $this,
+                                startX: $startX,
+                                endX: $endX,
+                                startY: $startY,
+                                endY: $endY
+                            });
+                        }
+
+                        $touchEnd({
+                            self: $this,
+                            startX: $startX,
+                            endX: $endX,
+                            startY: $startY,
+                            endY: $endY
+                        });
+                    }
+                }
+
+                // $this[0].addEventListener('touchstart', touchStart,false);
+                // $this[0].addEventListener('touchmove',touchMove,false);
+                // $this[0].addEventListener('touchend',touchEnd,false);
+                $this.on("touchstart", function (e) {
+                    touchStart(e);
+                });
+                $this.on("touchmove", function (e) {
+                    touchMove(e);
+                });
+                $this.on("touchend", function (e) {
+                    touchEnd(e);
+                });
+
+            } else {
+
+                $this.on("mousedown", function (e) {
+
+                    $startX = e.pageX;
+                    $startY = e.pageY;
+                    $touchStart({
+                        self: $this,
+                        startX: $startX,
+                        startY: $startY
+                    });
+                    $("body,html").bind("mousemove", function (e) {
+                        mouseMove(e);
+                        return false;
+                    });
+                    $("body,html").bind("mouseup", function (e) {
+                        mouseUp(e);
+                        return false;
+                    });
+                    return false;
+                });
+
+                function mouseMove(e) {
+                    $moveX = e.pageX;
+                    $moveY = e.pageY;
+
+                    // $touchMoveH({self:$this,startX:$startX,startY:$startY,moveX:$moveX,moveY:$moveY});
+                    // $touchMoveV({self:$this,startX:$startX,startY:$startY,moveX:$moveX,moveY:$moveY});
+                    // $touchMove({self:$this,startX:$startX,startY:$startY,moveX:$moveX,moveY:$moveY});
+                    if ($moveX - $startX > 10 || $moveX - $startX < -10) {
+                        $this.on("click", function () {
+                            return false;
+                        });
+                    }
+                    if ($touchMove !== null) {
+                        $touchMove({
+                            self: $this,
+                            startX: $startX,
+                            startY: $startY,
+                            moveX: $moveX,
+                            moveY: $moveY
+                        });
+                        e.stopPropagation();
+                        e.preventDefault();
+                        //$cantouch = true;
+                    }
+                    if ($touchMoveH !== null) {
+                        if (Math.abs($moveX - $startX) > Math.abs($moveY - $startY) && Math.abs($moveX - $startX) > 10) {
+                            $touchMoveH({
+                                self: $this,
+                                startX: $startX,
+                                startY: $startY,
+                                moveX: $moveX,
+                                moveY: $moveY
+                            });
+                            e.stopPropagation();
+                            e.preventDefault();
+                            //$cantouch = true;
+                        } else {
+
+                        }
+                    }
+                    if ($touchMoveV !== null) {
+                        if (Math.abs($moveX - $startX) < Math.abs($moveY - $startY) && Math.abs($moveY - $startY) > 10) {
+                            $touchMoveV({
+                                self: $this,
+                                startX: $startX,
+                                startY: $startY,
+                                moveX: $moveX,
+                                moveY: $moveY
+                            });
+                            e.stopPropagation();
+                            e.preventDefault();
+                            //$cantouch = true;
+                        }
+                    }
+                }
+
+                function mouseUp(e) {
+                    $("body,html").off("mousemove");
+                    $("body,html").off("mouseup");
+                    // $this.off("mouseleave");
+                    $endX = e.pageX;
+                    $endY = e.pageY;
+
+                    if ($startX - $endX < -1) {
+                        $touchRight({
+                            self: $this,
+                            startX: $startX,
+                            endX: $endX,
+                            startY: $startY,
+                            endY: $endY
+                        });
+                    }
+                    if ($startX - $endX > 1) {
+                        $touchLeft({
+                            self: $this,
+                            startX: $startX,
+                            endX: $endX,
+                            startY: $startY,
+                            endY: $endY
+                        });
+                    }
+                    if ($startY - $endY > 1) {
+                        $touchUp({
+                            self: $this,
+                            startX: $startX,
+                            endX: $endX,
+                            startY: $startY,
+                            endY: $endY
+                        });
+                    }
+                    if ($startY - $endY < -1) {
+                        $touchDown({
+                            self: $this,
+                            startX: $startX,
+                            endX: $endX,
+                            startY: $startY,
+                            endY: $endY
+                        });
+                    }
+
+                    $touchEnd({
+                        self: $this,
+                        startX: $startX,
+                        endX: $endX,
+                        startY: $startY,
+                        endY: $endY
+                    });
+                    setTimeout(function () {
+                        $this.off("click");
+                    }, 10);
+
+
+                }
             }
-        }, t = $.extend(defaults, t);
-        var a, r, l, c, h, p, d = $(this), u = t.touchStart, f = t.touchMove, m = t.touchMoveH, g = t.touchMoveV, x = t.touchLeft, b = t.touchRight, v = t.touchUp, w = t.touchDown, C = t.touchEnd, T = !0, M = t.clearE;
-        return d.length && (isPC ? d.on("mousedown", function (t) {
-            return a = t.pageX, r = t.pageY, u({
-                self: d,
-                startX: a,
-                startY: r
-            }), $("body,html").bind("mousemove", function (t) {
-                return i(t), !1
-            }), $("body,html").bind("mouseup", function (t) {
-                return e(t), !1
-            }), !1
-        }) : (d.on("touchstart", function (t) {
-            n(t)
-        }), d.on("touchmove", function (t) {
-            o(t)
-        }), d.on("touchend", function (t) {
-            s(t)
-        }))), d.touchClear = function () {
-            isPC ? d.off("mousedown") : (d[0].removeEventListener("touchstart", n, !1), d[0].removeEventListener("touchmove", o, !1), d[0].removeEventListener("touchend", s, !1))
-        }, d
-    }, $.fn.oToggle = function (t, n) {
-        var o = $(this);
-        return o.on("click", function () {
-            return "0" === o.attr("auto") || void 0 === o.attr("auto") ? (t(o), o.attr("auto", "1")) : "1" == o.attr("auto") && (n(o), o.attr("auto", "0")), !1
-        }), o
-    }, $.fn.oToggleAll = function (t) {
+        }
+
+        $this.touchClear = function () {
+            if (!isPC /* || isTouch*/ ) {
+                $this[0].removeEventListener('touchstart', touchStart, false);
+                $this[0].removeEventListener('touchmove', touchMove, false);
+                $this[0].removeEventListener('touchend', touchEnd, false);
+            } else {
+                $this.off("mousedown");
+            }
+        };
+
+        return $this;
+    };
+
+    $.fn.oToggle = function (fn1, fn2) {
+        var $this = $(this);
+        $this.on("click", function () {
+            if ($this.attr("auto") === "0" || $this.attr("auto") === undefined) {
+                fn1($this);
+                $this.attr("auto", "1");
+            } else if ($this.attr("auto") == "1") {
+                fn2($this);
+                $this.attr("auto", "0");
+            }
+            return false;
+        });
+        return $this;
+
+    };
+
+    $.fn.oToggleAll = function (p) {
         defaults = {
-            fn1: function () {
-            }, fn2: function () {
-            }, target: "", door: function () {
-                return !0
+            fn1: function () {},
+            fn2: function () {},
+            target: "",
+            door: function () {
+                return true;
             }
-        }, $p = $.extend(defaults, t);
-        var n = $(this), o = $p.target, s = $p.fn1, i = $p.fn2, e = $p.door;
-        n.on("click", o, function () {
-            if (e()) {
-                var t = $(this).attr("auto");
-                "0" === t || void 0 === t ? (s($(this)), $(this).attr("auto", "1")) : "1" === t && (i($(this)), $(this).attr("auto", "0"))
+        };
+        $p = $.extend(defaults, p);
+        var $this = $(this),
+            $target = $p.target,
+            $fn1 = $p.fn1,
+            $fn2 = $p.fn2,
+            $door = $p.door;
+
+        $this.on("click", $target, function () {
+
+            if ($door()) {
+                var auto = $(this).attr("auto");
+                if (auto === "0" || auto === undefined) {
+                    $fn1($(this));
+                    $(this).attr("auto", "1");
+                } else if (auto === "1") {
+                    $fn2($(this));
+                    $(this).attr("auto", "0");
+                }
             }
-        })
-    }, $.fn.oScrollGoto = function (t) {
-        defaults = {
-            spped: 1e3,
+        });
+
+    };
+
+    $.fn.oScrollGoto = function ($p) {
+        defaults = ({
+            spped: 1000,
             count: 0,
             beforefn: null,
             afterfn: null,
             door: null,
             doorclass: null
-        }, t = $.extend(defaults, t);
-        var n, o = $(this), s = $("." + o.attr("target")), i = t.speed, e = t.count, a = t.afterfn, r = t.beforefn, l = t.timeout, c = $("." + t.door), h = t.doorclass;
-        return o.on("click", function () {
-            n = s.offset().top + e, null !== r ? null !== h && (c.hasClass(h) ? (r(), setTimeout(function () {
-                o["goto"]()
-            }, l)) : (r(), o["goto"]())) : o["goto"]()
-        }), o["goto"] = function () {
-            $("html,body").animate({scrollTop: n}, i), setTimeout(function () {
-                null !== a && a()
-            }, l)
-        }, o
-    }, $.fn.oScrollFn = function (t) {
-        defaults = {
-            upFn: function () {
-            }, downFn: function () {
-            }
-        }, t = $.extend(defaults, t);
-        var n = $(this), o = t.upFn, s = t.downFn, i = "onmousewheel" in doc ? "mousewheel" : "DOMMouseScroll";
-        n.scrollfun = function (t) {
-            ev = t.originalEvent, d = parseInt(ev.wheelDelta || -ev.detail), d > 0 ? o() : s(), t.stopPropagation(), t.preventDefault()
-        }, $.event.add(n[0], i, n.scrollfun)
-    }, $.fn.oScrollBar = function (t) {
-        var n = $(this), o = [];
-        n.each(function () {
-            var n = {step: 50, surplus: 7, vShowBar: !0, vPScroll: !0};
-            t = $.extend(n, t);
-            var s = $(this);
-            s.obj = $(this), s.parent = s.obj.parent(), s.win = $("<div class='o_scrollWin'>"), s.body = $("<div class='o_scrollbody'>"), s.barbox = $("<div class='o_barbox'>"), s.line = $("<span>"), s.step = t.step, s.bar = $("<div class='o_bar'>"), s.winH = null, s.bodyH = null, s.barH = null, s.barboxH = null, s.cha = 0, s.sScale = 1, s.sTop = 0, s.sTop_next = null, s.barT = null, s.bar.appendTo(s.barbox), s.line.appendTo(s.barbox), s.barbox.appendTo(s.win), s.obj.appendTo(s.body), s.body.appendTo(s.win), s.win.appendTo(s.parent), 
-                s.init = function () {
-                    s.sTop = 0, s.bar.css("top", s.sTop + "px"), s.body.css("margin-top", s.sTop), s.win.css("padding-right", s.barbox.width() + "px"), s.winH = s.win.height(), s.bodyH = s.body.height(), s.barboxH = s.barbox.height(), s.sScale = s.barboxH / s.bodyH, s.cha = s.bodyH - s.winH, s.barH = s.barbox.height() / Math.max(s.bodyH / s.winH, 1), s.bar.css("height", s.barH + "px"), s.cha <= 0 ? (s.barbox.hide(), s.win.css("padding-right", "0px"), s.off()) : (s.barbox.show(), isPC ? (
-                s.resetScroll = function() {
-                    s.sTop = 0, s.bar.css("top", s.sTop + "px"), s.body.css("margin-top", s.sTop), s.win.css("padding-right", s.barbox.width() + "px"), s.winH = s.win.height(), s.bodyH = s.body.height(), s.barboxH = s.barbox.height(), s.sScale = s.barboxH / s.bodyH, s.cha = s.bodyH - s.winH, s.barH = s.barbox.height() / Math.max(s.bodyH / s.winH, 1), s.bar.css("height", s.barH + "px")
-                }, 
-                s.scrollDown = function () {
-                    s.bodyH > s.winH && (s.sTop_next = s.sTop - s.step, -s.sTop_next + s.winH > s.bodyH && (s.sTop_next = s.winH - s.bodyH), s.sTop = s.sTop_next, s.bar.css("top", -s.sTop_next * s.sScale + "px"), s.body.css("margin-top", s.sTop_next))
-                },
-                 s.scrollUp = function () {
-                    s.bodyH > s.winH && (s.sTop_next = s.sTop + s.step, s.sTop_next > 0 && (s.sTop_next = 0), s.sTop = s.sTop_next, s.bar.css("top", -s.sTop_next * s.sScale + "px"), s.body.css("margin-top", s.sTop_next))
-                }, s.win.oScrollFn({
-                    upFn: function () {
-                        s.scrollUp()
-                    }, downFn: function () {
-                        s.scrollDown()
-                    }
-                })) : s.body.oTouch({
-                    touchMove: function (t) {
-                        s.sTop_next = s.sTop + (t.moveY - t.startY), s.sTop_next > 0 ? s.sTop_next = 0 : -s.sTop_next + s.winH > s.bodyH && (s.sTop_next = s.winH - s.bodyH), s.sTop = s.sTop_next, s.bar.css("top", -s.sTop_next * s.sScale + "px"), s.body.css("margin-top", s.sTop_next)
-                    }, clearE: !0
-                }))
-            }, s.bar.oTouch({
-                touchStart: function () {
-                }, touchMove: function (t) {
-                    moveH = t.moveY - t.startY, s.sTop_next = s.sTop - moveH / s.sScale, s.sTop_next > 0 ? s.sTop_next = 0 : -s.sTop_next + s.winH > s.bodyH && (s.sTop_next = s.winH - s.bodyH), s.body.css("margin-top", s.sTop_next), s.bar.css("top", -s.sTop_next * s.sScale + "px")
-                }, touchEnd: function () {
-                    s.sTop = s.sTop_next
-                }, clearE: !0
-            }), o.push(s)
         });
-        var s = $(o);
-        return s.init = function (t) {
-            t ? o[t].init() : s.each(function (t) {
-                o[t].init()
-            })
-        }, s
-    }, $.fn.oHoverMove = function (t) {
-        function n(t) {
-            a = t.pageX, r = t.pageY, x && (p = a, d = r), m({self: u, startX: i, startY: e, moveX: a, moveY: r})
-        }
+        $p = $.extend(defaults, $p);
 
-        function o(t) {
-            l = t.pageX, c = t.pageY, x && clearInterval(h), g({self: u, startX: i, startY: e, leaveX: l, leaveY: c})
-        }
+        var $this = $(this),
+            $target = $("." + $this.attr("target")),
+            $spped = $p.speed,
+            $count = $p.count,
+            $afterfn = $p.afterfn,
+            $beforefn = $p.beforefn,
+            $timeout = $p.timeout,
+            $door = $("." + $p.door),
+            $doorclass = $p.doorclass,
+            $targetT;
 
-        function s() {
-            return p !== a || d !== r ? !1 : void x({self: u, startX: i, startY: e, moveX: a, moveY: r})
-        }
+        $this.on("click", function () {
 
+            $targetT = $target.offset().top + $count;
+            if ($beforefn !== null) {
+                if ($doorclass !== null) {
+
+                    if ($door.hasClass($doorclass)) {
+
+                        $beforefn();
+                        setTimeout(function () {
+                            $this.goto();
+                        }, $timeout);
+                    } else {
+                        $beforefn();
+                        $this.goto();
+                    }
+                }
+            } else {
+                $this.goto();
+            }
+        });
+
+
+        $this.goto = function () {
+            $("html,body").animate({
+                scrollTop: $targetT
+            }, $spped);
+            setTimeout(function () {
+                if ($afterfn !== null) {
+                    $afterfn();
+                }
+            }, $timeout);
+        };
+        return $this;
+    };
+
+    $.fn.oScrollFn = function ($p) {
+        defaults = ({
+            upFn: function () {},
+            downFn: function () {}
+        });
+        $p = $.extend(defaults, $p);
+        var $this = $(this),
+            $upfn = $p.upFn,
+            $downfn = $p.downFn,
+            mousewheel = 'onmousewheel' in doc ? 'mousewheel' : 'DOMMouseScroll';
+
+        $this.scrollfun = function (e) {
+            ev = e.originalEvent;
+            d = parseInt(ev.wheelDelta || -ev.detail);
+            if (d > 0) {
+                $upfn();
+            } else {
+                $downfn();
+            }
+            e.stopPropagation();
+            e.preventDefault();
+        };
+        $.event.add($this[0], mousewheel, $this.scrollfun);
+    };
+
+    $.fn.oScrollBar = function ($p) {
+        var ele = $(this),
+            backEle = [];
+        ele.each(function () {
+            var defaults = ({
+                step: 50, //鼠标滚轮滚动步长
+                surplus: 7, //滚动内容体额外高度
+                vShowBar: true, //是否控制滚动条的显示
+                vPScroll: true,//内容区域显示内容过短时 滚动时 按正常页面滚动
+                topFn:null,
+                downFn:null
+            });
+            $p = $.extend(defaults, $p);
+
+            var $this = $(this);
+            $this.obj = $(this);
+            $this.parent = $this.obj.parent();
+            $this.win = $("<div class='o_scrollWin'>");
+            $this.body = $("<div class='o_scrollbody'>");
+            $this.barbox = $("<div class='o_barbox'>");
+            $this.line = $("<span>");
+            $this.step = $p.step;
+            $this.bar = $("<div class='o_bar'>");
+            $this.winH = null;
+            $this.bodyH = null;
+            $this.barH = null;
+            $this.barboxH = null;
+            $this.cha = 0;
+            $this.sScale = 1;
+            $this.sTop = 0;
+            $this.sTop_next = null;
+            $this.barT = null;
+            $this.topFn=$p.topFn;
+            $this.downFn=$p.downFn;
+
+            $this.bar.appendTo($this.barbox);
+            $this.line.appendTo($this.barbox);
+            $this.barbox.appendTo($this.win);
+            $this.obj.appendTo($this.body);
+            $this.body.appendTo($this.win);
+            $this.win.appendTo($this.parent);
+
+            $this.init = function () {
+                $this.sTop = 0;
+                $this.bar.css("top", $this.sTop + "px");
+                $this.body.css("margin-top", $this.sTop);
+                $this.win.css("padding-right", $this.barbox.width() + "px");
+
+                $this.winH = $this.win.height();
+                $this.bodyH = $this.body.height();
+                $this.barboxH = $this.barbox.height();
+                $this.sScale = $this.barboxH / $this.bodyH;
+                $this.cha = $this.bodyH - $this.winH;
+                $this.barH = $this.barbox.height() / Math.max($this.bodyH / $this.winH, 1);
+
+                $this.bar.css("height", $this.barH + "px");
+                if ($this.cha <= 0) {
+                    $this.barbox.hide();
+                    $this.win.css("padding-right", "0px");
+                    $this.off();
+                } else {
+                    $this.barbox.show();
+                    if (isPC) {
+                        $this.scrollDown = function () {
+                            if ($this.bodyH > $this.winH) {
+                                $this.sTop_next = $this.sTop - $this.step;
+                                if (-$this.sTop_next + $this.winH > $this.bodyH) {
+                                    $this.sTop_next = $this.winH - $this.bodyH;
+                                    if($this.downFn){
+                                        $this.downFn();
+                                    }
+                                }
+                                $this.sTop = $this.sTop_next;
+                                $this.bar.css("top", -$this.sTop_next * $this.sScale + "px");
+                                $this.body.css("margin-top", $this.sTop_next);
+                            }
+                        };
+
+                        $this.scrollUp = function () {
+                            if ($this.bodyH > $this.winH) {
+                                $this.sTop_next = $this.sTop + $this.step;
+                                if ($this.sTop_next > 0) {
+                                    $this.sTop_next = 0;
+                                    if($this.topFn){
+                                        $this.topFn();
+                                    }
+                                }
+                                $this.sTop = $this.sTop_next;
+                                $this.bar.css("top", -$this.sTop_next * $this.sScale + "px");
+                                $this.body.css("margin-top", $this.sTop_next);
+                            }
+                        };
+
+                        $this.win.oScrollFn({
+                            upFn: function () {
+                                $this.scrollUp();
+                            },
+                            downFn: function () {
+                                $this.scrollDown();
+                            }
+                        });
+
+                    } else { //移动设备
+                        $this.body.oTouch({
+                            touchMove: function (p) {
+                                $this.sTop_next = $this.sTop + (p.moveY - p.startY);
+                                if ($this.sTop_next > 0) {
+                                    $this.sTop_next = 0;
+                                    if($this.topFn!==null){
+                                        $this.topFn();
+                                    }
+                                } else if (-$this.sTop_next + $this.winH > $this.bodyH) {
+                                    $this.sTop_next = $this.winH - $this.bodyH;
+                                    if($this.downFn!==null){
+                                        $this.downFn();
+                                    }
+                                }
+                                $this.sTop = $this.sTop_next;
+                                $this.bar.css("top", -$this.sTop_next * $this.sScale + "px");
+                                $this.body.css("margin-top", $this.sTop_next);
+                            },
+                            clearE: true
+                        });
+                        //$this.parent.css("overflow","scroll");
+                    }
+                }
+            };
+
+
+            $this.bar.oTouch({
+                touchStart: function () {},
+                touchMove: function (s) {
+                    moveH = s.moveY - s.startY;
+                    $this.sTop_next = $this.sTop - (moveH / $this.sScale);
+                    if ($this.sTop_next > 0) {
+                        $this.sTop_next = 0;
+                    } else if (-$this.sTop_next + $this.winH > $this.bodyH) {
+                        $this.sTop_next = $this.winH - $this.bodyH;
+                    }
+                    $this.body.css("margin-top", $this.sTop_next);
+                    $this.bar.css("top", -$this.sTop_next * $this.sScale + "px");
+                },
+                touchEnd: function () {
+                    $this.sTop = $this.sTop_next;
+                },
+                clearE: true
+            });
+
+            $this.lose=function(){
+                $this.obj.appendTo($this.parent);
+                $this.win.remove();
+            };
+
+            backEle.push($this);
+        });
+
+        var $backEle = $(backEle);
+        $backEle.init = function (a) {
+            if (a) {
+                backEle[a].init();
+            } else {
+                $backEle.each(function (i) {
+                    backEle[i].init();
+                });
+            }
+        };
+        $backEle.lose = function (a) {
+            if (a) {
+                backEle[a].lose();
+            } else {
+                $backEle.each(function (i) {
+                    backEle[i].lose();
+                });
+            }
+        };
+
+        return $backEle;
+    };
+
+    $.fn.oHoverMove = function ($p) {
         if (isPC) {
             defaults = {
-                clearE: !1, mouseStart: function () {
-                }, mouseMove: function () {
-                }, mouseLeave: function () {
-                }, mouseStopFn: null, stopTime: 1e3
-            }, t = $.extend(defaults, t);
-            var i, e, a, r, l, c, h, p, d, u = $(this), f = t.mouseStart, m = t.mouseMove, g = t.mouseLeave, x = t.mouseStopFn, b = t.stopTime;
-            return u.on("mouseenter", function (t) {
-                i = t.pageX, e = t.pageY, x && (h = setInterval(function () {
-                    s()
-                }, b)), f({self: u, startX: i, startY: e}), u.bind("mousemove", function (t) {
-                    return n(t), !1
-                }), u.bind("mouseleave", function (t) {
-                    o(t), u.off("mousemove"), u.off("mouseleave")
-                })
-            }), u
-        }
-    }, $.fn.oBgCover = function () {
-        var t = $(this), n = [];
-        t.each(function () {
-            var t = $(this);
-            t.obj = $(this), t.parent = t.obj.parent(), t.parent.css({
-                position: "relative",
-                overflow: "hidden"
-            }), t.pw = 0, t.ph = 0, t.w1 = 0, t.h1 = 0, t.init = function () {
-                t.obj.css({
-                    width: "auto",
-                    height: "auto"
-                }), t.pw = t.parent.width(), t.ph = t.parent.height(), t.w1 = t.obj.width(), t.h1 = t.obj.height(), 0 === t.obj.w1 ? t.obj.load(function () {
-                    return t.pw = t.parent.width(), t.ph = t.parent.height(), t.w1 = t.obj.width(), t.h1 = t.obj.height(), t.pw / t.w1 > t.ph / t.h1 ? (t.css({
-                        width: t.pw + "px",
-                        height: "auto",
-                        position: "absolute"
-                    }), t.css({
-                        "margin-left": -t.obj.width() / 2 + "px",
-                        left: "50%",
-                        top: "50%",
-                        "margin-top": -t.obj.height() / 2 + "px"
-                    })) : (t.css({
-                        height: t.ph + "px",
-                        width: "auto",
-                        position: "absolute"
-                    }), t.css({
-                        "margin-left": -t.obj.width() / 2 + "px",
-                        left: "50%",
-                        top: "50%",
-                        "margin-top": -t.obj.height() / 2 + "px"
-                    })), !1
-                }) : t.pw / t.w1 > t.ph / t.h1 ? (t.css({
-                    width: t.pw + "px",
-                    height: "auto",
-                    position: "absolute"
-                }), t.css({
-                    "margin-left": -t.obj.width() / 2 + "px",
-                    left: "50%",
-                    top: "50%",
-                    "margin-top": -t.obj.height() / 2 + "px"
-                })) : (t.css({
-                    height: t.ph + "px",
-                    width: "auto",
-                    position: "absolute"
-                }), t.css({
-                    "margin-left": -t.obj.width() / 2 + "px",
-                    left: "50%",
-                    top: "50%",
-                    "margin-top": -t.obj.height() / 2 + "px"
-                }))
-            }, isPC && $(window).resize(function () {
-                t.init()
-            }), n.push(t)
-        });
-        var o = $(n);
-        return o.init = function (t) {
-            t ? n[t].init() : o.each(function (t) {
-                n[t].init()
-            })
-        }, o
-    }, $.fn.oBoxCenter = function () {
-        var t = $(this), n = [];
-        t.each(function () {
-            var t = $(this);
-            t.obj = $(this), t.parent = t.obj.parent(), t.w = 0, t.h = 0, t.init = function () {
-                t.w = t.obj.width(), t.h = t.obj.height(), t.parent.css("position", "relative"), t.obj.css({
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    "margin-top": -t.h / 2 + "px",
-                    "margin-left": -t.w / 2 + "px"
-                })
-            }, isPC && $(window).resize(function () {
-                t.init()
-            }), n.push(t)
-        });
-        var o = $(n);
-        return o.init = function (t) {
-            t ? n[t].init() : o.each(function (t) {
-                n[t].init()
-            })
-        }, o
-    }, $.fn.oScale = function (t) {
-        var n = $(this), o = [], s = t;
-        n.each(function () {
-            defaults = {w: 1, h: 1, base: "width"};
-            var t = $.extend(defaults, s), n = $(this);
-            n.obj = $(this), n.w = t.w, n.h = t.h, n.base = t.base, n.obj.attr("w") && (n.w = parseInt(n.obj.attr("w"))), n.obj.attr("h") && (n.h = parseInt(n.attr("h"))), n.obj.attr("base") && (n.base = n.attr("base")), n.init = function () {
-                if ("width" == n.base) {
-                    if (0 === n.obj.width())return !1;
-                    n.width = n.obj.width(), n.height = Math.round(n.width / n.w * n.h), n.css("height", n.height + "px")
-                } else if ("height" === n.base) {
-                    if (0 === n.obj.height())return !1;
-                    n.height = n.obj.height(), n.width = Math.round(n.height / n.h * n.w), n.css("width", n.width + "px")
+                clearE: false,
+                "mouseStart": function () {},
+                "mouseMove": function () {},
+                "mouseLeave": function () {},
+                "mouseStopFn": null,
+                "stopTime": 1000
+            };
+            $p = $.extend(defaults, $p);
+            var $this = $(this),
+                $startX,
+                $startY,
+                $moveX,
+                $moveY,
+                $leaveX,
+                $leaveY,
+                $mouseStar = $p.mouseStart,
+                $mouseMove = $p.mouseMove,
+                $mouseLeave = $p.mouseLeave,
+                $mouseStopFn = $p.mouseStopFn,
+                $stopTime = $p.stopTime,
+                $t,
+                $beforeX,
+                $beforeY;
+
+            $this.on("mouseenter", function (e) {
+                $startX = e.pageX;
+                $startY = e.pageY;
+                if ($mouseStopFn) {
+                    $t = setInterval(function () {
+                        foo();
+                    }, $stopTime);
                 }
-            }, isPC && $(window).resize(function () {
-                n.init()
-            }), o.push(n)
-        });
-        var i = $(o);
-        return i.init = function (t) {
-            t ? o[t].init() : i.each(function (t) {
-                o[t].init()
-            })
-        }, i
-    }
-}(window, document, jQuery), $().ready(function () {
-    $(".o_autoH").each(function () {
-        $(this).oAutoH().init()
-    }), $(".o_main").oAutoH({minH: !0}).init(), $(".o_autoW").each(function () {
-        $(this).oAutoW().init()
-    }), $(".o_input").each(function () {
-        $(this).oInputclear()
-    }), $(".o_textarea").each(function () {
-        $(this).oTextareaclear()
-    }), isIe && $(".o_noselect").each(function () {
-        $(this).oNoSelect()
-    }), $(".o_g").oClear(), $(".o_main").oClear(), $(".o_autoH").oClear()
-}), $.fn.oPopupFn = function () {
-    var t = {};
-    return t.target = null, t.zz = $("<div class='o_shade'></div>"), t.closeFn = null, t.top = 0, t.absolute = !1, t.closebtn = null, t.open = function (n) {
-        t.target = null, t.closeFn = null, t.absolute = !1, t.absolute = null, t.closebtn = null, n.target && (t.target = $(n.target), t.closebtn = t.target.find(".js_popupClose"), t.closebtn && t.closebtn.on("click", function () {
-            t.close()
-        }), n.closeFn && (t.closeFn = n.closeFn), n.absolute && (t.absolute = n.absolute), t.zz.appendTo($(".o_body")).addClass("show"), t.target.show().addClass("show"), t.init())
-    }, t.close = function () {
-        t.target.addClass("hide"), t.zz.removeClass("show"), setTimeout(function () {
-            t.zz.detach(), t.target.removeClass("hide").removeClass("show").hide(), null !== t.closeFn && t.closeFn(t.target)
-        }, 300)
-    }, t.init = function () {
-        var n = $(window).height(), o = $(document).height(), s = $(window).scrollTop(), i = t.target.height();
-        t.absolute ? n >= i ? (t.top = s + (n - i) / 2, t.target.css("top", t.top)) : s + i + 30 > o ? (s = o - (i + 60), $("html,body").animate({scrollTop: s}, 200), t.top = s + 30, t.target.css("top", t.top).addClass("absolute")) : (t.top = s + 30, t.target.css("top", t.top)) : n >= i ? (t.top = (n - i) / 2, t.target.css("top", t.top).removeClass("absolute")) : s + i + 30 > o ? (s = o - (i + 60), $("html,body").animate({scrollTop: s}, 200), t.top = s + 30, t.target.css("top", t.top).addClass("absolute")) : (t.top = s + 30, t.target.css("top", t.top).addClass("absolute"))
-    }, t
-}, $.fn.oAlert = function (t) {
-    defaults = {info: "没有定义信息"}, $p = $.extend(defaults, t);
-    var n = $(".o_body"), o = {};
-    return o.openbtn = $("<span>"), o.openbtn.attr("oData-popup", ".js_alertbox"), o.autoInfo = $p.info, o.newClass = "", o.box = $("<div class='o_popup o_alert js_alertbox'></div>"), o.closeBtn = $("<span class='o_popupclose js_popupClose'><span>"), o.contbox = $("<div class='cont'>"), o.tool = $("<div class='tool'></div>"), o.confirmBtn = $("<div class='o_bgbtn1 btn o_btn_df-sm js_popupClose'><span>确定</span></div>"), o.closeBtn.appendTo(o.box), o.contbox.appendTo(o.box), o.confirmBtn.appendTo(o.tool), o.tool.appendTo(o.box), n.after(o.box), n.append(o.openbtn), o.openbtn.oPopup(), o.open = function (t) {
-        o.box.removeClass(o.newClass), t.info ? o.contbox.html(t.info) : o.contbox.html(o.autoInfo), t.addClass ? (o.newClass = t.addClass, o.box.addClass(o.newClass)) : o.newClass = "", o.openbtn.click()
-    }, o
-}, $.fn.oConfirm = function (t) {
-    defaults = {info: "没有定义信息"}, $p = $.extend(defaults, t);
-    var n = $(".o_body"), o = {};
-    return o.openbtn = $("<span>"), o.openbtn.attr("oData-popup", ".js_alertbox"), o.autoInfo = $p.info, o.callbackFn = null, o.targetEle = null, o.newClass = "", o.box = $("<div class='o_popup o_alert js_alertbox'></div>"), o.closeBtn = $("<span class='o_popupclose js_popupClose'><span>"), o.contbox = $("<div class='cont'>"), o.tool = $("<div class='tool'></div>"), o.confirmBtn = $("<div class='o_bgbtn1 btn o_btn_df-sm js_confirm'><span>确定</span></div>"), o.cancelBtn = $("<div class='o_linebtn1 btn o_btn_df-sm js_popupClose'><span>取消</span></div>"), o.closeBtn.appendTo(o.box), o.contbox.appendTo(o.box), o.confirmBtn.appendTo(o.tool), o.cancelBtn.appendTo(o.tool), o.tool.appendTo(o.box), n.after(o.box), n.append(o.openbtn), o.openbtn.oPopup({
-        confirmFn: function () {
-            o.callbackFn(o.targetEle)
+                $mouseStar({
+                    self: $this,
+                    startX: $startX,
+                    startY: $startY
+                });
+                $this.bind("mousemove", function (e) {
+                    mouseMove(e);
+                    return false;
+                });
+                $this.bind("mouseleave", function (e) {
+                    mouseLeave(e);
+                    $this.off("mousemove");
+                    $this.off("mouseleave");
+                });
+            });
+
+            function mouseMove(e) {
+                $moveX = e.pageX;
+                $moveY = e.pageY;
+                if ($mouseStopFn) {
+                    $beforeX = $moveX;
+                    $beforeY = $moveY;
+                }
+
+                $mouseMove({
+                    self: $this,
+                    startX: $startX,
+                    startY: $startY,
+                    moveX: $moveX,
+                    moveY: $moveY
+                });
+            }
+
+            function mouseLeave(e) {
+                $leaveX = e.pageX;
+                $leaveY = e.pageY;
+                if ($mouseStopFn) {
+                    clearInterval($t);
+                }
+                $mouseLeave({
+                    self: $this,
+                    startX: $startX,
+                    startY: $startY,
+                    leaveX: $leaveX,
+                    leaveY: $leaveY
+                });
+            }
+
+            function foo() {
+                if ($beforeX === $moveX && $beforeY === $moveY) {
+                    $mouseStopFn({
+                        self: $this,
+                        startX: $startX,
+                        startY: $startY,
+                        moveX: $moveX,
+                        moveY: $moveY
+                    });
+                } else {
+                    return false;
+                }
+            }
+            return $this;
         }
-    }), o.open = function (t) {
-        o.callbackFn = null, o.box.removeClass(o.newClass), t ? (t.info ? o.contbox.html(t.info) : o.contbox.html(o.autoInfo), t.ele ? o.targetEle = t.ele : o.targetEle = null, t.callbackFn ? o.callbackFn = t.callbackFn : o.callbackFn = function () {
-        }, t.addClass ? (o.newClass = t.addClass, o.box.addClass(o.newClass)) : o.newClass = "") : o.contbox.html(o.autoInfo), o.openbtn.click()
-    }, o
+    };
+
+    $.fn.oBgCover = function () {
+        var ele = $(this),
+            backEle = [];
+        ele.each(function () {
+            var $this = $(this);
+            $this.obj = $(this);
+            $this.parent = $this.obj.parent();
+            $this.parent.css({
+                "position": "relative",
+                "overflow": "hidden"
+            });
+            $this.pw = 0;
+            $this.ph = 0;
+            $this.w1 = 0;
+            $this.h1 = 0;
+            $this.loaded=false;
+            $this.init = function () {
+                $this.obj.css({
+                    "width": "auto",
+                    "height": "auto",
+                    "position":"absolute"
+                });
+                $this.pw = $this.parent.width();
+                $this.ph = $this.parent.height();
+                $this.w1 = $this.obj.width();
+                $this.h1 = $this.obj.height();
+                if (!$this.loaded) {
+                    $this.loaded=true;
+                    $this.obj.load(function () {
+                        $this.pw = $this.parent.width();
+                        $this.ph = $this.parent.height();
+                        $this.w1 = $this.obj.width();
+                        $this.h1 = $this.obj.height();
+
+                        if ($this.pw / $this.w1 > $this.ph / $this.h1) {
+                            $this.css({
+                                "width": $this.pw + "px",
+                                "height": "auto",
+                                "position": "absolute"
+                            });
+                            $this.css({
+                                "margin-left": -($this.obj.width()) / 2 + "px",
+                                left: "50%",
+                                top: "50%",
+                                "margin-top": -($this.obj.height()) / 2 + "px"
+                            });
+                        } else {
+                            $this.css({
+                                "height": $this.ph + "px",
+                                "width": "auto",
+                                "position": "absolute"
+                            });
+                            $this.css({
+                                "margin-left": -($this.obj.width()) / 2 + "px",
+                                left: "50%",
+                                top: "50%",
+                                "margin-top": -($this.obj.height()) / 2 + "px"
+                            });
+                        }
+                        return false;
+                    });
+                } else {
+                    if ($this.pw / $this.w1 > $this.ph / $this.h1) {
+                        $this.css({
+                            "width": $this.pw + "px",
+                            "height": "auto",
+                            "position": "absolute"
+                        });
+                        $this.css({
+                            "margin-left": -($this.obj.width()) / 2 + "px",
+                            left: "50%",
+                            top: "50%",
+                            "margin-top": -($this.obj.height()) / 2 + "px"
+                        });
+                    } else {
+                        $this.css({
+                            "height": $this.ph + "px",
+                            "width": "auto",
+                            "position": "absolute"
+                        });
+                        $this.css({
+                            "margin-left": -($this.obj.width()) / 2 + "px",
+                            left: "50%",
+                            top: "50%",
+                            "margin-top": -($this.obj.height()) / 2 + "px"
+                        });
+                    }
+                }
+            };
+            if (isPC) {
+                $(window).resize(function () {
+                    $this.init();
+                });
+            }
+
+            backEle.push($this);
+
+        });
+        var $backEle = $(backEle);
+        $backEle.init = function (a) {
+            if (a) {
+                backEle[a].init();
+            } else {
+                $backEle.each(function (i) {
+                    backEle[i].init();
+                });
+            }
+        };
+
+        return $backEle;
+    };
+
+    $.fn.oBoxCenter = function () {
+        var ele = $(this),
+            backEle = [];
+        ele.each(function () {
+            var $this = $(this);
+            $this.obj = $(this);
+            $this.parent = $this.obj.parent();
+            $this.w = 0;
+            $this.h = 0;
+            $this.init = function () {
+                $this.w = $this.obj.width();
+                $this.h = $this.obj.height();
+                $this.parent.css("position", "relative");
+                $this.obj.css({
+                    "position": "absolute",
+                    "top": "50%",
+                    "left": "50%",
+                    "margin-top": -$this.h / 2 + "px",
+                    "margin-left": -$this.w / 2 + "px"
+                });
+            };
+
+            if (isPC) {
+                $(window).resize(function () {
+                    $this.init();
+                });
+            }
+            backEle.push($this);
+        });
+
+        var $backEle = $(backEle);
+        $backEle.init = function (a) {
+            if (a) {
+                backEle[a].init();
+            } else {
+                $backEle.each(function (i) {
+                    backEle[i].init();
+                });
+            }
+        };
+
+        return $backEle;
+    };
+
+    $.fn.oScale = function ($p) {
+        var $ele = $(this),
+            backEle = [],
+            p = $p;
+        $ele.each(function () {
+            defaults = ({
+                w: 1,
+                h: 1,
+                base: "width"
+            });
+            var $p = $.extend(defaults, p);
+
+            var $this = $(this);
+            $this.obj = $(this);
+            $this.w = $p.w;
+            $this.h = $p.h;
+            $this.base = $p.base;
+            if ($this.obj.attr("w")) {
+                $this.w = parseInt($this.obj.attr("w"));
+            }
+            if ($this.obj.attr("h")) {
+                $this.h = parseInt($this.attr("h"));
+            }
+            if ($this.obj.attr("base")) {
+                $this.base = $this.attr("base");
+            }
+
+            $this.init = function () {
+                if ($this.base == "width") {
+                    if ($this.obj.width() !== 0) {
+                        $this.width = $this.obj.width();
+                        $this.height = Math.round(($this.width / $this.w) * $this.h);
+                        $this.css("height", $this.height + "px");
+                    } else {
+                        return false;
+                    }
+                } else if ($this.base === "height") {
+                    if ($this.obj.height() !== 0) {
+                        $this.height = $this.obj.height();
+                        $this.width = Math.round(($this.height / $this.h) * $this.w);
+                        $this.css("width", $this.width + "px");
+                    } else {
+                        return false;
+                    }
+                }
+            };
+
+            if (isPC) {
+                $(window).resize(function () {
+                    $this.init();
+                });
+            }
+            backEle.push($this);
+        });
+
+        var $backEle = $(backEle);
+        $backEle.init = function (a) {
+            if (a) {
+                backEle[a].init();
+            } else {
+                $backEle.each(function (i) {
+                    backEle[i].init();
+                });
+            }
+
+        };
+        return $backEle;
+    };
+
+    $.fn.oPopupFn=function(){
+    var $this={};
+        $this.target=null;
+        $this.zz=$("<div class='o_shade'></div>");
+        $this.closeFn=null;
+        $this.top=0;
+        $this.absolute=false;
+        $this.closebtn=null;
+    $this.open=function(p){
+        $this.target=null;
+        $this.closeFn=null;
+        $this.absolute=false;
+        $this.absolute=null;
+        $this.closebtn=null;
+        if(p.target){
+            $this.target=$(p.target);
+            $this.closebtn=$this.target.find(".js_popupClose");
+
+            if($this.closebtn){
+                $this.closebtn.on("click",function(){
+                    $this.close();
+                });
+            }
+            if(p.closeFn){
+                $this.closeFn=p.closeFn;
+            }
+            if(p.absolute){
+                $this.absolute=p.absolute;
+            }
+
+            $this.zz.appendTo($(".o_body")).addClass("show");
+            $this.target.show().addClass("show");   
+            $this.init();
+        }
+    };
+
+    
+
+    $this.close=function(){
+        $this.target.addClass("hide");
+            $this.zz.removeClass("show");
+            setTimeout(function(){
+                $this.zz.detach();
+                $this.target.removeClass("hide").removeClass("show").hide();
+                if($this.closeFn!==null){
+                    $this.closeFn($this.target);
+                }
+                    
+            },300);
+    };
+
+    $this.init=function(){
+        var wH=$(window).height(),
+            dH=$(document).height(),
+            scrollH=$(window).scrollTop(),
+            objH=$this.target.height();
+        if(!$this.absolute){//不固定
+            if(objH<=wH){//小于
+                $this.top=(wH-objH)/2;
+                $this.target.css('top',$this.top).removeClass("absolute");
+            }else{//大于
+                if(scrollH+objH+30>dH){
+                    scrollH=dH-(objH+60);
+                    $("html,body").animate({scrollTop:scrollH},200);
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top).addClass("absolute");
+                }else{
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top).addClass("absolute");
+                }
+            }
+        }else{//固定
+            if(objH<=wH){
+                $this.top=scrollH+(wH-objH)/2;
+                $this.target.css('top',$this.top);
+            }else{
+                if(scrollH+objH+30>dH){
+                    scrollH=dH-(objH+60);
+                    $("html,body").animate({scrollTop:scrollH},200);
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top).addClass("absolute");
+                }else{
+                    $this.top=scrollH+30;
+                    $this.target.css('top',$this.top);
+                }
+            }
+        }
+    };
+    
+    return $this;
 };
+
+$.fn.oAlert=function(p){
+        defaults={"info":"没有定义信息"};
+        $p=$.extend(defaults,p);
+        var $body=$(".o_body"),
+            $this={};
+
+            $this.openbtn=$("<span>");
+            $this.openbtn.attr("oData-popup",".js_alertbox");
+            $this.autoInfo=$p.info;
+            $this.newClass="";
+
+            $this.box=$("<div class='o_popup o_alert js_alertbox'></div>");
+            $this.closeBtn=$("<span class='o_popupclose js_popupClose'><span>");
+            $this.contbox=$("<div class='cont'>");
+            $this.tool=$("<div class='tool'></div>");
+            $this.confirmBtn=$("<div class='o_bgbtn1 btn o_btn_df-sm js_popupClose'><span>确定</span></div>");
+
+            $this.closeBtn.appendTo($this.box);
+            $this.contbox.appendTo($this.box);
+            $this.confirmBtn.appendTo($this.tool);
+            $this.tool.appendTo($this.box);
+            $body.after($this.box);
+            $body.append($this.openbtn);
+
+            $this.openbtn.oPopup();
+            $this.open=function(p){
+
+                $this.box.removeClass($this.newClass);
+                p.info?$this.contbox.html(p.info):$this.contbox.html($this.autoInfo);
+                if(p.addClass){
+                        $this.newClass=p.addClass;
+                        $this.box.addClass($this.newClass);
+                    }else{
+                        $this.newClass="";
+                    }
+                
+                $this.openbtn.click();
+            };
+
+            return $this;
+    };
+
+    $.fn.oConfirm=function(p){
+        defaults={"info":"没有定义信息"};
+        $p=$.extend(defaults,p);
+        var $body=$(".o_body"),
+            $this={};
+
+            $this.openbtn=$("<span>");
+            $this.openbtn.attr("oData-popup",".js_alertbox");
+            $this.autoInfo=$p.info;
+            $this.callbackFn=null;
+            $this.targetEle=null;
+            $this.newClass="";
+
+            $this.box=$("<div class='o_popup o_alert js_alertbox'></div>");
+            $this.closeBtn=$("<span class='o_popupclose js_popupClose'><span>");
+            $this.contbox=$("<div class='cont'>");
+            $this.tool=$("<div class='tool'></div>");
+            $this.confirmBtn=$("<div class='o_bgbtn1 btn o_btn_df-sm js_confirm'><span>确定</span></div>");
+            $this.cancelBtn=$("<div class='o_linebtn1 btn o_btn_df-sm js_popupClose'><span>取消</span></div>");
+
+            $this.closeBtn.appendTo($this.box);
+            $this.contbox.appendTo($this.box);
+            $this.confirmBtn.appendTo($this.tool);
+            $this.cancelBtn.appendTo($this.tool);
+            $this.tool.appendTo($this.box);
+            $body.after($this.box);
+            $body.append($this.openbtn);
+
+            $this.openbtn.oPopup({
+                confirmFn:function(){
+                    $this.callbackFn($this.targetEle);
+                }
+            });
+            $this.open=function(p){
+                $this.callbackFn=null;
+                $this.box.removeClass($this.newClass);
+                if(p){
+                    p.info?$this.contbox.html(p.info):$this.contbox.html($this.autoInfo);
+                    p.ele?$this.targetEle=p.ele:$this.targetEle=null;
+                    p.callbackFn?$this.callbackFn=p.callbackFn:$this.callbackFn=function(){};
+                    if(p.addClass){
+                        $this.newClass=p.addClass;
+                        $this.box.addClass($this.newClass);
+                    }else{
+                        $this.newClass="";
+                    }
+            
+                }else{
+                    $this.contbox.html($this.autoInfo);
+                }
+                
+                $this.openbtn.click();
+            };
+
+            return $this;
+    };
+
+    
+
+})(window, document, jQuery);
+
+$().ready(function () {
+
+    $(".o_autoH").each(function () {
+        $(this).oAutoH().init();
+    });
+    $(".o_main").oAutoH({
+        minH: true
+    }).init();
+    // $(".o_autoH_inner").each(function(){
+    //  $(this).oAutoH({
+    //      "inner":true //内部元素 不以window为基础
+    //  }).init();
+    // });
+
+    $(".o_autoW").each(function () {
+        $(this).oAutoW().init();
+    });
+
+    $(".o_input").each(function () {
+        $(this).oInputclear();
+    });
+
+    $(".o_textarea").each(function () {
+        $(this).oTextareaclear();
+    });
+
+    if (isIe) {
+        $(".o_noselect").each(function () {
+            $(this).oNoSelect();
+        });
+    }
+
+    $(".o_g").oClear();
+    $(".o_main").oClear();
+    $(".o_autoH").oClear();
+
+});
