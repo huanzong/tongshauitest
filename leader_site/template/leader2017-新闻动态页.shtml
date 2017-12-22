@@ -159,8 +159,12 @@
         var result=bannerpic.split(",");
         var bannerpic1=result[0];
         var bannerpic2=result[1];
-        var bannerpic2=result[2];
-        $(".js_recPic").attr("df","bannerpic1");
+        var bannerpic3=result[2];
+        $(".js_recPic").attr("df",bannerpic1);
+        $(".js_recPic").attr("lg",bannerpic2);
+        $(".js_recPic").attr("md",bannerpic2);
+        $(".js_recPic").attr("sm",bannerpic3);
+        $(".js_recPic").attr("xs",bannerpic3);
 
         //PC端分页
         var pager = new pagination("#sub div.pageMax");
