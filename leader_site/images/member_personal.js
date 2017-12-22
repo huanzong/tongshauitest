@@ -4,6 +4,18 @@
 
 //上传照片
 
+
+    var $ie8 = false;
+
+    var browser = navigator.appName;
+    if (browser == "Microsoft Internet Explorer") {
+        var b_version = navigator.appVersion;
+        var version = b_version.split(";");
+        var trim_Version = version[1].replace(/[ ]/g, "");
+        if (trim_Version == "MSIE8.0") {
+            $ie8 = true;
+        }
+    }
 $(function(){
 
     $('.lose').css('background-color','#ccc');
@@ -297,6 +309,16 @@ $(function(){
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
 
+                            if(!$ie8){
+                                jcrop_api.setImage(templet_pic, function(){
+                                    jcrop_api.setOptions({
+                                        //outerImage: templet_pic,
+                                        //setSelect: [ 60, 60, 260, 260 ]
+                                        setSelect: [ photoBoxWidth*0.2, photoBoxWidth*0.2, photoBoxWidth*0.85, photoBoxWidth*0.85 ]
+                                
+                                    //})
+                                });
+                            }
                             //jcrop_api.setImage(templet_pic, function(){
                             //    jcrop_api.setOptions({
                             //        //outerImage: templet_pic,
