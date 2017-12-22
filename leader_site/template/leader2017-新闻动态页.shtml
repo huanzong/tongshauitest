@@ -20,8 +20,10 @@
         <!--头部banner-->
         <div class="news_list_banner">
             <a href="javascript:;">
-                <img class="js_recPic" src="" df="news_banner_df.png" lg="news_banner_md.png" md="news_banner_md.png"
+                <trs_viewdatas id="关于统帅" num="1">
+                <img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='0' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" lg="news_banner_md.png" md="news_banner_md.png"
                      sm="news_banner_sm.png" xs="news_banner_sm.png">
+                </trs_viewdatas>
                 <div class="news_list_caption">
                     <trs_channel id='关于统帅' AUTOLINK="false"/>
                 </div>
