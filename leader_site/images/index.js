@@ -1,5 +1,4 @@
 $(function() {
-
     var screenWidth = document.body.offsetWidth;
     if (screenWidth > 991) {
       setTimeout(function(){
@@ -35,12 +34,25 @@ $(function() {
       }
     })
 
+    
     /**
      * 
      * @desc 获取滚动条距顶部的距离
      */
     function getScrollTop() {
       return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    }
+
+    if (document.body.clientHeight > $('.index-enter').offset().top) {
+      if ($('.index-enter').not('.js-inited').length > 0) {
+        $('.index-enter').addClass('js-inited');
+        var inSenceTimer = setInterval(function(){
+          $('.enter-con').not('.in-sence').not('.enter-con-xs').eq(0).addClass('in-sence')
+          if ($('.enter-con').not('.in-sence').length == 0) {
+            clearInterval(inSenceTimer)
+          }
+        },500);
+      }
     }
 
     $(window).scroll(function () {  
@@ -171,13 +183,13 @@ $(function() {
       // }
     },
     onImagesReady: function () {
-      // setTimeout(function(){
+      setTimeout(function(){
       //   $('.js_bannerSwiper').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
       //   $('.js_bannerSwiper .swiper-slide').css('height',$('.js_bannerSwiper').find('.swiper-slide-active').find('img').eq(0).height());
-      // },500)
-      $('.js_bannerInfo').oHrel({
-        obj:'$(this).next()'
-      }).init();
+        $('.js_bannerInfo').oHrel({
+          obj:'$(this).next()'
+        }).init();
+      },1000)      
     }
   });
 
