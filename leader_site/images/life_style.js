@@ -283,14 +283,14 @@ $(function () {
         hideVideoControlsOnPause:true,//暂停显示控件
         success: function (mediaElement, domObject) {
             // add event listener
-            mediaElement.addEventListener('timeupdate', function(e) {
-
-                document.getElementById('current-time').innerHTML = mediaElement.currentTime;
-
-            }, false);
+            //mediaElement.addEventListener('timeupdate', function(e) {
+            //
+            //    document.getElementById('current-time').innerHTML = mediaElement.currentTime;
+            //
+            //}, false);
 
             // call the play method
-            mediaElement.play();
+            //mediaElement.play();
         }
         })
 
@@ -300,19 +300,22 @@ $(function () {
             $('.video-cont-center').css({width: '100%'});
 
 
-                if(windowWidth>991){
-                     $('.js_styleVideoBox').hide();
-                 }else{
-                     $('.js_videoMdShow').hide();
-                     var navHeight = $('.l-opacity0').height();
-                     $(document).scrollTop(navHeight);
-                 }
+
             $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
             $("#player ").removeClass("o_df-hide ").css('width','100%');
             setTimeout(function(){
+                if(windowWidth>991){
+                    $('.js_styleVideoBox').hide();
+                }else{
+                    $('.js_videoMdShow').hide();
+                    var navHeight = $('.l-opacity0').height();
+                    $(document).scrollTop(navHeight);
+                }
+
+
                 var player = new MediaElementPlayer('#player');
                 player.pause();
-                player.play();
+                //player.play();
             },600)
 
 

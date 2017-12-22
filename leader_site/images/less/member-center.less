@@ -281,16 +281,23 @@
             @media (min-width: 701px) and (max-width: 991px) {
                 /* md*/
                 float: initial;
-
+                display: block;
+                background: #fff;
             }
             @media (min-width: 576px) and (max-width: 700px) {
                 /* sm*/
                 float: initial;
+                display: block;
+                background: #fff;
 
             }
             @media (max-width: 575px) {
                 /* xs*/
                 float: initial;
+                display: block;
+
+
+                background: #fff;
 
             }
         }
@@ -359,6 +366,33 @@
             position: absolute;
             bottom: 20px;
             left: 0;
+
+            @media (min-width: 701px) and (max-width: 991px) {
+                /* md*/
+                position: relative;
+                padding:25px 0 0 0!important;
+
+                margin: 25px 18px 0 18px !important;
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+                /* sm*/
+                position: relative;
+                padding:25px 0 0 0!important;
+
+
+                margin: 25px 18px 0 18px !important;
+
+
+            }
+            @media (max-width: 575px) {
+                /* xs*/                position: relative;
+                padding:25px 0 0 0!important;
+
+                margin: 25px 18px 0 18px !important;
+
+
+            }
+
             .member-conter-text-down {
                 text-align: left;
                 >div {
@@ -457,6 +491,10 @@
                 padding: 0 10px 0 0;
             }
 
+
+
+
+
         }
 
         @media (min-width: 992px) and (max-width: 1199px) {
@@ -496,7 +534,7 @@
                 .member-conter-text {
                     margin: 0;
                     padding: 20px 0;
-                    background: #fff;
+                    //background: #fff;
                     p {
                         width: 90%;
                     }
@@ -536,7 +574,7 @@
                 .member-conter-text {
                     margin: 0;
                     padding: 20px 0;
-                    background: #fff;
+                    //background: #fff;
                     p {
                         width: 90%;
                     }
@@ -569,7 +607,7 @@
                 .member-conter-text {
                     margin: 0;
                     padding: 20px 0;
-                    background: #fff;
+                    //background: #fff;
                     bottom: 20px;
                     left: 0;
                     p {
