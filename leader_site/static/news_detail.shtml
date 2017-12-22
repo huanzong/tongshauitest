@@ -47,12 +47,15 @@
 							<span class="news_item_date news_item_padding news_item_mid">2017-08-21</span>
 							<span class="news_item_line news_item_padding news_item_mid"></span>
 							<span class="news_item_step news_item_room news_item_mid">分享到 :</span>
-							<a href="javascript:;" class="news_item_room news_item_mid">
-								<i class="iconfont icon-share-weibo"></i>
-							</a>
-							<a href="javascript:;" class=" news_item_mid">
-								<i class="iconfont icon-share-weixin"></i>
-							</a>
+							<div class="jiathis_style_32x32 addthis">
+								<a class="jiathis_button_tsina">
+									<i class="iconfont icon-share-weibo"></i>
+								</a>
+								<a class="jiathis_button_weixin">
+									<i class="iconfont icon-share-weixin"></i>
+								</a>
+							</div>
+
 						</div>
 						<div class="news_content_top">
 							薛之谦 “我好像在哪见过你”2017全国巡回演唱会将于4月22日由大连站出发，走过上海、广州、长沙、深圳等城市。4月6日薛之谦“我好像在哪见过你”2017全国巡演新闻发布会在北京举行，宣布演唱会全面启动。出道12年的薛之谦首次全国巡演消息一出，变受到谦迷的极大关注，这也令薛之谦“我好像在哪见过你”2017全国巡回演唱会指定唯一家电合作品牌——统帅电器名声大噪。不难看出，这是统帅电器发力跨界合作进行资源共享的又一次成功尝试，将增加统帅电器在年轻社群的曝光度，助力统帅电器年轻化品牌的深耕落地
@@ -120,6 +123,7 @@
 		</div>
 		<!--#include virtual="public/foot.shtml"-->
 		<script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
 	</body>
 
 </html>
