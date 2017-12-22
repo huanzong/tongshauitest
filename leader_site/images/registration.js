@@ -55,9 +55,117 @@ $(function() {
         }
     });
 
+    //手机大块
+    //密码明文和密文切换
+    $(".js_passwordSwitch_mobile").oToggle(function (self) {
+        self.removeClass("icon-eye-close-solid").addClass("icon-eye-open-solid");
+        var passwordVal = $("#mobilePwd").val();
+        if(passwordVal == ''){
+            passwordVal ='6-16位数字、字母或符号的组合';
+        }
+        $("#mobilePwd2").val(passwordVal).removeClass("o_df-hide").addClass("color");
+        $("#mobilePwd").addClass("o_df-hide");
+        self.parent().addClass("open");
+    },function (self) {
+        self.addClass("icon-eye-close-solid").removeClass("icon-eye-open-solid");
+        $("#mobilePwd").removeClass("o_df-hide");
+        $("#mobilePwd2").addClass("o_df-hide").removeClass("color");
+        self.parent().removeClass("open");
+        var passwordVal = $("#mobilePwd2").val();
+        if(passwordVal == '6-16位数字、字母或符号的组合'){
+            passwordVal = ''
+        }
+        $("#mobilePwd").val(passwordVal)
+    });
 
+    //密码进入事件,更改密码框类型为密码
+    $("#mobilePwd2").focus(function () {
 
+        var $parent = $(this).parent();
+        if($parent.hasClass("open")){
+            return;
+        }
+        var password = $.trim($(this).val());
+        if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
+            $(this).addClass("o_df-hide").removeClass("color");
+            $("#mobilePwd").removeClass("o_df-hide").focus();
+            return;
+        }
+    });
 
+    //密码离开事件,更改密码框类型为文本
+    $("#mobilePwd").blur(function () {
+        var $parent = $(this).parent();
+        if($parent.hasClass("open")){
+            return;
+        }
+        var password = $.trim($(this).val());
+        if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
+            $("#mobilePwd").addClass("o_df-hide");
+            $("#mobilePwd2").addClass("color").removeClass("o_df-hide");
+        }
+    });
+
+    $('#mobilePwd2').keyup(function(){
+        var passwordVal = $("#mobilePwd2").val();
+        $("#mobilePwd").val(passwordVal);
+    });
+
+    //邮箱大块
+    //密码明文和密文切换
+    $(".js_passwordSwitch_email").oToggle(function (self) {
+        self.removeClass("icon-eye-close-solid").addClass("icon-eye-open-solid");
+        var passwordVal = $("#emailPwd").val();
+        if(passwordVal == ''){
+            passwordVal ='6-16位数字、字母或符号的组合';
+        }
+        $("#emailPwd2").val(passwordVal).removeClass("o_df-hide").addClass("color");
+        $("#emailPwd").addClass("o_df-hide");
+        self.parent().addClass("open");
+    },function (self) {
+        self.addClass("icon-eye-close-solid").removeClass("icon-eye-open-solid");
+        $("#emailPwd").removeClass("o_df-hide");
+        $("#emailPwd2").addClass("o_df-hide").removeClass("color");
+        self.parent().removeClass("open");
+        var passwordVal = $("#emailPwd2").val();
+        if(passwordVal == '6-16位数字、字母或符号的组合'){
+            passwordVal = ''
+        }
+        $("#emailPwd").val(passwordVal)
+    });
+
+    //密码进入事件,更改密码框类型为密码
+    $("#emailPwd2").focus(function () {
+
+        var $parent = $(this).parent();
+        if($parent.hasClass("open")){
+            return;
+        }
+        var password = $.trim($(this).val());
+        if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
+            $(this).addClass("o_df-hide").removeClass("color");
+            $("#emailPwd").removeClass("o_df-hide").focus();
+            return;
+        }
+    });
+
+    //密码离开事件,更改密码框类型为文本
+    $("#emailPwd").blur(function () {
+        var $parent = $(this).parent();
+        if($parent.hasClass("open")){
+            return;
+        }
+        var password = $.trim($(this).val());
+        if ("" == password || "6-16位数字、字母或符号的组合" == password || null == password) {
+            $("#emailPwd").addClass("o_df-hide");
+            $("#emailPwd2").addClass("color").removeClass("o_df-hide");
+        }
+    });
+
+    $('#emailPwd2').keyup(function(){
+        var passwordVal = $("#emailPwd2").val();
+        $("#emailPwd").val(passwordVal);
+    });
 
 // 表单初始化
 //    var address=$(".js_regType_phone").Validform({
