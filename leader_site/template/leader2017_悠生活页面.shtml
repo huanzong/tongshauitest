@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
     <link rel="stylesheet" type="text/css" href="http://test.tongshuai.com/images/mediaelementplayer.min.css">
     <link rel="stylesheet" type="text/css" href="life_style.css">
+    <script src="http://test.tongshuai.com/images/mediaelement-and-player.min.js"></script>
 
 </head>
 
@@ -570,7 +571,6 @@
     })
 </script>
 <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
-<script src="http://test.tongshuai.com/images/mediaelement-and-player.min.js"></script>
 <script src="life_style.js"></script>
 
 </body>
