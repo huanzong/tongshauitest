@@ -152,6 +152,12 @@ $(function () {
             // $ele.siblings(":not(.js_ignorAnimate)").fadeIn(1000);
             // $ele.siblings(":not(.js_ignorAnimate)").css('z-index', '1');
         }, showTime);
+
+        setTimeout(function(){
+            $('.l-nav').animate({
+              'opacity': 1
+            }, 700)
+          },800)
     }
 
     lineAnimate($('.js_animateLine'), 500);

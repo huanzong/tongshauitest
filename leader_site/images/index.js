@@ -12,11 +12,7 @@ $(function() {
           $('.index-banner-shadow').fadeOut()
         })
 
-        setTimeout(function(){
-          $('.l-nav').animate({
-            'opacity': 1
-          }, 700)
-        },800)
+        
       },600)
     }
     
