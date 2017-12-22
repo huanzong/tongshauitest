@@ -66,8 +66,13 @@
                     <trs_channels id="owner" num="1" startpos="0">
                         <trs_viewdatas id="owner" num="1">
                             <img src="<trs_viewdata field='banner'/>" class="o_u o_df_2-2 js_bannerImg" />
+                            <TRS_CONDITION REFERENCE="冰箱" CONDITION="@parent.parent.chnldesc" OPERATOR="contain">
                             <div class="list-nav-type">
-                                <div class="nav-type-img">
+                            </TRS_CONDITION>
+                            <TRS_CONDITION REFERENCE="冰箱" CONDITION="@parent.parent.chnldesc" OPERATOR="contain" not='true'>
+                            <div class="list-nav-type black">
+                            </TRS_CONDITION>
+                            <div class="nav-type-img">
                                     <img src="<trs_viewdata field='icon'/>" />
                                 </div>
                                 <div class="nav-type-en"><trs_viewdata field='epro'/></div>
@@ -80,7 +85,7 @@
                     <trs_channels id="parent" num="1" startpos="0">
                         <trs_viewdatas id="owner" num="1">
                             <img src="<trs_viewdata field='banner'/>" class="o_u o_df_2-2 js_bannerImg" />
-                            <div class="list-nav-type">
+                            <div class="list-nav-type black">
                                 <div class="nav-type-img">
                                     <img src="<trs_viewdata field='icon'/>" />
                                 </div>
