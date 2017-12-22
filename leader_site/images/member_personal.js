@@ -26,28 +26,43 @@ $(function(){
     var  regCn = /[·！#￥（——）：；“”‘、，|《。》？、【】[\]]/im;
     var templet_pic;
     var imgX,imgY,imgW;
-
+    $('.js_member input').focus(function(){
+        $(this).css('border-color','red');
+    })
     $('.js_member input').blur(function(){
         var username =  $.trim($('.js_member input').val());
         if(username.length>3&&username.length<21){
             $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+            $(this).css('border-color','#ccc');
+
             if(!nubreg.test(username)){
                 $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                $(this).css('border-color','#ccc');
+
                 if(stringOnereg.test(username)){
                     $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                    $(this).css('border-color','#ccc');
+
                     if(!regEn.test(username)&& !regCn.test(username)){
                         $('.js_personalistwrongbox_user').addClass('personalist-right').removeClass('personalist-wrong-box');
+                        $(this).css('border-color','#ccc');
+
                     }else{
                         wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'不可以使用特殊字符');
+                        $(this).css('border-color','#f39800');
+
                     }
                 }else{
                     wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'第一个字符必须为字母');
+                    $(this).css('border-color','#f39800');
                 }
             }else{
                 wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名不可以全部是数字');
+                $(this).css('border-color','#f39800');
             }
         }else{
             wrongInfo( $('.js_personalistwrongbox_user'),$('.js_personawrong_user'),'用户名长度不合格');
+            $(this).css('border-color','#f39800');
         }
     });
 
