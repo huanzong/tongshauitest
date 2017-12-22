@@ -290,7 +290,7 @@ $(function () {
             //}, false);
 
             // call the play method
-            mediaElement.play();
+            //mediaElement.play();
         }
         })
 
