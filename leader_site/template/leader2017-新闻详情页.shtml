@@ -36,7 +36,7 @@
             <div class="o_u o_df_2-12 o_md_1-12 o_sm_1-12 o_xs_1-12">
 
             </div>
-            <div id="ckepop" class="o_u o_df_8-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
+            <div class="o_u o_df_8-12 o_md_10-12 o_sm_10-12 o_xs_10-12">
                 <div class="news_title">
                     <TRS_DOCUMENT field='DOCTITLE'></TRS_DOCUMENT>
                 </div>
