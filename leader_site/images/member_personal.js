@@ -258,6 +258,11 @@ $(function(){
                 $('.js-modifyPhotoBtn').show();
                 templet_pic='/tongshuaifile'+$.trim(data.data);
 
+
+                $(".jcrop-preview").hide();
+                $('.js_selectWf').hide();
+                $('.js-rightimg').hide();
+
                 //图片加载完成后获取图片信息
 
                 imgs.src = '/tongshuaifile'+$.trim(data.data);
@@ -280,12 +285,13 @@ $(function(){
                                 })
                             });
                             $(".jcrop-preview").attr("src",templet_pic);
-
+                            
+                            $(".jcrop-preview").show();
+                            $('.js_selectWf').show();
+                            $('.js-rightimg').show();
                         }else{
 
-                            $(".jcrop-preview").hide();
-                            $('.js_selectWf').hide();
-                            $('.js-rightimg').hide();
+
                             $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth*0.85,'width':photoBoxWidth*0.85}).show();
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
