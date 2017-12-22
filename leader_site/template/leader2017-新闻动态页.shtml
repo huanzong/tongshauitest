@@ -22,7 +22,7 @@
         <div class="news_list_banner">
             <a href="javascript:;">
                 <trs_viewdatas id="关于统帅" num="1">
-                <img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner'><TRS_VIEWDATAAPPENDIX FIELD='' STARTPOS='0' num='1' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" lg="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
+                <img class="js_recPic" src="" df="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='0' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" lg="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" md="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='1' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>"
                      sm="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='2' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>" xs="<TRS_VIEWDATAAPPENDIXS FIELD='aboutbanner' STARTPOS='2' num='1'><TRS_VIEWDATAAPPENDIX FIELD='' UrlIsAbs='TRUE'/></TRS_VIEWDATAAPPENDIXS>">
                 </trs_viewdatas>
                 <div class="news_list_caption">
