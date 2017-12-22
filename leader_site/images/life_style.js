@@ -206,11 +206,11 @@ $(function () {
     if(windowWidth>1199){
         $('.js_superiorityRightBtn').css({"height": windowWidth / 3,'line-height': windowWidth / 3+'px'});
         $('.js_superiorityLeftBtn').css({"height": windowWidth / 3,'line-height': windowWidth / 3+'px'});
-        $('.js_superiorityLeftMin').css({'height':windowWidth/3+'px'})
-        $('.js_superiorityLeftMin').eq(0).css({'left':(windowWidth/3-66)+'px'})
-        $('.js_superiorityLeftMin').eq(2).css({'left':(windowWidth/3-66)+'px'})
-        $('.js_superiorityLeftMin').eq(1).css({'right':(windowWidth/3-66)+'px'})
-        $('.js_superiorityLeftMin').eq(3).css({'right':(windowWidth/3-66)+'px'})
+        $('.js_superiorityLeftMin').css({'height':windowWidth/3+'px'});
+        $('.js_superiorityLeftMin').eq(0).css({'left':(windowWidth/3-66)+'px'});
+        $('.js_superiorityLeftMin').eq(2).css({'left':(windowWidth/3-66)+'px'});
+        $('.js_superiorityLeftMin').eq(1).css({'right':(windowWidth/3-66)+'px'});
+        $('.js_superiorityLeftMin').eq(3).css({'right':(windowWidth/3-66)+'px'});
 
     }
 
@@ -265,45 +265,35 @@ $(function () {
 
 
     pageScript();
-    function videoMethod() {
-
-        $('audio,video').mediaelementplayer({
-            success: function (media, player, node) {
-                console.log($('#' + node.id + '-mode').html('mode: ' + player.pluginType));
-                $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-            },
-            //showPosterWhenEnded: true,//显示海报
-            //autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
-            //setDimensions: true,
-            //defaultVideoWidth: 700,
-            //iPadUseNativeControls: true,//强制iPad的原生控件
-            //iPhoneUseNativeControls: true,//强制iPhone的本机控件
-            //AndroidUseNativeControls: true,//强制Android的原生控件
-            //usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
-            //enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
-            ////alwaysShowControls: true,//播放时隐藏控件，鼠标不在视频上方
-            //fullscreenText: '全屏',
-            //hideVideoControlsOnLoad: false,//显示视频控制
 
 
 
+        function videoMethod(){
+            $('audio,video').mediaelementplayer({
+                success: function (media, player, node) {
+                    $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+                    //$('.mejs-overlay-button').trigger('click');
+                },
+                showPosterWhenEnded: true,//显示海报
+                autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
+                iPadUseNativeControls: true,//强制iPad的原生控件
+                iPhoneUseNativeControls: true,//强制iPhone的本机控件
+                AndroidUseNativeControls: true,//强制Android的原生控件
+                usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
+                enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
+                alwaysShowControls: false,//播放时隐藏控件，鼠标不在视频上方
+                fullscreenText: '全屏',
+                hideVideoControlsOnLoad: true,//显示视频控制
+                hideVideoControlsOnPause:true//暂停显示控件
+            });
+        }
 
-
-            showPosterWhenEnded:true,//显示海报
-            autosizeProgress:false,//根据其他元素的大小自动计算进度条的宽度
-            iPadUseNativeControls:true,//强制iPad的原生控件
-            iPhoneUseNativeControls:true,//强制iPhone的本机控件
-            AndroidUseNativeControls:true,//强制Android的原生控件
-            usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
-            hideVideoControlsOnPause: true        //暂停显示控件
-        });
-    }
 
     function pageScript() {
-        videoMethod();
+
          if (window.innerWidth == undefined || window.innerWidth > 1199) {
              var player1 = new MediaElementPlayer('#player1');
-
+             var player = new MediaElementPlayer('#player');
              $(".js_styleLifevideoClose ").on('click', function () {
                  player.pause();
                  $(".js_playerBox ").hide();
@@ -318,8 +308,8 @@ $(function () {
              });
 
              var userAgent = navigator.userAgent;
-             var player = new MediaElementPlayer('#player');
              $(".js_lifeStylePlay ").on('click', function () {
+                 videoMethod();
                  var setTime;
                  if(windowWidth>991){
                      setTime = '600';
@@ -330,30 +320,16 @@ $(function () {
                      setTime = '0';
                  }
                  setTimeout(function(){
-                     videoMethod();
+                     //videoMethod();
                      $('.js_styleVideoBox').hide();
                      $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
                      $("#player ").removeClass("o_df-hide ");
                      var playerID = document.getElementById('player');
                      playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                     function onVideoProgressUpdate(e) {
-                         var percentageBuffered = 0;
-                         if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                             percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                         } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                             percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                         }
-                         if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                             if (percentageBuffered <= 0.4) {
-                                 $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                             } else {
-                                 playerID.play();
-                                 $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                             }
-                         }
-                     }
+
 
                      if (!$ie8) {
+                         var player = new MediaElementPlayer('#player');
                          player.play();
                          var playerID = document.getElementById('player');
                          playerID.addEventListener('progress', onVideoProgressUpdate, false);
@@ -373,10 +349,14 @@ $(function () {
                                  }
                              }
                          }
+                     }else{
+                         var player = new mediaelementplayer('#player');
+                         player.pause();
+                         //player.setSrc('tongshuai_video.mp4');
+                         player.load();
+                         player.play();
                      }
                  },setTime)
-
-
 
              });
          }else{
