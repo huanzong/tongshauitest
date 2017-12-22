@@ -58,14 +58,11 @@ $(function(){
                 //性别
                 template_sex=jQuery.trim(data.data.sex);
                 if(template_sex=="1"){//男
-                    $("#js_genderboy").attr("checked",true);
-                    $("#js_gendergirl").attr("checked",false);
+                    $('#js_genderboy').siblings('span').click();
                 }else if(template_sex=="2"){//女
-                    $("#js_gendergirl").attr("checked",true);
-                    $("#js_genderboy").attr("checked",false);
+                    $('#js_gendergirl').siblings('span').click();
                 }else{//其它情况
-                    $("#js_genderboy").attr("checked",true);
-                    $("#js_gendergirl").attr("checked",false);
+                    $('#js_genderboy').siblings('span').click();
                 }
 
 
