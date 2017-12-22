@@ -1531,7 +1531,7 @@
     <!--<TRS_PAGEGENERATE TEMPNAME="leader2017_产品参数详情页" EXT="parameter" ></TRS_PAGEGENERATE>-->
     <script type="text/javascript" src="../site5/validform_v5.3.2_min.js"></script>
     <script type="text/javascript" src="../site5/idangerous.swiper2.7.6.js"></script>
-    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1748486" charset="utf-8" ignoreapd="1"></script>
     <script type="text/javascript" src="../site5/product_detail.js"></script>
     <script type="text/javascript" src="../site5/templet_product_detail_compare.js"></script>
     <script>
