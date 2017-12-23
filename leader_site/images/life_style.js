@@ -34,6 +34,9 @@ $(function () {
                 $('.js_bannerRightHover').addClass('back-gray').siblings().removeClass('back-gray');
                 $('.js_bannerRightHoverHide').hide();
                 $('.js_bannerRightHoverShow').show();
+                $('.js_styleVideoContRight img').animate({'margin-right': '0'}, "slow");
+
+
             }
         }
         //if(windowWidth > 991){
@@ -47,6 +50,8 @@ $(function () {
             $('.js_bannerNoHover').addClass('back-gray').siblings().removeClass('back-gray');
             $('.js_bannerRightHoverHide').show();
             $('.js_bannerRightHoverShow').hide();
+            $('.js_styleVideoContRight img').css({'margin-right': '-50%'});
+
         }
         //if(windowWidth > 991){
         //
@@ -65,6 +70,9 @@ $(function () {
                     $('.js_bannerLeftHover').addClass('back-gray').siblings().removeClass('back-gray');
                     $('.js_bannerRightHoverHide').hide();
                     $('.js_bannerRightHoverShow').show();
+
+                    $('.js_styleVideoContLeft img').animate({'margin-left': '0'}, "slow");
+
                 }
             }
         //if(windowWidth > 991){
@@ -80,6 +88,8 @@ $(function () {
                 $('.js_bannerNoHover').addClass('back-gray').siblings().removeClass('back-gray');
                 $('.js_bannerRightHoverHide').show();
                 $('.js_bannerRightHoverShow').hide();
+
+                $('.js_styleVideoContLeft img').css({'margin-left': '-50%'} );
 
             }
         //if(windowWidth > 991){
@@ -307,6 +317,11 @@ $(function () {
                  player.pause();
                  $(".js_playerBox ").hide();
                  $('.js_styleVideoBox').show();
+                 $('.video-cont-center').css({width: '50%'});
+
+                 $('.js_styleVideoContLeft').css({width: '25%'}).removeClass('left_click');
+
+                 $('.js_styleVideoContRight').css({width: '25%'}).removeClass('left_click');
              });
 
              var userAgent = navigator.userAgent;
@@ -317,6 +332,7 @@ $(function () {
                  if(windowWidth>991){
                      setTime = '600';
                      $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
+
                      $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
                      $('.video-cont-center').css({width: '100%'});
                  }else{
