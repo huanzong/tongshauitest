@@ -1,5 +1,10 @@
 $(function() {
-
+    var screenWidth = document.body.offsetWidth;
+    if (screenWidth < 991) {
+      $('.js_bannerSwiper .js_recPic').each(function(){
+        $(this).attr('src','images/img1-1.png')
+      })
+    }
         
     $('.enter-con').hover(function(){
       $(this).removeClass('off').addClass('on')
