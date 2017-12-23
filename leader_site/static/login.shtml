@@ -72,7 +72,6 @@
                                             <div class="l-input login-input">
                                                 <input type="text" name="username" ph="手机号" datatype="m" nullmsg="<i class='iconfont icon-information-solid'></i>请填写手机号" errormsg="<i class='iconfont icon-information-solid'></i>手机号格式不对">
                                                 <i class="iconfont icon-phone-solid"></i>
-                                                <p class="Validform_checktip"></p>
                                             </div>
                                             <div class="l-input login-input">
                                                 <input type="text" name="password" ph="动态密码" datatype="*" nullmsg="<i class='iconfont icon-information-solid'></i>请填写动态密码">
