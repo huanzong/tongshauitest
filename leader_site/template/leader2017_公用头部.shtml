@@ -150,7 +150,7 @@
 					</trs_viewdatas>
 				</ul>
 			</li>
-			<trs_viewdatas id='悠生活' startpos="0" num="1"><li><a href="<trs_viewdatas id='悠生活'><trs_viewdata field='link'/>"><trs_viewdata field='title'/><i class="iconfont icon-arrow-line-right"></i></a></li></trs_viewdatas>
+			<trs_viewdatas id='悠生活' startpos="0" num="1"><li><a href="<trs_viewdata field='link'/>"><trs_viewdata field='title'/><i class="iconfont icon-arrow-line-right"></i></a></li></trs_viewdatas>
 			<trs_viewdatas id='会员' startpos="0" num="1"><li><a href="<trs_viewdata field='link'/>"><trs_viewdata field='title'/><i class="iconfont icon-arrow-line-right"></i></a></li></trs_viewdatas>
 			<trs_viewdatas id='服务' startpos="0" num="1"><li><a href="<trs_viewdata field='link'/>"><trs_viewdata field='title'/><i class="iconfont icon-arrow-line-right"></i></a></li></trs_viewdatas>
 		</ul>
