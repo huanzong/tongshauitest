@@ -19,7 +19,7 @@
     <div class="o_main">
         <div class="o_g ">
             <!-- 左侧导航 START-->
-            <!--#include virtual="${ROOT_PATH}ucenter/left. shtml"-->
+            <!--#include virtual="${ROOT_PATH}ucenter/left.shtml"-->
             <!-- 左侧导航 End-->
             <!-- 右侧内容 START-->
             <div class="o_u o_df_8-12  o_xs_2-2 js-membercontboxs" style="position: relative;z-index: 14">
