@@ -4,9 +4,11 @@ $(function() {
       $('.js_bannerSwiper .js_recPic').each(function(){
         if ($(this).attr('md') == '') {
           $(this).attr('md','./images/img1-1.png')
-        } else if ($(this).attr('sm') == '') {
+        }
+        if ($(this).attr('sm') == '') {
           $(this).attr('sm','./images/img1-1.png')
-        } else if ($(this).attr('xs') == ''){
+        }
+        if ($(this).attr('xs') == ''){
           $(this).attr('xs','./images/img1-1.png')
         }
       })
