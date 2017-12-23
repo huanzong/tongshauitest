@@ -202,7 +202,7 @@
                                                 </div>
                                             </li>
                                             <li class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2">
-                                                <img src="" id="target" alt="[Jcrop Example]" class="js-rightimg" style="max-height:350px;max-width:350px" />
+                                                <!--<img src="" id="target" alt="[Jcrop Example]" class="js-rightimg" style="max-height:350px;max-width:350px" />-->
                                             </li>
                                         </ul>
 

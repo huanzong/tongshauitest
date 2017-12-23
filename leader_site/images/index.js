@@ -15,9 +15,7 @@ $(function() {
         
       },600)
     }
-    
-    
-
+        
     $('.enter-con').hover(function(){
       $(this).removeClass('off').addClass('on')
     },function(){
@@ -29,7 +27,7 @@ $(function() {
      */
     $('.js-scroll-num').each(function(index){
       var dataNum = $(this).attr('data-num')
-      for (let i = 0; i <  dataNum.length; i++) {
+      for (var i = 0; i <  dataNum.length; i++) {
         $(this).append('<div num="'+dataNum[i]+'"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>')
       }
     })
@@ -156,6 +154,8 @@ $(function() {
     slidesPerView: 3,
     // initialSlide :1,
     onInit: function(swiper){
+      $('.js_bannerSwiper .swiper-slide').show()
+      
       var index = swiper.activeLoopIndex;
       $('.js_bannerSwiperFont').stop()
       $('.js_bannerSwiperFont').eq(1).fadeIn(100);
@@ -390,6 +390,8 @@ $(function() {
     updateOnImagesReady: true,
     calculateHeight : true,
     onFirstInit: function(swiper){
+      $('.js_swiperRecMain .swiper-slide').show()
+      
       var index = swiper.activeLoopIndex;
       $('.js_recommendFont').stop()
       $('.js_recommendFont').hide();
@@ -505,6 +507,8 @@ $(function() {
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
     },
     onInit: function (swiper){
+      $('.js_swiperEntrabce .swiper-slide').show()
+      
       $('.swiper-slide-active').next('.swiper-slide').addClass('temp-slide')
       var index = swiper.activeIndex + 1;
       $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').stop()
