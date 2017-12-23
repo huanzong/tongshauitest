@@ -1035,6 +1035,7 @@
                                     <img src="<trs_viewdata field='mdpt'/>" />
                                 </div>
                                 </TRS_RELNEWS>
+                            </div>
                         </div>
                         <!-- 循环体 新增-md/sm/xs核心卖点机构 -->
                         <TRS_RELNEWS id="mdjs_gw" num="5">
