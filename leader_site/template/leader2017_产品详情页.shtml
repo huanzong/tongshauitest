@@ -1028,13 +1028,13 @@
                             </div>
                         </div>
                         <!-- 轮播缩略图 END -->
-                            <div class="swiper-container js_swiperSellPoint">
-                                <div class="swiper-wrapper">
-                                    <TRS_RELNEWS id="mdjs_gw" num="5">
-                                    <div class="swiper-slide">
-                                        <img src="<trs_viewdata field='mdpt'/>" />
-                                    </div>
-                                    </TRS_RELNEWS>
+                        <div class="swiper-container js_swiperSellPoint">
+                            <div class="swiper-wrapper">
+                                <TRS_RELNEWS id="mdjs_gw" num="5">
+                                <div class="swiper-slide">
+                                    <img src="<trs_viewdata field='mdpt'/>" />
+                                </div>
+                                </TRS_RELNEWS>
                             </div>
                         </div>
                         <!-- 循环体 新增-md/sm/xs核心卖点机构 -->
