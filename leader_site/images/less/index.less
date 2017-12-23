@@ -287,7 +287,7 @@
   }
   .banner-bot-info{
     margin: 30px 0 0;
-    opacity: 1
+    opacity: 0;
   }
   .banner-big{
     font-size: 28px;
@@ -1238,6 +1238,12 @@
 .index-entrance-bottom {
   position: absolute;
   bottom: 0;
+
+  @media (min-width: 991px) and (max-width: 1199px){
+    .o_sm-hide p {
+      min-width: 250px;
+    }
+  }
 }
 
 .index-entrance{
