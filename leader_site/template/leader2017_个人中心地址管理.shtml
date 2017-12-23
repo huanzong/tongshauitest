@@ -63,7 +63,7 @@
                                         <div class="o_u o_df_1-2 o_lg_1-2 o_md_1-2 o_sm_2-2 o_xs_2-2 member-address-listiptbox o_g">
                                             <div class="o_u o_df_1-3 o_lg_1-3 o_md_2-2 o_sm_2-2 o_xs_2-2  member-address-input3-1">
                                                 <div class="l-input member-address-inputbox js_addressPhoneInput" data-type="1">
-                                                    <input type="text" name="" ph="区号" data-normal="1" ignore="ignore" value="" onkeyup="this.value=this.value.replace(/\D/g,'')" datatype="n3-4"  id="phonequhao"    maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入3-4位区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
+                                                    <input type="text" name="" ph="区号" data-normal="1" ignore="ignore" value="" onkeyup="this.value=this.value.replace(/\D/g,'')" datatype="n3-4"  id="phonequhao"    maxlength="4" errormsg="<i class='iconfont icon-information-solid'></i>请输入电话区号" nullmsg="<span class='js_nullMsg' style='display:none'></span>">
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
                                                 </div>
                                             </div>
