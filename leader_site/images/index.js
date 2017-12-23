@@ -187,7 +187,7 @@ $(function() {
         }).init();
 
         $('.banner-bot-info').animate({
-          // opacity: 1
+          opacity: 1
         })
 
         var screenWidth = document.body.offsetWidth;
