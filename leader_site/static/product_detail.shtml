@@ -489,7 +489,7 @@
                     </div>
                     <div class="o_u o_df_1-12"></div>
                 </div>
-                <div class="o_g detail-fontpoint-back">
+                <div class="o_g detail-fontpoint-back o_df-hide o_md-show o_sm-show o_xs-show">
                     <div class="detail-fontpoint">
                         <div class="swiper-container js_fontSwiper">
                             <div class="swiper-wrapper">
@@ -1434,7 +1434,7 @@
     </script>
 
     <script type="text/javascript" src="images/validform_v5.3.2_min.js"></script>
-    <script type="text/javascript" src="images/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="images/idangerous.swiper2.7.6.js"></script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
     <script type="text/javascript" src="images/product_detail.js"></script>
     <script type="text/javascript" src="images/templet_product_detail.js"></script>
