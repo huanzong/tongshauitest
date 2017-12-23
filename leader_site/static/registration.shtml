@@ -51,7 +51,7 @@
                                                 <div class="l-input ">
                                                     <input  type="text" class="o_u o_df_2-2 o_lg_2-2 o_md_2-2 o_sm_2-2 o_xs_2-2 " data-normal="1" name="" ph="请输入手机号"  maxlength="11"  value=""  datatype="m"  errormsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" nullmsg="<i class='iconfont icon-information-solid'></i>手机号码不正确" />
                                                     <p class="Validform_checktip Validform_wrong js-addressMobError"></p>
-                                                    <i class="iconfont icon-member"></i>
+                                                    <i class="iconfont icon-phone-solid"></i>
                                                 </div>
                                             </div>
                                             <div class="reg-input">
