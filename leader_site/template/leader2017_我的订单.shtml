@@ -208,5 +208,8 @@
 <script type="text/javascript" src="images/templet_member_nav.js"></script>
 <script type="text/javascript" src="images/member_order_new.js"></script>
 <script type="text/javascript" src="images/templet_member_order_new.js"></script>
+<script>
+    var coolHtml="<trs_channel id='购物车' field='_recurl' UrlIsAbs='true'/>";
+</script>
 </body>
 </html>
