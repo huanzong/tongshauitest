@@ -1,23 +1,46 @@
 @import "l_variable";
-
+html,body{
+    height: 100%;
+}
+.o_body{
+    height: 100%;
+     @media (max-width:991px){
+        height: auto;
+    } 
+}
 //登录页面样式
 .o_main{
-    background: url(login_bg3.jpg);
-	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_bg3.jpg',sizingMethod='scale')";
-	background-size:100% 100%;
-	-moz-background-size:100% 100%;
-	-webkit-background-size:100% 100%;
+    height: 100%;
+//  background: url(login_bg3.jpg);
+//	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_bg3.jpg',sizingMethod='scale')";
+//	background-size:100% 100%;
+//	-moz-background-size:100% 100%;
+//	-webkit-background-size:100% 100%;
 	@media (max-width: 700px){
 		background: #fff;
 	}
+}
+.login_bg_left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 .login-conbox{
     position: absolute;
     top: 50%;
     width: 100%;
-    margin-top: -300px;
+    margin-top: -295px;
     @media (min-width: 701px) and (max-width: 991px){
-		margin-top: -415px;
+		position: relative;
+		top: 110px;
+		margin-top: 0;
 	}
 	@media (max-width: 700px){
 		position: relative;
@@ -25,17 +48,22 @@
 		margin-top: 0;
 	}
 }
-
+.login_height{
+    height: 100%;
+    @media (max-width:991px){
+        height: auto;
+    }
+}
 .login{
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 632px;
+    height: 100%;
     font-size: 14px;
     text-align: center;
 	@media (min-width: 701px) and (max-width: 991px){
-		height: 890px;
+		min-height: 940px;
 	}
 	@media (max-width: 700px){
 		height: auto;
@@ -46,52 +74,82 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	@media (min-width: 701px) and (max-width: 991px){
+        position: relative;
+    }
 	@media (min-width: 576px) and (max-width: 700px){
 		position: relative;
-		padding-top: 50px;
+		padding-top: 30px;
 	}
 	@media (max-width: 576px) {
 		position: relative;
-		padding-top: 60px;
+		padding-top: 40px;
 	}
 }
 .login-box{
 	border-radius: 7px;
-	// background: url(login_bg.jpg) no-repeat;
-	background-image: url(login_bg.jpg);
-	background-repeat: no-repeat;
-	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
-	-moz-background-size:50% 100%;
-	background-size:50% 100%;
 	@media (max-width: 991px){
-		background-image: none;
 		background-color: #fff;
 	}
 	
 }
+.login_bg{
+    
+    img{
+        height: 550px;
+        width: 100%;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    @media (max-width: 991px){
+        display: none;
+    }
+}
 .login-con{
 	position: relative;
 	background: #fff;
-	min-height: 552px;
 	font-size: 14px;
+	height: 550px;
+	border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    -webkit-box-shadow: 0px 0 30px #ccc;
+    -moz-box-shadow: 0px 0 30px #ccc;
+    box-shadow: 0px 0 30px #ccc;
 	@media (min-width: 701px) and (max-width: 991px){
-		min-height: 750px;
-		background: url(login_bg2.jpg) no-repeat;
+		height: 750px;
+		background: url(login_top.png) no-repeat;
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size: 100% 27%;  
-		background-size: 100% 27%;
+		-moz-background-size: auto 200px;  
+		background-size: auto 200px;
+		background-position: 50% 0;
+		-webkit-box-shadow: 0px 5px 30px #ccc;
+        -moz-box-shadow: 0px 5px 30px #ccc;
+        box-shadow: 0px 5px 30px #ccc;
+        border-radius: 7px;
 	}
 	@media (min-width: 576px) and (max-width: 700px){
-		background: url(login_bg2.jpg) no-repeat;
+		background: url(login_top.png) no-repeat;
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size: 100% 240px;  
-		background-size: 100% 240px;
+		-moz-background-size: auto 200px;  
+		background-size: auto 200px;
+		background-position: 50% 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border-radius: 0px;
 	}
 	@media (max-width: 575px){
-		background: url(login_bg2.jpg) no-repeat;
+		background: url(login_top.png) no-repeat;
 		filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
-		-moz-background-size: 100% 130px;  
-		background-size: 100% 130px;
+		-moz-background-size: auto 120px;  
+		background-size: auto 120px;
+		background-position: 50% 0;
+		height: auto;
+		-webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0px;
 	}
 	.logon-tab{
 		position: absolute;
@@ -125,14 +183,14 @@
 	width: 80px;
 	height: 80px;
 	background: url(logo.png) no-repeat;
-	@media  (min-width: 700px) and (max-width: 991px){
+	@media  (min-width: 701px) and (max-width: 991px){
 		margin-top: 160px;
 	}
 	@media  (min-width: 576px) and (max-width: 700px){
-		margin-top: 200px;
+		margin-top: 160px;
 	}
 	@media  (max-width: 575px){
-		margin-top: 90px;
+		margin-top: 80px;
 	}
 }
 .login-tit{
@@ -159,35 +217,45 @@
 		}
 		input{
 			width: 100%;
-			//width: 90%;
 			border: 1px solid #ccc;
 			border-radius: 40px;
 			height: 40px;
-			line-height: 30px;
-			//text-indent: 20px;
-			padding: 0;
-			color: #ccc;
+			line-height: 40px;
+			text-indent: 20px;
+			padding: 0 10% 0 0;
+			box-sizing: border-box;
+			
 		}
 		i{
 			position: absolute;
 			right: 3%;
-    		top: 13px;
-    		z-index: 1;
+    		top: 10px;
+    		z-index: 5;
     		@media (min-width: 701px) and (max-width: 991px){
 				// right: 22%;
 			}
 		}
 		a{
 			position: absolute;
-			right: 0.5%;
-    		top: 5px;
+			right: 4px;
+    		top: 4px;
 			border-radius: 40px;
 			color: #fff;
-			@media (min-width: 701px) and (max-width: 991px){
-				right: 0.5%;
-			}
 			&.l-btn-disable{
 				color: #ccc;
+				width: 100px;
+                height: 32px;
+                overflow: hidden;
+                padding-left: 0;
+                padding-right: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+			}
+			&.code{
+			    background: none;
+			    right: 3px;
 			}
 		}
 	}
@@ -216,7 +284,7 @@
 		width: 75%;
 		color: #fff;
 		&.l-btn-disable{
-			color: #666;
+			color: #ccc;
 		}
 		@media (min-width: 701px) and (max-width: 991px){
 			width: 60%;
@@ -226,6 +294,7 @@
 		margin-top: 20px;
 		padding: 0;
 		width: 75%;
+		box-sizing: border-box;
 		@media (min-width: 701px) and (max-width: 991px){
 			width: 60%;
 		}

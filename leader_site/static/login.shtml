@@ -15,13 +15,21 @@
 <body>
     <div class="o_body">
         <div class="o_main">
-            <div class="o_g">
+        	<div class="login_bg_left o_df-show o_md-hide o_sm-hide o_xs-hide ">
+        		<img src="images/login_bg_df.png"/>
+        	</div>
+        	<div class="login_bg_left o_df-hide o_md-show">
+        		<img src="images/login_bg_df.png"/>
+        	</div>
+            <div class="o_g login_height">
                 <div class="login">
                     <div class="login-conbox">
                         <div class="o_u o_df_2-3 o_lg_5-6 o_md_5-6 o_sm_2-2 o_xs_2-2">
                             <div class="login-box js_center">
                                 <div class="o_g">
-                                    <div class="o_u o_df_1-2 o_md-hide o_sm-hide o_xs-hide"></div>
+                                    <div class="o_u o_df_1-2 login_bg">
+                                    	<img src="images/login_bg.jpg"/>
+                                    </div>
                                     <div class="o_u o_df_1-2 o_md_2-2 o_sm_2-2 o_xs_2-2 login-con">
                                         <div class="logon-tab o_md-hide o_sm-hide o_xs-hide">
                                             <a class="login-shade js_loginType" data-login=1></a>

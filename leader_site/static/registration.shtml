@@ -15,10 +15,19 @@
 <body>
     <div class="o_body">
         <div class="o_main">
-            <div class="o_g"> 
+        	<div class="reg_bg_left o_df-show o_lg-hide o_md-hide o_sm-hide o_xs-hide">
+        		<img src="images/reg_bg_left1.jpg"/>
+        	</div>
+        	<div class="reg_bg_left o_df-hide o_lg-show">
+        		<img src="images/reg_bg_left2.jpg"/>
+        	</div>
+        	<div class="reg_bg_right o_df-show o_md-hide o_sm-hide o_xs-hide ">
+        		<img src="images/reg_bg_right.jpg"/>
+        	</div>
+            <div class="o_g register_height"> 
                 <div class="reg">
                     <div class="reg-conbox">
-                        <div class="o_u o_df_1-3 o_lg_1-2 o_md_2-3 o_sm_5-6 o_xs_2-2">
+                        <div class="">
                             <div class="reg-box">
                                 <div class="reg-login o_md-hide o_sm-hide o_xs-hide">
                                     <span>已经注册，</span><a href="javascript:;">立即登录</a>

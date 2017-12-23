@@ -67,6 +67,16 @@
 
 }
 
+.swiper-container .swiper-slide {
+  display:none;
+  &:first-child{
+    display:block;
+  }
+}
+
+.swiper-wrapper{
+  height:auto !important;
+}
 
 
 //banner
@@ -331,6 +341,7 @@
       display: none;
       @media (max-width: 991px) {
         display: inline-block;
+        opacity: 1;
       }
     }
     .enter-corner-left,.enter-corner-right{
@@ -890,6 +901,7 @@
 //关于统帅
 .index-about{
   position: relative;
+  overflow: hidden;
   font-size: 12px;
   padding-top: 120px@ie8-10-fix;
   min-height: 540px@ie8-10-fix;
@@ -1073,7 +1085,7 @@
     margin-right: 0;
   }
   .swiper-slide {
-    height: 100% !important;
+    height: auto !important;
   }
 }
 
@@ -1192,6 +1204,7 @@
 .index-entrance{
   position: relative;
   margin-top: 100px;
+  overflow: hidden;
 
   .info-more{
       display: inline-block;
