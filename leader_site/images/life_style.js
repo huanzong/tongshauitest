@@ -260,7 +260,6 @@ $(function () {
         var trim_Version = version[1].replace(/[ ]/g, "");
         if (trim_Version == "MSIE8.0") {
             $ie8 = true;
-            alert(1)
         }
     }
 
@@ -301,24 +300,18 @@ $(function () {
     }
 
     function pageScript() {
-
+        videoMethod();
          if (window.innerWidth == undefined || window.innerWidth > 1199) {
              var player1 = new MediaElementPlayer('#player1');
-             var player = new MediaElementPlayer('#player');
+
              $(".js_styleLifevideoClose ").on('click', function () {
                  player.pause();
                  $(".js_playerBox ").hide();
                  $('.js_styleVideoBox').show();
-
-                 if(windowWidth>991){
-                     $('.video-cont-center').css({width: '50%'});
-                     $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
-                     $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
-                 }
-
              });
 
              var userAgent = navigator.userAgent;
+             var player = new MediaElementPlayer('#player');
              $(".js_lifeStylePlay ").on('click', function () {
                  videoMethod();
                  var setTime;
@@ -330,29 +323,70 @@ $(function () {
                  }else{
                      setTime = '0';
                  }
+                 //setTimeout(function(){
+                 //    //videoMethod();
+                 //    $('.js_styleVideoBox').hide();
+                 //    $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+                 //    $("#player ").removeClass("o_df-hide ");
+                 //    var playerID = document.getElementById('player');
+                 //    playerID.addEventListener('progress', onVideoProgressUpdate, false);
+                 //    function onVideoProgressUpdate(e) {
+                 //        var percentageBuffered = 0;
+                 //        if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
+                 //            percentageBuffered = playerID.buffered.end(0) / playerID.duration;
+                 //        } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
+                 //            percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
+                 //        }
+                 //        if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
+                 //            if (percentageBuffered <= 0.4) {
+                 //                $(".mejs-overlay-loading ").parent().css("display ", "block ");
+                 //            } else {
+                 //                playerID.play();
+                 //                $(".mejs-overlay-loading ").parent().css("display ", "none ");
+                 //            }
+                 //        }
+                 //    }
+                 //
+                 //    if (!$ie8) {
+                 //        player.play();
+                 //        var playerID = document.getElementById('player');
+                 //        playerID.addEventListener('progress', onVideoProgressUpdate, false);
+                 //        function onVideoProgressUpdate(e) {
+                 //            var percentageBuffered = 0;
+                 //            if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
+                 //                percentageBuffered = playerID.buffered.end(0) / playerID.duration;
+                 //            } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
+                 //                percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
+                 //            }
+                 //            if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
+                 //                if (percentageBuffered <= 0.4) {
+                 //                    $(".mejs-overlay-loading ").parent().css("display ", "block ");
+                 //                } else {
+                 //                    playerID.play();
+                 //                    $(".mejs-overlay-loading ").parent().css("display ", "none ");
+                 //                }
+                 //            }
+                 //        }
+                 //    }else{
+                 //        var player = new MediaElementPlayer('#player1');
+                 //        player.pause();
+                 //        player.setSrc('tongshuai_video.mp4');
+                 //        player.load();
+                 //        player.play();
+                 //
+                 //
+                 //
+                 //    }
+                 //},setTime)
+
                  setTimeout(function(){
-                     videoMethod();
+                     //videoMethod();
                      $('.js_styleVideoBox').hide();
                      $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
                      $("#player ").removeClass("o_df-hide ");
                      var playerID = document.getElementById('player');
                      playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                     function onVideoProgressUpdate(e) {
-                         var percentageBuffered = 0;
-                         if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                             percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                         } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                             percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                         }
-                         if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                             if (percentageBuffered <= 0.4) {
-                                 $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                             } else {
-                                 playerID.play();
-                                 $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                             }
-                         }
-                     }
+
 
                      if (!$ie8) {
                          player.play();
@@ -386,8 +420,6 @@ $(function () {
                      }
                  },setTime)
 
-
-
              });
          }else{
              $(".js_lifeStylePlay ").on('click', function (){
@@ -417,168 +449,12 @@ $(function () {
                      $('.js_styleVideoBox').show();
                      $('.js_videoMdShow').show();
 
-
-                     if(windowWidth>991){
-                         $('.video-cont-center').css({width: '50%'});
-                         $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
-                         $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
-                     }
-
-
                  });
 
              })
          }
     }
 
-//暂时隐藏
-//    function pageScript() {
-//
-//         if (window.innerWidth == undefined || window.innerWidth > 1199) {
-//             var player1 = new MediaElementPlayer('#player1');
-//             var player = new MediaElementPlayer('#player');
-//             $(".js_styleLifevideoClose ").on('click', function () {
-//                 player.pause();
-//                 $(".js_playerBox ").hide();
-//                 $('.js_styleVideoBox').show();
-//
-//                 if(windowWidth>991){
-//                     $('.video-cont-center').css({width: '50%'});
-//                     $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
-//                     $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
-//                 }
-//
-//             });
-//
-//             var userAgent = navigator.userAgent;
-//             $(".js_lifeStylePlay ").on('click', function () {
-//
-//
-//
-//
-//                 videoMethod();
-//                 var setTime;
-//                 if(windowWidth>991){
-//                     setTime = '600';
-//                     $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
-//                     $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
-//                     $('.video-cont-center').css({width: '100%'});
-//                 }else{
-//                     setTime = '0';
-//                 }
-//                 setTimeout(function(){
-//
-//                     $('.js_styleVideoBox').hide();
-//                     $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-//                     $("#player ").removeClass("o_df-hide");
-//
-//                     if ($ie8){
-//                         //videoMethod();
-//                             var player = new mediaelementplayer('#player');
-//                             player.pause();
-//                             //player.setSrc('tongshuai_video.mp4');
-//                             player.load();
-//                             player.play();
-//                     }else{
-//                         //videoMethod();
-//
-//                         var playerID = document.getElementById('player');
-//                         playerID.addEventListener('progress', onVideoProgressUpdate, false);
-//                         var player = new MediaElementPlayer('#player');
-//                         player.play();
-//
-//
-//                             function onVideoProgressUpdate(e) {
-//                                 var percentageBuffered = 0;
-//                                 if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-//                                     percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-//                                 } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-//                                     percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-//                                 }
-//                                 if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-//                                     if (percentageBuffered <= 0.4) {
-//                                         $(".mejs-overlay-loading ").parent().css("display ", "block ");
-//                                     } else {
-//                                         playerID.play();
-//                                         $(".mejs-overlay-loading ").parent().css("display ", "none ");
-//                                     }
-//                                 }
-//                             }
-//                     }
-//                     //
-//                     //if (!$ie8) {
-//                     //    var player = new MediaElementPlayer('#player');
-//                     //    player.play();
-//                     //    var playerID = document.getElementById('player');
-//                     //    playerID.addEventListener('progress', onVideoProgressUpdate, false);
-//                     //    function onVideoProgressUpdate(e) {
-//                     //        var percentageBuffered = 0;
-//                     //        if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-//                     //            percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-//                     //        } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-//                     //            percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-//                     //        }
-//                     //        if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-//                     //            if (percentageBuffered <= 0.4) {
-//                     //                $(".mejs-overlay-loading ").parent().css("display ", "block ");
-//                     //            } else {
-//                     //                playerID.play();
-//                     //                $(".mejs-overlay-loading ").parent().css("display ", "none ");
-//                     //            }
-//                     //        }
-//                     //    }
-//                     //}else{
-//                     //    var player = new mediaelementplayer('#player');
-//                     //    player.pause();
-//                     //    //player.setSrc('tongshuai_video.mp4');
-//                     //    player.load();
-//                     //    player.play();
-//                     //}
-//                 },setTime)
-//
-//             });
-//         }else{
-//             $(".js_lifeStylePlay ").on('click', function (){
-//               var videoSrc =  $(this).attr('data-src');
-//                 $("#player").attr("src", videoSrc).removeClass("o_df-hide");
-//                 if(windowWidth>991){
-//                     $('.js_styleVideoBox').hide();
-//                 }else{
-//                     $('.js_videoMdShow').hide();
-//                     var navHeight = $('.l-opacity0').height();
-//                     $(document).scrollTop(navHeight);
-//                 }
-//
-//
-//
-//                 // $(this).hide();
-//                 $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-//                 $("#player ").removeClass("o_df-hide ").css('width','100%');
-//                 videoMethod();
-//                 setTimeout(function () {
-//                     $("#player")[0].play();
-//                 }, 500);
-//                 $(".js_styleLifevideoClose ").on('click', function () {
-//                     var player = new MediaElementPlayer('#player');
-//                     player.pause();
-//                     $(".js_playerBox ").hide();
-//                     $('.js_styleVideoBox').show();
-//                     $('.js_videoMdShow').show();
-//
-//
-//                     if(windowWidth>991){
-//                         $('.video-cont-center').css({width: '50%'});
-//                         $('.js_styleVideoContLeft').removeClass('left_click').css('width','25%');
-//                         $('.js_styleVideoContRight').removeClass('right_click').show().css('width','25%');;
-//                     }
-//
-//
-//                 });
-//
-//             })
-//         }
-//    }
-//暂时隐藏
 
 // 优生活轮播
 
