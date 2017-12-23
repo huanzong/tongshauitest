@@ -1019,6 +1019,7 @@
 .detail-fontpoint-index{
   position: relative;
   height: 218px;
+  display: none@ie8-10-fix;
   @media (min-width: 992px) {
     height: 200px;
   }
@@ -1034,6 +1035,8 @@
   z-index: 3;
   top: 0;
   background: #fff;
+  position: relative@ie8-10-fix;
+  height: 218px@ie8-10-fix;
   @media (min-width: 992px) {
     height: 0;
   }
@@ -1726,15 +1729,6 @@
       -moz-text-overflow: ellipsis; 
       -webkit-text-overflow: ellipsis;
       height:100px;
-      &::after {
-          content:"...";
-          font-weight:bold;
-          position:absolute;
-          bottom:0;
-          right:0;
-          padding:0 20px 1px 45px;
-          background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
-      }
       //4行省略
       @media (min-width: 992px){
         min-height: 100px;
