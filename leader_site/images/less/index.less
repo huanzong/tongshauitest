@@ -192,6 +192,25 @@
         }
       }
     }
+    .index-banner-page{
+      position: absolute;
+      bottom: 20px;
+      height: 10px;
+      width: 100%;
+      z-index: 2;
+      text-align: center;
+      span{
+        display: inline-block;
+        margin: 0 3px;
+        width: 10px;
+        height: 10px;
+        background: #ede9e3;
+        border-radius: 10px;
+        &.swiper-active-switch{
+          background: @l-red;
+        }
+      }
+    }
   }
   .banner-page{
     z-index: 1;
@@ -268,6 +287,7 @@
   }
   .banner-bot-info{
     margin: 30px 0 0;
+    opacity: 1
   }
   .banner-big{
     font-size: 28px;
@@ -457,17 +477,17 @@
         margin: 23px auto 0;
         width: 32px;
         height: 32px;
-        // background: @l-red;
         border-radius: 32px;
-        // span{
-        //   display: inline-block;
-        //   padding-top: 0;
-        //   margin: 14px 1px 0;
-        //   border-radius: 5px;
-        //   width: 4px;
-        //   height: 4px;
-        //   background: #fff;
-        // }
+          background: none;
+          span{
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+            margin-top: 2px;
+            width: 4px;
+            height: 4px;
+            background: #ccc;
+          }
       }
       @media (max-width: 1199px) {
         .enter-con-point{
@@ -1078,6 +1098,7 @@
 
 // 首页入口
 .index-entrance-row {
+  position: relative;
   margin-left: -15px;
   margin-right: -15px;
   @media (max-width: 700px) {
@@ -1086,6 +1107,24 @@
   }
   .swiper-slide {
     height: auto !important;
+  }
+  .entrance-page-xs{
+    position: absolute;
+    bottom: 35px;
+    right: 45px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    z-index: 2;
+    text-align: right;
+    span{
+      font-size: 12px;
+      color: #333;
+      padding: 0 5px;
+      &.swiper-active-switch{
+        color: @l-red;
+      }
+    }
   }
 }
 
@@ -1410,10 +1449,9 @@
         // margin-top: 15%;
       }
     }
-
   }
   
-  .index-entrance-row .swiper-slide-active,.index-entrance-row .temp-slide{
+  .index-entrance-row .swiper-slide-active{
     .o_sm_8-12 {
       display: block !important;
     }
@@ -1431,14 +1469,12 @@
 @media (max-width: 575px) {
 
   .index-entrance-row .swiper-container {
-    // margin-right: -32%;
+    // margin-right: 0;
     margin-right: -70%;
   }
 
   .index-entrance{
-
     .swiper-slide {
-
       img{
         // width: 52%;
         // margin-top: 32%;
@@ -1448,7 +1484,7 @@
     }
 
   }
-  .index-entrance-row .swiper-slide-active,.index-entrance-row .temp-slide{
+  .index-entrance-row .swiper-slide-active{
     img{
       width: 100%;
       margin-top: 0;
@@ -1467,8 +1503,7 @@
   display: none !important;
 }
 
-
-.enter-con-point .typing_loader {
+.index-enter .enter-con .enter-con-point .typing_loader {
   display: inline-block;
   width: 4px;
   height: 4px;
