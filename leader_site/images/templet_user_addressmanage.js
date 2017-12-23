@@ -911,6 +911,19 @@ function updateUserAddress(){
     return bool;
 }
 
+// 失去焦点方法
+$(".js_inputCheck").keyup(function(){
+    if ($(this).val().length>0 && $(this).val()!="尽可能详尽地填写楼号、楼层、门牌号"){
+        $(this).removeClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html(' ');
+    }
+})
+$(".js_inputCheck").blur(function(){
+    if ($(this).val().length==0 || $(this).val()=="尽可能详尽地填写楼号、楼层、门牌号"){
+        $(this).addClass('Validform_error');
+        $(this).siblings('.js-addressMobError').html('<i class="iconfont icon-information-solid"></i>详细地址不得为空');
+    }
+})
 
 
 
