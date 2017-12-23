@@ -281,23 +281,6 @@ $(function () {
                 console.log($('#' + node.id + '-mode').html('mode: ' + player.pluginType));
                 $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
             },
-            //showPosterWhenEnded: true,//显示海报
-            //autosizeProgress: false,//根据其他元素的大小自动计算进度条的宽度
-            //setDimensions: true,
-            //defaultVideoWidth: 700,
-            //iPadUseNativeControls: true,//强制iPad的原生控件
-            //iPhoneUseNativeControls: true,//强制iPhone的本机控件
-            //AndroidUseNativeControls: true,//强制Android的原生控件
-            //usePluginFullScreen: false,//在全屏模式下激活指针事件检测的标志
-            //enableProgressTooltip: false,//启用/禁用在进度栏中显示时间弹出窗口的工具提示
-            ////alwaysShowControls: true,//播放时隐藏控件，鼠标不在视频上方
-            //fullscreenText: '全屏',
-            //hideVideoControlsOnLoad: false,//显示视频控制
-
-
-
-
-
             showPosterWhenEnded:true,//显示海报
             autosizeProgress:false,//根据其他元素的大小自动计算进度条的宽度
             iPadUseNativeControls:true,//强制iPad的原生控件
@@ -311,8 +294,8 @@ $(function () {
     function pageScript() {
         videoMethod();
          if (window.innerWidth == undefined || window.innerWidth > 1199) {
-             var player1 = new MediaElementPlayer('#player1');
-
+             var userAgent = navigator.userAgent;
+             var player = new MediaElementPlayer('#player');
              $(".js_styleLifevideoClose ").on('click', function () {
                  player.pause();
                  $(".js_playerBox ").hide();
@@ -324,117 +307,25 @@ $(function () {
                  $('.js_styleVideoContRight').css({width: '25%'}).removeClass('left_click');
              });
 
-             var userAgent = navigator.userAgent;
-             var player = new MediaElementPlayer('#player');
+             
              $(".js_lifeStylePlay ").on('click', function () {
-                 videoMethod();
-                 var setTime;
-                 if(windowWidth>991){
-                     setTime = '600';
-                     $('.js_styleVideoContLeft').addClass('left_click').animate({width: '0'}, "slow");
+                 $('.js_styleVideoBox').hide();
+                 $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
+                 $("#player ").removeClass("o_df-hide ");
+                
 
-                     $('.js_styleVideoContRight').addClass('right_click').animate({width: '0'}, "slow");
-                     $('.video-cont-center').css({width: '100%'});
+                 if (!$ie8) {
+                     $("#player")[0].play();
+                    
                  }else{
-                     setTime = '0';
+                 	if (windowWidth > 991) {
+        // alert(1);
+        $('.js_styleVideoBox').css('height', windowHeight - navHeight);
+        $('.js_styleVideoCont').css({'padding-top': styleVudeoPading, 'padding-bottom': styleVudeoPading});
+        $("#mep_0").css('max-height', windowHeight - navHeight+'px');
+    }
+                 	player.play();
                  }
-                 //setTimeout(function(){
-                 //    //videoMethod();
-                 //    $('.js_styleVideoBox').hide();
-                 //    $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-                 //    $("#player ").removeClass("o_df-hide ");
-                 //    var playerID = document.getElementById('player');
-                 //    playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                 //    function onVideoProgressUpdate(e) {
-                 //        var percentageBuffered = 0;
-                 //        if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                 //            percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                 //        } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                 //            percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                 //        }
-                 //        if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                 //            if (percentageBuffered <= 0.4) {
-                 //                $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                 //            } else {
-                 //                playerID.play();
-                 //                $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                 //            }
-                 //        }
-                 //    }
-                 //
-                 //    if (!$ie8) {
-                 //        player.play();
-                 //        var playerID = document.getElementById('player');
-                 //        playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                 //        function onVideoProgressUpdate(e) {
-                 //            var percentageBuffered = 0;
-                 //            if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                 //                percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                 //            } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                 //                percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                 //            }
-                 //            if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                 //                if (percentageBuffered <= 0.4) {
-                 //                    $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                 //                } else {
-                 //                    playerID.play();
-                 //                    $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                 //                }
-                 //            }
-                 //        }
-                 //    }else{
-                 //        var player = new MediaElementPlayer('#player1');
-                 //        player.pause();
-                 //        player.setSrc('tongshuai_video.mp4');
-                 //        player.load();
-                 //        player.play();
-                 //
-                 //
-                 //
-                 //    }
-                 //},setTime)
-
-                 setTimeout(function(){
-                     //videoMethod();
-                     $('.js_styleVideoBox').hide();
-                     $(".js_playerBox ").show().find(".mejs-video ").removeClass("o_df-hide ");
-                     $("#player ").removeClass("o_df-hide ");
-                     var playerID = document.getElementById('player');
-                     playerID.addEventListener('progress', onVideoProgressUpdate, false);
-
-
-                     if (!$ie8) {
-                         player.play();
-                         var playerID = document.getElementById('player');
-                         playerID.addEventListener('progress', onVideoProgressUpdate, false);
-                         function onVideoProgressUpdate(e) {
-                             var percentageBuffered = 0;
-                             if (playerID.buffered.length > 0 && playerID.buffered.end && playerID.duration) {
-                                 percentageBuffered = playerID.buffered.end(0) / playerID.duration;
-                             } else if (playerID.bytesTotal != undefined && playerID.bytesTotal > 0 && playerID.bufferedBytes != undefined) {
-                                 percentageBuffered = playerID.bufferedBytes / playerID.bytesTotal;
-                             }
-                             if (userAgent.indexOf("Macintosh ") > -1 && userAgent.indexOf("Safari ") > -1) {
-                                 if (percentageBuffered <= 0.4) {
-                                     $(".mejs-overlay-loading ").parent().css("display ", "block ");
-                                 } else {
-                                     playerID.play();
-                                     $(".mejs-overlay-loading ").parent().css("display ", "none ");
-                                 }
-                             }
-                         }
-                     }else{
-                         var player = new MediaElementPlayer('#player1');
-                         player.pause();
-                         player.setSrc('http://test.haier.com/masvod/public/2017/12/21/20171221_16078f30392_r1_800k.mp4');
-                         player.load();
-                         player.play();
-
-
-
-                     }
-                 },setTime)
-
              });
          }else{
              $(".js_lifeStylePlay ").on('click', function (){
