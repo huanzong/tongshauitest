@@ -3,11 +3,11 @@ $(function() {
     if (screenWidth < 991) {
       $('.js_bannerSwiper .js_recPic').each(function(){
         if ($(this).attr('md') == '') {
-          $(this).attr('src','./images/img1-1.png')
+          $(this).attr('md','./images/img1-1.png')
         } else if ($(this).attr('sm') == '') {
-          $(this).attr('src','./images/img1-1.png')
+          $(this).attr('sm','./images/img1-1.png')
         } else if ($(this).attr('xs') == ''){
-          $(this).attr('src','./images/img1-1.png')
+          $(this).attr('xs','./images/img1-1.png')
         }
       })
     }
