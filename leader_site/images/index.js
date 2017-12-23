@@ -136,7 +136,7 @@ $(function() {
   var indexBannerInit = false;
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
-    updateOnImagesReady : true,
+    // updateOnImagesReady : true,
     // autoplay: 5000,
     roundLengths : true,
     // centeredSlides : true,
