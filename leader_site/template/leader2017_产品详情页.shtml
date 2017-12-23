@@ -717,7 +717,7 @@
                     </div>
                     <div class="o_u o_df_1-12"></div>
                 </div>
-                <div class="o_g detail-fontpoint-back">
+                <div class="o_g detail-fontpoint-back o_df-hide o_md-show o_sm-show o_xs-show">
                     <div class="detail-fontpoint">
                         <div class="swiper-container js_fontSwiper">
                             <div class="swiper-wrapper">
