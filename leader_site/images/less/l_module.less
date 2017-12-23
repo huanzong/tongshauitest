@@ -198,7 +198,6 @@
 	.Validform_checktip{
 		color: @l-orange;
 		font-size: 12px;
-		height:35px;
 		line-height: 35px;
 		border: none;
 		text-align: left;
@@ -217,6 +216,10 @@
 			padding: 0 3px;
 			top: 0;
 			color: @l-red;
+		}
+		span.txt{
+			height:35px;
+			display: inline-block;
 		}
 	}
 	.Validform_right{
@@ -1013,4 +1016,27 @@ Pagination Styles
 
 .o_shade {
     z-index: 999999999;
+}
+.l-float-bottom{
+	position: relative;
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 16px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	color: #333;
+	background: #fff;
+	i{
+		position: absolute;
+		display: inline-block;
+		height: 8px;
+		width: 14px;
+		background: url("l_float_bg_bottom.png") no-repeat center;
+		bottom: 0;
+		margin-bottom: -8px;
+		right: 50%;
+
+
+	}
 }
