@@ -185,8 +185,8 @@ $(function(){
                 $('.js-modifyPhoto').show();
                 $('.js-modifyPhotoBtn').show();
                 //获取边框宽度和高度的中的最小值
-                var photoW  = ($('.js-modifyPhoto li').width()-8);
-                var photoH  = ($('.js-modifyPhoto').height()-8);
+                var photoW  = ($('.js-modifyPhoto li').width()-2);
+                var photoH  = ($('.js-modifyPhoto').height()-2);
                 photoBoxWidth = photoW>photoH?photoH:photoW;
                 
                 templet_pic='/tongshuaifile'+$.trim(data.data);
@@ -275,12 +275,12 @@ $(function(){
                         }
 
 
-                    setTimeout(function(){
-                        var photoBoxHeight = $('.jcrop-holder img').height();
-                        var photoMargTop = (photoH-photoBoxHeight)>0?photoH-photoBoxHeight:0;
-                        $('.jcrop-holder').css('margin-top', photoMargTop/2+'px');
-                        //console.log(photoMargTop,(photoMargTop)/2,photoBoxHeight)
-                    },0);
+                    //setTimeout(function(){
+                    //    var photoBoxHeight = $('.jcrop-holder img').height();
+                    //    var photoMargTop = (photoH-photoBoxHeight)>0?photoH-photoBoxHeight:0;
+                    //    $('.jcrop-holder').css('margin-top', photoMargTop/2+'px');
+                    //    //console.log(photoMargTop,(photoMargTop)/2,photoBoxHeight)
+                    //},0);
 //                    }else{
 //                        imgsWb = photoBoxWidth/imgsH;
 //                        imgsWnow = imgsW*imgsWb;
