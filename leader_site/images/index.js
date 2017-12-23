@@ -2,7 +2,13 @@ $(function() {
     var screenWidth = document.body.offsetWidth;
     if (screenWidth < 991) {
       $('.js_bannerSwiper .js_recPic').each(function(){
-        $(this).attr('src','images/img1-1.png')
+        if ($(this).attr('md') == '') {
+          $(this).attr('src','./images/img1-1.png')
+        } else if ($(this).attr('sm') == '') {
+          $(this).attr('src','./images/img1-1.png')
+        } else if ($(this).attr('xs') == ''){
+          $(this).attr('src','./images/img1-1.png')
+        }
       })
     }
         
@@ -136,11 +142,11 @@ $(function() {
   var indexBannerInit = false;
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
-    // updateOnImagesReady : true,
+    updateOnImagesReady : true,
     // autoplay: 5000,
     roundLengths : true,
     // centeredSlides : true,
-    // calculateHeight : true,
+    calculateHeight : true,
     slidesPerView: 3,
     pagination : '.js_swiperBannerPoint',
     paginationClickable :true,
