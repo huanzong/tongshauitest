@@ -251,7 +251,7 @@ $(function(){
                             $('.js-resetpassword').show();
                         }
                         else{
-                            $('.js-mobileCodeerror').addClass("err").html('<i class=\'iconfont icon-information-solid\'></i><span class="txt">验证码错误</span>').addClass('Validform_wrong').removeClass('Validform_right');
+                            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i><span class="txt">验证码错误</span>').addClass('Validform_wrong').removeClass('Validform_right');
                         }
                     }
                 }
