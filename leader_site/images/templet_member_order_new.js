@@ -419,12 +419,13 @@ function removeMsec(time){
 
 //无订单页面
 function memberOrderNot(way){
+    var coolHtml="<trs_channel id='购物车' field='_recurl' UrlIsAbs='true'/>";
     var templet_addhtml;
     if(way==1){
         templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot" >';
         templet_addhtml+='<img src="../images/share_nothing.png"  alt="">';
         templet_addhtml+='<p>还没有任何订单，去寻找心仪的产品吧</p>';
-        templet_addhtml+='<div> <a  href="http://test.tongshuai.com/cooling/"  class=""><span>轻产品</span><i class="iconfont icon-arrow-line-right"></i> </a></div></div>';
+        templet_addhtml+='<div> <a  href="'+coolHtml+'"  class=""><span>轻产品</span><i class="iconfont icon-arrow-line-right"></i> </a></div></div>';
     }else{
         templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot"  >';
         templet_addhtml+='<img src="../images/share_nothing.png"  alt="">';
