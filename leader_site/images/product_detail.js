@@ -75,7 +75,7 @@ $(function() {
 
         // 如果需要前进后退按钮
         nextButton: '.js_swiper_next',
-        prevButton: '.js_swiper_prev',
+        prevButton: '.js_swiper_prev'
 
         // 如果需要滚动条
         // scrollbar: '.swiper-scrollbar'
