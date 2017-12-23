@@ -250,10 +250,10 @@ $(function(){
                             $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth,'width':photoBoxWidth}).show();
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
-                            $('#target').hide()
+                            $('#target').hide();
 
                             if(!$ie8){
-                                jcrop_api.setImage(templet_pic, function() {
+                                //jcrop_api.setImage(templet_pic, function() {
                                     jcrop_api.setOptions({
                                         //outerImage: templet_pic,
                                         //setSelect: [ 60, 60, 260, 260 ]
@@ -261,7 +261,7 @@ $(function(){
 
                                         //})
                                     });
-                                })
+                                //})
                             }
                             //jcrop_api.setImage(templet_pic, function(){
                             //    jcrop_api.setOptions({
@@ -279,8 +279,8 @@ $(function(){
                         var photoBoxHeight = $('.jcrop-holder img').height();
                         var photoMargTop = (photoH-photoBoxHeight)>0?photoH-photoBoxHeight:0;
                         $('.jcrop-holder').css('margin-top', photoMargTop/2+'px');
-                        console.log(photoMargTop,(photoMargTop)/2,photoBoxHeight)
-                    },0)
+                        //console.log(photoMargTop,(photoMargTop)/2,photoBoxHeight)
+                    },0);
 //                    }else{
 //                        imgsWb = photoBoxWidth/imgsH;
 //                        imgsWnow = imgsW*imgsWb;

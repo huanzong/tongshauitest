@@ -1009,6 +1009,23 @@
                 <TRS_CONDITION  CONDITION='@mdjs_gw' OPERATOR="blank" NOT='TRUE'>
                 <div class="o_u o_df_2-12 bg-eee js_oHerl"></div>
                 <div class="o_u o_df_4-12 bg-f8">
+                    <!-- jingjing轮播缩略图 -->
+                    <div class="swiper-icon">
+                        <div class="icon-table">
+                            <div class="icon-table-cell js_sellpointSwiper_icon">
+                                <a class="icon-box active" icon-index='0'>
+                                    <img src="images/ignore_prodetail7.jpg">
+                                </a>
+                                <a class="icon-box" icon-index='1'>
+                                    <img src="images/ignore_prodetail7.jpg">
+                                </a>
+                                <a class="icon-box" icon-index='2'>
+                                    <img src="images/ignore_prodetail7.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- jingjing轮播缩略图 END -->
                     <div class="detail-sellpoint js_oHerlSize">
                         <div class="swiper-container js_swiperSellPoint">
                             <div class="swiper-wrapper">
@@ -1020,6 +1037,20 @@
                             </div>
                         </div>
                     </div>
+                    <!-- jingjing循环体 新增-md/sm/xs核心卖点机构 -->
+                    <div class="detail-sellpoint-fontXS o_df-hide o_md-show o_sm-show o_xs-show">
+                        <img src="images/ignore_prodetail7.jpg">
+                        <div class="sellpoint-fontXS-box">
+                            <div class="sellpoint-table">
+                                <div class="sellpoint-table-cell">
+                                    <div class="describe1">如初生11</div>
+                                    <div class="describe2">风冷无霜更新鲜</div>
+                                    <div class="describe3">海尔真诚到永远，尔真诚到永远，真诚到永远，诚到永远，到永远，永远，远。。</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- jingjing循环体 新增-md/sm/xs核心卖点机构 END -->
                 </div>
                 <div class="o_u o_df_5-12 js_oHerl o_md-hide o_sm-hide o_xs-hide">
                     <div class="o_u o_df_1-5"></div>
