@@ -8,6 +8,26 @@
         overflow: hidden;
         img{
             height: 400px;
+            margin-left: -50%;
+            @media (min-width: 992px) and (max-width: 1199px) {
+                /* lg*/
+
+                margin-left: -100%;
+            }
+            @media (min-width: 701px) and (max-width: 991px) {
+                /* md*/
+                margin: 0;
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+                /* sm*/
+                margin: 0;
+
+            }
+            @media (max-width: 575px) {
+                /* xs*/
+                margin: 0;
+
+            }
         }
         //background: url(style_life_video_left.png) no-repeat right top;
     }
@@ -17,6 +37,27 @@
         text-align: right;
         img{
             height: 400px;
+            margin-right: -50%;
+            margin-left: -50%;
+            @media (min-width: 992px) and (max-width: 1199px) {
+                /* lg*/
+                margin-right: -50%;
+                margin-left: -100%;
+            }
+            @media (min-width: 701px) and (max-width: 991px) {
+                /* md*/
+                margin: 0;
+            }
+            @media (min-width: 576px) and (max-width: 700px) {
+                /* sm*/
+                margin: 0;
+
+            }
+            @media (max-width: 575px) {
+                /* xs*/
+                margin: 0;
+
+            }
         }
         //background: url(style_life_video_right.png) no-repeat left top;
     }
