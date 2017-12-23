@@ -11,7 +11,7 @@
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <!-- <link rel="stylesheet" type="text/css" href="images/swiper-3.4.2.min.css"> -->
     <link rel="stylesheet" type="text/css" href="product_trolley.css">
-    <link rel="preconnect" href="http://test.tongshuai.com">
+    <link rel="preconnect" href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL'/>">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
                 <div class="o_u o_df_1-12"></div>
                 <div class="o_u o_df_10-12">
                     <div class="trolley-logo">
-                        <a href="http://test.tongshuai.com"><img src="images/l_logo.png"></a>
+                        <a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL'/>"><img src="/images/l_logo.png"></a>
                     </div>
                     <div class="trolley-title">
                         购物车
