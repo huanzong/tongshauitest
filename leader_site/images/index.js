@@ -539,7 +539,6 @@ $(function() {
       $('.js_swiperEntrabce .swiper-slide').show()
       
       $('.swiper-slide-active').next('.swiper-slide').addClass('temp-slide')
-      // var index = swiper.activeIndex + 1;
       var index = swiper.activeIndex;
       $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').stop()
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
