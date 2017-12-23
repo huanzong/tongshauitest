@@ -140,7 +140,7 @@ $(function() {
     // autoplay: 5000,
     roundLengths : true,
     // centeredSlides : true,
-    calculateHeight : true,
+    // calculateHeight : true,
     slidesPerView: 3,
     pagination : '.js_swiperBannerPoint',
     paginationClickable :true,
