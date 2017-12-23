@@ -509,10 +509,6 @@ $(function () {
     });
 
 
-// var superiorityNub =
-
-
-// console.log(superiorityNub[1].title)
 
 
 // 头部banner轮播
@@ -594,15 +590,16 @@ $(function () {
     }
     $('.js_superiorityRightBtn').on('click', function (e) {
         e.preventDefault();
-        superioritySwiperLeft.swipeNext();
-        superioritySwiperRight.swipeNext();
+
+        superioritySwiperLeft.swipePrev();
+        superioritySwiperRight.swipePrev()
     })
     $('.js_superiorityLeftBtn').on('click', function (e) {
         // alert(1)
 
         e.preventDefault();
-        superioritySwiperLeft.swipePrev();
-        superioritySwiperRight.swipePrev()
+        superioritySwiperLeft.swipeNext();
+        superioritySwiperRight.swipeNext();
     })
 
 
@@ -642,11 +639,12 @@ $(function () {
 
     $('.js_lifeStyleCaseLeftBtn').on('click', function (e) {
         e.preventDefault();
-        caseSwiper.swipeNext()
+        caseSwiper.swipePrev()
+
     });
     $('.js_lifeStyleCaseRightBtn').on('click', function (e) {
         e.preventDefault();
-        caseSwiper.swipePrev()
+        caseSwiper.swipeNext()
     });
 
 
@@ -715,7 +713,5 @@ setTimeout(function(){
         $('.js_lifeStyleCreateTop li').eq(0).click();
     }, 1000)
     var lifeStyleTile={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
-
     textLength(lifeStyleTile);
-
-})
+});
