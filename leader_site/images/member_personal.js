@@ -185,8 +185,8 @@ $(function(){
                 $('.js-modifyPhoto').show();
                 $('.js-modifyPhotoBtn').show();
                 //获取边框宽度和高度的中的最小值
-                var photoW  = ($('.js-modifyPhoto li').width()-8);
-                var photoH  = ($('.js-modifyPhoto').height()-8);
+                var photoW  = ($('.js-modifyPhoto li').width()-2);
+                var photoH  = ($('.js-modifyPhoto').height()-2);
                 photoBoxWidth = photoW>photoH?photoH:photoW;
                 
                 templet_pic='/tongshuaifile'+$.trim(data.data);
@@ -250,18 +250,18 @@ $(function(){
                             $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth,'width':photoBoxWidth}).show();
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
-                            $('#target').hide()
+                            $('#target').hide();
 
                             if(!$ie8){
-                                jcrop_api.setImage(templet_pic, function() {
-                                    jcrop_api.setOptions({
+                                //jcrop_api.setImage(templet_pic, function() {
+                                //    jcrop_api.setOptions({
                                         //outerImage: templet_pic,
                                         //setSelect: [ 60, 60, 260, 260 ]
-                                        setSelect: [photoBoxWidth * 0.2, photoBoxWidth * 0.2, photoBoxWidth * 0.85, photoBoxWidth * 0.85]
+                                        //setSelect: [photoBoxWidth * 0.2, photoBoxWidth * 0.2, photoBoxWidth * 0.85, photoBoxWidth * 0.85]
 
                                         //})
-                                    });
-                                })
+                                    //});
+                                //})
                             }
                             //jcrop_api.setImage(templet_pic, function(){
                             //    jcrop_api.setOptions({
@@ -275,12 +275,12 @@ $(function(){
                         }
 
 
-                    setTimeout(function(){
-                        var photoBoxHeight = $('.jcrop-holder img').height();
-                        var photoMargTop = (photoH-photoBoxHeight)>0?photoH-photoBoxHeight:0;
-                        $('.jcrop-holder').css('margin-top', photoMargTop/2+'px');
-                        console.log(photoMargTop,(photoMargTop)/2,photoBoxHeight)
-                    },0)
+                    //setTimeout(function(){
+                    //    var photoBoxHeight = $('.jcrop-holder img').height();
+                    //    var photoMargTop = (photoH-photoBoxHeight)>0?photoH-photoBoxHeight:0;
+                    //    $('.jcrop-holder').css('margin-top', photoMargTop/2+'px');
+                    //    //console.log(photoMargTop,(photoMargTop)/2,photoBoxHeight)
+                    //},0);
 //                    }else{
 //                        imgsWb = photoBoxWidth/imgsH;
 //                        imgsWnow = imgsW*imgsWb;

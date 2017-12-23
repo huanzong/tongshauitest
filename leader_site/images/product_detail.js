@@ -4,7 +4,8 @@ $(function() {
 
     //文字卖点
     swiper.fontSwiper = new Swiper('.js_fontSwiper',{
-        slidesPerView : 'auto'
+        slidesPerView : 'auto',
+        calculateHeight : true//Swiper根据slides内容计算容器高度。
     });
     $('.js_fontSwiperPrev').on('click',function(){
         swiper.fontSwiper.swipePrev();
@@ -22,8 +23,9 @@ $(function() {
         autoplay: 1000,
         slidesPerView: 1,//滑动展示个数
         centeredSlides: true,
-        slidesPerGroup: 1//每次滑动移动个数
-        // calculateHeight : true,//Swiper根据slides内容计算容器高度。
+        slidesPerGroup: 1,//每次滑动移动个数
+        updateOnImagesReady : true,
+        calculateHeight : true//Swiper根据slides内容计算容器高度。
     });
     //多图轮播，单图不轮播
     if($('.js_sceneSwiper').find('.swiper-slide').size()>=1){
@@ -35,6 +37,7 @@ $(function() {
      **/
     swiper.sellPointSwiper = new Swiper('.js_swiperSellPoint', {
         grabCursor: true,
+        calculateHeight : true,//Swiper根据slides内容计算容器高度。
         // loop: true,
         // autoplay: 1000,
         onFirstInit: function(swiper){
@@ -72,7 +75,7 @@ $(function() {
 
         // 如果需要前进后退按钮
         nextButton: '.js_swiper_next',
-        prevButton: '.js_swiper_prev',
+        prevButton: '.js_swiper_prev'
 
         // 如果需要滚动条
         // scrollbar: '.swiper-scrollbar'
