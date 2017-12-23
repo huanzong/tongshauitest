@@ -226,8 +226,7 @@ $(function () {
         //$('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2})
         $('.js_lifeStyleCaseRight').css({'height': lifeCasePhotoHMd, "line-height": lifeCasePhotoHMd + 'px','margin-top':(lifeCasePhotoHMd-$('.js_lifeStyleCasePhoto').height())/2})
       //alert(lifeCasePhotoHMd);
-        $('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
-        $('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+
         $('.js_lifeStyleCaseText').css({'height':'270px','margin-top':'30px'});
 
     }
@@ -624,6 +623,10 @@ $(function () {
             // var casePhoto = $('.js_lifeStyleCasePhoto').find('.swiper-slide-active').prev().attr('data-index');
             $('.js_casePhotoMinLeft').children('img').attr('src', casePhotoPrev);
 
+            if(windowWidth<992){
+                $('.js_casePhotoMinLeft').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+                $('.js_casePhotoMinRight').css('top',($('.js_lifeStyleCasePhoto').height()-lifeCasePhotoHMd)/2);
+            }
             if (casePhotoNext == undefined) {
                 casePhotoNext = $('.js_lifeStyleCasePhoto').find('.swiper-slide').eq(2).children('img').attr('src');
                 $('.js_casePhotoMinRight').children('img').attr('src', casePhotoPrev);

@@ -419,7 +419,7 @@ function removeMsec(time){
 
 //无订单页面
 function memberOrderNot(way){
-    var coolHtml="<trs_channel id='购物车' field='_recurl' UrlIsAbs='true'/>";
+
     var templet_addhtml;
     if(way==1){
         templet_addhtml+='<div class="o_g prdouct-search-zanwu js_memberOrderNot" >';
