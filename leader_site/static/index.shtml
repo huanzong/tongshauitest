@@ -127,7 +127,9 @@
                                 </div>
                             </div>
                             <div class="index-banner-shadow-bottom"></div>
-                            
+                            <!-- 新增banner轮播分液器 -->
+                            <div class="index-banner-page js_swiperBannerPoint o_df-hide o_md-show o_sm-show o_xs-show"></div>
+                            <!-- 新增banner轮播分液器 End -->
                         </div>
                     </div>
                     <div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
@@ -418,11 +420,6 @@
     								    				<span></span>
     								    				<span></span>
 									    			</a>
-                                                    <div class="ectrance-page js_entrancePageXs">
-                                                        <!-- <a href="javascript:;" class="active">01</a>
-                                                        <a href="javascript:;">02</a>
-                                                        <a href="javascript:;">03</a> -->
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -475,7 +472,7 @@
                                         <div class="o_u o_df_5-12 o_md_6-12 o_sm_6-6 o_xs_6-6">
                                             <div class="l-padding">
                                                 <a href="javascript:;">
-                                                    <img src="images/index_entrance01.jpg">
+                                                    <img class="js_recPic" src="images/img3-4.png" df="images/index_entrance01.jpg">
                                                 </a>
                                                 <div class="o_u o_df-hide o_md-show o_sm-show o_xs-show o_md_2-2 o_sm_2-2 o_xs_2-2 entrance-fontbox">
                                                     <h3>你是我简单满足的小确幸2222</h3>
@@ -485,11 +482,6 @@
                                                         <span></span>
                                                         <span></span>
                                                     </a>
-                                                    <div class="ectrance-page js_entrancePageXs">
-                                                        <!-- <a href="javascript:;" class="active">01</a>
-                                                        <a href="javascript:;">02</a>
-                                                        <a href="javascript:;">03</a> -->
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -506,7 +498,7 @@
                                             </div>
                                             <div class="l-padding">
                                                 <div class="o_u entrance-img2">
-                                                    <img src="images/index_entrance02.jpg" style="width: 100%">
+                                                    <img class="js_recPic" src="images/img4-3.png" df="images/index_entrance02.jpg" style="width: 100%">
                                                 </div>
                                                 <br>
                                                 <div class="index-entrance-bottom o_sm-hide o_xs-hide">
@@ -514,14 +506,14 @@
                                                         <div class="entrance-page-line">
                                                             <div class="entrance-line-red"></div>
                                                         </div>
-                                                        <div class="entrance-page-num js_entrancePage1">
+                                                        <div class="entrance-page-num js_entrancePageMd">
                                                             <div class="page-num" data-index=3>03</div>
                                                             <div class="page-num active" data-index=2>02</div>
                                                             <div class="page-num" data-index=1>01</div>
                                                         </div>
                                                     </div>
                                                     <div class="o_u entrance-img3">
-                                                        <img src="images/index_entrance03.jpg" style="width: 100%">
+                                                        <img class="js_recPic" src="images/img3-4.png" df="images/index_entrance03.jpg" style="width: 100%">
                                                     </div>
                                                     <div class="o_u o_md-hide o_sm-hide o_xs-hide" style="width: 48.6%;margin-left: 17%;vertical-align: bottom;">
                                                         <h3>你是我简单满足的小确幸888</h3>
@@ -531,14 +523,16 @@
                                                             <span></span>
                                                             <span></span>
                                                         </a>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
+                        <!-- 新增首页入口xs、sm分页器 -->
+                        <div class="entrance-page-xs js_entrancePageXs o_df-hide o_sm-show o_xs-show"></div>
                     </div>
                 </div>
                 <div class="o_u o_df_1-12">
