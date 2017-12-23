@@ -271,8 +271,8 @@
     }
   }
   .login_footer{
-    //position: absolute;
-    //bottom: 0;
+    position: absolute;
+    bottom: 0;
     //background: #fff;
     @media (max-width: 575px) {
       /* xs*/
@@ -286,7 +286,7 @@
   font-size: 12px;
   border-top: 1px solid #eee;
   margin: 80px 0 0 0;
-  padding: 20px 0;
+  padding: 0;
   color: #666;
   line-height: 20px;
   position: relative;
@@ -332,8 +332,10 @@
   display: inline-block;
   height: 40px;
   width: 40px;
-  background: url(problem.png) no-repeat  center top  ;
- //margin-left: 10px;
+  /* margin-top: 40px; */
+  background: url(problem.png) center bottom no-repeat;
+  vertical-align: bottom;
+  position: relative;
 }
 
 .mail_register_log_btn{
@@ -342,4 +344,12 @@
   >span{
     display: block;
   }
+}
+.register-hover{
+  width: 200px;
+  text-align: left;
+  position: absolute;
+  bottom: 30px;
+  right: -98px;
+  display: none;
 }

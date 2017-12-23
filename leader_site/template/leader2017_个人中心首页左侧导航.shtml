@@ -1,6 +1,6 @@
 <div class="o_u  o_lg_1-12  o_md_1-12 o_sm_2-12 o_xs_2-2 memeber-nav-left js_memberNavLeft">
     <div class="o_u o_df_9-12 o_lg_2-2 o_xs_2-2">
-        <a href="http://test.tongshuai.com/"><div class="memeber-nav-logo o_u o_xs_2-12">
+        <a href="<TRS_WEBSITE UrlIsAbs='true' FIELD='_RECURL' />"><div class="memeber-nav-logo o_u o_xs_2-12">
             <img src="../images/l_logo.png" alt=""  ignoreapd="1" >
         </div></a>
         <div class=" o_u o_xs_3-12 memeber-nav-logo-text">
@@ -18,7 +18,7 @@
                 <a href="/security" class="iconfont icon-protect-solid"><span>账号安全</span><i></i></a><i class="js-securitysetting memeber-nav-safety-plain"></i>
             </li>
             <li class="js-cart">
-                <a href="http://test.tongshuai.com/cart/" class="iconfont icon-shoppingcart"><span>购物车</span></a>
+                <a href="<trs_channel id='购物车' field='_recurl' UrlIsAbs='true'/>" class="iconfont icon-shoppingcart"><span>购物车</span></a>
                 <!--<i class="member-nub-round">9</i>-->
             </li>
             <!--<li class="">-->

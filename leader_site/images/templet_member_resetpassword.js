@@ -62,7 +62,7 @@ $(function(){
             $(this).addClass('Validform_error');
             $('.js_subimGetUp').addClass('l-btn-disable');
             $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
-            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i><span class="txt">请输入6位验证码</span>');
         }
     });
     $('.js_phoneCodeYz').keyup(function(){
@@ -85,7 +85,7 @@ $(function(){
             $(this).addClass('Validform_error');
             $('.js_subimGetUp').addClass('l-btn-disable');
             $('.js-mobileCodeerror').addClass('Validform_wrong').removeClass('Validform_right');
-            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>请输入6位验证码');
+            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i><span class="txt">请输入6位验证码</span>');
         }
     });
     $('.js_emailCodeYz').keyup(function(){
@@ -251,7 +251,7 @@ $(function(){
                             $('.js-resetpassword').show();
                         }
                         else{
-                            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i>验证码错误').addClass('Validform_wrong').removeClass('Validform_right');
+                            $('.js-mobileCodeerror').html('<i class=\'iconfont icon-information-solid\'></i><span class="txt">验证码错误</span>').addClass('Validform_wrong').removeClass('Validform_right');
                         }
                     }
                 }
@@ -322,7 +322,7 @@ $(function(){
         if(yanzhengtrue){
             $('.js-subpassword').unbind().bind('click',function(){
                 if(templet_ensureChanged){
-                    $('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>上一次密码操作还未完成,请勿重复操作');
+                    $('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i><span class="txt">上一次密码操作还未完成,请勿重复操作</span>');
                     return;
                 }
                 var templet_newpassword=$('.js-resetPassWord').val();
@@ -354,7 +354,7 @@ $(function(){
                                     templet_time--;
                                 }, 1000);
                             }else{
-                                $('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class=\'iconfont icon-information-solid\'></i>修改密码失败');
+                                $('.js-resetPassWorderror').removeClass('Validform_right').addClass('Validform_wrong').html('<i class="iconfont icon-information-solid"></i><span class="txt">修改密码失败</span>');
                             }
                         }
                     },

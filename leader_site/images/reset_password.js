@@ -170,10 +170,10 @@ $(function() {
     $("#js_selectValidate").oSelect().init();
 
     //
-    $('.js_resgoster_hover').hover(function(){
-        $(this).children('.l-float-tops').show();
-    },function(){
-        $(this).children('.l-float-tops').hide();
+    $('.js_resgoster_hover').hover(function() {
+        $(this).children('.l-float-bottom').show();
+    }, function() {
+        $(this).children('.l-float-bottom').hide();
     });
 
 

@@ -96,6 +96,10 @@ $(".js_memberAddressBtn").click(function(){//点击"新增地址"显示新增地
     templet_text = '确定取消添加？';
     $(".js_btnSubmit").attr("type",1);
     $(".js_form_addAddrManagement").show();
+    var templet_Left=$(".js_memberNavLeft").height()+616;
+    var templet_Middle=$(".js_memberNavMiddle").height()+616;
+    $(".js_memberNavLeft").css({"height":templet_Left})
+    $(".js_memberNavMiddle").css({"height":templet_Middle})
     resetForm();
     //$('.lose').css('background-color','#fff');
     $(".js_memberAddressBtn").hide();//隐藏"新增地址"按钮

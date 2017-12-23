@@ -242,6 +242,7 @@ $(function(){
                             $(".jcrop-preview").show();
                             $('.js_selectWf').show();
                             $('.js-rightimg').show();
+                            $('#target').hide()
                         }else{
 
 
@@ -249,6 +250,7 @@ $(function(){
                             $('.js-rightimg').attr('src',templet_pic).css({'height':photoBoxWidth,'width':photoBoxWidth}).show();
                             $(".jcrop-preview").attr("src",templet_pic).show();
                             $('.js_selectWf').attr("src",templet_pic).show();
+                            $('#target').hide()
 
                             if(!$ie8){
                                 jcrop_api.setImage(templet_pic, function() {
@@ -465,10 +467,12 @@ $(function(){
                     $('.js-modifyPhoto').hide();
                     $('.js-modifyPhotoBtn').hide();
                     $("#js-imgleft").attr("src",data.data);
+                    $('.js-imghead').attr("src",data.data);
                     window.location.href ='/info?to=header'
                 }
                 else{
 //      上传头像失败出现弹窗
+                    globalShade2('图片上传失败，请稍后再试',2);
                 }
             }
         });

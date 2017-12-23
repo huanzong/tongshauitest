@@ -114,8 +114,11 @@
 								</div>
 							</div>
                             <div class="index-banner-shadow-bottom"></div>
-						</div>
-					</div>
+                            <!-- 新增banner轮播分液器 -->
+                            <div class="index-banner-page js_swiperBannerPoint o_df-hide o_md-show o_sm-show o_xs-show"></div>
+                            <!-- 新增banner轮播分液器 End -->
+                        </div>
+                    </div>
 					<div class="o_u o_df_2-2 o_df-hide o_md-show o_sm-show o_xs-show banner-bot-info">
 						<!-- 循环体 -->
 						<trs_viewdatas id="首页banner" num="5">
@@ -365,7 +368,7 @@
 													<div class="entrance-page-line">
 														<div class="entrance-line-red"></div>
 													</div>
-													<div class="entrance-page-num js_entrancePage1">
+													<div class="entrance-page-num js_entrancePageMd">
 														<trs_viewdatas id='首页入口' num="5">
 															<!-- <div class="page-num" data-index="<TRS_ROWNO/>">0<TRS_ROWNO>获取当前记录的序号</TRS_ROWNO></div> -->
 														</trs_viewdatas>
@@ -399,6 +402,8 @@
 						</trs_viewdatas>
 					</div>
 				</div>
+                        <!-- 新增首页入口xs、sm分页器 -->
+                        <div class="entrance-page-xs js_entrancePageXs o_df-hide o_sm-show o_xs-show"></div>
 			</div>
 		</div>
 		<div class="o_u o_df_1-12">

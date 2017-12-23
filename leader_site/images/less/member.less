@@ -1343,8 +1343,8 @@
 				}
 				@media (max-width: 575px) {
 					/* xs*/
-					border:none; 
-					box-shadow:none;
+					// border:none; 
+					// box-shadow:none;
 				}
 
 				.member-security-safebox {
@@ -1355,10 +1355,11 @@
 						height: 24px;
 						margin: 28px 0 28px;
 						float: left;
+						width:auto;
 
 						@media (min-width: 1200px) and (max-width: 1360px) {
 							/* lg-sm*/
-							width: 50% !important;
+							width: 100% !important;
 							margin: 18px 0 0 0;
 						}
 						@media (min-width: 701px) and (max-width: 752px) {
@@ -1392,7 +1393,8 @@
 						}
 
 						.member-security-safeline {
-							width: 50%;
+							// width: 50%;
+							width:180px;
 							height: 4px;
 							background: #eee;
 							display: inline-block;
@@ -1591,19 +1593,27 @@
 						color: #999;
 						margin: 28px 20px 28px 0;
 						width: 385px;
-
+						span{
+							line-height:24px;
+							display: inline-block;
+							a{
+								line-height:24px;
+								display: inline-block;
+								top:2px\9;
+							}
+						}
 						@media (min-width: 1200px) and (max-width: 1360px) {
 							/* lg-sm*/
 							text-align: left;
 							width: 100% !important;
-							margin: 0 0 15px 30px;
+							margin: 0 0 15px 0;
 							padding-left: 30px;
 						}
 						@media (min-width: 701px) and (max-width: 752px) {
 							/* lg-sm*/
 							text-align: left;
 							width: 100% !important;
-							margin: 0 0 15px 30px;
+							margin: 0 0 15px 0;
 							padding-left: 30px;
 						}
 						@media (min-width: 992px) and (max-width: 1199px) {
@@ -1614,12 +1624,14 @@
 						}
 						@media (min-width: 576px) and (max-width: 700px) {
 							/* sm*/
-							margin: 0px 0 15px 30px;
+							float:left;
+							margin: 0px 0 15px 0;
 							height: auto;
 						}
 						@media (max-width: 575px) {
 							/* xs*/
-							margin: 0px 0 15px 30px;
+							float:left;
+							margin: 0px 0 15px 0;
 							height: auto;
 						}
 
@@ -1683,7 +1695,7 @@
 							float: left;
 							height: 16px;
 							margin-top: 27px;
-
+							margin-right:20px;
 							@media (min-width: 992px) and (max-width: 1199px) {
 								/* lg*/
 							}

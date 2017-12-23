@@ -37,15 +37,23 @@
                         <div class="mail_register_wrong_text js_registerWrongText">我是错误提示</div>
                         <div class="mail_register_cont_down">没有收到邮件
                             <i class="mail-problem js_resgoster_hover">
-                                <div class="l-float-tops">
+                                <!--<div class="l-float-tops">-->
+                                    <!--<div class="float_content">-->
+                                        <!--<p>1. 检查邮箱是否正确无误</p>-->
+                                        <!--<p>2. 检查邮件是否进入垃圾箱</p>-->
+                                        <!--<p>3. 使用<a href="javascript:;">手机号注册</a> ，更方便快捷</p>-->
+                                    <!--</div>-->
+                                    <!--<p>-->
+                                        <!--<i></i>-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                                <div class=" l-float-bottom register-hover">
                                     <div class="float_content">
                                         <p>1. 检查邮箱是否正确无误</p>
                                         <p>2. 检查邮件是否进入垃圾箱</p>
                                         <p>3. 使用<a href="javascript:;">手机号注册</a> ，更方便快捷</p>
                                     </div>
-                                    <p>
                                         <i></i>
-                                    </p>
                                 </div>
                             </i>
                         </div>
