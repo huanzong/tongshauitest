@@ -125,20 +125,19 @@
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8" ignoreapd="1"></script>
 
 <script type="text/javascript">
-    var jiathis_config={
-        pic:"",
-        summary:"",
-        siteNum:8,
-        sm:"tsina,qzone,douban,weixin,cqq,twitter,fb,linkedin",
-        appkey:{
-            "tsina":"2413070761",
-            "tqq":"801127250",
-            "renren":"02a810140e56450c8907b6de8c1677cf",
-            "kaixin001":"658605209749f040a7325d53719585eb",
-            "douban":"0dc955b486374567295c011d92a5d035"
-
+    var jiathis_config = {
+        pic: "",
+        summary: "",
+        siteNum: 8,
+        sm: "tsina,qzone,douban,weixin,cqq,twitter,fb,linkedin",
+        appkey: {
+            "tsina": "2413070761",
+            "tqq": "801127250",
+            "renren": "02a810140e56450c8907b6de8c1677cf",
+            "kaixin001": "658605209749f040a7325d53719585eb",
+            "douban": "0dc955b486374567295c011d92a5d035"
         },
-        hideMore:true
+        hideMore: true
     }
 </script>
 </body>
