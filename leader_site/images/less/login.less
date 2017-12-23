@@ -1,6 +1,7 @@
 @import "l_variable";
 html,body{
     height: 100%;
+    min-height: 770px;
 }
 .o_body{
     height: 100%;
@@ -210,7 +211,7 @@ html,body{
 		width: 75%;
 		padding: 0;
 		margin: 0 auto;
-		margin-bottom: 10px;
+//		margin-bottom: 10px;
 		color: #ccc;
 		@media (min-width: 701px) and (max-width: 991px){
 			width: 60%;
@@ -255,9 +256,20 @@ html,body{
 			}
 			&.code{
 			    background: none;
-			    right: 3px;
+			    right: 4px;
 			}
 		}
+		.Validform_checktip{     
+                min-height: 10px;
+                height: auto;
+                i{
+                    top: 1px;
+                }
+                &.Validform_right{
+                    height: 10px;
+                }
+                
+            } 
 	}
 	.login-role{
 		text-align: left;
@@ -320,7 +332,7 @@ html,body{
 		}
 		a{
 			position: relative;
-			bottom: 10px;
+			bottom: 9px;
 			display: inline-block;
 			width: 25%;
 			background: #fff;

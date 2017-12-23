@@ -467,10 +467,12 @@ $(function(){
                     $('.js-modifyPhoto').hide();
                     $('.js-modifyPhotoBtn').hide();
                     $("#js-imgleft").attr("src",data.data);
+                    $('.js-imghead').attr("src",data.data);
                     window.location.href ='/info?to=header'
                 }
                 else{
 //      上传头像失败出现弹窗
+                    globalShade2('图片上传失败，请稍后再试',2);
                 }
             }
         });
