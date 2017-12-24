@@ -2,7 +2,8 @@
   "serverPort":"3002",
   "dev_template":{
     "env": "测试",
-    "demo_channeId": "16",
+    "demo_channeId": "216",
+    "tongshuai_domain": "test.tongshuai.com",
     "domain": "",
     "userUrl": "",
     "base":"",
@@ -10,7 +11,8 @@
   },
   "pro_template":{
     "env": "生产",
-    "demo_channeId": "17",
+    "tongshuai_domain": "www.tongshuai.com",
+    "demo_channeId": "217",
     "domain": "",
     "userUrl": "",
     "base":"",

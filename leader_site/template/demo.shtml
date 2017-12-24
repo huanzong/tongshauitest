@@ -11,7 +11,8 @@
 <!--#include virtual="public/head.shtml"-->
 <script>
 	var params = {
-		channelId: '<%=demo_channeId%>'
+		channelId: '<%=demo_channeId%>',
+		domain: '<%=tongshuai_domain%>'
 	}
 </script>
 </head>
