@@ -2,6 +2,7 @@
   "serverPort":"3002",
   "dev_template":{
     "env": "测试",
+    "demo_channeId": "16",
     "domain": "",
     "userUrl": "",
     "base":"",
@@ -9,6 +10,7 @@
   },
   "pro_template":{
     "env": "生产",
+    "demo_channeId": "17",
     "domain": "",
     "userUrl": "",
     "base":"",
