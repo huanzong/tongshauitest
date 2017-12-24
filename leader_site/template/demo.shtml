@@ -9,6 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
 <meta name="format-detection" content="telephone=no, email=no" />
 <!--#include virtual="public/head.shtml"-->
+<script>
+	var params = {
+		channelId: '<%=demo_channeId%>'
+	}
+</script>
 </head>
 
 <body>
@@ -52,5 +57,8 @@
 		</div>
 	</div>
 	<!--#include virtual="public/foot.shtml"-->
+	<script type="text/javascript">
+		var channelID = params.channelId
+	</script>
 </body>
 </html>
