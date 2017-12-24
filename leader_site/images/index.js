@@ -147,14 +147,27 @@ $(function() {
 
 
   var indexBannerInit = false;
+  var bannerSwiperParams = {
+    slidesPerView: 1,
+    watchActiveIndex: false,
+    centeredSlides: false
+  }
+    
+  if (screenWidth <= 991) {
+    bannerSwiperParams.slidesPerView = 3;
+    bannerSwiperParams.watchActiveIndex = true;
+    bannerSwiperParams.centeredSlides = true;
+  }
+
   swiper.bannerSwiper = new Swiper('.js_bannerSwiper',{
     loop: true,
     updateOnImagesReady : true,
     // autoplay: 5000,
     roundLengths : true,
-    // centeredSlides : true,
+    centeredSlides : bannerSwiperParams.centeredSlides,
     calculateHeight : true,
-    slidesPerView: 3,
+    slidesPerView: bannerSwiperParams.slidesPerView,
+    watchActiveIndex: bannerSwiperParams.watchActiveIndex,
     pagination: '.js_swiperBannerPoint',
     paginationClickable: true,
     // initialSlide :1,
@@ -220,9 +233,10 @@ $(function() {
   if (screenWidth <= 991) {
     var isTouch = false;
     var marginValue = screenWidth>700?'60px':'75px 25px';
-    swiper.bannerSwiper.params.slidesPerView = 3;
-    swiper.bannerSwiper.params.watchActiveIndex = true;
-    swiper.bannerSwiper.params.centeredSlides = true;
+    // swiper.bannerSwiper.params.slidesPerView = 3;
+    // swiper.bannerSwiper.params.watchActiveIndex = true;
+    // swiper.bannerSwiper.params.centeredSlides = true;
+
     // swiper.bannerSwiper.params.pagination = '.js_swiperBannerPoint';
     // swiper.bannerSwiper.params.paginationClickable = true;
     swiper.bannerSwiper.params.onTouchStart = function(swiper){
@@ -280,8 +294,9 @@ $(function() {
 
 
   } else {
-  	swiper.bannerSwiper.params.slidesPerView = 1;
-    swiper.bannerSwiper.params.centeredSlides = false;
+  	// swiper.bannerSwiper.params.slidesPerView = 1;
+    // swiper.bannerSwiper.params.centeredSlides = false;
+    
     swiper.bannerSwiper.params.onSlideChangeEnd = function(swiper){
       var index = swiper.activeLoopIndex;
       var indexPage = $('.js_bannerSwiperPage .page-num').size();
