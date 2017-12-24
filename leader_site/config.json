@@ -22,12 +22,16 @@
     "env": "预览",
     "domain": "",
     "userUrl": "",
+    "tongshuai_domain": "www.tongshuai.com",
+    "demo_channeId": "217",
     "base":"<base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/'>",
     "ui_base":"<ui_base href='http://123.235.23.182:10080/~jenkins/jobs/tongshuai/workspace/leader_site/preview/'>",
     "ROOT_PATH":""
   },
   "debug_template":{
     "env": "本地",
+    "tongshuai_domain": "www.tongshuai.com",
+    "demo_channeId": "217",
     "domain": "http://test.tongshuai.com",
     "userUrl": "http://tuser.tongshuai.com",
     "base":"<base href='../'>",

@@ -114,13 +114,15 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-                                            <img class="js_recPic" src="images/img2-1.png" df="images/index_banner.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
+                                            <!-- <img class="js_recPic" src="images/img2-1.png" df="images/index_banner.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg"> -->
+                                            <img class="js_recPic" src="images/img2-1.png">
                                             <!-- <img class="js_bg" src="images/index_banner.JPG"> -->
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:;">
-                                            <img class="js_recPic" src="images/img2-1.png" df="images/index_banner2.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg">
+                                                <!-- <img class="js_recPic" src="images/img2-1.png" df="images/index_banner2.JPG" md="images/index_banner_xs.jpg" sm="images/index_banner_xs.jpg" xs="images/index_banner_xs.jpg"> -->
+                                                <img class="js_recPic" src="images/img2-1.png">
                                             <!-- <img class="js_bg" src="images/index_banner2.JPG"> -->
                                         </a>
                                     </div>
