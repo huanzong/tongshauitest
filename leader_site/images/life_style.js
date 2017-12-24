@@ -195,7 +195,12 @@ $(function () {
         "top": maxImgHeight / 8 + 'px'
     })
     if (windowWidth > 1199) {
-        $('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+        if( $('.js_superiorityBox').height()<windowWidth / 3 / 0.75){
+            $('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+        }else{
+            $('.js_superiorityBox').height($('.js_superiorityBox').height());
+        }
+
 
 
 
@@ -512,26 +517,29 @@ $(function () {
                     $('.js_superiorityDownText').eq(0).show();
                 }
 
-                $('.js-scroll-num').html(' ');
+                if(windowWidth>575){
+                    $('.js-scroll-num').html(' ');
 
-                $('.js-scroll-num').each(function(index){
-                    var dataNum = $(this).attr('data-num');
-                    for (var i = 0; i <  dataNum.length; i++) {
-                        $(this).append('<div num="'+dataNum[i]+'"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>');
+                    $('.js-scroll-num').each(function(index){
+                        var dataNum = $(this).attr('data-num');
+                        for (var i = 0; i <  dataNum.length; i++) {
+                            $(this).append('<div num="'+dataNum[i]+'"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>');
 
+                        }
+                        if($(this).hasClass('js-scroll-more')){
+                            $(this).append('<sup>+</sup>')
+                        }
+                    });
+
+                    if($('.js-scroll-num').not('.js-inited').length > 0){
+                        $('.js-scroll-num').find('div').each(function(){
+                            $(this).addClass('js-inited');
+                            $(this).find('span').eq(0).animate({
+                                'margin-top': -50 * $(this).attr('num') + 'px'
+                            },1000);
+                        })
                     }
-                    if($(this).hasClass('js-scroll-more')){
-                        $(this).append('<sup>+</sup>')
-                    }
-                });
 
-                if($('.js-scroll-num').not('.js-inited').length > 0){
-                    $('.js-scroll-num').find('div').each(function(){
-                        $(this).addClass('js-inited');
-                        $(this).find('span').eq(0).animate({
-                            'margin-top': -50 * $(this).attr('num') + 'px'
-                        },1000);
-                    })
                 }
 
 
