@@ -238,7 +238,7 @@
 					<div class="recommend-img-small">
 						<!-- <img src="../site5/index_rec_next1.JPG" class="" /> -->
 						<trs_viewdatas id="产品推荐" num="1">
-							<img class="recommend-img-next js_recImgSmall js_recPic" src="images/img3-4.png" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
+							<img class="recommend-img-next js_recImgSmall js_recPic js-img-placeholder" src="images/img3-4.png" df="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
 							 md="<TRS_VIEWDATAAPPENDIXS FIELD='banner'><TRS_VIEWDATAAPPENDIX FIELD='' URLISABS='true'/></TRS_VIEWDATAAPPENDIXS>"
 							/>
 						</trs_viewdatas>

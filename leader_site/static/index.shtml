@@ -306,7 +306,7 @@
                 <div class="o_u o_df_1-6 o_md_1-12 o_sm-hide o_xs-hide">
                     <div class="recommend-img-small">
                         <!-- <img src="images/index_rec_next1.JPG" class=""> -->
-                        <img class="recommend-img-next js_recImgSmall js_recPic" src="" df="images/index_rec_next1.JPG" md="images/index_rec_next3.JPG">
+                        <img class="recommend-img-next js_recImgSmall js_recPic js-img-placeholder" src="images/img3-4.png" df="images/index_rec_next1.JPG" md="images/index_rec_next3.JPG">
                     </div>
                 </div>
                 <div class="o_u o_df_1-3 o_md_5-12 o_sm-hide o_xs-hide">
