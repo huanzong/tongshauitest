@@ -125,7 +125,7 @@ $(function(){
             forceParse: true,       //解析输入值
             format: "yyyy-mm-dd",   // 日期格式
             pickerPosition: "bottom-left",
-            startDate: '1940-01-01',// 开始时间
+            startDate: '1910-01-01',// 开始时间
             endDate: new Date()     // 最大时间
         });
     }else{
