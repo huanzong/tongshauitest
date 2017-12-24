@@ -345,7 +345,7 @@ function userLoginStatus() {
             $("#header_loginDiv .login").prepend(logusername);
             $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
             $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
-            $("#header_logout,#header_logout2,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+            $("#header_logout,#header_logout2,#header_logout3").attr("href", siteConfig.userUrl+"/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
             //获取头像
             getUserHeadImg();
         } else {
@@ -366,7 +366,7 @@ function userLoginStatus() {
                         $("#header_loginDiv .login").prepend(logusername);
                         $("#header_logoutDiv,#header_logoutA").addClass("o_df-hide");
                         $("#header_loginDiv,#header_loginDiv2").removeClass("o_df-hide");
-                        $("#header_logout,#header_logout2 ,#header_logout3").attr("href", "http://tuser.tongshuai.com/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+                        $("#header_logout,#header_logout2 ,#header_logout3").attr("href", siteConfig.userUrl+"/ids/ts/logout.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
                         //获取头像
                         getUserHeadImg();
                     } else {
@@ -476,8 +476,8 @@ function userLoginStatus() {
         //         }
         //     });
         // }
-        $("#header_login,#header_logoutDiv .nav-chart,#header_logoutA").attr("href", "http://tuser.tongshuai.com/ids/ts/login.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl);
-        $("#header_reg").attr("href", "http://tuser.tongshuai.com/ids/ts/reg.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
+        $("#header_login,#header_logoutDiv .nav-chart,#header_logoutA").attr("href", siteConfig.userUrl+"/ids/ts/login.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl);
+        $("#header_reg").attr("href", siteConfig.userUrl+"/ids/ts/reg.jsp?regFrom=" + regFrom + "&returnUrl=" + returnUrl)
     }
 }
 //导航头_截取字符串，长度以字符为单位
