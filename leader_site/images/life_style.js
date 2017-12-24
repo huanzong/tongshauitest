@@ -22,6 +22,42 @@ $(function () {
         $("#mep_0").css('max-height', windowHeight - navHeight+'px');
     }
 
+
+
+    //setTimeout(function(){
+    //    nubmerStyle($('.js_superiorityCenter h4'),10);
+    //},5000)
+    //
+    //function nubmerStyle(obj,time){
+    //    var times = parseInt(time);
+    //    times =  times>0?times:1;
+    //    for(var i = 0; i <obj.length;i++){
+    //        var nub = parseInt(obj.eq(i).val());
+    //        var styleTime =   (times*1000)/nub;
+    //        var j = 0;
+    //        var continuity =  setInterval(function(){
+    //            j+= parseInt(nub/times);
+    //            obj.eq(i).html(j)
+    //            if(nub -j<=  parseInt(nub/times)){
+    //                clearInterval(continuity);
+    //                setTimeout(function(){
+    //                    obj.eq(i).html(nub)
+    //                },styleTime)
+    //            }
+    //        },styleTime)
+    //    }
+    //}
+
+
+
+
+
+
+
+
+
+
+
 // xl屏幕下视频模块hover有效
 
     $('.js_styleVideoContRight').hover(function () {
@@ -159,7 +195,12 @@ $(function () {
         "top": maxImgHeight / 8 + 'px'
     })
     if (windowWidth > 1199) {
-        $('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+        if( $('.js_superiorityBox').height()<windowWidth / 3 / 0.75){
+            $('.js_superiorityBox').height(windowWidth / 3 / 0.75);
+        }else{
+            $('.js_superiorityBox').height($('.js_superiorityBox').height());
+        }
+
 
 
 
@@ -465,6 +506,7 @@ $(function () {
                     $('.js_superiorityJt').eq(0).hide();
                     $('.js_superiorityDownText').eq(1).show();
                     $('.js_superiorityDownText').eq(0).hide();
+                    //$('.js_superiorityCenter').eq(0)
                 } else if (dataType == 2) {
                     $('.js_superiorityBox').attr('data-type', '1');
                     $('.js_superiorityCenter').eq(1).hide();
@@ -474,6 +516,33 @@ $(function () {
                     $('.js_superiorityDownText').eq(1).hide();
                     $('.js_superiorityDownText').eq(0).show();
                 }
+
+                if(windowWidth>575){
+                    $('.js-scroll-num').html(' ');
+
+                    $('.js-scroll-num').each(function(index){
+                        var dataNum = $(this).attr('data-num');
+                        for (var i = 0; i <  dataNum.length; i++) {
+                            $(this).append('<div num="'+dataNum[i]+'"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>');
+
+                        }
+                        if($(this).hasClass('js-scroll-more')){
+                            $(this).append('<sup>+</sup>')
+                        }
+                    });
+
+                    if($('.js-scroll-num').not('.js-inited').length > 0){
+                        $('.js-scroll-num').find('div').each(function(){
+                            $(this).addClass('js-inited');
+                            $(this).find('span').eq(0).animate({
+                                'margin-top': -50 * $(this).attr('num') + 'px'
+                            },1000);
+                        })
+                    }
+
+                }
+
+
             }
         })
 
@@ -625,3 +694,4 @@ setTimeout(function(){
     var lifeStyleTile={'obj':$('.js_lifeStyleCreateTitle'),'fontSize':'14','lineNub':'2','width':$('.product-list-cont').width()};
     textLength(lifeStyleTile);
 });
+

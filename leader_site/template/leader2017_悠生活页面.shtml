@@ -6,9 +6,7 @@
     <title>悠生活-统帅官网</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
     <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9; IE=8; IE=7; IE=EDGE">
+
     <!--#include file="${ROOT_PATH}public/style/css.shtml"-->
     <link rel="stylesheet" type="text/css" href="swiper-3.4.2.min.css">
     <link rel="stylesheet" href="mediaelementplayer.css">
@@ -183,23 +181,23 @@
                     <p>享用海尔全球设计研发资源<br/>确保统帅独特的品牌个性</p>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                    <h4>10</h4>
+                    <h4 class="data-num js-scroll-num"  data-num="10">10</h4>
                     <span>大综合研发中心</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                    <h4>6</h4>
+                    <h4 class="data-num js-scroll-num"  data-num="6" >6</h4>
                     <span>大设计分部</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                    <h4>18</h4>
+                    <h4 class="data-num js-scroll-num"  data-num="18" >18</h4>
                     <span>大设计中心</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
-                    <h4>28</h4>
+                    <h4 class="data-num js-scroll-num"  data-num="28" >28</h4>
                     <span>个国际研发机构</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
-                    <h4>300<sup>+</sup></h4>
+                    <h4 class="data-num js-scroll-num js-scroll-more"  data-num="300" >300</h4>
                     <span>位国际设计师</span>
                 </li>
             </ul>
@@ -208,23 +206,23 @@
                     <p>完全承接海尔售后服务体系<br/>保障统帅全方位服务体系</p>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                    <h4>36</h4>
+                    <h4  class="data-num js-scroll-num"  data-num="36" >36</h4>
                     <span>个设备中心</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                    <h4>83</h4>
+                    <h4  class="data-num js-scroll-num"  data-num="83" >83</h4>
                     <span>个物流配送中心</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_4-12 o_xs_4-12">
-                    <h4>300<sup>+</sup></h4>
+                    <h4  class="data-num js-scroll-num js-scroll-more"  data-num="300" >300</h4>
                     <span>万㎡仓储资源</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
-                    <h4>6000<sup>+</sup></h4>
+                    <h4 class="data-num js-scroll-num js-scroll-more"  data-num="6000" >6000</h4>
                     <span>家服务售后网点</span>
                 </li>
                 <li class="o_u o_df_12-12 o_md_4-12 o_sm_6-12 o_xs_6-12">
-                    <h4>24<sup>+</sup></h4>
+                    <h4 class="data-num js-scroll-num js-scroll-more"  data-num="24" >24</h4>
                     <span>小时响应</span>
                 </li>
             </ul>
