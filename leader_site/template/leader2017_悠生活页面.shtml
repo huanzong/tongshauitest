@@ -571,7 +571,7 @@
     })
 </script>
 <script type="text/javascript" src="idangerous.swiper2.7.6.min.js"></script>
-<script src="mediaelement-and-player.min.js"></script>
+<script src="mediaelement-and-player.js"></script>
 <script src="life_style.js"></script>
 
 </body>
