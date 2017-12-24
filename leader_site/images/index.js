@@ -31,6 +31,10 @@ $(function() {
     })
 
     
+    $(".js-img-placeholder").each(function(){
+      $(this).oPicture().init();
+    });
+
     /**
      * 
      * @desc 获取滚动条距顶部的距离
@@ -113,6 +117,7 @@ $(function() {
       }
     },500);
     
+    
   }
 
   var swiper = {};//用来存放所有轮播
@@ -163,6 +168,10 @@ $(function() {
       $('.js_bannerSwiperFont1').fadeOut();
       $('.js_bannerSwiperFont1').eq(1).fadeIn(100);
 
+      //响应式图片
+      $(".js_bannerSwiper .js_recPic").each(function(){
+        $(this).oPicture().init();
+      });
       // if (screenWidth <= 991) {
         // var marginValue = screenWidth>700?'60px':'75px 25px';
         // $('.js_bannerSwiper .swiper-slide').each(function(){
@@ -420,6 +429,11 @@ $(function() {
       $('.js_recommendFont1').stop();
       $('.js_recommendFont1').hide();
       $('.js_recommendFont1').eq(index).fadeIn(500);
+
+      //响应式图片
+      $(".js_swiperRecMain .js_recPic").each(function(){
+        $(this).oPicture().init();
+      });
     },
 
     onSlideChangeEnd: function(swiper){
@@ -541,7 +555,11 @@ $(function() {
       var index = swiper.activeIndex;
       $('.js_swiperEntrabce .swiper-slide').find('.entrance-fontbox').stop();
       $('.js_swiperEntrabce .swiper-slide').eq(index).find('.entrance-fontbox').animate({ 'filter':'alpha(opacity=1)', '-moz-opacity':'1', '-khtml-opacity': '1', 'opacity': '1' }, 1000);
-    
+      
+      //响应式图片
+      $(".js_swiperEntrabce .js_recPic").each(function(){
+        $(this).oPicture().init();
+      });
     },
     onSwiperCreated: function(swiper){
       // 初始化分页器
@@ -588,13 +606,7 @@ $(function() {
 
 	// },2000);
 
-  //响应式图片
-  $(".js_recPic").each(function(){
-    $(this).oPicture({
-        //自定义节点宽度
-        //sm:544,md:700,lg:992,xl:1200,
-    }).init();
-  });
+  
 
 
   init();
